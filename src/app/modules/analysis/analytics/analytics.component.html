@@ -1,0 +1,470 @@
+<div class="row">
+  <div class="col-lg-12 grid-bottom">
+    <div class="card custom-card shadow1 no-radius">
+      <div
+        class="
+          card-header
+          custom-card-header
+          d-flex
+          align-items-center
+          justify-content-between
+          border-1
+        "
+      >
+        <div class="card-title m-b-0">
+          <h5 class="card-label m-b-0">Visitors Overview</h5>
+          <p class="m-b-0">Number of unique visitors</p>
+        </div>
+        <div class="action_analytic">
+          <div class="btn-group action_btn_drop" dropdown>
+            <a
+              type="button"
+              class="btn"
+              id="button-basic"
+              dropdownToggle
+              type="button"
+              aria-controls="dropdown-basic"
+            >
+              <span class="material-icons-outlined m-l-4"> more_horiz </span>
+            </a>
+
+            <ul
+              id="dropdown-basic"
+              *dropdownMenu
+              class="dropdown-menu dropdown-menu-left"
+              role="menu"
+              aria-labelledby="button-basic"
+              placement="bottom right"
+            >
+              <li role="menuitem">
+                <a class="dropdown-item p-x-12 py-2">
+                  <div class="d-flex align-items-center">
+                    <div class="m-b-0">
+                      <p class="m-b-0 sub_heading">Action</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li role="menuitem">
+                <a class="dropdown-item p-x-12 py-2">
+                  <div class="d-flex align-items-center">
+                    <div class="m-b-0">
+                      <p class="m-b-0 sub_heading">Add action</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li role="menuitem">
+                <a class="dropdown-item p-x-12 py-2">
+                  <div class="d-flex align-items-center">
+                    <div class="m-b-0">
+                      <p class="m-b-0 sub_heading">Add more action</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <hr class="zm-0" />
+              <li role="menuitem">
+                <a class="dropdown-item p-x-12 py-2">
+                  <div class="d-flex align-items-center">
+                    <div class="m-b-0">
+                      <p class="m-b-0 sub_heading">Seprated Link</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="btn-group">
+          <label
+            class="btn btn-outline-primary"
+            [(ngModel)]="radioModel"
+            ngDefaultControl
+            tabindex="0"
+            btnRadio="week"
+            role="button"
+            >Weekly</label
+          >
+          <label
+            class="btn btn-outline-primary"
+            [(ngModel)]="radioModel"
+            ngDefaultControl
+            btnRadio="month"
+            tabindex="0"
+            role="button"
+            >Monthly</label
+          >
+          <label
+            class="btn btn-primary"
+            [(ngModel)]="radioModel"
+            ngDefaultControl
+            btnRadio="year"
+            tabindex="0"
+            role="button"
+            >Yearly</label
+          >
+        </div>
+      </div>
+      <div class="">
+        <app-apex-datetime-x-axis></app-apex-datetime-x-axis>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-3 col-sm-6 grid-bottom">
+    <div class="card custom-card no-radius">
+      <div class="card-body">
+        <div class="d-flex area_cc_wrap">
+          <div class="">
+            <h6 class="area_cc_title">Conversions</h6>
+            <h5 class="area_cc_stats">105576</h5>
+            <div class="icon_wrap_ana bg-success m-r-4">
+              <i class="ti ti-arrow-up ana_progress"></i>
+            </div>
+            <span class="percent_change text-success">25%</span>
+          </div>
+          <div class="ml-auto">
+            <div class="tag_light_ana">
+              <span class="tag_name_ana text-mute">30 Days</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <app-apex-sparkline-area
+          [ChartColor]="chartColor"
+        ></app-apex-sparkline-area>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-sm-6 grid-bottom">
+    <div class="card custom-card no-radius">
+      <div class="card-body">
+        <div class="d-flex area_cc_wrap">
+          <div class="">
+            <h6 class="area_cc_title">Impressions</h6>
+            <h5 class="area_cc_stats">2276</h5>
+            <div class="icon_wrap_ana bg-danger m-r-4">
+              <i class="ti ti-arrow-down ana_progress"></i>
+            </div>
+            <span class="percent_change text-danger">5%</span>
+          </div>
+          <div class="ml-auto">
+            <div class="tag_light_ana">
+              <span class="tag_name_ana text-mute">30 Days</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <app-apex-sparkline-area
+          [ChartColor]="chartColor1"
+        ></app-apex-sparkline-area>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-sm-6 grid-bottom">
+    <div class="card custom-card no-radius">
+      <div class="card-body">
+        <div class="d-flex area_cc_wrap">
+          <div class="">
+            <h6 class="area_cc_title">Visits</h6>
+            <h5 class="area_cc_stats">5776</h5>
+            <div class="icon_wrap_ana bg-success m-r-4">
+              <i class="ti ti-arrow-up ana_progress"></i>
+            </div>
+            <span class="percent_change text-success">15%</span>
+          </div>
+          <div class="ml-auto">
+            <div class="tag_light_ana">
+              <span class="tag_name_ana text-mute">30 Days</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <app-apex-sparkline-area
+          [ChartColor]="chartColor2"
+        ></app-apex-sparkline-area>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-sm-6 grid-bottom">
+    <div class="card custom-card no-radius">
+      <div class="card-body">
+        <div class="d-flex area_cc_wrap">
+          <div class="">
+            <h6 class="area_cc_title">Clicks</h6>
+            <h5 class="area_cc_stats m-b-0">8566</h5>
+            <div class="icon_wrap_ana bg-danger m-r-4">
+              <i class="ti ti-arrow-down ana_progress"></i>
+            </div>
+            <span class="percent_change text-danger">35%</span>
+          </div>
+          <div class="ml-auto">
+            <div class="tag_light_ana">
+              <span class="tag_name_ana text-mute">30 Days</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <app-apex-sparkline-area
+          [ChartColor]="chartColor3"
+        ></app-apex-sparkline-area>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-3 col-sm-6 grid-bottom">
+    <div class="card custom-card no-radius">
+      <div
+        class="
+          card-header
+          d-flex
+          align-items-center
+          custom-card-header
+          border-1
+        "
+      >
+        <h5 class="m-b-0">Visitors Stats</h5>
+        <div class="ml-auto">
+          <div class="tag_light_ana">
+            <span class="tag_name_ana text-mute">30 Days</span>
+          </div>
+        </div>
+      </div>
+      <div *ngFor="let chart of donutcharts" class="data_chart_ana">
+        <app-apex-sparkline-donut
+          [chartParams]="chart"
+        ></app-apex-sparkline-donut>
+      </div>
+      <div class="data_chart_ana">
+        <div class="custom_tr">
+          <div class="custom_td1">
+            <div class="d-flex align-items-center">
+              <span class="marker bg-light-cyan m-r-12"></span>
+              <p class="m-b-0 text-muted">New</p>
+            </div>
+          </div>
+          <div class="custom_td2">
+            <p class="m-b-0 sub_heading">67,290</p>
+          </div>
+          <div class="custom_td3">
+            <p class="m-b-0 text-muted">30%</p>
+          </div>
+        </div>
+        <div class="custom_tr">
+          <div class="custom_td1">
+            <div class="d-flex align-items-center">
+              <span class="marker bg-light-orange m-r-12"></span>
+              <p class="m-b-0 text-muted">Returning</p>
+            </div>
+          </div>
+          <div class="custom_td2">
+            <p class="m-b-0 sub_heading">40,270</p>
+          </div>
+          <div class="custom_td3">
+            <p class="m-b-0 text-muted">70%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-sm-6 grid-bottom">
+    <div class="card custom-card no-radius">
+      <div
+        class="
+          card-header
+          d-flex
+          align-items-center
+          custom-card-header
+          border-1
+        "
+      >
+        <h5 class="m-b-0">Age Stats</h5>
+        <div class="ml-auto">
+          <div class="tag_light_ana">
+            <span class="tag_name_ana text-mute">30 Days</span>
+          </div>
+        </div>
+      </div>
+      <div *ngFor="let chart of donutcharts1" class="data_chart_ana">
+        <app-apex-sparkline-donut
+          [chartParams]="chart"
+        ></app-apex-sparkline-donut>
+      </div>
+      <div class="data_chart_ana">
+        <div class="custom_tr">
+          <div class="custom_td1">
+            <div class="d-flex align-items-center">
+              <span class="marker bg-primary m-r-12"></span>
+              <p class="m-b-0 text-muted">Under 30</p>
+            </div>
+          </div>
+          <div class="custom_td2">
+            <p class="m-b-0 sub_heading">60,331</p>
+          </div>
+          <div class="custom_td3">
+            <p class="m-b-0 text-muted">75%</p>
+          </div>
+        </div>
+        <div class="custom_tr">
+          <div class="custom_td1">
+            <div class="d-flex align-items-center">
+              <span class="marker bg_pink m-r-12"></span>
+              <p class="m-b-0 text-muted">Over 30</p>
+            </div>
+          </div>
+          <div class="custom_td2">
+            <p class="m-b-0 sub_heading">15,270</p>
+          </div>
+          <div class="custom_td3">
+            <p class="m-b-0 text-muted">25%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-sm-6 grid-bottom">
+    <div class="card custom-card no-radius">
+      <div
+        class="
+          card-header
+          d-flex
+          align-items-center
+          custom-card-header
+          border-1
+        "
+      >
+        <h5 class="m-b-0">Gender Stats</h5>
+        <div class="ml-auto">
+          <div class="tag_light_ana">
+            <span class="tag_name_ana text-mute">30 Days</span>
+          </div>
+        </div>
+      </div>
+      <div *ngFor="let chart of donutcharts2" class="data_chart_ana">
+        <app-apex-sparkline-donut
+          [chartParams]="chart"
+        ></app-apex-sparkline-donut>
+      </div>
+      <div class="data_chart_ana">
+        <div class="custom_tr">
+          <div class="custom_td1">
+            <div class="d-flex align-items-center">
+              <span class="marker bg-green m-r-12"></span>
+              <p class="m-b-0 text-muted">Male</p>
+            </div>
+          </div>
+          <div class="custom_td2">
+            <p class="m-b-0 sub_heading">23,012</p>
+          </div>
+          <div class="custom_td3">
+            <p class="m-b-0 text-muted">40%</p>
+          </div>
+        </div>
+        <div class="custom_tr">
+          <div class="custom_td1">
+            <div class="d-flex align-items-center">
+              <span class="marker bg_light_pink m-r-12"></span>
+              <p class="m-b-0 text-muted">Female</p>
+            </div>
+          </div>
+          <div class="custom_td2">
+            <p class="m-b-0 sub_heading">35,270</p>
+          </div>
+          <div class="custom_td3">
+            <p class="m-b-0 text-muted">60%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-sm-6 grid-bottom">
+    <div class="card custom-card no-radius">
+      <div
+        class="
+          card-header
+          d-flex
+          align-items-center
+          custom-card-header
+          border-1
+        "
+      >
+        <h5 class="m-b-0">Language Stats</h5>
+        <div class="ml-auto">
+          <div class="tag_light_ana">
+            <span class="tag_name_ana text-mute">30 Days</span>
+          </div>
+        </div>
+      </div>
+      <div *ngFor="let chart of donutcharts3" class="data_chart_ana">
+        <app-apex-sparkline-donut
+          [chartParams]="chart"
+        ></app-apex-sparkline-donut>
+      </div>
+      <div class="data_chart_ana">
+        <div class="custom_tr">
+          <div class="custom_td1">
+            <div class="d-flex align-items-center">
+              <span class="marker bg-success m-r-12"></span>
+              <p class="m-b-0 text-muted">English</p>
+            </div>
+          </div>
+          <div class="custom_td2">
+            <p class="m-b-0 sub_heading">50,191</p>
+          </div>
+          <div class="custom_td3">
+            <p class="m-b-0 text-muted">80%</p>
+          </div>
+        </div>
+        <div class="custom_tr">
+          <div class="custom_td1">
+            <div class="d-flex align-items-center">
+              <span class="marker bg-primary m-r-12"></span>
+              <p class="m-b-0 text-muted">Other</p>
+            </div>
+          </div>
+          <div class="custom_td2">
+            <p class="m-b-0 sub_heading">18,270</p>
+          </div>
+          <div class="custom_td3">
+            <p class="m-b-0 text-muted">20%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-8 grid-bottom">
+    <div class="card custom-card no-radius">
+      <div
+        class="
+          card-header
+          custom-card-header
+          d-flex
+          justify-content-between
+          align-items-center
+          border-1
+        "
+      >
+        <h5 class="card-label m-b-0">Traffic and Active Users</h5>
+        <span class="material-icons icon-20 icon-gray"> grid_view </span>
+      </div>
+      <div class="chart_body kk_chartjs">
+        <app-line-chartjs></app-line-chartjs>
+      </div>
+    </div>
+    <div class=""></div>
+  </div>
+  <div class="col-lg-4 grid-bottom">
+    <div class="">
+      <app-browser-stats></app-browser-stats>
+    </div>
+  </div>
+</div>

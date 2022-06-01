@@ -1,0 +1,115 @@
+<div class="row m-b-12">
+  <div class="col-lg-12 m-b-20">
+    <app-header-profile [activeId]="'3'"></app-header-profile>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-4 m-b-20">
+    <app-profile-sidebar [sidebarLinkId]="'0'"></app-profile-sidebar>
+  </div>
+  <div class="col-lg-8 m-b-20">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <div class="d-flex justify-content-between align-items-center">
+          <h5 class="m-b-0">Personal Details</h5>
+          <div class="">
+            <button
+              class="btn d-flex align-items-center btn-primary"
+              (click)="editProfile()"
+            >
+              <span class="material-icons-outlined m-r-8 icon-20"> edit </span>
+              Edit Profile
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row m-b-12">
+          <label class="col-lg-4 col-4 col-sm-6 col-md-6 text-muted">
+            Full Name
+          </label>
+          <div class="col-lg-8 col-8 col-sm-6 col-md-6">
+            <h6 class="m-b-0">David Smith</h6>
+          </div>
+        </div>
+        <div class="row m-b-12">
+          <label class="col-lg-4 col-4 col-sm-6 col-md-6 text-muted">
+            Company
+          </label>
+          <div class="col-lg-8 col-8 col-sm-6 col-md-6">
+            <h6 class="m-b-0">Zonvoir</h6>
+          </div>
+        </div>
+        <div class="row m-b-12">
+          <label class="col-lg-4 col-4 col-sm-6 col-md-6 text-muted">
+            Address
+          </label>
+          <div class="col-lg-8 col-8 col-sm-6 col-md-6">
+            <h6 class="m-b-0">23/11, D-block Sector 5, New York</h6>
+          </div>
+        </div>
+        <div class="row m-b-12">
+          <label
+            class="
+              col-lg-4 col-4 col-sm-6 col-md-6
+              text-muted
+              d-flex
+              align-items-center
+            "
+          >
+            Contact Number
+            <span
+              class="material-icons icon-20 m-l-8"
+              placement="top"
+              tooltip="Number Must be Active"
+            >
+              info
+            </span>
+          </label>
+          <div
+            class="col-lg-8 col-8 col-sm-6 col-md-6 d-flex align-items-center"
+          >
+            <h6 class="m-b-0 mr-3">011 4582 223 345</h6>
+            <span class="text-success material-icons-outlined icon-20">
+              verified
+            </span>
+          </div>
+        </div>
+        <div class="row m-b-12">
+          <label class="col-lg-4 col-4 col-sm-6 col-md-6 text-muted">
+            Company Site
+          </label>
+          <div class="col-lg-8 col-8 col-sm-6 col-md-6">
+            <h6 class="m-b-0">Zonvoir.com</h6>
+          </div>
+        </div>
+        <div class="row">
+          <label
+            class="
+              col-lg-4 col-4 col-sm-6 col-md-6d-flex
+              align-items-center
+              text-muted
+            "
+          >
+            Email
+            <span
+              class="material-icons icon-20 m-l-8"
+              placement="top"
+              tooltip="Email Must be Active"
+            >
+              info
+            </span>
+          </label>
+          <div
+            class="col-lg-8 col-8 col-sm-6 col-md-6 d-flex align-items-center"
+          >
+            <h6 class="m-b-0 m-r-8">zonvoir@123.gmail.com</h6>
+            <span class="text-success material-icons-outlined icon-20">
+              verified
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

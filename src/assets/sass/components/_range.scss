@@ -1,0 +1,41 @@
+.slidecontainer {
+  width: 100%;
+
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    padding: 0;
+    box-shadow: none;
+    border: 0;
+    height: .625rem !important;
+    background-color: darken($color: $background-color, $amount: 5%);
+    outline: none;
+    opacity: 1;
+    z-index: 5;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 1.25rem;
+      height: 1.25rem;
+      z-index: 5;
+      border-radius: 50%;
+      background: $primary;
+      cursor: pointer;
+    }
+
+    &::-moz-range-thumb {
+      width: 1.25rem;
+      height: 1.25rem;
+      border-radius: 50%;
+      background: $primary;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,268 @@
+<div class="row m-b-3">
+  <div class="col-lg-6 col-md-6 grid-bottom">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="m-b-0">Right Align</h5>
+      </div>
+      <div class="card-body">
+        <p-timeline [value]="events1">
+          <ng-template pTemplate="content" let-event>
+            &#123;&#123;event.status&#125;&#125;
+          </ng-template>
+        </p-timeline>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 grid-bottom">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="m-b-0">Left Align</h5>
+      </div>
+      <div class="card-body">
+        <p-timeline [value]="events1" align="right">
+          <ng-template pTemplate="content" let-event>
+            &#123;&#123;event.status&#125;&#125;
+          </ng-template>
+        </p-timeline>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 grid-bottom">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="m-b-0">Opposite Content</h5>
+      </div>
+      <div class="card-body">
+        <p-timeline [value]="events1">
+          <ng-template pTemplate="content" let-event>
+            <small class="p-text-secondary"
+              >&#123;&#123;event.date&#125;&#125;</small
+            >
+          </ng-template>
+          <ng-template pTemplate="opposite" let-event>
+            &#123;&#123;event.status&#125;&#125;
+          </ng-template>
+        </p-timeline>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 grid-bottom">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="m-b-0">Alternate Align</h5>
+      </div>
+      <div class="card-body">
+        <p-timeline [value]="events1" align="alternate">
+          <ng-template pTemplate="content" let-event>
+            &#123;&#123;event.status&#125;&#125;
+          </ng-template>
+        </p-timeline>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-12 grid-bottom">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="m-b-0">Customized</h5>
+      </div>
+      <div class="card-body">
+        <p-timeline
+          [value]="events1"
+          align="alternate"
+          styleClass="customized-timeline"
+        >
+          <ng-template pTemplate="marker" let-event>
+            <span
+              class="custom-marker p-shadow-2"
+              [style.backgroundColor]="event.color"
+            >
+              <i [ngClass]="event.icon"></i>
+            </span>
+          </ng-template>
+          <ng-template pTemplate="content" let-event>
+            <p-card [header]="event.status" [subheader]="event.date">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Inventore sed consequuntur error repudiandae numquam deserunt
+                quisquam repellat libero asperiores earum nam nobis, culpa
+                ratione quam perferendis esse, cupiditate neque quas!
+              </p>
+              <button
+                pButton
+                label="Read more"
+                class="btn btn-square btn-outline-primary"
+              ></button>
+            </p-card>
+          </ng-template>
+        </p-timeline>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 grid-bottom">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="m-b-0">Top Align</h5>
+      </div>
+      <div class="card-body">
+        <p-timeline [value]="events2" layout="horizontal" align="bottom">
+          <ng-template pTemplate="content" let-event>
+            &#123;&#123;event&#125;&#125;
+          </ng-template>
+        </p-timeline>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 grid-bottom">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="m-b-0">Bottom Align</h5>
+      </div>
+      <div class="card-body">
+        <p-timeline [value]="events2" layout="horizontal" align="top">
+          <ng-template pTemplate="content" let-event>
+            &#123;&#123;event&#125;&#125;
+          </ng-template>
+        </p-timeline>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 grid-bottom">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="m-b-0">Alternate Align</h5>
+      </div>
+      <div class="card-body">
+        <p-timeline [value]="events2" layout="horizontal" align="alternate">
+          <ng-template pTemplate="content" let-event>
+            &#123;&#123;event&#125;&#125;
+          </ng-template>
+          <ng-template pTemplate="opposite" let-event> &nbsp; </ng-template>
+        </p-timeline>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="m-b-0">Events timeline</h5>
+      </div>
+      <div class="card-body">
+        <div class="timeline-scroll">
+          <div class="timeline-widgit pr-1 p-y-8">
+            <ul class="timeline">
+              <li class="timeline-list">
+                <div class="timeline-point timeline-point-success"></div>
+                <a
+                  class="
+                    timeline-panel
+                    k_message_box
+                    text-light-success text-muted
+                    decoration-none
+                  "
+                >
+                  <span>15 minutes ago</span>
+                  <p class="m-b-4 text-muted">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit..
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit..
+                  </p>
+                </a>
+              </li>
+              <li class="timeline-list">
+                <div class="timeline-point timeline-point-primary"></div>
+                <a
+                  class="
+                    timeline-panel
+                    k_message_box
+                    text-light-primary text-muted
+                    decoration-none
+                  "
+                >
+                  <span>10 minutes ago</span>
+                  <p class="m-b-4 text-muted">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit..
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit..
+                    <strong class="text-primary">#BR-7883</strong>
+                  </p>
+                </a>
+              </li>
+              <li class="timeline-list">
+                <div class="timeline-point timeline-point-danger"></div>
+                <a
+                  class="
+                    k_message_box
+                    timeline-panel
+                    text-light-danger text-muted
+                    decoration-none
+                  "
+                >
+                  <span>30 minutes ago</span>
+                  <p class="m-b-4 text-muted">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit..
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit..
+                    <strong class="text-danger">#RX-TDF687</strong>
+                  </p>
+                </a>
+              </li>
+              <li class="timeline-list">
+                <div class="timeline-point timeline-point-info"></div>
+                <a
+                  class="
+                    timeline-panel
+                    k_message_box
+                    text-light-info text-muted
+                    decoration-none
+                  "
+                >
+                  <span>20 minutes ago</span>
+                  <h6 class="m-b-4">
+                    Lorem ipsum dolor sit.
+                    <strong class="text-info">#ZT-53676.</strong>
+                  </h6>
+                  <p class="m-b-4 text-muted">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit..
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit..
+                  </p>
+                </a>
+              </li>
+
+              <li class="timeline-list">
+                <div class="timeline-point timeline-point-warning"></div>
+                <a
+                  class="
+                    timeline-panel
+                    k_message_box
+                    text-light-warning text-muted
+                    decoration-none
+                  "
+                >
+                  <span>20 minutes ago</span>
+                  <p class="m-b-4 text-muted">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit..
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit..
+                  </p>
+                </a>
+              </li>
+              <li class="timeline-list">
+                <div class="timeline-point timeline-point-dark"></div>
+                <a
+                  class="
+                    timeline-panel
+                    k_message_box
+                    text-light-dark text-muted
+                    decoration-none
+                  "
+                >
+                  <span>20 minutes ago</span>
+                  <p class="m-b-4 text-muted">
+                    Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor
+                    consectetur.
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

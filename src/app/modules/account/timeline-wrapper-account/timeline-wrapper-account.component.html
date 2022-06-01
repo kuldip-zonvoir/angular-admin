@@ -1,0 +1,29 @@
+<div class="row m-b-20">
+  <div class="col-lg-12">
+    <app-header-profile [activeId]="'0'"></app-header-profile>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-8 col-md-7 m-b-20">
+    <div class="row">
+      <div class="col-lg-12 m-b-20 m-b-16">
+        <app-create-post></app-create-post>
+      </div>
+      <div class="col-lg-12">
+        <ng-container *ngFor="let item of posts">
+          <app-timeline-profile [post]="item"></app-timeline-profile>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-5 m-b-20">
+    <div class="right_pro_sidebar">
+      <div class="m-b-20">
+        <app-friend-lists-profile></app-friend-lists-profile>
+      </div>
+      <div class="m-b-20">
+        <app-about-profile></app-about-profile>
+      </div>
+    </div>
+  </div>
+</div>

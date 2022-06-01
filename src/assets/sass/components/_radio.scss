@@ -1,0 +1,69 @@
+// radio button
+.default_check_radio {
+  cursor: pointer;
+  font-size: $form-label-font-size;
+  font-weight: $form-label-font-weight;
+  color: $formLabelColor !important;
+}
+
+.container-radio {
+  display: block;
+  position: relative;
+  padding-left: 2.188rem;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  font-size: $form-label-font-size;
+  font-weight: $form-label-font-weight;
+  color: $formLabelColor !important;
+  text-transform: capitalize;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked ~ .check-circle {
+      background-color: $primary;
+
+      &:after {
+        display: block;
+      }
+    }
+  }
+
+  .check-circle {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: $white;
+    border-radius: 50%;
+    border: 1px solid $icon-color;
+
+    &.disable {
+      background-color: darken(
+        $color: $background-color,
+        $amount: 5%
+      ) !important;
+      border: 0;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      top: 5px;
+      left: 5px;
+      width: 8px;
+      height: 8px;
+      border: 0;
+      border-radius: 50%;
+      background-color: $background-color;
+    }
+  }
+}

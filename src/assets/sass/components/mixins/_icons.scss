@@ -1,0 +1,117 @@
+@mixin pseudo-icon(
+  $content,
+  $left: null,
+  $top: null,
+  $right: null,
+  $transition: null,
+  $bottom: null,
+  $color: $icon-color,
+  $icon-size
+) {
+  content: $content;
+  position: absolute;
+
+  @if ($left !=null) {
+    left: $left;
+  }
+
+  @if ($right !=null) {
+    right: $right;
+  }
+
+  @if ($top !=null) {
+    top: $top;
+  }
+
+  @if ($bottom !=null) {
+    bottom: $bottom;
+  }
+
+  @if ($transition !=null) {
+    transition: $transition;
+  }
+
+  font-size: $icon-size;
+  font-family: $icon-font-family;
+  color: $color;
+}
+
+@mixin logo-icon(
+  $size,
+  $circle: false,
+  $round-corner: false,
+  $border-color: false,
+  $background-color: null
+) {
+  width: $size;
+  height: $size;
+
+  @if ($circle) {
+    border-radius: $size/2;
+    line-height: $size;
+    @if ($background-color !=null) {
+      background-color: $background-color;
+    }
+
+    @if ($border-color) {
+      display: grid;
+      place-items: center;
+      border: 1px solid $border-color;
+    }
+  }
+
+  @if ($round-corner) {
+    border-radius: 0.75rem;
+
+    @if ($border-color) {
+      display: grid;
+      place-items: center;
+      border: 1px solid $border-color;
+    }
+  }
+}
+
+@mixin pseudo-lines(
+  $content,
+  $left: null,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $width: null,
+  $height: null,
+  $color: $gray-500,
+  $bg-color: null
+) {
+  content: $content;
+  position: absolute;
+
+  @if ($width !=null) {
+    width: $width;
+  }
+
+  @if ($height !=null) {
+    height: $height;
+  }
+
+  @if ($left !=null) {
+    left: $left;
+  }
+
+  @if ($right !=null) {
+    right: $right;
+  }
+
+  @if ($top !=null) {
+    top: $top;
+  }
+
+  @if ($bottom !=null) {
+    bottom: $bottom;
+  }
+
+  @if ($bg-color !=null) {
+    background-color: $bg-color;
+  }
+
+  color: $color;
+}

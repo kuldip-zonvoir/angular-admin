@@ -1,0 +1,173 @@
+<div class="card custom-card card-stretch">
+  <div
+    class="
+      card-header
+      d-flex
+      justify-content-between
+      align-items-center
+      custom-card-header
+      border-1
+    "
+  >
+    <div class="card-title m-b-0">
+      <h5 class="card-label m-b-0">Modal Size</h5>
+    </div>
+    <div class="code">
+      <button
+        class="btn d-flex align-items-center btn-outline-primary"
+        (click)="showCode = !showCode"
+      >
+        <span *ngIf="!showCode" class="material-icons icon-20 m-r-8">
+          code
+        </span>
+        <span *ngIf="showCode" class="material-icons icon-20 m-r-8">
+          code_off
+        </span>
+        code
+      </button>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="content p-3">
+      <div class="">
+        <!--Large modal-->
+        <p class="text-muted">
+          Small modal window have small width on screens only above
+          768px(boostrap3) and 576px(bootstrap4)
+        </p>
+        <button class="btn btn-primary m-r-8" (click)="lgModal.show()">
+          Large modal
+        </button>
+
+        <div
+          bsModal
+          #lgModal="bs-modal"
+          class="modal fade"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="dialog-sizes-name1"
+        >
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 id="dialog-sizes-name1" class="modal-title pull-left">
+                  Large modal
+                </h5>
+                <button
+                  type="button"
+                  class="close pull-right"
+                  (click)="lgModal.hide()"
+                  aria-label="Close"
+                >
+                  <span class="material-icons-outlined btsp_icon icon-20">
+                    close
+                  </span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p class="text-muted">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Minima, cum? Eum temporibus nihil molestias odio voluptatibus
+                  voluptate ut consequuntur. Ipsam?
+                </p>
+              </div>
+              <div class="modal-footer">
+                <div class="text-right kprime_footer">
+                  <button
+                    (click)="lgModal.hide()"
+                    class="btn btn-outline-danger m-r-8 btn-square"
+                  >
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn btn-primary btn-square">
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Small modal-->
+        <button type="button" class="btn btn-primary" (click)="smModal.show()">
+          Small modal
+        </button>
+
+        <div
+          bsModal
+          #smModal="bs-modal"
+          class="modal fade"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="dialog-sizes-name2"
+        >
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 id="dialog-sizes-name2" class="modal-title pull-left">
+                  Small modal
+                </h5>
+                <button
+                  type="button"
+                  class="close pull-right"
+                  aria-label="Close"
+                  (click)="smModal.hide()"
+                >
+                  <span class="material-icons-outlined btsp_icon icon-20">
+                    close
+                  </span>
+                </button>
+              </div>
+              <div class="modal-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repudiandae, inventore.
+              </div>
+              <div class="modal-footer">
+                <div class="text-right kprime_footer">
+                  <button
+                    (click)="smModal.hide()"
+                    class="btn btn-outline-danger m-r-8 btn-square"
+                  >
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn btn-primary btn-square">
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div [collapse]="!showCode" [isAnimated]="true" class="code_container">
+      <div class="nav_bar w-100">
+        <ul>
+          <li>
+            <a [ngClass]="{ active: tabId === '0' }" (click)="tabToggle('0')">
+              HTML
+            </a>
+          </li>
+          <li>
+            <a [ngClass]="{ active: tabId === '1' }" (click)="tabToggle('1')">
+              TS
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- code -->
+      <ng-template [ngIf]="tabId === '0'">
+        <pre class="m-b-0">
+            <code [highlight]="htmlcode" (highlighted)="onHighlight($event)" [lineNumbers]="true">
+            </code>
+          </pre>
+      </ng-template>
+      <ng-template [ngIf]="tabId === '1'">
+        <pre class="m-b-0">
+            <code [highlight]="tscode" (highlighted)="onHighlight($event)" [lineNumbers]="true">
+            </code>
+          </pre>
+      </ng-template>
+    </div>
+  </div>
+</div>

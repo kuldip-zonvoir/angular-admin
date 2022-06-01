@@ -1,0 +1,42 @@
+<div class="card custom-card">
+  <form action="">
+    <div class="dropzone" draggable="true" ngClass="{{ dragAreaClass }}">
+      <div class="drop-secton m-1" (click)="picFile.click()">
+        <span class="material-icons-outlined icon-30"> file_download </span>
+        <h6 class="m-0 pt-2"><b>Choose a File </b> or Drag it here</h6>
+      </div>
+    </div>
+    <div class="" *ngFor="let item of items">
+      <div
+        class="
+          dropzone-item
+          d-flex
+          justify-content-between
+          align-items-center
+          image-preview
+          m-t-8
+        "
+      >
+        <div class="dropzone-file">
+          <div class="dropzone-filename px-2 py-1" title="filename.jpg">
+            <span class="m-r-8">{{ item.itemname }}</span>
+            <strong
+              >(<span class=""
+                ><strong>{{ item.itemsize }}</strong> KB</span
+              >)</strong
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <input
+      hidden
+      multiple
+      type="file"
+      #picFile
+      (change)="selectFile($event)"
+      class="form-control inp_field"
+      placeholder="choose a file"
+    />
+  </form>
+</div>

@@ -1,0 +1,78 @@
+.container-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 2.188rem;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  font-size: $form-label-font-size;
+  font-weight: $form-label-font-weight;
+  color: $formLabelColor !important;
+  text-transform: capitalize;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked ~ .check-mark {
+      background-color: $primary;
+      font-size: 1.25rem;
+
+      &:after {
+        display: block;
+      }
+    }
+  }
+
+  .check-mark {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    height: 1.25rem;
+    width: 1.25rem;
+    color: $white;
+    background-color: $background-color;
+    border: 1px solid $border-color;
+
+    &.disable {
+      background-color: darken(
+        $color: $background-color,
+        $amount: 5%
+      ) !important;
+      border: 0;
+    }
+
+    &:after {
+      content: "\e5ca";
+      position: absolute;
+      display: none;
+      font-size: 18px;
+    }
+  }
+
+  &:hover input ~ .check-mark {
+  }
+
+  &:after {
+    left: 0.563rem;
+    top: 0.313rem;
+    width: 0.313rem;
+    height: 0.625rem;
+    border: 0;
+    border-width: 0 0.188rem 0.188rem 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+.kkkcheck_lable {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  color: $formLabelColor !important;
+}

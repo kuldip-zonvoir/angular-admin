@@ -1,0 +1,86 @@
+<div class="card custom-card card-stretch">
+  <div
+    class="
+      card-header
+      d-flex
+      justify-content-between
+      align-items-center
+      custom-card-header
+      border-1
+    "
+  >
+    <div class="card-title m-b-0">
+      <h5 class="card-label m-b-0">Event on Collapse</h5>
+    </div>
+    <div class="code">
+      <button
+        class="btn d-flex align-items-center btn-outline-primary"
+        (click)="showCode = !showCode"
+      >
+        <span *ngIf="!showCode" class="material-icons icon"> code </span>
+        <span *ngIf="showCode" class="material-icons icon"> code_off </span>
+        code
+      </button>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="content zp-12">
+      <div class="row m-b-12">
+        <div class="col-md-12">
+          <button
+            type="button"
+            class="btn btn-primary m-b-8"
+            (click)="isCollapsed = !isCollapsed"
+            [attr.aria-expanded]="!isCollapsed"
+            aria-controls="collapseEvent"
+          >
+            Toggle collapse
+          </button>
+        </div>
+        <div class="col-md-12">
+          <pre class="card card-block card-header">Event: {{ message }}</pre>
+        </div>
+      </div>
+      <div
+        id="collapseEvent"
+        [isAnimated]="true"
+        [collapse]="isCollapsed"
+        (collapses)="collapses()"
+        (expands)="expands()"
+        (collapsed)="collapsed()"
+        (expanded)="expanded()"
+      >
+        <div class="well well-lg card card-block card-header">Some content</div>
+      </div>
+      <div [collapse]="!showCode" [isAnimated]="true" class="code_container">
+        <div class="nav_bar w-100">
+          <ul>
+            <li>
+              <a [ngClass]="{ active: tabId === '0' }" (click)="tabToggle('0')">
+                HTML
+              </a>
+            </li>
+            <li>
+              <a [ngClass]="{ active: tabId === '1' }" (click)="tabToggle('1')">
+                TS
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- code -->
+        <ng-template [ngIf]="tabId === '0'">
+          <pre class="m-b-0">
+            <code [highlight]="htmlcode" (highlighted)="onHighlight($event)" [lineNumbers]="true">
+            </code>
+          </pre>
+        </ng-template>
+        <ng-template [ngIf]="tabId === '1'">
+          <pre class="m-b-0">
+            <code [highlight]="tscode" (highlighted)="onHighlight($event)" [lineNumbers]="true">
+            </code>
+          </pre>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

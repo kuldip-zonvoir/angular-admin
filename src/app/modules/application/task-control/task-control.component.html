@@ -1,0 +1,127 @@
+<div class="card custom-card m-b-12">
+  <div class="card-header custom-card-header d-flex align-items-center">
+    <h5 class="m-b-0">Statistics</h5>
+    <div class="m-l-auto">
+      <p class="m-b-0">Updated 1 month before</p>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="row no-gutters">
+      <ng-container *ngFor="let task of All_tasks">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-6 m-b-12">
+          <div class="task_naming">
+            <div class="avt_space">
+              <span
+                [ngClass]="getClass(task.task_title)"
+                class="material-icons-outlined"
+              >
+                {{ task.icon }}
+              </span>
+            </div>
+            <div class="boardtask_details">
+              <h6 class="tttss_title">
+                {{ task.total_task }}
+              </h6>
+              <p class="m-b-0 kk_task_name">{{ task.task_title }}</p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+<div class="">
+  <div class="d-flex align-items-center m-b-12">
+    <div class="ml-auto">
+      <button
+        class="btn-primary btn btn-square d-flex align-items-center"
+        (click)="addTasks()"
+      >
+        <span class="material-icons icon-20 m-r-8"> add_box </span>
+        Add Task
+      </button>
+    </div>
+  </div>
+  <div class="">
+    <app-task-manager></app-task-manager>
+  </div>
+</div>
+<!-- add task -->
+<p-dialog
+  header="Add Task "
+  class=""
+  [(visible)]="taskDialog"
+  [modal]="true"
+  class="app-task-manager custom-card"
+>
+  <div class="add_task_to_control">
+    <form action="" [formGroup]="taskform" (ngSubmit)="addNewTask()">
+      <div class="kprime_form_wrapper">
+        <div class="form-group m-b-12">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="task_name"
+            placeholder="Enter Title"
+          />
+        </div>
+        <div class="form-group m-b-12">
+          <label for="description">Description</label>
+          <textarea
+            rows="2"
+            type="text"
+            formControlName="task_description"
+            class="form-control"
+            placeholder="Enter Task Description"
+          ></textarea>
+        </div>
+        <div class="form-group m-b-12">
+          <label for="deadline">Deadline</label>
+          <input
+            type="text"
+            formControlName="deadline"
+            class="form-control"
+            bsDatepicker
+            [bsConfig]="{ isAnimated: true }"
+            placeholder=" Date"
+          />
+        </div>
+        <div class="form-group m-b-12">
+          <label for="status">Status</label>
+          <select
+            class="form-select form-control"
+            formControlName="status"
+            aria-label="Default select example"
+          >
+            <option value="Completed">Completed</option>
+            <option value="Canceled">Canceled</option>
+            <option value="Inprogress">Inprogress</option>
+          </select>
+        </div>
+        <div class="form-group m-b-12">
+          <label for="assign">Assign To</label>
+          <select
+            class="form-select form-control"
+            formControlName="assignto"
+            aria-label="Default select example"
+          >
+            <option value="David">David</option>
+            <option value="Morgon">Morgon</option>
+            <option value="Tom">Tom</option>
+            <option value="Kane">Kane</option>
+          </select>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="d-flex justify-content-end kprime_footer align-items-center">
+    <button
+      (click)="closeModal()"
+      class="btn btn-outline-danger m-r-8 btn-square"
+    >
+      Cancel
+    </button>
+    <button type="submit" class="btn btn-primary btn-square">Submit</button>
+  </div>
+</p-dialog>

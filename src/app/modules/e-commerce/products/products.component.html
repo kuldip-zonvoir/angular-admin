@@ -1,0 +1,41 @@
+<div class="m-b-12">
+  <div class="card-header custom-card-header">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="">
+        <h5 class="m-b-0 p-b-4">Products</h5>
+      </div>
+      <div class="d-flex align-items-center">
+        <div class="m-r-12 product_searchbar">
+          <form action="form" class="form">
+            <div class="search_bar">
+              <input
+                type="text"
+                class="form-control gap-left"
+                placeholder="Search here..."
+              />
+            </div>
+          </form>
+        </div>
+        <button
+          (click)="addProduct()"
+          class="btn btn-pill btn-primary d-flex align-items-center"
+        >
+          <span class="material-icons-outlined icon-20 m-r-4"> add </span>
+          Prodducts
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="">
+  <div class="row">
+    <ng-container *ngFor="let product of productItems">
+      <div class="col-lg-3 col-md-4 col-sm-6 m-b-30">
+        <div class="card custom-card">
+          <app-product-grid [products]="product"></app-product-grid>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+// .mobile_model_active {
+//   position: relative;
+// }
+// .mobile_sidebar_dialog {
+//   .offcanvas_sidebar_overlay {
+//     &::before {
+//       opacity: 1 !important;
+//       z-index: 999;
+//     }
+//   }
+// }
+// .close_sidebar_modal {
+//   display: none;
+//   width: 2rem;
+//   height: 2rem;
+//   color: #a7b4c9;
+//   border: 0 none;
+//   background-color: transparent;
+//   border-radius: 0 !important;
+//   transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+//   position: absolute;
+//   right: 5px;
+//   top: 3px;
+// }
+// .offcanvas_sidebar_overlay {
+//   &::before {
+//     content: "";
+//     position: fixed;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     background: rgba(0, 0, 0, 0.4);
+//     opacity: 0;
+//     transition: opacity 0.15s linear;
+//   }
+// }

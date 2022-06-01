@@ -1,0 +1,74 @@
+<div class="card custom-card card-stretch">
+  <div
+    class="
+      card-header
+      d-flex
+      justify-content-between
+      align-items-center
+      custom-card-header
+      border-1
+    "
+  >
+    <div class="card-title m-b-0">
+      <h5 class="card-label m-b-0">Custom Size Buttons</h5>
+    </div>
+    <div class="code">
+      <button
+        class="btn d-flex align-items-center btn-outline-primary"
+        (click)="showCode = !showCode"
+      >
+        <span *ngIf="!showCode" class="material-icons icon-20 m-r-8">
+          code
+        </span>
+        <span *ngIf="showCode" class="material-icons icon-20 m-r-8">
+          code_off
+        </span>
+        code
+      </button>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="content zp-12">
+      <div class="">
+        <button type="button" class="btn btn-primary px-2 py-2 m-r-8 m-b-8">
+          Primary
+        </button>
+        <button type="button" class="btn btn-warning px-3 py-3 m-r-8 m-b-8">
+          Warning
+        </button>
+        <button type="button" class="btn btn-success px-4 py-4 m-r-8 m-b-8">
+          Success
+        </button>
+      </div>
+    </div>
+    <div [collapse]="!showCode" [isAnimated]="true" class="code_container">
+      <div class="nav_bar w-100">
+        <ul>
+          <li>
+            <a [ngClass]="{ active: tabId === '0' }" (click)="tabToggle('0')">
+              HTML
+            </a>
+          </li>
+          <li>
+            <a [ngClass]="{ active: tabId === '1' }" (click)="tabToggle('1')">
+              TS
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- code -->
+      <ng-template [ngIf]="tabId === '0'">
+        <pre class="m-b-0">
+            <code [highlight]="htmlcode" (highlighted)="onHighlight($event)" [lineNumbers]="true">
+            </code>
+          </pre>
+      </ng-template>
+      <ng-template [ngIf]="tabId === '1'">
+        <pre class="m-b-0">
+            <code [highlight]="tscode" (highlighted)="onHighlight($event)" [lineNumbers]="true">
+            </code>
+          </pre>
+      </ng-template>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,76 @@
+.comment-content {
+  width: calc(100% - 50px);
+  display: inline-block;
+  padding-left: 15px;
+}
+
+.comment-scrollable {
+  height: 400px;
+  overflow-y: auto;
+  @include scrollbar(
+    $width: 0.25rem,
+    $border-radius: 1rem,
+    $background-color: $scrollbarColor
+  );
+}
+.type_comment {
+  width: 84%;
+}
+.send_comment {
+  width: 13%;
+  margin-left: auto;
+}
+.message-box {
+  display: inline-block;
+  padding: 10px;
+  color: $text-color;
+  background-color: $chatboxSender;
+  border-radius: 2px;
+}
+.browser_logo {
+  width: 40px;
+}
+
+.reply-box {
+  @extend .message-box;
+}
+
+.reply {
+  position: relative;
+}
+
+.reply-content {
+  text-align: right;
+  width: calc(100% - 0px);
+  padding-left: 0;
+  padding-right: 15px;
+}
+// for Mobile Portrait Mode
+@include responsive-below(md) {
+  .news_title {
+    min-height: 60px;
+  }
+}
+// For Mobile Landscape Mode
+@include responsive-between(sm, md) {
+  .news_title {
+    min-height: 60px;
+  }
+}
+// For tablet Portrait Mode
+@include responsive-between(md, lg) {
+  .news_title {
+    min-height: 60px;
+  }
+  .on_ipad {
+    width: 45%;
+    float: left;
+    margin-right: 5%;
+  }
+}
+// For tablet Landscape Mode
+@include responsive-between(lg, xl) {
+  .news_title {
+    min-height: 60px;
+  }
+}

@@ -1,0 +1,29 @@
+<div class="chat-container">
+  <div class="">
+    <div class="">
+      <div class="row">
+        <div
+          [ngClass]="isListVisble ? 'hideList' : 'chat-list'"
+          class="col-lg-4 col-md-5 m-b-12 padding_chatlist"
+        >
+          <div class="chat_sidebar ckchat">
+            <div class="p-b-8">
+              <app-chat-header></app-chat-header>
+            </div>
+            <div class="sidebar_content">
+              <app-chatlist></app-chatlist>
+            </div>
+          </div>
+        </div>
+        <div
+          [ngClass]="isListVisble ? 'chatting' : 'showChat'"
+          class="col-lg-8 col-md-7 padding_chat_messages"
+        >
+          <div class="ckchat">
+            <app-chating></app-chating>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

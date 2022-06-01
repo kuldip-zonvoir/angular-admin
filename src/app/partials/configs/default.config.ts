@@ -1,0 +1,56 @@
+export const DefaultConfig = {
+  zonvoir: "version 1",
+  customSetting: {
+    breakpoints: {
+      sm: 576,
+      md: 768,
+      lg: 992,
+      xl: 1200,
+      xxl: 1400,
+    },
+    colors: {
+      theme: {
+        light: {
+          white: "#ffffff",
+          primary: "rgb(35, 130, 247)",
+          secondary: "rgb(255, 90, 95)",
+          success: "rgb(6, 215, 156)",
+          info: "rgb(0, 166, 251)",
+          warning: "rgb(255, 178, 43)",
+          danger: "rgb(224, 93, 111)",
+          purple: "rgb(116, 90, 242)",
+          orange: "rgb(251, 79, 0)",
+          dark: "#000000",
+        },
+        inverse: {
+          white: "#ffffff",
+          primary: "#ffffff",
+          secondary: "#3F4254",
+          success: "#ffffff",
+          info: "#ffffff",
+          warning: "#ffffff",
+          danger: "#ffffff",
+          light: "#464E5F",
+          dark: "#ffffff",
+        },
+      },
+      gray: {
+        "gray-100": "#F3F6F9",
+        "gray-200": "#EBEDF3",
+        "gray-300": "#E4E6EF",
+        "gray-400": "#D1D3E0",
+        "gray-500": "#B5B5C3",
+        "gray-600": "#7E8299",
+        "gray-700": "#5E6278",
+        "gray-800": "#3F4254",
+        "gray-900": "#181C32",
+      },
+    },
+    styles: {
+      font_size: "13px",
+      font_weight: "500",
+      color: "#475c66",
+      font_family: "Roboto",
+    },
+  },
+};

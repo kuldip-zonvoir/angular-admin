@@ -1,0 +1,42 @@
+.brand-header {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  z-index: 99;
+  width: 100%;
+  background-color: $background-color;
+  height: 60px;
+  display: flex;
+  border-bottom: 1px solid $border-color2;
+  .brand {
+    .link {
+      text-decoration: none;
+      color: $text-color;
+
+      .brand-heading {
+        color: $text-color;
+        font-size: 24px;
+      }
+      .brand_heading_overlay {
+        color: $text-color;
+        font-size: 24px;
+        display: none;
+      }
+    }
+  }
+}
+
+.brand-header-mobile {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  z-index: 99;
+  background-color: $background-color;
+  color: $text-color;
+  height: 60px;
+  display: flex;
+  width: 56px;
+}
+// Tablet Landscape mode
+@include responsive-between(lg, xl) {
+}

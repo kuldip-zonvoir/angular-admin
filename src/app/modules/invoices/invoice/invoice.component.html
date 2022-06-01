@@ -1,0 +1,121 @@
+<div class="card custom-card">
+  <div class="card-body">
+    <div class="d-flex align-items-center m-b-12 p-b-12">
+      <div class="">
+        <div class="d-flex align-items-center">
+          <button
+            (click)="backToInvoice()"
+            class="btn btn-outline-secondary m-r-8"
+          >
+            Back
+          </button>
+          <button
+            (click)="updateInvoice()"
+            class="btn bbtn-white d-flex btn-outline-primary"
+          >
+            <span class="material-icons-outlined icon-20 m-r-8"> edit </span>
+            Edit
+          </button>
+        </div>
+      </div>
+      <div class="ml-auto">
+        <h5 class="m-b-0">
+          Invoice ID:
+          <span class="text-muted m-l-4">#108</span>
+        </h5>
+      </div>
+    </div>
+    <div class="d-flex align-items-center p-b-12">
+      <div class="d-flex flex-column">
+        <h5 class="m-b-0 p-b-8">Order Status :</h5>
+        <div class="bg-primary">
+          <h6 class="m-b-0 custom-badge text-white">Deliverd</h6>
+        </div>
+      </div>
+      <div class="ml-auto d-flex flex-column">
+        <h5 class="m-b-0 p-b-8 text-right">Order Date</h5>
+        <div class="d-flex">
+          <div class="m-r-8">
+            <span class="material-icons-outlined icon-gray icon"> today </span>
+          </div>
+          <p class="m-b-0 text-muted">Monday, June 14, 2021</p>
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <div class="row p-b-12">
+        <div class="text-left col-lg-6">
+          <h5 class="m-b-0 p-b-8">Bill From:</h5>
+          <p class="m-b-0 text-muted">RedApple Inc</p>
+          <p class="m-b-0 text-muted">service@123.gmail.com</p>
+          <p class="m-b-0 text-muted">D-Block Stanly Tower, LA, USA</p>
+          <p class="m-b-0 text-muted">+131 2557342</p>
+        </div>
+        <div class="text-right col-lg-6">
+          <h5 class="m-b-0 p-b-8">Bill To:</h5>
+          <p class="m-b-0 text-muted">Redit Inc</p>
+          <p class="m-b-0 text-muted">suportredit@123.gmail.com</p>
+          <p class="m-b-0 text-muted">A-Block Martin Tower, California, USA</p>
+          <p class="m-b-0 text-muted">+131 5462721</p>
+        </div>
+      </div>
+      <div class="p-b-12">
+        <table class="table custom-table table-bordered p-b-8">
+          <thead class="tabel-head">
+            <tr>
+              <th style="border-top: 0" scope="col" class="th-data">
+                Item Name
+              </th>
+              <th style="border-top: 0" scope="col" class="th-data text-center">
+                Unit Price
+              </th>
+              <th style="border-top: 0" scope="col" class="th-data text-center">
+                Units
+              </th>
+              <th
+                style="border-top: 0"
+                scope="col"
+                class="th-data text-center text-primary"
+              >
+                Total Unit Price
+              </th>
+            </tr>
+          </thead>
+          <tbody class="tabel-body">
+            <tr>
+              <td class="td-data">
+                <h6 class="m-b-0">Desktop</h6>
+              </td>
+              <td class="td-data text-center">
+                <h6 class="m-b-0">$ <span> 10</span></h6>
+              </td>
+              <td class="td-data text-center">
+                <h6 class="m-b-0">$ <span> 20</span></h6>
+              </td>
+              <td class="td-data text-center">
+                <h6 class="m-b-0">$ <span> 200</span></h6>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="">
+        <div class="mb-2">
+          <h6 class="m-b-0 text-right">
+            Sub Total Amount: $<span class="m-l-8 text-danger">200</span>
+          </h6>
+        </div>
+        <div class="p-b-12 m-b-12 d-flex flex-column text-right border-1">
+          <h6 class="m-b-0 p-b-8">
+            Total VAT: $<span class="m-l-8 text-danger">20</span>
+          </h6>
+        </div>
+        <div class="">
+          <h6 class="m-b-0 text-right fw-700">
+            Total: $<span class="m-l-8 text-danger">220</span>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

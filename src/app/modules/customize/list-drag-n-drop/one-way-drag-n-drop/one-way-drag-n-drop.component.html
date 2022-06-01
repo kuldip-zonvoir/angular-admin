@@ -1,0 +1,55 @@
+<div class="p-b-12">
+  <h5 class="m-b-0">Drag&Drop Enter Predicate</h5>
+</div>
+<div class="row">
+  <div class="col-lg-6 m-b-20">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header bg-primary">
+        <h5 class="m-b-0 text-white">Availble Episodes</h5>
+      </div>
+      <div class="" cdkDropList (cdkDropListDropped)="drop($event)">
+        <ng-container *ngFor="let number of lists1">
+          <div
+            cdkDrag
+            class="
+              d-flex
+              align-items-center
+              one-way-drag-drop
+              drag-list
+              border-1
+            "
+          >
+            <h6 class="m-b-0 one-way-drag-drop-title">
+              {{ number }}
+            </h6>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 m-b-20">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header bg-primary">
+        <h5 class="m-b-0 text-white">New Episodes</h5>
+      </div>
+      <div class="" cdkDropList (cdkDropListDropped)="dropEven($event)">
+        <ng-container *ngFor="let episode of lists">
+          <div
+            cdkDrag
+            class="
+              d-flex
+              align-items-center
+              one-way-drag-drop
+              drag-list
+              border-1
+            "
+          >
+            <h6 class="m-b-0 one-way-drag-drop-title">
+              {{ episode }}
+            </h6>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

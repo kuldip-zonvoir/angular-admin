@@ -1,0 +1,1936 @@
+<nav claas="">
+  <!-- brand start -->
+  <div
+    class="brand-header"
+    [ngClass]="
+      isMobile
+        ? 'brand-header-mobile ' + getBrandClass(brandkey)
+        : '' + getBrandClass(brandkey)
+    "
+  >
+    <app-brand></app-brand>
+  </div>
+  <!-- brand close -->
+  <div
+    class="menu-sidebar"
+    [ngClass]="
+      isMobile
+        ? 'mobile ' + getSidebarClass(sidebarkey)
+        : '' + getSidebarClass(sidebarkey)
+    "
+  >
+    <div class="mega-sidebar scrollbar" [ngClass]="getActiveMenuText(textkey)">
+      <ul class="nav">
+        <li class="nav_item">
+          <a
+            (click)="openMenu(0)"
+            [ngClass]="{
+              active: currentUrl[1] == 'dashboards'
+            }"
+            class="nav_link d-flex align-items-center"
+          >
+            <span class="material-icons-outlined m-r-12 icon-22">
+              dashboard
+            </span>
+            <div
+              class="d-flex justify-content-between w-100 align-items-center nav_name"
+            >
+              <div class="">Dashboard</div>
+              <div>
+                <span class="material-icons-outlined icon-karr">
+                  {{
+                    isSubMenuArr[0]
+                      ? " keyboard_arrow_up"
+                      : " keyboard_arrow_down"
+                  }}
+                </span>
+              </div>
+            </div>
+          </a>
+          <div
+            id="collapseBasic"
+            [collapse]="!isSubMenuArr[0]"
+            [isAnimated]="true"
+            class="menu_submenu"
+          >
+            <div class="menu_submenu">
+              <ul class="menu_subnav">
+                <li class="subnav_nav_item">
+                  <a
+                    [ngClass]="{
+                      active: currentUrlString == '/dashboards/dashbord-1'
+                    }"
+                    class="subnav_nav_link"
+                    routerLink="./dashboards/dashbord-1"
+                  >
+                    <span class="subnav_nav_name"> Dashboard 1 </span>
+                  </a>
+                </li>
+                <li class="subnav_nav_item">
+                  <a
+                    [ngClass]="{
+                      active: currentUrlString == '/dashboards/dashbord-2'
+                    }"
+                    class="subnav_nav_link"
+                    routerLink="./dashboards/dashbord-2"
+                  >
+                    <span class="subnav_nav_name"> Dashboard 2 </span>
+                  </a>
+                </li>
+                <li class="subnav_nav_item">
+                  <a
+                    [ngClass]="{
+                      active: currentUrlString == '/dashboards/dashbord-3'
+                    }"
+                    class="subnav_nav_link"
+                    routerLink="./dashboards/dashbord-3"
+                  >
+                    <span class="subnav_nav_name"> Dashboard 3 </span>
+                  </a>
+                </li>
+                <li class="subnav_nav_item">
+                  <a
+                    [ngClass]="{
+                      active: currentUrlString == '/dashboards/dashbord-4'
+                    }"
+                    class="subnav_nav_link"
+                    routerLink="./dashboards/dashbord-4"
+                  >
+                    <span class="subnav_nav_name"> Dashboard 4 </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <!-- scrumboard -->
+        <li class="nav_item" (click)="openMenu(22)">
+          <a
+            [ngClass]="{
+              active: currentUrlString == '/analytics'
+            }"
+            class="nav_link d-flex align-items-center"
+            routerLink="./analytics"
+          >
+            <span class="material-icons-outlined m-r-12 icon-22">
+              trending_up
+            </span>
+            <div
+              class="d-flex justify-content-between w-100 align-items-center nav_name"
+            >
+              <div class="">Analytics</div>
+              <div>
+                <p class="m-b-0 p-x-4 text-white badge-tag bg-success">New</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <!-- Scrumboard Close -->
+
+        <!-- user account -->
+        <li class="nav_title">
+          <h6 class="heading">Account</h6>
+        </li>
+        <li class="nav_item">
+          <a
+            (click)="openMenu(1)"
+            [ngClass]="{
+              active: currentUrl[1] == 'account'
+            }"
+            class="nav_link d-flex align-items-center"
+          >
+            <span class="material-icons-outlined m-r-12 icon-22">
+              account_box
+            </span>
+            <div
+              class="d-flex justify-content-between w-100 align-items-center nav_name"
+            >
+              <div class="">Profile</div>
+              <div>
+                <span class="material-icons-outlined icon-karr">
+                  {{
+                    isSubMenuArr[1]
+                      ? " keyboard_arrow_up"
+                      : " keyboard_arrow_down"
+                  }}
+                </span>
+              </div>
+            </div>
+          </a>
+          <div
+            id="collapseBasic"
+            [collapse]="!isSubMenuArr[1]"
+            [isAnimated]="true"
+            class="menu_submenu"
+          >
+            <div class="menu_submenu">
+              <ul class="menu_subnav">
+                <li class="subnav_nav_item">
+                  <a
+                    class="subnav_nav_link"
+                    [ngClass]="{
+                      active: currentUrlString == '/account/timeline'
+                    }"
+                    routerLink="./account/timeline"
+                  >
+                    <span class="subnav_nav_name"> Profile Overview </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <!-- Application -->
+        <li class="nav_title">
+          <h6 class="heading">Applications</h6>
+        </li>
+        <!-- Applications -->
+        <li class="nav_item">
+          <a
+            (click)="openMenu(2)"
+            [ngClass]="{
+              active: currentUrl[1] == 'application'
+            }"
+            class="nav_link d-flex align-items-center"
+          >
+            <span class="material-icons-outlined m-r-12 icon-22"> apps </span>
+            <div
+              class="d-flex justify-content-between w-100 align-items-center nav_name"
+            >
+              <div class="">Application</div>
+              <div>
+                <span class="material-icons-outlined icon-karr">
+                  {{
+                    isSubMenuArr[2]
+                      ? " keyboard_arrow_up"
+                      : " keyboard_arrow_down"
+                  }}
+                </span>
+              </div>
+            </div>
+          </a>
+          <div
+            id="collapseBasic"
+            [collapse]="!isSubMenuArr[2]"
+            [isAnimated]="true"
+            class="menu_submenu"
+          >
+            <div class="menu_submenu">
+              <ul class="menu_subnav">
+                <li class="subnav_nav_item">
+                  <a
+                    [ngClass]="{
+                      active: currentUrlString == '/application/event-calender'
+                    }"
+                    routerLink="./application/event-calender"
+                    class="subnav_nav_link"
+                  >
+                    <span class="subnav_nav_name"> Calendar </span>
+                  </a>
+                  <a
+                    [ngClass]="{
+                      active: currentUrlString == '/application/file-manager'
+                    }"
+                    class="subnav_nav_link"
+                    routerLink="./application/file-manager"
+                  >
+                    <span class="subnav_nav_name"> File Manager </span>
+                  </a>
+                </li>
+                <li class="subnav_nav_item">
+                  <a
+                    [ngClass]="{
+                      active: currentUrlString == '/application/task-manager'
+                    }"
+                    class="subnav_nav_link"
+                    routerLink="./application/task-manager"
+                  >
+                    <span class="subnav_nav_name"> Task Manager </span>
+                  </a>
+                </li>
+                <li class="subnav_nav_item">
+                  <a
+                    [ngClass]="{
+                      active: currentUrlString == '/application/notes'
+                    }"
+                    class="subnav_nav_link"
+                    routerLink="./application/notes"
+                  >
+                    <span class="subnav_nav_name"> Notes </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <!-- E-commerce -->
+        <li class="nav_item">
+          <a
+            (click)="openMenu(3)"
+            [ngClass]="{
+              active: currentUrl[1] == 'e-commmerce'
+            }"
+            class="nav_link d-flex align-items-center"
+          >
+            <span class="material-icons-outlined m-r-12 icon-22">
+              shopping_cart
+            </span>
+            <div
+              class="d-flex justify-content-between w-100 align-items-center nav_name"
+            >
+              <div class="">E-Commerce</div>
+              <div>
+                <span class="material-icons-outlined icon-karr">
+                  {{
+                    isSubMenuArr[3]
+                      ? " keyboard_arrow_up"
+                      : " keyboard_arrow_down"
+                  }}
+                </span>
+              </div>
+            </div>
+          </a>
+          <div
+            id="collapseBasic"
+            [collapse]="!isSubMenuArr[3]"
+            [isAnimated]="true"
+            class="menu_submenu"
+          >
+            <div class="menu_submenu">
+              <ul class="menu_subnav">
+                <li class="subnav_nav_item">
+                  <a
+                    [ngClass]="{
+                      active: currentUrlString == '/e-commmerce/products'
+                    }"
+                    class="subnav_nav_link"
+                    routerLink="./e-commmerce/products"
+                  >
+                    <span class="subnav_nav_name"> Products </span>
+                  </a>
+                </li>
+                <li class="subnav_nav_item">
+                  <a
+                    [ngClass]="{
+                      active: currentUrlString == '/e-commmerce/product-detail'
+                    }"
+                    class="subnav_nav_link"
+                    routerLink="./e-commmerce/product-detail"
+                  >
+                    <span class="subnav_nav_name"> Product Detail </span>
+                  </a>
+                </li>
+                <li class="subnav_nav_item">
+                  <a
+                    class="subnav_nav_link"
+                    [ngClass]="{
+                      active: currentUrlString == '/e-commmerce/cart'
+                    }"
+                    routerLink="./e-commmerce/cart"
+                  >
+                    <span class="subnav_nav_name"> Cart </span>
+                  </a>
+                </li>
+                <li class="subnav_nav_item">
+                  <a
+                    class="subnav_nav_link"
+                    [ngClass]="{
+                      active: currentUrlString == '/e-commmerce/checkout'
+                    }"
+                    routerLink="./e-commmerce/checkout"
+                  >
+                    <span class="subnav_nav_name"> Checkout </span>
+                  </a>
+                </li>
+                <li class="subnav_nav_item">
+                  <a
+                    class="subnav_nav_link"
+                    [ngClass]="{
+                      active: currentUrlString == '/e-commmerce/edit-product'
+                    }"
+                    routerLink="./e-commmerce/edit-product"
+                  >
+                    <span class="subnav_nav_name"> Edit Product </span>
+                  </a>
+                </li>
+                <li class="subnav_nav_item">
+                  <a
+                    class="subnav_nav_link"
+                    [ngClass]="{
+                      active: currentUrlString == '/e-commmerce/category'
+                    }"
+                    routerLink="./e-commmerce/category"
+                  >
+                    <span class="subnav_nav_name"> Category </span>
+                  </a>
+                </li>
+                <li class="subnav_nav_item">
+                  <a
+                    class="subnav_nav_link"
+                    [ngClass]="{
+                      active: currentUrlString == '/e-commmerce/customers'
+                    }"
+                    routerLink="./e-commmerce/customers"
+                  >
+                    <span class="subnav_nav_name"> Customers </span>
+                  </a>
+                </li>
+                <li class="subnav_nav_item">
+                  <a
+                    class="subnav_nav_link"
+                    [ngClass]="{
+                      active: currentUrlString == '/e-commmerce/coupons'
+                    }"
+                    routerLink="./e-commmerce/coupons"
+                  >
+                    <span class="subnav_nav_name"> Coupons </span>
+                  </a>
+                </li>
+                <li class="subnav_nav_item">
+                  <a
+                    class="subnav_nav_link"
+                    [ngClass]="{
+                      active: currentUrlString == '/e-commmerce/orders'
+                    }"
+                    routerLink="./e-commmerce/orders"
+                  >
+                    <span class="subnav_nav_name"> Orders </span>
+                  </a>
+                </li>
+                <li class="subnav_nav_item">
+                  <a
+                    class="subnav_nav_link"
+                    [ngClass]="{
+                      active: currentUrlString == '/e-commmerce/inventory'
+                    }"
+                    routerLink="./e-commmerce/inventory"
+                  >
+                    <span class="subnav_nav_name"> Inventory </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <!-- Email -->
+        <li class="nav_item">
+          <a
+            (click)="openMenu(4)"
+            [ngClass]="{
+              active: currentUrl[1] == 'email'
+            }"
+            class="nav_link d-flex align-items-center"
+          >
+            <span class="material-icons-outlined m-r-12 icon-22">
+              mail_outline
+            </span>
+            <div
+              class="d-flex justify-content-between w-100 align-items-center nav_name"
+            >
+              <div class="">Email</div>
+              <div>
+                <span
+                  class="m-b-0 text-white bg-danger notifiaction-small-circle imp"
+                  >4</span
+                >
+              </div>
+            </div>
+          </a>
+          <div
+            id="collapseBasic"
+            [collapse]="!isSubMenuArr[4]"
+            [isAnimated]="true"
+            class="menu_submenu"
+          >
+            <div class="menu_submenu">
+              <ul class="menu_subnav">
+                <li class="subnav_nav_item">
+                  <a
+                    class="subnav_nav_link"
+                    [ngClass]="{
+                      active: currentUrlString == '/email/inbox'
+                    }"
+                    routerLink="./email/inbox"
+                  >
+                    <span class="subnav_nav_name"> Inbox </span>
+                  </a>
+                </li>
+                <li class="subnav_nav_item">
+                  <a
+                    class="subnav_nav_link"
+                    [ngClass]="{
+                      active: currentUrlString == '/email/read'
+                    }"
+                    routerLink="./email/read"
+                  >
+                    <span class="subnav_nav_name"> Read </span>
+                  </a>
+                </li>
+                <li class="subnav_nav_item">
+                  <a
+                    class="subnav_nav_link"
+                    [ngClass]="{
+                      active: currentUrlString == '/email/compose'
+                    }"
+                    routerLink="./email/compose"
+                  >
+                    <span class="subnav_nav_name"> Compose </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <!-- Chat -->
+        <li class="nav_item">
+          <a
+            (click)="openMenu(5)"
+            [ngClass]="{
+              active: currentUrl[1] == 'chat'
+            }"
+            class="nav_link d-flex align-items-center"
+          >
+            <span class="material-icons-outlined m-r-12 icon-22">
+              chat_bubble_outline
+            </span>
+            <div
+              class="d-flex justify-content-between w-100 align-items-center nav_name"
+            >
+              <div class="">Chat</div>
+              <div>
+                <span
+                  class="m-b-0 text-white bg-success notifiaction-small-circle imp"
+                  >8</span
+                >
+              </div>
+            </div>
+          </a>
+          <div
+            id="collapseBasic"
+            [collapse]="!isSubMenuArr[5]"
+            [isAnimated]="true"
+            class="menu_submenu"
+          >
+            <div class="menu_submenu">
+              <ul class="menu_subnav">
+                <li class="subnav_nav_item">
+                  <a
+                    class="subnav_nav_link"
+                    [ngClass]="{
+                      active: currentUrlString == '/chat/private-chat'
+                    }"
+                    routerLink="./chat/private-chat"
+                  >
+                    <span class="subnav_nav_name"> Private Chat </span>
+                  </a>
+                </li>
+                <li class="subnav_nav_item">
+                  <a
+                    class="subnav_nav_link"
+                    [ngClass]="{
+                      active: currentUrlString == '/chat/group-chat'
+                    }"
+                    routerLink="./chat/group-chat"
+                  >
+                    <span class="subnav_nav_name"> Group Chat </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <!-- Contacts -->
+        <li class="nav_item">
+          <a
+            (click)="openMenu(6)"
+            [ngClass]="{
+              active: currentUrl[1] == 'contacts'
+            }"
+            class="nav_link d-flex align-items-center"
+          >
+            <span class="material-icons-outlined m-r-12 icon-22">
+              contacts
+            </span>
+            <div
+              class="d-flex justify-content-between w-100 align-items-center nav_name"
+            >
+              <div class="">Contacts</div>
+              <div>
+                <span class="material-icons-outlined icon-karr">
+                  {{
+                    isSubMenuArr[6]
+                      ? " keyboard_arrow_up"
+                      : " keyboard_arrow_down"
+                  }}
+                </span>
+              </div>
+            </div>
+          </a>
+          <div
+            id="collapseBasic"
+            [collapse]="!isSubMenuArr[6]"
+            [isAnimated]="true"
+            class="menu_submenu"
+          >
+            <div class="menu_submenu">
+              <ul class="menu_subnav">
+                <li class="subnav_nav_item">
+                  <a
+                    class="subnav_nav_link"
+                    [ngClass]="{
+                      active: currentUrlString == '/contacts/grid-contacts'
+                    }"
+                    routerLink="./contacts/grid-contacts"
+                  >
+                    <span class="subnav_nav_name"> View Contacts </span>
+                  </a>
+                </li>
+                <li class="subnav_nav_item">
+                  <a
+                    class="subnav_nav_link"
+                    [ngClass]="{
+                      active: currentUrlString == '/contacts/list-contacts'
+                    }"
+                    routerLink="./contacts/list-contacts"
+                  >
+                    <span class="subnav_nav_name"> Contact List </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- invoice Pages -->
+        <li class="nav_item">
+          <a
+            (click)="openMenu(7)"
+            [ngClass]="{
+              active: currentUrl[1] == 'invoices'
+            }"
+            class="nav_link d-flex align-items-center"
+          >
+            <span class="material-icons-outlined m-r-12 icon-22">
+              assignment_turned_in
+            </span>
+            <div
+              class="d-flex justify-content-between w-100 align-items-center nav_name"
+            >
+              <div class="">Invoices</div>
+              <div>
+                <span class="material-icons-outlined icon-karr">
+                  {{
+                    isSubMenuArr[7]
+                      ? " keyboard_arrow_up"
+                      : " keyboard_arrow_down"
+                  }}
+                </span>
+              </div>
+            </div>
+          </a>
+          <div
+            id="collapseBasic"
+            [collapse]="!isSubMenuArr[7]"
+            [isAnimated]="true"
+            class="menu_submenu"
+          >
+            <ul class="menu_subnav">
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/invoices/add-invoice'
+                  }"
+                  routerLink="./invoices/add-invoice"
+                >
+                  <span class="subnav_nav_name">Add Invoice </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/invoices/invoice'
+                  }"
+                  routerLink="./invoices/invoice"
+                >
+                  <span class="subnav_nav_name">Invoice </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/invoices/invoice-lists'
+                  }"
+                  routerLink="./invoices/invoice-lists"
+                >
+                  <span class="subnav_nav_name"> Invoice List </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- invoice Pages ends -->
+        <!-- scrumboard -->
+        <li class="nav_item" (click)="openMenu(8)">
+          <a
+            [ngClass]="{
+              active: currentUrlString == '/scrumboard/list-page'
+            }"
+            class="nav_link d-flex align-items-center"
+            routerLink="./scrumboard/list-page"
+          >
+            <span class="material-icons-outlined m-r-12 icon-22">
+              assignment_turned_in
+            </span>
+            <div
+              class="d-flex justify-content-between w-100 align-items-center nav_name"
+            >
+              <div class="">Scrum Board</div>
+              <div>
+                <p class="m-b-0 p-x-4 text-white badge-tag bg-primary">New</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <!-- Scrumboard Close -->
+        <!-- Tickets -->
+        <li class="nav_item">
+          <a
+            (click)="openMenu(9)"
+            [ngClass]="{
+              active: currentUrl[1] == 'ticket'
+            }"
+            class="nav_link d-flex align-items-center"
+          >
+            <span class="material-icons-outlined m-r-12 icon-22">
+              confirmation_number
+            </span>
+            <div
+              class="d-flex justify-content-between w-100 align-items-center nav_name"
+            >
+              <div class="">Tickets</div>
+              <div>
+                <span class="material-icons-outlined icon-karr">
+                  {{
+                    isSubMenuArr[9]
+                      ? " keyboard_arrow_up"
+                      : " keyboard_arrow_down"
+                  }}
+                </span>
+              </div>
+            </div>
+          </a>
+          <div
+            id="collapseBasic"
+            [collapse]="!isSubMenuArr[9]"
+            [isAnimated]="true"
+            class="menu_submenu"
+          >
+            <div class="menu_submenu">
+              <ul class="menu_subnav">
+                <li class="subnav_nav_item">
+                  <a
+                    class="subnav_nav_link"
+                    [ngClass]="{
+                      active: currentUrlString == '/ticket/ticket-list'
+                    }"
+                    routerLink="./ticket/ticket-list"
+                  >
+                    <span class="subnav_nav_name"> Ticket List </span>
+                  </a>
+                </li>
+                <li class="subnav_nav_item">
+                  <a
+                    class="subnav_nav_link"
+                    [ngClass]="{
+                      active: currentUrlString == '/ticket/ticket-details'
+                    }"
+                    routerLink="./ticket/ticket-details"
+                  >
+                    <span class="subnav_nav_name"> Ticket Details </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <!-- Help Center -->
+        <li class="nav_item">
+          <a
+            (click)="openMenu(10)"
+            [ngClass]="{
+              active: currentUrl[1] == 'help-center'
+            }"
+            class="nav_link d-flex align-items-center"
+          >
+            <span class="material-icons-outlined m-r-12 icon-22">
+              support
+            </span>
+            <div
+              class="d-flex justify-content-between w-100 align-items-center nav_name"
+            >
+              <div class="">Help Center</div>
+              <div>
+                <span class="material-icons-outlined icon-karr">
+                  {{
+                    isSubMenuArr[10]
+                      ? " keyboard_arrow_up"
+                      : " keyboard_arrow_down"
+                  }}
+                </span>
+              </div>
+            </div>
+          </a>
+          <div
+            id="collapseBasic"
+            [collapse]="!isSubMenuArr[10]"
+            [isAnimated]="true"
+            class="menu_submenu"
+          >
+            <div class="menu_submenu">
+              <ul class="menu_subnav">
+                <li class="subnav_nav_item">
+                  <a
+                    class="subnav_nav_link"
+                    [ngClass]="{
+                      active: currentUrlString == '/help-center/getting-started'
+                    }"
+                    routerLink="./help-center/getting-started"
+                  >
+                    <span class="subnav_nav_name"> Getting Started </span>
+                  </a>
+                </li>
+                <li class="subnav_nav_item">
+                  <a
+                    class="subnav_nav_link"
+                    [ngClass]="{
+                      active: currentUrlString == '/help-center/faq'
+                    }"
+                    routerLink="./help-center/faq"
+                  >
+                    <span class="subnav_nav_name"> FAQs </span>
+                  </a>
+                </li>
+                <li class="subnav_nav_item">
+                  <a
+                    class="subnav_nav_link"
+                    [ngClass]="{
+                      active: currentUrlString == '/help-center/guide'
+                    }"
+                    routerLink="./help-center/guide"
+                  >
+                    <span class="subnav_nav_name"> Guides </span>
+                  </a>
+                </li>
+                <li class="subnav_nav_item">
+                  <a
+                    class="subnav_nav_link"
+                    [ngClass]="{
+                      active: currentUrlString == '/help-center/support'
+                    }"
+                    routerLink="./help-center/support"
+                  >
+                    <span class="subnav_nav_name"> Support </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- UI Elements -->
+        <li class="nav_title">
+          <h6 class="heading">UI Elements</h6>
+        </li>
+        <li class="nav_item">
+          <a
+            (click)="openMenu(11)"
+            [ngClass]="{
+              active: currentUrl[1] == 'bootstrap'
+            }"
+            class="nav_link d-flex align-items-center"
+          >
+            <span class="material-icons-outlined m-r-12 icon-22">
+              article
+            </span>
+            <div
+              class="d-flex justify-content-between w-100 align-items-center nav_name"
+            >
+              <div class="">Bootstrap</div>
+              <div>
+                <span class="material-icons-outlined icon-karr">
+                  {{
+                    isSubMenuArr[11]
+                      ? " keyboard_arrow_up"
+                      : " keyboard_arrow_down"
+                  }}
+                </span>
+              </div>
+            </div>
+          </a>
+          <div
+            id="collapseBasic"
+            [collapse]="!isSubMenuArr[11]"
+            [isAnimated]="true"
+            class="menu_submenu"
+          >
+            <ul class="menu_subnav">
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/bootstrap/accordions'
+                  }"
+                  routerLink="./bootstrap/accordions"
+                >
+                  <span class="subnav_nav_name"> Accordions </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/bootstrap/alert'
+                  }"
+                  routerLink="./bootstrap/alert"
+                >
+                  <span class="subnav_nav_name"> Alert </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/bootstrap/badges'
+                  }"
+                  routerLink="./bootstrap/badges"
+                >
+                  <span class="subnav_nav_name"> Badge </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/bootstrap/buttons'
+                  }"
+                  routerLink="./bootstrap/buttons"
+                >
+                  <span class="subnav_nav_name"> Buttons </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/bootstrap/cards'
+                  }"
+                  routerLink="./bootstrap/cards"
+                >
+                  <span class="subnav_nav_name"> Cards </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/bootstrap/carousel'
+                  }"
+                  routerLink="./bootstrap/carousel"
+                >
+                  <span class="subnav_nav_name"> Carousel </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/bootstrap/collapse'
+                  }"
+                  routerLink="./bootstrap/collapse"
+                >
+                  <span class="subnav_nav_name"> Collapse </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/bootstrap/datepicker'
+                  }"
+                  routerLink="./bootstrap/datepicker"
+                >
+                  <span class="subnav_nav_name"> Date Picker </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/bootstrap/dropdown'
+                  }"
+                  routerLink="./bootstrap/dropdown"
+                >
+                  <span class="subnav_nav_name"> Dropdown </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/bootstrap/list-group'
+                  }"
+                  routerLink="./bootstrap/list-group"
+                >
+                  <span class="subnav_nav_name"> List </span>
+                </a>
+              </li>
+
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/bootstrap/modals'
+                  }"
+                  routerLink="./bootstrap/modals"
+                >
+                  <span class="subnav_nav_name"> Modals </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/bootstrap/navbar'
+                  }"
+                  routerLink="./bootstrap/navbar"
+                >
+                  <span class="subnav_nav_name"> Navbar </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/bootstrap/tabs'
+                  }"
+                  routerLink="./bootstrap/tabs"
+                >
+                  <span class="subnav_nav_name"> Tabs </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/bootstrap/timepicker'
+                  }"
+                  routerLink="./bootstrap/timepicker"
+                >
+                  <span class="subnav_nav_name"> Time Picker </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/bootstrap/tooltip'
+                  }"
+                  routerLink="./bootstrap/tooltip"
+                >
+                  <span class="subnav_nav_name"> Tooltip </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/bootstrap/pagination'
+                  }"
+                  routerLink="./bootstrap/pagination"
+                >
+                  <span class="subnav_nav_name"> Pagination </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/bootstrap/popover'
+                  }"
+                  routerLink="./bootstrap/popover"
+                >
+                  <span class="subnav_nav_name"> Popover </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/bootstrap/progressbar'
+                  }"
+                  routerLink="./bootstrap/progressbar"
+                >
+                  <span class="subnav_nav_name"> Progressbar </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/bootstrap/rating'
+                  }"
+                  routerLink="./bootstrap/rating"
+                >
+                  <span class="subnav_nav_name"> Rating </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/bootstrap/spinners'
+                  }"
+                  routerLink="./bootstrap/spinners"
+                >
+                  <span class="subnav_nav_name"> Spinners </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/bootstrap/typehead'
+                  }"
+                  routerLink="./bootstrap/typehead"
+                >
+                  <span class="subnav_nav_name"> Typehead </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- Extra Pages -->
+        <li class="nav_item">
+          <a
+            (click)="openMenu(12)"
+            [ngClass]="{
+              active: currentUrl[1] == 'extra'
+            }"
+            class="nav_link d-flex align-items-center"
+          >
+            <span class="material-icons-outlined m-r-12 icon-22"> pages </span>
+            <div
+              class="d-flex justify-content-between w-100 align-items-center nav_name"
+            >
+              <div class="">Extra Pages</div>
+              <div>
+                <span class="material-icons-outlined icon-karr">
+                  {{
+                    isSubMenuArr[12]
+                      ? " keyboard_arrow_up"
+                      : " keyboard_arrow_down"
+                  }}
+                </span>
+              </div>
+            </div>
+          </a>
+          <div
+            id="collapseBasic"
+            [collapse]="!isSubMenuArr[12]"
+            [isAnimated]="true"
+            class="menu_submenu"
+          >
+            <ul class="menu_subnav">
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/extra/dialogs'
+                  }"
+                  routerLink="./extra/dialogs"
+                >
+                  <span class="subnav_nav_name"> Dialog </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/extra/toast'
+                  }"
+                  routerLink="./extra/toast"
+                >
+                  <span class="subnav_nav_name"> Toast Alert </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/extra/timeline'
+                  }"
+                  routerLink="./extra/timeline"
+                >
+                  <span class="subnav_nav_name"> Timeline </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/extra/drag-n-drop'
+                  }"
+                  routerLink="./extra/drag-n-drop"
+                >
+                  <span class="subnav_nav_name"> Drag-n-Drop </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/extra/text-editor'
+                  }"
+                  routerLink="./extra/text-editor"
+                >
+                  <span class="subnav_nav_name"> Text Editor </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/extra/weather-cards'
+                  }"
+                  routerLink="./extra/weather-cards"
+                >
+                  <span class="subnav_nav_name"> Weather Cards </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- Wigits -->
+        <li class="nav_item">
+          <a
+            (click)="openMenu(13)"
+            [ngClass]="{
+              active: currentUrl[1] == 'wigits'
+            }"
+            class="nav_link d-flex align-items-center"
+          >
+            <span class="material-icons-outlined m-r-12 icon-22">
+              description
+            </span>
+            <div
+              class="d-flex justify-content-between w-100 align-items-center nav_name"
+            >
+              <div class="">Widgits</div>
+              <div>
+                <span class="material-icons-outlined icon-karr">
+                  {{
+                    isSubMenuArr[13]
+                      ? " keyboard_arrow_up"
+                      : " keyboard_arrow_down"
+                  }}
+                </span>
+              </div>
+            </div>
+          </a>
+          <div
+            id="collapseBasic"
+            [collapse]="!isSubMenuArr[13]"
+            [isAnimated]="true"
+            class="menu_submenu"
+          >
+            <ul class="menu_subnav">
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/wigits/widgit-app'
+                  }"
+                  routerLink="./wigits/widgit-app"
+                >
+                  <span class="subnav_nav_name"> Widgit Apps </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/wigits/widgit-data'
+                  }"
+                  routerLink="./wigits/widgit-data"
+                >
+                  <span class="subnav_nav_name"> Widgit Data </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- forms Module -->
+        <li class="nav_title">
+          <h6 class="heading">Forms</h6>
+        </li>
+        <li class="nav_item">
+          <a
+            (click)="openMenu(14)"
+            [ngClass]="{
+              active: currentUrl[1] == 'forms'
+            }"
+            class="nav_link d-flex align-items-center"
+          >
+            <span class="material-icons-outlined m-r-12 icon-22">
+              description
+            </span>
+            <div
+              class="d-flex justify-content-between w-100 align-items-center nav_name"
+            >
+              <div class="">Forms</div>
+              <div>
+                <span class="material-icons-outlined icon-karr">
+                  {{
+                    isSubMenuArr[14]
+                      ? " keyboard_arrow_up"
+                      : " keyboard_arrow_down"
+                  }}
+                </span>
+              </div>
+            </div>
+          </a>
+          <div
+            id="collapseBasic"
+            [collapse]="!isSubMenuArr[14]"
+            [isAnimated]="true"
+            class="menu_submenu"
+          >
+            <ul class="menu_subnav">
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/forms/regular-forms'
+                  }"
+                  routerLink="./forms/regular-forms"
+                >
+                  <span class="subnav_nav_name"> Defualt Forms </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/forms/advance-forms'
+                  }"
+                  routerLink="./forms/advance-forms"
+                >
+                  <span class="subnav_nav_name"> Advance Forms </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/forms/radio-checkbox'
+                  }"
+                  routerLink="./forms/radio-checkbox"
+                >
+                  <span class="subnav_nav_name"> Radio&Checkbox </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/forms/form-elements'
+                  }"
+                  routerLink="./forms/form-elements"
+                >
+                  <span class="subnav_nav_name"> Forms Elements </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/forms/form-wizard'
+                  }"
+                  routerLink="./forms/form-wizard"
+                >
+                  <span class="subnav_nav_name"> Form Wizard </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- Icons module -->
+        <li class="nav_title">
+          <h6 class="heading">Icons</h6>
+        </li>
+        <li class="nav_item">
+          <a
+            (click)="openMenu(15)"
+            [ngClass]="{
+              active: currentUrl[1] == 'icons'
+            }"
+            class="nav_link d-flex align-items-center"
+          >
+            <span class="material-icons-outlined m-r-12 icon-22">
+              article
+            </span>
+            <div
+              class="d-flex justify-content-between w-100 align-items-center nav_name"
+            >
+              <div class="">Icons</div>
+              <div>
+                <span class="material-icons-outlined icon-karr">
+                  {{
+                    isSubMenuArr[15]
+                      ? " keyboard_arrow_up"
+                      : " keyboard_arrow_down"
+                  }}
+                </span>
+              </div>
+            </div>
+          </a>
+          <div
+            id="collapseBasic"
+            [collapse]="!isSubMenuArr[15]"
+            [isAnimated]="true"
+            class="menu_submenu"
+          >
+            <ul class="menu_subnav">
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/icons/material-icons-outline'
+                  }"
+                  routerLink="./icons/material-icons-outline"
+                >
+                  <span class="subnav_nav_name"> Material Icon Outline </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/icons/material-icons'
+                  }"
+                  routerLink="./icons/material-icons"
+                >
+                  <span class="subnav_nav_name"> Material Icon Filled </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/icons/themify-icons'
+                  }"
+                  routerLink="./icons/themify-icons"
+                >
+                  <span class="subnav_nav_name"> Themify Icons </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/icons/crypto-icons'
+                  }"
+                  routerLink="./icons/crypto-icons"
+                >
+                  <span class="subnav_nav_name"> Crypto Icons </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/icons/weather-icons'
+                  }"
+                  routerLink="./icons/weather-icons"
+                >
+                  <span class="subnav_nav_name"> Weather Icons </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- Pages -->
+        <li class="nav_title">
+          <h6 class="heading">Pages</h6>
+        </li>
+        <!-- login-Pages -->
+        <li class="nav_item">
+          <a
+            (click)="openMenu(16)"
+            [ngClass]="{
+              active: currentUrlString == 'auth'
+            }"
+            class="nav_link d-flex align-items-center"
+          >
+            <span class="material-icons-outlined m-r-12 icon-22"> shield </span>
+            <div
+              class="d-flex justify-content-between w-100 align-items-center nav_name"
+            >
+              <div class="">Authentication</div>
+              <div>
+                <span class="material-icons-outlined icon-karr">
+                  {{
+                    isSubMenuArr[16]
+                      ? " keyboard_arrow_up"
+                      : " keyboard_arrow_down"
+                  }}
+                </span>
+              </div>
+            </div>
+          </a>
+          <div
+            id="collapseBasic"
+            [collapse]="!isSubMenuArr[16]"
+            [isAnimated]="true"
+            class="menu_submenu"
+          >
+            <ul class="menu_subnav">
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/auth/login-1'
+                  }"
+                  routerLink="./auth/login-1"
+                >
+                  <span class="subnav_nav_name"> Login 1 </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/auth/login-2'
+                  }"
+                  routerLink="./auth/login-2"
+                >
+                  <span class="subnav_nav_name"> Login 2 </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/auth/signup-1'
+                  }"
+                  routerLink="./auth/signup-1"
+                >
+                  <span class="subnav_nav_name"> Signup 1 </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/auth/signup-2'
+                  }"
+                  routerLink="./auth/signup-2"
+                >
+                  <span class="subnav_nav_name"> Signup 2 </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/auth/reset-password'
+                  }"
+                  routerLink="./auth/reset-password"
+                >
+                  <span class="subnav_nav_name"> Reset Password </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!--Error Pages  -->
+
+        <li class="nav_item">
+          <a
+            (click)="openMenu(17)"
+            [ngClass]="{
+              active: currentUrl[1] == 'errors'
+            }"
+            class="nav_link d-flex align-items-center"
+          >
+            <span class="material-icons-outlined m-r-12 icon-22"> error </span>
+            <div
+              class="d-flex justify-content-between w-100 align-items-center nav_name"
+            >
+              <div class="">Error</div>
+              <div>
+                <span class="material-icons-outlined icon-karr">
+                  {{
+                    isSubMenuArr[17]
+                      ? " keyboard_arrow_up"
+                      : " keyboard_arrow_down"
+                  }}
+                </span>
+              </div>
+            </div>
+          </a>
+          <div
+            id="collapseBasic"
+            [collapse]="!isSubMenuArr[17]"
+            [isAnimated]="true"
+            class="menu_submenu"
+          >
+            <ul class="menu_subnav">
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/errors/error-1'
+                  }"
+                  routerLink="./errors/error-1"
+                >
+                  <span class="subnav_nav_name"> Error 1 </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/errors/error-2'
+                  }"
+                  routerLink="./errors/error-2"
+                >
+                  <span class="subnav_nav_name"> Error 2 </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/errors/maintinance'
+                  }"
+                  routerLink="./errors/maintinance"
+                >
+                  <span class="subnav_nav_name"> Maintinance </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- special Pages start -->
+        <li class="nav_item">
+          <a
+            (click)="openMenu(18)"
+            [ngClass]="{
+              active: currentUrl[1] == 'special-pages'
+            }"
+            class="nav_link d-flex align-items-center"
+          >
+            <span class="material-icons-outlined m-r-12 icon-22"> layers </span>
+            <div
+              class="d-flex justify-content-between w-100 align-items-center nav_name"
+            >
+              <div class="">Special Pages</div>
+              <div>
+                <span class="material-icons-outlined icon-karr">
+                  {{
+                    isSubMenuArr[18]
+                      ? " keyboard_arrow_up"
+                      : " keyboard_arrow_down"
+                  }}
+                </span>
+              </div>
+            </div>
+          </a>
+          <div
+            id="collapseBasic"
+            [collapse]="!isSubMenuArr[18]"
+            [isAnimated]="true"
+            class="menu_submenu"
+          >
+            <ul class="menu_subnav">
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/special-pages/price-plans'
+                  }"
+                  routerLink="./special-pages/price-plans"
+                >
+                  <span class="subnav_nav_name"> Price plans </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/special-pages/blank-page'
+                  }"
+                  routerLink="./special-pages/blank-page"
+                >
+                  <span class="subnav_nav_name"> Blank Page </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- Special Pages Ends -->
+        <!-- Tabels -->
+        <li class="nav_title">
+          <h6 class="heading">Tabels</h6>
+        </li>
+        <!-- bootstrap tables -->
+        <li class="nav_item">
+          <a
+            (click)="openMenu(19)"
+            [ngClass]="{
+              active: currentUrl[1] == 'datatables'
+            }"
+            class="nav_link d-flex align-items-center"
+          >
+            <span class="material-icons-outlined m-r-12 icon-22">
+              view_stream
+            </span>
+            <div
+              class="d-flex justify-content-between w-100 align-items-center nav_name"
+            >
+              <div class="">Tables</div>
+              <div>
+                <span class="material-icons-outlined icon-karr">
+                  {{
+                    isSubMenuArr[19]
+                      ? " keyboard_arrow_up"
+                      : " keyboard_arrow_down"
+                  }}
+                </span>
+              </div>
+            </div>
+          </a>
+          <div
+            id="collapseBasic"
+            [collapse]="!isSubMenuArr[19]"
+            [isAnimated]="true"
+            class="menu_submenu"
+          >
+            <ul class="menu_subnav">
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/datatables/basic-table'
+                  }"
+                  routerLink="/datatables/basic-table"
+                >
+                  <span class="subnav_nav_name"> Basic Tabel </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/datatables/colord-table'
+                  }"
+                  routerLink="/datatables/colord-table"
+                >
+                  <span class="subnav_nav_name"> Colord Tabel </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/datatables/advance-table'
+                  }"
+                  routerLink="/datatables/advance-table"
+                >
+                  <span class="subnav_nav_name"> Data Tabel </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/datatables/datatable-1'
+                  }"
+                  routerLink="/datatables/datatable-1"
+                >
+                  <span class="subnav_nav_name"> Datatable-1 </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/datatables/datatable-2'
+                  }"
+                  routerLink="/datatables/datatable-2"
+                >
+                  <span class="subnav_nav_name"> Datatable-2 </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- charts -->
+        <li class="nav_item">
+          <a
+            (click)="openMenu(20)"
+            [ngClass]="{
+              active: currentUrl[1] == 'charts'
+            }"
+            class="nav_link d-flex align-items-center"
+          >
+            <span class="material-icons-outlined m-r-12 icon-22">
+              insights
+            </span>
+            <div
+              class="d-flex justify-content-between w-100 align-items-center nav_name"
+            >
+              <div class="">Charts</div>
+              <div>
+                <span class="material-icons-outlined icon-karr">
+                  {{
+                    isSubMenuArr[20]
+                      ? " keyboard_arrow_up"
+                      : " keyboard_arrow_down"
+                  }}
+                </span>
+              </div>
+            </div>
+          </a>
+          <div
+            id="collapseBasic"
+            [collapse]="!isSubMenuArr[20]"
+            [isAnimated]="true"
+            class="menu_submenu"
+          >
+            <ul class="menu_subnav">
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/charts/apex-chart'
+                  }"
+                  routerLink="./charts/apex-chart"
+                >
+                  <span class="subnav_nav_name"> Apex Charts </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/charts/chartjs'
+                  }"
+                  routerLink="./charts/chartjs"
+                >
+                  <span class="subnav_nav_name"> ChartJs </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/charts/sparkline-charts'
+                  }"
+                  routerLink="./charts/sparkline-charts"
+                >
+                  <span class="subnav_nav_name"> Spark Line Charts </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/charts/ngx-chart'
+                  }"
+                  routerLink="./charts/ngx-chart"
+                >
+                  <span class="subnav_nav_name"> Ngx Charts </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/charts/google-chart'
+                  }"
+                  routerLink="./charts/google-chart"
+                >
+                  <span class="subnav_nav_name"> Google Chart </span>
+                </a>
+              </li>
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/charts/e-chart'
+                  }"
+                  routerLink="./charts/e-chart"
+                >
+                  <span class="subnav_nav_name"> E Chart </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- maps -->
+        <li class="nav_item">
+          <a
+            (click)="openMenu(21)"
+            [ngClass]="{
+              active: currentUrl[1] == 'maps'
+            }"
+            class="nav_link d-flex align-items-center"
+          >
+            <span class="material-icons-outlined m-r-12 icon-22"> map </span>
+            <div
+              class="d-flex justify-content-between w-100 align-items-center nav_name"
+            >
+              <div class="">Maps</div>
+              <div>
+                <span class="material-icons-outlined icon-karr">
+                  {{
+                    isSubMenuArr[21]
+                      ? " keyboard_arrow_up"
+                      : " keyboard_arrow_down"
+                  }}
+                </span>
+              </div>
+            </div>
+          </a>
+          <div
+            id="collapseBasic"
+            [collapse]="!isSubMenuArr[21]"
+            [isAnimated]="true"
+            class="menu_submenu"
+          >
+            <ul class="menu_subnav">
+              <li class="subnav_nav_item">
+                <a
+                  class="subnav_nav_link"
+                  [ngClass]="{
+                    active: currentUrlString == '/maps/googlemap'
+                  }"
+                  routerLink="./maps/googlemap"
+                >
+                  <span class="subnav_nav_name"> Google Maps </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- (clickOutside)="closeSidebarOutside()" -->
+<!-- sidebar for Mobile and  Tablet Mode -->

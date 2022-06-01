@@ -1,0 +1,83 @@
+<div class="card custom-card card-stretch">
+  <div
+    class="
+      card-header
+      d-flex
+      justify-content-between
+      align-items-center
+      custom-card-header
+      border-1
+    "
+  >
+    <div class="card-title m-b-0">
+      <h5 class="card-label m-b-0">Link Buttons</h5>
+    </div>
+    <div class="code">
+      <button
+        class="btn d-flex align-items-center btn-outline-primary"
+        (click)="showCode = !showCode"
+      >
+        <span *ngIf="!showCode" class="material-icons icon-20 m-r-8">
+          code
+        </span>
+        <span *ngIf="showCode" class="material-icons icon-20 m-r-8">
+          code_off
+        </span>
+        code
+      </button>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="content zp-12">
+      <div class="">
+        <a href="./ui-elements/buttons" class="btn btn-link-success m-r-8 m-b-8"
+          >Success</a
+        >
+        <a href="./ui-elements/buttons" class="btn btn-link-primary m-r-8 m-b-8"
+          >Primary</a
+        >
+        <a href="./ui-elements/buttons" class="btn btn-link-danger m-r-8 m-b-8"
+          >Danger</a
+        >
+        <a href="./ui-elements/buttons" class="btn btn-link-info m-r-8 m-b-8"
+          >Info</a
+        >
+        <a href="./ui-elements/buttons" class="btn btn-link-warning m-r-8 m-b-8"
+          >Warning</a
+        >
+        <a href="./ui-elements/buttons" class="btn btn-link-dark m-r-8 m-b-8"
+          >Dark</a
+        >
+      </div>
+    </div>
+    <div [collapse]="!showCode" [isAnimated]="true" class="code_container">
+      <div class="nav_bar w-100">
+        <ul>
+          <li>
+            <a [ngClass]="{ active: tabId === '0' }" (click)="tabToggle('0')">
+              HTML
+            </a>
+          </li>
+          <li>
+            <a [ngClass]="{ active: tabId === '1' }" (click)="tabToggle('1')">
+              TS
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- code -->
+      <ng-template [ngIf]="tabId === '0'">
+        <pre class="m-b-0">
+            <code [highlight]="htmlcode" (highlighted)="onHighlight($event)" [lineNumbers]="true">
+            </code>
+          </pre>
+      </ng-template>
+      <ng-template [ngIf]="tabId === '1'">
+        <pre class="m-b-0">
+            <code [highlight]="tscode" (highlighted)="onHighlight($event)" [lineNumbers]="true">
+            </code>
+          </pre>
+      </ng-template>
+    </div>
+  </div>
+</div>

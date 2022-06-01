@@ -1,0 +1,267 @@
+<div class="card custom-card grid-bottom">
+  <div class="card-header custom-card-header border-1">
+    <h5 class="m-b-0">Add Product Details</h5>
+  </div>
+  <div class="card-body">
+    <div class="m-t-16">
+      <form action="" class="">
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <div class="form-group m-b-12">
+              <label for="" class=""> Product Name</label>
+              <input
+                type="text"
+                name=""
+                value="Mangoe Shake"
+                id=""
+                class="form-control"
+              />
+            </div>
+
+            <div class="form-group m-b-12">
+              <label for="" class=""> Status</label>
+              <div class="d-flex align-items-center">
+                <div class="form-check m-r-8">
+                  <label class="container-radio"
+                    >In Stock
+                    <input
+                      type="radio"
+                      name="radio"
+                      [checked]="isChecked"
+                      value="true"
+                    />
+                    <span class="check-circle"></span>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="container-radio"
+                    >Out Of Stock
+                    <input
+                      type="radio"
+                      name="radio"
+                      [checked]="isChecked"
+                      value="true"
+                    />
+                    <span class="check-circle"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group m-b-12">
+              <label for="" class=""> Discount</label>
+              <div class="input-group m-b-12">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <span class="material-icons-outlined icon-20">
+                      attach_money
+                    </span>
+                  </span>
+                </div>
+                <input type="text" value="20" class="form-control" />
+              </div>
+            </div>
+            <div class="form-group m-b-12">
+              <label for="" class=""> Price</label>
+              <div class="input-group m-b-12">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <span class="material-icons-outlined icon-20">
+                      attach_money
+                    </span>
+                  </span>
+                </div>
+                <input type="text" value="50" class="form-control" />
+              </div>
+            </div>
+            <div class="form-group m-b-12">
+              <label for="" class="">Total Stock</label>
+              <input
+                type="text"
+                name=""
+                value="200"
+                id=""
+                class="form-control"
+              />
+            </div>
+            <div class="form-group m-b-12">
+              <label for="" class=""> Description</label>
+              <textarea
+                type="text"
+                rows="4"
+                cols="3"
+                [value]="product_desc"
+                class="form-control"
+              >
+              </textarea>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="form-group m-b-12">
+              <label for="" class="">Category</label>
+              <select name="" class="form-control" id="">
+                <option value="">Electronics</option>
+                <option value="">Fashion</option>
+                <option value="">Grocery</option>
+              </select>
+            </div>
+            <div class="form-group m-b-12">
+              <label for="" class="">Sub Category</label>
+              <select name="" class="form-control" id="">
+                <option value="">Mobile</option>
+                <option value="">Clothes</option>
+                <option value="">Accessories</option>
+                <option value="">Footwear</option>
+              </select>
+            </div>
+
+            <div class="form-group m-b-12">
+              <label for="" class=""> Product Image</label>
+              <div class="custom-card card no-shadow">
+                <div class="card-body">
+                  <app-file-drag-n-drop></app-file-drag-n-drop>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div class="">
+                <div class="">
+                  <div class="preview-img-drag">
+                    <div class="outline-xl m-b-8 m-r-8">
+                      <img
+                        src="assets/media/images/Products/sofft-drink.jpg"
+                        alt=""
+                        class="img-responsive no-radius logo-lg-rounded"
+                      />
+                    </div>
+                    <div class="outline-xl m-b-8 m-r-8">
+                      <img
+                        src="assets/media/images/Products/sofft-drink.jpg"
+                        alt=""
+                        class="img-responsive no-radius logo-lg-rounded"
+                      />
+                    </div>
+                    <div class="outline-xl m-b-8 m-r-8">
+                      <img
+                        src="assets/media/images/Products/sofft-drink.jpg"
+                        alt=""
+                        class="img-responsive no-radius logo-lg-rounded"
+                      />
+                    </div>
+                    <div class="outline-xl m-b-8 m-r-8">
+                      <img
+                        src="assets/media/images/Products/sofft-drink.jpg"
+                        alt=""
+                        class="img-responsive no-radius logo-lg-rounded"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-end">
+          <button
+            class="btn d-flex align-items-center btn-primary btn-square m-r-12"
+          >
+            <span class="material-icons-outlined m-r-8 icon-20">check</span>
+            Save
+          </button>
+          <button class="btn btn-secondary btn-square">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="card custom-card">
+  <div class="card-header custom-card-header border-1">
+    <h5 class="m-b-0">Product Information</h5>
+  </div>
+  <div class="card-body">
+    <form action="">
+      <div class="row">
+        <div class="form-group col-lg-6 m-b-12">
+          <label for="" class="p-b-8"> Brand </label>
+          <input type="text" name="" value="Slice" id="" class="form-control" />
+        </div>
+        <div class="form-group col-lg-6 m-b-12">
+          <label for="" class="p-b-8"> Model Number</label>
+          <input
+            type="text"
+            name=""
+            value="GMB113-2S"
+            id=""
+            class="form-control"
+          />
+        </div>
+        <div class="form-group col-lg-6 m-b-12">
+          <label for="" class="p-b-8"> Color</label>
+          <input
+            type="text"
+            name=""
+            value="Tan-Matt"
+            id=""
+            class="form-control"
+          />
+        </div>
+        <div class="form-group col-lg-6 m-b-12">
+          <label for="" class="p-b-8"> Weight</label>
+          <input type="text" name="" value="5.3Kg" id="" class="form-control" />
+        </div>
+        <div class="form-group col-lg-6 m-b-12">
+          <label for="" class="p-b-8"> Size</label>
+          <input type="text" name="" value="L" id="" class="form-control" />
+        </div>
+        <div class="form-group col-lg-6 m-b-12">
+          <label for="" class="p-b-8">ISI Certified</label>
+          <select name="" class="form-control" id="">
+            <option value="">Yes</option>
+            <option value="">No</option>
+          </select>
+        </div>
+        <div class="form-group col-lg-6 m-b-12">
+          <label for="" class="p-b-8"> Vendor Name</label>
+          <input
+            type="text"
+            name=""
+            value="PSJ pvt. ltd."
+            id=""
+            class="form-control"
+          />
+        </div>
+        <div class="form-group col-lg-6 m-b-12">
+          <label for="" class="p-b-8"> Care Instructions</label>
+          <input
+            type="text"
+            name=""
+            value="Handle with care, Keep In Dry Place"
+            id=""
+            class="form-control"
+          />
+        </div>
+        <div class="form-group col-lg-6 m-b-12">
+          <label for="" class="p-b-8"> Manufature</label>
+          <input type="text" name="" value="LG" id="" class="form-control" />
+        </div>
+        <div class="form-group col-lg-6 m-b-12">
+          <label for="" class="p-b-8">Delivery Status</label>
+          <select name="" class="form-control" id="">
+            <option value="">Delivered</option>
+            <option value="">Shiped</option>
+            <option value="">Out For Delivery</option>
+            <option value="">Canceled</option>
+          </select>
+        </div>
+      </div>
+      <div class="d-flex justify-content-end">
+        <button
+          class="btn d-flex align-items-center btn-primary btn-square m-r-12"
+        >
+          <span class="material-icons-outlined m-r-8 icon-20">check</span>
+          Save
+        </button>
+        <button class="btn btn-secondary btn-square">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<div
+  class="card custom-card raduis-none m-b-16"
+  [ngClass]="getClass(customNote.note_share_count)"
+>
+  <div class="zp-14">
+    <div class="d-flex align-items-center p-b-12">
+      <div class="d-flex align-items-center">
+        <img
+          [src]="customNote.note_author"
+          alt="author"
+          class="img-responsive logo-sm2-circle"
+        />
+        <h6 class="m-b-0 m-l-8">{{ customNote.note_author_name }}</h6>
+      </div>
+      <div class="ml-auto">
+        <app-custom-dropdown
+          (parentFun)="parentFun($event)"
+          [custom-Dropdown]="custom_dropdown"
+        ></app-custom-dropdown>
+      </div>
+    </div>
+    <div class="p-b-12">
+      <h5 class="">{{ customNote.note_title }}</h5>
+      <p class="text-muted">{{ customNote.note_description }}</p>
+    </div>
+    <div class="d-flex align-items-center">
+      <div class="">
+        <a
+          class="
+            decoration-none
+            text-muted
+            no-link
+            d-flex
+            align-items-center
+            m-b-0
+          "
+          ><i
+            class="ti ti-share icon-20 m-r-8 cursor-pointer"
+            [ngClass]="getIconColor(customNote.note_share_count)"
+            aria-hidden="true"
+          ></i
+          ><span class="m-r-4">{{ customNote.note_share_count }}</span> Share</a
+        >
+      </div>
+      <div class="m-l-auto p-l-10">
+        <p class="d-flex align-items-center m-b-0">
+          <i
+            class="ti ti-calendar icon-20 m-r-8 cursor-pointer"
+            [ngClass]="getIconColor(customNote.note_share_count)"
+            aria-hidden="true"
+          ></i
+          >{{ customNote.note_createdAt | date: "mediumDate" }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

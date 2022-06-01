@@ -1,0 +1,74 @@
+<div [ngClass]="currentTheme">
+  <div class="login-wrapper">
+    <section class="login_bg_img">
+      <div class="login_container">
+        <div class="login_panel_data">
+          <div class="login_head">
+            <div class="main_logo">
+              <img
+                class="img-fluid"
+                src="assets/media/images/login/zonvoir-logo-01-(3).png"
+                alt="image"
+              />
+            </div>
+            <h3 class="m-b-0 p-b-4 text-center">Sign Up</h3>
+            <p class="m-b-0 text-muted text-center">
+              Enter your details to create account:
+            </p>
+          </div>
+
+          <div class="login_form_panel">
+            <form>
+              <div class="form-group login-user">
+                <input
+                  type="text"
+                  class="form-control login-inp-field"
+                  placeholder="Full Name"
+                />
+              </div>
+              <div class="form-group login-email">
+                <input
+                  type="email"
+                  class="form-control login-inp-field"
+                  placeholder="Email"
+                />
+              </div>
+
+              <div class="form-group login-lock">
+                <input
+                  type="password"
+                  class="form-control login-inp-field"
+                  placeholder="password"
+                />
+              </div>
+              <div class="form-group login-lock">
+                <input
+                  type="text"
+                  class="form-control login-inp-field"
+                  placeholder="confirm password"
+                />
+              </div>
+
+              <div class="login_sub_btn">
+                <button
+                  type="button"
+                  class="btn login-btn btn-block btn-primary"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </form>
+
+            <div class="text-center">
+              <span class="text-muted">Already have an account ?</span>
+              <a routerLink="/auth/login-1" class="text-primary link-none m-l-4"
+                >Sign In!</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg_photo_login"></div>
+    </section>
+  </div>
+</div>

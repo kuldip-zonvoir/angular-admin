@@ -1,0 +1,30 @@
+<div class="card custom-card shadow1 no-radius">
+  <div
+    class="
+      card-header
+      custom-card-header
+      border-1
+      d-flex
+      align-items-center
+      justify-content-between
+    "
+  >
+    <div class="card-title m-b-0">
+      <h5 class="card-label m-b-0">Stocks</h5>
+    </div>
+    <div class="card-toolbar d-flex align-items-center">
+      <span class="material-icons icon-20 icon-gray"> grid_view </span>
+    </div>
+  </div>
+  <div class="chart_body">
+    <div id="chart" class="card-rounded-bottom chart-container">
+      <apx-chart
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [colors]="chartOptions.colors"
+        [plotOptions]="chartOptions.plotOptions"
+        [labels]="chartOptions.labels"
+      ></apx-chart>
+    </div>
+  </div>
+</div>

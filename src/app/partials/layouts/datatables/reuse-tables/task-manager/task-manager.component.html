@@ -1,0 +1,252 @@
+<div class="card custom-card">
+  <div class="card-body">
+    <!-- filter parameters -->
+    <div class="row">
+      <div class="col-lg-3 col-sm-6 col-md-6 grid-bottom-12">
+        <div class="">
+          <app-tabel-filter-component></app-tabel-filter-component>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 grid-bottom-12">
+        <div class="form-group m-b-0">
+          <input
+            type="text"
+            placeholder="Daterangepicker"
+            class="form-control k_datepicker"
+            bsDaterangepicker
+            [bsConfig]="{ isAnimated: true }"
+          />
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 grid-bottom-12">
+        <div class="">
+          <app-custom-select-dropdown
+            [terms]="termsPara2"
+            class="customers-dropdown"
+          ></app-custom-select-dropdown>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 grid-bottom-12">
+        <div class="">
+          <app-custom-select-dropdown
+            [terms]="termsPara"
+            class="customers-dropdown"
+          ></app-custom-select-dropdown>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table Starts here -->
+    <div class="table-responsive m-b-12">
+      <table class="table my_tabel table-hover table-borderless mb-0">
+        <thead class="thead">
+          <tr class="thead-row" style="left: 0px">
+            <th class="th">
+              <span class="t_title"></span>
+            </th>
+            <th>
+              <span class="t_title align-middle"></span>
+            </th>
+            <th>
+              <span class="t_title align-middle"> Name</span>
+            </th>
+            <th>
+              <span class="t_title align-middle">Deadline</span>
+            </th>
+            <th>
+              <span class="t_title align-middle">Completion</span>
+            </th>
+            <th>
+              <span class="t_title align-middle">Status</span>
+            </th>
+            <th>
+              <span class="t_title align-middle">Action</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let task of tasks; let i = index">
+            <tr *ngIf="task.id">
+              <td>
+                <span class="tabelcell">{{ i + 1 }}</span>
+              </td>
+              <td>
+                <span class="tabelcell align-middle">
+                  <span
+                    class="material-icons-outlined icon"
+                    [ngClass]="{ 'text-warning': task.star === 'true' }"
+                  >
+                    star_border
+                  </span>
+                </span>
+              </td>
+              <td>
+                <span class="tabelcell align-middle">{{ task.task_name }}</span>
+              </td>
+              <td>
+                <span class="tabelcell align-middle">{{
+                  task.deadline | date: "mediumDate"
+                }}</span>
+              </td>
+              <td>
+                <span class="tabelcell align-middle">
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <p class="mb-0 m-r-12">Progress</p>
+                    <span class="">{{ task.completion }}%</span>
+                  </div>
+                  <div class="">
+                    <progressbar
+                      [value]="task.completion"
+                      max="100"
+                      style="height: 5px"
+                    ></progressbar>
+                  </div>
+                </span>
+              </td>
+
+              <td>
+                <span
+                  [ngClass]="{
+                    'text-light-danger': task.status === 'Canceled',
+                    'text-light-success': task.status === 'Completed'
+                  }"
+                  class="tabelcell_status align-middle text-light-primary"
+                  >{{ task.status }}</span
+                >
+              </td>
+              <td>
+                <span class="tabelcell">
+                  <div class="d-flex align-items-center">
+                    <a
+                      class="m-r-12 cussor-pointer"
+                      (click)="editTask(task.id)"
+                      tooltip="Edit"
+                    >
+                      <span class="material-icons-outlined icon icon-gray">
+                        edit
+                      </span>
+                    </a>
+                    <a
+                      class="cussor-pointer"
+                      tooltip="delete"
+                      (click)="deleteTask(task.id)"
+                    >
+                      <span class="material-icons-outlined icon text-danger">
+                        delete
+                      </span>
+                    </a>
+                  </div>
+                </span>
+              </td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+    <div class="p-x-12">
+      <app-tabel-filter-component-bottom></app-tabel-filter-component-bottom>
+    </div>
+  </div>
+</div>
+<!-- Edit Task -->
+<p-dialog
+  header="Task Details "
+  class="app-task-manager custom-card"
+  [(visible)]="taskDialog"
+  [modal]="true"
+>
+  <div class="add_task_to_control form-scroll">
+    <form action="" [formGroup]="taskForm" (ngSubmit)="updateTask()">
+      <div class="kprime_form_wrapper">
+        <div class="form-group m-b-12">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="task_name"
+            placeholder="Enter Title"
+          />
+        </div>
+        <div class="form-group m-b-12">
+          <label for="description">Description</label>
+          <textarea
+            rows="2"
+            type="text"
+            formControlName="task_description"
+            class="form-control"
+            placeholder="Enter Task Description"
+          ></textarea>
+        </div>
+        <div class="form-group m-b-12">
+          <label for="deadline">Deadline</label>
+          <input
+            type="text"
+            formControlName="deadline"
+            class="form-control"
+            bsDatepicker
+            [bsConfig]="{ isAnimated: true }"
+            placeholder=" Date"
+          />
+        </div>
+        <div class="form-group m-b-12">
+          <label for="status">Status</label>
+          <select
+            class="form-select form-control"
+            formControlName="status"
+            aria-label="Default select example"
+          >
+            <option value="Completed">Completed</option>
+            <option value="Canceled">Canceled</option>
+            <option value="Inprogress">Inprogress</option>
+          </select>
+        </div>
+        <div class="form-group m-b-12">
+          <label for="assign">Assign To</label>
+          <select
+            class="form-select form-control"
+            formControlName="assignto"
+            aria-label="Default select example"
+          >
+            <option value="David">David</option>
+            <option value="Morgon">Morgon</option>
+            <option value="Tom">Tom</option>
+            <option value="Kane">Kane</option>
+          </select>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="d-flex justify-content-end kprime_footer align-items-center">
+    <button
+      (click)="closeModal()"
+      class="btn btn-outline-danger m-r-8 btn-square"
+    >
+      Cancel
+    </button>
+    <button type="submit" class="btn btn-primary btn-square">Submit</button>
+  </div>
+</p-dialog>
+<!-- confirm on delete -->
+<p-dialog
+  header="Confirmation"
+  [modal]="true"
+  class="custom-card confirm-dailog-modal"
+  [(visible)]="confirmDialog"
+>
+  <div class="kprime_form_wrapper">
+    <p class="text-muted">On confirm this item will Permanently deleted</p>
+  </div>
+  <div class="d-flex justify-content-end kprime_footer align-items-center">
+    <button
+      (click)="confirmDelete(popupId)"
+      class="btn-primary btn-square btn m-r-12"
+    >
+      Confirm
+    </button>
+    <button (click)="cancelDelete()" class="btn-secondary btn-square btn">
+      Cancel
+    </button>
+  </div>
+</p-dialog>

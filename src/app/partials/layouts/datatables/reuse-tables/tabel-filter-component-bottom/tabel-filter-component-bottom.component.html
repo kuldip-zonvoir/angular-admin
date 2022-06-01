@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-lg-3 col-md-4 col-sm-4 grid-bottom-12 filter-bottom-space">
+    <div class="bottom-filter-left">
+      <h6 class="m-b-0 m-r-8">Entries :</h6>
+      <div class="">
+        <app-custom-select-dropdown
+          [terms]="termsPara"
+          class="numbers-dropdown ng-custom-select-input"
+        ></app-custom-select-dropdown>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6 col-sm-6 offset-sm-2 offset-md-2 offset-lg-5">
+    <div class="bottom-filter-right">
+      <div class="">
+        <div class="custom-table-pagination">
+          <pagination
+            class="seprate"
+            [boundaryLinks]="true"
+            [totalItems]="22"
+            previousText="&lsaquo;"
+            nextText="&rsaquo;"
+            firstText="&laquo;"
+            lastText="&raquo;"
+          >
+          </pagination>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

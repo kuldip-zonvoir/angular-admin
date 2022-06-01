@@ -1,0 +1,142 @@
+// .pi {
+//   font-family: inherit;
+// }
+p-inputmask {
+  input {
+    height: auto;
+    padding: 10px 40px 10px 10px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 6px;
+    width: 100%;
+    border: 1px solid $border-color;
+    line-height: 1.5;
+    color: lighten($color: $text-color, $amount: 5%);
+    background-color: $inputBgColor;
+    background-clip: padding-box;
+  }
+
+  input:focus {
+    box-shadow: inherit;
+    outline: inherit;
+    border: 1px solid $primary;
+  }
+}
+.input_css {
+  height: auto;
+  width: 100%;
+  padding: 4px;
+  font-size: $inputTextSize;
+  font-weight: $inputTextWeight;
+  border: 1px solid $inputBorder !important;
+  border-radius: 4px;
+  background-color: $inputBgColor;
+  color: lighten($color: $text-color, $amount: 5%);
+}
+.p-inputtext {
+  @extend .input_css;
+  border: 0 !important;
+}
+// multiselect
+.p-multiselect {
+  @extend .input_css;
+  &:not(.p-disabled):hover {
+    background-color: $inputBgColor;
+  }
+}
+.p-multiselect-header {
+  @extend .text-bg-color;
+  display: none;
+}
+.p-multiselect-panel {
+  border: 1px solid $inputBorder !important;
+  border-radius: 4px;
+  background-color: $inputBgColor;
+  .p-multiselect-items {
+    .p-multiselect-item {
+      // border: 1px solid $inputBorder !important;
+      border-radius: 4px;
+      background-color: $inputBgColor;
+      &:focus {
+        border-radius: 4px;
+        background-color: $inputBgColor;
+        color: lighten($color: $text-color, $amount: 5%);
+        outline: 0;
+        box-shadow: none !important;
+      }
+      .p-highlight {
+        color: $white;
+        background: $primary;
+        &:hover {
+          border-color: $primary;
+          background: $primary;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.p-checkbox {
+  &:hover {
+    border-color: $primary;
+  }
+  &:not(.p-checkbox-disabled) {
+    .p-checkbox-box {
+      border-color: $primary;
+      .p-highlight {
+        border-color: $primary;
+        background: $primary;
+      }
+    }
+    .p-checkbox-box {
+      &:hover {
+        border-color: $primary;
+      }
+    }
+  }
+}
+
+// dropdown
+.p-dropdown {
+  @extend .input_css;
+  padding: 0 !important;
+  .p-dropdown:not(.p-disabled).p-focus {
+    box-shadow: none !important;
+  }
+  &:not(.p-disabled) {
+    .p-focus {
+      outline: 0 none !important;
+      outline-offset: 0;
+      box-shadow: none !important;
+    }
+  }
+}
+.p-dropdown-panel {
+  border: 1px solid $inputBorder !important;
+  border-radius: 4px;
+  background-color: $inputBgColor;
+  .p-dropdown-items {
+    .p-dropdown-item {
+      // border: 1px solid $inputBorder !important;
+      border-radius: 4px;
+      background-color: $inputBgColor;
+      &:focus {
+        border-radius: 4px;
+        background-color: $inputBgColor;
+        color: lighten($color: $text-color, $amount: 5%);
+        outline: 0;
+        box-shadow: none !important;
+      }
+      .p-highlight {
+        color: $white;
+        background: $primary;
+        &:hover {
+          border-color: $primary;
+          background: $primary;
+          color: $white;
+        }
+      }
+    }
+  }
+}

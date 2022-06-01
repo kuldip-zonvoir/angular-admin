@@ -1,0 +1,21 @@
+// Functions
+// Mixins
+@import "components/mixins/media-queries";
+@import "components/mixins/scrollbar";
+@import "components/mixins/icons";
+@import "components/utilities/colors";
+@import "components/mixins/tooltip";
+@import "components/mixins/scrollbar";
+@import "components/mixins/circle";
+@import "components/mixins/wave";
+// Bootstrap mixins
+@import "~bootstrap/scss/_mixins.scss";
+
+// Global variables
+@import "components/variable.defualt";
+@import "components/variables.customize";
+
+// 3rd-Party plugins variables
+
+// pages
+// Theme layout variables

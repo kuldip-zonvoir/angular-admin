@@ -1,0 +1,185 @@
+<div class="row">
+  <div class="col-lg-4 col-md-6 grid-bottom">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="m-b-0">Basic Modal</h5>
+      </div>
+
+      <div class="card-body">
+        <div class="custom-modal text-center">
+          <button
+            (click)="showBasicDialog()"
+            class="btn btn-square btn-outline btn-primary m-r-12"
+          >
+            Click here !
+          </button>
+        </div>
+        <p-dialog
+          header="Header"
+          [modal]="true"
+          [(visible)]="displayBasic"
+          class="basic-dialog-modal"
+          [baseZIndex]="10"
+        >
+          <div class="kprime_form_wrapper">
+            <p class="text-mute">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Deleniti, velit!
+            </p>
+          </div>
+
+          <div
+            class="d-flex align-items-center kprime_footer justify-content-end"
+          >
+            <button
+              (click)="displayBasic = false"
+              class="btn btn-square btn-primary m-r-12"
+            >
+              Close
+            </button>
+            <button
+              (click)="displayBasic = false"
+              class="btn btn-square btn-secondary m-r-12"
+            >
+              Cancel
+            </button>
+          </div>
+        </p-dialog>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6 grid-bottom">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="m-b-0">Long Content Modal</h5>
+      </div>
+
+      <div class="card-body">
+        <div class="custom-modal text-center">
+          <button
+            (click)="showBasicDialog2()"
+            class="btn btn-square btn-outline btn-primary m-r-12"
+          >
+            Click here !
+          </button>
+        </div>
+        <p-dialog
+          header="Long Content"
+          [(visible)]="displayBasic2"
+          class="long-content-dialog-modal"
+          [baseZIndex]="10"
+        >
+          <div class="kprime_form_wrapper">
+            <p class="text-mute">
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+
+            <p class="text-mute">
+              "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, pariatur?
+            </p>
+
+            <p class="text-mute">
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum deleniti atque corrupti quos
+              dolores et quas molestias excepturi sint occaecati cupiditate non
+              provident, similique sunt in culpa qui officia deserunt mollitia
+              animi, id est laborum et dolorum fuga. Et harum quidem rerum
+              facilis
+            </p>
+          </div>
+          <div
+            class="d-flex align-items-center kprime_footer justify-content-end"
+          >
+            <button
+              (click)="displayBasic2 = false"
+              class="btn btn-square btn-primary m-r-12"
+            >
+              Close
+            </button>
+            <button
+              (click)="displayBasic2 = false"
+              class="btn btn-square btn-secondary m-r-12"
+            >
+              Cancel
+            </button>
+          </div>
+        </p-dialog>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6 grid-bottom">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="m-b-0">Maximizable Modal</h5>
+      </div>
+
+      <div class="card-body">
+        <div class="custom-modal text-center">
+          <button
+            (click)="showMaximizableDialog()"
+            class="btn btn-square btn-outline btn-primary m-r-12"
+          >
+            Click here !
+          </button>
+        </div>
+        <p-dialog
+          header="Godfather I"
+          [(visible)]="displayMaximizable"
+          [modal]="true"
+          class="max-dialog-modal"
+          [maximizable]="true"
+          [baseZIndex]="10"
+          [draggable]="false"
+          [resizable]="false"
+        >
+          <div class="kprime_form_wrapper">
+            <p class="text-muted">
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+
+          <div
+            class="d-flex align-items-center kprime_footer justify-content-end"
+          >
+            <button
+              (click)="displayMaximizable = false"
+              class="btn btn-square btn-primary m-r-12"
+            >
+              Close
+            </button>
+            <button
+              (click)="displayMaximizable = false"
+              class="btn btn-square btn-secondary m-r-12"
+            >
+              Cancel
+            </button>
+          </div>
+        </p-dialog>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <ng-container *ngFor="let positionModal of positions">
+    <div class="col-lg-4 col-md-4">
+      <app-popup-dailog-position
+        [dialogModal]="positionModal"
+      ></app-popup-dailog-position>
+    </div>
+  </ng-container>
+</div>

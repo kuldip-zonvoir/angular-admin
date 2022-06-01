@@ -1,0 +1,871 @@
+<!-- Header-For desktop -->
+<header class="header-section desktop-header">
+  <div class="desktop-header d-flex align-items-center">
+    <!-- <div
+      [ngClass]="
+        isMobile
+          ? 'brand-header-mobile ' + getBrandClass(brandkey)
+          : '' + getBrandClass(brandkey)
+      "
+      class="brand-header"
+    >
+      <app-brand></app-brand>
+    </div> -->
+    <div
+      *ngIf="!headerSearch"
+      [ngClass]="getHeaderClass(headerkey)"
+      class="desktop-header-content"
+    >
+      <div class="d-flex align-items-center kk_left_header">
+        <ul class="nav">
+          <li
+            class="
+              d-flex
+              nav-item
+              herader_menu_toggle
+              align-items-center
+              m-r-14
+            "
+          >
+            <a
+              class="d-flex toggle-icon link hoverable align-items-center"
+              (click)="sidebarToggle('Desktop')"
+            >
+              <span class="material-icons-outlined menu_icons"> menu </span>
+            </a>
+          </li>
+        </ul>
+        <div class="btn-group add_me_header" dropdown>
+          <button
+            type="button"
+            class="btn btn-square btn-primary align-items-center d-flex"
+            id="button-basic"
+            dropdownToggle
+            type="button"
+            aria-controls="dropdown-basic"
+          >
+            Add New
+          </button>
+          <ul
+            id="dropdown-basic"
+            *dropdownMenu
+            class="dropdown-menu"
+            role="menu"
+            aria-labelledby="button-basic"
+            placement="bottom right"
+          >
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-20"> add </span>
+                  </div>
+                  <div class="m-b-0">
+                    <p class="m-b-0 sub_heading">Add User</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-20">
+                      person_add
+                    </span>
+                  </div>
+                  <div class="m-b-0">
+                    <p class="m-b-0 sub_heading">Add Contact</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-20">
+                      assignment_turned_in
+                    </span>
+                  </div>
+                  <div class="m-b-0">
+                    <p class="m-b-0 sub_heading">Add Project</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-20">
+                      done_all
+                    </span>
+                  </div>
+                  <div class="m-b-0">
+                    <p class="m-b-0 sub_heading">Add Task</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- search bar  -->
+      <div class="d-flex kk_search_bar_header align-items-center">
+        <div class="header_search_kbar">
+          <div class="custom_input_group">
+            <input
+              type="text"
+              class="form-control custom_input_control"
+              placeholder="Search"
+            />
+            <span class="_search_btn">
+              <button type="button" class="btn icon_search_btn">
+                <i class="ti ti-search search_input_icon"></i>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!-- header_utilities -->
+      <div class="d-flex kk_header_utilities align-items-center">
+        <ul class="d-flex nav align-items-center">
+          <li class="d-flex align-items-center">
+            <div class="btn-group search_for_dd_other m-r-14" dropdown>
+              <a class="link" type="button" (click)="openSearchBar()">
+                <span class="material-icons-outlined icon-gray icon">
+                  search
+                </span>
+              </a>
+            </div>
+            <!-- flags -->
+            <div class="btn-group herader_drop_box m-r-14" dropdown>
+              <a
+                id="button-basic"
+                class="link hoverable"
+                dropdownToggle
+                type="button"
+                aria-controls="dropdown-basic"
+              >
+                <span class="country_icon"
+                  ><img
+                    src="assets/flags/us_flag.jpg"
+                    class="country_flag"
+                    alt="img"
+                /></span>
+              </a>
+              <ul
+                id="dropdown-basic"
+                *dropdownMenu
+                class="dropdown-menu dropdown-height dropdown-menu-left"
+                role="menu"
+                aria-labelledby="button-basic"
+                placement="bottom right"
+              >
+                <li role="menuitem">
+                  <a class="dropdown-item p-x-12 py-2">
+                    <div class="d-flex align-items-center">
+                      <div class="logo m-r-12 d-flex align-items-center">
+                        <span class="country_icon"
+                          ><img
+                            src="assets/flags/french_flag.jpg"
+                            class="country_flag"
+                            alt="img"
+                        /></span>
+                      </div>
+                      <div class="m-b-0">
+                        <p class="m-b-0 sub_heading">French</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li role="menuitem">
+                  <a class="dropdown-item p-x-12 py-2">
+                    <div class="d-flex align-items-center">
+                      <div class="logo m-r-12 d-flex align-items-center">
+                        <span class="country_icon"
+                          ><img
+                            src="assets/flags/italy_flag.jpg"
+                            class="country_flag"
+                            alt="img"
+                        /></span>
+                      </div>
+                      <div class="m-b-0">
+                        <p class="m-b-0 sub_heading">Italy</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- email -->
+            <div class="btn-group herader_drop_box m-r-14" dropdown>
+              <a
+                id="button-basic"
+                class="link hoverable"
+                dropdownToggle
+                type="button"
+                aria-controls="dropdown-basic"
+              >
+                <span class="material-icons-outlined header_icons">
+                  email
+                </span>
+                <div class="email_box">
+                  <div class="email_pulse"></div>
+                </div>
+              </a>
+              <ul
+                id="dropdown-basic"
+                *dropdownMenu
+                class="
+                  dropdown-menu
+                  dropdown-width-xl
+                  dropdown-height
+                  dropdown-menu-left
+                "
+                role="menu"
+                aria-labelledby="button-basic"
+                placement="bottom right"
+              >
+                <app-email-wigit></app-email-wigit>
+                <div role="menuitem">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <a type="btn" class="m-b-0 btn text-primary">Clear All</a>
+                  </div>
+                </div>
+              </ul>
+            </div>
+            <!--  notification -->
+            <div class="btn-group herader_drop_box m-r-14" dropdown>
+              <a
+                id="button-basic"
+                dropdownToggle
+                class="bell hoverable link"
+                type="button"
+                aria-controls="dropdown-basic"
+              >
+                <span class="material-icons-outlined header_icons">
+                  notifications
+                </span>
+                <div class="wave">
+                  <div class="circle_pulse"></div>
+                </div>
+              </a>
+              <div
+                id="dropdown-basic"
+                *dropdownMenu
+                class="
+                  dropdown-menu
+                  dropdown-width-xl
+                  dropdown-height
+                  dropdown-menu-left
+                "
+                role="menu"
+                aria-labelledby="button-basic"
+              >
+                <app-engauge></app-engauge>
+                <div role="menuitem">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <a type="btn" class="m-b-0 btn text-primary">Clear All</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- profile -->
+            <div class="btn-group" dropdown>
+              <a
+                id="button-basic"
+                class="dropdown dropdown-inline link"
+                dropdownToggle
+                type="button"
+                aria-controls="dropdown-basic"
+              >
+                <span class="">
+                  <img
+                    src="assets/media/images/users/user5.jpg"
+                    class="img-responsive logo-sm2-circle"
+                    alt="profile-pic"
+                  />
+                </span>
+                <ul
+                  id="dropdown-basic"
+                  *dropdownMenu
+                  class="
+                    dropdown-menu dropdown-width-xl dropdown-height
+                    p-t-0
+                    m-t-0
+                    dropdown-menu-left
+                  "
+                  role="menu"
+                  aria-labelledby="button-basic"
+                >
+                  <app-drop-profile-wigit></app-drop-profile-wigit>
+                </ul>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- full widh search field -->
+    <div
+      *ngIf="headerSearch"
+      class="
+        full-search-harder
+        navbar-header-content
+        px-3
+        d-flex
+        custom-header-searchbar
+        w-100
+      "
+    >
+      <div class="full-searchbar d-flex align-items-center w-100">
+        <input
+          type="text"
+          class="form-control gap-right no-outline w-100"
+          placeholder="Search here..."
+        />
+        <div class="close-icon" (click)="openSearchBar()"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Header-For desktop close -->
+<!-- header for Mobile -->
+<header
+  class="header-mobile-section mobile-header"
+  [ngClass]="getHeaderClass(headerkey)"
+>
+  <div class="mobile-header-wrapper">
+    <div class="mob_header_content">
+      <div class="d-flex align-items-center">
+        <div class="menu-wrapper">
+          <a
+            class="toggle-icon link-none hoverable align-items-center"
+            (click)="sidebarToggle('Mobile')"
+          >
+            <span
+              class="
+                material-icons-outlined
+                menu_icon_mob
+                cursor-pointer
+                icon-20
+              "
+            >
+              menu
+            </span>
+          </a>
+        </div>
+        <div class="brand-wrapper m-l-20">
+          <a class="link-none">
+            <h2 class="brand_mob_menu">Zonvoir</h2>
+          </a>
+        </div>
+      </div>
+
+      <!-- header_utilities -->
+      <div class="d-flex kk_header_utilities align-items-center">
+        <ul class="d-flex nav align-items-center">
+          <li class="d-flex align-items-center">
+            <div class="btn-group herader_drop_box mob_flags m-r-4" dropdown>
+              <a
+                id="button-basic"
+                class="link hoverable"
+                dropdownToggle
+                type="button"
+                aria-controls="dropdown-basic"
+              >
+                <span class="country_icon"
+                  ><img
+                    src="assets/flags/us_flag.jpg"
+                    class="country_flag"
+                    alt="img"
+                /></span>
+              </a>
+              <ul
+                id="dropdown-basic"
+                *dropdownMenu
+                class="dropdown-menu dropdown-height dropdown-menu-left"
+                role="menu"
+                aria-labelledby="button-basic"
+                placement="bottom right"
+              >
+                <li role="menuitem">
+                  <a class="dropdown-item p-x-12 py-2">
+                    <div class="d-flex align-items-center">
+                      <div class="logo m-r-12 d-flex align-items-center">
+                        <span class="country_icon"
+                          ><img
+                            src="assets/flags/french_flag.jpg"
+                            class="country_flag"
+                            alt="img"
+                        /></span>
+                      </div>
+                      <div class="m-b-0">
+                        <p class="m-b-0 sub_heading">French</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li role="menuitem">
+                  <a class="dropdown-item p-x-12 py-2">
+                    <div class="d-flex align-items-center">
+                      <div class="logo m-r-12 d-flex align-items-center">
+                        <span class="country_icon"
+                          ><img
+                            src="assets/flags/italy_flag.jpg"
+                            class="country_flag"
+                            alt="img"
+                        /></span>
+                      </div>
+                      <div class="m-b-0">
+                        <p class="m-b-0 sub_heading">Italy</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="btn-group search_for_dd_other m-r-4" dropdown>
+              <a class="link" type="button" (click)="openDropdown(0)">
+                <i class="ti ti-search mob_search_icon"> </i>
+              </a>
+            </div>
+
+            <!-- email -->
+
+            <div
+              class="btn-group herader_drop_box m-r-4"
+              (click)="openDropdown(1)"
+            >
+              <a id="button-basic" class="link hoverable">
+                <span class="material-icons-outlined header_icons">
+                  email
+                </span>
+                <div class="email_box">
+                  <div class="email_pulse"></div>
+                </div>
+              </a>
+            </div>
+
+            <!--  notification -->
+
+            <div
+              class="btn-group herader_drop_box m-r-4"
+              (click)="openDropdown(2)"
+            >
+              <a id="button-basic">
+                <span class="material-icons-outlined header_icons">
+                  notifications
+                </span>
+                <div class="wave">
+                  <div class="circle_pulse"></div>
+                </div>
+              </a>
+            </div>
+
+            <!-- profile -->
+
+            <div class="btn-group" (click)="openDropdown(3)">
+              <a id="button-basic" class="dropdown dropdown-inline link">
+                <span class="">
+                  <img
+                    src="assets/media/images/users/user5.jpg"
+                    class="img-responsive logo-sm2-circle"
+                    alt="profile-pic"
+                  />
+                </span>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- full widh search field -->
+  <div
+    *ngIf="isDropdownArr[0]"
+    class="
+      full-search-harder
+      custom-header-searchbar
+      dropdown-wrapper-mob
+      header-mobile-dropdown
+      px-3
+      d-flex
+      w-100
+    "
+  >
+    <div class="full-searchbar d-flex align-items-center w-100">
+      <input
+        type="text"
+        class="form-control gap-right no-outline w-100"
+        placeholder="Search here..."
+      />
+      <div class="close-icon" (click)="openDropdown(0)"></div>
+    </div>
+  </div>
+  <!-- dropdown link content -->
+  <div class="dropdown-triggers-content">
+    <div class="email-content-wrap mobile-content-space">
+      <ng-template [ngIf]="isDropdownArr[1]">
+        <div class="">
+          <app-email-wigit></app-email-wigit>
+          <div role="menuitem ">
+            <div
+              class="
+                d-flex
+                align-items-center
+                justify-content-center
+                border-top-1
+              "
+            >
+              <a type="btn" class="m-b-0 btn text-primary">Clear All</a>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+    <div class="notification-content-wrap mobile-content-space">
+      <ng-template [ngIf]="isDropdownArr[2]">
+        <div class="">
+          <app-engauge></app-engauge>
+          <div role="menuitem ">
+            <div
+              class="
+                d-flex
+                align-items-center
+                justify-content-center
+                border-top-1
+              "
+            >
+              <a type="btn" class="m-b-0 btn text-primary">Clear All</a>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+    <div class="profile-content-wrap mobile-content-space">
+      <ng-template [ngIf]="isDropdownArr[3]">
+        <div class="">
+          <app-drop-profile-wigit></app-drop-profile-wigit>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</header>
+
+<!-- header for tablet -->
+<header
+  class="header-tablet-section tablet-header"
+  [ngClass]="getHeaderClass(headerkey)"
+>
+  <div class="mobile-header-wrapper">
+    <div class="mob_header_content">
+      <div class="menu-wrapper">
+        <a
+          class="toggle-icon link-none hoverable align-items-center"
+          (click)="sidebarToggle('Mobile')"
+        >
+          <span
+            class="material-icons-outlined menu_icon_mob cursor-pointer icon-20"
+          >
+            menu
+          </span>
+        </a>
+      </div>
+
+      <!-- search bar  -->
+      <div class="d-flex kk_search_bar_header align-items-center">
+        <div class="header_search_kbar">
+          <div class="custom_input_group">
+            <input
+              type="text"
+              class="form-control custom_input_control"
+              placeholder="Search"
+            />
+            <span class="_search_btn">
+              <button type="button" class="btn icon_search_btn">
+                <i class="ti ti-search search_input_icon"></i>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!-- header_utilities -->
+      <div class="d-flex kk_header_utilities align-items-center">
+        <ul class="d-flex nav align-items-center">
+          <li class="d-flex align-items-center">
+            <div class="btn-group search_for_dd_other m-r-14" dropdown>
+              <a class="link" type="button" (click)="openSearchBar()">
+                <span class="material-icons-outlined icon-gray icon">
+                  search
+                </span>
+              </a>
+            </div>
+            <!-- flags -->
+            <div class="btn-group herader_drop_box m-r-14" dropdown>
+              <a
+                id="button-basic"
+                class="link hoverable"
+                dropdownToggle
+                type="button"
+                aria-controls="dropdown-basic"
+              >
+                <span class="country_icon"
+                  ><img
+                    src="assets/flags/us_flag.jpg"
+                    class="country_flag"
+                    alt="img"
+                /></span>
+              </a>
+              <ul
+                id="dropdown-basic"
+                *dropdownMenu
+                class="dropdown-menu dropdown-height dropdown-menu-left"
+                role="menu"
+                aria-labelledby="button-basic"
+                placement="bottom right"
+              >
+                <li role="menuitem">
+                  <a class="dropdown-item p-x-12 py-2">
+                    <div class="d-flex align-items-center">
+                      <div class="logo m-r-12 d-flex align-items-center">
+                        <span class="country_icon"
+                          ><img
+                            src="assets/flags/french_flag.jpg"
+                            class="country_flag"
+                            alt="img"
+                        /></span>
+                      </div>
+                      <div class="m-b-0">
+                        <p class="m-b-0 sub_heading">French</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li role="menuitem">
+                  <a class="dropdown-item p-x-12 py-2">
+                    <div class="d-flex align-items-center">
+                      <div class="logo m-r-12 d-flex align-items-center">
+                        <span class="country_icon"
+                          ><img
+                            src="assets/flags/italy_flag.jpg"
+                            class="country_flag"
+                            alt="img"
+                        /></span>
+                      </div>
+                      <div class="m-b-0">
+                        <p class="m-b-0 sub_heading">Italy</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- email -->
+            <div class="btn-group herader_drop_box m-r-14" dropdown>
+              <a
+                id="button-basic"
+                class="link hoverable"
+                dropdownToggle
+                type="button"
+                aria-controls="dropdown-basic"
+              >
+                <span class="material-icons-outlined header_icons">
+                  email
+                </span>
+                <div class="email_box">
+                  <div class="email_pulse"></div>
+                </div>
+              </a>
+              <ul
+                id="dropdown-basic"
+                *dropdownMenu
+                class="
+                  dropdown-menu
+                  dropdown-width-xl
+                  dropdown-height
+                  dropdown-menu-left
+                "
+                role="menu"
+                aria-labelledby="button-basic"
+                placement="bottom right"
+              >
+                <app-email-wigit></app-email-wigit>
+                <div role="menuitem">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <a type="btn" class="m-b-0 btn text-primary">Clear All</a>
+                  </div>
+                </div>
+              </ul>
+            </div>
+            <!--  notification -->
+            <div class="btn-group herader_drop_box m-r-14" dropdown>
+              <a
+                id="button-basic"
+                dropdownToggle
+                class="bell hoverable link"
+                type="button"
+                aria-controls="dropdown-basic"
+              >
+                <span class="material-icons-outlined header_icons">
+                  notifications
+                </span>
+                <div class="wave">
+                  <div class="circle_pulse"></div>
+                </div>
+              </a>
+              <div
+                id="dropdown-basic"
+                *dropdownMenu
+                class="
+                  dropdown-menu
+                  dropdown-width-xl
+                  dropdown-height
+                  dropdown-menu-left
+                "
+                role="menu"
+                aria-labelledby="button-basic"
+              >
+                <app-engauge></app-engauge>
+                <div role="menuitem bottom_radius">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <a type="btn" class="m-b-0 btn text-primary">Clear All</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- profile -->
+            <div class="btn-group" dropdown>
+              <a
+                id="button-basic"
+                class="dropdown dropdown-inline link"
+                dropdownToggle
+                type="button"
+                aria-controls="dropdown-basic"
+              >
+                <span class="">
+                  <img
+                    src="assets/media/images/users/user5.jpg"
+                    class="img-responsive logo-sm2-circle"
+                    alt="profile-pic"
+                  />
+                </span>
+                <ul
+                  id="dropdown-basic"
+                  *dropdownMenu
+                  class="
+                    dropdown-menu dropdown-width-xl dropdown-height
+                    p-t-0
+                    m-t-0
+                    dropdown-menu-left
+                  "
+                  role="menu"
+                  aria-labelledby="button-basic"
+                >
+                  <app-drop-profile-wigit></app-drop-profile-wigit>
+                </ul>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- drop-down-content -->
+  <div
+    *ngIf="!headerSearch"
+    class="dropdown-wrapper-mob header-mobile-dropdown bg-white"
+    id="collapseBasic"
+    [collapse]="!isCollapsed"
+    [isAnimated]="true"
+  >
+    <div class="dropdown-content-mob">
+      <ul class="list-inline m-b-0 icons-trigger">
+        <li class="list-inline-item icons-trigger-width">
+          <a class="link" type="button" (click)="openSearchBar()">
+            <span class="material-icons-outlined icon-gray icon-20">
+              search
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- full widh search field -->
+  <div
+    *ngIf="headerSearch"
+    class="
+      full-search-harder
+      custom-header-searchbar
+      dropdown-wrapper-mob
+      header-mobile-dropdown
+      px-3
+      d-flex
+      shadow1
+      d-flex
+      w-100
+    "
+  >
+    <div class="full-searchbar d-flex align-items-center w-100">
+      <input
+        type="text"
+        class="form-control gap-right no-outline w-100"
+        placeholder="Search here..."
+      />
+      <div class="close-icon" (click)="openSearchBar()"></div>
+    </div>
+  </div>
+  <!-- dropdown link content -->
+  <div class="dropdown-triggers-content">
+    <div class="email-content-wrap mobile-content-space">
+      <ng-template [ngIf]="tabId === 'email'">
+        <div class="">
+          <app-email-wigit></app-email-wigit>
+          <div role="menuitem  ">
+            <div
+              class="
+                d-flex
+                align-items-center
+                custom-card
+                justify-content-center
+                border-top-1
+              "
+            >
+              <a type="btn" class="m-b-0 btn text-primary">Clear All</a>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+    <div class="notification-content-wrap mobile-content-space">
+      <ng-template [ngIf]="tabId === 'notifications'">
+        <div class="">
+          <app-engauge></app-engauge>
+          <div role="menuitem ">
+            <div
+              class="
+                d-flex
+                align-items-center
+                custom-card
+                justify-content-center
+                border-top-1
+              "
+            >
+              <a type="btn" class="m-b-0 btn text-primary">Clear All</a>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+    <div class="profile-content-wrap mobile-content-space">
+      <ng-template [ngIf]="tabId === 'profile'">
+        <div class="">
+          <app-drop-profile-wigit></app-drop-profile-wigit>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</header>

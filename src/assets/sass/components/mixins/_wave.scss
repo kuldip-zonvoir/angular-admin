@@ -1,0 +1,42 @@
+//
+// Wave Babkground Mixins
+//
+@mixin pulse-wave($bg-color:null) {
+  background-color: $bg-color;
+  content: "";
+  display: table;
+  border-radius: 50%;
+  position: absolute;
+  animation-name: pulse;
+  animation-duration: .9s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+@mixin pulse-animation($size:null, $left:null, $right:null, $top:null, $bottom:null) {
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+      width: $size;
+      height: $size;
+      left: 0;
+      top: 0;
+    }
+
+    95% {
+      opacity: 0.1;
+      left: $left;
+      top: $top;
+      width: $size*4;
+      height: $size*4;
+    }
+
+    100% {
+      opacity: 0;
+      width: $size;
+      height: $size;
+      left: 0;
+      top: 0;
+    }
+  }
+}

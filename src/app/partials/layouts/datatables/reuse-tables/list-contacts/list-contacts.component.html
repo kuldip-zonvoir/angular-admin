@@ -1,0 +1,73 @@
+<div class="card custom-card">
+  <div class="card-body p-t-8">
+    <div class="table-responsive table_hr_scroll">
+      <table class="table my_tabel table-hover table-borderless m-b-0">
+        <thead class="thead">
+          <tr class="thead-row" style="left: 0px">
+            <th class="th">
+              <span class="t_title"></span>
+            </th>
+            <th>
+              <span class="t_title align-middle"></span>
+            </th>
+            <th>
+              <span class="t_title align-middle"></span>
+            </th>
+            <th>
+              <span class="t_title align-middle"> Name</span>
+            </th>
+            <th>
+              <span class="t_title align-middle">Email</span>
+            </th>
+            <th>
+              <span class="t_title align-middle">Phone</span>
+            </th>
+            <th>
+              <span class="t_title align-middle">Post</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let contact of Contacts; let i = index">
+            <td>
+              <span class="tabelcell">{{ i + 1 }}</span>
+            </td>
+            <td>
+              <span class="tabelcell align-middle">
+                <span
+                  class="material-icons-outlined icon"
+                  [ngClass]="{ 'text-warning': contact.star === 'true' }"
+                >
+                  star_border
+                </span>
+              </span>
+            </td>
+            <td>
+              <span class="tabelcell align-middle">
+                <img
+                  [src]="contact.image"
+                  alt=""
+                  class="img-responsive logo-sm2-circle img-table-circle"
+                />
+              </span>
+            </td>
+            <td>
+              <span class="tabelcell align-middle">{{ contact.name }}</span>
+            </td>
+            <td>
+              <span class="tabelcell align-middle">{{ contact.email }}</span>
+            </td>
+            <td>
+              <span class="tabelcell align-middle">{{ contact.phone }}</span>
+            </td>
+            <td>
+              <span class="tabelcell align-middle">{{
+                contact.occupation
+              }}</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

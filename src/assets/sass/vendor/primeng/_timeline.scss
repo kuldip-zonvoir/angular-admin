@@ -1,0 +1,9 @@
+.p-timeline {}
+
+.p-timeline-event-marker {
+  border: 2px solid $primary;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  background-color: $primary;
+}

@@ -1,0 +1,73 @@
+<div class="card custom-card  ">
+    <div  class="card-header d-flex justify-content-between align-items-center custom-card-header border-1">
+      <div class="card-title mb-0 ">
+          <h5 class="card-label mb-0">Basic Navbar </h5>
+      </div>
+      <div class="code">
+        <button class="btn d-flex align-items-center btn-outline-primary  " (click) = "showCode = !showCode">
+          <span  *ngIf= "!showCode" class="material-icons icon ">
+              code
+          </span>
+          <span  *ngIf= "showCode" class="material-icons icon ">
+            code_off
+          </span>
+              code
+      </button>
+         </div>
+  </div>
+        <div class="card-body "> 
+              <div class="">
+                <nav class="navbar no-shadow w-100 navbar-expand-lg navbar-light bg-light">
+                  <a class="navbar-brand" href="#">Navbar</a>
+                  <button class="navbar-toggler" type="button" (click) = "toggle = !toggle" [attr.aria-expanded]="toggle" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"   aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                
+                  <div   class="collapse navbar-collapse" [collapse]="!toggle" [isAnimated]="true" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                      </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                  </div>
+                </nav>
+                </div>
+              <div [collapse] = "!showCode" [isAnimated] ="true" class="code_container" >
+              <div class="nav_bar w-100">
+                <ul>
+                    <li><a [ngClass] ="{'active': tabId === '0'}" (click) = "tabToggle('0')">
+                        HTML
+                    </a>
+                    </li>
+                    <li><a [ngClass] ="{'active': tabId === '1'}"  (click) = "tabToggle('1')">
+                           TS
+                        </a>
+                    </li>
+                </ul>
+            </div>
+              <!-- code -->
+         <ng-template [ngIf] = "tabId === '0'" >
+          <pre class="mb-0">
+            <code [highlight]="htmlcode" (highlighted)="onHighlight($event)" [lineNumbers]="true">
+            </code>
+          </pre>
+         </ng-template>
+         <ng-template [ngIf] = "tabId === '1'" >
+          <pre  class="mb-0">
+            <code [highlight]="tscode" (highlighted)="onHighlight($event)" [lineNumbers]="true">
+            </code>
+          </pre>
+         </ng-template>
+      </div>
+      </div>
+  </div>

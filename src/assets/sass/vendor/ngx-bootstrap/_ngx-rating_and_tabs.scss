@@ -1,0 +1,30 @@
+//rating //dark
+.custom-rating {
+  .card {
+    background-color: inherit !important;
+  }
+}
+
+//ngx-tabs
+.custom-ngx-tab {
+  .nav-tabs {
+    border-bottom: 1px solid $border-color; //dark
+    margin-bottom: 1rem;
+
+    .nav-link {
+      color: inherit;
+      padding: 5px;
+      &.active {
+        color: inherit !important;
+        background-color: $specialCard !important;
+        border-color: $border-color;
+      }
+    }
+  }
+}
+
+////ngx-time-picker dark
+.custom-time-picker {
+  background-color: $specialCard !important;
+  color: $text-color !important;
+}

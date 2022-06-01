@@ -1,0 +1,425 @@
+<div class="border-0 p-r-12">
+  <div class="p-b-20">
+    <div class="p-20">
+      <div class="m-y-8 p-x-4">
+        <button
+          type="button"
+          (click)="composeMail()"
+          class="btn btn-block btn-primary"
+        >
+          Compose Email
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="p-20 email_scroll">
+    <ul class="nav p-r-4 desktop-email mt-1">
+      <li class="nav_item w-100" (click)="openInbox()">
+        <div class="d-flex align-items-center">
+          <a
+            (click)="toggleTab('0')"
+            [ngClass]="{ 'active-mail': tabId === '0' }"
+            class="mail-link p-2 w-100"
+          >
+            <div
+              class="d-flex p-x-8 align-items-center justify-content-between"
+            >
+              <div class="logo m-r-12 d-flex align-items-center">
+                <span class="material-icons-outlined icon-24 m-r-12">
+                  inbox
+                </span>
+                <h6 class="m-b-0 list-name">Inbox</h6>
+              </div>
+              <div class="m-b-0">
+                <span
+                  class="m-b-0 text-white bg-danger notifiaction-small-circle"
+                  >2</span
+                >
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li class="nav_item w-100">
+        <div class="d-flex align-items-center">
+          <a
+            (click)="toggleTab('1')"
+            [ngClass]="{ 'active-mail': tabId === '1' }"
+            class="mail-link p-2 w-100"
+          >
+            <div
+              class="d-flex p-x-8 align-items-center justify-content-between"
+            >
+              <div class="logo m-r-12 d-flex align-items-center">
+                <span class="material-icons-outlined icon-24 m-r-12">
+                  send
+                </span>
+                <h6 class="m-b-0 list-name">Sent</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li class="nav_item w-100">
+        <div class="d-flex align-items-center">
+          <a
+            (click)="toggleTab('2')"
+            [ngClass]="{ 'active-mail': tabId === '2' }"
+            class="mail-link p-2 w-100"
+          >
+            <div
+              class="d-flex p-x-8 align-items-center justify-content-between"
+            >
+              <div class="logo m-r-12 d-flex align-items-center">
+                <span class="material-icons-outlined icon-24 m-r-12">
+                  star_border
+                </span>
+                <h6 class="m-b-0 list-name">Important</h6>
+              </div>
+              <div class="m-b-0">
+                <span
+                  class="m-b-0 text-white bg-danger notifiaction-small-circle imp"
+                  >4</span
+                >
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li class="nav_item w-100">
+        <div class="d-flex align-items-center">
+          <a
+            (click)="toggleTab('3')"
+            [ngClass]="{ 'active-mail': tabId === '3' }"
+            class="mail-link p-2 w-100"
+          >
+            <div
+              class="d-flex p-x-8 align-items-center justify-content-between"
+            >
+              <div class="logo m-r-12 d-flex align-items-center">
+                <span class="material-icons-outlined icon-24 m-r-12">
+                  mode_edit
+                </span>
+                <h6 class="m-b-0 list-name">Draft</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li class="nav_item w-100">
+        <div class="d-flex align-items-center">
+          <a
+            (click)="toggleTab('4')"
+            [ngClass]="{ 'active-mail': tabId === '4' }"
+            class="mail-link p-2 w-100"
+          >
+            <div
+              class="d-flex p-x-8 align-items-center justify-content-between"
+            >
+              <div class="logo m-r-12 d-flex align-items-center">
+                <span class="material-icons-outlined icon-24 m-r-12">
+                  cases
+                </span>
+                <h6 class="m-b-0 list-name">Tags</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li class="nav_item w-100">
+        <div class="d-flex align-items-center">
+          <a
+            (click)="toggleTab('5')"
+            [ngClass]="{ 'active-mail': tabId === '5' }"
+            class="mail-link p-2 w-100"
+          >
+            <div
+              class="d-flex p-x-8 align-items-center justify-content-between"
+            >
+              <div class="logo m-r-12 d-flex align-items-center">
+                <span class="material-icons-outlined icon-24 m-r-12">
+                  delete
+                </span>
+                <h6 class="m-b-0 list-name">Trash</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li class="nav_item w-100 p-l-20 p-l-18 m-t-8">
+        <h5 class="">Labels</h5>
+      </li>
+      <li class="nav_item w-100">
+        <div class="d-flex align-items-center">
+          <a
+            (click)="toggleTab('6')"
+            [ngClass]="{ 'active-mail': tabId === '6' }"
+            class="mail-link zp-12 w-100"
+          >
+            <div
+              class="d-flex p-x-8 align-items-center justify-content-between"
+            >
+              <div class="logo m-r-12 d-flex align-items-center">
+                <span class="marker bg-purple m-r-12"> </span>
+                <h6 class="m-b-0 list-name">Personal</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li class="nav_item w-100">
+        <div class="d-flex align-items-center">
+          <a
+            (click)="toggleTab('7')"
+            [ngClass]="{ 'active-mail': tabId === '7' }"
+            class="mail-link zp-12 w-100"
+          >
+            <div
+              class="d-flex p-x-8 align-items-center justify-content-between"
+            >
+              <div class="logo m-r-12 d-flex align-items-center">
+                <span class="marker bg-warning m-r-12"> </span>
+                <h6 class="m-b-0 list-name">Business</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li class="nav_item w-100">
+        <div class="d-flex align-items-center">
+          <a
+            (click)="toggleTab('8')"
+            [ngClass]="{ 'active-mail': tabId === '8' }"
+            class="mail-link zp-12 w-100"
+          >
+            <div
+              class="d-flex p-x-8 align-items-center justify-content-between"
+            >
+              <div class="logo m-r-12 d-flex align-items-center">
+                <span class="marker bg-success m-r-12"> </span>
+                <h6 class="m-b-0 list-name">Clints</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li class="nav_item w-100">
+        <div class="d-flex align-items-center">
+          <a
+            (click)="toggleTab('9')"
+            [ngClass]="{ 'active-mail': tabId === '9' }"
+            class="mail-link zp-12 w-100"
+          >
+            <div
+              class="d-flex p-x-8 align-items-center justify-content-between"
+            >
+              <div class="logo m-r-12 d-flex align-items-center">
+                <span class="marker bg-orange m-r-12"> </span>
+                <h6 class="m-b-0 list-name">Promosnal</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+    </ul>
+
+    <!-- for mobile screen  -->
+    <div class="mobile-email">
+      <ul [collapse]="!isHidden" [isAnimated]="true" class="nav mt-1">
+        <li class="nav_item w-100">
+          <div class="d-flex align-items-center">
+            <a
+              (click)="toggleTab('0')"
+              [ngClass]="{ 'active-mail': tabId === '0' }"
+              class="mail-link p-2 w-100"
+            >
+              <div
+                class="d-flex p-x-8 align-items-center justify-content-between"
+              >
+                <div class="logo m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined icon-24 m-r-12">
+                    inbox
+                  </span>
+                  <h6 class="m-b-0 list-name">Inbox</h6>
+                </div>
+                <div class="m-b-0">
+                  <span
+                    class="m-b-0 text-white bg-danger notifiaction-small-circle"
+                    >2</span
+                  >
+                </div>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li class="nav_item w-100">
+          <div class="d-flex align-items-center">
+            <a
+              (click)="toggleTab('1')"
+              [ngClass]="{ 'active-mail': tabId === '1' }"
+              class="mail-link p-2 w-100"
+            >
+              <div
+                class="d-flex p-x-8 align-items-center justify-content-between"
+              >
+                <div class="logo m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined icon-24 m-r-12">
+                    mail
+                  </span>
+                  <h6 class="m-b-0 list-name">Sent Mail</h6>
+                </div>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li class="nav_item w-100">
+          <div class="d-flex align-items-center">
+            <a
+              (click)="toggleTab('2')"
+              [ngClass]="{ 'active-mail': tabId === '2' }"
+              class="mail-link p-2 w-100"
+            >
+              <div
+                class="d-flex p-x-8 align-items-center justify-content-between"
+              >
+                <div class="logo m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined icon-24 m-r-12">
+                    cases
+                  </span>
+                  <h6 class="m-b-0 list-name">Important</h6>
+                </div>
+                <div class="m-b-0">
+                  <span
+                    class="m-b-0 text-white bg-danger notifiaction-small-circle imp"
+                    >4</span
+                  >
+                </div>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li class="nav_item w-100">
+          <div class="d-flex align-items-center">
+            <a
+              (click)="toggleTab('1')"
+              [ngClass]="{ 'active-mail': tabId === '1' }"
+              class="mail-link p-2 w-100"
+            >
+              <div
+                class="d-flex p-x-8 align-items-center justify-content-between"
+              >
+                <div class="logo m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined icon-24 m-r-12">
+                    description
+                  </span>
+                  <h6 class="m-b-0 list-name">Draft</h6>
+                </div>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li class="nav_item w-100">
+          <div class="d-flex align-items-center">
+            <a
+              (click)="toggleTab('1')"
+              [ngClass]="{ 'active-mail': tabId === '1' }"
+              class="mail-link p-2 w-100"
+            >
+              <div
+                class="d-flex p-x-8 align-items-center justify-content-between"
+              >
+                <div class="logo m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined icon-24 m-r-12">
+                    star_border
+                  </span>
+                  <h6 class="m-b-0 list-name">Tags</h6>
+                </div>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li class="nav_item w-100">
+          <div class="d-flex align-items-center">
+            <a
+              (click)="toggleTab('1')"
+              [ngClass]="{ 'active-mail': tabId === '1' }"
+              class="mail-link p-2 w-100"
+            >
+              <div
+                class="d-flex p-x-8 align-items-center justify-content-between"
+              >
+                <div class="logo m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined icon-24 m-r-12">
+                    delete
+                  </span>
+                  <h6 class="m-b-0 list-name">Trash</h6>
+                </div>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li class="nav_item w-100 m-b-4 p-l-20px m-t-12">Labels</li>
+        <li class="nav_item w-100">
+          <div class="d-flex align-items-center">
+            <a
+              (click)="toggleTab('0')"
+              [ngClass]="{ 'active-mail': tabId === '0' }"
+              class="mail-link p-2 w-100"
+            >
+              <div
+                class="d-flex p-x-8 align-items-center justify-content-between"
+              >
+                <div class="logo m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined text-warning m-r-12">
+                    sell
+                  </span>
+                  <h6 class="m-b-0 list-name">Important</h6>
+                </div>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li class="nav_item w-100">
+          <div class="d-flex align-items-center">
+            <a
+              (click)="toggleTab('0')"
+              [ngClass]="{ 'active-mail': tabId === '0' }"
+              class="mail-link p-2 w-100"
+            >
+              <div
+                class="d-flex p-x-8 align-items-center justify-content-between"
+              >
+                <div class="logo m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined text-primary m-r-12">
+                    sell
+                  </span>
+                  <h6 class="m-b-0 list-name">Business</h6>
+                </div>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li class="nav_item w-100">
+          <div class="d-flex align-items-center">
+            <a
+              (click)="toggleTab('0')"
+              [ngClass]="{ 'active-mail': tabId === '0' }"
+              class="mail-link p-2 w-100"
+            >
+              <div
+                class="d-flex p-x-8 align-items-center justify-content-between"
+              >
+                <div class="logo m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined text-info m-r-12">
+                    sell
+                  </span>
+                  <h6 class="m-b-0 list-name">Inspiration</h6>
+                </div>
+              </div>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

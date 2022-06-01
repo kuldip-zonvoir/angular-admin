@@ -1,0 +1,28 @@
+<div class="card custom-card m-r-12 m-b-8">
+  <img
+    class="card-img-top basic-card-image img-responsive"
+    [src]="tile.card_image"
+    alt="Card-image-cap"
+  />
+  <div class="card-body">
+    <div class="d-flex justify-content-between align-items-center m-b-8">
+      <p class="m-b-0 d-flex text-muted align-items-center">
+        <span class="material-icons-outlined icon-16 m-r-8">
+          calendar_today
+        </span>
+        {{ tile.date }}
+      </p>
+      <p class="m-b-0 hoverd text-muted d-flex align-items-center">
+        <i class="ti ti-comments icon-16 m-r-8"></i>
+        {{ tile.comments }} Comments
+      </p>
+    </div>
+    <h5 class="">{{ tile.title }}</h5>
+    <p class="">
+      {{ tile.content }}
+    </p>
+    <div class="">
+      <button class="btn btn-pill btn-primary">Read More</button>
+    </div>
+  </div>
+</div>

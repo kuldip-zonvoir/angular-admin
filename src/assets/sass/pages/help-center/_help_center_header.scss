@@ -1,0 +1,94 @@
+.help {
+  background-image: linear-gradient(to right, #03d7ff, #65c7f7, #0052d4);
+  width: 100%;
+  height: 40vh;
+  padding: 25px 10px;
+  .khelp_title {
+    font-size: 1.5rem;
+  }
+}
+.help-container {
+}
+.help-cards {
+  position: relative;
+  top: -50px;
+  margin: 0 20px;
+}
+.custom-accordian {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.custom-accordian-list {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  margin: 0 auto 15px auto;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &.accordion-active {
+    .accordion-title {
+      &:after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+.kfaq_wrapper {
+  margin-top: 12px;
+}
+.custom-accordian-content {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+//guides
+.list {
+  color: $dark;
+  text-decoration: none !important;
+  cursor: pointer;
+
+  &:hover {
+    border-radius: 5px;
+  }
+}
+//For Mobile Devices
+@include responsive-below(md) {
+  .help-cards {
+    position: relative;
+    top: 0;
+    margin: 20px 0;
+  }
+  .help {
+    height: auto;
+    padding: 25px 10px;
+    .khelp_title {
+      font-size: 1.25rem;
+    }
+  }
+  .kcontact {
+    border: 0 !important;
+  }
+  .kfaq {
+    margin-bottom: 20px;
+  }
+}
+// for tablet view
+@include responsive-between(md, lg) {
+  .help {
+    height: 25vh;
+    padding: 25px 10px;
+    .khelp_title {
+      font-size: 1.25rem;
+    }
+  }
+}
+//

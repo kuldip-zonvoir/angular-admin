@@ -1,0 +1,48 @@
+<div class="discuss-scroll">
+  <ng-conotainer *ngFor="let message of discuss">
+    <div class="p-b-12 p-r-4">
+      <div class="d-flex p-b-12">
+        <div class="m-r-12">
+          <img
+            [src]="message.user_profile"
+            alt="logo"
+            class="logo-md-circle img-respponsive"
+          />
+        </div>
+        <div class="">
+          <div class="m-b-10">
+            <h6 class="m-b-0">{{ message.user_name }}</h6>
+            <ng-content></ng-content>
+            <p class="m-b-0 text-muted">{{ message.createdAt }}</p>
+          </div>
+          <div class="message-box p-b-8">
+            <p class="m-b-0 text-muted">
+              {{ message.user_message }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-conotainer>
+</div>
+
+<div class="d-flex p-y-8">
+  <div class="m-r-12">
+    <img
+      src="assets/media/images/users/default.jpg"
+      alt="logo"
+      class="logo-md-circle img-respponsive"
+    />
+  </div>
+  <div class="d-flex w-100 p-b-4">
+    <textarea
+      type="text"
+      rows="3"
+      placeholder="Write Comment Here..."
+      class="form-control"
+    ></textarea>
+  </div>
+</div>
+<div class="text-right">
+  <button type="button" class="btn btn-outline-primary">Send</button>
+</div>

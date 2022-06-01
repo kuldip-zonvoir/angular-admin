@@ -1,0 +1,51 @@
+<div class="card custom-card grid-bottom">
+  <div class="card-header custom-card-header border-1">
+    <h5 class="m-b-0">{{ dialogModal.modal_title }} Modal</h5>
+  </div>
+
+  <div class="card-body">
+    <div class="custom-modal text-center">
+      <button
+        (click)="showPositionDialog(dialogModal.modal_position)"
+        class="btn btn-square btn-outline btn-primary m-r-12"
+      >
+        Click here !
+      </button>
+    </div>
+  </div>
+</div>
+<p-dialog
+  header="Zonvoir UI"
+  [(visible)]="displayPosition"
+  [position]="position"
+  [modal]="true"
+  class="position-dialog-modal"
+  [baseZIndex]="10"
+  [draggable]="false"
+  [resizable]="false"
+>
+  <div class="kprime_form_wrapper">
+    <p class="text-muted">
+      The story begins as Don Vito Corleone, the head of a New York Mafia
+      family, oversees his daughter's wedding. His beloved son Michael has just
+      come home from the war, but does not intend to become part of his father's
+      business.
+    </p>
+  </div>
+
+  <!-- modal-footer -->
+  <div class="d-flex align-items-center kprime_footer justify-content-end">
+    <button
+      (click)="displayPosition = false"
+      class="btn btn-square btn-primary m-r-12"
+    >
+      Close
+    </button>
+    <button
+      (click)="displayPosition = false"
+      class="btn btn-square btn-secondary m-r-12"
+    >
+      Cancel
+    </button>
+  </div>
+</p-dialog>

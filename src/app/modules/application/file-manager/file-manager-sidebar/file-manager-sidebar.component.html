@@ -1,0 +1,202 @@
+<!-- sidebar -->
+<div class="border-0">
+  <div class="">
+    <div class="">
+      <div class="m-y-8 text-center">
+        <button
+          (click)="picFile.click()"
+          class="
+            btn
+            d-flex
+            align-items-center
+            justify-content-center
+            btn-block btn-primary
+          "
+        >
+          <span class="material-icons-outlined icon-20 m-r-8">add</span>
+          Upload File
+        </button>
+        <form action="">
+          <input #picFile type="file" (change)="selectFile($event)" hidden />
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="email_scroll">
+    <ul class="nav desktop_email p-r-4 m-t-1">
+      <li class="nav_item w-100">
+        <div class="d-flex align-items-center">
+          <a
+            (click)="picture = !picture"
+            [ngClass]="{ picture: 'active-mail' }"
+            class="file_mana_link p-2 w-100"
+          >
+            <div class="d-flex p-x-8 align-items-center">
+              <div class="logo m-r-12 d-flex align-items-center">
+                <i
+                  class="fas fa-folder-open text-warning icon-20 kw-20 m-r-12"
+                ></i>
+
+                <h6 class="m-b-0 list-name">Picture</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li class="nav_item w-100">
+        <div class="d-flex align-items-center">
+          <a
+            (click)="downloads = !downloads"
+            [ngClass]="{ downloads: 'active-mail' }"
+            class="file_mana_link p-2 w-100"
+          >
+            <div
+              class="d-flex p-x-8 align-items-center justify-content-between"
+            >
+              <div class="logo m-r-12 d-flex align-items-center">
+                <i class="fas fa-folder text-warning icon-20 kw-20 m-r-12"></i>
+
+                <h6 class="m-b-0 list-name">Downloads</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li class="nav_item w-100">
+        <div class="d-flex align-items-center">
+          <a
+            (click)="documents = !documents"
+            [ngClass]="{ documents: 'active-mail' }"
+            class="file_mana_link p-2 w-100"
+          >
+            <div
+              class="d-flex p-x-8 align-items-center justify-content-between"
+            >
+              <div class="logo m-r-12 d-flex align-items-center">
+                <i class="fas fa-folder text-warning icon-20 kw-20 m-r-12"></i>
+
+                <h6 class="m-b-0 list-name">Documents</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li class="nav_item w-100">
+        <div class="d-flex align-items-center">
+          <a
+            (click)="projects = !projects"
+            [ngClass]="{ projects: 'active-mail' }"
+            class="file_mana_link p-2 w-100"
+          >
+            <div
+              class="d-flex p-x-8 align-items-center justify-content-between"
+            >
+              <div class="logo m-r-12 d-flex align-items-center">
+                <i class="fas fa-folder text-warning icon-20 kw-20 m-r-12"></i>
+
+                <h6 class="m-b-0 list-name">Projects</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li class="nav_item w-100">
+        <div class="d-flex align-items-center">
+          <a
+            (click)="assignments = !assignments"
+            [ngClass]="{ assignments: 'active-mail' }"
+            class="file_mana_link p-2 w-100"
+          >
+            <div
+              class="d-flex p-x-8 align-items-center justify-content-between"
+            >
+              <div class="logo m-r-12 d-flex align-items-center">
+                <i class="fas fa-folder text-warning icon-20 kw-20 m-r-12"></i>
+
+                <h6 class="m-b-0 list-name">Assignments</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li class="nav_item w-100">
+        <div class="d-flex align-items-center">
+          <a
+            (click)="research = !research"
+            [ngClass]="{ research: 'active-mail' }"
+            class="file_mana_link p-2 w-100"
+          >
+            <div
+              class="d-flex p-x-8 align-items-center justify-content-between"
+            >
+              <div class="logo m-r-12 d-flex align-items-center">
+                <i class="fas fa-folder text-warning icon-20 kw-20 m-r-12"></i>
+
+                <h6 class="m-b-0 list-name">Research</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li class="nav_item w-100 p-l-20 p-l-18 m-t-8">
+        <h5 class="">Files</h5>
+      </li>
+      <li class="nav_item w-100">
+        <div class="d-flex align-items-center">
+          <a
+            (click)="toggleTab('0')"
+            [ngClass]="{ active: tabId === '0' }"
+            class="file_mana_link zp-10 w-100"
+          >
+            <div
+              class="d-flex p-x-8 align-items-center justify-content-between"
+            >
+              <div class="logo m-r-12 d-flex align-items-center">
+                <i class="far fa-image icon-20 filll text-muted m-r-12"></i>
+                <h6 class="m-b-0 list-name">Mountain</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li class="nav_item w-100">
+        <div class="d-flex align-items-center">
+          <a
+            (click)="toggleTab('0')"
+            [ngClass]="{ active: tabId === '0' }"
+            class="file_mana_link zp-12 w-100"
+          >
+            <div
+              class="d-flex p-x-8 align-items-center justify-content-between"
+            >
+              <div class="logo m-r-12 d-flex align-items-center">
+                <i class="far fa-file-pdf filll icon-20 text-muted m-r-12"></i>
+                <h6 class="m-b-0 list-name">Business</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li class="nav_item w-100">
+        <div class="d-flex align-items-center">
+          <a
+            (click)="toggleTab('0')"
+            [ngClass]="{ active: tabId === '0' }"
+            class="file_mana_link zp-12 w-100"
+          >
+            <div
+              class="d-flex p-x-8 align-items-center justify-content-between"
+            >
+              <div class="logo m-r-12 d-flex align-items-center">
+                <i
+                  class="fab fa-itunes-note filll icon-20 text-muted m-r-12"
+                ></i>
+                <h6 class="m-b-0 list-name">Rain On Me</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

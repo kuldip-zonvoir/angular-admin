@@ -1,0 +1,58 @@
+@mixin scrollbar(
+  $width: null,
+  $height: null,
+  $border-radius: null,
+  $background-color: null
+) {
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    @if ($width !=null) {
+      width: $width;
+    }
+
+    @if ($height !=null) {
+      height: $height;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: $border-radius;
+    background-color: $background-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: $border-radius;
+    background-color: transparent;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    border-radius: $border-radius;
+    height: $height;
+  }
+
+  &::-moz-scrollbar {
+    background-color: $background-color;
+    @if ($width !=null) {
+      width: $width;
+    }
+    @if ($height !=null) {
+      height: $height;
+    }
+  }
+
+  &::-moz-scrollbar-thumb {
+    border-radius: $border-radius;
+    background-color: $background-color;
+  }
+
+  &::-moz-scrollbar-track {
+    border-radius: $border-radius;
+    background-color: $background-color;
+  }
+
+  &:hover::-moz-scrollbar-thumb {
+    border-radius: $border-radius;
+    height: $height;
+    background-color: $background-color;
+  }
+}

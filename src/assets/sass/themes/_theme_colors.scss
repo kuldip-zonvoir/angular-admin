@@ -1,0 +1,21 @@
+$customize-theme-colors: (
+  "0": #6971ff,
+  //default
+  "1": #ffc107,
+  //amber
+  "2": #673ab7,
+  //puprle
+  "3": #4caf50,
+  //green
+  "4": #9c27b0,
+  //depp puprle
+  "5": #fd4da5,
+  //pink
+  "6": #ff5722,
+  //depp orange
+) !default; // Custom variable
+@each $number, $color in $customize-theme-colors {
+  .theme-#{$number} {
+    background-color: $color;
+  }
+}

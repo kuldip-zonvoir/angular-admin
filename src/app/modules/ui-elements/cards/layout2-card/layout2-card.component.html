@@ -1,0 +1,114 @@
+<div class="card custom-card card-stretch">
+  <div
+    class="
+      card-header
+      d-flex
+      justify-content-between
+      align-items-center
+      custom-card-header
+      border-1
+    "
+  >
+    <div class="card-title mb-0">
+      <h5 class="card-label mb-0">Card Deck</h5>
+    </div>
+    <div class="code">
+      <button
+        class="btn d-flex align-items-center btn-outline-primary"
+        (click)="showCode = !showCode"
+      >
+        <span *ngIf="!showCode" class="material-icons icon"> code </span>
+        <span *ngIf="showCode" class="material-icons icon"> code_off </span>
+        code
+      </button>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="content zp-12">
+      <div class="card-group">
+        <div class="card card-section m-r-12 m-b-8">
+          <img
+            class="card-img-top"
+            src="assets/media/images/other/placeholder.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+          </div>
+          <div class="card-footer card-section">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+        <div class="card card-section m-r-12 m-b-8">
+          <img
+            class="card-img-top"
+            src="assets/media/images/other/placeholder.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This card has supporting text below as a natural lead-in to
+              additional content.
+            </p>
+          </div>
+          <div class="card-footer card-section">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+        <div class="card card-section">
+          <img
+            class="card-img-top"
+            src="assets/media/images/other/placeholder.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This card has even longer content
+              than the first to show that equal height action.
+            </p>
+          </div>
+          <div class="card-footer card-section">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+      </div>
+      <div [collapse]="!showCode" [isAnimated]="true" class="code_container">
+        <div class="nav_bar w-100">
+          <ul>
+            <li>
+              <a [ngClass]="{ active: tabId === '0' }" (click)="tabToggle('0')">
+                HTML
+              </a>
+            </li>
+            <li>
+              <a [ngClass]="{ active: tabId === '1' }" (click)="tabToggle('1')">
+                TS
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- code -->
+        <ng-template [ngIf]="tabId === '0'">
+          <pre class="mb-0">
+            <code [highlight]="htmlcode" (highlighted)="onHighlight($event)" [lineNumbers]="true">
+            </code>
+          </pre>
+        </ng-template>
+        <ng-template [ngIf]="tabId === '1'">
+          <pre class="mb-0">
+            <code [highlight]="tscode" (highlighted)="onHighlight($event)" [lineNumbers]="true">
+            </code>
+          </pre>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

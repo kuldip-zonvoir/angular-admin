@@ -1,0 +1,17 @@
+<div class="card custom-card">
+  <div class="card-header custom-card-header p-b-0">
+    <h5 class="card-title m-b-0">Controls</h5>
+    <p class="sub-title text-muted m-b-0">
+      use class <span class="text-danger"> .wi wi-icon-name</span> in i tag
+    </p>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <ng-container *ngFor="let icon of Wi_Icons">
+        <div class="col-md-4 col-lg-3 col-3 col-sm-3 m-b-4">
+          <app-weather-icon [iconbox]="icon"></app-weather-icon>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

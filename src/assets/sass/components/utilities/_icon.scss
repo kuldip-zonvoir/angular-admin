@@ -1,0 +1,35 @@
+.icon {
+  font-size: 1.25rem !important;
+
+  @each $name, $size in $theme-light-colors {
+    &.icon-#{$name} {
+      font-size: $size !important;
+    }
+  }
+  @each $name, $color in $theme-light-colors {
+    &.icon-#{$name} {
+      @include bg-colors($color, $name);
+    }
+  }
+}
+@each $name, $size in $sizes {
+  .icon-#{$name} {
+    font-size: $size;
+    color: inherit;
+  }
+}
+.icon-gray {
+  color: $icon-color !important;
+  &:hover{
+    color: $primary;
+  }
+}
+
+.icons {
+  &:hover {
+    cursor: pointer;
+    outline-style: solid;
+    outline-color: $border-color;
+    outline-width: 1px;
+  }
+}

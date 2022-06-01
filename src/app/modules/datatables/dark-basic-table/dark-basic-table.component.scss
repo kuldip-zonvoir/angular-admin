@@ -1,0 +1,155 @@
+.dark-tabel {
+  .custom-table {
+    background-color: #1a1e24 !important;
+
+    .tabel-head {
+      tr {
+        th {
+          color: #ffffff;
+        }
+      }
+    }
+
+    .tabel-body {
+      tr {
+        th {
+          color: #ffffff;
+        }
+
+        td {
+          color: #b5b5c3;
+        }
+      }
+    }
+  }
+}
+
+::ng-deep app-borderless-bootstrap-tabel {
+  .custom-table {
+    background-color: #1a1e24 !important;
+
+    .tabel-head {
+      tr {
+        th {
+          color: #ffffff;
+        }
+      }
+    }
+
+    .tabel-body {
+      tr {
+        th {
+          color: #ffffff;
+        }
+
+        td {
+          color: #b5b5c3;
+        }
+      }
+    }
+  }
+}
+
+::ng-deep app-basic-bootstrap-tabel {
+  .custom-table {
+    background-color: #1a1e24 !important;
+
+    .tabel-head {
+      tr {
+        th {
+          color: #ffffff;
+        }
+      }
+    }
+
+    .tabel-body {
+      tr {
+        th {
+          color: #ffffff;
+        }
+
+        td {
+          color: #b5b5c3;
+        }
+      }
+    }
+  }
+}
+
+::ng-deep app-strip-row-bootstrap-tabel {
+  .custom-table {
+    background-color: #1a1e24 !important;
+
+    .tabel-head {
+      tr {
+        th {
+          color: #ffffff;
+        }
+      }
+    }
+
+    .tabel-body {
+      tr {
+        th {
+          color: #ffffff;
+        }
+
+        td {
+          color: #b5b5c3;
+        }
+      }
+    }
+  }
+}
+
+::ng-deep app-hoverable-row-bootstrap-tabel {
+  .custom-table {
+    background-color: #1a1e24 !important;
+
+    .tabel-head {
+      tr {
+        th {
+          color: #ffffff;
+        }
+      }
+    }
+
+    .tabel-body {
+      tr {
+        th {
+          color: #ffffff;
+        }
+
+        td {
+          color: #b5b5c3;
+        }
+      }
+    }
+  }
+}
+
+::ng-deep app-responsive-bootstrap-tabel {
+  .custom-table {
+    background-color: #1a1e24 !important;
+
+    .tabel-head {
+      tr {
+        th {
+          color: #ffffff;
+        }
+      }
+    }
+
+    .tabel-body {
+      tr {
+        th {
+          color: #ffffff;
+        }
+
+        td {
+          color: #b5b5c3;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+<div class="row">
+  <div class="col-md-4 col-lg-4 col-sm-6 m-b-20">
+    <div class="">
+      <app-linecardlg1></app-linecardlg1>
+    </div>
+  </div>
+  <div class="col-md-4 col-lg-4 col-sm-6 m-b-20">
+    <div class="">
+      <app-linecardlg2></app-linecardlg2>
+    </div>
+  </div>
+  <div class="col-md-4 col-lg-4 col-sm-6 m-b-20">
+    <div class="">
+      <app-linecardlg3></app-linecardlg3>
+    </div>
+  </div>
+
+  <div class="col-md-4 col-lg-4 col-sm-6 m-b-20">
+    <div class="">
+      <app-barcardlg1></app-barcardlg1>
+    </div>
+  </div>
+  <div class="col-md-4 col-lg-4 col-sm-6 m-b-20">
+    <div class="">
+      <app-barcardlg2></app-barcardlg2>
+    </div>
+  </div>
+  <div class="col-md-4 col-lg-4 col-sm-6 m-b-20">
+    <div class="">
+      <app-barcardlg3></app-barcardlg3>
+    </div>
+  </div>
+
+  <div class="col-md-4 col-lg-4 col-sm-6 m-b-20">
+    <div class="">
+      <app-linelg-card1></app-linelg-card1>
+    </div>
+  </div>
+  <div class="col-md-4 col-lg-4 col-sm-6 m-b-20">
+    <div class="">
+      <app-linelg-card2></app-linelg-card2>
+    </div>
+  </div>
+  <div class="col-md-4 col-lg-4 col-sm-6 m-b-20">
+    <div class="">
+      <app-linelg-card3></app-linelg-card3>
+    </div>
+  </div>
+
+  <ng-container *ngFor="let chart of donutcharts">
+    <div class="col-md-4 col-lg-4 col-sm-6 m-b-20">
+      <div class="card custom-card shadow1 no-radius">
+        <div class="card-header custom-card-header no-radius border-1">
+          <h5 class="mb-0">Doughnut Chart</h5>
+        </div>
+        <div class="chart_body">
+          <div class="">
+            <app-apex-sparkline-donut
+              [chartParams]="chart"
+            ></app-apex-sparkline-donut>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngFor="let chart of piecharts">
+    <div class="col-md-4 col-lg-4 col-sm-6 m-b-20">
+      <div class="card custom-card shadow1 no-radius">
+        <div class="card-header custom-card-header no-radius border-1">
+          <h5 class="mb-0">Pie Chart</h5>
+        </div>
+        <div class="chart_body">
+          <div class="">
+            <app-apex-sparkline-donut
+              [chartParams]="chart"
+            ></app-apex-sparkline-donut>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngFor="let chart of radialcharts">
+    <div class="col-md-4 col-lg-4 col-sm-6 m-b-20">
+      <div class="card custom-card shadow1 no-radius">
+        <div class="card-header custom-card-header no-radius border-1">
+          <h5 class="mb-0">Radial Chart</h5>
+        </div>
+        <div class="chart_body">
+          <div class="">
+            <app-apex-sparkline-donut
+              [chartParams]="chart"
+            ></app-apex-sparkline-donut>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

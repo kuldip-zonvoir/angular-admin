@@ -1,0 +1,206 @@
+<div class="card custom-card shadow1 no-radius">
+  <div class="card-header custom-card-header border-1">
+    <div class="d-flex align-items-center justify-content-between">
+      <h5 class="m-b-0">Notifications</h5>
+      <div class="btn-group" dropdown>
+        <a
+          id="button-basic"
+          dropdownToggle
+          class="bell"
+          type="button"
+          aria-controls="dropdown-basic"
+        >
+          <span class="material-icons icon-gray icon"> more_vert </span>
+        </a>
+        <ul
+          id="dropdown-basic"
+          *dropdownMenu
+          class="dropdown-menu dropdown-menu-left"
+          role="menu"
+          aria-labelledby="button-basic"
+          placement="bottom right"
+        >
+          <li role="menuitem">
+            <a class="dropdown-item p-x-12 py-2">
+              <div class="d-flex align-items-center">
+                <div class="logo m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined icon-gray icon">
+                    add
+                  </span>
+                </div>
+                <div class="m-b-0">
+                  <p class="m-b-0">Create User</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li role="menuitem">
+            <a class="dropdown-item p-x-12 py-2">
+              <div class="d-flex align-items-center">
+                <div class="logo m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined icon-gray icon">
+                    edit
+                  </span>
+                </div>
+                <div class="m-b-0">
+                  <p class="m-b-0">Edit User</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li role="menuitem">
+            <a class="dropdown-item p-x-12 py-2">
+              <div class="d-flex align-items-center">
+                <div class="logo m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined icon-gray icon">
+                    delete
+                  </span>
+                </div>
+                <div class="m-b-0">
+                  <p class="m-b-0">Delete User</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li role="menuitem">
+            <a class="dropdown-item p-x-12 py-2">
+              <div class="d-flex align-items-center">
+                <div class="logo m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined icon-gray icon">
+                    description
+                  </span>
+                </div>
+                <div class="m-b-0">
+                  <p class="m-b-0">All Users</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="d-flex align-items-center border-1 p-b-8 m-b-8">
+      <div class="d-flex align-items-center">
+        <div class="form-check pl-0">
+          <label class="container-checkbox">
+            <input type="checkbox" />
+            <span class="material-icons check-mark icon"> </span>
+          </label>
+        </div>
+      </div>
+      <div
+        class="m-b-0 d-flex justify-content-between w-100 align-items-center"
+      >
+        <div class="">
+          <h6 class="m-b-0">Daily Standup Meeting</h6>
+          <p class="m-b-0 text-muted">Due 3 Days ago</p>
+        </div>
+        <p class="m-b-0 px-1 text-light-info">Appoved</p>
+      </div>
+    </div>
+    <div class="d-flex align-items-center border-1 p-b-8 m-b-8">
+      <div class="form-check pl-0">
+        <label class="container-checkbox">
+          <input type="checkbox" />
+          <span class="material-icons check-mark icon"> </span>
+        </label>
+      </div>
+      <div
+        class="m-b-0 d-flex justify-content-between w-100 align-items-center"
+      >
+        <div class="">
+          <h6 class="m-b-0">Sending Order</h6>
+          <p class="m-b-0 text-muted">Due 3 Days ago</p>
+        </div>
+        <p class="m-b-0 px-1 text-light-primary">Inprogress</p>
+      </div>
+    </div>
+    <div class="d-flex align-items-center border-1 p-b-8 m-b-8">
+      <div class="form-check pl-0">
+        <label class="container-checkbox">
+          <input type="checkbox" />
+          <span class="material-icons check-mark icon"> </span>
+        </label>
+      </div>
+      <div
+        class="m-b-0 d-flex justify-content-between w-100 align-items-center"
+      >
+        <div class="">
+          <h6 class="m-b-0">Next Project Planing And Estimation</h6>
+          <p class="m-b-0 text-muted">Due 2 Days ago</p>
+        </div>
+        <p class="m-b-0 px-1 text-light-success">Success</p>
+      </div>
+    </div>
+    <div class="d-flex align-items-center">
+      <div class="form-check pl-0">
+        <label class="container-checkbox">
+          <input type="checkbox" />
+          <span class="material-icons check-mark icon"> </span>
+        </label>
+      </div>
+      <div
+        class="m-b-0 d-flex justify-content-between w-100 align-items-center"
+      >
+        <div class="">
+          <h6 class="m-b-0">Refond for Used Products</h6>
+          <p class="m-b-0 text-muted">Due 1 day ago</p>
+        </div>
+        <p class="m-b-0 px-1 text-light-danger">Rejected</p>
+      </div>
+    </div>
+    <div class="d-flex align-items-center border-1 p-b-8 m-b-8">
+      <div class="form-check pl-0">
+        <label class="container-checkbox">
+          <input type="checkbox" />
+          <span class="material-icons check-mark icon"> </span>
+        </label>
+      </div>
+      <div
+        class="m-b-0 d-flex justify-content-between w-100 align-items-center"
+      >
+        <div class="">
+          <h6 class="m-b-0">Project Analytics showcase</h6>
+          <p class="m-b-0 text-muted">Due 2 days 1go</p>
+        </div>
+        <p class="m-b-0 px-1 text-light-success">Appoved</p>
+      </div>
+    </div>
+    <div class="d-flex align-items-center border-1 p-b-8 m-b-8">
+      <div class="form-check pl-0">
+        <label class="container-checkbox">
+          <input type="checkbox" />
+          <span class="material-icons check-mark icon"> </span>
+        </label>
+      </div>
+      <div
+        class="m-b-0 d-flex justify-content-between w-100 align-items-center"
+      >
+        <div class="">
+          <h6 class="m-b-0">Project feature showcase</h6>
+          <p class="m-b-0 text-muted">Due 2 days 1go</p>
+        </div>
+        <p class="m-b-0 px-1 text-light-info">Appoved</p>
+      </div>
+    </div>
+    <div class="d-flex align-items-center">
+      <div class="form-check pl-0">
+        <label class="container-checkbox">
+          <input type="checkbox" />
+          <span class="material-icons check-mark icon"> </span>
+        </label>
+      </div>
+      <div
+        class="m-b-0 d-flex justify-content-between w-100 align-items-center"
+      >
+        <div class="">
+          <h6 class="m-b-0">Services Proficency</h6>
+          <p class="m-b-0 text-muted">Due 2 days 1go</p>
+        </div>
+        <p class="m-b-0 px-1 text-light-success">Appoved</p>
+      </div>
+    </div>
+  </div>
+</div>

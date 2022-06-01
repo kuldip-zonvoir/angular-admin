@@ -1,0 +1,81 @@
+<div class="card custom-card">
+  <div class="product-wrapper">
+    <div class="product-image-wrapper">
+      <img
+        [src]="product.product_image"
+        class="img-responsive product-image-1"
+        alt=""
+      />
+      <div class="prdt-badge-wrap">
+        <a class="product-badge decoration-none">
+          <p class="m-b-0 text-white">{{ product.product_discount }}%</p>
+        </a>
+      </div>
+      <div class="prdt-buttons">
+        <a
+          (click)="addToWishlist(product.id)"
+          class="quick-circle-btn decoration-none m-b-8"
+          tooltip="Add to Wishlist"
+        >
+          <i
+            [ngClass]="{ 'text-danger': isWishlist }"
+            class="ti ti-heart icon-20"
+          ></i>
+        </a>
+        <a
+          (click)="productDetail(product.id)"
+          class="quick-circle-btn decoration-none"
+          tooltip="Quick View"
+        >
+          <i class="ti ti-fullscreen icon-20"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="zp-16">
+      <div class="prdt-category">
+        <p class="text-muted m-b-8">{{ product.category }}</p>
+      </div>
+      <div class="prdt-rating">
+        <div class="d-flex align-item-center">
+          <span class="material-icons-outlined icon-16 text-warning">star</span>
+          <span class="material-icons-outlined icon-16 text-warning">star</span>
+          <span class="material-icons-outlined icon-16 text-warning">star</span>
+          <span class="material-icons-outlined icon-16 text-warning">star</span>
+          <span class="material-icons-outlined icon-16 text-warning"
+            >star_half</span
+          >
+        </div>
+      </div>
+      <div class="prdt-title">
+        <h5 class="">{{ product.product_title }}</h5>
+      </div>
+      <div class="prdt-price">
+        <h5 class="text-danger m-b-12">
+          $ {{ product.product_price }}<span class="">.00</span>
+          <del class="text-muted m-l-8"
+            >$ {{ product.product_price }}<span class="">.00</span></del
+          >
+        </h5>
+
+        <div class="d-flex align-items-center">
+          <button
+            (click)="addToCart(product.id)"
+            class="
+              btn btn-pill btn-block btn-primary
+              justify-content-center
+              d-flex
+              align-items-center
+            "
+          >
+            <span class="material-icons-outlined m-r-4 icon-20">
+              shopping_cart
+            </span>
+
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

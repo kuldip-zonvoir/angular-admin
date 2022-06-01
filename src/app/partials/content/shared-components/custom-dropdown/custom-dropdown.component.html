@@ -1,0 +1,45 @@
+<ng-container *ngFor="let dropdownlist of dropdownItems">
+  <div class="btn-group" dropdown>
+    <a
+      id="button-basic"
+      dropdownToggle
+      class="m-r-4 decoration-none"
+      type="button"
+      aria-controls="dropdown-basic"
+    >
+      <span class="material-icons custom-circle-sm2 cursor-pointer icon-18">
+        {{ dropdownlist.click_icon }}
+      </span>
+    </a>
+    <ul
+      id="dropdown-basic"
+      *dropdownMenu
+      class="dropdown-menu dropdown-menu-left"
+      role="menu"
+      aria-labelledby="button-basic"
+      placement="bottom right"
+    >
+      <li
+        role="menuitem"
+        (click)="onMenuClickHandller(dropdownItem.dropdown_title)"
+        *ngFor="let dropdownItem of dropdownlist.dropdown_lists"
+      >
+        <a class="dropdown-item p-x-12 p-y-8">
+          <div class="d-flex align-items-center">
+            <div
+              *ngIf="dropdownItem.dropdown_icon"
+              class="m-r-12 d-flex align-items-center"
+            >
+              <span class="material-icons-outlined icon-gray">
+                {{ dropdownItem.dropdown_icon }}
+              </span>
+            </div>
+            <div class="m-b-0">
+              <p class="m-b-0">{{ dropdownItem.dropdown_title }}</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</ng-container>

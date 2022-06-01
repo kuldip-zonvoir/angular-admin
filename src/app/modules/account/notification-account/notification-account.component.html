@@ -1,0 +1,98 @@
+<div class="row">
+  <div class="col-lg-12 m-b-20">
+    <app-header-profile [activeId]="'3'"></app-header-profile>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-4 m-b-20">
+    <app-profile-sidebar [sidebarLinkId]="'3'"></app-profile-sidebar>
+  </div>
+  <div class="col-lg-8 m-b-20">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <h6 class="m-b-0">Notification</h6>
+      </div>
+      <form action="" class="form_section">
+        <div class="card-body">
+          <div class="border-1 d-flex p-b-12">
+            <div class="form-check p-l-0">
+              <label class="container-checkbox">
+                <input type="checkbox" />
+                <span class="material-icons check-mark icon-20"> </span>
+              </label>
+            </div>
+            <div class="">
+              <h6 class="m-b-0">Email Address</h6>
+              <p class="m-b-0 text-muted">
+                On every successful payment get a notification message
+              </p>
+            </div>
+          </div>
+          <div class="border-1 d-flex p-t-12 p-b-12">
+            <div class="form-check p-l-0">
+              <label class="container-checkbox">
+                <input type="checkbox" />
+                <span class="material-icons check-mark icon-20"> </span>
+              </label>
+            </div>
+            <div class="">
+              <h6 class="m-b-0">Payouts</h6>
+              <p class="m-b-0 text-muted">
+                When payout initiated, get a notification message
+              </p>
+            </div>
+          </div>
+          <div class="border-1 d-flex p-t-12 p-b-12">
+            <div class="form-check p-l-0">
+              <label class="container-checkbox">
+                <input type="checkbox" />
+                <span class="material-icons check-mark icon-20"> </span>
+              </label>
+            </div>
+            <div class="">
+              <h6 class="m-b-0">Refund Payments</h6>
+              <p class="m-b-0 text-muted">
+                If a payment is stated as risk by the Finance Department, get a
+                notification message
+              </p>
+            </div>
+          </div>
+          <div class="border-1 d-flex p-t-12 p-b-12">
+            <div class="form-check p-l-0">
+              <label class="container-checkbox">
+                <input type="checkbox" />
+                <span class="material-icons check-mark icon-20"> </span>
+              </label>
+            </div>
+            <div class="">
+              <h6 class="m-b-0">Invoice Payments</h6>
+              <p class="m-b-0 text-muted">
+                If a customer sends an incorrect amount to pay their invoice,
+                get a notification message
+              </p>
+            </div>
+          </div>
+          <div class="d-flex p-t-12">
+            <div class="form-check p-l-0">
+              <label class="container-checkbox">
+                <input type="checkbox" />
+                <span class="material-icons check-mark icon-20"> </span>
+              </label>
+            </div>
+            <div class="">
+              <h6 class="m-b-0">Customer Payment Dispute</h6>
+              <p class="m-b-0 text-muted">
+                If a customer raise payment dispute and for dispute purposes.,
+                get a notification message
+              </p>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end align-items-center m-t-16">
+            <button class="btn btn-primary mr-2">Save Changes</button>
+            <button class="btn btn-secondary">Cancel</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

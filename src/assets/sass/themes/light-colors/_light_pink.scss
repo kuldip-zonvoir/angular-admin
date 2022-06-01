@@ -1,0 +1,60 @@
+$primary: #e91e63 !default; // Bootstrap variable
+$primary-light: #fde8ef !default; // Custom variable
+$body-bg: #ecf0fa; //#4c4cf10d;
+$background-dark: #020508;
+$background-color: #ffffff;
+$text-color: #000000;
+$black: #000000 !default;
+$gray-100: #f3f6f9;
+$background-color-inverse: #000000;
+$text-color-inverse: #ffffff;
+$sidebar-background-color: #ffffff; // #0b101d;
+$heading-color: #050d3e;
+$inputPadding: 0.5rem; //N
+$email_circle_color: #e3e3e3; //N
+$backdrop: rgba(0, 0, 0, 0.4); //N
+$dark_badge: #f2f4f6; //N
+$fc_calender: #f0f5ff; //N
+
+$inputTextSize: 13px; //N
+$inputBorder: #dedede; //N
+$cardShadow: 0px 2px 1.72px 1.28px rgb(229 228 230 / 50%); //N
+$cardBorder: #ebebf0; //N
+$inputTextWeight: 400; //N
+$headingSize2: 0.83rem; //N
+$scrumContainer: #d4d6da8c; //N
+$headingSize: 0.875rem; //N
+$formLabelColor: #323232; // #181819; //N
+$thFontsize: 0.875rem; //N
+$dropfileOutline: #050d3e4f; //N
+$dropfilebg: #f6f8ff; //N
+$tdFontsize: 13px; //N
+$tableThColor: $heading-color; //N
+$tableThBGColor: #f7f7f8; //N
+$tableTdColor: #342e49; //#0d0d0d; //N
+$dropdownBG: #fcfcfc; //N
+$gray-500: #475c66; //$heading-color
+$icon-color: #8699b2;
+$border-color: #ebebf0;
+$border-color2: #e3e3e3; //N
+$hoverColor: hsl(240deg 54% 96%);
+$sidebar-text-color: #8094ae; // #101426; //#020323f0 ;// #1a1a1a; //#a2a9b3;
+$paraColor: #57585e;
+$paraSize: 13px; //N
+$paraSize2: 13px; //N
+$muteColor: #6c757d;
+$specialCard: #f8f6ff;
+$inputBgColor: #fefefe;
+$activeTab: #dadada;
+$sidebarHoverColor: hsla(0, 0%, 100%, 0.27);
+$scrollbarColor: #cad6f1; //hsla(0, 2%, 58%, 0.87);
+$chatboxSender: #dbd0f5;
+$chatboxReciever: #f5f6f8;
+$iconHoverCircle: #f2f2f2;
+$scrumBox: #eef1f7; //#f8f9ff;
+$boxShadow-lg: 0px 8px 14.72px 1.28px rgb(229 228 230 / 50%);
+$font-family: "Roboto", sans-serif;
+
+@import "../../style.angular";
+@import "../../pages/login/login";
+@import "../../pages/login/error";

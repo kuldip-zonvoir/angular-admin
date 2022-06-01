@@ -1,0 +1,78 @@
+$logo-sizes: (
+  mini: 0.5rem,
+  small: 1.25rem,
+  small2: 1.5rem,
+  sm: 1.75rem,
+  sm2: 2rem,
+  medium: 2.5rem,
+  md: 3rem,
+  lg: 4rem,
+  xl: 5rem,
+  xxl: 7rem,
+) !default;
+
+@each $name, $size in $logo-sizes {
+  .outline-#{$name} {
+    @include circle($size, $custom-border: 1px solid $gray-500);
+  }
+}
+@each $name, $size in $logo-sizes {
+  .custom-circle-#{$name} {
+    @include circle($size, $circle: true);
+    &:hover {
+      background-color: $iconHoverCircle;
+      color: $dark;
+    }
+  }
+}
+@each $name, $size in $logo-sizes {
+  .circle-btn-#{$name} {
+    @include circlular-button($size);
+  }
+}
+@each $name, $size in $logo-sizes {
+  .logo-#{$name} {
+    @include logo-icon($size);
+  }
+
+  .logo-#{$name}-circle {
+    @include logo-icon($size, $circle: true);
+  }
+
+  .logo-#{$name}-border {
+    @include logo-icon($size, $circle: true, $border-color: true);
+  }
+
+  .logo-#{$name}-rounded {
+    @include logo-icon($size, $round-corner: true);
+  }
+}
+
+@each $name, $size in $logo-sizes {
+  .notifiaction-#{$name} {
+    line-height: 1.25rem;
+    display: grid;
+    place-items: center;
+    font-size: 1rem - 0.25rem;
+    color: $white;
+    @include logo-icon($size);
+  }
+
+  .notifiaction-#{$name}-circle {
+    line-height: 1.25rem;
+    display: grid;
+    place-items: center;
+    font-size: 1rem - 0.25rem;
+    color: $white;
+    @include logo-icon($size, $circle: true);
+  }
+
+  .notifiaction-#{$name}-rounded {
+    line-height: 1.25rem;
+    display: grid;
+    place-items: center;
+    font-size: 1rem - 0.25rem;
+    color: $white;
+    @include logo-icon($size, $round-corner: true);
+  }
+}

@@ -1,0 +1,20 @@
+@mixin bg-colors($bg, $colorname) {
+  background-color: $bg;
+
+  @if map-has-key($theme-colors, $colorname) {
+    // Get the breakpoint value.
+    $color-value: map-get($theme-colors, $colorname);
+    color: $color-value;
+  }
+}
+@mixin toast-colors($bg, $colorname) {
+  background: $bg !important; //light
+
+  @if map-has-key($theme-colors, $colorname) {
+    // Get the breakpoint value.
+    $color-value: map-get($theme-colors, $colorname);
+    border: solid $color-value !important; //color
+    border-width: 0 0 0 6px !important;
+    color: darken($color: $color-value, $amount: 5%) !important; //dark
+  }
+}

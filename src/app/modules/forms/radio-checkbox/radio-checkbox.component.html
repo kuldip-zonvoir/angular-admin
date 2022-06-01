@@ -1,0 +1,195 @@
+<div class="pb-3">
+  <h5 class="mb-0">Simple Checkboxes</h5>
+</div>
+<div class="row mb-3">
+  <div class="col-lg-6">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="">Defualt Checkbox</h5>
+      </div>
+      <div class="card-body">
+        <div class="">
+          <div class="p-l-0 p-b-8">
+            <input type="checkbox" class="m-r-8" checked="checked" />
+            <label class="default_check_radio"> I am checked checkbox </label>
+          </div>
+          <div class="p-l-0 p-b-8">
+            <input type="checkbox" class="m-r-8" />
+            <label class="default_check_radio">I am unchecked checkbox </label>
+          </div>
+          <div class="p-l-0 p-b-8">
+            <input type="checkbox" class="m-r-8" checked="checked" disabled />
+            <label class="default_check_radio">
+              I am disabled checked checkbox
+            </label>
+          </div>
+          <div class="pl-0">
+            <input type="checkbox" class="m-r-8" disabled />
+            <label class="default_check_radio"
+              >I am disabled unchecked checkbox
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="">Custom Checkbox</h5>
+      </div>
+      <div class="card-body">
+        <div class="">
+          <div class="form-check p-l-0 p-b-8">
+            <label class="container-checkbox">
+              I am checked checkbox
+              <input type="checkbox" checked="checked" />
+              <span class="material-icons check-mark icon"> </span>
+            </label>
+          </div>
+          <div class="form-check p-l-0 p-b-8">
+            <label class="container-checkbox"
+              >I am unchecked checkbox
+              <input type="checkbox" />
+              <span class="material-icons check-mark icon"> </span>
+            </label>
+          </div>
+          <div class="form-check p-l-0 p-b-8">
+            <label class="container-checkbox">
+              I am disabled checked checkbox
+              <input type="checkbox" checked="checked" disabled />
+              <span
+                [ngClass]="{ disable: isDisable }"
+                class="material-icons check-mark icon"
+              >
+              </span>
+            </label>
+          </div>
+          <div class="form-check pl-0">
+            <label class="container-checkbox"
+              >I am disabled unchecked checkbox
+              <input type="checkbox" disabled />
+              <span
+                [ngClass]="{ disable: isDisable }"
+                class="material-icons check-mark icon"
+              >
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="pb-3">
+  <h5 class="mb-0">Simple radio Button</h5>
+</div>
+<div class="row mb-3">
+  <div class="col-lg-6">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="">Defualt radio</h5>
+      </div>
+      <div class="card-body">
+        <div class="">
+          <div class="p-l-0 p-b-8">
+            <input type="radio" class="m-r-8" name="radio" checked="checked" />
+            <label class="default_check_radio">
+              I am checked radio
+              <span class="check-circle"></span>
+            </label>
+          </div>
+          <div class="p-l-0 p-b-8">
+            <input type="radio" class="m-r-8" name="radio" />
+            <label class="default_check_radio"
+              >I am unchecked radio
+              <span class="check-circle"></span>
+            </label>
+          </div>
+          <div class="p-l-0 p-b-8">
+            <input
+              type="radio"
+              class="m-r-8"
+              name="radio"
+              checked="checked"
+              disabled
+            />
+            <label class="default_check_radio">
+              I am disabled checked radio
+              <span
+                [ngClass]="{ disable: isDisable }"
+                class="check-circle"
+              ></span>
+            </label>
+          </div>
+          <div class="pl-0">
+            <input type="radio" class="m-r-8" name="radio" disabled />
+            <label class="default_check_radio"
+              >I am disabled unchecked radio
+              <span
+                [ngClass]="{ disable: isDisable }"
+                class="check-circle"
+              ></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="">Custom radio</h5>
+      </div>
+      <div class="card-body">
+        <div class="">
+          <div class="form-check p-l-0 p-b-8">
+            <label class="container-radio"
+              >I am checked radio
+              <input
+                type="radio"
+                name="radio"
+                [checked]="isChecked"
+                value="true"
+              />
+              <span class="check-circle"></span>
+            </label>
+          </div>
+          <div class="form-check p-l-0 p-b-8">
+            <label class="container-radio"
+              >I am unchecked radio
+              <input type="radio" name="radio" />
+              <span class="check-circle"></span>
+            </label>
+          </div>
+          <div class="form-check p-l-0 p-b-8">
+            <label class="container-radio"
+              >I am disabled checked radio
+              <input
+                type="radio"
+                name="radio"
+                checked="checked"
+                value="true"
+                [disabled]="true"
+              />
+              <span
+                [ngClass]="{ disable: isDisable }"
+                class="check-circle"
+              ></span>
+            </label>
+          </div>
+          <div class="form-check pl-0">
+            <label class="container-radio"
+              >I am disabled unchecked radio
+              <input type="radio" name="radio" disabled />
+              <span
+                [ngClass]="{ disable: isDisable }"
+                class="check-circle"
+              ></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

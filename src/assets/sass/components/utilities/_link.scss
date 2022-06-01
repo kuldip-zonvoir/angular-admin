@@ -1,0 +1,113 @@
+//Links Mixin
+@mixin links(
+  $link: $text-color,
+  $visit: $text-color-inverse,
+  $hover: $primary,
+  $active: $primary
+) {
+  .link {
+    //a
+    color: $link;
+    text-decoration: none;
+
+    &:visited {
+      color: $visit;
+    }
+
+    &:hover {
+      color: $hover;
+      text-decoration: none;
+    }
+
+    &:active {
+      color: $active;
+    }
+
+    &:focus {
+      color: $active;
+    }
+  }
+}
+.link-none {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.hoverd {
+  cursor: pointer;
+
+  &:hover {
+    color: $primary;
+  }
+}
+@each $sizename, $size in $logo-sizes {
+  @each $name, $color in $theme-light-colors {
+    .circle-light-#{$name}-#{$sizename} {
+      $color-value: map-get($theme-colors, $name);
+      $size-value: map-get($logo-sizes, $sizename);
+      @include circle(
+        $size-value,
+        $color: $color-value,
+        $background-color: $color,
+        $circle: true
+      );
+      &:hover {
+        background-color: map-get($theme-colors, $name);
+        color: $white !important;
+      }
+    }
+  }
+}
+// Anchor
+.link {
+  color: $text-color;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: $font-size-base * 0.937;
+
+  &.circle {
+    width: 40px;
+    color: $white;
+    color: $text-color;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: $text-color;
+  }
+  &.hoverable {
+    &:hover {
+      text-decoration: none;
+      .icon {
+        color: #000000;
+      }
+    }
+  }
+}
+.decoration-none {
+  text-decoration: none;
+  cursor: pointer;
+  color: $text-color;
+  &:hover {
+    color: $text-color;
+    text-decoration: none !important;
+  }
+}
+.no-link {
+  color: $text-color;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: $font-size-base * 0.937;
+  &:hover {
+    color: $text-color;
+    text-decoration: none;
+  }
+}
+a {
+  text-decoration: none;
+  @include links($dark);
+}

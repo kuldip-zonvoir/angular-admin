@@ -1,0 +1,138 @@
+<div class="card custom-card">
+  <div class="card-header custom-card-header border-1">
+    <div class="d-flex align-items-center">
+      <h5 class="m-b-0">Weather Report</h5>
+      <div class="btn-group ml-auto" dropdown>
+        <a
+          id="button-basic"
+          dropdownToggle
+          class="bell"
+          type="button"
+          aria-controls="dropdown-basic"
+        >
+          <span class="material-icons icon-gray icon-20"> more_vert </span>
+        </a>
+        <ul
+          id="dropdown-basic"
+          *dropdownMenu
+          class="dropdown-menu dropdown-menu-left"
+          role="menu"
+          aria-labelledby="button-basic"
+          placement="bottom right"
+        >
+          <li role="menuitem">
+            <a class="dropdown-item px-3 py-2">
+              <div class="d-flex align-items-center">
+                <div class="logo m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined icon-gray icon-20">
+                    add
+                  </span>
+                </div>
+                <div class="m-b-0">
+                  <p class="m-b-0">Today</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li role="menuitem">
+            <a class="dropdown-item px-3 py-2">
+              <div class="d-flex align-items-center">
+                <div class="logo m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined icon-gray icon-20">
+                    edit
+                  </span>
+                </div>
+                <div class="m-b-0">
+                  <p class="m-b-0">Weekly</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li role="menuitem">
+            <a class="dropdown-item px-3 py-2">
+              <div class="d-flex align-items-center">
+                <div class="logo m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined icon-gray icon-20">
+                    delete
+                  </span>
+                </div>
+                <div class="m-b-0">
+                  <p class="m-b-0">Monthly</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="weather_body">
+    <div class="d-flex align-items-center">
+      <div class="display-5 zp-8 text-primary">
+        <i class="wi wi-day-showers"></i>
+        <span class="display-6 text-primary">63 <sup class="">°</sup></span>
+      </div>
+      <div class="ml-auto zp-8">
+        <h5 class="m-b-0">Sunday</h5>
+        <p class="text-muted">Ahmdabad, India</p>
+      </div>
+    </div>
+    <div class="">
+      <table class="table table-borderless">
+        <tbody>
+          <tr>
+            <td>Wind</td>
+            <td class="fw-500 text-heading text-right">ENE 14 mph</td>
+          </tr>
+          <tr>
+            <td>Humidity</td>
+            <td class="fw-500 text-heading text-right">69%</td>
+          </tr>
+          <tr>
+            <td>Pressure</td>
+            <td class="fw-500 text-heading text-right">39.56 in</td>
+          </tr>
+          <tr>
+            <td>Cloud Cover</td>
+            <td class="fw-500 text-heading text-right">98%</td>
+          </tr>
+          <tr>
+            <td>Ceiling</td>
+            <td class="fw-500 text-heading text-right">23890 ft</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <hr />
+    <ul class="list-unstyled row text-center m-b-0 no-gutters">
+      <li class="col text-center">
+        <div class="text-muted">
+          <i class="wi wi-day-sunny mr-1"></i>
+          <span>09:30</span>
+        </div>
+        <h4 class="m-b-0">60 <sup>°</sup></h4>
+      </li>
+      <li class="col text-center">
+        <div class="text-muted">
+          <i class="wi wi-day-cloudy"></i>
+          <span>11:30</span>
+        </div>
+        <h4 class="m-b-0">62 <sup>°</sup></h4>
+      </li>
+      <li class="col text-center">
+        <div class="text-muted">
+          <i class="wi wi-day-hail mr-1"></i>
+          <span>13:30</span>
+        </div>
+        <h4 class="m-b-0">60 <sup>°</sup></h4>
+      </li>
+      <li class="col text-center">
+        <div class="text-muted">
+          <i class="wi wi-day-sprinkle"></i>
+          <span>15:30</span>
+        </div>
+        <h4 class="m-b-0">66 <sup>°</sup></h4>
+      </li>
+    </ul>
+  </div>
+</div>

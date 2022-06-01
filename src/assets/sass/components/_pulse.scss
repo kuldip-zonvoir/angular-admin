@@ -1,0 +1,67 @@
+.wave {
+  position: absolute;
+  top: 2px;
+  right: 5px;
+
+  .circle_pulse {
+    background: $success;
+    $size: 7px;
+    width: $size;
+    height: $size;
+    border-radius: $size/2;
+
+    &::before {
+      @include pulse-wave($bg-color: $success);
+    }
+
+    @include pulse-animation($size: $size, $left: -10.5px, $top: -10.5px);
+  }
+}
+
+.email_box {
+  position: absolute;
+  top: 2px;
+  right: 1px;
+
+  .email_pulse {
+    background: $danger;
+    $size: 7px;
+    width: $size;
+    height: $size;
+    border-radius: $size/2;
+
+    &::before {
+      @include pulse-wave($bg-color: $danger);
+    }
+
+    @include pulse-animation($size: $size, $left: -10.5px, $top: -10.5px);
+  }
+}
+// for mobile portrait
+@include responsive-below(md) {
+  .wave {
+    position: absolute;
+    top: 2px;
+    right: 52px;
+  }
+
+  .email_box {
+    position: absolute;
+    top: 2px;
+    left: 88px;
+  }
+}
+// for mobile landscape
+@include responsive-between(sm, md) {
+  .wave {
+    position: absolute;
+    top: 4px;
+    right: 52px;
+  }
+
+  .email_box {
+    position: absolute;
+    top: 2px;
+    left: 88px;
+  }
+}

@@ -1,0 +1,192 @@
+.mail-link {
+  text-decoration: none;
+  color: $heading-color;
+  cursor: pointer;
+  border-radius: 0 20px 20px 0;
+  &:hover {
+    text-decoration: none;
+    color: $primary;
+    background-color: $primary-light;
+    .list-name {
+      color: $primary;
+    }
+  }
+}
+.k_mail_service {
+  z-index: 10 !important;
+  background-color: $background-color;
+}
+.slide_component {
+  z-index: 9;
+}
+.mmicon_circle {
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  display: inline-block;
+  text-align: center;
+  background-color: $email_circle_color;
+  border-radius: 1.5rem;
+}
+.eemail_message {
+  padding-left: 20px;
+}
+.marker {
+  @include circle(10px, $circle: true);
+}
+.active-mail {
+  background-color: $primary-light;
+  color: $primary;
+  .list-name {
+    color: $primary;
+  }
+}
+.email-link {
+  border-bottom: 1px solid darken($color: $background-color, $amount: 10%);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    background-color: $hoverColor;
+    cursor: pointer;
+  }
+}
+
+.search-icon {
+  padding: 5px;
+  left: -37px;
+  border-radius: 6px;
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid $border-color;
+}
+
+.email_scroll {
+  height: 55vh;
+  cursor: pointer;
+  overflow-y: auto;
+  overflow-x: hidden;
+  @include scrollbar($width: 0.4rem, $border-radius: 0.5rem);
+  &:hover {
+    @include scrollbar(
+      $width: 0.4rem,
+      $border-radius: 0.5rem,
+      $background-color: $scrollbarColor
+    );
+  }
+}
+// for moibile device
+@include responsive-below(md) {
+  .eemail_message {
+    padding: 0;
+  }
+  .k_mail_service {
+    display: none;
+  }
+  .kmail_header {
+    display: flex;
+    align-items: center;
+    background-color: $background-color;
+    margin-bottom: 20px;
+  }
+  .kmail_desktop_inbox {
+    display: none;
+  }
+  .email_scroll {
+    height: 53vh;
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include scrollbar($width: 0.4rem, $border-radius: 0.5rem);
+    &:hover {
+      @include scrollbar(
+        $width: 0.4rem,
+        $border-radius: 0.5rem,
+        $background-color: $scrollbarColor
+      );
+    }
+  }
+}
+
+@include responsive-above(lg) {
+  .kmail_header {
+    display: none;
+  }
+  .kmail_desktop_inbox {
+    display: flex;
+    align-items: center;
+  }
+}
+// for moibile landscape mode device
+@include responsive-between(sm, md) {
+  .eemail_message {
+    padding: 0;
+  }
+  .k_mail_service {
+    display: none;
+  }
+  .kmail_header {
+    display: flex;
+    align-items: center;
+    background-color: $background-color;
+    margin-bottom: 20px;
+  }
+  .kmail_desktop_inbox {
+    display: none;
+  }
+}
+// For tablet Portrait Mode
+@include responsive-between(md, lg) {
+  .eemail_message {
+    padding: 0;
+  }
+  .kmail_header {
+    display: none;
+  }
+  .kmail_desktop_inbox {
+    display: flex;
+    align-items: center;
+  }
+  .email_scroll {
+    height: 70vh;
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include scrollbar($width: 0.4rem, $border-radius: 0.5rem);
+    &:hover {
+      @include scrollbar(
+        $width: 0.4rem,
+        $border-radius: 0.5rem,
+        $background-color: $scrollbarColor
+      );
+    }
+  }
+}
+// For tablet Landscape Mode
+@include responsive-between(lg, xl) {
+  .eemail_message {
+    padding: 0;
+  }
+  .kmail_header {
+    display: none;
+  }
+  .kmail_desktop_inbox {
+    display: flex;
+    align-items: center;
+  }
+  .email_scroll {
+    height: 62vh;
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include scrollbar($width: 0.4rem, $border-radius: 0.5rem);
+    &:hover {
+      @include scrollbar(
+        $width: 0.4rem,
+        $border-radius: 0.5rem,
+        $background-color: $scrollbarColor
+      );
+    }
+  }
+}

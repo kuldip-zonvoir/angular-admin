@@ -1,0 +1,90 @@
+<div class="hover">
+  <div class="card custom-card">
+    <div class="card-body">
+      <div class="">
+        <div class="d-flex align-items-center justify-content-center">
+          <img
+            [src]="contacts.image"
+            alt="profile-pic"
+            class="img-responsive logo-xl-rounded"
+          />
+        </div>
+      </div>
+      <div class="text-center">
+        <h5 class="m-t-2 m-b-8">{{ contacts.name }}</h5>
+        <div class="d-flex p-b-8 justify-content-center align-items-center">
+          <button
+            class="
+              btn-mini
+              d-flex
+              align-items-center
+              m-r-8
+              btn-square btn-primary
+            "
+          >
+            <i class="ti ti-plus icon-15 text-white m-r-8 fw-500"></i> Follow
+          </button>
+          <button
+            class="btn-mini d-flex align-items-center btn-square btn-secondary"
+          >
+            <i class="ti ti-comment icon-15 text-white m-r-8 fw-500"></i> chat
+          </button>
+        </div>
+        <p class="text-muted m-b-8">
+          {{ contacts.bio }}
+        </p>
+        <p
+          class="
+            m-b-4
+            text-muted
+            d-flex
+            align-items-center
+            justify-content-center
+          "
+        >
+          <span class="material-icons-outlined icon-20 m-r-8"> domain </span>
+          <span class="">{{ contacts.occupation }}</span>
+        </p>
+        <p
+          class="
+            m-b-4
+            text-muted
+            d-flex
+            align-items-center
+            justify-content-center
+          "
+        >
+          <span class="material-icons-outlined m-r-8 icon-20"> call </span>
+          <span class="">
+            {{ contacts.phone }}
+          </span>
+        </p>
+        <div class="d-flex justify-content-center align-items-center">
+          <p
+            class="
+              m-b-4 m-r-8
+              d-flex
+              align-items-center
+              justify-content-center
+              m-r-8
+            "
+          >
+            User Ratting
+          </p>
+          <p
+            class="m-b-4 d-flex align-items-center justify-content-center m-r-8"
+          >
+            <span class="material-icons-outlined text-warning"> grade </span>
+            <span class="material-icons-outlined text-warning"> grade </span>
+            <span class="material-icons-outlined text-warning"> grade </span>
+            <span class="material-icons-outlined text-warning"> grade </span>
+          </p>
+        </div>
+
+        <p class="m-b-8">
+          Email: <span class="text-muted m-l-4">{{ contacts.email }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

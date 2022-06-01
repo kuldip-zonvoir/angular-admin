@@ -1,0 +1,75 @@
+<div
+  (click)="cardModal()"
+  class="card custom-card task-card k_scrum_card_width shadow1 m-b-8"
+  
+>
+  <div class="zp-10 scrumb-task-wrapper">
+    <div class="d-flex bars p-b-8">
+      <div class="bg-warning bar"></div>
+      <div class="bg-success bar"></div>
+    </div>
+    <div class="p-b-8 scrum-task-detail">
+      <h5 class="m-b-4 scrumb-task-heading">{{ tasks.title }}</h5>
+      <p class="m-b-0 text-muted scrumb-task-content fs-12 line-height-14">
+        {{ tasks.content }}
+      </p>
+    </div>
+    <img
+      *ngIf="tasks.imgHeader"
+      [src]="tasks.imgHeader"
+      class="card-img-top img-responsive m-b-8"
+      alt=""
+    />
+    <div
+      class="
+        d-flex
+        align-items-center
+        scrumb-notice-board
+        justify-content-between
+      "
+    >
+      <div class="d-flex align-items-center assign-user">
+        <img
+          *ngIf="tasks.user_img"
+          [src]="tasks.user_img"
+          alt=""
+          class="img-responsive logo-sm2-rounded"
+        />
+        <p class="m-b-0 text-muted assign-user-id m-l-4">ZTS-21</p>
+      </div>
+      <div class="d-flex notice-section align-items-center">
+        <div
+          *ngIf="tasks.message"
+          class="
+            d-flex
+            align-items-center
+            zp-4
+            scrum-notice-box
+            text-white
+            bg-info
+            m-r-4
+          "
+        >
+          <span class="material-icons-outlined icon-16 m-r-4"> comment </span>
+          <p class="m-b-0">{{ tasks.message }}</p>
+        </div>
+        <div
+          *ngIf="tasks.file"
+          class="
+            d-flex
+            align-items-center
+            scrum-notice-box
+            zp-4
+            bg-danger
+            m-r-4
+          "
+        >
+          <span class="material-icons-outlined icon-16 m-r-4">
+            attach_file
+          </span>
+          <p class="m-b-0">{{ tasks.file }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

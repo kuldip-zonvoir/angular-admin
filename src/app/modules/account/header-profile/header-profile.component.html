@@ -1,0 +1,67 @@
+<div class="card custom-card">
+  <div class="card-body p-0">
+    <div class="card-image" style="position: relative">
+      <img
+        class="card-img cover-img"
+        src="assets/media/images/profile/profile_cover.jpg"
+        alt="Card image"
+      />
+    </div>
+    <div class="d-flex align-items-center user-profile">
+      <img
+        src="assets/media/images/users/100_1.jpg"
+        class="img-responsive profile-dp logo-xl-circle"
+        alt=""
+      />
+    </div>
+  </div>
+  <div class="card-footer custom-card-footer zp-0 border-0">
+    <div class="nav_bar mobile-nav">
+      <ul>
+        <li class="w-100">
+          <a
+            [ngClass]="{ active: tabId === '0' }"
+            class="h6 m-b-0"
+            (click)="tabToggle('0')"
+          >
+            <span class="material-icons-outlined icon-20 m-r-8">
+              timeline
+            </span>
+            Timeline
+          </a>
+        </li>
+        <li class="w-100">
+          <a
+            [ngClass]="{ active: tabId === '1' }"
+            class="h6 m-b-0"
+            (click)="tabToggle('1')"
+          >
+            <span class="material-icons-outlined icon-20 m-r-8"> group </span>
+            Friends
+          </a>
+        </li>
+        <li class="w-100">
+          <a
+            [ngClass]="{ active: tabId === '2' }"
+            class="h6 m-b-0"
+            (click)="tabToggle('2')"
+          >
+            <span class="material-icons-outlined icon-20 m-r-8"> image </span>
+            Photos
+          </a>
+        </li>
+
+        <li class="w-100">
+          <a
+            [ngClass]="{ active: tabId === '3' }"
+            class="h6 m-b-0"
+            (click)="tabToggle('3')"
+          >
+            <span class="material-icons-outlined icon-20 m-r-8"> person </span>
+            About
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,163 @@
+.cdk-drop-list-dragging .cdk-drag {
+  transition: transform 0.5s cubic-bezier(0.88, -0.19, 0.26, 1.27);
+}
+.prime_gutter {
+  margin-right: 0 !important;
+}
+.ttask_card {
+  min-height: 1rem;
+  width: 100%;
+}
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  max-width: 17rem;
+  word-wrap: break-word;
+  border-radius: 0;
+  //background-color: #ffffff;
+  background-clip: border-box;
+  width: 100%;
+  .scrumb-task-wrapper {
+    padding: 10px;
+  }
+  .scrum-task-detail {
+    padding-bottom: 8px;
+    .scrumb-task-heading {
+      margin-top: 0;
+      margin-bottom: 4px;
+      color: #475c66;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+    .scrumb-task-content {
+      margin-top: 0px;
+      margin-bottom: 0;
+      color: #99abb4;
+      line-height: 14px;
+      font-size: 12px;
+    }
+  }
+  .scrumb-notice-board {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .scrum-notice-box {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    margin-right: 4px;
+    .icon-16 {
+      font-size: 16px;
+      margin-right: 4px;
+      color: #ffffff;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      color: #ffffff;
+    }
+    &.bg-danger {
+      background-color: #e05d6f;
+    }
+    &.bg-info {
+      background-color: #008ffb;
+    }
+    &.bg-warning {
+      background-color: #ffb22b;
+    }
+    &.bg-success {
+      background-color: #06d79c;
+    }
+    &.bg-primary {
+      background-color: #3699ff;
+    }
+    &.bg-purple {
+      background-color: #745af2;
+    }
+  }
+
+  .assign-user {
+    display: flex;
+    align-items: center;
+    .assign-user-id {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 4px;
+      font-size: 12px;
+      color: #99abb4;
+    }
+  }
+
+  .logo-sm2-rounded {
+    width: 2rem !important;
+    height: 2rem !important;
+    border-radius: 0.75rem !important;
+  }
+
+  .card-img-top {
+    margin-bottom: 4px;
+    margin-top: 0;
+    width: 100% !important;
+    height: 9.75rem !important;
+  }
+
+  .notice-section {
+    display: flex;
+    align-items: center;
+  }
+  .bars {
+    display: flex;
+    align-items: center;
+    padding-bottom: 8px;
+  }
+  .bar {
+    border-radius: 6px;
+    height: 4px;
+    max-width: 32px;
+    flex: 1 1 0%;
+    box-sizing: border-box;
+    margin-right: 12px;
+    &.bg-warning {
+      background-color: #ffb22b;
+    }
+    &.bg-success {
+      background-color: #06d79c;
+    }
+    &.bg-danger {
+      background-color: #e05d6f;
+    }
+    &.bg-info {
+      background-color: #008ffb;
+    }
+  }
+}
+
+.cdk-drag-preview.purple-light-color .card {
+  background: #ffffff;
+}
+.cdk-drag-preview.purple-light-color.card {
+  background: #090e13;
+}
+
+.filterbar {
+  margin: 0 !important;
+  padding-top: 12px;
+}
+.scrum_container {
+  margin-top: 20px;
+  display: inline-flex;
+}

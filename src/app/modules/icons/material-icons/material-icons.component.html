@@ -1,0 +1,34 @@
+<div class="card custom-card card-stretch m-b-12">
+  <div class="card-header custom-card-header border-0">
+    <h4 class="m-b-8">Material Icons</h4>
+    <p class="text-muted">
+      Please visit the Official
+      <a
+        href="https://fonts.google.com/icons?icon.query=a"
+        target="_blank"
+        class="custom-link"
+        >Material-Icons Website</a
+      >
+      for a full list of instructions and other options.
+    </p>
+  </div>
+</div>
+<div class="card custom-card">
+  <div class="card-header custom-card-header p-b-0">
+    <h5 class="card-title m-b-0">Controls</h5>
+    <p class="sub-title text-muted m-b-0">
+      use class
+      <span class="text-danger"> .material-icons-outlined </span> icon-name in
+      span tag
+    </p>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <ng-container *ngFor="let icon of Icons">
+        <div class="col-md-4 col-lg-3 col-3 col-sm-3 m-b-4">
+          <app-mat-icon-wraper [iconbox]="icon"></app-mat-icon-wraper>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

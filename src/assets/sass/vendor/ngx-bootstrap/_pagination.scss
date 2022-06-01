@@ -1,0 +1,67 @@
+.page-item {
+  &.active {
+    .page-link {
+      color: $white;
+      background-color: $primary;
+      border: 1px solid $primary;
+
+      &:focus {
+        outline: inherit;
+      }
+    }
+  }
+}
+
+.page-link {
+  color: $primary;
+  background-color: $background-color;
+
+  &:focus {
+    box-shadow: inherit;
+    outline: inherit;
+  }
+
+  &:hover {
+    color: darken($primary, 25%);
+    text-decoration: none;
+    background-color: $hoverColor;
+    border-color: $border-color;
+  }
+}
+
+.seprate {
+  margin: 0 !important;
+  li {
+    margin: 0 5px !important;
+  }
+}
+///dark mode
+.pagination-page {
+  .page-link {
+    background-color: $background-color;
+  }
+}
+
+.pagination-prev {
+  .page-link {
+    background-color: $background-color;
+  }
+}
+
+.pagination-next {
+  .page-link {
+    background-color: $background-color;
+  }
+}
+
+.pagination-first {
+  .page-link {
+    background-color: $background-color;
+  }
+}
+
+.pagination-last {
+  .page-link {
+    background-color: $background-color;
+  }
+}

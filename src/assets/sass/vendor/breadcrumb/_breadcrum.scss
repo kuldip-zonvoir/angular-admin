@@ -1,0 +1,42 @@
+//brudcumb
+.breadcrum-warpper {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+.custom-bread-crumb {
+  background-color: $background-color !important;
+  margin-bottom: 0;
+
+  a {
+    text-decoration: none !important;
+    color: $text-color !important;
+    font-size: 1rem;
+
+    &:hover {
+      text-decoration: none !important;
+      color: $text-color !important;
+    }
+  }
+}
+
+.customize-bread-crumb {
+  .custom-bread-crumb {
+    background-color: transparent !important;
+    padding: 0;
+    margin-bottom: 0;
+
+    a {
+      font-size: 1rem;
+      text-decoration: none !important;
+      color: $primary !important;
+
+      &:hover {
+        text-decoration: none !important;
+        color: $primary !important;
+      }
+    }
+  }
+}

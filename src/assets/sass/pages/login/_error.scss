@@ -1,0 +1,146 @@
+.error-bg {
+}
+.error_msg_code {
+  font-size: 90px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.error_message_description {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 12px 0;
+}
+.err_message_conatiner {
+  position: relative;
+  .err_msg_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+  }
+}
+.erorr1 {
+  margin-top: 50px;
+}
+// Minatinence Page
+.error-img {
+  width: 35%;
+}
+.maintenance_kcontent {
+  padding: 82px 0;
+}
+
+// for Mobile Portrait Mode
+@include responsive-below(md) {
+  .error-img {
+    width: 60%;
+  }
+  .error_msg_code {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  .error_deccode_message {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .error_message_description {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 12px 0;
+    line-height: 20px;
+  }
+  //maintenace Page
+  .error-img {
+    width: 60%;
+  }
+  .maintenance_kcontent {
+    padding: 150px 0;
+  }
+}
+// For Mobile Landscape Mode
+@include responsive-between(sm, md) {
+  .error_msg_code {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  .error_msg_code {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  .error_deccode_message {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .error_message_description {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 12px 0;
+    line-height: 20px;
+  }
+  //maintenace Page
+  .error-img {
+    width: 40%;
+  }
+  .maintenance_kcontent {
+    padding: 35px 0;
+  }
+}
+// For tablet Portrait Mode
+@include responsive-between(md, lg) {
+  .error_msg_code {
+    font-size: 75px;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  .error_deccode_message {
+    font-size: 22px;
+    line-height: 25px;
+  }
+  .error_message_description {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 12px 0;
+    line-height: 20px;
+  }
+  //maintenace Page
+  .error-img {
+    width: 70%;
+  }
+  .maintenance_kcontent {
+    padding: 100px 0;
+  }
+}
+// For tablet Landscape Mode
+@include responsive-between(lg, xl) {
+  .error_msg_code {
+    font-size: 75px;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  .error_deccode_message {
+    font-size: 22px;
+    line-height: 25px;
+  }
+  .error_message_description {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 12px 0;
+    line-height: 20px;
+  }
+  .error-img {
+    width: 50%;
+  }
+  .maintenance_kcontent {
+    padding: 100px 0;
+  }
+}
+// For desktop Mode
+@include responsive-above(lg) {
+}

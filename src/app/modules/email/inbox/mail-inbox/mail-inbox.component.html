@@ -1,0 +1,99 @@
+<div class="mailer_inbox border-0">
+  <div class="kmail_desktop_inbox p-b-10">
+    <div class="">
+      <form action="">
+        <div class="search_bar">
+          <input
+            type="text"
+            class="form-control gap-left"
+            placeholder="Search here..."
+          />
+        </div>
+      </form>
+    </div>
+    <div class="ml-auto">
+      <div class="d-flex p-t-8 justify-content-end align-items-center">
+        <p class="m-b-0 m-r-8">1-50 of 253</p>
+        <div class="d-flex align-items-center m-r-8">
+          <a
+            class="
+              btn btn-square
+              d-flex
+              align-items-center
+              btn-white
+              border-right-0
+            "
+          >
+            <span class="material-icons-outlined icon-gray">
+              chevron_left
+            </span>
+          </a>
+          <a class="btn btn-square d-flex align-items-center btn-white">
+            <span class="material-icons-outlined icon-gray">
+              chevron_right
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="email_scroll">
+    <ul class="nav p-r-4 m-t-4">
+      <ng-container *ngFor="let email of emails; let i = index">
+        <li class="nav_item w-100" (click)="openMessage()">
+          <div class="d-flex align-items-center">
+            <a
+              (click)="toggleTab('i')"
+              [ngClass]="{ active: tabId === 'i' }"
+              class="email-link p-2 w-100"
+            >
+              <div class="d-flex align-items-center">
+                <div class="form-check p-l-0">
+                  <label class="container-checkbox">
+                    <input type="checkbox" />
+                    <span class="material-icons check-mark icon"> </span>
+                  </label>
+                </div>
+                <span
+                  [ngClass]="email.star ? 'text-warning' : 'text-muted'"
+                  class="material-icons-outlined icon-20-20 m-r-12"
+                >
+                  star_border
+                </span>
+
+                <div
+                  class="
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                    w-100
+                  "
+                >
+                  <div class="">
+                    <h6 class="m-b-0 sub_heading">
+                      {{ email.user }} -
+                      <sapn class="m-b-0 span_text text-muted">
+                        {{ email.message }}
+                      </sapn>
+                    </h6>
+                  </div>
+                  <div class="">
+                    <div class="">
+                      <p class="m-b-0 d-flex align-items-center">
+                        <span class="material-icons-outlined icon-20 m-r-8">
+                          attachment
+                        </span>
+                        <span class="">{{ email.date }}</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+  <div class=""></div>
+</div>

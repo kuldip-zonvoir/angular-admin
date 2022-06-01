@@ -1,0 +1,43 @@
+.map-height {
+  .map-container {
+    width: 100% !important;
+    height: 300px !important;
+  }
+}
+
+// For Mobile Portrait Mode
+@include responsive-below(md) {
+  .map-height {
+    .map-container {
+      width: 370px !important;
+      height: 300px !important;
+    }
+  }
+}
+// For Mobile Landscape Mode
+@include responsive-between(sm, md) {
+  .map-height {
+    .map-container {
+      width: 690px !important;
+      height: 300px !important;
+    }
+  }
+}
+// For Mobile Landscape Mode
+@include responsive-between(md, lg) {
+  .map-height {
+    .map-container {
+      width: 721px !important;
+      height: 400px !important;
+    }
+  }
+}
+// For laptop Landscape Mode
+@include responsive-between(lg, xl) {
+  .map-height {
+    .map-container {
+      width: 450px !important;
+      height: 400px !important;
+    }
+  }
+}

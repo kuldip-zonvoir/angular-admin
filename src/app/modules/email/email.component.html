@@ -1,0 +1,62 @@
+<div class="kmail_header zp-12">
+  <div class="app_toggle">
+    <div class="menu-wrapper">
+      <a
+        (click)="openAppSidebar()"
+        class="toggle-icon link-none hoverable align-items-center"
+        ><span class="material-icons icon-gray cursor-pointer icon-20">
+          menu
+        </span></a
+      >
+    </div>
+  </div>
+  <div class="search_field">
+    <form action="form">
+      <div class="search_bar">
+        <input
+          type="text"
+          class="form-control gap-left"
+          placeholder="Search here..."
+        />
+      </div>
+    </form>
+  </div>
+  <div class="ml-auto">
+    <div class="">
+      <img
+        src="assets/media/images/users/user5.jpg"
+        alt="profile-pic"
+        class="img-responsive logo-sm2-circle"
+      />
+    </div>
+  </div>
+</div>
+<!-- header for mobile -->
+<div class="card overflow_hidden custom-card">
+  <div class="card-body overflow_hidden p-y-16 px-3">
+    <div class="row overflow_hidden no-gutters">
+      <div class="col-lg-3 col-md-3 overflow_hidden slide_component kleft">
+        <div class="k_mail_service overflow_hidden">
+          <app-mail-service></app-mail-service>
+        </div>
+      </div>
+      <div class="col-lg-9 col-md-9 pl-2">
+        <div class="email_componenet">
+          <div class="" [@routeAnimations]="prepareRoute(outlet)">
+            <router-outlet #outlet="outlet"></router-outlet>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Mail Sidebar for Mobile -->
+<p-sidebar
+  [(visible)]="mailSidebarModal"
+  [modal]="false"
+  class="application_sidebar"
+>
+  <div class="">
+    <app-mail-service></app-mail-service>
+  </div>
+</p-sidebar>

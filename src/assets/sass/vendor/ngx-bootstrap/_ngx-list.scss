@@ -1,0 +1,25 @@
+.list-group-item {
+  background-color: $background-color;
+  color: $text-color;
+  border: 0;
+
+  &.list-group-item-action {
+    color: $text-color;
+    background-color: darken($color: $background-color, $amount: 1%);
+
+    &.disabled {
+      background-color: $specialCard;
+      color: $text-color;
+    }
+
+    &:hover {
+      background-color: $specialCard;
+      color: $text-color;
+    }
+  }
+
+  &:disabled {
+    background-color: $background-color !important;
+    color: $text-color;
+  }
+}

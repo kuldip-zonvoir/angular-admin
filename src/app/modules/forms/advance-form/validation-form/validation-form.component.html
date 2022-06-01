@@ -1,0 +1,568 @@
+<div class="card custom-card card-stretch">
+  <div class="card-header custom-card-header border-1">
+    <h5 class="m-b-0">Form With Validation</h5>
+  </div>
+
+  <div class="card-body">
+    <form [formGroup]="form" (ngSubmit)="saveDetail()" class="form_section">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="form-group d-flex m-b-12 row">
+            <label for="username" class="col-lg-4">User Name</label>
+            <div class="col-lg-8">
+              <input
+                type="text"
+                formControlName="username"
+                class="form-control inp_field"
+                placeholder="col-lg-8"
+                [ngClass]="{
+                  'is-invalid':
+                    form.get('username').invalid &&
+                    (form.get('username').touched || form.get('username').dirty)
+                }"
+              />
+              <div
+                *ngIf="
+                  form.get('username').errors &&
+                  (form.get('username').touched || form.get('username').dirty)
+                "
+                class="invalid-feedback"
+              >
+                <p class="m-b-0" *ngIf="form.get('username').errors.required">
+                  username is required
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group d-flex m-b-12 row">
+            <label for="email" class="col-lg-4">Email</label>
+            <div class="col-lg-8">
+              <input
+                type="email"
+                formControlName="email"
+                class="form-control inp_field"
+                placeholder="col-lg-8"
+                email
+                [ngClass]="{
+                  'is-invalid':
+                    form.get('email').invalid &&
+                    (form.get('email').touched || form.get('email').dirty)
+                }"
+              />
+              <div
+                *ngIf="
+                  form.get('email').errors &&
+                  (form.get('email').touched || form.get('email').dirty)
+                "
+                class="invalid-feedback"
+              >
+                <p class="m-b-0" *ngIf="form.get('email').errors.required">
+                  email is required
+                </p>
+                <p class="m-b-0" *ngIf="form.get('email').errors.pattern">
+                  email must be like text@123.com
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group d-flex m-b-12 row">
+            <label for="mobile" class="col-lg-4">Mobile</label>
+            <div class="col-lg-8">
+              <input
+                type="number"
+                formControlName="mobile"
+                class="form-control inp_field"
+                autocomplete="current-password"
+                placeholder="col-lg-8"
+                [ngClass]="{
+                  'is-invalid':
+                    form.get('mobile').invalid &&
+                    (form.get('mobile').touched || form.get('mobile').dirty)
+                }"
+              />
+              <div
+                *ngIf="
+                  form.get('mobile').errors &&
+                  (form.get('mobile').touched || form.get('mobile').dirty)
+                "
+                class="invalid-feedback"
+              >
+                <p class="m-b-0" *ngIf="form.get('mobile').errors.required">
+                  Mobile Number is required
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group d-flex m-b-12 row">
+            <label for="company" class="col-lg-4">Company Name</label>
+            <div class="col-lg-8">
+              <input
+                type="text"
+                formControlName="company_name"
+                class="form-control inp_field"
+                placeholder="col-lg-8"
+                [ngClass]="{
+                  'is-invalid':
+                    form.get('company_name').invalid &&
+                    (form.get('company_name').touched ||
+                      form.get('company_name').dirty)
+                }"
+              />
+              <div
+                *ngIf="
+                  form.get('company_name').errors &&
+                  (form.get('company_name').touched ||
+                    form.get('company_name').dirty)
+                "
+                class="invalid-feedback"
+              >
+                <p
+                  class="m-b-0"
+                  *ngIf="form.get('company_name').errors.required"
+                >
+                  company name is required
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group d-flex m-b-12 row">
+            <label for="post" class="col-lg-4">Post Name</label>
+            <div class="col-lg-8">
+              <input
+                type="text"
+                formControlName="post_name"
+                class="form-control inp_field"
+                placeholder="col-lg-8"
+                [ngClass]="{
+                  'is-invalid':
+                    form.get('post_name').invalid &&
+                    (form.get('post_name').touched ||
+                      form.get('post_name').dirty)
+                }"
+              />
+              <div
+                *ngIf="
+                  form.get('post_name').errors &&
+                  (form.get('post_name').touched || form.get('post_name').dirty)
+                "
+                class="invalid-feedback"
+              >
+                <p class="m-b-0" *ngIf="form.get('post_name').errors.required">
+                  post name is required
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group d-flex m-b-12 row">
+            <label for="salery" class="col-lg-4">Salery</label>
+            <div class="col-lg-8">
+              <input
+                type="number"
+                formControlName="salery"
+                class="form-control inp_field"
+                autocomplete="current-password"
+                placeholder="col-lg-8"
+                [ngClass]="{
+                  'is-invalid':
+                    form.get('salery').invalid &&
+                    (form.get('salery').touched || form.get('salery').dirty)
+                }"
+              />
+              <div
+                *ngIf="
+                  form.get('salery').errors &&
+                  (form.get('salery').touched || form.get('salery').dirty)
+                "
+                class="invalid-feedback"
+              >
+                <p class="m-b-0" *ngIf="form.get('salery').errors.required">
+                  salery is required
+                </p>
+                <p class="m-b-0" *ngIf="form.get('salery').errors.pattern">
+                  salery must be number
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group d-flex m-b-12 row">
+            <label for="pincode" class="col-lg-4">Pincode</label>
+            <div class="col-lg-8">
+              <input
+                type="number"
+                formControlName="pincode"
+                class="form-control inp_field"
+                placeholder="col-lg-8"
+                [ngClass]="{
+                  'is-invalid':
+                    form.get('pincode').invalid &&
+                    (form.get('pincode').touched || form.get('pincode').dirty)
+                }"
+              />
+              <div
+                *ngIf="
+                  form.get('pincode').errors &&
+                  (form.get('pincode').touched || form.get('pincode').dirty)
+                "
+                class="invalid-feedback"
+              >
+                <p class="m-b-0" *ngIf="form.get('pincode').errors.required">
+                  pincode is required
+                </p>
+                <p class="m-b-0" *ngIf="form.get('pincode').errors.maxlength">
+                  pincode must be 6 required
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group d-flex m-b-12 row">
+            <label for="zipcode" class="col-lg-4">Zipcode</label>
+            <div class="col-lg-8">
+              <input
+                type="text"
+                formControlName="zipcode"
+                class="form-control inp_field"
+                placeholder="col-lg-8"
+                [ngClass]="{
+                  'is-invalid':
+                    form.get('zipcode').invalid &&
+                    (form.get('zipcode').touched || form.get('zipcode').dirty)
+                }"
+              />
+              <div
+                *ngIf="
+                  form.get('zipcode').errors &&
+                  (form.get('zipcode').touched || form.get('zipcode').dirty)
+                "
+                class="invalid-feedback"
+              >
+                <p class="m-b-0" *ngIf="form.get('zipcode').errors.required">
+                  zipcode is required
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group d-flex m-b-12 row">
+            <label for="lang" class="col-lg-4">Language</label>
+            <div class="col-lg-8">
+              <input
+                type="text"
+                formControlName="language"
+                class="form-control inp_field"
+                autocomplete="current-password"
+                placeholder="col-lg-8"
+                [ngClass]="{
+                  'is-invalid':
+                    form.get('language').invalid &&
+                    (form.get('language').touched || form.get('language').dirty)
+                }"
+              />
+              <div
+                *ngIf="
+                  form.get('language').errors &&
+                  (form.get('language').touched || form.get('language').dirty)
+                "
+                class="invalid-feedback"
+              >
+                <p class="m-b-0" *ngIf="form.get('language').errors.required">
+                  Language is required
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="form-group d-flex m-b-12 row">
+            <label for="product_name" class="col-lg-4">Product Title</label>
+            <div class="col-lg-8">
+              <input
+                type="text"
+                formControlName="product_name"
+                class="form-control inp_field"
+                placeholder="col-lg-8"
+                [ngClass]="{
+                  'is-invalid':
+                    form.get('product_name').invalid &&
+                    (form.get('product_name').touched ||
+                      form.get('product_name').dirty)
+                }"
+              />
+              <div
+                *ngIf="
+                  form.get('product_name').errors &&
+                  (form.get('product_name').touched ||
+                    form.get('product_name').dirty)
+                "
+                class="invalid-feedback"
+              >
+                <p
+                  class="m-b-0"
+                  *ngIf="form.get('product_name').errors.required"
+                >
+                  Product Name is required
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group d-flex m-b-12 row">
+            <label for="email" class="col-lg-4">Office Email</label>
+            <div class="col-lg-8">
+              <input
+                type="office_email"
+                formControlName="office_email"
+                class="form-control inp_field"
+                placeholder="Office Email"
+                email
+                [ngClass]="{
+                  'is-invalid':
+                    form.get('office_email').invalid &&
+                    (form.get('office_email').touched ||
+                      form.get('office_email').dirty)
+                }"
+              />
+              <div
+                *ngIf="
+                  form.get('office_email').errors &&
+                  (form.get('office_email').touched ||
+                    form.get('office_email').dirty)
+                "
+                class="invalid-feedback"
+              >
+                <p
+                  class="m-b-0"
+                  *ngIf="form.get('office_email').errors.required"
+                >
+                  official email is required
+                </p>
+                <p
+                  class="m-b-0"
+                  *ngIf="form.get('office_email').errors.pattern"
+                >
+                  official email must be like text@123.com
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group d-flex m-b-12 row">
+            <label for="mobile" class="col-lg-4">Contact No.</label>
+            <div class="col-lg-8">
+              <input
+                type="number"
+                formControlName="phone"
+                class="form-control inp_field"
+                autocomplete="current-password"
+                placeholder="col-lg-8"
+                [ngClass]="{
+                  'is-invalid':
+                    form.get('phone').invalid &&
+                    (form.get('phone').touched || form.get('phone').dirty)
+                }"
+              />
+              <div
+                *ngIf="
+                  form.get('phone').errors &&
+                  (form.get('phone').touched || form.get('phone').dirty)
+                "
+                class="invalid-feedback"
+              >
+                <p class="m-b-0" *ngIf="form.get('phone').errors.required">
+                  Contact Number is required
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group d-flex m-b-12 row">
+            <label for="vendor" class="col-lg-4">Vendor Name</label>
+            <div class="col-lg-8">
+              <input
+                type="text"
+                formControlName="vendor_name"
+                class="form-control inp_field"
+                placeholder="col-lg-8"
+                [ngClass]="{
+                  'is-invalid':
+                    form.get('vendor_name').invalid &&
+                    (form.get('vendor_name').touched ||
+                      form.get('vendor_name').dirty)
+                }"
+              />
+              <div
+                *ngIf="
+                  form.get('vendor_name').errors &&
+                  (form.get('vendor_name').touched ||
+                    form.get('vendor_name').dirty)
+                "
+                class="invalid-feedback"
+              >
+                <p
+                  class="m-b-0"
+                  *ngIf="form.get('vendor_name').errors.required"
+                >
+                  vendor name is required
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group d-flex m-b-12 row">
+            <label for="category" class="col-lg-4">Category Name</label>
+            <div class="col-lg-8">
+              <input
+                type="text"
+                formControlName="category_name"
+                class="form-control inp_field"
+                placeholder="col-lg-8"
+                [ngClass]="{
+                  'is-invalid':
+                    form.get('category_name').invalid &&
+                    (form.get('category_name').touched ||
+                      form.get('category_name').dirty)
+                }"
+              />
+              <div
+                *ngIf="
+                  form.get('category_name').errors &&
+                  (form.get('category_name').touched ||
+                    form.get('category_name').dirty)
+                "
+                class="invalid-feedback"
+              >
+                <p
+                  class="m-b-0"
+                  *ngIf="form.get('category_name').errors.required"
+                >
+                  category name is required
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group d-flex m-b-12 row">
+            <label for="salery" class="col-lg-4">Max and Min </label>
+            <div class="col-lg-8">
+              <input
+                type="number"
+                formControlName="number"
+                class="form-control inp_field"
+                autocomplete="current-password"
+                placeholder="col-lg-8"
+                [ngClass]="{
+                  'is-invalid':
+                    form.get('number').invalid &&
+                    (form.get('number').touched || form.get('number').dirty)
+                }"
+              />
+              <div
+                *ngIf="
+                  form.get('number').errors &&
+                  (form.get('number').touched || form.get('number').dirty)
+                "
+                class="invalid-feedback"
+              >
+                <p class="m-b-0" *ngIf="form.get('number').errors.required">
+                  number is required
+                </p>
+                <p class="m-b-0" *ngIf="form.get('number').errors.min">
+                  number at least 5 digits
+                </p>
+                <p class="m-b-0" *ngIf="form.get('number').errors.max">
+                  number must be 10 digits
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group d-flex m-b-12 row">
+            <label for="quantity" class="col-lg-4">Quantity</label>
+            <div class="col-lg-8">
+              <input
+                type="number"
+                formControlName="quantity"
+                class="form-control inp_field"
+                placeholder="col-lg-8"
+                [ngClass]="{
+                  'is-invalid':
+                    form.get('quantity').invalid &&
+                    (form.get('quantity').touched || form.get('quantity').dirty)
+                }"
+              />
+              <div
+                *ngIf="
+                  form.get('quantity').errors &&
+                  (form.get('quantity').touched || form.get('quantity').dirty)
+                "
+                class="invalid-feedback"
+              >
+                <p class="m-b-0" *ngIf="form.get('quantity').errors.required">
+                  quantity is required
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group d-flex m-b-12 row">
+            <label for="address" class="col-lg-4">Address</label>
+            <div class="col-lg-8">
+              <input
+                type="text"
+                formControlName="address"
+                class="form-control inp_field"
+                placeholder="col-lg-8"
+                [ngClass]="{
+                  'is-invalid':
+                    form.get('address').invalid &&
+                    (form.get('address').touched || form.get('address').dirty)
+                }"
+              />
+              <div
+                *ngIf="
+                  form.get('address').errors &&
+                  (form.get('address').touched || form.get('address').dirty)
+                "
+                class="invalid-feedback"
+              >
+                <p class="m-b-0" *ngIf="form.get('address').errors.required">
+                  address is required
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group d-flex m-b-12 row">
+            <label for="landmark" class="col-lg-4">Landmark</label>
+            <div class="col-lg-8">
+              <input
+                type="text"
+                formControlName="landmark"
+                class="form-control inp_field"
+                autocomplete="current-password"
+                placeholder="col-lg-8"
+                [ngClass]="{
+                  'is-invalid':
+                    form.get('landmark').invalid &&
+                    (form.get('landmark').touched || form.get('landmark').dirty)
+                }"
+              />
+              <div
+                *ngIf="
+                  form.get('landmark').errors &&
+                  (form.get('landmark').touched || form.get('landmark').dirty)
+                "
+                class="invalid-feedback"
+              >
+                <p class="m-b-0" *ngIf="form.get('landmark').errors.required">
+                  Landmark is required
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-3">
+        <button
+          type="submit"
+          class="btn btn-primary mr-3"
+          [disabled]="form.invalid"
+        >
+          Finish
+        </button>
+        <button type="cancel" class="btn btn-secondary">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

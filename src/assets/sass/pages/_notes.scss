@@ -1,0 +1,70 @@
+.notes-section {
+  width: 260px;
+  border-right: 1px solid $border-color;
+  flex-shrink: 0;
+}
+
+.active-tab {
+  background-color: $primary-light;
+}
+
+.notes-container {
+  min-height: 35rem;
+}
+.notes_scroll {
+  height: 70vh;
+  cursor: pointer;
+  overflow-y: auto;
+  overflow-x: hidden;
+  @include scrollbar($width: 0.5rem, $border-radius: 1rem);
+  &:hover {
+    $background-light: $scrollbarColor;
+    @include scrollbar(
+      $width: 0.5rem,
+      $border-radius: 1rem,
+      $background-color: $background-light
+    );
+  }
+}
+// for Mobile Portrait Mode
+@include responsive-below(md) {
+  .notes-section {
+    display: none;
+    margin-right: 20px;
+  }
+  .app_toggle {
+    display: block;
+    margin-right: 20px;
+  }
+  .search_field {
+    width: 60%;
+  }
+}
+
+// For Mobile Landscape Mode
+@include responsive-between(sm, md) {
+  .app_toggle {
+    display: block;
+  }
+  .search_field {
+    width: 70%;
+  }
+}
+// For tablet Portrait Mode
+@include responsive-between(md, lg) {
+  .app_toggle {
+    display: none;
+  }
+}
+// For tablet Landscape Mode
+@include responsive-between(lg, xl) {
+  .app_toggle {
+    display: none;
+  }
+}
+// For Desktop Mode
+@include responsive-above(xl) {
+  .app_toggle {
+    display: none;
+  }
+}

@@ -1,0 +1,102 @@
+<div class="p-l-20">
+  <div class="d-flex justify-content-between p-b-20 align-items-center">
+    <div class="d-flex align-items-center">
+      <h5 class="m-b-0 title-name">Send Email</h5>
+    </div>
+  </div>
+  <div class="">
+    <div class="">
+      <form action="">
+        <div class="">
+          <div class="form-group m-b-12">
+            <label for="">To</label>
+            <input
+              type="email"
+              class="form-control"
+              value="support@zonvoir.com"
+              placeholder=""
+            />
+          </div>
+          <div class="form-group m-b-12">
+            <label for="">CC</label>
+            <input
+              type="email"
+              class="form-control"
+              value="support@zonvoir.com"
+              placeholder=""
+            />
+          </div>
+          <div class="form-group m-b-12">
+            <label for="">Subject</label>
+            <input type="text" class="form-control" placeholder="" />
+          </div>
+        </div>
+        <!--  -->
+
+        <div class="">
+          <div class="form-group m-b-12 align-items-center row">
+            <div class="col-lg-12">
+              <textarea
+                type="text"
+                rows="8"
+                class="form-control"
+                value="Peter Potts"
+                placeholder="Useraname"
+              >
+              </textarea>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center m-r-8">
+              <button class="btn btn-square btn-primary m-r-8">Save</button>
+              <button class="btn btn-square btn-secondary">Cancel</button>
+            </div>
+            <div class="d-flex align-items-center">
+              <div class="m-r-8" tooltip="upload file">
+                <a (click)="picFile.click()" class="mmicon_circle">
+                  <span
+                    class="
+                      material-icons-outlined
+                      text-dark
+                      custom-circle-md
+                      cursor-pointer
+                      icon-20
+                    "
+                  >
+                    attachment
+                  </span>
+                </a>
+                <form action="" hidden>
+                  <div class="message">
+                    <input
+                      type="file"
+                      class="form-control"
+                      #picFile
+                      (change)="selectFile($event)"
+                      placeholder="Type here..."
+                    />
+                  </div>
+                </form>
+              </div>
+              <div class="" tooltip="upload image">
+                <a class="mmicon_circle" (click)="picFile.click()">
+                  <span
+                    class="
+                      material-icons-outlined
+                      text-dark
+                      custom-circle-md
+                      cursor-pointer
+                      icon-20
+                    "
+                  >
+                    image
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

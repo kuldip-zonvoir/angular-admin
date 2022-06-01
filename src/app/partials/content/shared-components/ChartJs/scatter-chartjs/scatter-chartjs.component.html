@@ -1,0 +1,27 @@
+<div class="card custom-card no-radius">
+  <div
+    class="
+      card-header
+      custom-card-header
+      d-flex
+      justify-content-between
+      align-items-center
+      border-1
+    "
+  >
+    <h5 class="card-label m-b-0">Products Sell And Buy</h5>
+    <span class="material-icons icon-20 icon-gray"> grid_view </span>
+  </div>
+  <div class="chart_body kk_chartjs">
+    <div class="chartjs-container">
+      <canvas
+        baseChart
+        [datasets]="chartValue.scatterChartData"
+        [options]="chartValue.scatterChartOptions"
+        [colors]="chartValue.scatterChartColors"
+        [chartType]="chartValue.scatterChartType"
+      >
+      </canvas>
+    </div>
+  </div>
+</div>

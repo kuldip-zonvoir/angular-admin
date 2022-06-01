@@ -1,0 +1,21 @@
+<div class="card custom-card card_height zp-4">
+  <div class="py-1">
+    <div class="d-flex justify-content-end">
+      <app-custom-dropdown
+        [custom-Dropdown]="custom_dropdown"
+      ></app-custom-dropdown>
+    </div>
+    <div class="text-center file-manager">
+      <div class="m-b-10">
+        <i
+          class="{{ fileItems.icon }} icon-40"
+          [ngClass]="getClass(fileItems.icon)"
+        ></i>
+      </div>
+      <div class="">
+        <h6 class="m-b-8 file_name">{{ fileItems.foldername }}</h6>
+        <p class="text-muted m-b-0">({{ fileItems.size }})</p>
+      </div>
+    </div>
+  </div>
+</div>

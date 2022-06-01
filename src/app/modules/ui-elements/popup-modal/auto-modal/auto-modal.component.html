@@ -1,0 +1,123 @@
+<div class="card custom-card card-stretch">
+  <div
+    class="
+      card-header
+      d-flex
+      justify-content-between
+      align-items-center
+      custom-card-header
+      border-1
+    "
+  >
+    <div class="card-title m-b-0">
+      <h5 class="card-label m-b-0">Auto open modal on initialization</h5>
+    </div>
+    <div class="code">
+      <button
+        class="btn d-flex align-items-center btn-outline-primary"
+        (click)="showCode = !showCode"
+      >
+        <span *ngIf="!showCode" class="material-icons icon-20 m-r-8">
+          code
+        </span>
+        <span *ngIf="showCode" class="material-icons icon-20 m-r-8">
+          code_off
+        </span>
+        code
+      </button>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="content zp-12">
+      <div class="">
+        <button type="button" class="btn btn-primary" (click)="showModal()">
+          Render auto-shown modal
+        </button>
+        <div
+          *ngIf="isModalShown"
+          [config]="{ show: true }"
+          (onHidden)="onHidden()"
+          bsModal
+          #autoShownModal="bs-modal"
+          class="modal fade"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="dialog-auto-name"
+        >
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 id="dialog-auto-name" class="modal-title pull-left">
+                  Auto shown modal
+                </h5>
+                <button
+                  type="button"
+                  class="close pull-right"
+                  aria-label="Close"
+                  (click)="hideModal()"
+                >
+                  <span class="material-icons-outlined btsp_icon icon-20">
+                    close
+                  </span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p class="text-muted">
+                  I am a modal that is shown right after initialization!
+                </p>
+                <p class="text-muted">
+                  I wasn't present in DOM until you clicked the button
+                </p>
+                <p class="text-muted">
+                  When you close me, I'll be removed from the DOM
+                </p>
+              </div>
+              <div class="modal-footer">
+                <div class="text-right kprime_footer">
+                  <button
+                    (click)="smModal.hide()"
+                    class="btn btn-outline-danger m-r-8 btn-square"
+                  >
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn btn-primary btn-square">
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div [collapse]="!showCode" [isAnimated]="true" class="code_container">
+      <div class="nav_bar w-100">
+        <ul>
+          <li>
+            <a [ngClass]="{ active: tabId === '0' }" (click)="tabToggle('0')">
+              HTML
+            </a>
+          </li>
+          <li>
+            <a [ngClass]="{ active: tabId === '1' }" (click)="tabToggle('1')">
+              TS
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- code -->
+      <ng-template [ngIf]="tabId === '0'">
+        <pre class="m-b-0">
+            <code [highlight]="htmlcode" (highlighted)="onHighlight($event)" [lineNumbers]="true">
+            </code>
+          </pre>
+      </ng-template>
+      <ng-template [ngIf]="tabId === '1'">
+        <pre class="m-b-0">
+            <code [highlight]="tscode" (highlighted)="onHighlight($event)" [lineNumbers]="true">
+            </code>
+          </pre>
+      </ng-template>
+    </div>
+  </div>
+</div>

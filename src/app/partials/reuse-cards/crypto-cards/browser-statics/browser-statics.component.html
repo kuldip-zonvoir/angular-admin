@@ -1,0 +1,59 @@
+<div class="card custom-card shadow1 no-radius">
+  <div class="card-header custom-card-header border-1">
+    <h5 class="m-b-0">Browser Stats</h5>
+  </div>
+  <div *ngFor="let chart of donutcharts" class="zp-10">
+    <app-apex-sparkline-donut [chartParams]="chart"></app-apex-sparkline-donut>
+  </div>
+  <div class="zp-10">
+    <table class="table browser_table">
+      <tbody>
+        <tr>
+          <td>
+            <div class="browser_logo brs">
+              <img src="assets/media/images/Browsers/chrome.png" alt="logo" />
+            </div>
+          </td>
+          <td>Google Chrome</td>
+          <td>
+            <span class="text-white text-right b-radius k_browser bg-success"
+              >35%</span
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="browser_logo brs">
+              <img
+                src="assets/media/images/Browsers/firefox-logo.png"
+                alt="logo"
+              />
+            </div>
+          </td>
+          <td>Mozila Firefox</td>
+          <td>
+            <span class="k_browser text-white text-right b-radius bg-primary"
+              >35%</span
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="browser_logo brs">
+              <img
+                src="assets/media/images/Browsers/safari-logo.png"
+                alt="logo"
+              />
+            </div>
+          </td>
+          <td>Safari</td>
+          <td>
+            <span class="k_browser text-white text-right b-radius bg-danger"
+              >15%</span
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

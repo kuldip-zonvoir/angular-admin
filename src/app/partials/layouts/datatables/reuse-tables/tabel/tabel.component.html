@@ -1,0 +1,223 @@
+<div class="card custom-card shadow1 no-radius">
+  <div class="card-header custom-card-header">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="card-title m-b-0">
+        <h5 class="m-b-0">Sales Record</h5>
+      </div>
+      <div class="card-toolbar d-flex justify-content-end toolbar">
+        <div class="btn-group m-r-4" dropdown>
+          <button
+            type="button"
+            class="btn btn-square btn-primary align-items-center d-flex"
+            id="button-basic"
+            dropdownToggle
+            type="button"
+            aria-controls="dropdown-basic"
+          >
+            Exports
+            <span class="material-icons-outlined m-l-4"> arrow_drop_down </span>
+          </button>
+          <ul
+            id="dropdown-basic"
+            *dropdownMenu
+            class="dropdown-menu dropdown-menu-left"
+            role="menu"
+            aria-labelledby="button-basic"
+            placement="bottom right"
+          >
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="m-b-0">
+                    <p class="m-b-0">Download CSV</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="m-b-0">
+                    <p class="m-b-0">Downlod Excel</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="m-b-0">
+                    <p class="m-b-0">Download PDF</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="btn-group" dropdown>
+          <button
+            type="button"
+            class="btn btn-square btn-primary align-items-center d-flex"
+            id="button-basic"
+            dropdownToggle
+            type="button"
+            aria-controls="dropdown-basic"
+          >
+            Records
+            <span class="material-icons-outlined m-l-4"> arrow_drop_down </span>
+          </button>
+
+          <ul
+            id="dropdown-basic"
+            *dropdownMenu
+            class="dropdown-menu dropdown-menu-left"
+            role="menu"
+            aria-labelledby="button-basic"
+            placement="bottom right"
+          >
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-20"> add </span>
+                  </div>
+                  <div class="m-b-0">
+                    <p class="m-b-0">Create User</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-20"> edit </span>
+                  </div>
+                  <div class="m-b-0">
+                    <p class="m-b-0">Edit User</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-20">
+                      delete
+                    </span>
+                  </div>
+                  <div class="m-b-0">
+                    <p class="m-b-0">Delete User</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-20">
+                      description
+                    </span>
+                  </div>
+                  <div class="m-b-0">
+                    <p class="m-b-0">All Users</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body pt-0">
+    <div class="table-responsive table_hr_scroll">
+      <table class="table my_tabel table-borderless m-b-0">
+        <thead class="thead">
+          <tr class="thead-row" style="left: 0px">
+            <th class="th">
+              <span class="t_title" style="width: 30px">#</span>
+            </th>
+            <th>
+              <span class="t_title">Order ID</span>
+            </th>
+            <th>
+              <span class="t_title">Product Name</span>
+            </th>
+            <th>
+              <span class="t_title">Ship Date</span>
+            </th>
+            <th>
+              <span class="t_title">Category</span>
+            </th>
+            <th>
+              <span class="t_title">Vendor Name</span>
+            </th>
+            <th>
+              <span class="t_title">Status</span>
+            </th>
+
+            <th>
+              <span class="t_title">Amount</span>
+            </th>
+            <th>
+              <span class="t_title">Payment</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let order of Inventory; let i = index">
+            <td>
+              <span class="tabelcell">{{ i + 1 }}</span>
+            </td>
+            <td>
+              <span class="tabelcell">{{ order.orderId }}</span>
+            </td>
+            <td>
+              <span class="tabelcell">{{ order.productName }}</span>
+            </td>
+            <td>
+              <span class="tabelcell">{{ order.ship_date }}</span>
+            </td>
+            <td>
+              <span class="tabelcell">{{ order.category }}</span>
+            </td>
+            <td>
+              <span class="tabelcell">{{ order.vendor }}</span>
+            </td>
+            <td>
+              <span
+                [ngClass]="{
+                  'text-light-warning': order.status === 'pending',
+                  'text-light-danger': order.status === 'delivered'
+                }"
+                class="tabelcell_status text-light-success"
+                >{{ order.status }}</span
+              >
+            </td>
+            <td>
+              <span class="tabelcell"> $ {{ order.amount }} </span>
+            </td>
+            <td>
+              <span class="tabelcell">
+                <span class="label label-success label-dot m-r-8"></span>
+                <span
+                  [ngClass]="{
+                    'text-success': order.payment === 'Recieved',
+                    'text-danger': order.payment === 'pending',
+                    'text-warning': order.payment === 'waiting'
+                  }"
+                  class="font-weight-bold"
+                  >{{ order.payment }}</span
+                >
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

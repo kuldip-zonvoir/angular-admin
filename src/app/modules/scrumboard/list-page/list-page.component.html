@@ -1,0 +1,1132 @@
+<div class="">
+  <div class="row filterbar custom-card">
+    <div class="col-lg-4 col-sm-8 col-7 m-b-12 col-md-6">
+      <form action="form" class="form">
+        <div class="search_bar">
+          <input
+            type="text"
+            placeholder="Search here..."
+            class="form-control gap-left"
+          />
+        </div>
+      </form>
+    </div>
+    <div
+      class="
+        col-lg-4 col-5 col-sm-4
+        m-b-12
+        col-md-6
+        text-right
+        d-flex
+        justify-content-end
+        offset-lg-4
+      "
+    >
+      <div class="text-right">
+        <button
+          (click)="showFilterDialog()"
+          class="btn btn-outline-dark btn-square d-flex align-items-center"
+        >
+          <span class="material-icons-outlined icon-20 m-r-8"> tune </span>
+          Filter Result
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="hr_scroll">
+    <div class="p-b-12 scrum_container">
+      <div
+        class="scrum-box-continer m-r-20"
+        style="display: table; width: 19rem"
+      >
+        <div
+          class="d-flex align-items-center shadow1 border-1 border-top-3-info"
+        >
+          <div class="m-r-12">
+            <h5 class="m-b-0 zp-12">TODO</h5>
+          </div>
+          <p class="m-b-0 p-x-4 border-radius-2 fs-12 fw-500 bg-light">5</p>
+          <div class="ml-auto">
+            <app-custom-dropdown
+              [custom-Dropdown]="dropdowns"
+            ></app-custom-dropdown>
+          </div>
+        </div>
+
+        <div
+          cdkDropList
+          #todoList="cdkDropList"
+          [cdkDropListConnectedTo]="[progressList, toreviewList, compltedList]"
+          [cdkDropListData]="holds"
+          (cdkDropListDropped)="drop($event)"
+        >
+          <div class="vr_scroll">
+            <ng-container *ngFor="let hold of holds">
+              <app-scrubboard-task
+                class="scrumb-task-card {{ activeTheme }}"
+                [tasks]="hold"
+                (taskInfoModal)="taskDetailDialog($event)"
+                cdkDrag
+              ></app-scrubboard-task>
+            </ng-container>
+          </div>
+          <div class="scrum-footer text-center">
+            <a
+              type="button"
+              class="p-y-6 text-center no-link scrum-new-card"
+              (click)="addTaskDialog()"
+            >
+              <span class="material-icons-outlined"> add </span>
+              Add Task
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="scrum-box-continer m-r-20"
+        style="display: table; width: 19rem"
+      >
+        <div
+          class="
+            d-flex
+            align-items-center
+            shadow1
+            border-1 border-top-3-warning
+          "
+        >
+          <div class="m-r-12">
+            <h5 class="m-b-0 zp-12">In Progress</h5>
+          </div>
+          <p class="m-b-0 p-x-4 border-radius-2 fs-12 fw-500 bg-light">8</p>
+          <div class="ml-auto">
+            <app-custom-dropdown
+              [custom-Dropdown]="dropdowns"
+            ></app-custom-dropdown>
+          </div>
+        </div>
+        <div
+          cdkDropList
+          [cdkDropListData]="holds"
+          #progressList="cdkDropList"
+          [cdkDropListData]="progresing"
+          [cdkDropListConnectedTo]="[todoList, compltedList, toreviewList]"
+          (cdkDropListDropped)="drop($event)"
+        >
+          <div class="vr_scroll">
+            <ng-container *ngFor="let progress of progresing">
+              <app-scrubboard-task
+                class="scrumb-task-card {{ activeTheme }} "
+                [tasks]="progress"
+                (taskInfoModal)="taskDetailDialog($event)"
+                cdkDrag
+              ></app-scrubboard-task>
+            </ng-container>
+          </div>
+          <div class="scrum-footer text-center">
+            <a
+              type="button"
+              class="p-y-6 text-center no-link scrum-new-card"
+              (click)="addTaskDialog()"
+              ><span class="material-icons-outlined"> add </span> Add Task</a
+            >
+          </div>
+        </div>
+      </div>
+      <div
+        class="scrum-box-continer m-r-20"
+        style="display: table; width: 19rem"
+      >
+        <div
+          class="d-flex align-items-center shadow1 border-1 border-top-3-orange"
+        >
+          <div class="m-r-12">
+            <h5 class="m-b-0 zp-12">Testing</h5>
+          </div>
+          <p class="m-b-0 p-x-4 border-radius-2 fs-12 fw-500 bg-light">3</p>
+          <div class="ml-auto">
+            <app-custom-dropdown
+              [custom-Dropdown]="dropdowns"
+            ></app-custom-dropdown>
+          </div>
+        </div>
+        <div
+          cdkDropList
+          #toreviewList="cdkDropList"
+          [cdkDropListConnectedTo]="[todoList, progressList, compltedList]"
+          [cdkDropListData]="testing"
+          (cdkDropListDropped)="drop($event)"
+        >
+          <div class="vr_scroll">
+            <ng-container *ngFor="let tests of testing">
+              <app-scrubboard-task
+                class="scrumb-task-card {{ activeTheme }}"
+                [tasks]="tests"
+                (taskInfoModal)="taskDetailDialog($event)"
+                cdkDrag
+              ></app-scrubboard-task>
+            </ng-container>
+          </div>
+          <div class="scrum-footer text-center">
+            <a
+              type="button"
+              class="p-y-6 text-center no-link scrum-new-card"
+              (click)="addTaskDialog()"
+            >
+              <span class="material-icons-outlined m-r-8 icon-20">add</span>
+              Add Task</a
+            >
+          </div>
+        </div>
+      </div>
+      <div
+        class="scrum-box-continer m-r-20"
+        style="display: table; width: 19rem"
+      >
+        <div
+          class="
+            d-flex
+            align-items-center
+            shadow1
+            border-1 border-top-3-success
+          "
+        >
+          <div class="m-r-12">
+            <h5 class="m-b-0 zp-12">Completed</h5>
+          </div>
+          <p class="m-b-0 p-x-4 border-radius-2 fs-12 fw-500 bg-light">10</p>
+          <div class="ml-auto">
+            <app-custom-dropdown
+              [custom-Dropdown]="dropdowns"
+            ></app-custom-dropdown>
+          </div>
+        </div>
+        <div
+          cdkDropList
+          [cdkDropListData]="holds"
+          #compltedList="cdkDropList"
+          [cdkDropListData]="completed"
+          [cdkDropListConnectedTo]="[todoList, progressList, toreviewList]"
+          (cdkDropListDropped)="drop($event)"
+        >
+          <div class="vr_scroll">
+            <ng-container *ngFor="let complete of completed">
+              <app-scrubboard-task
+                class="scrumb-task-card {{ activeTheme }}"
+                [tasks]="complete"
+                (taskInfoModal)="taskDetailDialog($event)"
+                cdkDrag
+              ></app-scrubboard-task>
+            </ng-container>
+          </div>
+          <div class="scrum-footer text-center">
+            <a
+              type="button"
+              class="p-y-6 text-center no-link scrum-new-card"
+              (click)="addTaskDialog()"
+            >
+              <span class="material-icons-outlined"> add </span>
+              Add Task
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="scrum-box-continer m-r-20"
+        style="display: table; width: 19rem"
+      >
+        <div class="d-flex align-items-center border-1 border-top-3-purple">
+          <div class="m-r-12">
+            <h5 class="m-b-0 zp-12">Mile Stone</h5>
+          </div>
+          <p class="m-b-0 p-x-4 border-radius-2 fs-12 fw-500 bg-light">1</p>
+          <div class="ml-auto">
+            <app-custom-dropdown
+              [custom-Dropdown]="dropdowns"
+            ></app-custom-dropdown>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- add task  modal -->
+<p-dialog
+  header="Task Detail"
+  [(visible)]="displaytaskDetail"
+  [modal]="true"
+  class="scrunboard_add_task"
+>
+  <div id="add-new-task">
+    <form action="" class="" [formGroup]="myForm" (ngSubmit)="addTask()">
+      <div class="kprime_form_wrapper">
+        <div class="form-group">
+          <label for="">Task Title</label>
+          <input type="text" formControlName="title" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="">Description</label>
+          <textarea
+            type="text"
+            rows="2"
+            cols="5"
+            formControlName="content"
+            class="form-control"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center kprime_footer justify-content-end">
+        <button type="submit" class="btn btn-primary m-r-8">Save</button>
+        <button type="reset" class="btn btn-secondary">Cancel</button>
+      </div>
+    </form>
+  </div>
+</p-dialog>
+<!-- filter tasks Modal -->
+<p-dialog
+  header="Filter"
+  [(visible)]="displayfilter"
+  [modal]="true"
+  class="scrunboard_filter_modal"
+>
+  <div class="filter-wrap">
+    <div class="for_scroll">
+      <form action="" class="form_section">
+        <div class="kprime_form_wrapper">
+          <div class="row m-b-12">
+            <div class="col-lg-6">
+              <div class="form-group m-b-12">
+                <label for="" class="">Date From </label>
+                <div class="">
+                  <input
+                    type="text"
+                    placeholder="Date"
+                    class="form-control inp_field"
+                    bsDatepicker
+                    [bsConfig]="{ isAnimated: true }"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group m-b-12">
+                <label for="" class="">Date To </label>
+                <div class="">
+                  <input
+                    type="text"
+                    placeholder="Date"
+                    class="form-control inp_field"
+                    bsDatepicker
+                    [bsConfig]="{ isAnimated: true }"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="form-group m-b-12">
+                <label for="" class="">Select Project </label>
+                <div class="">
+                  <app-custom-multi-select></app-custom-multi-select>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="form-group m-b-12">
+                <label for="" class="">Select Clinet</label>
+                <div class="">
+                  <app-custom-multi-select></app-custom-multi-select>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="form-group m-b-12">
+                <label for="" class="">Assigned To</label>
+                <div class="">
+                  <app-custom-multi-select></app-custom-multi-select>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="form-group m-b-12">
+                <label for="" class="">Asssingn By</label>
+                <div class="">
+                  <app-custom-single-select></app-custom-single-select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="kprime_footer">
+          <div class="d-flex justify-content-end align-items-center">
+            <button type="submit" class="btn btn-primary m-r-8">Submit</button>
+            <button type="cancel" class="btn btn-secondary">Cancel</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</p-dialog>
+
+<!-- Task Card detail Modal -->
+<p-dialog
+  header="Details"
+  class="scrumb-card-detail scrum_task_full_deatil"
+  [modal]="true"
+  [(visible)]="tasKCardkDetail"
+>
+  <div class="kprime_form_wrapper">
+    <div class="task-card-detail m-b-12">
+      <div class="p-b-12">
+        <div class="row no-gutters">
+          <div class="p-b-12 p-r-6">
+            <span class="material-icons-outlined icon-20 text-muted m-r-12">
+              article
+            </span>
+          </div>
+          <div class="col-lg-11 col-sm-11 col-md-11 col-11">
+            <div class="">
+              <h5 class="m-b-0">Fix Issue #45</h5>
+              <p class="m-b-0 text-muted">Zonvoir Board . Holds</p>
+              <div
+                class="d-flex align-items-center justify-content-between p-y-8"
+              >
+                <p class="m-b-0 text-muted">Members</p>
+                <p class="m-b-0 text-muted">Labels</p>
+              </div>
+              <div class="member_tags_container">
+                <div class="d-flex members_tags">
+                  <!--  -->
+                  <div class="d-flex scrum-members-scroll">
+                    <div class="m-b-2">
+                      <img
+                        *ngIf="isUser1"
+                        src="assets/media/images/users/100_5.jpg"
+                        alt=""
+                        class="img-responsive logo-sm2-circle m-r-4"
+                      />
+                    </div>
+                    <div class="m-b-2">
+                      <img
+                        *ngIf="isUser2"
+                        src="assets/media/images/users/100_7.jpg"
+                        alt=""
+                        class="img-responsive logo-sm2-circle m-r-4"
+                      />
+                    </div>
+                    <div class="m-b-2">
+                      <img
+                        *ngIf="isUser3"
+                        src="assets/media/images/users/100_6.jpg"
+                        alt=""
+                        class="img-responsive logo-sm2-circle m-r-4"
+                      />
+                    </div>
+                    <div class="m-b-2">
+                      <img
+                        *ngIf="isUser4"
+                        src="assets/media/images/users/100_8.jpg"
+                        alt=""
+                        class="img-responsive logo-sm2-circle m-r-4"
+                      />
+                    </div>
+                    <div class="btn-group" dropdown>
+                      <a
+                        id="button-basic"
+                        class="logo-sm2-circle scrum-box decoration-none"
+                        dropdownToggle
+                        aria-controls="dropdown-basic"
+                      >
+                        <span
+                          class="
+                            material-icons-outlined
+                            custom-circle-sm2
+                            cursor-pointer
+                            text-dark
+                            icon-20
+                          "
+                          >add</span
+                        >
+                      </a>
+                      <ul
+                        id="dropdown-basic"
+                        *dropdownMenu
+                        class="dropdown-menu"
+                        role="menu"
+                        aria-labelledby="button-basic"
+                      >
+                        <li role="menuitem">
+                          <a
+                            class="dropdown-item p-x-12 p-y-8"
+                            (click)="isUser1 = !isUser1"
+                          >
+                            <div class="d-flex align-items-center">
+                              <div class="d-flex align-items-center">
+                                <div class="form-check p-l-0">
+                                  <label class="container-checkbox">
+                                    <input
+                                      type="checkbox"
+                                      [checked]="isUser1"
+                                    />
+                                    <span
+                                      class="material-icons check-mark icon"
+                                    >
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="m-r-12 d-flex align-items-center">
+                                <img
+                                  src="assets/media/images/users/100_5.jpg"
+                                  alt=""
+                                  class="logo-sm2-circle"
+                                />
+                              </div>
+                              <p class="m-b-0">David Smith</p>
+                            </div>
+                          </a>
+                        </li>
+                        <li role="menuitem">
+                          <a
+                            class="dropdown-item p-x-12 p-y-8"
+                            (click)="isUser2 = !isUser2"
+                          >
+                            <div class="d-flex align-items-center">
+                              <div class="d-flex align-items-center">
+                                <div class="form-check p-l-0">
+                                  <label class="container-checkbox">
+                                    <input
+                                      type="checkbox"
+                                      [checked]="isUser2"
+                                    />
+                                    <span
+                                      class="material-icons check-mark icon"
+                                    >
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="m-r-12 d-flex align-items-center">
+                                <img
+                                  src="assets/media/images/users/100_7.jpg"
+                                  alt=""
+                                  class="logo-sm2-circle"
+                                />
+                              </div>
+                              <p class="m-b-0">Morgon Richardson</p>
+                            </div>
+                          </a>
+                        </li>
+                        <li role="menuitem">
+                          <a
+                            class="dropdown-item p-x-12 p-y-8"
+                            (click)="isUser3 = !isUser3"
+                          >
+                            <div class="d-flex align-items-center">
+                              <div class="d-flex align-items-center">
+                                <div class="form-check p-l-0">
+                                  <label class="container-checkbox">
+                                    <input
+                                      type="checkbox"
+                                      [checked]="isUser3"
+                                    />
+                                    <span
+                                      class="material-icons check-mark icon"
+                                    >
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="m-r-12 d-flex align-items-center">
+                                <img
+                                  src="assets/media/images/users/100_6.jpg"
+                                  alt=""
+                                  class="logo-sm2-circle"
+                                />
+                              </div>
+                              <p class="m-b-0">Ed Cowan</p>
+                            </div>
+                          </a>
+                        </li>
+                        <li role="menuitem">
+                          <a
+                            class="dropdown-item p-x-12 p-y-8"
+                            (click)="isUser4 = !isUser4"
+                          >
+                            <div class="d-flex align-items-center">
+                              <div class="d-flex align-items-center">
+                                <div class="form-check p-l-0">
+                                  <label class="container-checkbox">
+                                    <input
+                                      type="checkbox"
+                                      [checked]="isUser4"
+                                    />
+                                    <span
+                                      class="material-icons check-mark icon"
+                                    >
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="m-r-12 d-flex align-items-center">
+                                <img
+                                  src="assets/media/images/users/100_8.jpg"
+                                  alt=""
+                                  class="logo-sm2-circle"
+                                />
+                              </div>
+                              <p class="m-b-0">Sean Williams</p>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex task_tags">
+                  <!--  -->
+                  <div class="buttons-labels scrum-lable-scroll-tags">
+                    <button
+                      *ngIf="isHPriority"
+                      class="btn-mini btn-pill btn-warning m-r-4 m-b-2"
+                    >
+                      High Priority
+                    </button>
+                    <button
+                      *ngIf="isBlocked"
+                      class="btn-mini btn-pill btn-danger m-r-4 m-b-2"
+                    >
+                      Blocked
+                    </button>
+                    <button
+                      *ngIf="isAproved"
+                      class="btn-mini btn-pill btn-success m-r-4 m-b-2"
+                    >
+                      Approved
+                    </button>
+                    <button
+                      *ngIf="isReady"
+                      class="btn-mini btn-pill btn-info m-r-4 m-b-2"
+                    >
+                      Ready
+                    </button>
+                    <button
+                      *ngIf="isDeployed"
+                      class="btn-mini btn-pill btn-primary m-r-4 m-b-2"
+                    >
+                      Deployed
+                    </button>
+                  </div>
+                  <div class="btn-mini-group tsk_add_btn" dropdown>
+                    <button
+                      id="button-basic"
+                      dropdownToggle
+                      type="button"
+                      aria-controls="dropdown-basic"
+                      class="
+                        btn btn-square
+                        tsk_add_btn
+                        btn-secondary
+                        justify-content-center
+                        d-flex
+                        align-items-center
+                      "
+                    >
+                      <span class="material-icons-outlined text-dark icon"
+                        >add</span
+                      >
+                    </button>
+                    <ul
+                      id="dropdown-basic"
+                      *dropdownMenu
+                      class="dropdown-menu dropdown-menu-left"
+                      role="menu"
+                      aria-labelledby="button-basic"
+                    >
+                      <li role="menuitem">
+                        <a
+                          class="dropdown-item p-x-12 p-y-8"
+                          (click)="isHPriority = !isHPriority"
+                        >
+                          <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center">
+                              <div class="form-check p-l-0">
+                                <label class="container-checkbox">
+                                  <input
+                                    type="checkbox"
+                                    [checked]="isHPriority"
+                                  />
+                                  <span class="material-icons check-mark icon">
+                                  </span>
+                                </label>
+                              </div>
+                            </div>
+                            <div
+                              class="
+                                m-r-12
+                                bg-warning
+                                d-flex
+                                align-items-center
+                                logo-small-circle
+                              "
+                            ></div>
+                            <p class="m-b-0">High Priority</p>
+                          </div>
+                        </a>
+                      </li>
+                      <li role="menuitem">
+                        <a
+                          class="dropdown-item p-x-12 p-y-8"
+                          (click)="isBlocked = !isBlocked"
+                        >
+                          <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center">
+                              <div class="form-check p-l-0">
+                                <label class="container-checkbox">
+                                  <input
+                                    type="checkbox"
+                                    [checked]="isBlocked"
+                                  />
+                                  <span class="material-icons check-mark icon">
+                                  </span>
+                                </label>
+                              </div>
+                            </div>
+                            <div
+                              class="
+                                m-r-12
+                                bg-danger
+                                d-flex
+                                align-items-center
+                                logo-small-circle
+                              "
+                            ></div>
+                            <p class="m-b-0">Blocked</p>
+                          </div>
+                        </a>
+                      </li>
+                      <li role="menuitem">
+                        <a
+                          class="dropdown-item p-x-12 p-y-8"
+                          (click)="isAproved = !isAproved"
+                        >
+                          <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center">
+                              <div class="form-check p-l-0">
+                                <label class="container-checkbox">
+                                  <input
+                                    type="checkbox"
+                                    [checked]="isAproved"
+                                  />
+                                  <span class="material-icons check-mark icon">
+                                  </span>
+                                </label>
+                              </div>
+                            </div>
+                            <div
+                              class="
+                                m-r-12
+                                bg-success
+                                d-flex
+                                align-items-center
+                                logo-small-circle
+                              "
+                            ></div>
+                            <p class="m-b-0">Approved</p>
+                          </div>
+                        </a>
+                      </li>
+                      <li role="menuitem">
+                        <a
+                          class="dropdown-item p-x-12 p-y-8"
+                          (click)="isReady = !isReady"
+                        >
+                          <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center">
+                              <div class="form-check p-l-0">
+                                <label class="container-checkbox">
+                                  <input type="checkbox" [checked]="isReady" />
+                                  <span class="material-icons check-mark icon">
+                                  </span>
+                                </label>
+                              </div>
+                            </div>
+                            <div
+                              class="
+                                m-r-12
+                                bg-info
+                                d-flex
+                                align-items-center
+                                logo-small-circle
+                              "
+                            ></div>
+                            <p class="m-b-0">Ready</p>
+                          </div>
+                        </a>
+                      </li>
+                      <li role="menuitem">
+                        <a
+                          class="dropdown-item p-x-12 p-y-8"
+                          (click)="isDeployed = !isDeployed"
+                        >
+                          <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center">
+                              <div class="form-check p-l-0">
+                                <label class="container-checkbox">
+                                  <input
+                                    type="checkbox"
+                                    [checked]="isDeployed"
+                                  />
+                                  <span class="material-icons check-mark icon">
+                                  </span>
+                                </label>
+                              </div>
+                            </div>
+                            <div
+                              class="
+                                m-r-12
+                                bg-primary
+                                d-flex
+                                align-items-center
+                                logo-small-circle
+                              "
+                            ></div>
+                            <p class="m-b-0">Deployed</p>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mr_scroll p-r-8">
+        <div class="p-t-12">
+          <div class="row no-gutters">
+            <div class="p-b-12 p-r-6">
+              <span class="material-icons-outlined icon-20 text-muted m-r-12">
+                task
+              </span>
+            </div>
+            <div class="col-lg-11 col-sm-11 col-md-11 col-11">
+              <div class="">
+                <h5 class="m-b-0">Task Title</h5>
+                <div class="p-y-12">
+                  <form action="">
+                    <input
+                      name=""
+                      class="form-control"
+                      [value]="task_title"
+                      placeholder="Task Title"
+                    />
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="p-b-12 p-r-6">
+              <span class="material-icons-outlined icon-20 text-muted m-r-12">
+                info
+              </span>
+            </div>
+            <div class="col-lg-11 col-sm-11 col-md-11 col-11">
+              <div class="">
+                <h5 class="m-b-0">Description</h5>
+                <div class="p-y-12">
+                  <form action="">
+                    <textarea
+                      name="Description"
+                      class="form-control"
+                      [value]="desc"
+                      rows="3"
+                      cols="7"
+                      placeholder="Add Description"
+                    ></textarea>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-t-12">
+          <div class="row no-gutters">
+            <div class="p-b-12 p-r-6">
+              <span class="material-icons-outlined text-muted icon-20 m-r-12">
+                attach_file
+              </span>
+            </div>
+            <div class="col-lg-11 col-sm-11 col-md-11 col-11">
+              <div
+                (click)="fileAttachmentDialog()"
+                class="d-flex justify-content-between align-items-center"
+              >
+                <h5 class="m-b-0">Attachments</h5>
+                <a
+                  class="
+                    d-flex
+                    no-decoration
+                    text-primary
+                    fw-600
+                    no-link
+                    align-items-center
+                  "
+                >
+                  <span class="material-icons-outlined icon-20 m-r-8">add</span>
+                  Files
+                </a>
+              </div>
+              <div class="p-b-12 border-1">
+                <div class="row p-y-12">
+                  <div class="col-lg-4 col-md-4 col-sm-6 m-b-12">
+                    <div class="acttachment-card custom-card zp-10">
+                      <div class="d-flex p-b-8 alin-items-center">
+                        <div class="ttask_card">
+                          <p class="m-b-0 text-muted">
+                            Business-Case-study.jpg
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="p-b-8">
+                        <img
+                          src="assets/media/images/cards/4.jpg"
+                          alt=""
+                          class="card-img small-card-img"
+                        />
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <p class="m-b-0 text-muted">55 KB</p>
+                        <div class="ml-auto">
+                          <div class="d-flex-align-items-center">
+                            <span
+                              class="
+                                material-icons-outlined
+                                icon-16
+                                text-muted
+                                m-r-8
+                              "
+                            >
+                              calendar_today</span
+                            >
+                            <span class="text-muted"> 17 June</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-6 m-b-12">
+                    <div class="acttachment-card custom-card zp-10">
+                      <div class="d-flex p-b-8 alin-items-center">
+                        <div class="ttask_card">
+                          <p class="m-b-0 text-muted">Case-study.jpg</p>
+                        </div>
+                      </div>
+
+                      <div class="p-b-8">
+                        <img
+                          src="assets/media/images/cards/3.jpg"
+                          alt=""
+                          class="card-img small-card-img"
+                        />
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <p class="m-b-0 text-muted">55 KB</p>
+                        <div class="ml-auto">
+                          <div class="d-flex-align-items-center">
+                            <span
+                              class="
+                                material-icons-outlined
+                                icon-16
+                                text-muted
+                                m-r-8
+                              "
+                            >
+                              calendar_today</span
+                            >
+                            <span class="text-muted"> 17 June</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-6 m-b-12">
+                    <div class="acttachment-card custom-card zp-10">
+                      <div class="d-flex p-b-8 alin-items-center">
+                        <div class="ttask_card">
+                          <p class="m-b-0 text-muted">Product-Case-study.jpg</p>
+                        </div>
+                      </div>
+
+                      <div class="p-b-8">
+                        <img
+                          src="assets/media/images/cards/6.jpg"
+                          alt=""
+                          class="card-img small-card-img"
+                        />
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <p class="m-b-0 text-muted">55 KB</p>
+                        <div class="ml-auto">
+                          <div class="d-flex-align-items-center">
+                            <span
+                              class="
+                                material-icons-outlined
+                                icon-16
+                                text-muted
+                                m-r-8
+                              "
+                            >
+                              calendar_today</span
+                            >
+                            <span class="text-muted"> 17 June</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-t-12 pb-2">
+          <div class="row no-gutters">
+            <div class="p-b-12">
+              <span class="material-icons-outlined icon-20 text-muted m-r-12">
+                chat
+              </span>
+            </div>
+            <div class="col-lg-11 col-sm-11 col-md-11 col-11">
+              <div class="p-b-16">
+                <h5 class="m-b-0">Comments</h5>
+              </div>
+              <div class="p-b-12">
+                <div class="d-flex p-b-12">
+                  <div class="m-r-12">
+                    <img
+                      src="assets/media/images/users/100_5.jpg"
+                      alt="logo"
+                      class="logo-md-circle img-respponsive"
+                    />
+                  </div>
+                  <div class="">
+                    <div class="m-b-10">
+                      <h6 class="m-b-0">David Smith</h6>
+                      <p class="m-b-0 text-muted">2 days ago</p>
+                    </div>
+                    <div class="">
+                      <p class="m-b-0 text-muted">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Numquam nihil, dolorem asperiores ad pariatur
+                        placeat vel fuga velit expedita adipisci? Lorem, ipsum
+                        dolor sit amet consectetur adipisicing elit. Numquam
+                        nihil, dolorem asperiores ad pariatur placeat vel fuga
+                        velit expedita adipisci?
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="p-b-12">
+                <div class="d-flex p-b-12">
+                  <div class="m-r-12">
+                    <img
+                      src="assets/media/images/users/100_6.jpg"
+                      alt="logo"
+                      class="logo-md-circle img-respponsive"
+                    />
+                  </div>
+                  <div class="">
+                    <div class="m-b-10">
+                      <h6 class="m-b-0">Peter Edward</h6>
+                      <p class="m-b-0 text-muted">1 days ago</p>
+                    </div>
+                    <div class="">
+                      <p class="m-b-0 text-muted">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Numquam nihil, dolorem asperiores ad pariatur
+                        placeat vel fuga velit expedita adipisci? Lorem, ipsum
+                        dolor sit amet consectetur adipisicing elit. Numquam
+                        nihil, dolorem asperiores ad pariatur placeat vel fuga
+                        velit expedita adipisci?
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="p-b-12">
+                <div class="d-flex p-b-12">
+                  <div class="m-r-12">
+                    <img
+                      src="assets/media/images/users/100_1.jpg"
+                      alt="logo"
+                      class="logo-md-circle img-respponsive"
+                    />
+                  </div>
+                  <div class="">
+                    <div class="m-b-10">
+                      <h6 class="m-b-0">Sam Smith</h6>
+                      <p class="m-b-0 text-muted">2 days ago</p>
+                    </div>
+                    <div class="">
+                      <p class="m-b-0 text-muted">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Numquam nihil, dolorem asperiores ad pariatur
+                        placeat vel fuga velit expedita adipisci? Lorem, ipsum
+                        dolor sit amet consectetur adipisicing elit. Numquam
+                        nihil, dolorem asperiores ad pariatur placeat vel fuga
+                        velit expedita adipisci?
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex">
+                <div class="m-r-12">
+                  <img
+                    src="assets/media/images/users/default.jpg"
+                    alt="logo"
+                    class="logo-md-circle img-respponsive"
+                  />
+                </div>
+                <div class="d-flex w-100 p-b-12">
+                  <textarea
+                    type="text"
+                    rows="3"
+                    placeholder="Write Comment Here..."
+                    class="form-control"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="text-right">
+                <button type="button" class="btn btn-outline-primary">
+                  Send
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex align-items-center kprime_footer justify-content-end pt-2">
+    <button class="btn btn-square btn-primary m-r-8">Save</button>
+    <button class="btn btn-square btn-secondary m-r-8">Cancel</button>
+  </div>
+</p-dialog>
+<!-- File dialog Attachment -->
+<p-dialog
+  header="Upload File"
+  [(visible)]="fileAttachment"
+  [modal]="true"
+  class="add_card_scrum"
+>
+  <div class="kprime_form_wrapper p-b-16">
+    <div class="m-b-12">
+      <app-file-drag-n-drop></app-file-drag-n-drop>
+    </div>
+  </div>
+</p-dialog>

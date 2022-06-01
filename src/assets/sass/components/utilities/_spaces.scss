@@ -1,0 +1,64 @@
+@each $name,
+$size in $sizes {
+  .zm-#{$name} {
+    margin: $size;
+  }
+  .kw-#{$name} {
+    width: $size;
+  }
+  .kh-#{$name} {
+    height: $size;
+  }
+
+  .m-x-#{$name} {
+    margin: 0 $size;
+  }
+
+  .m-y-#{$name} {
+    margin: $size 0;
+  }
+
+  .m-r-#{$name} {
+    margin-right: $size;
+  }
+
+  .m-l-#{$name} {
+    margin-left: $size;
+  }
+
+  .m-b-#{$name} {
+    margin-bottom: $size;
+  }
+
+  .m-t-#{$name} {
+    margin-top: $size;
+  }
+
+  .zp-#{$name} {
+    padding: $size;
+  }
+
+  .p-x-#{$name} {
+    padding: 0 $size;
+  }
+
+  .p-y-#{$name} {
+    padding: $size 0;
+  }
+
+  .p-r-#{$name} {
+    padding-right: $size;
+  }
+
+  .p-l-#{$name} {
+    padding-left: $size;
+  }
+
+  .p-b-#{$name} {
+    padding-bottom: $size;
+  }
+
+  .p-t-#{$name} {
+    padding-top: $size;
+  }
+}

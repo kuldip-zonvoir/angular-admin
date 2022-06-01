@@ -1,0 +1,195 @@
+.wzrd_menu {
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+  .wzrd_list {
+    list-style: none;
+    margin-right: 30px;
+    position: relative;
+    .wzrd_link {
+      text-decoration: none;
+
+      display: inline-flex;
+      align-items: center;
+      &.next_wzrd {
+        &::before {
+          @include pseudo-icon(
+            "\e5cc",
+            $left: -25px,
+            $top: 6px,
+            $color: #889cb3,
+            $icon-size: 20px
+          );
+        }
+      }
+    }
+  }
+}
+.wzrd_steps_outside {
+  margin-bottom: 20px;
+  .wzrd_icon {
+    @include rounded-squrare($primary, $primary-light, 35px, 5px, 16px);
+  }
+  .active_wzrd_step {
+    .wzrd_icon {
+      @include rounded-squrare($white, $primary, 35px, 5px, 16px);
+    }
+  }
+}
+.active_wzrd_step {
+  .wzrd_step_name {
+    margin-left: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: $primary;
+  }
+  .wzrd_icon {
+    @include rounded-squrare(
+      $white,
+      $primary,
+      35px,
+      5px,
+      13px,
+      $fontWeight: 600
+    );
+  }
+  &.next_wzrd {
+    &::before {
+      @include pseudo-icon(
+        "\e5cc",
+        $left: -25px,
+        $top: 6px,
+        $color: $primary !important,
+        $icon-size: 20px
+      );
+    }
+  }
+}
+.wzrd_step_name {
+  margin-left: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #889cb3;
+}
+.wzrd_icon {
+  @include rounded-squrare(
+    $primary,
+    $primary-light,
+    35px,
+    5px,
+    13px,
+    $fontWeight: 600
+  );
+}
+.vertical_wzrd_wrap {
+  display: flex;
+  width: 100%;
+  .wzrd_navigation {
+    border-right: 1px solid $border-color2;
+    padding: 15px;
+    width: 20%;
+    flex-direction: column;
+
+    .wzrd_vr_steps {
+      .wzrd_vr_menu {
+        margin: 0;
+        padding-left: 0;
+        .wzrd_vr_list {
+          list-style: none;
+          margin-bottom: 12px;
+          .wzrd_vr_link {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            .wzrd_vr_icon {
+              @include rounded-squrare(
+                $primary,
+                $primary-light,
+                35px,
+                5px,
+                13px,
+                $fontWeight: 600
+              );
+            }
+            &.active_vr_wzrd_step {
+              .wzrd_vr_step_name {
+                margin-left: 8px;
+                font-size: 13px;
+                font-weight: 500;
+                color: $primary;
+              }
+              .wzrd_vr_step_num {
+                .wzrd_vr_icon {
+                  @include rounded-squrare(
+                    $white,
+                    $primary,
+                    35px,
+                    5px,
+                    13px,
+                    $fontWeight: 600
+                  );
+                }
+              }
+            }
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .wzrd_vr_steps_outside {
+      .active_vr_wzrd_step {
+        .wzrd_vr_step_name {
+          margin-left: 8px;
+          font-size: 13px;
+          font-weight: 500;
+          color: $primary;
+        }
+        .wzrd_vr_icon {
+          @include rounded-squrare($white, $primary, 35px, 5px, 16px);
+          color: $white !important;
+          background-color: $primary !important;
+        }
+      }
+      .wzrd_vr_menu {
+        margin: 0;
+        padding-left: 0;
+        .wzrd_vr_list {
+          list-style: none;
+          margin-bottom: 12px;
+          .wzrd_vr_link {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            .wzrd_vr_icon {
+              @include rounded-squrare(
+                $primary,
+                $primary-light,
+                35px,
+                5px,
+                16px
+              );
+            }
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .wzrd_vr_form {
+    width: 80%;
+    padding: 15px;
+  }
+
+  .wzrd_vr_step_name {
+    margin-left: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #889cb3;
+  }
+
+  //   outside vertical
+}

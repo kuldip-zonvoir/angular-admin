@@ -1,0 +1,565 @@
+.mobile-chat {
+  display: none !important;
+}
+.mailer_inbox {
+  padding: 0 10px;
+}
+.kleft {
+  padding-right: 4px;
+  border-right: 1px solid $border-color !important;
+}
+.mobile-chatfield {
+  display: none !important;
+}
+.ckchat {
+  background-color: $background-color;
+  border-radius: 4px;
+  border: 1px solid $cardBorder;
+  padding: 12px;
+}
+.padding_chatlist {
+  padding-right: 2px !important;
+}
+.padding_chat_messages {
+  padding-left: 2px !important;
+}
+.cckchat_status {
+  position: relative;
+}
+.user_visibility {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  line-height: 8px;
+  display: inline-block;
+  box-shadow: 0px 8px 14.72px 1.28px rgb(229 228 230 / 50%);
+  background-color: $white;
+  border-radius: 50%;
+  bottom: 2px;
+  left: 2px;
+}
+.user_visible_status {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  line-height: 5px;
+  display: inline-block;
+  background-color: $success;
+  border-radius: 50%;
+  bottom: 3px;
+  left: 3px;
+}
+// ====================chatting==============
+.kchat_header {
+  display: flex;
+  align-items: center;
+  .chat_toggle {
+    width: 10%;
+  }
+  .kchat_searchbar {
+    width: 100%;
+  }
+}
+.k_chat_list {
+  padding: 5px;
+  border-radius: 4px;
+  margin-right: 5px;
+
+  &:hover {
+    background-color: $primary;
+    color: $white;
+    padding: 5px;
+    border-radius: 4px;
+    h6,
+    p {
+      color: $white;
+    }
+    .notifiaction-small-circle {
+      background-color: $white !important;
+      color: $primary !important;
+    }
+  }
+}
+
+.chat_reciever {
+  padding: 0 8px;
+}
+.created-date {
+  padding-top: 5px;
+  display: block;
+  font-size: 10px;
+  text-align: right;
+  &.user-answer-time {
+    padding-right: 56px;
+    display: flex;
+  }
+}
+.chat-nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.chat-user-name {
+  font-size: 13px;
+  display: block;
+  padding-bottom: 8px;
+  &.answer-username {
+    text-align: right;
+  }
+}
+.sender-message-content {
+  background-color: $chatboxSender;
+  border-radius: 0 6px 6px 6px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    border: 5px solid transparent;
+    border-right-color: $chatboxSender;
+    border-top-color: $chatboxSender;
+    left: -10px;
+    top: 0;
+  }
+}
+.message-container {
+  max-width: calc(100% - 300px);
+  border-radius: 5px;
+}
+.owner-message-container {
+  padding-right: 56px;
+
+  @extend .message-container;
+}
+.sender-files-container {
+  padding-left: 56px;
+  @extend .message-container;
+}
+
+hr {
+  color: $border-color;
+}
+.owner-message-content {
+  border-radius: 6px 0 6px 6px;
+  background-color: $chatboxReciever;
+  position: relative;
+  p {
+    color: $white;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    border: 5px solid transparent;
+    border-top-color: $chatboxReciever;
+    border-left-color: $chatboxReciever;
+    left: auto;
+    right: -10px;
+    top: 0;
+  }
+}
+.chating-date {
+  position: relative;
+  padding: 16px;
+}
+.chat-files {
+  box-shadow: 0 4px 4px rgb(169 194 209 / 5%), 0 8px 16px rgb(169 194 209 / 30%);
+  cursor: pointer;
+}
+.chat-profile-circle {
+  $size: 40px;
+  @include circle($size);
+}
+.date-line {
+  margin: 0;
+}
+.chat-date-detail {
+  position: absolute;
+  top: 0;
+  left: 40%;
+  padding: 0 16px;
+  color: $gray-500;
+  text-align: center;
+  display: block;
+  background-color: $white;
+  background-color: $background-color;
+}
+.discuss-scroll {
+  height: 40vh;
+  margin-right: 5px;
+  cursor: pointer;
+  overflow-y: auto;
+  overflow-x: hidden;
+  @include scrollbar($width: 4px, $border-radius: 5px);
+  &:hover {
+    $background-light: $scrollbarColor;
+    @include scrollbar(
+      $width: 4px,
+      $border-radius: 5px,
+      $background-color: $background-light
+    );
+  }
+}
+.chat-scroll {
+  height: 48vh;
+  cursor: pointer;
+  overflow-y: auto;
+  overflow-x: hidden;
+  @include scrollbar($width: 4px, $border-radius: 5px);
+  &:hover {
+    $background-light: $scrollbarColor;
+    @include scrollbar(
+      $width: 4px,
+      $border-radius: 5px,
+      $background-color: $background-light
+    );
+  }
+}
+
+.chat-list-scroll {
+  height: 46vh;
+  cursor: pointer;
+  overflow-y: auto;
+  overflow-x: hidden;
+  @include scrollbar($width: 4px, $border-radius: 5px);
+  &:hover {
+    $background-light: $scrollbarColor;
+    @include scrollbar(
+      $width: 4px,
+      $border-radius: 5px,
+      $background-color: $background-light
+    );
+  }
+}
+
+.chat_wrap {
+  position: relative;
+
+  .chat_box {
+    background-color: rgb(239, 239, 239);
+  }
+
+  &::before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -10px;
+    top: 0;
+    border-color: rgb(239, 239, 239) transparent transparent;
+    border-style: solid;
+    border-width: 10px;
+  }
+}
+
+.chat_wrap_me {
+  position: relative;
+
+  .chat_box_me {
+    background-color: rgb(225, 240, 255);
+  }
+
+  &::before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: -10px;
+    top: 0;
+    border-color: rgb(225, 240, 255) transparent transparent;
+    border-style: solid;
+    border-width: 10px;
+  }
+}
+
+.emoji,
+.attach,
+.send,
+.record {
+  .icon {
+    color: $text-color !important;
+  }
+}
+// for mobile portrait mode
+@include responsive-below(md) {
+  .mailer_inbox {
+    padding: 0;
+  }
+  .padding_chatlist {
+    padding-right: 15px !important;
+  }
+  .padding_chat_messages {
+    padding-left: 22px !important;
+  }
+  .hideList {
+    position: absolute;
+    left: -500px;
+    transition: ease-in 0.3s;
+    overflow: hidden;
+    display: none;
+  }
+  .chat-list {
+    left: 0px;
+    transition: ease-in 0.3s;
+    overflow: hidden;
+    display: block;
+  }
+  .showChat {
+    transform: translateX(500px);
+    transition: ease-in 0.3s;
+
+    overflow: hidden;
+    position: absolute;
+    background-color: $background-color;
+  }
+  .chatting {
+    transform: translateX(-12px);
+    transition: ease-in 0.3s;
+    position: absolute;
+    overflow: hidden;
+  }
+  ._back_arrow {
+    margin-right: 8px;
+  }
+  .message-container {
+    max-width: calc(100% - 30px);
+    border-radius: 5px;
+  }
+  .owner-message-container {
+    padding-right: 16px;
+    max-width: calc(100% - 30px);
+    border-radius: 5px;
+  }
+  .sender-files-container {
+    padding-left: 16px;
+    max-width: calc(100% - 30px);
+    border-radius: 5px;
+  }
+  .emoji,
+  .attach,
+  .record {
+    display: none !important;
+  }
+
+  .send {
+    .icon {
+      color: $text-color !important;
+    }
+  }
+
+  .form_wrapper {
+    width: 100% !important;
+  }
+
+  .mobile-chat {
+    display: block !important;
+  }
+  .chat-scroll {
+    height: 55vh;
+
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include scrollbar($width: 4px, $border-radius: 5px);
+    &:hover {
+      $background-light: $scrollbarColor;
+      @include scrollbar(
+        $width: 4px,
+        $border-radius: 5px,
+        $background-color: $background-light
+      );
+    }
+  }
+  .chat-list-scroll {
+    height: 51vh;
+
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include scrollbar($width: 4px, $border-radius: 5px);
+    &:hover {
+      $background-light: $scrollbarColor;
+      @include scrollbar(
+        $width: 4px,
+        $border-radius: 5px,
+        $background-color: $background-light
+      );
+    }
+  }
+}
+// For Mobile Landscape Mode
+@include responsive-between(sm, md) {
+  .mailer_inbox {
+    padding: 0;
+  }
+  .padding_chatlist {
+    padding-right: 15px !important;
+  }
+  .padding_chat_messages {
+    padding-left: 24px !important;
+  }
+  ._back_arrow {
+    margin-right: 8px;
+  }
+  .hideList {
+    position: absolute;
+    left: -500px;
+    transition: ease-in 0.3s;
+    overflow: hidden;
+    display: none;
+  }
+  .chat-list {
+    left: 0px;
+    transition: ease-in 0.3s;
+    overflow: hidden;
+    display: block;
+  }
+  .showChat {
+    transform: translateX(800px);
+    transition: ease-in 0.3s;
+
+    overflow: hidden;
+    position: absolute;
+    background-color: $background-color;
+  }
+  .chatting {
+    transform: translateX(-12px);
+    transition: ease-in 0.3s;
+    position: absolute;
+    overflow: hidden;
+  }
+  .message-container {
+    max-width: calc(100% - 200px);
+    border-radius: 5px;
+  }
+  .owner-message-container {
+    padding-right: 16px;
+    max-width: calc(100% - 200px);
+    border-radius: 5px;
+  }
+  .sender-files-container {
+    padding-left: 16px;
+    max-width: calc(100% - 200px);
+    border-radius: 5px;
+  }
+  .chat-scroll {
+    height: 36vh;
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include scrollbar($width: 4px, $border-radius: 5px);
+    &:hover {
+      $background-light: $scrollbarColor;
+      @include scrollbar(
+        $width: 4px,
+        $border-radius: 5px,
+        $background-color: $background-light
+      );
+    }
+  }
+  .chat-list-scroll {
+    height: 37vh;
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include scrollbar($width: 4px, $border-radius: 5px);
+    &:hover {
+      $background-light: $scrollbarColor;
+      @include scrollbar(
+        $width: 4px,
+        $border-radius: 5px,
+        $background-color: $background-light
+      );
+    }
+  }
+}
+// for tablet portrait mode
+@include responsive-between(md, lg) {
+  .mobile-chat {
+    display: block !important;
+  }
+  .message-container {
+    max-width: calc(100% - 100px);
+    border-radius: 5px;
+  }
+  .owner-message-container {
+    padding-right: 16px;
+    max-width: calc(100% - 100px);
+    border-radius: 5px;
+  }
+  .sender-files-container {
+    padding-left: 16px;
+    max-width: calc(100% - 100px);
+    border-radius: 5px;
+  }
+  .chat-scroll {
+    height: 65vh;
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include scrollbar($width: 0.4rem, $border-radius: 0.5rem);
+    &:hover {
+      $background-light: $scrollbarColor;
+      @include scrollbar(
+        $width: 0.4rem,
+        $border-radius: 0.5rem,
+        $background-color: $background-light
+      );
+    }
+  }
+  .chat-list-scroll {
+    height: 64vh;
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include scrollbar($width: 0.4rem, $border-radius: 0.5rem);
+    &:hover {
+      $background-light: $scrollbarColor;
+      @include scrollbar(
+        $width: 0.4rem,
+        $border-radius: 0.5rem,
+        $background-color: $background-light
+      );
+    }
+  }
+}
+// For tablet Landscape Mode
+@include responsive-between(lg, xl) {
+  ._back_arrow {
+    display: none;
+  }
+  .chat-scroll {
+    height: 56vh;
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include scrollbar($width: 0.4rem, $border-radius: 0.5rem);
+    &:hover {
+      $background-light: $scrollbarColor;
+      @include scrollbar(
+        $width: 0.4rem,
+        $border-radius: 0.5rem,
+        $background-color: $background-light
+      );
+    }
+  }
+  .chat-list-scroll {
+    height: 53vh;
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include scrollbar($width: 0.4rem, $border-radius: 0.5rem);
+    &:hover {
+      $background-light: $scrollbarColor;
+      @include scrollbar(
+        $width: 0.4rem,
+        $border-radius: 0.5rem,
+        $background-color: $background-light
+      );
+    }
+  }
+}
+// For tablet Landscape Mode
+@include responsive-above(lg) {
+  ._back_arrow {
+    display: none;
+  }
+}

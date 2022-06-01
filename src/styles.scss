@@ -1,1 +1,206 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import "../node_modules/material-icons/iconfont/material-icons.css";
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
+@import "../node_modules/primeng/resources/primeng.min.css";
+@import "../node_modules/primeng/resources/themes/saga-blue/theme.css";
+@import "../node_modules/primeicons/primeicons.css";
+@import "../node_modules/font-awesome/css/font-awesome.css";
+@import "../node_modules/ngx-bootstrap/datepicker/bs-datepicker.scss";
+@import "../node_modules/highlight.js/styles/github.css";
+@import "./assets/plugins/themify-icons/themify-icons.css";
+@import "./assets/plugins/cryptocoins-icons/webfont/cryptocoins.css";
+@import "./assets/plugins/weathericons/css/weather-icons.css";
+@import "../node_modules/ng-multiselect-dropdown/themes/ng-multiselect-dropdown.theme.scss";
+@import "~@ng-select/ng-select/themes/default.theme.css";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+@import "./assets/sass/vendor/ngx-bootstrap/datepicker";
+@import "~@fullcalendar/daygrid/main.css";
+@import "~@fullcalendar/timegrid/main.css";
+html {
+  margin: 0 !important;
+  margin-bottom: 0 !important;
+  body {
+    font-family: "Roboto", sans-serif;
+    font-size: 87.5% !important;
+    margin: 0 !important;
+    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
+    padding: 10px 0;
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 3px #a9a6a66e;
+      border-radius: 0px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #6a7999d5;
+      border-radius: 10px;
+    }
+    .theme_spaces {
+      .col-xxl,
+      .col-xxl-auto,
+      .col-xxl-12,
+      .col-xxl-11,
+      .col-xxl-10,
+      .col-xxl-9,
+      .col-xxl-8,
+      .col-xxl-7,
+      .col-xxl-6,
+      .col-xxl-5,
+      .col-xxl-4,
+      .col-xxl-3,
+      .col-xxl-2,
+      .col-xxl-1,
+      .col-xl,
+      .col-xl-auto,
+      .col-xl-12,
+      .col-xl-11,
+      .col-xl-10,
+      .col-xl-9,
+      .col-xl-8,
+      .col-xl-7,
+      .col-xl-6,
+      .col-xl-5,
+      .col-xl-4,
+      .col-xl-3,
+      .col-xl-2,
+      .col-xl-1,
+      .col-lg,
+      .col-lg-auto,
+      .col-lg-12,
+      .col-lg-11,
+      .col-lg-10,
+      .col-lg-9,
+      .col-lg-8,
+      .col-lg-7,
+      .col-lg-6,
+      .col-lg-5,
+      .col-lg-4,
+      .col-lg-3,
+      .col-lg-2,
+      .col-lg-1,
+      .col-md,
+      .col-md-auto,
+      .col-md-12,
+      .col-md-11,
+      .col-md-10,
+      .col-md-9,
+      .col-md-8,
+      .col-md-7,
+      .col-md-6,
+      .col-md-5,
+      .col-md-4,
+      .col-md-3,
+      .col-md-2,
+      .col-md-1,
+      .col-sm,
+      .col-sm-auto,
+      .col-sm-12,
+      .col-sm-11,
+      .col-sm-10,
+      .col-sm-9,
+      .col-sm-8,
+      .col-sm-7,
+      .col-sm-6,
+      .col-sm-5,
+      .col-sm-4,
+      .col-sm-3,
+      .col-sm-2,
+      .col-sm-1,
+      .col,
+      .col-auto,
+      .col-12,
+      .col-11,
+      .col-10,
+      .col-9,
+      .col-8,
+      .col-7,
+      .col-6,
+      .col-5,
+      .col-4,
+      .col-3,
+      .col-2,
+      .col-1 {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+    }
+
+    // default light theme
+
+    .default-light-color {
+      @extend .theme_spaces;
+      @import "./assets/sass/themes/light-colors/light_default";
+    }
+
+    // .greenny-light-color {
+    //   @extend .theme_spaces;
+    //   @import "./assets/sass/themes/light-colors/light_green";
+    // }
+
+    // .pink-light-color {
+    //   @extend .theme_spaces;
+    //   @import "./assets/sass/themes/light-colors/light_pink";
+    // }
+    // .deeporange-light-color {
+    //   @extend .theme_spaces;
+    //   @import "./assets/sass/themes/light-colors/light_deep_orange";
+    // }
+
+    // .purple-light-color {
+    //   @extend .theme_spaces;
+    //   @import "./assets/sass/themes/light-colors/light_purple";
+    // }
+    // .amber-light-color {
+    //   @extend .theme_spaces;
+    //   @import "./assets/sass/themes/light-colors/light_amber";
+    // }
+
+    // dark thmes
+    .default-dark-color {
+      @import "./assets/sass/themes/dark-colors/dark_default";
+    }
+
+    // .pink-dark-color {
+    //   @import "./assets/sass/themes/dark-colors/dark_pink";
+    // }
+
+    // .greenny-dark-color {
+    //   @import "./assets/sass/themes/dark-colors/dark_green";
+    // }
+
+    // .deeporange-dark-color {
+    //   @import "./assets/sass/themes/dark-colors/dark_deep_orange";
+    // }
+
+    // .purple-dark-color {
+    //   @import "./assets/sass/themes/dark-colors/dark_purple";
+    // }
+    // .amber-dark-color {
+    //   @import "./assets/sass/themes/dark-colors/dark_amber";
+    // }
+  }
+}
+/*Mobile*/
+@media (max-width: 768px) {
+  html body {
+    font-family: "Roboto", sans-serif;
+    font-size: 60.5% !important;
+    margin: 0 !important;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  html body {
+    font-family: "Roboto", sans-serif;
+    font-size: 60.5% !important;
+    margin: 0 !important;
+  }
+}

@@ -1,0 +1,35 @@
+<div class="card custom-card">
+  <div class="card-body">
+    <div class="text-center m-b-8">
+      <h6 class="m-b-16">{{ tile.title }}</h6>
+      <h3 class="">$ {{ tile.value }}</h3>
+      <div class="d-flex justify-content-center align-items-center">
+        <span
+          *ngIf="tile.isUpgrade"
+          [ngClass]="{ 'text-success': tile.isUpgrade }"
+          class="material-icons-outlined icon-20"
+        >
+          arrow_upward
+        </span>
+        <span
+          *ngIf="!tile.isUpgrade"
+          [ngClass]="{ 'text-danger': !tile.isUpgrade }"
+          class="material-icons-outlined icon-20"
+        >
+          arrow_downward
+        </span>
+        <p class="text-muted m-b-0 m-l-8">
+          <span class="">{{ tile.update_data }}%</span> In this year
+        </p>
+      </div>
+    </div>
+    <div class="m-b-4">
+      <progressbar
+        [value]="tile.update_data"
+        [type]="tile.bar_color"
+        max="100"
+        style="height: 10px"
+      ></progressbar>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+<div class="">
+  <!-- basic CARD  -->
+  <div class="row">
+    <ng-container *ngFor="let defaultCard of cardWidgits">
+      <div class="col-lg-4 grid-bottom">
+        <app-card-widgit [basicCard]="defaultCard"></app-card-widgit>
+      </div>
+    </ng-container>
+  </div>
+  <!--Progress bar card-tiles -->
+  <div class="row">
+    <ng-container *ngFor="let progress of progressbarTile">
+      <div class="col-lg-3 col-md-6 col-sm-6 grid-bottom">
+        <app-progress-bar-widgit
+          [progressCard]="progress"
+        ></app-progress-bar-widgit>
+      </div>
+    </ng-container>
+  </div>
+  <!-- news Data card tile -->
+  <div class="row">
+    <ng-container *ngFor="let news of newsData">
+      <div class="col-lg-3 col-md-6 col-sm-6 grid-bottom">
+        <app-news-widgit [newsWidgit]="news"></app-news-widgit>
+      </div>
+    </ng-container>
+  </div>
+  <!-- weather widgit -->
+  <div class="">
+    <app-weather-widgit></app-weather-widgit>
+  </div>
+  <!-- widgit with background -->
+  <div class="row">
+    <ng-container *ngFor="let bgtile of bgTile">
+      <div class="col-lg-3 col-md-6 col-sm-6 grid-bottom">
+        <app-widgit-bg [bgWidgit]="bgtile"></app-widgit-bg>
+      </div>
+    </ng-container>
+  </div>
+  <!-- Social card Widgit -->
+  <div class="row">
+    <ng-container *ngFor="let social of socialList">
+      <div class="col-lg-3 col-md-6 col-sm-6 grid-bottom">
+        <app-social-actions-widgit [socialWidgit]="social">
+        </app-social-actions-widgit>
+      </div>
+    </ng-container>
+  </div>
+  <!-- border-card widgit -->
+  <div class="">
+    <app-center-widgit></app-center-widgit>
+  </div>
+
+  <!-- progress bar Center tile  -->
+  <div class="row">
+    <ng-container *ngFor="let progressSecond of centerProgressWidgit">
+      <div class="col-lg-3 col-md-6 col-sm-6 grid-bottom">
+        <app-progress-center-widgit
+          [centerProgress]="progressSecond"
+        ></app-progress-center-widgit>
+      </div>
+    </ng-container>
+  </div>
+  <!-- Dashboard  tile widget  -->
+  <div class="row">
+    <ng-container *ngFor="let dashboardWidgit of dashboardWidgit">
+      <div class="col-lg-3 col-md-6 col-sm-6 grid-bottom">
+        <app-dashboard-tile-widgit
+          [dashboardWidgit]="dashboardWidgit"
+        ></app-dashboard-tile-widgit>
+      </div>
+    </ng-container>
+  </div>
+</div>

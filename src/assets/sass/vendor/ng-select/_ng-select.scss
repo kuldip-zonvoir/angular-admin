@@ -1,0 +1,140 @@
+.p-component {
+  font-family: $font-family;
+}
+.filter-label {
+  font-size: 12px;
+  color: $muteColor;
+  line-height: 12px;
+}
+
+.ng-select-container {
+  height: auto;
+  padding: 0px; //\scrumfilter
+  font-size: $inputTextSize;
+  font-weight: 400;
+  border: 1px solid $border-color !important;
+  outline: 0;
+  border-radius: 4px;
+  background-color: $background-color !important;
+  color: lighten($color: $text-color, $amount: 5%);
+  .ng-value-container {
+    .ng-value {
+      background-color: transparent !important;
+    }
+  }
+}
+.ng-dropdown-panel {
+  z-index: 8;
+  border: 0;
+  box-shadow: $boxShadow-lg;
+}
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected,
+.ng-dropdown-panel
+  .ng-dropdown-panel-items
+  .ng-option.ng-option-selected.ng-option-marked {
+  background-color: $primary-light;
+  color: $primary;
+  font-size: $inputTextSize !important;
+}
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+  background-color: $background-color !important;
+  cursor: pointer;
+  color: $text-color;
+  font-size: $inputTextSize !important;
+  &:hover {
+    background-color: $primary-light;
+    color: $primary !important;
+  }
+  input {
+    margin-right: 5px;
+  }
+}
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option .ng-option-marked {
+  background-color: $primary-light;
+  color: $primary !important;
+  font-size: $inputTextSize !important;
+  &:hover {
+    background-color: $primary-light;
+    color: $primary !important;
+  }
+}
+.select-dropdown {
+  .ng-select-container {
+    width: 100%;
+    min-height: auto;
+    height: auto;
+    padding: 10px;
+    font-size: $inputTextSize;
+    font-weight: 400;
+    z-index: 5;
+    background-color: $background-color;
+  }
+  .ng-value-container {
+    width: 100%;
+    padding: 0 5px 0 5px;
+    display: inline-block !important;
+  }
+  .ng-value-label {
+    font-size: $inputTextSize;
+  }
+  .ng-value {
+    overflow: inherit !important;
+    text-overflow: inherit !important;
+    white-space: inherit !important;
+  }
+  .ng-input {
+    position: relative !important;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 0;
+    color: $text-color;
+    background-color: $background-color;
+    input {
+      display: none;
+    }
+  }
+  .ng-clear-wrapper {
+    display: none;
+  }
+}
+.category-dropdown {
+  @extend .select-dropdown;
+  .ng-select-container {
+    width: 165px !important;
+  }
+}
+.form-ng-select {
+  width: inherit !important;
+  .custom-ng-select-dropdown {
+    @extend .select-dropdown;
+    width: inherit !important;
+  }
+}
+.coupon-dropdown {
+  @extend .select-dropdown;
+  .ng-select-container {
+    width: 100px !important;
+  }
+}
+.numbers-dropdown {
+  @extend .select-dropdown;
+  .ng-select-container {
+    width: 90px !important;
+  }
+}
+.control-ng-select-width {
+  .category-dropdown {
+    .ng-select-container {
+      width: 100% !important;
+    }
+  }
+}
+// for Mobile Portrait Mode
+@include responsive-below(md) {
+  .filter-label {
+    display: none;
+  }
+}
+// For Mobile Landscape Mode
+@include responsive-between(sm, md) {
+}

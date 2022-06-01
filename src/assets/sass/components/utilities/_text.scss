@@ -1,0 +1,246 @@
+// light-bg
+@each $name, $color in $theme-light-colors {
+  .bg-light-#{name} {
+    background-color: $color;
+  }
+  .bg-body#{name} {
+    background-color: $color;
+    color: theme-text-colors($name);
+  }
+}
+
+@each $name, $color in $active-colors {
+  .active-custom-text-#{$name} {
+    background-color: $color;
+  }
+}
+
+@each $name, $color in $active-light-colors {
+  .active-text-#{$name} {
+    .nav_link {
+      &.active {
+        background-color: $color !important;
+        color: map-get($active-colors, $name) !important;
+
+        &:hover {
+          color: map-get($active-colors, $name) !important;
+        }
+      }
+      &:hover {
+        color: map-get($active-colors, $name) !important;
+      }
+    }
+    .subnav_nav_link {
+      color: map-get($active-colors, $name) !important;
+      &:hover {
+        color: map-get($active-colors, $name) !important;
+      }
+
+      &.active {
+        $color: map-get($active-colors, $name) !important;
+        color: $color;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 2px;
+          height: 2px;
+          border-radius: 50%;
+          top: 10px;
+          left: 33px;
+          padding: 2px;
+          border: 2px solid map-get($active-colors, $name) !important;
+          background-color: $background-color;
+        }
+      }
+    }
+  }
+}
+
+@each $name, $colors in $custom-colors {
+  .sidebar-#{$name} {
+    background-image: $colors;
+    .nav_link {
+      color: #d2d8e4 !important;
+    }
+    .nav_title {
+      .heading {
+        color: #ffffff;
+      }
+    }
+    .subnav_nav_link {
+      color: #d2d8e4 !important;
+    }
+    ._close_btn_modal {
+      color: #ffffff;
+    }
+  }
+
+  .brand-#{$name} {
+    background-image: $colors;
+
+    .brand-heading {
+      color: $white !important;
+    }
+  }
+  .brand-header {
+    .brand-#{$name} {
+      ._close_btn_modal {
+        color: #ffffff !important;
+      }
+    }
+  }
+
+  .header-#{$name} {
+    background-image: $colors;
+    .herader_menu_toggle a span {
+      color: #ffffff !important;
+    }
+  }
+  .mobile-header,
+  .tablet-header {
+    &.header-#{$name} {
+      .menu-wrapper a .menu_icon_mob,
+      .mob_search_icon {
+        color: #ffffff !important;
+      }
+      .brand_mob_menu {
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+@mixin text-bg($bg, $colorname) {
+  background: $bg;
+
+  @if map-has-key($theme-colors, $colorname) {
+    // Get the breakpoint value.
+    $color-value: map-get($theme-colors, $colorname);
+    color: $color-value !important;
+  }
+}
+
+@each $name, $color in $theme-light-colors {
+  .text-light-#{$name} {
+    @include text-bg($color, $name);
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+@each $name, $color in $theme-colors {
+  .text-hover-#{$name} {
+    &:hover {
+      color: $color !important;
+    }
+  }
+}
+@each $name, $color in $theme-colors {
+  .border-top-#{$name} {
+    border-top: 1px solid $color;
+  }
+  .border-top-3-#{$name} {
+    border-top: 3px solid $color;
+  }
+
+  .border-bottom-#{$name} {
+    border-bottom: 1px solid $color;
+  }
+
+  .border-left-#{$name} {
+    border-left: 1px solid $color;
+  }
+
+  .border-right-#{$name} {
+    border-right: 1px solid $color;
+  }
+}
+
+.custom-badge {
+  padding: 5px 0px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+//border
+.border-1 {
+  border-bottom: 1px solid $border-color;
+}
+
+.no-border {
+  border: 0;
+}
+.raduis-none {
+  border-radius: 0 !important;
+}
+
+.no-outline {
+  outline: none;
+}
+
+.border-left-1 {
+  border-left: 1px solid $border-color;
+}
+
+.border-left-3 {
+  border-left: 3px solid $info;
+}
+
+.border-top-1 {
+  border-top: 1px solid $border-color;
+}
+
+.border-right-1 {
+  border-right: 1px solid $border-color;
+}
+@each $name, $color in $theme-light-colors {
+  .bg-light-#{$name} {
+    background-color: $color;
+  }
+}
+// social media colors
+@each $socialname, $sociallist in $social-colors {
+  @each $name, $color in $sociallist {
+    @if ($name == "base") {
+      .#{$socialname}-#{$name} {
+        color: $color;
+        @if ($name == "hover") {
+          &:hover {
+            color: $color;
+          }
+        }
+      }
+    }
+  }
+}
+.badge-tag {
+  font-size: 10px;
+  font-weight: 400;
+  padding: 8px;
+  border-radius: 10px;
+  line-height: 5px;
+  white-space: nowrap;
+}
+.text-bold {
+  color: $text-color !important;
+}
+
+.text-muted {
+  color: $muteColor !important;
+}
+p {
+  font-size: 13px;
+}
+.span_text {
+  font-size: 13px;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.overflow_hidden {
+  overflow: hidden;
+}
+.bg-transparent {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0px 0px 0px 10px rgb(255 255 255 / 10%);
+}

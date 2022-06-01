@@ -1,0 +1,168 @@
+<div class="card custom-card card-stretch">
+  <div
+    class="
+      card-header
+      d-flex
+      justify-content-between
+      align-items-center
+      custom-card-header
+      border-1
+    "
+  >
+    <div class="card-title m-b-0">
+      <h5 class="card-label m-b-0">Card Columns</h5>
+    </div>
+    <div class="code">
+      <button
+        class="btn d-flex align-items-center btn-outline-primary"
+        (click)="showCode = !showCode"
+      >
+        <span *ngIf="!showCode" class="material-icons icon-20 m-r-8">
+          code
+        </span>
+        <span *ngIf="showCode" class="material-icons icon-20 m-r-8">
+          code_off
+        </span>
+        code
+      </button>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="content zp-12">
+      <div class="card-columns">
+        <div class="card card-section">
+          <img
+            class="card-img-top"
+            src="assets/media/images/other/placeholder.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title that wraps to a new line</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+          </div>
+        </div>
+        <div class="card card-section zp-12">
+          <blockquote class="blockquote m-b-0 card-body">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+              posuere erat a ante.
+            </p>
+            <footer class="blockquote-footer">
+              <small class="text-muted">
+                Someone famous in <cite title="Source Title">Source Title</cite>
+              </small>
+            </footer>
+          </blockquote>
+        </div>
+        <div class="card card-section">
+          <img
+            class="card-img-top"
+            src="assets/media/images/other/placeholder.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This card has supporting text below as a natural lead-in to
+              additional content.
+            </p>
+            <p class="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+        <div class="card card-section bg-primary text-white text-center zp-12">
+          <blockquote class="blockquote m-b-0">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+              posuere erat.
+            </p>
+            <footer class="blockquote-footer">
+              <small>
+                Someone famous in <cite title="Source Title">Source Title</cite>
+              </small>
+            </footer>
+          </blockquote>
+        </div>
+        <div class="card card-section text-center">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This card has supporting text below as a natural lead-in to
+              additional content.
+            </p>
+            <p class="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+        <div class="card card-section">
+          <img
+            class="card-img"
+            src="assets/media/images/other/placeholder.png"
+            alt="Card image"
+          />
+        </div>
+        <div class="card card-section zp-12 text-right">
+          <blockquote class="blockquote m-b-0">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+              posuere erat a ante.
+            </p>
+            <footer class="blockquote-footer">
+              <small class="text-muted">
+                Someone famous in <cite title="Source Title">Source Title</cite>
+              </small>
+            </footer>
+          </blockquote>
+        </div>
+        <div class="card card-section">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This card has even longer content
+              than the first to show that equal height action.
+            </p>
+            <p class="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div [collapse]="!showCode" [isAnimated]="true" class="code_container">
+        <div class="nav_bar w-100">
+          <ul>
+            <li>
+              <a [ngClass]="{ active: tabId === '0' }" (click)="tabToggle('0')">
+                HTML
+              </a>
+            </li>
+            <li>
+              <a [ngClass]="{ active: tabId === '1' }" (click)="tabToggle('1')">
+                TS
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- code -->
+        <ng-template [ngIf]="tabId === '0'">
+          <pre class="m-b-0">
+            <code [highlight]="htmlcode" (highlighted)="onHighlight($event)" [lineNumbers]="true">
+            </code>
+          </pre>
+        </ng-template>
+        <ng-template [ngIf]="tabId === '1'">
+          <pre class="m-b-0">
+            <code [highlight]="tscode" (highlighted)="onHighlight($event)" [lineNumbers]="true">
+            </code>
+          </pre>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

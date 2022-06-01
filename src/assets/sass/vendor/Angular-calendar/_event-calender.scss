@@ -1,0 +1,389 @@
+// full calender
+.cal_agend_scroll {
+  height: 56vh;
+
+  cursor: pointer;
+  overflow-y: auto;
+  overflow-x: hidden;
+  @include scrollbar($width: 0.3rem, $border-radius: 0.5rem);
+  &:hover {
+    @include scrollbar(
+      $width: 0.3rem,
+      $border-radius: 0.5rem,
+      $background-color: $scrollbarColor
+    );
+  }
+}
+.main_heading_cal {
+  margin-bottom: 20px;
+}
+.cal_event_padding {
+  padding-right: 2px !important;
+}
+.calfull_grid_padding {
+  padding-left: 2px !important;
+}
+.cal_evt_list {
+  margin: 0;
+  padding-left: 0;
+  .cal_evt_name {
+    list-style: none;
+  }
+}
+.event_wrap {
+  margin-bottom: 16px;
+}
+.cal_custom_checkbox {
+  margin-bottom: 16px;
+}
+.basic_evt_info {
+  display: flex;
+  padding-bottom: 20px;
+  &:last-child {
+    padding-bottom: 0px;
+  }
+  .symbol_wrap {
+    width: 12%;
+  }
+  .evt_info_detail {
+    width: 70%;
+    .evt_ext_detl {
+      font-size: 14px;
+      text-transform: capitalize;
+      font-weight: 500;
+      color: #626366;
+    }
+  }
+  .evt_info_action {
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-around;
+  }
+}
+.agnda_evt_info {
+  display: flex;
+  width: 100%;
+  margin-bottom: 12px;
+  padding-right: 8px;
+  .symbol_wrap {
+    width: 17%;
+  }
+  .agnda_info_detail {
+    width: 83%;
+    .agenda_list_item {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      background-color: $fc_calender;
+      border: 1px solid $border-color2;
+    }
+  }
+}
+// full calender
+mwl-calendar-week-view {
+  .cal-week-view {
+    background-color: $background-color !important;
+
+    .cal-hour-odd {
+      background-color: inherit !important;
+    }
+
+    .cal-today {
+      background-color: $hoverColor;
+    }
+
+    .cal-header {
+      .cal-weekend {
+        color: $danger !important;
+
+        span {
+          color: $danger !important;
+        }
+      }
+
+      &:hover {
+        background-color: darken(
+          $color: $background-color,
+          $amount: 15%
+        ) !important;
+      }
+    }
+
+    .cal-hour-segment {
+      &:hover {
+        background-color: darken(
+          $color: $background-color,
+          $amount: 15%
+        ) !important;
+      }
+    }
+  }
+
+  mwl-calendar-week-view-header {
+    .cal-header:not(:last-child) {
+      &:focus {
+        outline: inherit;
+        border: 0 !important;
+      }
+    }
+
+    .cal-day-headers {
+      .cal-header {
+        b {
+          font-size: 1rem !important;
+        }
+      }
+    }
+
+    .cal-weekend {
+      &:focus {
+        outline: inherit;
+        border: 0 !important;
+      }
+    }
+
+    .cal-week-view .cal-day-headers .cal-week-view {
+      background-color: $background-color;
+
+      .cal-day-headers {
+        .cal-header {
+          font-size: 1rem !important;
+
+          &:focus {
+            outline: inherit;
+            border: 0 !important;
+          }
+        }
+
+        .cal-header:not(:last-child) {
+          &:focus {
+            outline: inherit;
+            border: 0 !important;
+          }
+        }
+      }
+    }
+
+    &:focus {
+      outline: inherit;
+      border: 0 !important;
+    }
+  }
+
+  mwl-calendar-week-view-event {
+    .cal-week-view {
+      &:focus {
+        outline: inherit;
+        border: 0 !important;
+      }
+    }
+
+    .cal-all-day-events {
+      &:focus {
+        outline: inherit;
+        border: 0 !important;
+      }
+    }
+
+    .cal-ends-within-week {
+      &:focus {
+        outline: inherit;
+        border: 0 !important;
+      }
+    }
+
+    .cal-event {
+      &:focus {
+        outline: inherit;
+        border: 0 !important;
+      }
+    }
+
+    .cal-week-view {
+      &:focus {
+        outline: inherit;
+        border: 0 !important;
+      }
+    }
+
+    &:focus {
+      outline: inherit;
+      border: 0 !important;
+    }
+  }
+}
+
+mwl-calendar-month-view {
+  background-color: $background-color !important;
+  .cal-month-view {
+    background-color: $background-color !important;
+  }
+  border-right: 1px solid;
+
+  .cal-days {
+    border: 1px solid $border-color;
+    .cal-cell-row {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+  .cal-day-cell {
+    &:not(:last-child) {
+      border-right: 1px solid $border-color;
+    }
+  }
+  .cal-month-view {
+    background-color: $background-color;
+    color: $text-color;
+
+    .cal-event-title {
+      &:focus {
+        outline: inherit;
+        border: 1px solid $primary !important;
+      }
+    }
+
+    .cal-draggable {
+      outline: inherit;
+      border: 0;
+    }
+
+    mwl-calendar-event-title {
+      &:focus {
+        outline: inherit;
+        border: 0;
+      }
+    }
+
+    .cal-cell-row {
+      &:hover {
+        background-color: darken($color: $background-color, $amount: 10%);
+      }
+
+      .cal-cell {
+        font-size: 1rem;
+
+        &:hover {
+          background-color: darken($color: $background-color, $amount: 20%);
+        }
+      }
+    }
+
+    .cal-header .cal-cell {
+      &:focus {
+        outline: none;
+        border: 1px solid $primary !important;
+      }
+    }
+    .cal-day-cell.cal-today {
+      background-color: $hoverColor !important;
+      &:hover {
+        background-color: $hoverColor !important;
+      }
+    }
+    .cal-cell-top {
+      .cal-day-badge {
+        background-color: $primary;
+      }
+    }
+
+    .cal-day-cell.cal-weekend .cal-day-number {
+      color: $danger;
+    }
+
+    .cal-open-day-events {
+      background-color: $primary;
+      box-shadow: inherit;
+    }
+
+    .cal-day-badge {
+      background-color: $primary;
+    }
+  }
+}
+
+mwl-calendar-week-view-hour-segment {
+  .cal-time {
+    font-size: 1rem;
+  }
+}
+
+.flatpickr-calendar {
+  display: none !important;
+}
+.cal-day-cell.cal-today {
+}
+
+// for Mobile Portrait Mode
+@include responsive-below(md) {
+  .cal-month-view .cal-day-cell {
+    min-height: 80px;
+  }
+  .cal_event_padding {
+    display: none;
+  }
+  .calfull_grid_padding {
+    padding-left: 15px !important;
+  }
+}
+// For Mobile Landscape Mode
+@include responsive-between(sm, md) {
+  .cal_event_padding {
+    display: none;
+  }
+}
+// For tablet Portrait Mode
+@include responsive-between(md, lg) {
+  .cal_agend_scroll {
+    height: 19vh;
+
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include scrollbar($width: 0.3rem, $border-radius: 0.5rem);
+    &:hover {
+      @include scrollbar(
+        $width: 0.3rem,
+        $border-radius: 0.5rem,
+        $background-color: $scrollbarColor
+      );
+    }
+  }
+  .agnda_evt_info {
+    display: flex;
+    width: 100%;
+    margin-bottom: 12px;
+    padding-right: 8px;
+    .symbol_wrap {
+      width: 22%;
+    }
+    .agnda_info_detail {
+      width: 78%;
+      .agenda_list_item {
+        width: 100%;
+        padding: 8px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+// For tablet Landscape Mode
+@include responsive-between(lg, xl) {
+  .cal_agend_scroll {
+    height: 43vh;
+
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include scrollbar($width: 0.3rem, $border-radius: 0.5rem);
+    &:hover {
+      @include scrollbar(
+        $width: 0.3rem,
+        $border-radius: 0.5rem,
+        $background-color: $scrollbarColor
+      );
+    }
+  }
+}
+// For desktop Mode
+@include responsive-above(lg) {
+}

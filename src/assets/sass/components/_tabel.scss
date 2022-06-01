@@ -1,0 +1,221 @@
+.table-per-page {
+  display: none;
+}
+.table_hr_scroll {
+  width: calc(100%-10vw);
+  cursor: pointer;
+  overflow-y: hidden;
+  overflow-x: auto;
+
+  @include scrollbar($height: 0.5rem, $border-radius: 1rem);
+  &:hover {
+    @include scrollbar(
+      $height: 0.5rem,
+      $border-radius: 1rem,
+      $background-color: $scrollbarColor
+    );
+  }
+}
+// filters sections
+// Top Filters
+.top-filter-left {
+  display: flex;
+  align-items: center;
+}
+.top-filter-right {
+  margin-left: auto;
+}
+.top-filter-wrapper {
+  display: flex;
+  align-items: center;
+}
+// bottom-filters
+.filter-bottom-space {
+  margin-bottom: 0 !important;
+}
+.bottom-filter-left {
+  display: flex;
+  align-items: center;
+}
+.bottom-filter-right {
+  margin-left: auto;
+}
+.bottom-filter-wrapper {
+  display: flex;
+  align-items: center;
+}
+// tabel
+.td-data {
+  color: $tableThColor;
+  font-size: $tdFontsize;
+}
+
+.th-data {
+  color: $tableThColor;
+  font-size: $thFontsize;
+}
+
+.my_tabel {
+  padding-bottom: 5px;
+  thead {
+    tr {
+      th {
+        border-bottom: 2px solid $border-color2;
+        border-top: 0;
+        white-space: nowrap;
+        vertical-align: middle;
+        padding: 14px 10px;
+        background-color: $tableThBGColor;
+        .t_title {
+          font-size: $thFontsize;
+          color: $tableThColor;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        vertical-align: middle;
+        padding: 0.5rem 0.75rem;
+        white-space: nowrap;
+        border-bottom: 1px solid $border-color;
+
+        .tabelcell {
+          color: $tableTdColor;
+          font-size: $tdFontsize;
+          vertical-align: middle;
+        }
+        .tabelcell_status {
+          @extend .tabelcell;
+          font-size: 12px;
+          box-shadow: $boxShadow-lg;
+          font-weight: 500;
+          display: inline-block;
+          text-align: center;
+        }
+      }
+
+      &:hover {
+        background-color: $hoverColor;
+        cursor: pointer;
+        color: $text-color;
+      }
+    }
+  }
+}
+
+// for Mobile Prtrait Mode Mode
+@include responsive-below(md) {
+  .filter-bottom-space {
+    margin-bottom: 12px !important;
+  }
+  .bottom-filter-wrapper {
+    display: block;
+    .bottom-filter-left {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .bottom-filter-right {
+    }
+  }
+  .top-filter-wrapper {
+    display: block;
+    .top-filter-left {
+      margin-bottom: 12px;
+    }
+    .top-filter-right {
+      text-align: left;
+    }
+  }
+}
+// for Mobile Landscape Mode
+@include responsive-between(sm, md) {
+  .filter-bottom-space {
+    margin-bottom: 12px !important;
+  }
+  .bottom-filter-wrapper {
+    display: flex;
+    align-items: center;
+    .bottom-filter-left {
+      display: inherit;
+      align-items: center;
+    }
+    .top-filter-right {
+      margin-left: auto;
+    }
+  }
+  .top-filter-wrapper {
+    display: flex;
+    align-items: center;
+    .top-filter-left {
+      display: inherit;
+      align-items: center;
+      margin-bottom: 0;
+    }
+    .top-filter-right {
+      margin-left: auto;
+    }
+  }
+}
+// For tablet Portrait Mode
+@include responsive-between(md, lg) {
+  .filter-bottom-space {
+    margin-bottom: 0 !important;
+  }
+  .bottom-filter-wrapper {
+    display: flex;
+    align-items: center;
+    .bottom-filter-left {
+      display: inherit;
+      align-items: center;
+    }
+    .top-filter-right {
+      margin-left: auto;
+    }
+  }
+  .top-filter-wrapper {
+    display: flex;
+    align-items: center;
+    .top-filter-left {
+      display: inherit;
+      align-items: center;
+      margin-bottom: 0;
+    }
+    .top-filter-right {
+      margin-left: auto;
+    }
+  }
+}
+// For tablet Landscape Mode
+@include responsive-between(lg, xl) {
+  .filter-bottom-space {
+    margin-bottom: 0 !important;
+  }
+  .bottom-filter-wrapper {
+    display: flex;
+    align-items: center;
+    .bottom-filter-left {
+      display: inherit;
+      align-items: center;
+    }
+    .top-filter-right {
+      margin-left: auto;
+    }
+  }
+  .top-filter-wrapper {
+    display: flex;
+    align-items: center;
+    .top-filter-left {
+      display: inherit;
+      align-items: center;
+      margin-bottom: 0;
+    }
+    .top-filter-right {
+      margin-left: auto;
+    }
+  }
+}

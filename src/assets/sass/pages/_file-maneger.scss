@@ -1,0 +1,166 @@
+// task manager
+.task_naming {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .boardtask_details {
+    width: 80%;
+    .tttss_title {
+      margin-bottom: 5px;
+    }
+    .kk_task_name {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+  .avt_space {
+    width: 20%;
+  }
+}
+.active-note {
+  text-decoration: none;
+  color: $primary;
+  background-color: $primary-light;
+  .filll {
+    color: $primary !important;
+  }
+  .list-name {
+    color: $primary;
+  }
+}
+.file_mana_link {
+  text-decoration: none;
+  color: $heading-color;
+  cursor: pointer;
+  border-radius: 0 20px 20px 0;
+  &:hover {
+    text-decoration: none;
+    color: $primary;
+    background-color: $primary-light;
+    .filll {
+      color: $primary !important;
+    }
+    .list-name {
+      color: $primary;
+    }
+  }
+}
+@each $name, $color in $theme-light-colors {
+  .icon_avtar-#{$name} {
+    display: inline-block;
+    text-align: center;
+    @include logo-icon(2.5rem, $circle: true);
+    @include bg-colors($color, $name);
+  }
+}
+
+.file_name {
+  min-height: 35px;
+}
+.tag {
+  padding: 0.125rem 0.625rem;
+  color: $white;
+  border-radius: 0.188rem;
+  font-size: 0.75rem;
+  left: 6.5rem;
+  bottom: 5rem;
+  position: absolute;
+}
+.profile_widgit {
+  border-radius: 50%;
+  background-color: #d5d3d647;
+}
+.file_manager_scroll {
+  height: 72vh;
+  cursor: pointer;
+  overflow-y: auto;
+  overflow-x: hidden;
+  @include scrollbar($width: 4px, $border-radius: 2px);
+  &:hover {
+    @include scrollbar(
+      $width: 8px,
+      $border-radius: 2px,
+      $background-color: $scrollbarColor
+    );
+  }
+}
+@include responsive-between(sm, md) {
+  .k_title_name {
+    display: none;
+  }
+  .desktop_filemaneger {
+    display: none;
+  }
+}
+
+@include responsive-between(lg, xl) {
+}
+
+@include responsive-between(md, lg) {
+}
+
+@include responsive-below(md) {
+  .task_naming {
+    display: block;
+    text-align: center;
+    .boardtask_details {
+      width: auto;
+      padding-top: 10px;
+      .tttss_title {
+        margin-bottom: 5px;
+      }
+      .kk_task_name {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+    .avt_space {
+      width: auto;
+    }
+  }
+  .k_mobile_filemanager {
+    background-color: $background-color;
+    padding: 10px;
+  }
+  .desktop_filemaneger {
+    display: none;
+  }
+  .k_title_name {
+    display: none;
+  }
+  .file-manager {
+    .big-icon {
+      font-size: 5rem;
+      color: #b5b5c3;
+      position: relative;
+    }
+
+    .tag {
+      padding: 0.125rem 0.625rem;
+      color: $white;
+      border-radius: 0.188rem;
+      font-size: 0.75rem;
+      left: 8rem;
+      bottom: 5rem;
+      position: absolute;
+    }
+  }
+}
+// For tablet Portrait Mode
+@include responsive-between(md, lg) {
+  .app_toggle {
+    display: none;
+  }
+}
+// For tablet Landscape Mode
+@include responsive-between(lg, xl) {
+  .app_toggle {
+    display: none;
+  }
+}
+// For Desktop Mode
+@include responsive-above(xl) {
+  .app_toggle {
+    display: none;
+  }
+}

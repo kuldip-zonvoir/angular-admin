@@ -1,0 +1,65 @@
+<h4 class="m-b-0 p-y-12 text-center">Frequevently Asked Questions</h4>
+
+<div class="row kfaq_wrapper">
+  <div class="col-lg-6 kfaq">
+    <div class="">
+      <ul class="custom-accordian" *ngFor="let step of faqs1; let i = index">
+        <li
+          [ngClass]="{ 'accordion-active': isAccordionArr[i] }"
+          class="custom-accordian-list custom-card"
+          (click)="openAccordion(i)"
+        >
+          <div class="d-flex align-items-center justify-content-between">
+            <h5 class="m-b-0">
+              <span>{{ i + 1 }}</span
+              >. {{ step.title }}
+            </h5>
+            <p class="m-b-0 accordion-title zp-5"></p>
+          </div>
+
+          <div
+            [collapse]="!isAccordionArr[i]"
+            [isAnimated]="true"
+            class="custom-accordian-content"
+          >
+            <div class="p-t-12">
+              <p class="text-muted">{{ step.para1 }}</p>
+              <p class="text-muted">{{ step.para2 }}</p>
+              <p class="text-muted">{{ step.para3 }}</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="">
+      <ul class="custom-accordian" *ngFor="let step of faqs2; let i = index">
+        <li
+          [ngClass]="{ 'accordion-active': isUseAccordionArr[i] }"
+          class="custom-accordian-list custom-card"
+          (click)="openUseAccordion(i)"
+        >
+          <div class="d-flex align-items-center justify-content-between">
+            <h5 class="m-b-0">
+              <span>{{ i + 1 }}</span
+              >. {{ step.title }}
+            </h5>
+            <p class="m-b-0 accordion-title zp-5"></p>
+          </div>
+          <div
+            [collapse]="!isUseAccordionArr[i]"
+            [isAnimated]="true"
+            class="custom-accordian-content"
+          >
+            <div class="p-t-12">
+              <p class="text-muted">{{ step.para1 }}</p>
+              <p class="text-muted">{{ step.para2 }}</p>
+              <p class="text-muted">{{ step.para3 }}</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

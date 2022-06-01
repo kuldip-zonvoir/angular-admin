@@ -1,0 +1,17 @@
+<div class="card custom-card">
+  <div class="card-header custom-card-header p-b-0">
+    <h4 class="card-title m-b-0">Controls</h4>
+    <p class="sub-title text-muted mb-0">
+      use class <span class="text-danger"> .cc icon-name</span> in i tag
+    </p>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <ng-container *ngFor="let icon of cc_Icons">
+        <div class="col-md-4 col-lg-3 col-3 col-sm-3 m-b-4">
+          <app-crypto-icon [iconbox]="icon"></app-crypto-icon>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

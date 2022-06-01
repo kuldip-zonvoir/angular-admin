@@ -1,0 +1,58 @@
+<div class="card-body">
+  <div class="main_heading_cal">
+    <h4 class="text-center">Calendar</h4>
+  </div>
+  <!-- list of Events -->
+  <div class="cal_list_wrap">
+    <div class="event_wrap">
+      <h5 class="">All Type Events</h5>
+    </div>
+    <ul class="cal_evt_list">
+      <li *ngFor="let evtType of eventTypes" class="cal_evt_name">
+        <div class="cal_custom_checkbox">
+          <div class="d-flex align-items-center">
+            <div class="form-check p-l-0">
+              <label class="container-checkbox">
+                <input type="checkbox" />
+                <span class="material-icons check-mark icon"> </span>
+              </label>
+            </div>
+            <span
+              [style.backgroundColor]="evtType.eventColor"
+              class="marker m-r-12"
+            ></span>
+            <h6 class="m-b-0 list-name">{{ evtType.type }}</h6>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="agenda_wrap">
+    <div class="event_wrap">
+      <h5 class="">Agenda</h5>
+    </div>
+    <div class="cal_agend_scroll">
+      <div *ngFor="let event of Events" class="agnda_evt_info">
+        <div class="symbol_wrap">
+          <span class="material-icons-outlined icon-20 icon-gray">
+            calendar_today
+          </span>
+        </div>
+        <div class="agnda_info_detail">
+          <h5 class="">{{ event.date }}</h5>
+
+          <div class="agenda_list_item">
+            <div class="d-flex align-items-center">
+              <span
+                [style.backgroundColor]="event.backgroundColor"
+                class="marker m-r-12"
+              ></span>
+              <h6 class="m-b-0">{{ event.title }}</h6>
+            </div>
+            <p class="m-b-0 evt_ext_detl p-t-2">11:00 AM - 2:00 PM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,271 @@
+<div class="card custom-card m-b-20">
+  <div class="card-body">
+    <div class="row">
+      <!-- Product Preview Image -->
+      <div class="col-lg-5 col-md-6 col-sm-6">
+        <div class="row m-b-8 product-preview-pics">
+          <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+            <div class="text-center">
+              <div class="preview-img-more-detial">
+                <div class="outline-xl m-b-8 m-r-8">
+                  <img
+                    src="assets/media/images/Products/chair.jpg"
+                    alt=""
+                    class="img-responsive no-radius logo-lg-rounded"
+                  />
+                </div>
+                <div class="outline-xl m-b-8 m-r-8">
+                  <img
+                    src="assets/media/images/Products/chair.jpg"
+                    alt=""
+                    class="img-responsive no-radius logo-lg-rounded"
+                  />
+                </div>
+                <div class="outline-xl m-b-8 m-r-8">
+                  <img
+                    src="assets/media/images/Products/chair.jpg"
+                    alt=""
+                    class="img-responsive no-radius logo-lg-rounded"
+                  />
+                </div>
+                <div class="outline-xl m-b-8 m-r-8">
+                  <img
+                    src="assets/media/images/Products/chair.jpg"
+                    alt=""
+                    class="img-responsive no-radius logo-lg-rounded"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-9 col-md-9 col-sm-12 col-12">
+            <div class="text-center edit-preview-img">
+              <img
+                src="assets/media/images/Products/chair.jpg"
+                alt=""
+                class="img-responsive edit-product-img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product Detail Section -->
+      <div class="col-lg-7 col-md-6 col-sm-6">
+        <div class="p-b-16">
+          <h5 class="m-b-0 fw-700 p-b-4">Rounded Chair</h5>
+          <div class="d-flex align-item-center">
+            <div class="m-r-8">
+              <span class="material-icons-outlined icon-16 text-warning"
+                >star</span
+              >
+              <span class="material-icons-outlined icon-16 text-warning"
+                >star</span
+              >
+              <span class="material-icons-outlined icon-16 text-warning"
+                >star</span
+              >
+              <span class="material-icons-outlined icon-16 text-warning"
+                >star</span
+              >
+              <span class="material-icons-outlined icon-16 text-warning"
+                >star_half</span
+              >
+            </div>
+            <div class="m-r-8">
+              <a class="m-b-0 decoration-none cursor-pointer text-primary fs-12"
+                >Review(10)</a
+              >
+            </div>
+            <div class="m-r-8">
+              <a class="m-b-0 decoration-none cursor-pointer text-primary fs-12"
+                >Write a review</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <p class="m-b-0 p-b-16">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum
+          dolor sit, amet consectetur adipisicing elit.
+        </p>
+        <h5 class="m-b-0 fw-700 p-b-12 text-danger">
+          $ 153 <small class="text-success">(36% off) </small>
+        </h5>
+        <h6 class="m-b-0 p-b-4">
+          Color : <span class="text-muted fs-12"> Select color </span>
+        </h6>
+        <div class="d-flex align-items-center p-b-12">
+          <div class="outline-circle m-r-12">
+            <span class="color-marker er bg-dark"></span>
+          </div>
+          <div class="outline-circle m-r-12">
+            <span class="color-marker er bg-success"></span>
+          </div>
+        </div>
+        <div class="d-flex align-items-center pb-4">
+          <div class="m-r-2 d-flex align-items-center">
+            <label for="" class="m-r-12">Quantity</label>
+            <div class="d-flex align-items-center">
+              <button
+                (click)="decreaseCount()"
+                class="btn d-flex align-items-center"
+              >
+                <span class="material-icons-outlined icon-20">remove</span>
+              </button>
+              <input
+                type="number"
+                name=""
+                [value]="countInitial"
+                class="form-control text-center fw-700 kw-60"
+                readonly
+              />
+              <button
+                (click)="increaseCount()"
+                class="btn d-flex align-items-center"
+              >
+                <span class="material-icons-outlined icon-20">add</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="p-b-16 d-flex align-items-center">
+          <button
+            (click)="buyProduct()"
+            class="btn btn-square btn-primary m-r-12"
+          >
+            Buy Now
+          </button>
+          <button class="btn btn-square btn-secondary">Add to Cart</button>
+        </div>
+
+        <div class="d-flex align-items-cenete">
+          <span class="material-icons-outlined m-r-12 icon-20">
+            card_giftcard
+          </span>
+          <a
+            (click)="showOffers()"
+            class="link-none m-b-0 cursor-pointer p-b-8"
+          >
+            offers
+          </a>
+        </div>
+        <div [collapse]="!isOffers" [isAnimated]="true" class="p-b-16">
+          <div class="d-flex align-items-center">
+            <div class="form-check pl-0">
+              <label class="container-checkbox fs-12 m-b-0"
+                >Get <strong>Free Returns and 5% in Reward</strong>
+                <input type="checkbox" />
+                <span class="material-icons check-mark icon-20"> </span>
+              </label>
+              <p class="text-muted m-b-0 p-b-8 fs-12">
+                Try zonvoir membership free for 30 Days after that $19.95/Year
+                <a href="" class="">Learn More</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <div class="d-flex align-items-cenete">
+            <span class="material-icons-outlined m-r-12 icon-20"> info </span>
+            <a
+              (click)="checkAwailabilty()"
+              class="text-primary link-none m-b-0 cursor-pointer p-b-8 fs-12"
+            >
+              Check Product Avalability
+            </a>
+          </div>
+          <div [collapse]="!show" [isAnimated]="true" class="">
+            <p class="text-muted m-b-0 p-b-8 fs-12">
+              Enter your pincode to check avialabilty
+            </p>
+            <div class="d-flex align-items-center">
+              <input
+                type="text"
+                placeholder="Enter Pincode"
+                class="form-control w-25"
+              />
+              <button class="btn btn-square btn-secondary m-l-12">
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Product Specification -->
+<div class="m-b-12">
+  <h5 class="">Product Specification</h5>
+</div>
+<div class="card custom-card m-b-20">
+  <div class="zp-15">
+    <div class="nav_bar w-100 border-1 m-b-12">
+      <ul class="w-100 d-flex">
+        <li class="p-x-12">
+          <a
+            class="h6 m-b-0"
+            [ngClass]="{ active: tabId === 'Specification' }"
+            (click)="changeTab('Specification')"
+          >
+            Product Specification
+          </a>
+        </li>
+        <li class="p-x-12">
+          <a
+            class="h6 m-b-0"
+            [ngClass]="{ active: tabId === 'Review' }"
+            (click)="changeTab('Review')"
+          >
+            Product Review
+          </a>
+        </li>
+        <li class="p-x-12">
+          <a
+            class="h6 m-b-0"
+            [ngClass]="{ active: tabId === 'Product Q&A' }"
+            (click)="changeTab('Product Q&A')"
+          >
+            Product Q&A
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="">
+      <ng-template [ngIf]="tabId === 'Specification'">
+        <div class="">
+          <app-product-specification></app-product-specification>
+        </div>
+      </ng-template>
+    </div>
+    <div class="">
+      <ng-template [ngIf]="tabId === 'Product Q&A'">
+        <div class="">
+          <app-product-faq></app-product-faq>
+        </div>
+      </ng-template>
+    </div>
+    <div class="">
+      <ng-template [ngIf]="tabId === 'Review'">
+        <div class="">
+          <app-product-review-ratting></app-product-review-ratting>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>
+<!-- Popular product users recenty buy -->
+<div class="">
+  <div class="m-b-12">
+    <h5 class="">Most Popular</h5>
+  </div>
+  <div class="row">
+    <ng-container *ngFor="let product of productList">
+      <div class="col-lg-3 col-md-4 col-sm-6 grid-bottom">
+        <div class="card custom-card">
+          <app-product-grid [products]="product"></app-product-grid>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

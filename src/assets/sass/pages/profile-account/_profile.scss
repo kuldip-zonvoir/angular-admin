@@ -1,0 +1,138 @@
+.cover-img {
+  height: 13rem;
+  object-fit: cover;
+}
+.profile_aka_account {
+  display: flex;
+  margin-bottom: 12px;
+  .profile_aka_pic {
+    margin-right: 20px;
+  }
+  .profile_aka_acc_info {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    .basic_info {
+      width: 75%;
+      .sub_heading {
+        font-size: 15px;
+        font-weight: 400;
+      }
+    }
+    .admins_info {
+      text-align: right;
+      .pill_badge {
+        margin-bottom: 5px;
+        border-radius: 5px;
+        font-weight: 500;
+        display: inline-block;
+        padding: 2px 5px;
+        text-align: center;
+      }
+    }
+  }
+}
+.profile-user-post {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+.kprofile_link {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px !important;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    color: $heading-color;
+    background-color: $primary-light;
+  }
+}
+.friend-contact {
+  margin-bottom: 24px;
+}
+.card-post-img {
+  width: 100%;
+  height: 15rem;
+}
+.user-profile {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 1rem;
+}
+
+.img-square-gallery {
+  width: 100%;
+  height: 8rem;
+}
+
+.mobile-nav {
+  padding: 0 10rem;
+}
+
+@include responsive-below(md) {
+  .cover-img {
+    height: 8rem;
+  }
+  .profile-user-post {
+    width: 100%;
+    height: 14rem;
+  }
+  .img-square-gallery {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .profile-dp {
+    display: none !important;
+  }
+
+  .mobile-nav {
+    padding: 0 !important;
+  }
+}
+
+@include responsive-between(sm, md) {
+  .profile-dp {
+    display: none !important;
+  }
+
+  .mobile-nav {
+    padding: 0 !important;
+  }
+
+  .img-square-gallery {
+    width: 9rem;
+    height: 8rem;
+  }
+}
+
+@include responsive-between(md, lg) {
+  .img-square-gallery {
+    width: 10rem;
+    height: 9rem;
+  }
+  .profile-user-post {
+    width: 100%;
+    height: 16rem;
+  }
+  .user-profile {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 1rem;
+  }
+}
+
+@include responsive-between(lg, xl) {
+  .img-square-gallery {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .user-profile {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 1rem;
+  }
+}

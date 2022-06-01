@@ -1,0 +1,2280 @@
+.wi-rotate-90 {
+  
+}
+.wi-rotate-180 {
+  
+}
+.wi-rotate-270 {
+  
+}
+.wi-flip-horizontal {
+  
+}
+.wi-flip-vertical {
+  
+}
+.wi-windF {
+  
+}
+.wi-wind.towards-0-deg {
+
+}
+.wi-wind.towards-1-deg {
+
+}
+.wi-wind.towards-2-deg {
+
+}
+.wi-wind.towards-3-deg {
+
+}
+.wi-wind.towards-4-deg {
+
+}
+.wi-wind.towards-5-deg {
+
+}
+.wi-wind.towards-6-deg {
+
+}
+.wi-wind.towards-7-deg {
+
+}
+.wi-wind.towards-8-deg {
+
+}
+.wi-wind.towards-9-deg {
+
+}
+.wi-wind.towards-10-deg {
+
+}
+.wi-wind.towards-11-deg {
+
+}
+.wi-wind.towards-12-deg {
+
+}
+.wi-wind.towards-13-deg {
+
+}
+.wi-wind.towards-14-deg {
+
+}
+.wi-wind.towards-15-deg {
+
+}
+.wi-wind.towards-16-deg {
+
+}
+.wi-wind.towards-17-deg {
+
+}
+.wi-wind.towards-18-deg {
+
+}
+.wi-wind.towards-19-deg {
+
+}
+.wi-wind.towards-20-deg {
+
+}
+.wi-wind.towards-21-deg {
+
+}
+.wi-wind.towards-22-deg {
+
+}
+.wi-wind.towards-23-deg {
+
+}
+.wi-wind.towards-24-deg {
+
+}
+.wi-wind.towards-25-deg {
+
+}
+.wi-wind.towards-26-deg {
+
+}
+.wi-wind.towards-27-deg {
+
+}
+.wi-wind.towards-28-deg {
+
+}
+.wi-wind.towards-29-deg {
+
+}
+.wi-wind.towards-30-deg {
+
+}
+.wi-wind.towards-31-deg {
+
+}
+.wi-wind.towards-32-deg {
+
+}
+.wi-wind.towards-33-deg {
+
+}
+.wi-wind.towards-34-deg {
+
+}
+.wi-wind.towards-35-deg {
+
+}
+.wi-wind.towards-36-deg {
+
+}
+.wi-wind.towards-37-deg {
+
+}
+.wi-wind.towards-38-deg {
+
+}
+.wi-wind.towards-39-deg {
+
+}
+.wi-wind.towards-40-deg {
+
+}
+.wi-wind.towards-41-deg {
+
+}
+.wi-wind.towards-42-deg {
+
+}
+.wi-wind.towards-43-deg {
+
+}
+.wi-wind.towards-44-deg {
+
+}
+.wi-wind.towards-45-deg {
+
+}
+.wi-wind.towards-46-deg {
+
+}
+.wi-wind.towards-47-deg {
+
+}
+.wi-wind.towards-48-deg {
+
+}
+.wi-wind.towards-49-deg {
+
+}
+.wi-wind.towards-50-deg {
+
+}
+.wi-wind.towards-51-deg {
+
+}
+.wi-wind.towards-52-deg {
+
+}
+.wi-wind.towards-53-deg {
+
+}
+.wi-wind.towards-54-deg {
+
+}
+.wi-wind.towards-55-deg {
+
+}
+.wi-wind.towards-56-deg {
+
+}
+.wi-wind.towards-57-deg {
+
+}
+.wi-wind.towards-58-deg {
+
+}
+.wi-wind.towards-59-deg {
+
+}
+.wi-wind.towards-60-deg {
+
+}
+.wi-wind.towards-61-deg {
+
+}
+.wi-wind.towards-62-deg {
+
+}
+.wi-wind.towards-63-deg {
+
+}
+.wi-wind.towards-64-deg {
+
+}
+.wi-wind.towards-65-deg {
+
+}
+.wi-wind.towards-66-deg {
+
+}
+.wi-wind.towards-67-deg {
+
+}
+.wi-wind.towards-68-deg {
+
+}
+.wi-wind.towards-69-deg {
+
+}
+.wi-wind.towards-70-deg {
+
+}
+.wi-wind.towards-71-deg {
+
+}
+.wi-wind.towards-72-deg {
+
+}
+.wi-wind.towards-73-deg {
+
+}
+.wi-wind.towards-74-deg {
+
+}
+.wi-wind.towards-75-deg {
+
+}
+.wi-wind.towards-76-deg {
+
+}
+.wi-wind.towards-77-deg {
+
+}
+.wi-wind.towards-78-deg {
+
+}
+.wi-wind.towards-79-deg {
+
+}
+.wi-wind.towards-80-deg {
+
+}
+.wi-wind.towards-81-deg {
+
+}
+.wi-wind.towards-82-deg {
+
+}
+.wi-wind.towards-83-deg {
+
+}
+.wi-wind.towards-84-deg {
+
+}
+.wi-wind.towards-85-deg {
+
+}
+.wi-wind.towards-86-deg {
+
+}
+.wi-wind.towards-87-deg {
+
+}
+.wi-wind.towards-88-deg {
+
+}
+.wi-wind.towards-89-deg {
+
+}
+.wi-wind.towards-90-deg {
+
+}
+.wi-wind.towards-91-deg {
+
+}
+.wi-wind.towards-92-deg {
+
+}
+.wi-wind.towards-93-deg {
+
+}
+.wi-wind.towards-94-deg {
+
+}
+.wi-wind.towards-95-deg {
+
+}
+.wi-wind.towards-96-deg {
+
+}
+.wi-wind.towards-97-deg {
+
+}
+.wi-wind.towards-98-deg {
+
+}
+.wi-wind.towards-99-deg {
+
+}
+.wi-wind.towards-100-deg {
+
+}
+.wi-wind.towards-101-deg {
+
+}
+.wi-wind.towards-102-deg {
+
+}
+.wi-wind.towards-103-deg {
+
+}
+.wi-wind.towards-104-deg {
+
+}
+.wi-wind.towards-105-deg {
+
+}
+.wi-wind.towards-106-deg {
+
+}
+.wi-wind.towards-107-deg {
+
+}
+.wi-wind.towards-108-deg {
+
+}
+.wi-wind.towards-109-deg {
+
+}
+.wi-wind.towards-110-deg {
+
+}
+.wi-wind.towards-111-deg {
+
+}
+.wi-wind.towards-112-deg {
+
+}
+.wi-wind.towards-113-deg {
+
+}
+.wi-wind.towards-114-deg {
+
+}
+.wi-wind.towards-115-deg {
+
+}
+.wi-wind.towards-116-deg {
+
+}
+.wi-wind.towards-117-deg {
+
+}
+.wi-wind.towards-118-deg {
+
+}
+.wi-wind.towards-119-deg {
+
+}
+.wi-wind.towards-120-deg {
+
+}
+.wi-wind.towards-121-deg {
+
+}
+.wi-wind.towards-122-deg {
+
+}
+.wi-wind.towards-123-deg {
+
+}
+.wi-wind.towards-124-deg {
+
+}
+.wi-wind.towards-125-deg {
+
+}
+.wi-wind.towards-126-deg {
+
+}
+.wi-wind.towards-127-deg {
+
+}
+.wi-wind.towards-128-deg {
+
+}
+.wi-wind.towards-129-deg {
+
+}
+.wi-wind.towards-130-deg {
+
+}
+.wi-wind.towards-131-deg {
+
+}
+.wi-wind.towards-132-deg {
+
+}
+.wi-wind.towards-133-deg {
+
+}
+.wi-wind.towards-134-deg {
+
+}
+.wi-wind.towards-135-deg {
+
+}
+.wi-wind.towards-136-deg {
+
+}
+.wi-wind.towards-137-deg {
+
+}
+.wi-wind.towards-138-deg {
+
+}
+.wi-wind.towards-139-deg {
+
+}
+.wi-wind.towards-140-deg {
+
+}
+.wi-wind.towards-141-deg {
+
+}
+.wi-wind.towards-142-deg {
+
+}
+.wi-wind.towards-143-deg {
+
+}
+.wi-wind.towards-144-deg {
+
+}
+.wi-wind.towards-145-deg {
+
+}
+.wi-wind.towards-146-deg {
+
+}
+.wi-wind.towards-147-deg {
+
+}
+.wi-wind.towards-148-deg {
+
+}
+.wi-wind.towards-149-deg {
+
+}
+.wi-wind.towards-150-deg {
+
+}
+.wi-wind.towards-151-deg {
+
+}
+.wi-wind.towards-152-deg {
+
+}
+.wi-wind.towards-153-deg {
+
+}
+.wi-wind.towards-154-deg {
+
+}
+.wi-wind.towards-155-deg {
+
+}
+.wi-wind.towards-156-deg {
+
+}
+.wi-wind.towards-157-deg {
+
+}
+.wi-wind.towards-158-deg {
+
+}
+.wi-wind.towards-159-deg {
+
+}
+.wi-wind.towards-160-deg {
+
+}
+.wi-wind.towards-161-deg {
+
+}
+.wi-wind.towards-162-deg {
+
+}
+.wi-wind.towards-163-deg {
+
+}
+.wi-wind.towards-164-deg {
+
+}
+.wi-wind.towards-165-deg {
+
+}
+.wi-wind.towards-166-deg {
+
+}
+.wi-wind.towards-167-deg {
+
+}
+.wi-wind.towards-168-deg {
+
+}
+.wi-wind.towards-169-deg {
+
+}
+.wi-wind.towards-170-deg {
+
+}
+.wi-wind.towards-171-deg {
+
+}
+.wi-wind.towards-172-deg {
+
+}
+.wi-wind.towards-173-deg {
+
+}
+.wi-wind.towards-174-deg {
+
+}
+.wi-wind.towards-175-deg {
+
+}
+.wi-wind.towards-176-deg {
+
+}
+.wi-wind.towards-177-deg {
+
+}
+.wi-wind.towards-178-deg {
+
+}
+.wi-wind.towards-179-deg {
+
+}
+.wi-wind.towards-180-deg {
+
+}
+.wi-wind.towards-181-deg {
+
+}
+.wi-wind.towards-182-deg {
+
+}
+.wi-wind.towards-183-deg {
+
+}
+.wi-wind.towards-184-deg {
+
+}
+.wi-wind.towards-185-deg {
+
+}
+.wi-wind.towards-186-deg {
+
+}
+.wi-wind.towards-187-deg {
+
+}
+.wi-wind.towards-188-deg {
+
+}
+.wi-wind.towards-189-deg {
+
+}
+.wi-wind.towards-190-deg {
+
+}
+.wi-wind.towards-191-deg {
+
+}
+.wi-wind.towards-192-deg {
+
+}
+.wi-wind.towards-193-deg {
+
+}
+.wi-wind.towards-194-deg {
+
+}
+.wi-wind.towards-195-deg {
+
+}
+.wi-wind.towards-196-deg {
+
+}
+.wi-wind.towards-197-deg {
+
+}
+.wi-wind.towards-198-deg {
+
+}
+.wi-wind.towards-199-deg {
+
+}
+.wi-wind.towards-200-deg {
+
+}
+.wi-wind.towards-201-deg {
+
+}
+.wi-wind.towards-202-deg {
+
+}
+.wi-wind.towards-203-deg {
+
+}
+.wi-wind.towards-204-deg {
+
+}
+.wi-wind.towards-205-deg {
+
+}
+.wi-wind.towards-206-deg {
+
+}
+.wi-wind.towards-207-deg {
+
+}
+.wi-wind.towards-208-deg {
+
+}
+.wi-wind.towards-209-deg {
+
+}
+.wi-wind.towards-210-deg {
+
+}
+.wi-wind.towards-211-deg {
+
+}
+.wi-wind.towards-212-deg {
+
+}
+.wi-wind.towards-213-deg {
+
+}
+.wi-wind.towards-214-deg {
+
+}
+.wi-wind.towards-215-deg {
+
+}
+.wi-wind.towards-216-deg {
+
+}
+.wi-wind.towards-217-deg {
+
+}
+.wi-wind.towards-218-deg {
+
+}
+.wi-wind.towards-219-deg {
+
+}
+.wi-wind.towards-220-deg {
+
+}
+.wi-wind.towards-221-deg {
+
+}
+.wi-wind.towards-222-deg {
+
+}
+.wi-wind.towards-223-deg {
+
+}
+.wi-wind.towards-224-deg {
+
+}
+.wi-wind.towards-225-deg {
+
+}
+.wi-wind.towards-226-deg {
+
+}
+.wi-wind.towards-227-deg {
+
+}
+.wi-wind.towards-228-deg {
+
+}
+.wi-wind.towards-229-deg {
+
+}
+.wi-wind.towards-230-deg {
+
+}
+.wi-wind.towards-231-deg {
+
+}
+.wi-wind.towards-232-deg {
+
+}
+.wi-wind.towards-233-deg {
+
+}
+.wi-wind.towards-234-deg {
+
+}
+.wi-wind.towards-235-deg {
+
+}
+.wi-wind.towards-236-deg {
+
+}
+.wi-wind.towards-237-deg {
+
+}
+.wi-wind.towards-238-deg {
+
+}
+.wi-wind.towards-239-deg {
+
+}
+.wi-wind.towards-240-deg {
+
+}
+.wi-wind.towards-241-deg {
+
+}
+.wi-wind.towards-242-deg {
+
+}
+.wi-wind.towards-243-deg {
+
+}
+.wi-wind.towards-244-deg {
+
+}
+.wi-wind.towards-245-deg {
+
+}
+.wi-wind.towards-246-deg {
+
+}
+.wi-wind.towards-247-deg {
+
+}
+.wi-wind.towards-248-deg {
+
+}
+.wi-wind.towards-249-deg {
+
+}
+.wi-wind.towards-250-deg {
+
+}
+.wi-wind.towards-251-deg {
+
+}
+.wi-wind.towards-252-deg {
+
+}
+.wi-wind.towards-253-deg {
+
+}
+.wi-wind.towards-254-deg {
+
+}
+.wi-wind.towards-255-deg {
+
+}
+.wi-wind.towards-256-deg {
+
+}
+.wi-wind.towards-257-deg {
+
+}
+.wi-wind.towards-258-deg {
+
+}
+.wi-wind.towards-259-deg {
+
+}
+.wi-wind.towards-260-deg {
+
+}
+.wi-wind.towards-261-deg {
+
+}
+.wi-wind.towards-262-deg {
+
+}
+.wi-wind.towards-263-deg {
+
+}
+.wi-wind.towards-264-deg {
+
+}
+.wi-wind.towards-265-deg {
+
+}
+.wi-wind.towards-266-deg {
+
+}
+.wi-wind.towards-267-deg {
+
+}
+.wi-wind.towards-268-deg {
+
+}
+.wi-wind.towards-269-deg {
+
+}
+.wi-wind.towards-270-deg {
+
+}
+.wi-wind.towards-271-deg {
+
+}
+.wi-wind.towards-272-deg {
+
+}
+.wi-wind.towards-273-deg {
+
+}
+.wi-wind.towards-274-deg {
+
+}
+.wi-wind.towards-275-deg {
+
+}
+.wi-wind.towards-276-deg {
+
+}
+.wi-wind.towards-277-deg {
+
+}
+.wi-wind.towards-278-deg {
+
+}
+.wi-wind.towards-279-deg {
+
+}
+.wi-wind.towards-280-deg {
+
+}
+.wi-wind.towards-281-deg {
+
+}
+.wi-wind.towards-282-deg {
+
+}
+.wi-wind.towards-283-deg {
+
+}
+.wi-wind.towards-284-deg {
+
+}
+.wi-wind.towards-285-deg {
+
+}
+.wi-wind.towards-286-deg {
+
+}
+.wi-wind.towards-287-deg {
+
+}
+.wi-wind.towards-288-deg {
+
+}
+.wi-wind.towards-289-deg {
+
+}
+.wi-wind.towards-290-deg {
+
+}
+.wi-wind.towards-291-deg {
+
+}
+.wi-wind.towards-292-deg {
+
+}
+.wi-wind.towards-293-deg {
+
+}
+.wi-wind.towards-294-deg {
+
+}
+.wi-wind.towards-295-deg {
+
+}
+.wi-wind.towards-296-deg {
+
+}
+.wi-wind.towards-297-deg {
+
+}
+.wi-wind.towards-298-deg {
+
+}
+.wi-wind.towards-299-deg {
+
+}
+.wi-wind.towards-300-deg {
+
+}
+.wi-wind.towards-301-deg {
+
+}
+.wi-wind.towards-302-deg {
+
+}
+.wi-wind.towards-303-deg {
+
+}
+.wi-wind.towards-304-deg {
+
+}
+.wi-wind.towards-305-deg {
+
+}
+.wi-wind.towards-306-deg {
+
+}
+.wi-wind.towards-307-deg {
+
+}
+.wi-wind.towards-308-deg {
+
+}
+.wi-wind.towards-309-deg {
+
+}
+.wi-wind.towards-310-deg {
+
+}
+.wi-wind.towards-311-deg {
+
+}
+.wi-wind.towards-312-deg {
+
+}
+.wi-wind.towards-313-deg {
+
+}
+.wi-wind.towards-314-deg {
+
+}
+.wi-wind.towards-315-deg {
+
+}
+.wi-wind.towards-316-deg {
+
+}
+.wi-wind.towards-317-deg {
+
+}
+.wi-wind.towards-318-deg {
+
+}
+.wi-wind.towards-319-deg {
+
+}
+.wi-wind.towards-320-deg {
+
+}
+.wi-wind.towards-321-deg {
+
+}
+.wi-wind.towards-322-deg {
+
+}
+.wi-wind.towards-323-deg {
+
+}
+.wi-wind.towards-324-deg {
+
+}
+.wi-wind.towards-325-deg {
+
+}
+.wi-wind.towards-326-deg {
+
+}
+.wi-wind.towards-327-deg {
+
+}
+.wi-wind.towards-328-deg {
+
+}
+.wi-wind.towards-329-deg {
+
+}
+.wi-wind.towards-330-deg {
+
+}
+.wi-wind.towards-331-deg {
+
+}
+.wi-wind.towards-332-deg {
+
+}
+.wi-wind.towards-333-deg {
+
+}
+.wi-wind.towards-334-deg {
+
+}
+.wi-wind.towards-335-deg {
+
+}
+.wi-wind.towards-336-deg {
+
+}
+.wi-wind.towards-337-deg {
+
+}
+.wi-wind.towards-338-deg {
+
+}
+.wi-wind.towards-339-deg {
+
+}
+.wi-wind.towards-340-deg {
+
+}
+.wi-wind.towards-341-deg {
+
+}
+.wi-wind.towards-342-deg {
+
+}
+.wi-wind.towards-343-deg {
+
+}
+.wi-wind.towards-344-deg {
+
+}
+.wi-wind.towards-345-deg {
+
+}
+.wi-wind.towards-346-deg {
+
+}
+.wi-wind.towards-347-deg {
+
+}
+.wi-wind.towards-348-deg {
+
+}
+.wi-wind.towards-349-deg {
+
+}
+.wi-wind.towards-350-deg {
+
+}
+.wi-wind.towards-351-deg {
+
+}
+.wi-wind.towards-352-deg {
+
+}
+.wi-wind.towards-353-deg {
+
+}
+.wi-wind.towards-354-deg {
+
+}
+.wi-wind.towards-355-deg {
+
+}
+.wi-wind.towards-356-deg {
+
+}
+.wi-wind.towards-357-deg {
+
+}
+.wi-wind.towards-358-deg {
+
+}
+.wi-wind.towards-359-deg {
+
+}
+.wi-wind.towards-360-deg {
+
+}
+.wi-wind.from-0-deg {
+
+}
+.wi-wind.from-1-deg {
+
+}
+.wi-wind.from-2-deg {
+
+}
+.wi-wind.from-3-deg {
+
+}
+.wi-wind.from-4-deg {
+
+}
+.wi-wind.from-5-deg {
+
+}
+.wi-wind.from-6-deg {
+
+}
+.wi-wind.from-7-deg {
+
+}
+.wi-wind.from-8-deg {
+
+}
+.wi-wind.from-9-deg {
+
+}
+.wi-wind.from-10-deg {
+
+}
+.wi-wind.from-11-deg {
+
+}
+.wi-wind.from-12-deg {
+
+}
+.wi-wind.from-13-deg {
+
+}
+.wi-wind.from-14-deg {
+
+}
+.wi-wind.from-15-deg {
+
+}
+.wi-wind.from-16-deg {
+
+}
+.wi-wind.from-17-deg {
+
+}
+.wi-wind.from-18-deg {
+
+}
+.wi-wind.from-19-deg {
+
+}
+.wi-wind.from-20-deg {
+
+}
+.wi-wind.from-21-deg {
+
+}
+.wi-wind.from-22-deg {
+
+}
+.wi-wind.from-23-deg {
+
+}
+.wi-wind.from-24-deg {
+
+}
+.wi-wind.from-25-deg {
+
+}
+.wi-wind.from-26-deg {
+
+}
+.wi-wind.from-27-deg {
+
+}
+.wi-wind.from-28-deg {
+
+}
+.wi-wind.from-29-deg {
+
+}
+.wi-wind.from-30-deg {
+
+}
+.wi-wind.from-31-deg {
+
+}
+.wi-wind.from-32-deg {
+
+}
+.wi-wind.from-33-deg {
+
+}
+.wi-wind.from-34-deg {
+
+}
+.wi-wind.from-35-deg {
+
+}
+.wi-wind.from-36-deg {
+
+}
+.wi-wind.from-37-deg {
+
+}
+.wi-wind.from-38-deg {
+
+}
+.wi-wind.from-39-deg {
+
+}
+.wi-wind.from-40-deg {
+
+}
+.wi-wind.from-41-deg {
+
+}
+.wi-wind.from-42-deg {
+
+}
+.wi-wind.from-43-deg {
+
+}
+.wi-wind.from-44-deg {
+
+}
+.wi-wind.from-45-deg {
+
+}
+.wi-wind.from-46-deg {
+
+}
+.wi-wind.from-47-deg {
+
+}
+.wi-wind.from-48-deg {
+
+}
+.wi-wind.from-49-deg {
+
+}
+.wi-wind.from-50-deg {
+
+}
+.wi-wind.from-51-deg {
+
+}
+.wi-wind.from-52-deg {
+
+}
+.wi-wind.from-53-deg {
+
+}
+.wi-wind.from-54-deg {
+
+}
+.wi-wind.from-55-deg {
+
+}
+.wi-wind.from-56-deg {
+
+}
+.wi-wind.from-57-deg {
+
+}
+.wi-wind.from-58-deg {
+
+}
+.wi-wind.from-59-deg {
+
+}
+.wi-wind.from-60-deg {
+
+}
+.wi-wind.from-61-deg {
+
+}
+.wi-wind.from-62-deg {
+
+}
+.wi-wind.from-63-deg {
+
+}
+.wi-wind.from-64-deg {
+
+}
+.wi-wind.from-65-deg {
+
+}
+.wi-wind.from-66-deg {
+
+}
+.wi-wind.from-67-deg {
+
+}
+.wi-wind.from-68-deg {
+
+}
+.wi-wind.from-69-deg {
+
+}
+.wi-wind.from-70-deg {
+
+}
+.wi-wind.from-71-deg {
+
+}
+.wi-wind.from-72-deg {
+
+}
+.wi-wind.from-73-deg {
+
+}
+.wi-wind.from-74-deg {
+
+}
+.wi-wind.from-75-deg {
+
+}
+.wi-wind.from-76-deg {
+
+}
+.wi-wind.from-77-deg {
+
+}
+.wi-wind.from-78-deg {
+
+}
+.wi-wind.from-79-deg {
+
+}
+.wi-wind.from-80-deg {
+
+}
+.wi-wind.from-81-deg {
+
+}
+.wi-wind.from-82-deg {
+
+}
+.wi-wind.from-83-deg {
+
+}
+.wi-wind.from-84-deg {
+
+}
+.wi-wind.from-85-deg {
+
+}
+.wi-wind.from-86-deg {
+
+}
+.wi-wind.from-87-deg {
+
+}
+.wi-wind.from-88-deg {
+
+}
+.wi-wind.from-89-deg {
+
+}
+.wi-wind.from-90-deg {
+
+}
+.wi-wind.from-91-deg {
+
+}
+.wi-wind.from-92-deg {
+
+}
+.wi-wind.from-93-deg {
+
+}
+.wi-wind.from-94-deg {
+
+}
+.wi-wind.from-95-deg {
+
+}
+.wi-wind.from-96-deg {
+
+}
+.wi-wind.from-97-deg {
+
+}
+.wi-wind.from-98-deg {
+
+}
+.wi-wind.from-99-deg {
+
+}
+.wi-wind.from-100-deg {
+
+}
+.wi-wind.from-101-deg {
+
+}
+.wi-wind.from-102-deg {
+
+}
+.wi-wind.from-103-deg {
+
+}
+.wi-wind.from-104-deg {
+
+}
+.wi-wind.from-105-deg {
+
+}
+.wi-wind.from-106-deg {
+
+}
+.wi-wind.from-107-deg {
+
+}
+.wi-wind.from-108-deg {
+
+}
+.wi-wind.from-109-deg {
+
+}
+.wi-wind.from-110-deg {
+
+}
+.wi-wind.from-111-deg {
+
+}
+.wi-wind.from-112-deg {
+
+}
+.wi-wind.from-113-deg {
+
+}
+.wi-wind.from-114-deg {
+
+}
+.wi-wind.from-115-deg {
+
+}
+.wi-wind.from-116-deg {
+
+}
+.wi-wind.from-117-deg {
+
+}
+.wi-wind.from-118-deg {
+
+}
+.wi-wind.from-119-deg {
+
+}
+.wi-wind.from-120-deg {
+
+}
+.wi-wind.from-121-deg {
+
+}
+.wi-wind.from-122-deg {
+
+}
+.wi-wind.from-123-deg {
+
+}
+.wi-wind.from-124-deg {
+
+}
+.wi-wind.from-125-deg {
+
+}
+.wi-wind.from-126-deg {
+
+}
+.wi-wind.from-127-deg {
+
+}
+.wi-wind.from-128-deg {
+
+}
+.wi-wind.from-129-deg {
+
+}
+.wi-wind.from-130-deg {
+
+}
+.wi-wind.from-131-deg {
+
+}
+.wi-wind.from-132-deg {
+
+}
+.wi-wind.from-133-deg {
+
+}
+.wi-wind.from-134-deg {
+
+}
+.wi-wind.from-135-deg {
+
+}
+.wi-wind.from-136-deg {
+
+}
+.wi-wind.from-137-deg {
+
+}
+.wi-wind.from-138-deg {
+
+}
+.wi-wind.from-139-deg {
+
+}
+.wi-wind.from-140-deg {
+
+}
+.wi-wind.from-141-deg {
+
+}
+.wi-wind.from-142-deg {
+
+}
+.wi-wind.from-143-deg {
+
+}
+.wi-wind.from-144-deg {
+
+}
+.wi-wind.from-145-deg {
+
+}
+.wi-wind.from-146-deg {
+
+}
+.wi-wind.from-147-deg {
+
+}
+.wi-wind.from-148-deg {
+
+}
+.wi-wind.from-149-deg {
+
+}
+.wi-wind.from-150-deg {
+
+}
+.wi-wind.from-151-deg {
+
+}
+.wi-wind.from-152-deg {
+
+}
+.wi-wind.from-153-deg {
+
+}
+.wi-wind.from-154-deg {
+
+}
+.wi-wind.from-155-deg {
+
+}
+.wi-wind.from-156-deg {
+
+}
+.wi-wind.from-157-deg {
+
+}
+.wi-wind.from-158-deg {
+
+}
+.wi-wind.from-159-deg {
+
+}
+.wi-wind.from-160-deg {
+
+}
+.wi-wind.from-161-deg {
+
+}
+.wi-wind.from-162-deg {
+
+}
+.wi-wind.from-163-deg {
+
+}
+.wi-wind.from-164-deg {
+
+}
+.wi-wind.from-165-deg {
+
+}
+.wi-wind.from-166-deg {
+
+}
+.wi-wind.from-167-deg {
+
+}
+.wi-wind.from-168-deg {
+
+}
+.wi-wind.from-169-deg {
+
+}
+.wi-wind.from-170-deg {
+
+}
+.wi-wind.from-171-deg {
+
+}
+.wi-wind.from-172-deg {
+
+}
+.wi-wind.from-173-deg {
+
+}
+.wi-wind.from-174-deg {
+
+}
+.wi-wind.from-175-deg {
+
+}
+.wi-wind.from-176-deg {
+
+}
+.wi-wind.from-177-deg {
+
+}
+.wi-wind.from-178-deg {
+
+}
+.wi-wind.from-179-deg {
+
+}
+.wi-wind.from-180-deg {
+
+}
+.wi-wind.from-181-deg {
+
+}
+.wi-wind.from-182-deg {
+
+}
+.wi-wind.from-183-deg {
+
+}
+.wi-wind.from-184-deg {
+
+}
+.wi-wind.from-185-deg {
+
+}
+.wi-wind.from-186-deg {
+
+}
+.wi-wind.from-187-deg {
+
+}
+.wi-wind.from-188-deg {
+
+}
+.wi-wind.from-189-deg {
+
+}
+.wi-wind.from-190-deg {
+
+}
+.wi-wind.from-191-deg {
+
+}
+.wi-wind.from-192-deg {
+
+}
+.wi-wind.from-193-deg {
+
+}
+.wi-wind.from-194-deg {
+
+}
+.wi-wind.from-195-deg {
+
+}
+.wi-wind.from-196-deg {
+
+}
+.wi-wind.from-197-deg {
+
+}
+.wi-wind.from-198-deg {
+
+}
+.wi-wind.from-199-deg {
+
+}
+.wi-wind.from-200-deg {
+
+}
+.wi-wind.from-201-deg {
+
+}
+.wi-wind.from-202-deg {
+
+}
+.wi-wind.from-203-deg {
+
+}
+.wi-wind.from-204-deg {
+
+}
+.wi-wind.from-205-deg {
+
+}
+.wi-wind.from-206-deg {
+
+}
+.wi-wind.from-207-deg {
+
+}
+.wi-wind.from-208-deg {
+
+}
+.wi-wind.from-209-deg {
+
+}
+.wi-wind.from-210-deg {
+
+}
+.wi-wind.from-211-deg {
+
+}
+.wi-wind.from-212-deg {
+
+}
+.wi-wind.from-213-deg {
+
+}
+.wi-wind.from-214-deg {
+
+}
+.wi-wind.from-215-deg {
+
+}
+.wi-wind.from-216-deg {
+
+}
+.wi-wind.from-217-deg {
+
+}
+.wi-wind.from-218-deg {
+
+}
+.wi-wind.from-219-deg {
+
+}
+.wi-wind.from-220-deg {
+
+}
+.wi-wind.from-221-deg {
+
+}
+.wi-wind.from-222-deg {
+
+}
+.wi-wind.from-223-deg {
+
+}
+.wi-wind.from-224-deg {
+
+}
+.wi-wind.from-225-deg {
+
+}
+.wi-wind.from-226-deg {
+
+}
+.wi-wind.from-227-deg {
+
+}
+.wi-wind.from-228-deg {
+
+}
+.wi-wind.from-229-deg {
+
+}
+.wi-wind.from-230-deg {
+
+}
+.wi-wind.from-231-deg {
+
+}
+.wi-wind.from-232-deg {
+
+}
+.wi-wind.from-233-deg {
+
+}
+.wi-wind.from-234-deg {
+
+}
+.wi-wind.from-235-deg {
+
+}
+.wi-wind.from-236-deg {
+
+}
+.wi-wind.from-237-deg {
+
+}
+.wi-wind.from-238-deg {
+
+}
+.wi-wind.from-239-deg {
+
+}
+.wi-wind.from-240-deg {
+
+}
+.wi-wind.from-241-deg {
+
+}
+.wi-wind.from-242-deg {
+
+}
+.wi-wind.from-243-deg {
+
+}
+.wi-wind.from-244-deg {
+
+}
+.wi-wind.from-245-deg {
+
+}
+.wi-wind.from-246-deg {
+
+}
+.wi-wind.from-247-deg {
+
+}
+.wi-wind.from-248-deg {
+
+}
+.wi-wind.from-249-deg {
+
+}
+.wi-wind.from-250-deg {
+
+}
+.wi-wind.from-251-deg {
+
+}
+.wi-wind.from-252-deg {
+
+}
+.wi-wind.from-253-deg {
+
+}
+.wi-wind.from-254-deg {
+
+}
+.wi-wind.from-255-deg {
+
+}
+.wi-wind.from-256-deg {
+
+}
+.wi-wind.from-257-deg {
+
+}
+.wi-wind.from-258-deg {
+
+}
+.wi-wind.from-259-deg {
+
+}
+.wi-wind.from-260-deg {
+
+}
+.wi-wind.from-261-deg {
+
+}
+.wi-wind.from-262-deg {
+
+}
+.wi-wind.from-263-deg {
+
+}
+.wi-wind.from-264-deg {
+
+}
+.wi-wind.from-265-deg {
+
+}
+.wi-wind.from-266-deg {
+
+}
+.wi-wind.from-267-deg {
+
+}
+.wi-wind.from-268-deg {
+
+}
+.wi-wind.from-269-deg {
+
+}
+.wi-wind.from-270-deg {
+
+}
+.wi-wind.from-271-deg {
+
+}
+.wi-wind.from-272-deg {
+
+}
+.wi-wind.from-273-deg {
+
+}
+.wi-wind.from-274-deg {
+
+}
+.wi-wind.from-275-deg {
+
+}
+.wi-wind.from-276-deg {
+
+}
+.wi-wind.from-277-deg {
+
+}
+.wi-wind.from-278-deg {
+
+}
+.wi-wind.from-279-deg {
+
+}
+.wi-wind.from-280-deg {
+
+}
+.wi-wind.from-281-deg {
+
+}
+.wi-wind.from-282-deg {
+
+}
+.wi-wind.from-283-deg {
+
+}
+.wi-wind.from-284-deg {
+
+}
+.wi-wind.from-285-deg {
+
+}
+.wi-wind.from-286-deg {
+
+}
+.wi-wind.from-287-deg {
+
+}
+.wi-wind.from-288-deg {
+
+}
+.wi-wind.from-289-deg {
+
+}
+.wi-wind.from-290-deg {
+
+}
+.wi-wind.from-291-deg {
+
+}
+.wi-wind.from-292-deg {
+
+}
+.wi-wind.from-293-deg {
+
+}
+.wi-wind.from-294-deg {
+
+}
+.wi-wind.from-295-deg {
+
+}
+.wi-wind.from-296-deg {
+
+}
+.wi-wind.from-297-deg {
+
+}
+.wi-wind.from-298-deg {
+
+}
+.wi-wind.from-299-deg {
+
+}
+.wi-wind.from-300-deg {
+
+}
+.wi-wind.from-301-deg {
+
+}
+.wi-wind.from-302-deg {
+
+}
+.wi-wind.from-303-deg {
+
+}
+.wi-wind.from-304-deg {
+
+}
+.wi-wind.from-305-deg {
+
+}
+.wi-wind.from-306-deg {
+
+}
+.wi-wind.from-307-deg {
+
+}
+.wi-wind.from-308-deg {
+
+}
+.wi-wind.from-309-deg {
+
+}
+.wi-wind.from-310-deg {
+
+}
+.wi-wind.from-311-deg {
+
+}
+.wi-wind.from-312-deg {
+
+}
+.wi-wind.from-313-deg {
+
+}
+.wi-wind.from-314-deg {
+
+}
+.wi-wind.from-315-deg {
+
+}
+.wi-wind.from-316-deg {
+
+}
+.wi-wind.from-317-deg {
+
+}
+.wi-wind.from-318-deg {
+
+}
+.wi-wind.from-319-deg {
+
+}
+.wi-wind.from-320-deg {
+
+}
+.wi-wind.from-321-deg {
+
+}
+.wi-wind.from-322-deg {
+
+}
+.wi-wind.from-323-deg {
+
+}
+.wi-wind.from-324-deg {
+
+}
+.wi-wind.from-325-deg {
+
+}
+.wi-wind.from-326-deg {
+
+}
+.wi-wind.from-327-deg {
+
+}
+.wi-wind.from-328-deg {
+
+}
+.wi-wind.from-329-deg {
+
+}
+.wi-wind.from-330-deg {
+
+}
+.wi-wind.from-331-deg {
+
+}
+.wi-wind.from-332-deg {
+
+}
+.wi-wind.from-333-deg {
+
+}
+.wi-wind.from-334-deg {
+
+}
+.wi-wind.from-335-deg {
+
+}
+.wi-wind.from-336-deg {
+
+}
+.wi-wind.from-337-deg {
+
+}
+.wi-wind.from-338-deg {
+
+}
+.wi-wind.from-339-deg {
+
+}
+.wi-wind.from-340-deg {
+
+}
+.wi-wind.from-341-deg {
+
+}
+.wi-wind.from-342-deg {
+
+}
+.wi-wind.from-343-deg {
+
+}
+.wi-wind.from-344-deg {
+
+}
+.wi-wind.from-345-deg {
+
+}
+.wi-wind.from-346-deg {
+
+}
+.wi-wind.from-347-deg {
+
+}
+.wi-wind.from-348-deg {
+
+}
+.wi-wind.from-349-deg {
+
+}
+.wi-wind.from-350-deg {
+
+}
+.wi-wind.from-351-deg {
+
+}
+.wi-wind.from-352-deg {
+
+}
+.wi-wind.from-353-deg {
+
+}
+.wi-wind.from-354-deg {
+
+}
+.wi-wind.from-355-deg {
+
+}
+.wi-wind.from-356-deg {
+
+}
+.wi-wind.from-357-deg {
+
+}
+.wi-wind.from-358-deg {
+
+}
+.wi-wind.from-359-deg {
+
+}
+.wi-wind.from-360-deg {
+
+}
+.wi-towards-n {
+
+}
+.wi-towards-nne {
+
+}
+.wi-towards-ne {
+
+}
+.wi-towards-ene {
+
+}
+.wi-towards-e {
+
+}
+.wi-towards-ese {
+
+}
+.wi-towards-se {
+
+}
+.wi-towards-sse {
+
+}
+.wi-towards-s {
+
+}
+.wi-towards-ssw {
+
+}
+.wi-towards-sw {
+
+}
+.wi-towards-wsw {
+
+}
+.wi-towards-w {
+
+}
+.wi-towards-wnw {
+
+}
+.wi-towards-nw {
+
+}
+.wi-towards-nnw {
+
+}
+.wi-from-n {
+
+}
+.wi-from-nne {
+
+}
+.wi-from-ne {
+
+}
+.wi-from-ene {
+
+}
+.wi-from-e {
+
+}
+.wi-from-ese {
+
+}
+.wi-from-se {
+
+}
+.wi-from-sse {
+
+}
+.wi-from-s {
+
+}
+.wi-from-ssw {
+
+}
+.wi-from-sw {
+
+}
+.wi-from-wsw {
+
+}
+.wi-from-w {
+
+}
+.wi-from-wnw {
+
+}
+.wi-from-nw {
+
+}
+.wi-from-nnw {
+
+}

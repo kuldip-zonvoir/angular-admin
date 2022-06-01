@@ -1,0 +1,30 @@
+<div class="card custom-card shadow1 no-radius">
+  <div
+    class="
+      card-header
+      custom-card-header
+      d-flex
+      justify-content-between
+      align-items-center
+      border-1
+    "
+  >
+    <h5 class="card-label mb-0">Products Market Share</h5>
+    <span class="material-icons icon-20 icon-gray"> grid_view </span>
+  </div>
+  <div class="chart_body kk_chartjs">
+    <div class="chartjs-container">
+      <canvas
+        baseChart
+        [datasets]="chartValue.pieChartData"
+        [labels]="chartValue.pieChartLabels"
+        [options]="chartValue.pieChartOptions"
+        [colors]="chartValue.pieChartColors"
+        [legend]="chartValue.pieChartLegend"
+        [chartType]="chartValue.pieChartType"
+        [plugins]="chartValue.pieChartPlugins"
+      >
+      </canvas>
+    </div>
+  </div>
+</div>

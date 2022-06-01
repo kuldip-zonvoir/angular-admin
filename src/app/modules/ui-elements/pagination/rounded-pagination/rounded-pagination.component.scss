@@ -1,0 +1,21 @@
+pagination::ng-deep .circular {
+  li {
+    margin: 0 5px;
+
+    &:first-child {
+      a {
+        border-radius: 50% !important;
+      }
+    }
+
+    &:last-child {
+      a {
+        border-radius: 50% !important;
+      }
+    }
+
+    a {
+      border-radius: 50%;
+    }
+  }
+}

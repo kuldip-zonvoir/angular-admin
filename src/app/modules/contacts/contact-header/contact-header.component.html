@@ -1,0 +1,187 @@
+<div class="card custom-card">
+  <div class="card-header custom-card-header border-1">
+    <div class="d-flex align-items-center">
+      <div class="d-flex">
+        <span class="material-icons-outlined m-r-12 icon-20"> contacts </span>
+        <h5 class="m-b-0">Contacts</h5>
+      </div>
+      <div class="ml-auto">
+        <button
+          class="btn-primary btn d-flex align-items-center"
+          (click)="addContactDialog()"
+        >
+          <span class="material-icons-outlined icon-20 m-r-8">
+            person_add
+          </span>
+          Contact
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="card-body py-0">
+    <div class="card-footer custom-card-footer zp-0 border-0">
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="nav_bar m-t-12">
+          <ul class="inline-list">
+            <li class="inline-list-item">
+              <a
+                [ngClass]="{
+                  active: activeUrlString === '/contacts/grid-contacts'
+                }"
+                (click)="tabToggle('0')"
+              >
+                <span class="material-icons-outlined icon-20 m-r-8">
+                  timeline
+                </span>
+                Gridview
+              </a>
+            </li>
+            <li class="inline-list-item">
+              <a
+                [ngClass]="{
+                  active: activeUrlString === '/contacts/list-contacts'
+                }"
+                (click)="tabToggle('1')"
+              >
+                <span class="material-icons-outlined icon-20 m-r-8">
+                  group
+                </span>
+                Listview
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- add Contact -->
+<p-dialog
+  header="Add Contact Detail"
+  [(visible)]="displayDialog"
+  class="add_contact_modal"
+  [modal]="true"
+  [baseZIndex]="10"
+>
+  <div class="">
+    <form [formGroup]="form" (ngSubmit)="saveDetail()" class="form_section">
+      <div class="kprime_form_wrapper">
+        <div class="form-group m-b-12">
+          <label for="contact-name">Contact Name</label>
+          <input
+            type="text"
+            formControlName="username"
+            class="form-control"
+            placeholder="Contact Name"
+            [ngClass]="{
+              'is-invalid':
+                form.get('username').invalid &&
+                (form.get('username').touched || form.get('username').dirty)
+            }"
+          />
+          <div
+            *ngIf="
+              form.get('username').errors &&
+              (form.get('username').touched || form.get('username').dirty)
+            "
+            class="invalid-feedback"
+          >
+            <p class="m-b-0" *ngIf="form.get('username').errors.required">
+              name is required
+            </p>
+          </div>
+        </div>
+        <div class="form-group m-b-12">
+          <label for="contact-name">Email</label>
+          <input
+            type="email"
+            formControlName="email"
+            class="form-control"
+            placeholder="Email"
+            email
+            [ngClass]="{
+              'is-invalid':
+                form.get('email').invalid &&
+                (form.get('email').touched || form.get('email').dirty)
+            }"
+          />
+          <div
+            *ngIf="
+              form.get('email').errors &&
+              (form.get('email').touched || form.get('email').dirty)
+            "
+            class="invalid-feedback"
+          >
+            <p class="m-0" *ngIf="form.get('email').errors.required">
+              email is required
+            </p>
+            <p class="m-0" *ngIf="form.get('email').errors.pattern">
+              email must be like text@123.com
+            </p>
+          </div>
+        </div>
+        <div class="from-group m-b-12">
+          <label for="pic">Profile Image</label>
+          <div class="w-100 m-b-12">
+            <app-file-input></app-file-input>
+          </div>
+        </div>
+        <div class="form-group m-b-12">
+          <label for="mobile" class="">Phone</label>
+          <input
+            type="number"
+            formControlName="mobile"
+            class="form-control"
+            autocomplete="current-password"
+            placeholder="Mobile Number"
+            [ngClass]="{
+              'is-invalid':
+                form.get('mobile').invalid &&
+                (form.get('mobile').touched || form.get('mobile').dirty)
+            }"
+          />
+          <div
+            *ngIf="
+              form.get('mobile').errors &&
+              (form.get('mobile').touched || form.get('mobile').dirty)
+            "
+            class="invalid-feedback"
+          >
+            <p class="m-0" *ngIf="form.get('mobile').errors.required">
+              Phone Number is required
+            </p>
+          </div>
+        </div>
+        <div class="form-group m-b-12">
+          <label for="post" class="">Post Name</label>
+          <input
+            type="text"
+            formControlName="post_name"
+            class="form-control"
+            placeholder="Post Name"
+            [ngClass]="{
+              'is-invalid':
+                form.get('post_name').invalid &&
+                (form.get('post_name').touched || form.get('post_name').dirty)
+            }"
+          />
+          <div
+            *ngIf="
+              form.get('post_name').errors &&
+              (form.get('post_name').touched || form.get('post_name').dirty)
+            "
+            class="invalid-feedback"
+          >
+            <p class="m-0" *ngIf="form.get('post_name').errors.required">
+              post name is required
+            </p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="d-flex justify-content-end kprime_footer align-items-center">
+    <button class="btn btn-outline-danger m-r-8 btn-square">Cancel</button>
+    <button type="submit" class="btn btn-primary btn-square">Submit</button>
+  </div>
+</p-dialog>

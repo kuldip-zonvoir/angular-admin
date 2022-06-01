@@ -1,0 +1,204 @@
+<div class="">
+  <div class="nav_bar w-100 m-b-12">
+    <ul class="w-100 d-flex">
+      <li style="width: 33.33%">
+        <a
+          class="h6 m-b-0"
+          [ngClass]="{ active: tabId === '0' }"
+          (click)="tabToggle('0')"
+        >
+          <span class="material-icons icon m-r-8"> chat_bubble_outline </span
+          >Chats</a
+        >
+      </li>
+      <li style="width: 33.33%">
+        <a
+          class="h6 m-b-0"
+          [ngClass]="{ active: tabId === '1' }"
+          (click)="tabToggle('1')"
+        >
+          <span class="material-icons icon m-r-8"> phone_in_talk </span>
+          Calls
+        </a>
+      </li>
+      <li style="width: 33.33%">
+        <a
+          class="h6 m-b-0"
+          [ngClass]="{ active: tabId === '2' }"
+          (click)="tabToggle('2')"
+        >
+          <span class="material-icons icon m-r-8"> library_books </span>
+          Contact
+        </a>
+      </li>
+    </ul>
+  </div>
+  <ng-template [ngIf]="tabId === '0'">
+    <div class="">
+      <h6 class="p-b-12 text-muted m-b-0">Recent Chats</h6>
+    </div>
+  </ng-template>
+  <ng-template [ngIf]="tabId === '1'">
+    <div class="">
+      <h6 class="p-b-12 text-muted m-b-0">Recent Calls</h6>
+    </div>
+  </ng-template>
+  <ng-template [ngIf]="tabId === '2'">
+    <div class="">
+      <h6 class="p-b-12 text-muted m-b-0">All Contacts</h6>
+    </div>
+  </ng-template>
+  <div class="chat-list-scroll">
+    <ng-template [ngIf]="tabId === '0'">
+      <ng-container *ngFor="let user of users">
+        <div
+          (click)="viewChat()"
+          class="m-b-12 d-flex align-items-center k_chat_list"
+        >
+          <div
+            class="m-r-12 cckchat_status"
+            [ngClass]="{
+              online: user.status === 'online',
+              offline: user.status === 'offline'
+            }"
+          >
+            <img
+              [src]="user.pic_url"
+              alt=""
+              class="img-responsive logo-md-circle"
+            />
+            <div *ngIf="user.status === 'online'" class="">
+              <span class="user_visibility"></span>
+              <span class="user_visible_status"></span>
+            </div>
+          </div>
+          <div class="w-100">
+            <div class="d-flex justify-content-between">
+              <h6 class="m-b-0">{{ user.user_name }}</h6>
+              <p class="m-b-0">{{ user.time }}</p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="m-b-0">{{ user.recent_message }}</p>
+              <p
+                *ngIf="user.notification"
+                class="m-b-0 bg-primary notifiaction-small-circle"
+              >
+                {{ user.notification }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </ng-template>
+    <ng-template [ngIf]="tabId === '1'">
+      <ng-container *ngFor="let user of users">
+        <div class="m-b-12 d-flex align-items-center k_chat_list">
+          <div
+            class="m-r-12"
+            [ngClass]="{
+              online: user.status === 'online',
+              offline: user.status === 'offline'
+            }"
+          >
+            <img
+              [src]="user.pic_url"
+              alt=""
+              class="img-responsive logo-md-circle"
+            />
+          </div>
+          <div class="w-100">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="">
+                <h6 class="name m-b-0">{{ user.user_name }}</h6>
+                <p class="d-flex align-items-center m-b-0">
+                  <ng-template [ngIf]="user.call_response === 'dial'">
+                    <span
+                      class="material-icons-outlined icon-20 m-r-8 text-success"
+                    >
+                      call_made
+                    </span>
+                  </ng-template>
+                  <ng-template [ngIf]="user.call_response === 'recieved'">
+                    <span
+                      class="material-icons-outlined icon-20 m-r-8 text-success"
+                    >
+                      call_received
+                    </span>
+                  </ng-template>
+                  <ng-template [ngIf]="user.call_response === 'missed'">
+                    <span
+                      class="material-icons-outlined icon-20 m-r-8 text-danger"
+                    >
+                      call_missed
+                    </span>
+                  </ng-template>
+                  <span class="mr-1">{{ user.date }} </span> {{ user.time }}
+                </p>
+              </div>
+              <div class="">
+                <ng-template [ngIf]="user.call_type === 'video'">
+                  <span
+                    [ngClass]="{
+                      'text-danger': user.call_response === 'missed'
+                    }"
+                    class="material-icons-outlined icon-20 text-success"
+                  >
+                    videocam
+                  </span>
+                </ng-template>
+                <ng-template [ngIf]="user.call_type === 'voice'">
+                  <span
+                    [ngClass]="{
+                      'text-danger': user.call_response === 'missed'
+                    }"
+                    class="material-icons-outlined icon-20 text-success"
+                  >
+                    phone_in_talk
+                  </span>
+                </ng-template>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </ng-template>
+    <ng-template [ngIf]="tabId === '2'">
+      <ng-container *ngFor="let user of users">
+        <div class="m-b-12 d-flex align-items-center border-1 k_chat_list">
+          <div
+            class="m-r-12"
+            [ngClass]="{
+              online: user.status === 'online',
+              offline: user.status === 'offline'
+            }"
+          >
+            <img
+              [src]="user.pic_url"
+              alt=""
+              class="img-responsive logo-md-circle"
+            />
+          </div>
+          <div class="w-100">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="">
+                <h6 class="m-b-0">{{ user.user_name }}</h6>
+                <p class="m-b-0">{{ user.post }}</p>
+              </div>
+              <div class="d-flex align-items-center">
+                <span class="material-icons icon m-r-8 text-danger">
+                  videocam
+                </span>
+                <span class="material-icons text-secondary icon m-r-8">
+                  chat_bubble
+                </span>
+                <span class="material-icons icon m-r-8 text-success">
+                  phone_in_talk
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </ng-template>
+  </div>
+</div>

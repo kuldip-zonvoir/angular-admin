@@ -1,0 +1,56 @@
+app-text-editor {
+  .angular-editor-toolbar {
+    background-color: $background-color !important;
+  }
+
+  .angular-editor-toolbar-set {
+    .angular-editor-button {
+      background-color: $background-color !important;
+
+      .fa {
+        color: $text-color;
+      }
+    }
+  }
+
+  .ae-picker-label {
+    background-color: $background-color !important;
+    color: $text-color;
+  }
+
+  .ae-picker-options {
+    background-color: $background-color !important;
+    color: $text-color;
+
+    &:hover {
+      background-color: darken(
+        $color: $background-color,
+        $amount: 10%
+      ) !important;
+      color: $text-color;
+    }
+  }
+
+  &.focus-visible {
+    outline: inherit;
+    border: 1px solid $primary !important;
+  }
+}
+
+.custom-text-editor {
+  .angular-editor-textarea {
+    min-height: 5rem !important;
+    height: 0 !important;
+    border: 1px solid $border-color;
+  }
+  .angular-editor-toolbar {
+    background-color: $background-color !important;
+    border: 1px solid $border-color;
+  }
+}
+.k_editor {
+  .angular-editor-toolbar {
+    background-color: $background-color !important;
+    border: 1px solid $border-color;
+  }
+}

@@ -1,0 +1,12 @@
+<div class="card custom-card shadow1 no-radius">
+    <div class="card-header custom-card-header no-radius border-1">
+        <h5 class="mb-0">Doughnut Chart</h5>
+    </div>
+    <div class="card-body">
+        <ng-container *ngFor = "let chart of charts">
+            <div class="">
+                <app-apex-sparkline-donut [chartParams] = "chart.chartOptions"  ></app-apex-sparkline-donut>
+            </div>
+        </ng-container>
+    </div>
+</div>

@@ -1,0 +1,99 @@
+<div class="border-0">
+  <div class="">
+    <div class="px-2 text-center p-y-8">
+      <button
+        class="
+          btn btn-block btn-pill
+          p-y-6
+          d-flex
+          justify-content-center
+          align-items-center
+          btn-primary
+        "
+        (click)="addNotes()"
+      >
+        <i class="ti ti-plus icon-16 m-r-12"></i> Add Note
+      </button>
+    </div>
+  </div>
+  <div class="email_scroll">
+    <ul class="nav m-t-4 m-r-4">
+      <li class="nav_item w-100">
+        <div class="d-flex align-items-center">
+          <a
+            (click)="allNotes = !allNotes"
+            [ngClass]="{ 'active-note': allNotes }"
+            class="file_mana_link zp-10 w-100"
+          >
+            <div class="d-flex p-x-8 align-items-center">
+              <div class="m-r-12 d-flex align-items-center">
+                <i class="ti filll ti-notepad icon-20 m-r-12"></i>
+                <h6 class="m-b-0 list-name">All Notes</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li class="nav_item w-100">
+        <div class="d-flex align-items-center">
+          <a class="file_mana_link zp-10 w-100">
+            <div class="d-flex p-x-8 align-items-center">
+              <div class="m-r-12 d-flex align-items-center">
+                <i class="ti filll ti-tag icon-20 m-r-12"></i>
+                <h6 class="m-b-0 list-name">Tags</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li class="nav_item w-100">
+        <div class="d-flex align-items-center">
+          <a class="file_mana_link zp-10 w-100">
+            <div class="d-flex p-x-8 align-items-center">
+              <div class="m-r-12 d-flex align-items-center">
+                <i class="ti ti-star filll icon-20 m-r-12"></i>
+                <h6 class="m-b-0 list-name">Important</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li class="nav_item w-100">
+        <div class="d-flex align-items-center">
+          <a class="file_mana_link zp-10 w-100">
+            <div class="d-flex p-x-8 align-items-center">
+              <div class="m-r-12 d-flex align-items-center">
+                <i class="ti ti-pin2 filll icon-20 m-r-12"></i>
+                <h6 class="m-b-0 list-name">Pined Notes</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li class="nav_item w-100">
+        <div class="d-flex align-items-center">
+          <a class="file_mana_link zp-10 w-100">
+            <div class="d-flex p-x-8 align-items-center">
+              <div class="m-r-12 d-flex align-items-center">
+                <i class="ti ti-gallery filll icon-20 m-r-12"></i>
+                <h6 class="m-b-0 list-name">Media Notes</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li class="nav_item w-100">
+        <div class="d-flex align-items-center">
+          <a class="file_mana_link zp-10 w-100">
+            <div class="d-flex p-x-8 align-items-center">
+              <div class="m-r-12 d-flex align-items-center">
+                <i class="ti ti-trash filll icon-20 m-r-12"></i>
+                <h6 class="m-b-0 list-name">Recycle Bin</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

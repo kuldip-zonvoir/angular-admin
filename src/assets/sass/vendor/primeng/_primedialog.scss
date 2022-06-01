@@ -1,0 +1,415 @@
+//dialog modals
+%p-dialog {
+  .p-dialog {
+    width: 38% !important;
+    z-index: 9999;
+  }
+}
+%p-dialoglarge {
+  .p-dialog {
+    width: 50% !important;
+    z-index: 9999;
+  }
+}
+%p-dialoglmini {
+  .p-dialog {
+    width: 25% !important;
+    z-index: 9999;
+  }
+}
+// event Calender
+.fc_cal_evt_custom {
+  @extend %p-dialoglmini;
+  .p-dialog-header {
+  }
+  .p-dialog-content {
+    padding: 15px !important;
+    border-radius: 10px !important;
+  }
+}
+
+//
+.scrum_task_full_deatil {
+  @extend %p-dialoglarge;
+}
+.scrunboard_filter_modal {
+  @extend %p-dialoglarge;
+}
+.confirm-dailog-modal {
+  @extend %p-dialoglmini;
+}
+.scrunboard_add_task {
+  @extend %p-dialog;
+}
+.task-ticket-modal {
+  @extend %p-dialog;
+}
+.add_card_scrum {
+  @extend %p-dialog;
+}
+.notes-modal {
+  @extend %p-dialog;
+}
+.app-task-manager {
+  @extend %p-dialog;
+}
+.e-com-coupon {
+  @extend %p-dialog;
+}
+.e-com-customers {
+  @extend %p-dialog;
+}
+.e-com-category {
+  @extend %p-dialog;
+}
+.e-com-orderlist {
+  @extend %p-dialoglarge;
+}
+.add_contact_modal {
+  @extend %p-dialog;
+}
+.position-dialog-modal {
+  @extend %p-dialog;
+}
+.scrunboard_filter_modal {
+  @extend %p-dialoglarge;
+}
+.long-content-dialog-modal {
+  @extend %p-dialoglarge;
+}
+.max-dialog-modal {
+  @extend %p-dialog;
+}
+.basic-dialog-modal {
+  @extend %p-dialog;
+}
+.p-dialog-header-icon {
+  &:focus {
+    box-shadow: 0 0 0.2rem $primary !important;
+  }
+}
+
+.p-dialog .p-dialog-header .p-dialog-title .p-dialog {
+  width: 60%;
+}
+
+.p-component {
+  font-size: 0.875rem;
+}
+////
+.k_optional_scroll {
+  //p-t-8// form-scroll
+}
+///dark now
+.p-dialog {
+  .p-dialog-header {
+    background-color: $background-color;
+    color: $text-color;
+    padding: 5px 16px;
+    border-bottom: 1px solid $border-color;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+    .p-dialog-title {
+      font-size: 1rem;
+      color: $heading-color;
+    }
+
+    .p-dialog-header-icon {
+      color: $heading-color !important;
+      font-size: 20px;
+
+      &:enabled {
+        &:hover {
+          color: $heading-color !important;
+        }
+      }
+    }
+  }
+  .kprime-scroll {
+    max-height: 50vh;
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    @include scrollbar($width: 0.25rem, $border-radius: 0.5rem);
+    &:hover {
+      @include scrollbar(
+        $width: 0.25rem,
+        $border-radius: 0.5rem,
+        $background-color: $scrollbarColor
+      );
+    }
+  }
+  .p-dialog-content {
+    background-color: $background-color;
+    color: $text-color;
+    padding: 0px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    .kprime_form_wrapper {
+      padding: 12px 16px 0 16px;
+    }
+  }
+  .kprime_footer {
+    border-top: 1px solid $border-color;
+    padding: 12px 14px;
+  }
+  .p-dialog-footer {
+    padding: 1rem 1.5rem;
+    background-color: $background-color;
+    color: $text-color;
+
+    button {
+      margin: 0 0 0 0;
+      width: auto;
+    }
+  }
+}
+.application_sidebar {
+  .p-sidebar-active {
+    z-index: 10 !important;
+    padding: 10px 0;
+  }
+  .p-sidebar-left {
+    height: 100%;
+    left: 0px;
+    top: 60px;
+    width: 16rem;
+  }
+  .p-sidebar-close {
+    width: 2rem;
+    height: 2rem;
+    color: $text-color;
+    border: 0 none;
+    box-shadow: 0 0.1rem 1rem 0.25rem rgb(0 0 0 / 5%);
+    background-color: $background-color;
+    border-radius: 0 !important;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    position: absolute;
+    right: -32px;
+    top: -10px;
+  }
+}
+// for Mobile portrait mode
+@include responsive-below(md) {
+  .scrunboard_filter_modal {
+    .p-dialog-content {
+      height: 100%;
+      cursor: pointer;
+      overflow-y: auto;
+      overflow-x: hidden;
+      @include scrollbar($width: 0.5rem, $border-radius: 1rem);
+      &:hover {
+        @include scrollbar(
+          $width: 0.5rem,
+          $border-radius: 1rem,
+          $background-color: $scrollbarColor
+        );
+      }
+    }
+  }
+  .scrum_task_full_deatil {
+    .p-dialog-content {
+      height: 100%;
+      cursor: pointer;
+      overflow-y: auto;
+      overflow-x: hidden;
+      @include scrollbar($width: 0.5rem, $border-radius: 1rem);
+      &:hover {
+        @include scrollbar(
+          $width: 0.5rem,
+          $border-radius: 1rem,
+          $background-color: $scrollbarColor
+        );
+      }
+    }
+  }
+  %p-dialoglmini {
+    .p-dialog {
+      width: 80% !important;
+      z-index: 9999;
+    }
+  }
+  %p-dialog {
+    .p-dialog {
+      width: 80% !important;
+    }
+  }
+  %p-dialoglarge {
+    .p-dialog {
+      width: 90% !important;
+    }
+  }
+}
+
+// for Mobile  Landscsape Mode
+@include responsive-between(sm, md) {
+  .scrunboard_filter_modal {
+    .p-dialog-content {
+      height: 100%;
+      cursor: pointer;
+      overflow-y: auto;
+      overflow-x: hidden;
+      @include scrollbar($width: 0.5rem, $border-radius: 1rem);
+      &:hover {
+        @include scrollbar(
+          $width: 0.5rem,
+          $border-radius: 1rem,
+          $background-color: $scrollbarColor
+        );
+      }
+    }
+  }
+  .scrum_task_full_deatil {
+    .p-dialog-content {
+      height: 100%;
+      cursor: pointer;
+      overflow-y: auto;
+      overflow-x: hidden;
+      @include scrollbar($width: 0.5rem, $border-radius: 1rem);
+      &:hover {
+        @include scrollbar(
+          $width: 0.5rem,
+          $border-radius: 1rem,
+          $background-color: $scrollbarColor
+        );
+      }
+    }
+  }
+  %p-dialoglmini {
+    .p-dialog {
+      width: 50% !important;
+      z-index: 9999;
+    }
+  }
+  %p-dialog {
+    .p-dialog {
+      width: 50% !important;
+    }
+  }
+  %p-dialoglarge {
+    .p-dialog {
+      width: 90% !important;
+    }
+  }
+}
+// For Tablet Portrait Mode
+@include responsive-between(md, lg) {
+  .scrunboard_filter_modal {
+    .p-dialog-content {
+      height: 100%;
+      cursor: pointer;
+      overflow-y: auto;
+      overflow-x: hidden;
+      @include scrollbar($width: 0.5rem, $border-radius: 1rem);
+      &:hover {
+        @include scrollbar(
+          $width: 0.5rem,
+          $border-radius: 1rem,
+          $background-color: $scrollbarColor
+        );
+      }
+    }
+  }
+  .scrum_task_full_deatil {
+    .p-dialog-content {
+      height: 100%;
+      cursor: pointer;
+      overflow-y: auto;
+      overflow-x: hidden;
+      @include scrollbar($width: 0.5rem, $border-radius: 1rem);
+      &:hover {
+        @include scrollbar(
+          $width: 0.5rem,
+          $border-radius: 1rem,
+          $background-color: $scrollbarColor
+        );
+      }
+    }
+  }
+  .scrum_task_full_deatil {
+    .p-dialog {
+      width: 85% !important;
+      z-index: 9999;
+    }
+  }
+  .scrunboard_filter_modal {
+    .p-dialog {
+      width: 85% !important;
+      z-index: 9999;
+    }
+  }
+  %p-dialoglmini {
+    .p-dialog {
+      width: 35% !important;
+      z-index: 9999;
+    }
+  }
+  %p-dialog {
+    .p-dialog {
+      width: 50% !important;
+    }
+  }
+  %p-dialoglarge {
+    .p-dialog {
+      width: 85% !important;
+    }
+  }
+}
+// For tablet Landscape Mode
+@include responsive-between(lg, xl) {
+  .scrunboard_filter_modal {
+    .p-dialog-content {
+      height: 100%;
+      cursor: pointer;
+      overflow-y: auto;
+      overflow-x: hidden;
+      @include scrollbar($width: 0.5rem, $border-radius: 1rem);
+      &:hover {
+        @include scrollbar(
+          $width: 0.5rem,
+          $border-radius: 1rem,
+          $background-color: $scrollbarColor
+        );
+      }
+    }
+  }
+  .scrum_task_full_deatil {
+    .p-dialog-content {
+      height: 100%;
+      cursor: pointer;
+      overflow-y: auto;
+      overflow-x: hidden;
+      @include scrollbar($width: 0.5rem, $border-radius: 1rem);
+      &:hover {
+        @include scrollbar(
+          $width: 0.5rem,
+          $border-radius: 1rem,
+          $background-color: $scrollbarColor
+        );
+      }
+    }
+  }
+  .scrunboard_filter_modal {
+    .p-dialog {
+      width: 85% !important;
+    }
+  }
+  %p-dialoglmini {
+    .p-dialog {
+      width: 35% !important;
+      z-index: 9999;
+    }
+  }
+  %p-dialog {
+    .p-dialog {
+      width: 45% !important;
+    }
+  }
+  %p-dialoglarge {
+    .p-dialog {
+      width: 65% !important;
+    }
+  }
+}

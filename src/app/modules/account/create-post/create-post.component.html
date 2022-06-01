@@ -1,0 +1,40 @@
+<div class="card custom-card">
+  <div class="card-body">
+    <div class="form">
+      <div class="form-group m-b-12">
+        <textarea
+          name=""
+          class="form-control"
+          placeholder="What thoughts in your mind... "
+          cols="20"
+          rows="5"
+        ></textarea>
+      </div>
+      <div class="d-flex align-items-center">
+        <div class="m-r-12">
+          <a
+            (change)="uploadFile($event)"
+            href=""
+            class="cursor-pointer m-r-12"
+          >
+            <span class="material-icons icon-20 circle-light-primary-md">
+              attach_file
+            </span>
+          </a>
+          <a
+            (change)="uploadFile($event)"
+            href=""
+            class="cursor-pointer m-r-12"
+          >
+            <span class="material-icons icon-20 circle-light-primary-md">
+              photo_camera
+            </span>
+          </a>
+        </div>
+        <div class="">
+          <button class="btn-primary btn">Post</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,309 @@
+<div class="card custom-card m-b-20">
+  <div class="card-body zp-20">
+    <div class="text-center">
+      <h5 class="">Guides</h5>
+      <p class="m-b-8 text-muted">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quasi?
+      </p>
+      <p class="m-b-0 text-muted">
+        Lorem ipsum dolor sit amet consectetur adipisicing
+      </p>
+    </div>
+  </div>
+</div>
+<!-- dialog -->
+<p-dialog
+  header="Description"
+  [(visible)]="displayMaximizable"
+  [modal]="true"
+  class="max-dialog-modal"
+  [maximizable]="true"
+  [draggable]="false"
+  [resizable]="false"
+>
+  <div class="kprime_form_wrapper">
+    <p class="text-muted">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    </p>
+  </div>
+  <div class="d-flex justify-content-end kprime_footer align-items-center">
+    <button class="btn btn-outline-danger m-r-8 btn-square">close</button>
+    <button type="submit" class="btn btn-primary btn-square">Ok</button>
+  </div>
+</p-dialog>
+<div class="row">
+  <div class="col-lg-6 col-md-6 m-b-20">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="m-b-0 p-y-4">Guidence for First User</h5>
+      </div>
+      <div class="card-body p-t-0">
+        <div class="">
+          <a
+            (click)="showMaximizableDialog()"
+            class="p-y-12 d-flex align-items-center list px-2 w-100"
+          >
+            <div class="d-flex align-items-center">
+              <span class="material-icons-outlined icon-20 icon-gray m-r-12">
+                lock
+              </span>
+              <p class="m-b-0 sub_heading">How Secure My Password?</p>
+            </div>
+          </a>
+          <a
+            (click)="showMaximizableDialog()"
+            class="p-y-12 d-flex align-items-center list px-2 w-100"
+          >
+            <div class="d-flex align-items-center">
+              <span class="material-icons-outlined icon-20 icon-gray m-r-12">
+                person_outline
+              </span>
+              <p class="m-b-0 sub_heading">How can I Change My Username?</p>
+            </div>
+          </a>
+          <a
+            (click)="showMaximizableDialog()"
+            class="p-y-12 d-flex align-items-center list px-2 w-100"
+          >
+            <div class="d-flex align-items-center">
+              <span class="material-icons-outlined icon-20 icon-gray m-r-12">
+                email
+              </span>
+              <p class="m-b-0 sub_heading">How Do I Change My Email?</p>
+            </div>
+          </a>
+          <a
+            (click)="showMaximizableDialog()"
+            class="p-y-12 d-flex align-items-center list px-2 w-100"
+          >
+            <div class="d-flex align-items-center">
+              <span class="material-icons-outlined icon-20 icon-gray m-r-12">
+                watch_later
+              </span>
+              <p class="m-b-0 sub_heading">Where do i chnage my timezone?</p>
+            </div>
+          </a>
+          <a
+            (click)="showMaximizableDialog()"
+            class="p-y-12 d-flex align-items-center list px-2 w-100"
+          >
+            <div class="d-flex align-items-center">
+              <span class="material-icons-outlined icon-20 icon-gray m-r-12">
+                lock
+              </span>
+              <p class="m-b-0 sub_heading">How do I change my password?</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 m-b-20">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="m-b-0 p-y-4">API Guidence</h5>
+      </div>
+      <div class="card-body p-t-0">
+        <div class="">
+          <a
+            (click)="showMaximizableDialog()"
+            class="p-y-12 d-flex align-items-center list px-2 w-100"
+          >
+            <div class="d-flex align-items-center">
+              <span class="material-icons-outlined icon-20 icon-gray m-r-12">
+                language
+              </span>
+              <p class="m-b-0 sub_heading">Which technologies are used?</p>
+            </div>
+          </a>
+          <a
+            (click)="showMaximizableDialog()"
+            class="p-y-12 d-flex align-items-center list px-2 w-100"
+          >
+            <div class="d-flex align-items-center">
+              <span class="material-icons-outlined icon-20 icon-gray m-r-12">
+                assignment
+              </span>
+              <p class="m-b-0 sub_heading">How do I make a requesst?</p>
+            </div>
+          </a>
+          <a
+            (click)="showMaximizableDialog()"
+            class="p-y-12 d-flex align-items-center list px-2 w-100"
+          >
+            <div class="d-flex align-items-center">
+              <span class="material-icons-outlined icon-20 icon-gray m-r-12">
+                warning_amber
+              </span>
+              <p class="m-b-0 sub_heading">What are the API Limits?</p>
+            </div>
+          </a>
+          <a
+            (click)="showMaximizableDialog()"
+            class="p-y-12 d-flex align-items-center list px-2 w-100"
+          >
+            <div class="d-flex align-items-center">
+              <span class="material-icons-outlined icon-20 icon-gray m-r-12">
+                movie
+              </span>
+              <p class="m-b-0 sub_heading">How can I apply for the API?</p>
+            </div>
+          </a>
+          <a
+            (click)="showMaximizableDialog()"
+            class="p-y-12 d-flex align-items-center list px-2 w-100"
+          >
+            <div class="d-flex align-items-center">
+              <span class="material-icons-outlined icon-20 icon-gray m-r-12">
+                description
+              </span>
+              <p class="m-b-0 sub_heading">When I can start developing?</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 m-b-20">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="m-b-0 p-y-4">Billing</h5>
+      </div>
+      <div class="card-body p-t-0">
+        <div class="">
+          <a
+            (click)="showMaximizableDialog()"
+            class="p-y-12 d-flex align-items-center list px-2 w-100"
+          >
+            <div class="d-flex align-items-center">
+              <span class="material-icons-outlined icon-20 icon-gray m-r-12">
+                description
+              </span>
+              <p class="m-b-0 sub_heading">How do I get a refund ?</p>
+            </div>
+          </a>
+          <a
+            (click)="showMaximizableDialog()"
+            class="p-y-12 d-flex align-items-center list px-2 w-100"
+          >
+            <div class="d-flex align-items-center">
+              <span class="material-icons-outlined icon-20 icon-gray m-r-12">
+                description
+              </span>
+              <p class="m-b-0 sub_heading">How do I pay?</p>
+            </div>
+          </a>
+          <a
+            (click)="showMaximizableDialog()"
+            class="p-y-12 d-flex align-items-center list px-2 w-100"
+          >
+            <div class="d-flex align-items-center">
+              <span class="material-icons-outlined icon-20 icon-gray m-r-12">
+                movie
+              </span>
+              <p class="m-b-0 sub_heading">
+                Which payment method are supported?
+              </p>
+            </div>
+          </a>
+          <a
+            (click)="showMaximizableDialog()"
+            class="p-y-12 d-flex align-items-center list px-2 w-100"
+          >
+            <div class="d-flex align-items-center">
+              <span class="material-icons-outlined icon-20 icon-gray m-r-12">
+                movie
+              </span>
+              <p class="m-b-0 sub_heading">Do I need to pay VAT?</p>
+            </div>
+          </a>
+          <a
+            (click)="showMaximizableDialog()"
+            class="p-y-12 d-flex align-items-center list px-2 w-100"
+          >
+            <div class="d-flex align-items-center">
+              <span class="material-icons-outlined icon-20 icon-gray m-r-12">
+                description
+              </span>
+              <p class="m-b-0 sub_heading">
+                Where do I find the purchase code?
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 m-b-20">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="m-b-0 p-y-4">First Step</h5>
+      </div>
+      <div class="card-body p-t-0">
+        <div class="">
+          <a
+            (click)="showMaximizableDialog()"
+            class="p-y-12 d-flex align-items-center list px-2 w-100"
+          >
+            <div class="d-flex align-items-center">
+              <span class="material-icons-outlined icon-20 icon-gray m-r-12">
+                description
+              </span>
+              <p class="m-b-0 sub_heading">How do I download template?</p>
+            </div>
+          </a>
+          <a
+            (click)="showMaximizableDialog()"
+            class="p-y-12 d-flex align-items-center list px-2 w-100"
+          >
+            <div class="d-flex align-items-center">
+              <span class="material-icons-outlined icon-20 icon-gray m-r-12">
+                description
+              </span>
+              <p class="m-b-0 sub_heading">Installation Guide</p>
+            </div>
+          </a>
+          <a
+            (click)="showMaximizableDialog()"
+            class="p-y-12 d-flex align-items-center list px-2 w-100"
+          >
+            <div class="d-flex align-items-center">
+              <span class="material-icons-outlined icon-20 icon-gray m-r-12">
+                movie
+              </span>
+              <p class="m-b-0 sub_heading">Creation your first page</p>
+            </div>
+          </a>
+          <a
+            (click)="showMaximizableDialog()"
+            class="p-y-12 d-flex align-items-center list px-2 w-100"
+          >
+            <div class="d-flex align-items-center">
+              <span class="material-icons-outlined icon-20 icon-gray m-r-12">
+                movie
+              </span>
+              <p class="m-b-0 sub_heading">Customize template</p>
+            </div>
+          </a>
+          <a
+            (click)="showMaximizableDialog()"
+            class="p-y-12 d-flex align-items-center list px-2 w-100"
+          >
+            <div class="d-flex align-items-center">
+              <span class="material-icons-outlined icon-20 icon-gray m-r-12">
+                description
+              </span>
+              <p class="m-b-0 sub_heading">How do I contact support?</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

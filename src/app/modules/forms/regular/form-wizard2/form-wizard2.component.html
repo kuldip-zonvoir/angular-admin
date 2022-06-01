@@ -1,0 +1,1470 @@
+<div class="row">
+  <!-- stepper wizard 1 horizontal  -->
+  <div class="col-lg-12 grid-bottom">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <div class="wzrd_steps">
+          <ul class="wzrd_menu">
+            <li class="wzrd_list">
+              <a
+                [ngClass]="{ active_wzrd_step: stepId === 0 }"
+                class="wzrd_link"
+              >
+                <div class="wzrd_step_num">
+                  <span class="wzrd_icon">1</span>
+                </div>
+                <span class="wzrd_step_name">Account Details</span>
+              </a>
+            </li>
+            <li class="wzrd_list">
+              <a
+                [ngClass]="{ active_wzrd_step: stepId === 1 }"
+                class="wzrd_link next_wzrd"
+              >
+                <div class="wzrd_step_num">
+                  <span class="wzrd_icon">2</span>
+                </div>
+                <span class="wzrd_step_name">Personal Info</span>
+              </a>
+            </li>
+            <li class="wzrd_list">
+              <a
+                [ngClass]="{ active_wzrd_step: stepId === 2 }"
+                class="wzrd_link next_wzrd"
+              >
+                <div class="wzrd_step_num">
+                  <span class="wzrd_icon">3</span>
+                </div>
+                <span class="wzrd_step_name">Address</span>
+              </a>
+            </li>
+            <li class="wzrd_list">
+              <a
+                [ngClass]="{ active_wzrd_step: stepId === 3 }"
+                class="wzrd_link next_wzrd"
+              >
+                <div class="wzrd_step_num">
+                  <span class="wzrd_icon">4</span>
+                </div>
+                <span class="wzrd_step_name">Social Links</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-body">
+        <!-- Account Information -->
+        <ng-template [ngIf]="stepId === 0">
+          <div class="wzrd_form">
+            <h5 class="m-b-4">Account Details</h5>
+            <p class="text-muted">Enter your details..</p>
+            <form>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Username </label>
+                    <input
+                      type="text"
+                      placeholder="Ex. John Doe "
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Email </label>
+                    <input
+                      type="email"
+                      placeholder="text@123.com"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Password </label>
+                    <input
+                      type="password"
+                      placeholder="12345"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Confirm Password </label>
+                    <input
+                      type="password"
+                      placeholder="12345"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="wzrd_nav_buttonns_wrap d-flex">
+                    <button
+                      (click)="nextStep(0)"
+                      class="btn btn-primary m-l-auto d-flex align-items-center"
+                    >
+                      Next
+                      <span class="material-icons-outlined icon-20 m-l-4">
+                        chevron_right
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </ng-template>
+        <!-- Pesonal information -->
+        <ng-template [ngIf]="stepId === 1">
+          <div class="wzrd_form">
+            <h5 class="m-b-4">Personal Details</h5>
+            <p class="text-muted">Enter your details..</p>
+            <form>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Firstname </label>
+                    <input
+                      type="text"
+                      placeholder="Ex. John  "
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Lastname </label>
+                    <input type="text" placeholder="Doe" class="form-control" />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Country </label>
+                    <input
+                      type="password"
+                      placeholder="12345"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Language </label>
+                    <input
+                      type="password"
+                      placeholder="12345"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div
+                    class="
+                      wzrd_nav_buttonns_wrap
+                      d-flex
+                      align-items-center
+                      justify-content-between
+                    "
+                  >
+                    <button
+                      (click)="prevStep(1)"
+                      class="btn btn-custom-light d-flex align-items-center"
+                    >
+                      <span class="material-icons-outlined icon-20 m-r-4">
+                        chevron_left
+                      </span>
+                      Previous
+                    </button>
+                    <button
+                      (click)="nextStep(1)"
+                      class="btn btn-primary d-flex align-items-center"
+                    >
+                      Next
+                      <span class="material-icons-outlined icon-20 m-l-4">
+                        chevron_right
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </ng-template>
+        <!-- address information -->
+        <ng-template [ngIf]="stepId === 2">
+          <div class="wzrd_form">
+            <h5 class="m-b-4">Address Details</h5>
+            <p class="text-muted">Enter your details..</p>
+            <form>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Address </label>
+                    <input
+                      type="text"
+                      placeholder="Ex. John Doe "
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Landmark </label>
+                    <input type="text" placeholder="" class="form-control" />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Pincode </label>
+                    <input
+                      type="text"
+                      placeholder="207290"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> City </label>
+                    <input
+                      type="password"
+                      placeholder="NY"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div
+                    class="
+                      wzrd_nav_buttonns_wrap
+                      d-flex
+                      align-items-center
+                      justify-content-between
+                    "
+                  >
+                    <button
+                      (click)="prevStep(2)"
+                      class="btn btn-custom-light d-flex align-items-center"
+                    >
+                      <span class="material-icons-outlined icon-20 m-r-4">
+                        chevron_left
+                      </span>
+                      Previous
+                    </button>
+                    <button
+                      (click)="nextStep(2)"
+                      class="btn btn-primary d-flex align-items-center"
+                    >
+                      Next
+                      <span class="material-icons-outlined icon-20 m-l-4">
+                        chevron_right
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </ng-template>
+        <!-- Social Links -->
+        <ng-template [ngIf]="stepId === 3">
+          <div class="wzrd_form">
+            <h5 class="m-b-4">Social Links</h5>
+            <p class="text-muted">Enter your details..</p>
+            <form>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Twitter </label>
+                    <input
+                      type="text"
+                      placeholder="http://twitter.com/xyz "
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Facebook </label>
+                    <input
+                      type="text"
+                      placeholder="http://facebook/xyz"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> LinkedIn </label>
+                    <input
+                      type="text"
+                      placeholder="http://linkedin.com/xyz"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Instagram </label>
+                    <input
+                      type="text"
+                      placeholder="http://instagram.com/xyz"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div
+                    class="
+                      wzrd_nav_buttonns_wrap
+                      d-flex
+                      align-items-center
+                      justify-content-between
+                    "
+                  >
+                    <button
+                      (click)="prevStep(3)"
+                      class="btn btn-custom-light d-flex align-items-center"
+                    >
+                      <span class="material-icons-outlined icon-20 m-r-4">
+                        chevron_left
+                      </span>
+                      Previous
+                    </button>
+                    <button class="btn btn-primary d-flex align-items-center">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  <!-- Stepper vertical -->
+  <div class="col-lg-12 grid-bottom">
+    <div class="vertical_wzrd_wrap custom-card">
+      <div class="wzrd_navigation">
+        <div class="wzrd_vr_steps">
+          <ul class="wzrd_vr_menu">
+            <li class="wzrd_vr_list">
+              <a
+                [ngClass]="{ active_vr_wzrd_step: step_vrId === 0 }"
+                class="wzrd_vr_link"
+              >
+                <div class="wzrd_vr_step_num">
+                  <span class="wzrd_vr_icon">1</span>
+                </div>
+                <span class="wzrd_vr_step_name">Account Details</span>
+              </a>
+            </li>
+            <li class="wzrd_vr_list">
+              <a
+                [ngClass]="{ active_vr_wzrd_step: step_vrId === 1 }"
+                class="wzrd_vr_link"
+              >
+                <div class="wzrd_vr_step_num">
+                  <span class="wzrd_vr_icon">2</span>
+                </div>
+                <span class="wzrd_vr_step_name">Personal Info</span>
+              </a>
+            </li>
+            <li class="wzrd_vr_list">
+              <a
+                [ngClass]="{ active_vr_wzrd_step: step_vrId === 2 }"
+                class="wzrd_vr_link"
+              >
+                <div class="wzrd_vr_step_num">
+                  <span class="wzrd_vr_icon">3</span>
+                </div>
+                <span class="wzrd_vr_step_name">Address</span>
+              </a>
+            </li>
+            <li class="wzrd_vr_list">
+              <a
+                [ngClass]="{ active_vr_wzrd_step: step_vrId === 3 }"
+                class="wzrd_vr_link"
+              >
+                <div class="wzrd_vr_step_num">
+                  <span class="wzrd_vr_icon">4</span>
+                </div>
+                <span class="wzrd_vr_step_name">Social Links</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Account Information -->
+      <ng-template [ngIf]="step_vrId === 0">
+        <div class="wzrd_vr_form">
+          <h5 class="m-b-4">Account Details</h5>
+          <p class="text-muted">Enter your details..</p>
+          <form>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Username </label>
+                  <input
+                    type="text"
+                    placeholder="Ex. John Doe "
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Email </label>
+                  <input
+                    type="email"
+                    placeholder="text@123.com"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Password </label>
+                  <input
+                    type="password"
+                    placeholder="12345"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Confirm Password </label>
+                  <input
+                    type="password"
+                    placeholder="12345"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div
+                  class="
+                    wzrd_nav_buttonns_wrap
+                    d-flex
+                    align-items-center
+                    justify-content-between
+                  "
+                >
+                  <button
+                    type="button"
+                    (click)="nextVrStep(0)"
+                    class="btn btn-primary d-flex m-l-auto align-items-center"
+                  >
+                    Next
+                    <span class="material-icons-outlined icon-20 m-l-4">
+                      chevron_right
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </ng-template>
+      <!-- Personal Information -->
+      <ng-template [ngIf]="step_vrId === 1">
+        <div class="wzrd_vr_form">
+          <h5 class="m-b-4">Personal Details</h5>
+          <p class="text-muted">Enter your details..</p>
+          <form>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Firstname </label>
+                  <input
+                    type="text"
+                    placeholder="Ex. John"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Lastname </label>
+                  <input type="text" placeholder="Doe" class="form-control" />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Country </label>
+                  <input
+                    type="password"
+                    placeholder="12345"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Language </label>
+                  <input type="" placeholder="12345" class="form-control" />
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div
+                  class="
+                    wzrd_nav_buttonns_wrap
+                    d-flex
+                    align-items-center
+                    justify-content-between
+                  "
+                >
+                  <button
+                    (click)="prevVrStep(1)"
+                    class="btn btn-custom-light d-flex align-items-center"
+                  >
+                    <span class="material-icons-outlined icon-20 m-r-4">
+                      chevron_left
+                    </span>
+                    Previous
+                  </button>
+                  <button
+                    (click)="nextVrStep(1)"
+                    class="btn btn-primary d-flex m-l-auto align-items-center"
+                  >
+                    Next
+                    <span class="material-icons-outlined icon-20 m-l-4">
+                      chevron_right
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </ng-template>
+      <!-- Address Information -->
+      <ng-template [ngIf]="step_vrId === 2">
+        <div class="wzrd_vr_form">
+          <h5 class="m-b-4">Address Details</h5>
+          <p class="text-muted">Enter your details..</p>
+          <form>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Address </label>
+                  <input
+                    type="text"
+                    placeholder="Ex. John Doe "
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Landmark </label>
+                  <input type="text" placeholder="" class="form-control" />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Pincode </label>
+                  <input
+                    type="text"
+                    placeholder="207290"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> City </label>
+                  <input
+                    type="password"
+                    placeholder="NY"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div
+                  class="
+                    wzrd_nav_buttonns_wrap
+                    d-flex
+                    align-items-center
+                    justify-content-between
+                  "
+                >
+                  <button
+                    (click)="prevVrStep(2)"
+                    class="btn btn-custom-light d-flex align-items-center"
+                  >
+                    <span class="material-icons-outlined icon-20 m-r-4">
+                      chevron_left
+                    </span>
+                    Previous
+                  </button>
+                  <button
+                    (click)="nextVrStep(2)"
+                    class="btn btn-primary d-flex m-l-auto align-items-center"
+                  >
+                    Next
+                    <span class="material-icons-outlined icon-20 m-l-4">
+                      chevron_right
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </ng-template>
+      <!-- Social Links -->
+      <ng-template [ngIf]="step_vrId === 3">
+        <div class="wzrd_vr_form">
+          <h5 class="m-b-4">Social Links</h5>
+          <p class="text-muted">Enter your details..</p>
+          <form>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Twitter </label>
+                  <input
+                    type="text"
+                    placeholder="http://twitter.com/xyz "
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Facebook </label>
+                  <input
+                    type="text"
+                    placeholder="http://facebook/xyz"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> LinkedIn </label>
+                  <input
+                    type="text"
+                    placeholder="http://linkedin.com/xyz"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Instagram </label>
+                  <input
+                    type="text"
+                    placeholder="http://instagram.com/xyz"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div
+                  class="
+                    wzrd_nav_buttonns_wrap
+                    d-flex
+                    align-items-center
+                    justify-content-between
+                  "
+                >
+                  <button
+                    (click)="prevVrStep(3)"
+                    class="btn btn-custom-light d-flex align-items-center"
+                  >
+                    <span class="material-icons-outlined icon-20 m-r-4">
+                      chevron_left
+                    </span>
+                    Previous
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-primary d-flex m-l-auto align-items-center"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+  <!-- horizontal wizard two -->
+  <div class="col-lg-12 grid-bottom">
+    <!-- stepper outside horizontal -->
+    <div class="wzrd_steps wzrd_steps_outside">
+      <ul class="wzrd_menu">
+        <li class="wzrd_list">
+          <a
+            [ngClass]="{ active_wzrd_step: stepOutId === 0 }"
+            class="wzrd_link"
+          >
+            <div class="wzrd_step_num">
+              <i class="ti ti-file wzrd_icon"> </i>
+            </div>
+            <span class="wzrd_step_name">Account Details</span>
+          </a>
+        </li>
+        <li class="wzrd_list">
+          <a
+            [ngClass]="{ active_wzrd_step: stepOutId === 1 }"
+            class="wzrd_link next_wzrd"
+          >
+            <div class="wzrd_step_num">
+              <i class="ti ti-user wzrd_icon"> </i>
+            </div>
+            <span class="wzrd_step_name">Personal Info</span>
+          </a>
+        </li>
+        <li class="wzrd_list">
+          <a
+            [ngClass]="{ active_wzrd_step: stepOutId === 2 }"
+            class="wzrd_link next_wzrd"
+          >
+            <div class="wzrd_step_num">
+              <i class="ti ti-location-pin wzrd_icon"> </i>
+            </div>
+            <span class="wzrd_step_name">Address</span>
+          </a>
+        </li>
+        <li class="wzrd_list">
+          <a
+            [ngClass]="{ active_wzrd_step: stepOutId === 3 }"
+            class="wzrd_link next_wzrd"
+          >
+            <div class="wzrd_step_num">
+              <i class="wzrd_icon ti ti-link"></i>
+            </div>
+            <span class="wzrd_step_name">Social Links</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="card custom-card">
+      <div class="card-body">
+        <!-- Account Information -->
+        <ng-template [ngIf]="stepOutId === 0">
+          <div class="wzrd_form">
+            <h5 class="m-b-4">Account Details</h5>
+            <p class="text-muted">Enter your details..</p>
+            <form>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Username </label>
+                    <input
+                      type="text"
+                      placeholder="Ex. John Doe "
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Email </label>
+                    <input
+                      type="email"
+                      placeholder="text@123.com"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Password </label>
+                    <input
+                      type="password"
+                      placeholder="12345"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Confirm Password </label>
+                    <input
+                      type="password"
+                      placeholder="12345"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="wzrd_nav_buttonns_wrap d-flex">
+                    <button
+                      (click)="nextOutStep(0)"
+                      class="btn btn-primary m-l-auto d-flex align-items-center"
+                    >
+                      Next
+                      <span class="material-icons-outlined icon-20 m-l-4">
+                        chevron_right
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </ng-template>
+        <!-- Pesonal information -->
+        <ng-template [ngIf]="stepOutId === 1">
+          <div class="wzrd_form">
+            <h5 class="m-b-4">Personal Details</h5>
+            <p class="text-muted">Enter your details..</p>
+            <form>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Firstname </label>
+                    <input
+                      type="text"
+                      placeholder="Ex. John  "
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Lastname </label>
+                    <input type="text" placeholder="Doe" class="form-control" />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Country </label>
+                    <input
+                      type="password"
+                      placeholder="12345"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Language </label>
+                    <input
+                      type="password"
+                      placeholder="12345"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div
+                    class="
+                      wzrd_nav_buttonns_wrap
+                      d-flex
+                      align-items-center
+                      justify-content-between
+                    "
+                  >
+                    <button
+                      (click)="prevOutStep(1)"
+                      class="btn btn-custom-light d-flex align-items-center"
+                    >
+                      <span class="material-icons-outlined icon-20 m-r-4">
+                        chevron_left
+                      </span>
+                      Previous
+                    </button>
+                    <button
+                      (click)="nextOutStep(1)"
+                      class="btn btn-primary d-flex align-items-center"
+                    >
+                      Next
+                      <span class="material-icons-outlined icon-20 m-l-4">
+                        chevron_right
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </ng-template>
+        <!-- address information -->
+        <ng-template [ngIf]="stepOutId === 2">
+          <div class="wzrd_form">
+            <h5 class="m-b-4">Address Details</h5>
+            <p class="text-muted">Enter your details..</p>
+            <form>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Address </label>
+                    <input
+                      type="text"
+                      placeholder="Ex. John Doe "
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Landmark </label>
+                    <input type="text" placeholder="" class="form-control" />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Pincode </label>
+                    <input
+                      type="text"
+                      placeholder="207290"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> City </label>
+                    <input
+                      type="password"
+                      placeholder="NY"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div
+                    class="
+                      wzrd_nav_buttonns_wrap
+                      d-flex
+                      align-items-center
+                      justify-content-between
+                    "
+                  >
+                    <button
+                      (click)="prevOutStep(2)"
+                      class="btn btn-custom-light d-flex align-items-center"
+                    >
+                      <span class="material-icons-outlined icon-20 m-r-4">
+                        chevron_left
+                      </span>
+                      Previous
+                    </button>
+                    <button
+                      (click)="nextOutStep(2)"
+                      class="btn btn-primary d-flex align-items-center"
+                    >
+                      Next
+                      <span class="material-icons-outlined icon-20 m-l-4">
+                        chevron_right
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </ng-template>
+        <!-- Social Links -->
+        <ng-template [ngIf]="stepOutId === 3">
+          <div class="wzrd_form">
+            <h5 class="m-b-4">Social Links</h5>
+            <p class="text-muted">Enter your details..</p>
+            <form>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Twitter </label>
+                    <input
+                      type="text"
+                      placeholder="http://twitter.com/xyz "
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Facebook </label>
+                    <input
+                      type="text"
+                      placeholder="http://facebook/xyz"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> LinkedIn </label>
+                    <input
+                      type="text"
+                      placeholder="http://linkedin.com/xyz"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group m-b-12">
+                    <label for="" class=""> Instagram </label>
+                    <input
+                      type="text"
+                      placeholder="http://instagram.com/xyz"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div
+                    class="
+                      wzrd_nav_buttonns_wrap
+                      d-flex
+                      align-items-center
+                      justify-content-between
+                    "
+                  >
+                    <button
+                      (click)="prevOutStep(3)"
+                      class="btn btn-custom-light d-flex align-items-center"
+                    >
+                      <span class="material-icons-outlined icon-20 m-r-4">
+                        chevron_left
+                      </span>
+                      Previous
+                    </button>
+                    <button class="btn btn-primary d-flex align-items-center">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  <!-- vertical wizard two -->
+  <div class="col-lg-12 grid-bottom">
+    <div class="vertical_wzrd_wrap">
+      <div class="wzrd_navigation">
+        <div class="wzrd_vr_steps_outside">
+          <ul class="wzrd_vr_menu">
+            <li class="wzrd_vr_list">
+              <a
+                [ngClass]="{ active_vr_wzrd_step: step_vroId === 0 }"
+                class="wzrd_vr_link"
+              >
+                <div class="wzrd_vr_step_num">
+                  <i class="ti ti-file wzrd_vr_icon"> </i>
+                </div>
+                <span class="wzrd_vr_step_name">Account Details</span>
+              </a>
+            </li>
+            <li class="wzrd_vr_list">
+              <a
+                [ngClass]="{ active_vr_wzrd_step: step_vroId === 1 }"
+                class="wzrd_vr_link"
+              >
+                <div class="wzrd_vr_step_num">
+                  <i class="ti ti-user wzrd_vr_icon"> </i>
+                </div>
+                <span class="wzrd_vr_step_name">Personal Info</span>
+              </a>
+            </li>
+            <li class="wzrd_vr_list">
+              <a
+                [ngClass]="{ active_vr_wzrd_step: step_vroId === 2 }"
+                class="wzrd_vr_link"
+              >
+                <div class="wzrd_vr_step_num">
+                  <i class="ti ti-location-pin wzrd_vr_icon"> </i>
+                </div>
+                <span class="wzrd_vr_step_name">Address</span>
+              </a>
+            </li>
+            <li class="wzrd_vr_list">
+              <a
+                [ngClass]="{ active_vr_wzrd_step: step_vroId === 3 }"
+                class="wzrd_vr_link"
+              >
+                <div class="wzrd_vr_step_num">
+                  <i class="ti ti-link wzrd_vr_icon"> </i>
+                </div>
+                <span class="wzrd_vr_step_name">Social Links</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Account Information -->
+      <ng-template [ngIf]="step_vroId === 0">
+        <div class="wzrd_vr_form custom-card">
+          <h5 class="m-b-4">Account Details</h5>
+          <p class="text-muted">Enter your details..</p>
+          <form>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Username </label>
+                  <input
+                    type="text"
+                    placeholder="Ex. John Doe "
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Email </label>
+                  <input
+                    type="email"
+                    placeholder="text@123.com"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Password </label>
+                  <input
+                    type="password"
+                    placeholder="12345"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Confirm Password </label>
+                  <input
+                    type="password"
+                    placeholder="12345"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div
+                  class="
+                    wzrd_nav_buttonns_wrap
+                    d-flex
+                    align-items-center
+                    justify-content-between
+                  "
+                >
+                  <button
+                    type="button"
+                    (click)="nextVroStep(0)"
+                    class="btn btn-primary d-flex m-l-auto align-items-center"
+                  >
+                    Next
+                    <span class="material-icons-outlined icon-20 m-l-4">
+                      chevron_right
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </ng-template>
+      <!-- Personal Information -->
+      <ng-template [ngIf]="step_vroId === 1">
+        <div class="wzrd_vr_form custom-card">
+          <h5 class="m-b-4">Personal Details</h5>
+          <p class="text-muted">Enter your details..</p>
+          <form>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Firstname </label>
+                  <input
+                    type="text"
+                    placeholder="Ex. John"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Lastname </label>
+                  <input type="text" placeholder="Doe" class="form-control" />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Country </label>
+                  <input
+                    type="password"
+                    placeholder="12345"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Language </label>
+                  <input type="" placeholder="12345" class="form-control" />
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div
+                  class="
+                    wzrd_nav_buttonns_wrap
+                    d-flex
+                    align-items-center
+                    justify-content-between
+                  "
+                >
+                  <button
+                    (click)="prevVroStep(1)"
+                    class="btn btn-custom-light d-flex align-items-center"
+                  >
+                    <span class="material-icons-outlined icon-20 m-r-4">
+                      chevron_left
+                    </span>
+                    Previous
+                  </button>
+                  <button
+                    (click)="nextVroStep(1)"
+                    class="btn btn-primary d-flex m-l-auto align-items-center"
+                  >
+                    Next
+                    <span class="material-icons-outlined icon-20 m-l-4">
+                      chevron_right
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </ng-template>
+      <!-- Address Information -->
+      <ng-template [ngIf]="step_vroId === 2">
+        <div class="wzrd_vr_form custom-card">
+          <h5 class="m-b-4">Address Details</h5>
+          <p class="text-muted">Enter your details..</p>
+          <form>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Address </label>
+                  <input
+                    type="text"
+                    placeholder="Ex. John Doe "
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Landmark </label>
+                  <input type="text" placeholder="" class="form-control" />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Pincode </label>
+                  <input
+                    type="text"
+                    placeholder="207290"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> City </label>
+                  <input
+                    type="password"
+                    placeholder="NY"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div
+                  class="
+                    wzrd_nav_buttonns_wrap
+                    d-flex
+                    align-items-center
+                    justify-content-between
+                  "
+                >
+                  <button
+                    (click)="prevVroStep(2)"
+                    class="btn btn-custom-light d-flex align-items-center"
+                  >
+                    <span class="material-icons-outlined icon-20 m-r-4">
+                      chevron_left
+                    </span>
+                    Previous
+                  </button>
+                  <button
+                    (click)="nextVroStep(2)"
+                    class="btn btn-primary d-flex m-l-auto align-items-center"
+                  >
+                    Next
+                    <span class="material-icons-outlined icon-20 m-l-4">
+                      chevron_right
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </ng-template>
+      <!-- Social Links -->
+      <ng-template [ngIf]="step_vroId === 3">
+        <div class="wzrd_vr_form custom-card">
+          <h5 class="m-b-4">Social Links</h5>
+          <p class="text-muted">Enter your details..</p>
+          <form>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Twitter </label>
+                  <input
+                    type="text"
+                    placeholder="http://twitter.com/xyz "
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Facebook </label>
+                  <input
+                    type="text"
+                    placeholder="http://facebook/xyz"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> LinkedIn </label>
+                  <input
+                    type="text"
+                    placeholder="http://linkedin.com/xyz"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group m-b-12">
+                  <label for="" class=""> Instagram </label>
+                  <input
+                    type="text"
+                    placeholder="http://instagram.com/xyz"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div
+                  class="
+                    wzrd_nav_buttonns_wrap
+                    d-flex
+                    align-items-center
+                    justify-content-between
+                  "
+                >
+                  <button
+                    (click)="prevVroStep(3)"
+                    class="btn btn-custom-light d-flex align-items-center"
+                  >
+                    <span class="material-icons-outlined icon-20 m-r-4">
+                      chevron_left
+                    </span>
+                    Previous
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-primary d-flex m-l-auto align-items-center"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </ng-template>
+      <!-- <div class="wzrd_vr_form custom-card">
+        <h5 class="m-b-4">Account Details</h5>
+        <p class="text-muted">Enter your details..</p>
+        <form>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group m-b-12">
+                <label for="" class=""> Username </label>
+                <input
+                  type="text"
+                  placeholder="Ex. John Doe "
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group m-b-12">
+                <label for="" class=""> Email </label>
+                <input
+                  type="email"
+                  placeholder="text@123.com"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group m-b-12">
+                <label for="" class=""> Password </label>
+                <input
+                  type="password"
+                  placeholder="12345"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group m-b-12">
+                <label for="" class=""> Confirm Password </label>
+                <input
+                  type="password"
+                  placeholder="12345"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div
+                class="
+                  wzrd_nav_buttonns_wrap
+                  d-flex
+                  align-items-center
+                  justify-content-between
+                "
+              >
+                <button class="btn btn-custom-light d-flex align-items-center">
+                  <span class="material-icons-outlined icon-20 m-r-4">
+                    chevron_left
+                  </span>
+                  Previous
+                </button>
+                <button class="btn btn-primary d-flex align-items-center">
+                  Next
+                  <span class="material-icons-outlined icon-20 m-l-4">
+                    chevron_right
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div> -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+.dropzone {
+  padding: 10%;
+  outline: 3px dotted $dropfileOutline;
+
+  background-color: $dropfilebg;
+
+  .drop-secton {
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+
+    .icon {
+      font-size: 4rem;
+      color: $heading-color;
+    }
+  }
+}
+
+.droparea {
+  background-color: $dropfilebg;
+}

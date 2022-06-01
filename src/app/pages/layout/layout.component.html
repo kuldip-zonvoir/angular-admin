@@ -1,0 +1,445 @@
+<div class="dashboard123-wrap-container" [ngClass]="currentTheme">
+  <!-- costomizing spinner -->
+
+  <div class="theme_setting">
+    <div class="theme-toggle">
+      <a class="theme-sidebar decoration-none" (click)="toggleSetTheme()">
+        <span class="material-icons-outlined icon-spinner icon-20">
+          settings
+        </span>
+      </a>
+    </div>
+  </div>
+  <!-- customizing spinner closed -->
+  <div
+    class="dashboard_wrapper"
+    [ngClass]="{
+      kk_responsive: isResponsive,
+      mobile_sidebar_dialog: mobileSidebarModal
+    }"
+  >
+    <!-- sidebar comes here -->
+
+    <div class="" hover-class="k_hover_sidebar">
+      <div
+        class="sidebar"
+        [ngClass]="
+          mobileSidebarModal ? 'mobile_model_active' : 'mobile_model_close'
+        "
+      >
+        <div class="outside_click">
+          <button
+            type="button"
+            class="close_sidebar_modal"
+            (click)="closeSidebarModal()"
+          >
+            <span class="material-icons-outlined _close_btn_modal">
+              close
+            </span>
+          </button>
+          <app-sidebar></app-sidebar>
+        </div>
+      </div>
+    </div>
+    <!-- sidebar for mobile start -->
+    <!-- sidebar close here -->
+
+    <!-- content-wrapper comes here -->
+    <!-- header comes here -->
+    <div class="main_container responsive">
+      <div class="main_header">
+        <app-header></app-header>
+      </div>
+      <!-- header close here -->
+      <div class="main_content">
+        <div class="main_wraper">
+          <!-- breadcrum comes here -->
+          <div class="main_crum">
+            <div class="brcum">
+              <div class="">
+                <h5 class="bread_crum_componet">{{ component }}</h5>
+              </div>
+              <div class="kk_bread_crumb">
+                <div class="bkc_home">
+                  <span
+                    class="material-icons-outlined m-r-4 icon-20 text-primary"
+                  >
+                    home
+                  </span>
+                  <a href="" class="hme_rute"
+                    >Home
+                    <span *ngIf="component != 'dashboard'" class="sls"
+                      >/</span
+                    ></a
+                  >
+                </div>
+
+                <div class="m-x-8">
+                  <breadcrumb class="bread_crumb_cc" #parent>
+                    <ol class="breadcrumb">
+                      <ng-template
+                        ngFor
+                        let-route
+                        [ngForOf]="parent.breadcrumbs"
+                      >
+                        <li *ngIf="!route.terminal" class="breadcrumb-item">
+                          <a [routerLink]="[route.url]">{{
+                            route.displayName
+                          }}</a>
+                        </li>
+                        <li
+                          *ngIf="route.terminal"
+                          class="breadcrumb-item active"
+                        >
+                          {{ route.displayName }}
+                        </li>
+                      </ng-template>
+                    </ol>
+                  </breadcrumb>
+                </div>
+              </div>
+            </div>
+            <div class="action_dro">
+              <div class="btn-group action_btn_drop" dropdown>
+                <button
+                  type="button"
+                  class="btn btn-square btn-primary align-items-center d-flex"
+                  id="button-basic"
+                  dropdownToggle
+                  type="button"
+                  aria-controls="dropdown-basic"
+                >
+                  <span class="material-icons-outlined icon_set_me">
+                    settings
+                  </span>
+                  <span class="sction_btn_name">Setting</span>
+                  <span class="material-icons-outlined m-l-4">
+                    arrow_drop_down
+                  </span>
+                </button>
+                <ul
+                  id="dropdown-basic"
+                  *dropdownMenu
+                  class="dropdown-menu dropdown-menu-left"
+                  role="menu"
+                  aria-labelledby="button-basic"
+                  placement="bottom right"
+                >
+                  <li role="menuitem">
+                    <a class="dropdown-item p-x-12 py-2">
+                      <div class="d-flex align-items-center">
+                        <div class="m-b-0">
+                          <p class="m-b-0 sub_heading">Action</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li role="menuitem">
+                    <a class="dropdown-item p-x-12 py-2">
+                      <div class="d-flex align-items-center">
+                        <div class="m-b-0">
+                          <p class="m-b-0 sub_heading">Add action</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li role="menuitem">
+                    <a class="dropdown-item p-x-12 py-2">
+                      <div class="d-flex align-items-center">
+                        <div class="m-b-0">
+                          <p class="m-b-0 sub_heading">Add more action</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <hr class="zm-0" />
+                  <li role="menuitem">
+                    <a class="dropdown-item p-x-12 py-2">
+                      <div class="d-flex align-items-center">
+                        <div class="m-b-0">
+                          <p class="m-b-0 sub_heading">Seprated Link</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- breadcrum close-->
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+      <div class="main-footer">
+        <app-footer></app-footer>
+      </div>
+    </div>
+    <!-- content wrapper closed -->
+
+    <!-- theme customize start -->
+    <ng-template [ngIf]="visibleSidebar2">
+      <p-sidebar
+        [(visible)]="visibleSidebar2"
+        class="theme p-y-12 p-x-8"
+        position="right"
+        [baseZIndex]="zvalue"
+      >
+        <div class="">
+          <h4 class="text-muted p-b-12 m-b-0">Theme Setting</h4>
+
+          <div class="form-check p-l-0">
+            <label class="container-radio m-b-12 text-heading"
+              >Light Theme
+              <input
+                type="radio"
+                name="radio"
+                (click)="changeMode('light')"
+                [checked]="!isChecked"
+              />
+              <span class="check-circle"></span>
+            </label>
+          </div>
+          <div class="form-check p-l-0">
+            <label class="container-radio text-heading"
+              >Dark Theme
+              <input
+                type="radio"
+                name="radio"
+                (click)="changeMode('dark')"
+                [checked]="isChecked"
+              />
+              <span class="check-circle"></span>
+            </label>
+          </div>
+        </div>
+        <div class="theme_pallet_scrollbar">
+          <!-- <div class="m-b-8">
+            <h6 class="text-center m-b-0">Theme Colors</h6>
+            <hr />
+            <div class="">
+              <ul class="switch">
+                <li
+                  (click)="activedTheme('0')"
+                  class="theme-0"
+                  [ngClass]="{ 'h-active': themeId == '0' }"
+                ></li>
+                <li
+                  (click)="activedTheme('1')"
+                  class="theme-1"
+                  [ngClass]="{ 'h-active': themeId == '1' }"
+                ></li>
+                <li
+                  (click)="activedTheme('2')"
+                  class="theme-2"
+                  [ngClass]="{ 'h-active': themeId == '2' }"
+                ></li>
+                <li
+                  (click)="activedTheme('3')"
+                  class="theme-3"
+                  [ngClass]="{ 'h-active': themeId == '3' }"
+                ></li>
+                <li
+                  (click)="activedTheme('4')"
+                  class="theme-5"
+                  [ngClass]="{ 'h-active': themeId == '4' }"
+                ></li>
+                <li
+                  (click)="activedTheme('5')"
+                  class="theme-6"
+                  [ngClass]="{ 'h-active': themeId == '5' }"
+                ></li>
+              </ul>
+            </div>
+          </div> -->
+
+          <div class="m-b-8">
+            <h6 class="text-center m-b-0">Header Colors</h6>
+            <hr />
+            <div class="text-center m-b-12">
+              <button
+                (click)="changeHeader('default')"
+                class="btn btn-outline-primary"
+              >
+                Default Header
+              </button>
+            </div>
+            <div class="">
+              <ul class="switch">
+                <li
+                  (click)="changeHeader('1')"
+                  class="header-1"
+                  [ngClass]="{ 'h-active': hId == '1' }"
+                ></li>
+                <li
+                  (click)="changeHeader('2')"
+                  class="header-2"
+                  [ngClass]="{ 'h-active': hId == '2' }"
+                ></li>
+                <li
+                  (click)="changeHeader('3')"
+                  class="header-3"
+                  [ngClass]="{ 'h-active': hId == '3' }"
+                ></li>
+                <li
+                  (click)="changeHeader('4')"
+                  class="header-4"
+                  [ngClass]="{ 'h-active': hId == '4' }"
+                ></li>
+                <li
+                  (click)="changeHeader('5')"
+                  class="header-5"
+                  [ngClass]="{ 'h-active': hId == '5' }"
+                ></li>
+                <li
+                  (click)="changeHeader('6')"
+                  class="header-6"
+                  [ngClass]="{ 'h-active': hId == '6' }"
+                ></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="m-b-8">
+            <h6 class="text-center m-b-0">Brand Colors</h6>
+            <hr />
+            <div class="text-center m-b-12">
+              <button
+                (click)="changeBrand('default')"
+                class="btn btn-outline-primary"
+              >
+                Default Brand
+              </button>
+            </div>
+            <div class="">
+              <ul class="switch">
+                <li
+                  (click)="changeBrand('1')"
+                  class="header-1"
+                  [ngClass]="{ 'h-active': bId == '1' }"
+                ></li>
+                <li
+                  (click)="changeBrand('2')"
+                  class="header-2"
+                  [ngClass]="{ 'h-active': bId == '2' }"
+                ></li>
+                <li
+                  (click)="changeBrand('3')"
+                  class="header-3"
+                  [ngClass]="{ 'h-active': bId == '3' }"
+                ></li>
+                <li
+                  (click)="changeBrand('4')"
+                  class="header-4"
+                  [ngClass]="{ 'h-active': bId == '4' }"
+                ></li>
+                <li
+                  (click)="changeBrand('5')"
+                  class="header-5"
+                  [ngClass]="{ 'h-active': bId == '5' }"
+                ></li>
+                <li
+                  (click)="changeBrand('6')"
+                  class="header-6"
+                  [ngClass]="{ 'h-active': bId == '6' }"
+                ></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="m-b-8">
+            <h6 class="text-center m-b-0">Sidebar Colors</h6>
+            <hr />
+            <div class="text-center m-b-12">
+              <button
+                (click)="changeSidebar('default')"
+                class="btn btn-outline-primary"
+              >
+                Default Sidebar
+              </button>
+            </div>
+            <div class="">
+              <ul class="switch">
+                <li
+                  (click)="changeSidebar('1')"
+                  class="header-1"
+                  [ngClass]="{ 'h-active': sId == '1' }"
+                ></li>
+                <li
+                  (click)="changeSidebar('2')"
+                  class="header-2"
+                  [ngClass]="{ 'h-active': sId == '2' }"
+                ></li>
+                <li
+                  (click)="changeSidebar('3')"
+                  class="header-3"
+                  [ngClass]="{ 'h-active': sId == '3' }"
+                ></li>
+                <li
+                  (click)="changeSidebar('4')"
+                  class="header-4"
+                  [ngClass]="{ 'h-active': sId == '4' }"
+                ></li>
+                <li
+                  (click)="changeSidebar('5')"
+                  class="header-5"
+                  [ngClass]="{ 'h-active': sId == '5' }"
+                ></li>
+                <li
+                  (click)="changeSidebar('6')"
+                  class="header-6"
+                  [ngClass]="{ 'h-active': sId == '6' }"
+                ></li>
+              </ul>
+            </div>
+          </div>
+          <div class="m-b-8">
+            <h6 class="text-center m-b-0">Sidebar Active Text Colors</h6>
+            <hr />
+            <div class="text-center m-b-12">
+              <button
+                (click)="changeActiveText('default')"
+                class="btn btn-outline-primary"
+              >
+                Default Active Text
+              </button>
+            </div>
+            <div class="">
+              <ul class="switch">
+                <li
+                  (click)="changeActiveText('1')"
+                  class="active-custom-text-1"
+                  [ngClass]="{ 'h-active': tId == '1' }"
+                ></li>
+                <li
+                  (click)="changeActiveText('2')"
+                  class="active-custom-text-2"
+                  [ngClass]="{ 'h-active': tId == '2' }"
+                ></li>
+                <li
+                  (click)="changeActiveText('3')"
+                  class="active-custom-text-3"
+                  [ngClass]="{ 'h-active': tId == '3' }"
+                ></li>
+                <li
+                  (click)="changeActiveText('4')"
+                  class="active-custom-text-4"
+                  [ngClass]="{ 'h-active': tId == '4' }"
+                ></li>
+                <li
+                  (click)="changeActiveText('5')"
+                  class="active-custom-text-5"
+                  [ngClass]="{ 'h-active': tId == '5' }"
+                ></li>
+                <li
+                  (click)="changeActiveText('6')"
+                  class="active-custom-text-6"
+                  [ngClass]="{ 'h-active': tId == '6' }"
+                ></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </p-sidebar>
+    </ng-template>
+  </div>
+</div>

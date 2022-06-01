@@ -1,0 +1,68 @@
+<div class="card custom-card">
+  <div class="card-body">
+    <h4 class="fw-700">
+      <strong>{{ tile.value }}</strong>
+    </h4>
+    <p class="fw-500">{{ tile.title }}</p>
+    <div class="d-flex align-items-center m-b-8">
+      <div class="d-flex align-items-center">
+        <span
+          *ngIf="tile.isTarget"
+          [ngClass]="{ 'text-success': tile.isTarget }"
+          class="material-icons-outlined icon-20"
+        >
+          arrow_upward
+        </span>
+        <span
+          *ngIf="!tile.isTarget"
+          [ngClass]="{ 'text-danger': !tile.isTarget }"
+          class="material-icons-outlined icon-20"
+        >
+          arrow_downward
+        </span>
+      </div>
+      <div class="m-l-8">
+        <h5 class="m-b-0">{{ tile.target_set }} <span class="">%</span></h5>
+      </div>
+      <div class="ml-auto">
+        <div class="d-flex align-items-center">
+          <span
+            *ngIf="tile.isRecent"
+            [ngClass]="{ 'text-success': tile.isRecent }"
+            class="material-icons-outlined icon-20"
+          >
+            arrow_upward
+          </span>
+          <span
+            *ngIf="!tile.isRecent"
+            [ngClass]="{ 'text-danger': !tile.isRecent }"
+            class="material-icons-outlined icon-20"
+          >
+            arrow_downward
+          </span>
+          <div class="m-l-8">
+            <h5 class="m-b-0">
+              {{ tile.target_achieved }} <span class="">%</span>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="m-b-4">
+      <progressbar
+        [value]="tile.bar_value"
+        [type]="tile.bar_color"
+        max="100"
+        style="height: 10px"
+      ></progressbar>
+    </div>
+    <div class="d-flex align-items-center">
+      <div class="">
+        <p class="text-muted m-b-0">Target</p>
+      </div>
+      <div class="ml-auto">
+        <p class="text-muted m-b-0">Last Week</p>
+      </div>
+    </div>
+  </div>
+</div>

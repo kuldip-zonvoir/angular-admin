@@ -1,0 +1,630 @@
+<div class="card custom-card shadow1 no-radius">
+  <div class="card-header custom-card-header border-1">
+    <div class="d-flex align-items-center justify-content-between">
+      <h5 class="m-b-0">Vendors</h5>
+      <div class="btn-group" dropdown>
+        <a
+          id="button-basic"
+          dropdownToggle
+          class="bell"
+          type="button"
+          aria-controls="dropdown-basic"
+        >
+          <span class="material-icons icon-gray icon"> more_vert </span>
+        </a>
+        <ul
+          id="dropdown-basic"
+          *dropdownMenu
+          class="dropdown-menu dropdown-menu-left"
+          role="menu"
+          aria-labelledby="button-basic"
+          placement="bottom right"
+        >
+          <li role="menuitem">
+            <a class="dropdown-item p-x-12 py-2">
+              <div class="d-flex align-items-center">
+                <div class="logo m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined icon-gray icon">
+                    add
+                  </span>
+                </div>
+                <div class="m-b-0">
+                  <p class="m-b-0">Create User</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li role="menuitem">
+            <a class="dropdown-item p-x-12 py-2">
+              <div class="d-flex align-items-center">
+                <div class="logo m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined icon-gray icon">
+                    edit
+                  </span>
+                </div>
+                <div class="m-b-0">
+                  <p class="m-b-0">Edit User</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li role="menuitem">
+            <a class="dropdown-item p-x-12 py-2">
+              <div class="d-flex align-items-center">
+                <div class="logo m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined icon-gray icon">
+                    delete
+                  </span>
+                </div>
+                <div class="m-b-0">
+                  <p class="m-b-0">Delete User</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li role="menuitem">
+            <a class="dropdown-item p-x-12 py-2">
+              <div class="d-flex align-items-center">
+                <div class="logo m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined icon-gray icon">
+                    description
+                  </span>
+                </div>
+                <div class="m-b-0">
+                  <p class="m-b-0">All Users</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="d-flex align-items-center border-1 p-b-8 m-b-8">
+      <div class="logo m-r-12 d-flex align-items-center">
+        <img
+          src="assets/media/images/users/300_1.jpg"
+          alt=""
+          class="img-responsive logo-md-rounded"
+        />
+      </div>
+      <div
+        class="m-b-0 d-flex justify-content-between w-100 align-items-center"
+      >
+        <div class="">
+          <h6 class="m-b-0">Peter Siddle</h6>
+          <p class="m-b-0 text-muted">TXZ Pharma Inc.</p>
+        </div>
+        <div class="btn-group" dropdown>
+          <a
+            id="button-basic"
+            dropdownToggle
+            class="bell"
+            type="button"
+            aria-controls="dropdown-basic"
+          >
+            <span class="material-icons icon-gray icon"> more_horiz </span>
+          </a>
+          <ul
+            id="dropdown-basic"
+            *dropdownMenu
+            class="dropdown-menu dropdown-menu-left"
+            role="menu"
+            aria-labelledby="button-basic"
+            placement="bottom right"
+          >
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-gray icon">
+                      shopping_cart
+                    </span>
+                  </div>
+                  <div
+                    class="
+                      d-flex
+                      align-items-center
+                      w-100
+                      justify-content-between
+                    "
+                  >
+                    <p class="m-b-0">Order</p>
+                    <span class="m-b-0 px-1 text-white bg-danger">3</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-gray icon">
+                      book
+                    </span>
+                  </div>
+                  <div
+                    class="
+                      d-flex
+                      align-items-center
+                      w-100
+                      justify-content-between
+                    "
+                  >
+                    <p class="m-b-0">Project</p>
+                    <span class="m-b-0 px-1 text-white bg-primary">5</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-gray icon">
+                      description
+                    </span>
+                  </div>
+                  <div class="m-b-0">
+                    <p class="m-b-0">Report</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-gray icon">
+                      timeline
+                    </span>
+                  </div>
+                  <div class="m-b-0">
+                    <p class="m-b-0">Order Status</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex align-items-center border-1 p-b-8 m-b-8">
+      <div class="logo m-r-12 d-flex align-items-center">
+        <img
+          src="assets/media/images/users/300_2.jpg"
+          alt=""
+          class="img-responsive logo-md-rounded"
+        />
+      </div>
+      <div
+        class="m-b-0 d-flex justify-content-between w-100 align-items-center"
+      >
+        <div class="">
+          <h6 class="m-b-0">Ketty Lang</h6>
+          <p class="m-b-0 text-muted">Arya Pvt.ltd</p>
+        </div>
+        <div class="btn-group" dropdown>
+          <a
+            id="button-basic"
+            dropdownToggle
+            class="bell"
+            type="button"
+            aria-controls="dropdown-basic"
+          >
+            <span class="material-icons icon-gray icon"> more_horiz </span>
+          </a>
+          <ul
+            id="dropdown-basic"
+            *dropdownMenu
+            class="dropdown-menu dropdown-menu-left"
+            role="menu"
+            aria-labelledby="button-basic"
+            placement="bottom right"
+          >
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-gray icon">
+                      shopping_cart
+                    </span>
+                  </div>
+                  <div
+                    class="
+                      d-flex
+                      align-items-center
+                      w-100
+                      justify-content-between
+                    "
+                  >
+                    <p class="m-b-0">Order</p>
+                    <span class="m-b-0 px-1 text-white bg-danger">3</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-gray icon">
+                      book
+                    </span>
+                  </div>
+                  <div
+                    class="
+                      d-flex
+                      align-items-center
+                      w-100
+                      justify-content-between
+                    "
+                  >
+                    <p class="m-b-0">Project</p>
+                    <span class="m-b-0 px-1 text-white bg-primary">5</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-gray icon">
+                      description
+                    </span>
+                  </div>
+                  <div class="m-b-0">
+                    <p class="m-b-0">Report</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-gray icon">
+                      timeline
+                    </span>
+                  </div>
+                  <div class="m-b-0">
+                    <p class="m-b-0">Order Status</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex align-items-center border-1 p-b-8 m-b-8">
+      <div class="logo m-r-12 d-flex align-items-center">
+        <img
+          src="assets/media/images/users/300_3.jpg"
+          alt=""
+          class="img-responsive logo-md-rounded"
+        />
+      </div>
+      <div
+        class="m-b-0 d-flex justify-content-between w-100 align-items-center"
+      >
+        <div class="">
+          <h6 class="m-b-0">Sean Abott</h6>
+          <p class="m-b-0 text-muted">Sumtech org.</p>
+        </div>
+        <div class="btn-group" dropdown>
+          <a
+            id="button-basic"
+            dropdownToggle
+            class="bell"
+            type="button"
+            aria-controls="dropdown-basic"
+          >
+            <span class="material-icons icon-gray icon"> more_horiz </span>
+          </a>
+          <ul
+            id="dropdown-basic"
+            *dropdownMenu
+            class="dropdown-menu dropdown-menu-left"
+            role="menu"
+            aria-labelledby="button-basic"
+            placement="bottom right"
+          >
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-gray icon">
+                      shopping_cart
+                    </span>
+                  </div>
+                  <div
+                    class="
+                      d-flex
+                      align-items-center
+                      w-100
+                      justify-content-between
+                    "
+                  >
+                    <p class="m-b-0">Order</p>
+                    <span class="m-b-0 px-1 text-white bg-danger">3</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-gray icon">
+                      book
+                    </span>
+                  </div>
+                  <div
+                    class="
+                      d-flex
+                      align-items-center
+                      w-100
+                      justify-content-between
+                    "
+                  >
+                    <p class="m-b-0">Project</p>
+                    <span class="m-b-0 px-1 text-white bg-primary">5</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-gray icon">
+                      description
+                    </span>
+                  </div>
+                  <div class="m-b-0">
+                    <p class="m-b-0">Report</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-gray icon">
+                      timeline
+                    </span>
+                  </div>
+                  <div class="m-b-0">
+                    <p class="m-b-0">Order Status</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex align-items-center border-1 p-b-8 m-b-8">
+      <div class="logo m-r-12 d-flex align-items-center">
+        <img
+          src="assets/media/images/users/300_4.jpg"
+          alt=""
+          class="img-responsive logo-md-rounded"
+        />
+      </div>
+      <div
+        class="m-b-0 d-flex justify-content-between w-100 align-items-center"
+      >
+        <div class="">
+          <h6 class="m-b-0">Kesy Finch</h6>
+          <p class="m-b-0 text-muted">fizzer inc</p>
+        </div>
+        <div class="btn-group" dropdown>
+          <a
+            id="button-basic"
+            dropdownToggle
+            class="bell"
+            type="button"
+            aria-controls="dropdown-basic"
+          >
+            <span class="material-icons icon-gray icon"> more_horiz </span>
+          </a>
+          <ul
+            id="dropdown-basic"
+            *dropdownMenu
+            class="dropdown-menu dropdown-menu-left"
+            role="menu"
+            aria-labelledby="button-basic"
+            placement="bottom right"
+          >
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-gray icon">
+                      shopping_cart
+                    </span>
+                  </div>
+                  <div
+                    class="
+                      d-flex
+                      align-items-center
+                      w-100
+                      justify-content-between
+                    "
+                  >
+                    <p class="m-b-0">Order</p>
+                    <span class="m-b-0 px-1 text-white bg-danger">3</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-gray icon">
+                      book
+                    </span>
+                  </div>
+                  <div
+                    class="
+                      d-flex
+                      align-items-center
+                      w-100
+                      justify-content-between
+                    "
+                  >
+                    <p class="m-b-0">Project</p>
+                    <span class="m-b-0 px-1 text-white bg-primary">5</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-gray icon">
+                      description
+                    </span>
+                  </div>
+                  <div class="m-b-0">
+                    <p class="m-b-0">Report</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-gray icon">
+                      timeline
+                    </span>
+                  </div>
+                  <div class="m-b-0">
+                    <p class="m-b-0">Order Status</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex align-items-center">
+      <div class="logo m-r-12 d-flex align-items-center">
+        <img
+          src="assets/media/images/users/300_5.jpg"
+          alt=""
+          class="img-responsive logo-md-rounded"
+        />
+      </div>
+      <div
+        class="m-b-0 d-flex justify-content-between w-100 align-items-center"
+      >
+        <div class="">
+          <h6 class="m-b-0">Morney Sams</h6>
+          <p class="m-b-0 text-muted">Sun Corp.</p>
+        </div>
+        <div class="btn-group" dropdown>
+          <a
+            id="button-basic"
+            dropdownToggle
+            class="bell"
+            type="button"
+            aria-controls="dropdown-basic"
+          >
+            <span class="material-icons icon-gray icon"> more_horiz </span>
+          </a>
+          <ul
+            id="dropdown-basic"
+            *dropdownMenu
+            class="dropdown-menu dropdown-menu-left"
+            role="menu"
+            aria-labelledby="button-basic"
+            placement="bottom right"
+          >
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-gray icon">
+                      shopping_cart
+                    </span>
+                  </div>
+                  <div
+                    class="
+                      d-flex
+                      align-items-center
+                      w-100
+                      justify-content-between
+                    "
+                  >
+                    <p class="m-b-0">Order</p>
+                    <span class="m-b-0 px-1 text-white bg-danger">3</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-gray icon">
+                      book
+                    </span>
+                  </div>
+                  <div
+                    class="
+                      d-flex
+                      align-items-center
+                      w-100
+                      justify-content-between
+                    "
+                  >
+                    <p class="m-b-0">Project</p>
+                    <span class="m-b-0 px-1 text-white bg-primary">5</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-gray icon">
+                      description
+                    </span>
+                  </div>
+                  <div class="m-b-0">
+                    <p class="m-b-0">Report</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2">
+                <div class="d-flex align-items-center">
+                  <div class="logo m-r-12 d-flex align-items-center">
+                    <span class="material-icons-outlined icon-gray icon">
+                      timeline
+                    </span>
+                  </div>
+                  <div class="m-b-0">
+                    <p class="m-b-0">Order Status</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

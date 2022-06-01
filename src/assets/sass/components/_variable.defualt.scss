@@ -1,0 +1,396 @@
+$primary-opposit: #e5f1fd;
+$bg-light: #ffffff;
+$sidebar-icon-color: hsl(0deg 3% 94% / 99%);
+$orange: #fb4f00;
+$purple: #745af2;
+$white: #ffffff !default;
+$gray-100: #f3f6f9 !default;
+$gray-200: #ebedf3 !default;
+$gray-300: #e4e6ef !default;
+$gray-400: #d1d3e0 !default;
+$gray-500: #eeeeee !default;
+$gray-600: #7e8299 !default;
+$gray-700: #5e6278 !default;
+$gray-800: #3f4254 !default;
+$gray-900: #181c32 !default;
+// Dark color
+$dark: $gray-900 !default;
+$dark-75: $gray-800 !default;
+$dark-65: $gray-700 !default;
+$dark-50: $gray-600 !default;
+$dark-25: $gray-400 !default;
+// Text muted
+$text-muted: $gray-500 !default;
+//custom-colors
+$color1: linear-gradient(to top, #39a6ff 0%, #3a19f0d9 100%) !default;
+$color2: linear-gradient(to top, #ca4932, #e72727) !default;
+$color3: linear-gradient(to top, #7209b7 0%, #4a017b 100%) !default;
+$color4: linear-gradient(to top, #008080, #068269) !default; //#7209b7
+$color5: linear-gradient(to top, #4300ff, #a60ccc) !default;
+$color6: linear-gradient(to top, #f50909, #f13344) !default;
+$color7: #e9edf2 !default;
+$colorActive1: #6930c3 !default;
+$colorActiveLight1: #ceb1fc !default;
+$colorActive2: #f72585 !default;
+$colorActiveLight2: #f3bcd5 !default;
+$colorActive3: #43aa8b !default;
+$colorActiveLight3: #b5f8e4 !default;
+$colorActive4: #f95738 !default;
+$colorActiveLight4: #fab8ab !default;
+$colorActive5: #fb8c00 !default;
+$colorActiveLight5: #f8d4a8 !default;
+$colorActive6: #255f85 !default;
+$colorActiveLight6: #a6d6f5 !default;
+$colorActive7: #e9edf2 !default;
+$colorActiveLight7: #e9edf2 !default;
+$active-colors: (
+  "1": $colorActive1,
+  "2": $colorActive2,
+  "3": $colorActive3,
+  "4": $colorActive4,
+  "5": $colorActive5,
+  "6": $colorActive6,
+) !default;
+$active-light-colors: (
+  "1": $colorActiveLight1,
+  "2": $colorActiveLight2,
+  "3": $colorActiveLight3,
+  "4": $colorActiveLight4,
+  "5": $colorActiveLight5,
+  "6": $colorActiveLight6,
+) !default;
+$custom-colors: (
+  "1": $color1,
+  "2": $color2,
+  "3": $color3,
+  "4": $color4,
+  "5": $color5,
+  "6": $color6,
+  "7": $color7,
+) !default;
+// Gray colors list
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900,
+) !default;
+
+// Dark colors
+$dark: $dark !default;
+$dark-hover: darken($dark, 3%) !default;
+$dark-light: $gray-400 !default;
+$dark-inverse: $white !default;
+$dark: $black;
+$body-color: $dark !default;
+$dark: $dark !default; // Bootstrap variable
+$dark-hover: darken($dark, 3%) !default; // Custom variable
+$dark-light: $gray-500 !default; // Custom variable
+$dark-inverse: $white !default; // Custom variable
+
+// Primary colors
+// $primary: #6971ff !default; // Bootstrap variable
+// $primary-light: #dadbff !default; // Custom variable
+// $primary-hover: #5e65f5 !default; // Custom variable
+$primary-inverse: $white !default; // Custom variable
+
+// Secondary colors
+$secondary: #f87321 !default; // Bootstrap variable
+$secondary-hover: #fc6100 !default; // Custom variable
+$secondary-light: #ffe4d1 !default; // Custom variable
+$secondary-inverse: $white !default; // Custom variable
+
+// Success colors
+$success: #06d79c !default; // Bootstrap variable
+$success-hover: #07fcb6 !default; // Custom variable
+$success-light: #ddf9f1 !default; // Custom variable
+$success-inverse: $white !default; // Custom variable
+
+// Info colors
+$info: #00a6fb !default; // Bootstrap variable
+$info-hover: #00a6fb !default; // Custom variable
+$info-light: #e8f6fd !default; // Custom variable
+$info-inverse: $white !default; // Custom variable
+
+// Warning colors
+$warning: #ffb22b !default; // Bootstrap variable
+$warning-hover: #ff9900 !default; // Custom variable
+$warning-light: #f9f1e6 !default; // Custom variable
+$warning-inverse: $white !default; // Custom variable
+
+// Danger colors
+$danger: #e05d6f !default; // Bootstrap variable
+$danger-hover: #dd2d45 !default; // Custom variable
+$danger-light: #ffe8eb !default; // Custom variable
+$danger-inverse: $white !default; // Custom variable
+
+// Light colors
+$light: $gray-100 !default; // Bootstrap variable
+$light-hover: $gray-300 !default; // Custom variable
+$light-light: $gray-100 !default; // Custom variable
+$light-inverse: $gray-600 !default; // Custom variable
+
+// White colors
+$white: $white !default; // Bootstrap variable
+$white-hover: $gray-100 !default; // Custom variable
+$white-light: $white !default; // Custom variable
+$white-inverse: $dark-75 !default; // Custom variable
+
+// Bootstrap theme colors
+$theme-colors: (
+  "white": $white,
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "orange": $orange,
+  "purple": $purple,
+  "light": $light,
+  "gray": $gray-300,
+  "dark": $dark,
+) !default;
+
+// Extended hover colors for Bootstrap theme colors
+$theme-hover-colors: (
+  "white": $white-hover,
+  // custom color type
+  "primary": darken($primary, 8%),
+  "secondary": $secondary-hover,
+  "success": $success-hover,
+  "info": $info-hover,
+  "warning": $warning-hover,
+  "danger": $danger-hover,
+  "light": $light-hover,
+  "dark": $dark-hover,
+) !default; // Custom variable
+
+// Extended inverse colors for Bootstrap theme colors
+$theme-inverse-colors: (
+  "white": $white-inverse,
+  "primary": $primary-inverse,
+  "secondary": $secondary-inverse,
+  "success": $success-inverse,
+  "info": $info-inverse,
+  "warning": $warning-inverse,
+  "danger": $danger-inverse,
+  "light": $light-inverse,
+  "dark": $dark-inverse,
+) !default; // Custom variable
+
+// Extended outline colors for Bootstrap theme colors
+$theme-outline-inverse-colors: (
+  "white": $white,
+  "primary": $primary,
+  "secondary": $dark-75,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $dark-75,
+  "dark": $dark,
+) !default; // Custom variable
+
+// Extended light colors for Bootstrap theme colors
+$theme-light-colors: (
+  "white": $white-light,
+  "primary": $primary-light,
+  "secondary": $secondary-light,
+  "success": $success-light,
+  "info": $info-light,
+  "warning": $warning-light,
+  "danger": $danger-light,
+  "light": $light-light,
+  "dark": $dark-light,
+) !default; // Custom variable
+
+// Extended shadow colors for Bootstrap theme colors
+$theme-shadow-colors: (
+  "white": $dark,
+  "primary": $primary,
+  "secondary": $dark,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $dark,
+  "dark": $dark,
+) !default; // Custom variable
+
+// Extended theme text colors
+$theme-text-colors: (
+  "white": $white,
+  "primary": $primary,
+  "secondary": $dark,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+  "dark-75": $dark-75,
+  "dark-65": $dark-65,
+  "dark-50": $dark-50,
+  "dark-25": $dark-25,
+  "muted": $text-muted,
+) !default; // Custom variable
+// cutomiseable theme text colors
+
+// Social Media Variables
+$social-colors: (
+  facebook: (
+    base: #3b5998,
+    opposit: #ffffff,
+    light: rgba(#3b5998, 0.1),
+    hover: darken(#3b5998, 7.5%),
+  ),
+  google: (
+    base: #dd4b39,
+    opposit: #ffffff,
+    light: rgba(#dd4b39, 0.1),
+    hover: darken(#dd4b39, 7.5%),
+  ),
+  twitter: (
+    base: #1da1f2,
+    opposit: #ffffff,
+    light: rgba(#1da1f2, 0.1),
+    hover: darken(#1da1f2, 7.5%),
+  ),
+  instagram: (
+    base: #e1306c,
+    opposit: #ffffff,
+    light: rgba(#e1306c, 0.1),
+    hover: darken(#e1306c, 7.5%),
+  ),
+  linkedin: (
+    base: #0077b5,
+    opposit: #ffffff,
+    light: rgba(#0077b5, 0.1),
+    hover: darken(#0077b5, 7.5%),
+  ),
+) !default;
+
+//Box-shadow variables
+$box-shadow: 1px 2px 6px #eeeeee;
+$box-shadow-xs: 0 0.25rem 0.5rem 0 rgba($black, 0.05);
+$box-shadow-sm: 0 0.1rem 1rem 0.25rem rgba($black, 0.05) !default;
+$box-shadow-lg: 0 1rem 2rem 1rem rgba($black, 0.1) !default;
+
+// Border Radiues variables
+$border-radius: 0.42rem !default;
+$border-radius-sm: 0.28rem !default;
+$border-radius-lg: 0.85rem !default;
+$border-radius-xl: 1.25rem !default;
+
+// Border rules
+$border-color: $gray-200 !default;
+$border-width: 1px !default;
+
+// Hover background color
+$hover-bg: $gray-100 !default;
+
+// Active background color
+$active-bg: darken($gray-100, 1%) !default;
+// buttons varaibles
+$btn-disabled-opacity: 0.6 !default;
+$btn-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+  border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out !default;
+$btn-box-shadow: none !default;
+$btn-focus-box-shadow: none !default;
+$btn-active-box-shadow: none !default;
+$btn-font-weight: normal !default;
+$btn-secondary-color: $dark-75 !default;
+$btn-secondary-hover-bg-color: $gray-100 !default;
+$btn-icon-size-xs: 24px !default;
+// Links variables
+$link-color: $primary !default;
+$link-decoration: none !default;
+$link-hover-color: darken($primary, 15%) !default;
+$link-hover-decoration: underline !default;
+
+// Forms
+$form-group-margin-bottom: 1.75rem !default;
+$form-label-font-size: 13px !default;
+$form-label-font-weight: 500 !default;
+$form-text-font-size: 13px !default;
+$form-text-font-weight: 400 !default;
+$form-validation-input-shadow: false;
+$input-readonly-bg: $white !default;
+
+$icon-font-family: "Material Icons Outlined" !default;
+
+$font-size-base: 0.9rem !default; // assume `14px`
+$font-size-lg: $font-size-base * 1.08 !default;
+$font-size-sm: $font-size-base * 0.925 !default;
+$font-size-xs: $font-size-base * 0.8 !default;
+
+$h1-font-size: $font-size-base * 2 !default;
+$h2-font-size: $font-size-base * 1.5 !default;
+$h3-font-size: $font-size-base * 1.35 !default;
+$h4-font-size: $font-size-base * 1.25 !default;
+$h5-font-size: $font-size-base * 1 !default;
+$h6-font-size: $font-size-base * 0.937 !default;
+$headings-font-family: null !default;
+$headings-font-weight: 500 !default;
+$headings-line-height: 1.2 !default;
+$headings-color: null !default;
+$display1-size: 5.5rem !default;
+$display2-size: 4.5rem !default;
+$display3-size: 3.5rem !default;
+$display4-size: 2.5rem !default;
+$display5-size: 2.25rem !default;
+
+// Font Sizes
+$font-sizes: (
+  font-size-h1: $h1-font-size,
+  font-size-h2: $h2-font-size,
+  font-size-h3: $h3-font-size,
+  font-size-h4: $h4-font-size,
+  font-size-h5: $h5-font-size,
+  font-size-h6: $h6-font-size,
+  display1: $display1-size,
+  display2: $display2-size,
+  display3: $display3-size,
+  display4: $display4-size,
+  display5: $display5-size,
+) !default;
+
+$display1-weight: 300 !default;
+$display2-weight: 300 !default;
+$display3-weight: 300 !default;
+$display4-weight: 300 !default;
+$display-line-height: $headings-line-height !default;
+$lead-font-size: $font-size-base * 1.25 !default;
+$lead-font-weight: 300 !default;
+$small-font-size: 80% !default;
+// Font Weight
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 500 !default;
+$font-weight-bolder: 600 !default;
+$font-weight-boldest: 700 !default;
+$line-height-base: 1.5 !default;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px // custom breakpoint,,,,,,,,,,,,,,,
+) !default;
+@include responsive-above(lg) {
+  $font-size-lg: $font-size-base * 1.08 !default;
+}
+@include responsive-below(sm) {
+  $font-size-sm: $font-size-base * 0.925 !default;
+}
+@include responsive-below(xs) {
+  $font-size-xs: $font-size-base * 0.8 !default;
+}

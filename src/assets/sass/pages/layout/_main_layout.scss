@@ -1,0 +1,460 @@
+.grid-bottom {
+  margin-bottom: 20px;
+}
+.space-breadcrum {
+  margin: 16px 0;
+}
+.grid-bottom-12 {
+  margin-bottom: 12px;
+}
+.grid-bottom-16 {
+  margin-bottom: 16px;
+}
+
+.dashboard123-wrap-container {
+  background-color: $background-color;
+  background-color: $body-bg;
+  .dashboard_wrapper {
+    .mobile_sidebar {
+      display: none !important;
+      .mega-sidebar {
+        display: none !important;
+      }
+    }
+  }
+}
+//
+.kk_responsive {
+  .responsive {
+    $left: 3rem;
+    margin-left: $left !important;
+  }
+  .main_header {
+    position: fixed;
+    background-color: $background-color;
+    color: $text-color;
+    z-index: 99 !important;
+    padding-left: 60px;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 6px 12px rgb(134 140 150 / 10%);
+  }
+}
+//breadcrum
+.main_crum {
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  .bread_crum_componet {
+    margin: 0;
+    font-size: 16px;
+    margin-bottom: 6px;
+    text-transform: capitalize;
+  }
+  .kk_bread_crumb {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    .bkc_home {
+      display: flex;
+      align-items: center;
+      .hme_rute {
+        font-size: 13px;
+        font-weight: 500;
+      }
+      .sls {
+        color: $heading-color !important;
+        margin: 0 4px;
+      }
+    }
+    .bread_crumb_cc {
+      background-color: transparent;
+      .breadcrumb {
+        padding: 0px;
+        background-color: transparent;
+        margin: 0;
+        li {
+          font-size: 13px;
+          font-weight: 500;
+          color: $heading-color;
+        }
+      }
+    }
+  }
+  .action_dro {
+    .action_btn_drop {
+      .sction_btn_name {
+        padding: 0px 4px;
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .icon_set_me {
+        font-size: 16px;
+      }
+    }
+  }
+}
+///
+.main_container {
+  margin-left: 260px;
+  transition: all 0.2s ease-in-out;
+
+  //main header
+  .main_content {
+    background-color: $body-bg;
+    min-height: 84.5vh;
+    padding: 12px 20px 12px 25px;
+    margin-top: 48px;
+
+    display: flex;
+    flex-direction: column;
+
+    .main_wraper {
+    }
+  }
+
+  &.responsive {
+    .main_header {
+    }
+  }
+}
+
+.theme_setting {
+  position: fixed;
+  right: -2px;
+  bottom: 80px;
+  width: 64px;
+  background: $background-color;
+  box-shadow: $boxShadow-lg;
+  z-index: 9;
+  border-radius: 0 0 0 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.theme-toggle {
+  position: relative;
+}
+.h-active {
+  position: relative;
+  &:before {
+    content: "\e876";
+    position: absolute;
+    left: 0px;
+    top: 2px;
+    font-size: 1.35rem;
+    font-family: "Material Icons Outlined";
+    color: $white;
+  }
+}
+.theme-sidebar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: -6px;
+  width: 64px;
+  padding: 12px 12px 6px 12px;
+  border-radius: 4px 0 0 4px;
+  background-color: $background-color;
+  color: $text-color;
+  z-index: 999;
+  box-shadow: $boxShadow-lg;
+}
+
+.icon-spinner {
+  -webkit-animation-name: spin;
+  animation-name: spin;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.color-circle {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: -2px;
+    left: 0px;
+    border-radius: 50%;
+    background-color: $danger;
+  }
+}
+//theme Sidebar
+.switch {
+  list-style: none;
+  padding: 0;
+  overflow: hidden;
+  margin: 0 0 0 20px;
+
+  li {
+    float: left;
+    width: 25px;
+    height: 25px;
+    margin: 0 8px 10px 0;
+    border-radius: 2px;
+    border: 0 solid #000;
+  }
+}
+.theme_pallet_scrollbar {
+  height: 81vh;
+  cursor: pointer;
+  overflow-y: auto;
+  overflow-x: hidden;
+  @include scrollbar($width: 0.5rem, $border-radius: 1rem);
+
+  &:hover {
+    @include scrollbar(
+      $width: 0.5rem,
+      $border-radius: 1rem,
+      $background-color: $scrollbarColor
+    );
+  }
+}
+.header {
+  background-size: 100% 100%;
+  background-position: 50%;
+}
+
+.header1 {
+  @extend .header;
+  background-image: linear-gradient(45deg, #0a151f, #232e3a);
+}
+
+.header2 {
+  @extend .header;
+  background-image: linear-gradient(45deg, #0312c4, #0350c5);
+}
+
+.header3 {
+  @extend .header;
+  background-image: linear-gradient(45deg, #0a151f, #232e3a);
+}
+
+.header4 {
+  @extend .header;
+  background-image: linear-gradient(45deg, #0a151f, #232e3a);
+}
+
+.header5 {
+  @extend .header;
+  background-image: linear-gradient(45deg, #0a151f, #232e3a);
+}
+
+.header6 {
+  @extend .header;
+  background-image: linear-gradient(45deg, #0a151f, #232e3a);
+}
+
+// For Mobile portrait Screen
+@include responsive-below(md) {
+  .sction_btn_name {
+    display: none;
+  }
+  .main_crum {
+    padding: 8px 4px;
+  }
+  .theme_pallet_scrollbar {
+    height: 86vh;
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include scrollbar($width: 0.5rem, $border-radius: 1rem);
+
+    &:hover {
+      @include scrollbar(
+        $width: 0.5rem,
+        $border-radius: 1rem,
+        $background-color: $scrollbarColor
+      );
+    }
+  }
+  // for hide Icon name
+  .theme-icon-name {
+    display: none;
+  }
+  .main_container {
+    margin-left: 0px;
+
+    .main_header {
+      padding: 0;
+      position: fixed;
+      background-color: $background-color;
+      z-index: 9;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+  .main_content {
+    background-color: $body-bg;
+    min-height: 65vh;
+    padding: 12px 20px 12px 20px !important;
+    margin-top: 60px;
+  }
+  .theme-sidebar {
+    position: absolute;
+    left: 0;
+    top: -200px;
+    right: -6px;
+    width: 64px;
+    padding: 12px 12px 6px 12px;
+    border-radius: 4px 0 0 4px;
+    background-color: $background-color;
+    color: $text-color;
+    z-index: 999;
+    box-shadow: $boxShadow-lg;
+  }
+}
+// For Mobile landscrape mode Screen
+@include responsive-between(sm, md) {
+  .sction_btn_name {
+    display: block;
+  }
+  .theme-sidebar {
+    position: absolute;
+    top: -50px;
+    right: -6px;
+    width: 64px;
+    padding: 12px 12px 6px 12px;
+    border-radius: 4px 0 0 4px;
+    background-color: $background-color;
+    color: $text-color;
+    z-index: 999;
+    box-shadow: $boxShadow-lg;
+  }
+  .theme_pallet_scrollbar {
+    height: 68vh;
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include scrollbar($width: 0.5rem, $border-radius: 1rem);
+
+    &:hover {
+      @include scrollbar(
+        $width: 0.5rem,
+        $border-radius: 1rem,
+        $background-color: $scrollbarColor
+      );
+    }
+  }
+  // for hide Icon name
+  .theme-icon-name {
+    display: none;
+  }
+  .main_container {
+    margin-left: 0px;
+
+    .main_content {
+      min-height: 89vh;
+      padding: 12px 20px 12px 20px !important;
+    }
+
+    .main_header {
+      padding: 0;
+      position: fixed;
+      background-color: $background-color;
+      z-index: 9;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+// For tablet portrait Mode
+@include responsive-between(md, lg) {
+  .theme_pallet_scrollbar {
+    height: 86vh;
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include scrollbar($width: 0.5rem, $border-radius: 1rem);
+
+    &:hover {
+      @include scrollbar(
+        $width: 0.5rem,
+        $border-radius: 1rem,
+        $background-color: $scrollbarColor
+      );
+    }
+  }
+  .main_container {
+    margin-left: 0px;
+
+    .main_content {
+      min-height: 89vh;
+    }
+
+    .main_header {
+      padding: 0;
+      position: fixed;
+      background-color: $background-color;
+      z-index: 9;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+  .theme-sidebar {
+    position: absolute;
+    top: -300px;
+    right: -6px;
+    width: 64px;
+    padding: 12px 12px 6px 12px;
+    border-radius: 4px 0 0 4px;
+    background-color: $background-color;
+    color: $text-color;
+    z-index: 999;
+    box-shadow: $boxShadow-lg;
+  }
+}
+// For laptop Landscape Mode
+@include responsive-between(lg, xl) {
+  .theme_pallet_scrollbar {
+    height: 81vh;
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include scrollbar($width: 0.5rem, $border-radius: 1rem);
+
+    &:hover {
+      @include scrollbar(
+        $width: 0.5rem,
+        $border-radius: 1rem,
+        $background-color: $scrollbarColor
+      );
+    }
+  }
+  .theme-sidebar {
+    position: absolute;
+    left: 0;
+    top: -200px;
+    right: -6px;
+    width: 64px;
+    padding: 12px 12px 6px 12px;
+    border-radius: 4px 0 0 4px;
+    background-color: $background-color;
+    color: $text-color;
+    z-index: 999;
+    box-shadow: $boxShadow-lg;
+  }
+  .main_container {
+    margin-left: 0px;
+
+    .main_content {
+      min-height: 83vh;
+    }
+  }
+}

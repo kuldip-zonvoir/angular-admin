@@ -1,0 +1,106 @@
+<div class="card custom-card card-stretch">
+  <div
+    class="
+      card-header
+      d-flex
+      justify-content-between
+      align-items-center
+      custom-card-header
+      border-1
+    "
+  >
+    <div class="card-title m-b-0">
+      <h5 class="card-label m-b-0">Dynamic Rating</h5>
+    </div>
+    <div class="code">
+      <button
+        class="btn d-flex align-items-center btn-outline-primary"
+        (click)="showCode = !showCode"
+      >
+        <span *ngIf="!showCode" class="material-icons icon-20 m-r-8">
+          code
+        </span>
+        <span *ngIf="showCode" class="material-icons icon-20 m-r-8">
+          code_off
+        </span>
+        code
+      </button>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="content zp-12">
+      <div class="">
+        <rating
+          [(ngModel)]="rate"
+          [max]="max"
+          [readonly]="isReadonly"
+          (onHover)="hoveringOver($event)"
+          (onLeave)="resetStar()"
+          [titles]="['one', 'two', 'three']"
+        ></rating>
+        <span
+          class="label"
+          [ngClass]="{
+            'label-warning': percent < 30,
+            'label-info': percent >= 30 && percent < 70,
+            'label-success': percent >= 70
+          }"
+          [ngStyle]="{ display: overStar && !isReadonly ? 'inline' : 'none' }"
+          >{{ percent }}%</span
+        >
+        <div class="card custom-card">
+          <pre
+            class="card-block custom-card-header card-header"
+            style="margin: 15px 0"
+          >Rate: <b>{{rate}}</b>;  Readonly is: <i>{{isReadonly}}</i>;  Hovering over: <b>{{overStar || "none"}}</b></pre>
+        </div>
+        <div class="btn-box mt-2">
+          <button
+            type="button"
+            class="btn btn-sm btn-danger mr-2"
+            (click)="rate = 0"
+            [disabled]="isReadonly"
+          >
+            Clear
+          </button>
+          <button
+            type="button"
+            class="btn btn-sm btn-primary"
+            (click)="isReadonly = !isReadonly"
+          >
+            Toggle Readonly
+          </button>
+        </div>
+      </div>
+    </div>
+    <div [collapse]="!showCode" [isAnimated]="true" class="code_container">
+      <div class="nav_bar w-100">
+        <ul>
+          <li>
+            <a [ngClass]="{ active: tabId === '0' }" (click)="tabToggle('0')">
+              HTML
+            </a>
+          </li>
+          <li>
+            <a [ngClass]="{ active: tabId === '1' }" (click)="tabToggle('1')">
+              TS
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- code -->
+      <ng-template [ngIf]="tabId === '0'">
+        <pre class="m-b-0">
+            <code [highlight]="htmlcode" (highlighted)="onHighlight($event)" [lineNumbers]="true">
+            </code>
+          </pre>
+      </ng-template>
+      <ng-template [ngIf]="tabId === '1'">
+        <pre class="m-b-0">
+            <code [highlight]="tscode" (highlighted)="onHighlight($event)" [lineNumbers]="true">
+            </code>
+          </pre>
+      </ng-template>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+<div class="card custom-card">
+  <div class="card-header custom-card-header">
+    <div class="d-flex justify-content-between align-items-center">
+      <h6 class="m-b-0">ABOUT</h6>
+      <div class="btn d-flex align-items-center">
+        <div class="btn-group" dropdown>
+          <a
+            id="button-basic"
+            dropdownToggle
+            type="button"
+            class="btn"
+            aria-controls="dropdown-basic"
+          >
+            <span class="material-icons-outlined icon"> more_horiz </span>
+          </a>
+          <ul
+            id="dropdown-basic"
+            *dropdownMenu
+            class="dropdown-menu dropdown-menu-left"
+            role="menu"
+            aria-labelledby="button-basic"
+          >
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2"> View Details </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2"> Personal Details </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item p-x-12 py-2"> Follow Me </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card-body p-0">
+      <div class="p-b-8">
+        <p class="">
+          Lorem, ipsum dolor sit amet consectetur libero corrupti facilis
+          voluptatem.
+        </p>
+      </div>
+      <div class="p-b-8">
+        <h6 class="m-b-0">Joined:</h6>
+        <p class="m-b-0 text-muted">June 15, 2018</p>
+      </div>
+      <div class="p-b-8">
+        <h6 class="m-b-0">live:</h6>
+        <p class="m-b-0 text-muted">New York, USA</p>
+      </div>
+      <div class="p-b-8">
+        <h6 class="m-b-0">Email:</h6>
+        <p class="m-b-0 text-muted">support@zonvoir.com</p>
+      </div>
+      <div class="p-b-8">
+        <h6 class="m-b-0">Website:</h6>
+        <p class="m-b-0 text-muted">zonvoir.com</p>
+      </div>
+      <div class="p-b-8">
+        <div class="d-flex align-items-center justify-content-around">
+          <a routerLink="/" class="btn border-1">
+            <i class="fa fa-github icon text-bold" aria-hidden="true"></i>
+          </a>
+          <a routerLink="/" class="btn border-1">
+            <i class="fa fa-instagram icon text-danger" aria-hidden="true"></i>
+          </a>
+          <a routerLink="/" class="btn border-1">
+            <i class="fa fa-twitter icon text-info" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

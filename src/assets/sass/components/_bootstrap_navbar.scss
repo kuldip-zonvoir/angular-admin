@@ -1,0 +1,22 @@
+.navbar {
+  z-index: 0;
+}
+
+.custom-nav-bar {
+  background-color: $background-color-inverse !important;
+  color: $text-color-inverse !important;
+  z-index: 0;
+  box-shadow: none;
+
+  .navbar-brand {
+    color: $text-color-inverse;
+
+    &:hover {
+      color: $text-color-inverse;
+    }
+  }
+
+  .nav-link {
+    color: lighten($color: $text-color, $amount: 40%) !important;
+  }
+}

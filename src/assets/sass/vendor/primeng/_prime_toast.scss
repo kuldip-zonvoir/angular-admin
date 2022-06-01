@@ -1,0 +1,48 @@
+.k_toast {
+  .p-toast-message-warn {
+    background-color: #f9f1e6; //light
+    border-left: solid #ff9900; //color
+    border-width: 0 0 0 6px;
+    color: #ff9900; //dark
+  }
+  .p-toast-icon-close,
+  .p-toast-message-icon {
+    color: #ff9900;
+  }
+}
+.k_toast {
+  .p-toast-message-danger {
+    background-color: #ffe8eb; //light
+    border-left: solid #e05d6f; //color
+    border-width: 0 0 0 6px;
+    color: #dd2d45; //dark
+  }
+  .p-toast-icon-close,
+  .p-toast-message-icon {
+    color: #dd2d45;
+  }
+}
+.k_toast {
+  .p-toast-message-success {
+    background-color: #ddf9f1; //light
+    border-left: solid #06d79c; //color
+    border-width: 0 0 0 6px;
+    color: #07fcb6; //dark
+  }
+  .p-toast-icon-close,
+  .p-toast-message-icon {
+    color: #07fcb6;
+  }
+}
+.k_toast {
+  .p-toast-message-info {
+    background-color: #e8f6fd; //light
+    border-left: solid #2382f7; //color
+    border-width: 0 0 0 6px;
+    color: #2382f7; //dark
+  }
+  .p-toast-icon-close,
+  .p-toast-message-icon {
+    color: #2382f7;
+  }
+}

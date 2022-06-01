@@ -1,0 +1,448 @@
+<div class="border-1 p-b-8">
+  <div class="d-flex align-items-center chat_reciever">
+    <div class="d-flex align-items-center">
+      <div (click)="backTOContactList()" class="_back_arrow">
+        <a class="toggle-icon link-none bell hoverable align-items-center">
+          <span
+            class="
+              material-icons
+              custom-circle-md
+              cursor-pointer
+              icon-gray icon-20
+            "
+          >
+            arrow_back
+          </span>
+        </a>
+      </div>
+      <div class="m-r-12">
+        <img
+          src="assets/media/images/users/100_12.jpg"
+          class="logo-md-circle"
+          alt="picture"
+        />
+      </div>
+      <div class="m-r-12">
+        <h5 class="m-b-0">Jone Doe</h5>
+      </div>
+    </div>
+    <div class="m-l-auto">
+      <div class="btn-group" dropdown>
+        <a
+          id="button-basic"
+          dropdownToggle
+          class="bell"
+          type="button"
+          aria-controls="dropdown-basic"
+        >
+          <span
+            class="
+              material-icons
+              custom-circle-md
+              icon-gray
+              cursor-pointer
+              icon-20
+            "
+          >
+            more_vert
+          </span>
+        </a>
+        <ul
+          id="dropdown-basic"
+          *dropdownMenu
+          class="dropdown-menu dropdown-menu-left"
+          role="menu"
+          aria-labelledby="button-basic"
+          placement="bottom right"
+        >
+          <li role="menuitem">
+            <a class="dropdown-item p-x-12 p-y-8">
+              <div class="d-flex align-items-center">
+                <div class="m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined icon-20">
+                    account_circle
+                  </span>
+                </div>
+                <div class="m-b-0">
+                  <p class="m-b-0">Profile</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li role="menuitem">
+            <a class="dropdown-item p-x-12 p-y-8">
+              <div class="d-flex align-items-center">
+                <div class="m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined icon-20">
+                    phone_in_talk
+                  </span>
+                </div>
+                <div class="m-b-0">
+                  <p class="m-b-0">Voice Calls</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li role="menuitem">
+            <a class="dropdown-item p-x-12 p-y-8">
+              <div class="d-flex align-items-center">
+                <div class="m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined icon-20">
+                    videocam
+                  </span>
+                </div>
+                <div class="m-b-0">
+                  <p class="m-b-0">Video Calls</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li role="menuitem">
+            <a class="dropdown-item p-x-12 p-y-8">
+              <div class="d-flex align-items-center">
+                <div class="m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined icon-20">
+                    description
+                  </span>
+                </div>
+                <div class="m-b-0">
+                  <p class="m-b-0">All Contcts</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li role="menuitem">
+            <a class="dropdown-item p-x-12 p-y-8">
+              <div class="d-flex align-items-center">
+                <div class="m-r-12 d-flex align-items-center">
+                  <span class="material-icons-outlined icon-20">
+                    settings
+                  </span>
+                </div>
+                <div class="m-b-0">
+                  <p class="m-b-0">Setting</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="chat-scroll zp-8">
+  <div class="chating-history">
+    <div class="chating-date">
+      <hr class="date-line" />
+      <p class="chat-date-detail m-b-0 p-y-8">20 June 2021</p>
+    </div>
+    <div class="d-flex p-b-12 align-items-center">
+      <div class="message-container">
+        <div class="d-flex">
+          <div class="user-img m-r-16">
+            <img
+              src="assets/media/images/users/100_12.jpg"
+              class="logo-md-circle"
+              alt="friend"
+            />
+          </div>
+          <div class="">
+            <h6 class="m-b-0 chat-user-name sender-name">John Doe</h6>
+            <div class="zp-12 sender-message-content p-b-8">
+              <p class="m-b-0">
+                Lorem ipsum dolor sit, dignissimos veniam ex fugit enim
+                similique provident consectetur excepturi?
+              </p>
+            </div>
+          </div>
+        </div>
+        <small class="created-date text-muted"
+          >20 June 2021 <span class="ml-2"> 10:20 PM</span></small
+        >
+      </div>
+    </div>
+    <div class="d-flex p-b-12 align-items-center">
+      <div class="ml-auto message-container p-b-12">
+        <div class="d-flex">
+          <div class="">
+            <h6 class="m-b-0 chat-user-name answer-username">Carlie</h6>
+            <div class="zp-12 owner-message-content p-b-8">
+              <p class="m-b-0">
+                Lorem ipsum dolor sit, dignissimos veniam ex fugit enim
+                similique provident consectetur excepturi?
+              </p>
+            </div>
+          </div>
+          <div class="user-img m-l-16">
+            <img
+              src="assets/media/images/users/100_10.jpg"
+              class="logo-md-circle"
+              alt="friend"
+            />
+          </div>
+        </div>
+        <small class="created-date user-answer-time text-muted"
+          >20 June 2021 <span class="ml-2"> 10:20 PM</span></small
+        >
+      </div>
+    </div>
+    <div class="d-flex p-b-12 align-items-center">
+      <div class="message-container">
+        <div class="d-flex">
+          <div class="user-img m-r-16">
+            <img
+              src="assets/media/images/users/100_12.jpg"
+              class="logo-md-circle"
+              alt="friend"
+            />
+          </div>
+          <div class="">
+            <h6 class="m-b-0 chat-user-name sender-name">John Doe</h6>
+            <div class="zp-12 sender-message-content p-b-8">
+              <p class="m-b-0">
+                Lorem ipsum dolor sit, dignissimos veniam ex fugit enim
+                similique provident consectetur excepturi?
+              </p>
+            </div>
+          </div>
+        </div>
+        <small class="created-date text-muted"
+          >20 June 2021 <span class="ml-2"> 10:20 PM</span></small
+        >
+      </div>
+    </div>
+    <div class="d-flex p-b-12 align-items-center">
+      <div class="ml-auto message-container p-b-12">
+        <div class="d-flex">
+          <div class="">
+            <h6 class="m-b-0 chat-user-name answer-username">Carlie</h6>
+            <div class="zp-12 owner-message-content p-b-8">
+              <p class="m-b-0">
+                Lorem ipsum dolor sit, dignissimos veniam ex fugit enim
+                similique provident consectetur excepturi?
+              </p>
+            </div>
+          </div>
+          <div class="user-img m-l-16">
+            <img
+              src="assets/media/images/users/100_10.jpg"
+              class="logo-md-circle"
+              alt="friend"
+            />
+          </div>
+        </div>
+        <small class="created-date user-answer-time text-muted"
+          >20 June 2021 <span class="ml-2"> 10:20 PM</span></small
+        >
+      </div>
+    </div>
+    <div class="chating-date">
+      <hr class="date-line" />
+      <p class="chat-date-detail m-b-0 p-y-8">25 June 2021</p>
+    </div>
+    <div class="d-flex p-b-12 align-items-center">
+      <div class="message-container">
+        <div class="d-flex">
+          <div class="user-img m-r-16">
+            <img
+              src="assets/media/images/users/100_12.jpg"
+              class="logo-md-circle"
+              alt="friend"
+            />
+          </div>
+          <div class="">
+            <h6 class="m-b-0 chat-user-name sender-name">John Doe</h6>
+            <div class="zp-12 sender-message-content p-b-8">
+              <p class="m-b-0">
+                Lorem ipsum dolor sit, quam magnam? Eius, fugit enim similique
+                provident consectetur excepturi?
+              </p>
+            </div>
+          </div>
+        </div>
+        <small class="created-date text-muted"
+          >25 June 2021 <span class="ml-2"> 10:20 PM</span></small
+        >
+      </div>
+    </div>
+    <div class="d-flex p-b-12 align-items-center">
+      <div class="ml-auto message-container p-b-12">
+        <div class="d-flex">
+          <div class="">
+            <h6 class="m-b-0 chat-user-name answer-username">Carlie</h6>
+            <div class="zp-12 owner-message-content p-b-8">
+              <p class="m-b-0">
+                Lorem ipsum dolor sit, dignissimos veniam ex fugit enim
+                similique provident consectetur excepturi?
+              </p>
+            </div>
+          </div>
+          <div class="user-img m-l-16">
+            <img
+              src="assets/media/images/users/100_10.jpg"
+              class="logo-md-circle"
+              alt="friend"
+            />
+          </div>
+        </div>
+        <small class="created-date user-answer-time text-muted"
+          >25 June 2021 <span class="ml-2"> 10:20 PM</span></small
+        >
+      </div>
+    </div>
+    <div class="d-flex p-b-12 p-b-12 align-items-center">
+      <div class="ml-auto owner-message-container">
+        <div class="d-flex">
+          <div class="chat-files m-r-12">
+            <img
+              src="assets/media/images/users/100_8.jpg"
+              class="logo-lg-rounded"
+              alt="picture"
+            />
+          </div>
+          <div class="chat-files m-r-12">
+            <img
+              src="assets/media/images/users/100_5.jpg"
+              class="logo-lg-rounded"
+              alt="picture"
+            />
+          </div>
+          <div class="chat-files m-r-12">
+            <img
+              src="assets/media/images/users/100_3.jpg"
+              class="logo-lg-rounded"
+              alt="picture"
+            />
+          </div>
+          <div class="">
+            <span class="bg-primary circle-btn-sm2 cursor-pointer text-white"
+              >+3</span
+            >
+          </div>
+        </div>
+        <small class="created-date user-answer-time text-muted"
+          >25 June 2021 <span class="ml-2"> 10:20 PM</span></small
+        >
+      </div>
+    </div>
+    <div class="chating-date">
+      <hr class="date-line" />
+      <p class="chat-date-detail m-b-0 p-y-8">Today</p>
+    </div>
+    <div class="d-flex p-b-12 align-items-center">
+      <div class="message-container">
+        <div class="d-flex">
+          <div class="user-img m-r-16">
+            <img
+              src="assets/media/images/users/100_12.jpg"
+              class="logo-md-circle"
+              alt="friend"
+            />
+          </div>
+          <div class="">
+            <h6 class="m-b-0 chat-user-name sender-name">John Doe</h6>
+            <div class="zp-12 sender-message-content p-b-8">
+              <p class="m-b-0">
+                Lorem ipsum dolor sit, dignissimos veniam ex fugit enim
+                similique provident consectetur excepturi?
+              </p>
+            </div>
+          </div>
+        </div>
+        <small class="created-date text-muted">3 min ago</small>
+      </div>
+    </div>
+    <div class="d-flex p-b-12 align-items-center">
+      <div class="ml-auto message-container p-b-12">
+        <div class="d-flex">
+          <div class="">
+            <h6 class="m-b-0 chat-user-name answer-username">Carlie</h6>
+            <div class="zp-12 owner-message-content p-b-8">
+              <p class="m-b-0">
+                Lorem ipsum dolor sit, dignissimos veniam ex fugit enim
+                similique provident consectetur excepturi?
+              </p>
+            </div>
+          </div>
+          <div class="user-img m-l-16">
+            <img
+              src="assets/media/images/users/100_10.jpg"
+              class="logo-md-circle"
+              alt="friend"
+            />
+          </div>
+        </div>
+        <small class="created-date user-answer-time text-muted"
+          >3 min ago</small
+        >
+      </div>
+    </div>
+    <div class="d-flex p-b-12 align-items-center">
+      <div class="message-container">
+        <div class="d-flex">
+          <div class="user-img m-r-16">
+            <img
+              src="assets/media/images/users/100_12.jpg"
+              class="logo-md-circle"
+              alt="friend"
+            />
+          </div>
+          <div class="">
+            <h6 class="m-b-0 chat-user-name sender-name">John Doe</h6>
+            <div class="zp-12 sender-message-content p-b-8">
+              <p class="m-b-0">
+                Lorem ipsum dolor sit, dignissimos veniam ex fugit enim
+                similique provident consectetur excepturi?
+              </p>
+            </div>
+          </div>
+        </div>
+        <small class="created-date text-muted">1 min ago</small>
+      </div>
+    </div>
+    <div class="d-flex p-b-12 align-items-center">
+      <div class="ml-auto message-container p-b-12">
+        <div class="d-flex">
+          <div class="">
+            <h6 class="m-b-0 chat-user-name answer-username">Carlie</h6>
+            <div class="zp-12 owner-message-content p-b-8">
+              <p class="m-b-0">
+                Lorem ipsum dolor sit, dignissimos veniam ex fugit enim
+                similique provident consectetur excepturi?
+              </p>
+            </div>
+          </div>
+          <div class="user-img m-l-16">
+            <img
+              src="assets/media/images/users/100_10.jpg"
+              class="logo-md-circle"
+              alt="friend"
+            />
+          </div>
+        </div>
+        <small class="created-date user-answer-time text-muted"
+          >20 sec ago</small
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<div class="chat_bottom pt-2">
+  <div class="row">
+    <div class="col">
+      <div>
+        <input
+          type="text"
+          class="form-control border bg-soft-light"
+          placeholder="Enter Message..."
+        />
+      </div>
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary d-flex align-items-center">
+        Send
+        <span class="material-icons-outlined m-l-12 icon-16"> send </span>
+      </button>
+    </div>
+  </div>
+</div>

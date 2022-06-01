@@ -1,0 +1,412 @@
+<div class="card custom-card card-stretch">
+  <div class="card-header custom-card-header border-1">
+    <h5 class="m-b-0">Horizontal Stepper Form With Validation</h5>
+  </div>
+  <div
+    class="
+      stepper
+      d-flex
+      align-items-center
+      justify-content-around
+      m-t-12 m-b-12
+    "
+  >
+    <div class="step text-center">
+      <span
+        [ngClass]="{
+          active: stepId === '1',
+          success: stepId === '2' || stepId === '3' || stepId === '4'
+        }"
+        class="text-center icon step-circle one"
+      >
+        <span
+          [ngStyle]="{
+            display:
+              stepId === '2' || stepId === '3' || stepId === '4'
+                ? 'none'
+                : 'inline-block'
+          }"
+        >
+          1
+        </span>
+        <span
+          class="material-icons icon"
+          [ngStyle]="{
+            display:
+              stepId === '2' || stepId === '3' || stepId === '4'
+                ? 'inline-block'
+                : 'none'
+          }"
+        >
+          check
+        </span>
+      </span>
+
+      <p class="zm-0 text-center">Step 1</p>
+    </div>
+    <div class="step text-center">
+      <span
+        [ngClass]="{
+          active: stepId === '2',
+          success: stepId === '3' || stepId === '4'
+        }"
+        class="text-center icon step-circle two"
+      >
+        <span
+          [ngStyle]="{
+            display: stepId === '3' || stepId === '4' ? 'none' : 'inline-block'
+          }"
+        >
+          2
+        </span>
+        <span
+          class="material-icons icon"
+          [ngStyle]="{
+            display: stepId === '3' || stepId === '4' ? 'inline-block' : 'none'
+          }"
+        >
+          check
+        </span>
+      </span>
+      <p class="zm-0 text-center">Step 2</p>
+    </div>
+    <div class="step text-center">
+      <span
+        [ngClass]="{ active: stepId === '3', success: stepId === '4' }"
+        class="text-center icon step-circle three"
+      >
+        <span [ngStyle]="{ display: stepId === '4' ? 'none' : 'inline-block' }">
+          3
+        </span>
+        <span
+          class="material-icons icon"
+          [ngStyle]="{ display: stepId === '4' ? 'inline-block' : 'none' }"
+        >
+          check
+        </span>
+      </span>
+      <p class="zm-0 text-center">DONE</p>
+    </div>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="form" (ngSubmit)="saveDetail()" class="form_section">
+      <ng-template [ngIf]="stepId === '1'">
+        <div class="form-group d-flex align-items-center m-b-12 row">
+          <label for="username" class="col-md-3">User Name</label>
+          <div class="col-lg-9">
+            <input
+              type="text"
+              formControlName="username"
+              class="form-control"
+              placeholder="col-lg-9"
+              [ngClass]="{
+                'is-invalid':
+                  form.get('username').invalid &&
+                  (form.get('username').touched || form.get('username').dirty)
+              }"
+            />
+            <div
+              *ngIf="
+                form.get('username').errors &&
+                (form.get('username').touched || form.get('username').dirty)
+              "
+              class="invalid-feedback"
+            >
+              <p class="zm-0" *ngIf="form.get('username').errors.required">
+                username is required
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group d-flex align-items-center m-b-12 row">
+          <label for="email" class="col-md-3">Email</label>
+          <div class="col-lg-9">
+            <input
+              type="email"
+              formControlName="email"
+              class="form-control"
+              placeholder="col-lg-9"
+              [ngClass]="{
+                'is-invalid':
+                  form.get('email').invalid &&
+                  (form.get('email').touched || form.get('email').dirty)
+              }"
+            />
+            <div
+              *ngIf="
+                form.get('email').errors &&
+                (form.get('email').touched || form.get('email').dirty)
+              "
+              class="invalid-feedback"
+            >
+              <p class="zm-0" *ngIf="form.get('email').errors.required">
+                email is required
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group d-flex align-items-center m-b-12 row">
+          <label for="mobile" class="col-md-3">Mobile</label>
+          <div class="col-lg-9">
+            <input
+              type="number"
+              formControlName="mobile"
+              class="form-control"
+              autocomplete="current-password"
+              placeholder="col-lg-9"
+              [ngClass]="{
+                'is-invalid':
+                  form.get('mobile').invalid &&
+                  (form.get('mobile').touched || form.get('mobile').dirty)
+              }"
+            />
+            <div
+              *ngIf="
+                form.get('mobile').errors &&
+                (form.get('mobile').touched || form.get('mobile').dirty)
+              "
+              class="invalid-feedback"
+            >
+              <p class="zm-0" *ngIf="form.get('mobile').errors.required">
+                Mobile Number is required
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="m-t-12">
+          <button
+            type="button"
+            (click)="changeStep('2')"
+            class="btn btn-primary m-r-12"
+          >
+            Next
+          </button>
+          <button type="cancel" class="btn btn-secondary">Cancel</button>
+        </div>
+      </ng-template>
+      <ng-template [ngIf]="stepId === '2'">
+        <div class="form-group d-flex align-items-center m-b-12 row">
+          <label for="company" class="col-md-3">Company Name</label>
+          <div class="col-lg-9">
+            <input
+              type="text"
+              formControlName="company_name"
+              class="form-control"
+              placeholder="col-lg-9"
+              [ngClass]="{
+                'is-invalid':
+                  form.get('company_name').invalid &&
+                  (form.get('company_name').touched ||
+                    form.get('company_name').dirty)
+              }"
+            />
+            <div
+              *ngIf="
+                form.get('company_name').errors &&
+                (form.get('company_name').touched ||
+                  form.get('company_name').dirty)
+              "
+              class="invalid-feedback"
+            >
+              <p class="zm-0" *ngIf="form.get('company_name').errors.required">
+                company name is required
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group d-flex align-items-center m-b-12 row">
+          <label for="post" class="col-md-3">Post Name</label>
+          <div class="col-lg-9">
+            <input
+              type="text"
+              formControlName="post_name"
+              class="form-control"
+              placeholder="col-lg-9"
+              [ngClass]="{
+                'is-invalid':
+                  form.get('post_name').invalid &&
+                  (form.get('post_name').touched || form.get('post_name').dirty)
+              }"
+            />
+            <div
+              *ngIf="
+                form.get('post_name').errors &&
+                (form.get('post_name').touched || form.get('post_name').dirty)
+              "
+              class="invalid-feedback"
+            >
+              <p class="zm-0" *ngIf="form.get('post_name').errors.required">
+                post name is required
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group d-flex align-items-center m-b-12 row">
+          <label for="salery" class="col-md-3">Salery</label>
+          <div class="col-lg-9">
+            <input
+              type="number"
+              formControlName="salery"
+              class="form-control"
+              autocomplete="current-password"
+              placeholder="col-lg-9"
+              [ngClass]="{
+                'is-invalid':
+                  form.get('salery').invalid &&
+                  (form.get('salery').touched || form.get('salery').dirty)
+              }"
+            />
+            <div
+              *ngIf="
+                form.get('salery').errors &&
+                (form.get('salery').touched || form.get('salery').dirty)
+              "
+              class="invalid-feedback"
+            >
+              <p class="zm-0" *ngIf="form.get('salery').errors.required">
+                salery is required
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="m-t-12">
+          <button
+            type="button"
+            (click)="changeStep('3')"
+            class="btn btn-primary m-r-12"
+          >
+            Next
+          </button>
+          <button
+            type="button"
+            (click)="changeStep('1')"
+            class="btn btn-secondary"
+          >
+            Back
+          </button>
+        </div>
+      </ng-template>
+      <ng-template [ngIf]="stepId === '3'">
+        <div class="form-group d-flex align-items-center m-b-12 row">
+          <label for="pincode" class="col-md-3">Pincode</label>
+          <div class="col-lg-9">
+            <input
+              type="number"
+              formControlName="pincode"
+              class="form-control"
+              placeholder="col-lg-9"
+              [ngClass]="{
+                'is-invalid':
+                  form.get('pincode').invalid &&
+                  (form.get('pincode').touched || form.get('pincode').dirty)
+              }"
+            />
+            <div
+              *ngIf="
+                form.get('pincode').errors &&
+                (form.get('pincode').touched || form.get('pincode').dirty)
+              "
+              class="invalid-feedback"
+            >
+              <p class="zm-0" *ngIf="form.get('pincode').errors.required">
+                pincode is required
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group d-flex align-items-center m-b-12 row">
+          <label for="zipcode" class="col-md-3">Zipcode</label>
+          <div class="col-lg-9">
+            <input
+              type="text"
+              formControlName="zipcode"
+              class="form-control"
+              placeholder="col-lg-9"
+              [ngClass]="{
+                'is-invalid':
+                  form.get('zipcode').invalid &&
+                  (form.get('zipcode').touched || form.get('zipcode').dirty)
+              }"
+            />
+            <div
+              *ngIf="
+                form.get('zipcode').errors &&
+                (form.get('zipcode').touched || form.get('zipcode').dirty)
+              "
+              class="invalid-feedback"
+            >
+              <p class="zm-0" *ngIf="form.get('zipcode').errors.required">
+                zipcode is required
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group d-flex align-items-center m-b-12 row">
+          <label for="lang" class="col-md-3">Language</label>
+          <div class="col-lg-9">
+            <input
+              type="text"
+              formControlName="language"
+              class="form-control"
+              autocomplete="current-password"
+              placeholder="col-lg-9"
+              [ngClass]="{
+                'is-invalid':
+                  form.get('language').invalid &&
+                  (form.get('language').touched || form.get('language').dirty)
+              }"
+            />
+            <div
+              *ngIf="
+                form.get('language').errors &&
+                (form.get('language').touched || form.get('language').dirty)
+              "
+              class="invalid-feedback"
+            >
+              <p class="zm-0" *ngIf="form.get('language').errors.required">
+                Language is required
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center">
+          <div class="form-check p-l-0">
+            <label class="container-checkbox text-muted"
+              >Remember Me
+              <input type="checkbox" />
+              <span class="material-icons check-mark icon"> </span>
+            </label>
+          </div>
+        </div>
+        <div class="m-t-12">
+          <button
+            type="submit"
+            (click)="changeStep('4')"
+            class="btn btn-primary m-r-12"
+            [disabled]="form.invalid"
+          >
+            Finish
+          </button>
+          <button
+            type="cancel"
+            (click)="changeStep('2')"
+            class="btn btn-secondary"
+          >
+            Cancel
+          </button>
+        </div>
+      </ng-template>
+      <ng-template [ngIf]="stepId === '4'">
+        <div class="card custom-card w-75 mx-auto">
+          <div class="card-body zp-12 cdtr">
+            <span class="material-icons-outlined fs-40 text-success icon py-3">
+              task_alt
+            </span>
+            <h5 class="text-center m-t-8 m-b-0">Success !</h5>
+            <p class="m-b-0 text-center">You Creadted Account Successfully</p>
+          </div>
+        </div>
+      </ng-template>
+    </form>
+  </div>
+</div>

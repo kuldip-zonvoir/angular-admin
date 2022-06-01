@@ -1,0 +1,274 @@
+@mixin button-bg($colorName, $bg) {
+  background: $bg;
+  color: $white;
+
+  @if ($colorName== "white") {
+    color: $dark;
+  }
+
+  @if ($colorName== "warning") {
+    color: $dark;
+  }
+
+  &:hover {
+    background: map-get($theme-hover-colors, $colorName);
+    border-color: map-get($theme-colors, $colorName);
+  }
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+  &:active {
+    background: map-get($theme-hover-colors, $colorName);
+  }
+}
+.btn-custom-light {
+  text-decoration: none;
+  padding: 6px 6px;
+  border-radius: 4px !important;
+  font-size: 12px;
+  font-weight: 400;
+  white-space: nowrap;
+  cursor: pointer;
+  height: auto;
+  background-color: $dark_badge;
+  text-align: center;
+  border: 1px solid $border-color2;
+  .icon-20 {
+    font-size: 16px;
+    color: $heading-color;
+  }
+}
+.custom_white_btn {
+  text-decoration: none;
+  padding: 6px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 400;
+  white-space: nowrap;
+  cursor: pointer;
+  height: auto;
+  background-color: $background-color;
+  color: $text-color;
+  text-align: center;
+  .icon-20 {
+    font-size: 16px;
+  }
+}
+
+@mixin button-outline($bg) {
+  border: 1px solid $bg;
+  color: $bg;
+
+  &:hover {
+    background-color: $bg;
+    color: $white;
+  }
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+  &:active {
+    background: darken($bg, 25%);
+  }
+}
+
+@mixin button-link($bg) {
+  color: $bg;
+
+  &:hover {
+  }
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+  &:active {
+  }
+}
+@each $name, $color in $theme-light-colors {
+  .btn-light-#{$name} {
+    @include bg-colors($color, $name);
+    &:hover {
+      color: $white !important;
+      background-color: map-get($theme-colors, $name);
+    }
+  }
+}
+@each $name, $color in $theme-colors {
+  .btn-#{$name} {
+    @include button-bg($name, $color);
+    @each $sizeName, $size in $logo-sizes {
+      .cube-#{$name}-#{$sizeName} {
+        @include circle($size, $background-color: $color, $color: $white);
+      }
+
+      .cube-outline-#{$name}-#{$sizeName} {
+        @include circle(
+          $size,
+          $color: $color,
+          $custom-border: 1px solid $color
+        );
+      }
+
+      .circle-#{$name}-#{$sizeName} {
+        @include circle(
+          $size,
+          $background-color: $color,
+          $color: $white,
+          $circle: true
+        );
+      }
+
+      .circle-outline-#{$name}-#{$sizeName} {
+        @include circle(
+          $size,
+          $color: $color,
+          $custom-border: 1px solid $color,
+          $circle: true
+        );
+      }
+    }
+  }
+}
+
+@each $name, $color in $theme-colors {
+  .custom-badge-#{$name} {
+    padding: 8px 12px !important;
+    font-size: 0.75rem;
+    @include button-bg($name, $color);
+  }
+}
+.btn-mini {
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 1rem * 0.785;
+  cursor: pointer;
+  white-space: nowrap;
+  height: auto;
+  text-align: center;
+  border: 0;
+}
+.btn-group {
+  text-decoration: none;
+  padding: 6px 6px;
+  border-radius: 4px !important;
+  font-size: 12px;
+  font-weight: 400;
+  white-space: nowrap;
+  cursor: pointer;
+  height: auto;
+  text-align: center;
+  .icon-20 {
+    font-size: 16px;
+  }
+  button {
+    text-decoration: none;
+    padding: 6px 6px;
+    border-radius: 4px !important;
+    font-size: 12px;
+    font-weight: 400;
+    white-space: nowrap;
+    cursor: pointer;
+    height: auto;
+    text-align: center;
+    .icon-20 {
+      font-size: 16px;
+    }
+  }
+}
+.btn {
+  text-decoration: none;
+  padding: 6px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 400;
+  white-space: nowrap;
+  cursor: pointer;
+  height: auto;
+  text-align: center;
+  .icon-20 {
+    font-size: 16px;
+  }
+  @each $name, $color in $theme-light-colors {
+    &.light-btn-#{$name} {
+      @include button-bg($name, $color);
+      @if map-has-key($theme-colors, $name) {
+        // Get the breakpoint value.
+        $color-value: map-get($theme-colors, $name);
+        color: $color-value !important;
+      }
+    }
+  }
+
+  &.btn-pill {
+    border-radius: 1.25rem;
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  &.btn-lg-block {
+    padding: 0.5rem 5rem;
+  }
+
+  &.btn-square {
+    border-radius: 4px;
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  &.btn-link {
+    border-radius: 4px;
+    color: $dark;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  @each $name, $color in $theme-colors {
+    &.btn-link-#{$name} {
+      @include button-link($color);
+    }
+  }
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+@include responsive-below(sm) {
+  .btn-lg-block {
+    padding: 0.5rem 1.5rem !important;
+  }
+}
+
+@include responsive-below(md) {
+  .btn-lg-block {
+    padding: 0.5rem 1.5rem !important;
+  }
+}
+
+@include responsive-between(md, lg) {
+  .btn-lg-block {
+    padding: 0.5rem 1.5rem !important;
+  }
+}

@@ -1,0 +1,51 @@
+<div class="card custom-card card-stretch">
+  <div class="card-header custom-card-header border-1">
+    <h5 class="m-b-0">Single File Drag and Drop</h5>
+  </div>
+
+  <div class="card-body">
+    <form action="">
+      <div class="dropzone" draggable="true" ngClass="{{ dragAreaClass }}">
+        <div class="drop-secton m-1" (click)="picFile.click()">
+          <span class="material-icons-outlined icon-30"> file_download </span>
+          <h6 class="zm-0 p-t-8"><b>Choose a File </b> or Drag it here</h6>
+        </div>
+      </div>
+      <div class="">
+        <div
+          *ngIf="filename"
+          class="
+            dropzone-item
+            d-flex
+            justify-content-between
+            align-items-center
+            image-preview
+            m-t-8
+          "
+        >
+          <div class="dropzone-file">
+            <div class="dropzone-filename px-2 p-y-4" title="filename.jpg">
+              <span class="">{{ filename }}</span>
+              <strong
+                >(<span class=""
+                  ><strong>{{ filesize }}</strong> KB</span
+                >)</strong
+              >
+            </div>
+          </div>
+          <div class="d-flex justify-content-end m-t-8">
+            <button class="btn custom-btn">Upload</button>
+          </div>
+        </div>
+      </div>
+      <input
+        hidden
+        type="file"
+        #picFile
+        (change)="selectFile($event)"
+        class="form-control inp_field"
+        placeholder="choose a file"
+      />
+    </form>
+  </div>
+</div>

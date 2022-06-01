@@ -1,0 +1,149 @@
+<div class="card custom-card m-b-12">
+  <div class="zp-10">
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-lg-4 col-md-3 col-4 col-sm-4">
+            <div class="text-center">
+              <img
+                src="assets/media/images/Products/chair3.jpg"
+                alt="chair"
+                class="cart-prdt-image"
+              />
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-9 col-8 col-sm-8">
+            <div class="">
+              <div class="">
+                <h5 class="m-b-0">Rounded Chair</h5>
+                <p class="text-muted m-b-10">
+                  Lorem Ipsum available, but the majority look
+                </p>
+              </div>
+
+              <div class="">
+                <div class="d-flex align-items-center">
+                  <div class="m-r-12">
+                    <h6 class="">
+                      Color: <span class="fs-12 m-l-8 text-muted">Red</span>
+                    </h6>
+                  </div>
+                  <div class="">
+                    <h6 class="">
+                      Size: <span class="fs-12 m-l-8 text-muted">L</span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="cart-content-wrapper p-b-8">
+                <div class="">
+                  <h6 class="m-b-4 break-none">
+                    Price :<strong class="m-l-8">$185</strong>
+                  </h6>
+                </div>
+
+                <div class="cart-counter">
+                  <div class="d-flex align-items-center">
+                    <div
+                      (click)="decreaseCount()"
+                      class="cursor-pointer zp-8 d-flex align-items-center"
+                    >
+                      <span
+                        class="
+                          material-icons-outlined
+                          custom-circle-sm2
+                          icon-20
+                        "
+                        >remove</span
+                      >
+                    </div>
+                    <input
+                      type="number"
+                      name=""
+                      [value]="countInitial"
+                      class="form-control text-center fw-700 counter-width"
+                      readonly
+                    />
+
+                    <div
+                      (click)="increaseCount()"
+                      class="cursor-pointer zp-8 d-flex align-items-center"
+                    >
+                      <span
+                        class="
+                          material-icons-outlined
+                          custom-circle-sm2
+                          icon-20
+                        "
+                        >add</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-8 col-md-9 offset-lg-4 offset-md-3">
+        <div class="border-top-1">
+          <div class="d-flex justify-content-center align-items-center">
+            <div
+              class="
+                d-flex
+                justify-content-center
+                w-100
+                align-items-center
+                border-right-1
+              "
+            >
+              <button
+                (click)="removeProduct()"
+                class="
+                  btn
+                  text-hover-danger
+                  btn-square
+                  justify-content-center
+                  text-muted
+                  d-flex
+                  align-items-center
+                "
+              >
+                <span class="material-icons-outlined icon-20 m-r-8">
+                  delete
+                </span>
+                Remove
+              </button>
+            </div>
+            <div class="d-flex justify-content-center w-100 align-items-center">
+              <button
+                (click)="addtoWishlist()"
+                class="
+                  btn btn-square
+                  justify-content-center
+                  text-muted
+                  d-flex
+                  align-items-center
+                "
+              >
+                <span
+                  *ngIf="!isWhished"
+                  class="material-icons-outlined icon-20 m-r-8"
+                >
+                  favorite_border
+                </span>
+                <span
+                  *ngIf="isWhished"
+                  class="material-icons-outlined icon-20 text-danger m-r-8"
+                >
+                  favorite
+                </span>
+                Move to Wishlist
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

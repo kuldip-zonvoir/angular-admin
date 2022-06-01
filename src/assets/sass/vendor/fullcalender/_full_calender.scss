@@ -1,0 +1,207 @@
+.fc-theme-standard td {
+}
+.fc-toolbar-chunk {
+  display: flex;
+}
+
+.fc {
+  font-size: 14px;
+  background-color: rgba(185, 89, 89, 0);
+  .fc-daygrid-day-frame {
+    position: relative;
+    min-height: 4rem;
+  }
+  .fc-toolbar {
+    .fc-button {
+      font-size: 12px;
+      &:enabled {
+        background-color: $primary;
+        box-shadow: inherit;
+        border: 1px solid $primary;
+      }
+    }
+    .fc-button-group {
+      .fc-today-button {
+        font-size: 12px;
+      }
+      .fc-next-button,
+      .fc-prev-button {
+        .fc-icon-chevron-right,
+        .fc-icon-chevron-left {
+          font-size: 12px !important;
+        }
+      }
+      .fc-button {
+        text-decoration: none;
+
+        font-size: 12px !important;
+        // font-weight: 400;
+
+        text-transform: capitalize;
+        background-color: $primary;
+        color: $white;
+        border: 1px solid $primary;
+        &:enabled {
+          background-color: $primary;
+          box-shadow: inherit;
+          color: $white;
+          border: 1px solid $primary;
+        }
+        &.fc-button-active {
+          background-color: darken($color: $primary, $amount: 5%);
+          box-shadow: inherit;
+          color: $white;
+          border: 1px solid $primary;
+        }
+      }
+    }
+  }
+
+  //   date number padding and center
+  .fc-daygrid-day-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4px;
+  }
+  // today
+  .fc-day-today {
+    background-color: $fc_calender;
+    .fc-daygrid-day-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      line-height: 22px;
+      margin: 4px 0;
+      font-size: 13px;
+      border-radius: 50%;
+      float: none;
+      color: $white;
+      background-color: $primary;
+      &:hover {
+        color: $white !important;
+      }
+    }
+  }
+
+  //   date number
+  .fc-daygrid-day-number {
+    display: inline-block;
+    margin-bottom: 9px;
+    font-size: 13px;
+    text-align: center;
+    color: $heading-color;
+    text-decoration: none;
+    &:hover {
+      color: $heading-color;
+      text-decoration: none;
+    }
+  }
+  //   event tag styling
+  .fc-daygrid-event {
+    display: flex;
+    align-items: center;
+    height: 22px;
+    min-height: 22px;
+    max-height: 22px;
+    margin: 0 6px 4px;
+    padding: 0 8px;
+    border-radius: 4px;
+    border: none;
+    overflow-x: hidden;
+    cursor: pointer;
+    .fc-event-time {
+      font-weight: 700;
+      color: $white;
+      font-size: 12px;
+      padding-right: 2px;
+      text-decoration: none;
+    }
+    .fc-event-title {
+      color: $white;
+      font-weight: 500;
+      font-size: 12px;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .fc-scrollgrid {
+    //   table border
+    border-top: 1px solid $border-color;
+    border-left: 1px solid $border-color;
+    thead {
+      .fc-scrollgrid-section {
+        .fc-scroller {
+          .fc-col-header {
+            tbody {
+              .fc-col-header-cell {
+                text-align: center;
+                padding-top: 4px;
+                // border-bottom: 0;
+                .fc-col-header-cell-cushion {
+                  text-align: center;
+                  color: $heading-color;
+                  text-decoration: none;
+                  &:hover {
+                    color: $heading-color;
+                    text-decoration: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .fc-view-harness-active {
+    .fc-view {
+      background-color: $fc_calender !important;
+    }
+  }
+  .fc-view-container {
+  }
+  .fc-view.fc-dayGridMonth-view
+    .fc-head
+    > tr
+    > .fc-head-container
+    .fc-row
+    .fc-day-header
+    span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $heading-color;
+  }
+}
+@include responsive-below(md) {
+  .fc-toolbar-chunk {
+    display: flex;
+    margin-bottom: 8px;
+  }
+  .fc-header-toolbar {
+    flex-direction: column;
+  }
+}
+// For Mobile Landscape Mode
+@include responsive-between(sm, md) {
+  .fc-header-toolbar {
+    flex-direction: row;
+  }
+}
+// For tablet Portrait Mode
+@include responsive-between(md, lg) {
+}
+// For tablet Landscape Mode
+@include responsive-between(lg, xl) {
+}
+// For desktop Mode
+@include responsive-above(lg) {
+}

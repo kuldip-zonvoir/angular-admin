@@ -1,0 +1,66 @@
+.chart-container {
+  .apexcharts-canvas {
+    width: 100%;
+    height: 100%;
+  }
+}
+.chart_body {
+  padding: 10px;
+}
+//
+.k_spark_line {
+  padding: 1.25rem 12px;
+}
+.chartjs-container {
+  width: 100% !important;
+  height: 100% !important;
+
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+.icon-preview {
+  &:hover {
+    transition: 0.3s ease;
+    transform: scale(1.2);
+    padding-left: 25px !important;
+  }
+}
+// for mobile portrait mode
+@include responsive-below(md) {
+  .chartjs-container {
+    width: 100% !important;
+    height: 100% !important;
+
+    canvas {
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
+  .chart-container {
+    .apexcharts-canvas {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+// for tablet portrait mode
+@include responsive-between(md, lg) {
+  .chartjs-container {
+    min-width: 300px;
+    min-height: 300px;
+
+    canvas {
+      min-width: 300px;
+      min-height: 300px;
+    }
+  }
+  .chart-container {
+    .apexcharts-canvas {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

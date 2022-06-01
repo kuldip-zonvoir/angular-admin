@@ -1,0 +1,233 @@
+.search_bar {
+  position: relative;
+  display: block !important;
+
+  .form-control {
+    outline: none !important;
+    background-color: $inputBgColor;
+  }
+
+  &::before {
+    $code: "\e8b6";
+    @include pseudo-icon($code, $left: 0.5rem, $top: 8px, $icon-size: 1.35rem);
+  }
+}
+
+%plus-icon {
+  cursor: pointer;
+
+  &::before {
+    $code: "\e5cd";
+    @include pseudo-icon(
+      $code,
+      $right: 1.5rem,
+      $top: 0.875rem,
+      $icon-size: 1.5rem
+    );
+  }
+}
+
+.accordion-title {
+  position: relative;
+
+  &::after {
+    $code: "\e145";
+    $transition-val: all 0.3s ease-in-out;
+    @include pseudo-icon(
+      $code,
+      $right: 0,
+      $top: -4px,
+      $color: $heading-color,
+      $icon-size: 1.5rem,
+      $transition: $transition-val
+    );
+  }
+}
+
+.search_bar-lg {
+  position: relative;
+  display: block !important;
+  &.ksearchbar {
+    width: 75%;
+  }
+  .form-control {
+    outline: none !important;
+  }
+
+  &::before {
+    $code: "\e8b6";
+    @include pseudo-icon($code, $left: 20px, $top: 15px, $icon-size: 30px);
+  }
+}
+
+.close-icon {
+  cursor: pointer;
+
+  &::before {
+    $code: "\e5cd";
+    @include pseudo-icon(
+      $code,
+      $right: 1.5rem,
+      $top: 0.875rem,
+      $icon-size: 1.5rem
+    );
+  }
+}
+
+.mob-chat-field {
+  position: relative;
+
+  &::before {
+    $code: "\e226";
+    @include pseudo-icon(
+      $code,
+      $right: 0.5rem,
+      $top: 0.25rem,
+      $icon-size: 1.5rem
+    );
+  }
+
+  &::after {
+    $code: "\e87c";
+    @include pseudo-icon(
+      $code,
+      $left: 0.5rem,
+      $top: 0.25rem,
+      $icon-size: 1.5rem
+    );
+  }
+}
+
+$mat-icons: (
+  email: "\e0be",
+  lock: "\e897",
+  search: "\e8b6",
+  user: "\e7ff",
+  plus: "\e145",
+  closeicon: "\e5cd",
+) !default;
+
+@each $iconname, $code in $mat-icons {
+  .login-#{$iconname} {
+    position: relative;
+
+    &::before {
+      @include pseudo-icon(
+        $code,
+        $left: 18px,
+        $top: 14px,
+        $icon-size: 25px,
+        $color: #3f4254
+      );
+    }
+  }
+}
+
+@each $iconname, $code in $mat-icons {
+  .#{$iconname} {
+    position: relative;
+
+    &::before {
+      @include pseudo-icon(
+        $code,
+        $left: 0.5rem,
+        $top: 1.625rem,
+        $icon-size: 1.5rem,
+        $color: $text-color
+      );
+    }
+  }
+}
+
+.search-lg {
+  position: relative;
+
+  .form-control {
+    &:nth-child(1) {
+      padding-left: 3.75rem;
+    }
+  }
+
+  &::before {
+    $code: "\e8b6";
+    @include pseudo-icon($code, $left: 1rem, $top: 0.5rem, $icon-size: 2rem);
+  }
+}
+
+/*For small mobile devices*/
+@include responsive-below(sm) {
+  .search-lg {
+    width: 100% !important;
+
+    .form-control {
+      &:nth-child(1) {
+        padding-left: 3.5rem;
+      }
+    }
+
+    &::before {
+      $code: "\e8b6";
+      @include pseudo-icon(
+        $code,
+        $left: 1rem,
+        $top: 0.25rem,
+        $icon-size: 1.75rem
+      );
+    }
+  }
+}
+
+@include responsive-below(md) {
+  .search_bar-lg {
+    &.ksearchbar {
+      width: 90%;
+    }
+    &::before {
+      $code: "\e8b6";
+      @include pseudo-icon($code, $left: 16px, $top: 8px, $icon-size: 26px);
+    }
+  }
+  .search-lg {
+    width: 75% !important;
+  }
+  .custom-header-searchbar {
+    .close-icon {
+      &::before {
+        top: 1rem !important;
+      }
+    }
+  }
+}
+// for mobile landscape
+@include responsive-between(sm, md) {
+  .custom-header-searchbar {
+    .close-icon {
+      &::before {
+        top: 1rem !important;
+      }
+    }
+  }
+}
+// for mobile laptop
+// for tablet view landscape
+@include responsive-between(md, lg) {
+  .search_bar-lg {
+    &.ksearchbar {
+      width: 80%;
+    }
+    &::before {
+      $code: "\e8b6";
+      @include pseudo-icon($code, $left: 20px, $top: 8px, $icon-size: 30px);
+    }
+  }
+  .search-lg {
+    width: 75% !important;
+  }
+  .custom-header-searchbar {
+    .close-icon {
+      &::before {
+        top: 1.5rem !important;
+      }
+    }
+  }
+}

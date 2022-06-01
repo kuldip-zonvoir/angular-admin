@@ -1,0 +1,21 @@
+<div class="card custom-card">
+  <div class="d-flex zp-10 bg-{{ tile.color }} align-items-center">
+    <div class="">
+      <h6 class="text-white mb-0">New {{ tile.title }}</h6>
+    </div>
+    <div class="ml-auto">
+      <h6 class="text-white mb-0">{{ tile.new_value }}</h6>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="d-flex align-items-center">
+      <div class="display-6 text-{{ tile.color }}">
+        <i class="ti {{ tile.icon_name }}"></i>
+      </div>
+      <div class="ml-auto">
+        <h6 class="text-{{ tile.color }} m-b-4">Total {{ tile.title }}</h6>
+        <h3 class="fw-600 mb-0 m-b-4">{{ tile.all_value }}</h3>
+      </div>
+    </div>
+  </div>
+</div>

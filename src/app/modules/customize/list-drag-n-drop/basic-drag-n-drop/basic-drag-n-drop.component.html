@@ -1,0 +1,22 @@
+<div class="card custom-card">
+  <div class="card-header custom-card-header bg-primary border-1">
+    <h5 class="card-title text-white m-b-0">Basic Drag and Drop</h5>
+  </div>
+  <div class="" cdkDropList (cdkDropListDropped)="drop($event)">
+    <ng-container *ngFor="let service of services">
+      <div cdkDrag class="d-flex align-items-center drag-list border-1">
+        <div class="basic-drag-drop d-flex align-items-center">
+          <div class="">
+            <span class="material-icons-outlined icon-20 text-info m-r-8">
+              arrow_forward
+            </span>
+          </div>
+
+          <h6 class="m-b-0 basic-drag-drop-title">
+            {{ service }}
+          </h6>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

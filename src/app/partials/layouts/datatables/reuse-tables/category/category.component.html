@@ -1,0 +1,159 @@
+<div class="card custom-card">
+  <div class="card-body">
+    <!-- filter parameters -->
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-4 grid-bottom-12">
+        <div class="">
+          <div class="">
+            <app-tabel-filter-component></app-tabel-filter-component>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-3 col-md-3 col-sm-6 offset-md-5 offset-sm-2 offset-lg-5"
+      >
+        <div class="">
+          <div class="control-ng-select-width">
+            <app-custom-select-dropdown
+              [terms]="termsPara"
+              class="category-dropdown ng-custom-select-input"
+            ></app-custom-select-dropdown>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- table starts here -->
+    <div class="table-responsive table_hr_scroll grid-bottom-12">
+      <table class="table my_tabel table-hover table-borderless m-b-0">
+        <thead class="thead">
+          <tr class="thead-row" style="left: 0px">
+            <th class="th">
+              <span class="t_title">Sr. No</span>
+            </th>
+            <th>
+              <span class="t_title align-middle">Image</span>
+            </th>
+            <th>
+              <span class="t_title align-middle"> Name</span>
+            </th>
+            <th>
+              <span class="t_title align-middle">Description</span>
+            </th>
+            <th>
+              <span class="t_title align-middle">Parent Category</span>
+            </th>
+            <th>
+              <span class="t_title align-middle">Action</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let category of categoryList; let i = index">
+            <td>
+              <span class="tabelcell">{{ i + 1 }}</span>
+            </td>
+            <td>
+              <span class="tabelcell align-middle">
+                <img
+                  [src]="category.image"
+                  alt=""
+                  class="img-responsive logo-sm2-rounded"
+                />
+              </span>
+            </td>
+            <td>
+              <span class="tabelcell align-middle">{{
+                category.category_name
+              }}</span>
+            </td>
+            <td>
+              <span class="tabelcell align-middle">{{
+                category.description
+              }}</span>
+            </td>
+            <td>
+              <span class="tabelcell align-middle">{{ category.type }}</span>
+            </td>
+            <td>
+              <span class="tabelcell">
+                <div class="d-flex align-items-center">
+                  <a
+                    class="mr-3"
+                    (click)="editCategory(category.id)"
+                    tooltip="Edit"
+                  >
+                    <span class="material-icons-outlined icon-gray">
+                      edit
+                    </span>
+                  </a>
+                  <a
+                    class=""
+                    (click)="deleteCategory(category.id)"
+                    tooltip="delete"
+                  >
+                    <span class="material-icons-outlined icon text-danger">
+                      delete
+                    </span>
+                  </a>
+                </div>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="">
+      <app-tabel-filter-component-bottom></app-tabel-filter-component-bottom>
+    </div>
+  </div>
+</div>
+<!-- edit category -->
+<p-dialog
+  header="Category Detail"
+  [(visible)]="categoryDetail"
+  [modal]="true"
+  class="e-com-category custom-card"
+>
+  <div class="k_optional_scroll">
+    <form action="" class="" (ngSubmit)="updateCategory()">
+      <div class="kprime_form_wrapper">
+        <div class="form-group m-b-12">
+          <label for="title">Category Name</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter Category Name"
+          />
+        </div>
+        <div class="form-group m-b-12">
+          <label for="stock">Category Stock</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter Category Stock"
+          />
+        </div>
+        <div class="form-group m-b-12">
+          <label for="title">Parent Category</label>
+          <select name="" class="form-control" id="">
+            <option selected>Change Category</option>
+            <option value="">Electronics</option>
+            <option value="">Faishion</option>
+            <option value="">Footwear</option>
+            <option value="">Grocery</option>
+          </select>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="d-flex justify-content-end kprime_footer align-items-center">
+    <button
+      (click)="closeModal()"
+      class="btn btn-outline-danger m-r-8 btn-square"
+    >
+      Cancel
+    </button>
+    <button type="submit" class="btn btn-primary btn-square">Submit</button>
+  </div>
+</p-dialog>

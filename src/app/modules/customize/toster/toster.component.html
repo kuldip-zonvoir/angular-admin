@@ -1,0 +1,278 @@
+<div class="row">
+  <div class="col-lg-3 m-b-20 col-md-4 col-sm-6">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <div class="">
+          <h5 class="card-label m-b-0">Success</h5>
+        </div>
+      </div>
+
+      <div class="card-body text-center">
+        <div class="custom-modal">
+          <button
+            type="button"
+            (click)="showSuccess()"
+            class="btn btn-square btn-success"
+          >
+            Success
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 m-b-20 col-md-4 col-sm-6">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <div class="">
+          <h5 class="card-label m-b-0">Information</h5>
+        </div>
+      </div>
+
+      <div class="card-body text-center">
+        <div class="custom-modal">
+          <button
+            type="button"
+            (click)="showInfo()"
+            label="Info"
+            class="btn btn-square btn-info"
+          >
+            Information
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 m-b-20 col-md-4 col-sm-6">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <div class="">
+          <h5 class="card-label m-b-0">Warning</h5>
+        </div>
+      </div>
+
+      <div class="card-body text-center">
+        <div class="custom-modal">
+          <button
+            type="button"
+            (click)="showWarn()"
+            label="Warn"
+            class="btn btn-square btn-warning"
+          >
+            Warning
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 m-b-20 col-md-4 col-sm-6">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <div class="">
+          <h5 class="card-label m-b-0">Error</h5>
+        </div>
+      </div>
+
+      <div class="card-body text-center">
+        <div class="custom-modal">
+          <button
+            type="button"
+            (click)="showError()"
+            class="btn btn-square btn-danger"
+          >
+            Error
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 m-b-20 col-md-4 col-sm-6">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <div class="">
+          <h5 class="card-label m-b-0">Top Left</h5>
+        </div>
+      </div>
+
+      <div class="card-body text-center">
+        <div class="custom-modal">
+          <button
+            type="button"
+            class="btn btn-square btn-info"
+            (click)="showTopLeft()"
+          >
+            Top Left
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 m-b-20 col-md-4 col-sm-6">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <div class="">
+          <h5 class="card-label m-b-0">Top Center</h5>
+        </div>
+      </div>
+
+      <div class="card-body text-center">
+        <div class="custom-modal">
+          <button
+            type="button"
+            (click)="showTopCenter()"
+            class="btn btn-square btn-warning"
+          >
+            Top Center
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 m-b-20 col-md-4 col-sm-6">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <div class="">
+          <h5 class="card-label m-b-0">Bottom Center</h5>
+        </div>
+      </div>
+
+      <div class="card-body text-center">
+        <div class="custom-modal">
+          <button
+            type="button"
+            (click)="showBottomCenter()"
+            class="btn btn-square btn-success"
+          >
+            Bottom Center
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 m-b-20 col-md-4 col-sm-6">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <div class="">
+          <h5 class="card-label m-b-0">Multiple</h5>
+        </div>
+      </div>
+
+      <div class="card-body text-center">
+        <div class="custom-modal">
+          <button
+            type="button"
+            (click)="showMultiple()"
+            class="btn btn-square btn-warning"
+          >
+            Multiple
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 m-b-20 col-md-4 col-sm-6">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <div class="">
+          <h5 class="card-label m-b-0">Sticky</h5>
+        </div>
+      </div>
+
+      <div class="card-body text-center">
+        <div class="custom-modal">
+          <button
+            type="button"
+            class="btn btn-square btn-primary"
+            (click)="showSticky()"
+          >
+            Sticky
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 m-b-20 col-md-4 col-sm-6">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <div class="">
+          <h5 class="card-label m-b-0">Clear</h5>
+        </div>
+      </div>
+
+      <div class="card-body text-center">
+        <div class="custom-modal">
+          <button
+            type="button"
+            class="btn btn-square btn-primary"
+            (click)="clear()"
+            icon="pi pi-times"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 m-b-20 col-md-4 col-sm-6">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <div class="">
+          <h5 class="card-label m-b-0">Confirm</h5>
+        </div>
+      </div>
+
+      <div class="card-body text-center">
+        <div class="custom-modal">
+          <button
+            type="button"
+            class="btn btn-square btn-primary ui-button-warning"
+            (click)="showConfirm()"
+          >
+            confirm
+          </button>
+        </div>
+      </div>
+    </div>
+    <p-toast class="k_toast"></p-toast>
+    <p-toast class="k_toast" position="top-left" key="tl"></p-toast>
+    <p-toast class="k_toast" position="top-center" key="tc"></p-toast>
+    <p-toast class="k_toast" position="bottom-center" key="bc"></p-toast>
+
+    <p-toast
+      class="k_toast"
+      position="bottom-center"
+      key="c"
+      (onClose)="onReject()"
+      [baseZIndex]="5000"
+    >
+      <ng-template let-message pTemplate="message">
+        <div class="p-flex p-flex-column k_toast_message" style="flex: 1">
+          <div class="p-text-center">
+            <i class="pi pi-exclamation-triangle" style="font-size: 3rem"></i>
+            <h4>{{ message.summary }}</h4>
+            <p>{{ message.detail }}</p>
+          </div>
+          <div class="p-grid p-fluid">
+            <div class="p-col-6">
+              <button
+                type="button"
+                pButton
+                (click)="onConfirm()"
+                label="Yes"
+                class="btn btn-square btn-success"
+              ></button>
+            </div>
+            <div class="p-col-6">
+              <button
+                type="button"
+                pButton
+                (click)="onReject()"
+                label="No"
+                class="btn btn-square btn-secondary"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-toast>
+  </div>
+</div>

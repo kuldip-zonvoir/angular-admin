@@ -1,0 +1,43 @@
+.icon-space {
+  width: 13%;
+  display: flex;
+  align-items: center;
+}
+.k_specific {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.k_value_name {
+  width: 85%;
+  display: flex;
+  align-items: center;
+}
+.price_Padding {
+  padding: 16px;
+}
+// for Mobile Portrait Mode
+@include responsive-below(md) {
+}
+// For Mobile Landscape Mode
+@include responsive-between(sm, md) {
+}
+// For tablet Portrait Mode
+@include responsive-between(md, lg) {
+  .icon-space {
+    width: 13%;
+    display: flex;
+    align-items: center;
+  }
+}
+// For tablet Landscape Mode
+@include responsive-between(lg, xl) {
+  .icon-space {
+    width: 13%;
+    display: flex;
+    align-items: center;
+  }
+}
+@include responsive-above(lg) {
+}

@@ -1,0 +1,295 @@
+<div class="card custom-card">
+  <div class="card-body">
+    <!-- filter parameters -->
+    <div class="row">
+      <div class="col-lg-3 col-sm-12 col-md-6 grid-bottom-12">
+        <div class="">
+          <app-tabel-filter-component></app-tabel-filter-component>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 grid-bottom-12">
+        <div class="form-group m-b-0">
+          <input
+            type="text"
+            placeholder="Daterangepicker"
+            class="form-control"
+            bsDaterangepicker
+            [bsConfig]="{ isAnimated: true }"
+          />
+        </div>
+      </div>
+      <div class="col-lg-2 col-sm-6 col-md-4 grid-bottom-12">
+        <div class="">
+          <app-custom-select-dropdown
+            [terms]="termsPara2"
+            class="customers-dropdown"
+          ></app-custom-select-dropdown>
+        </div>
+      </div>
+      <div class="col-lg-2 col-sm-6 col-md-4 grid-bottom-12">
+        <div class="">
+          <app-custom-select-dropdown
+            [terms]="termsPara"
+            class="customers-dropdown"
+          ></app-custom-select-dropdown>
+        </div>
+      </div>
+      <div class="col-lg-2 col-sm-6 col-md-4 grid-bottom-12">
+        <div class="">
+          <app-custom-select-dropdown
+            [terms]="termsPara3"
+            class="customers-dropdown"
+          ></app-custom-select-dropdown>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table Starts here -->
+    <div class="table-responsive table_hr_scroll grid-bottom-12">
+      <table class="table my_tabel table-borderless m-b-0">
+        <thead class="thead">
+          <tr class="thead-row" style="left: 0px">
+            <th class="th">
+              <span class="t_title align-middle" style="width: 30px">#</span>
+            </th>
+            <th>
+              <span class="t_title align-middle">Image</span>
+            </th>
+            <th>
+              <span class="t_title align-middle">Order ID</span>
+            </th>
+            <th>
+              <span class="t_title align-middle">Product</span>
+            </th>
+            <th>
+              <span class="t_title align-middle">Address</span>
+            </th>
+            <th>
+              <span class="t_title align-middle">Customer Name</span>
+            </th>
+            <th>
+              <span class="t_title align-middle">Order Date</span>
+            </th>
+            <th>
+              <span class="t_title align-middle">Payment</span>
+            </th>
+            <th>
+              <span class="t_title align-middle">Amount</span>
+            </th>
+            <th>
+              <span class="t_title align-middle">Phone Number</span>
+            </th>
+
+            <th>
+              <span class="t_title align-middle">Status</span>
+            </th>
+            <th>
+              <span class="t_title align-middle">Action</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let order of orders; let i = index">
+            <td>
+              <span class="tabelcell align-middle">{{ i + 1 }}</span>
+            </td>
+            <td>
+              <span class="tabelcell align-middle">
+                <img
+                  [src]="order.customer_image"
+                  alt=""
+                  class="img-responsive logo-sm2-rounded"
+                />
+              </span>
+            </td>
+            <td>
+              <span class="tabelcell align-middle">{{ order.orderId }}</span>
+            </td>
+            <td>
+              <span class="tabelcell align-middle">{{
+                order.product_title
+              }}</span>
+            </td>
+            <td>
+              <span class="tabelcell align-middle">{{
+                order.customer_address
+              }}</span>
+            </td>
+            <td>
+              <span class="tabelcell align-middle">{{
+                order.customer_name
+              }}</span>
+            </td>
+            <td>
+              <span class="tabelcell align-middle">{{ order.ship_date }}</span>
+            </td>
+            <td>
+              <span class="tabelcell align-middle">
+                <span class="label label-success label-dot mr-2"></span>
+                <span
+                  [ngClass]="{
+                    'text-success': order.payment === 'Recieved',
+                    'text-danger': order.payment === 'Canceled',
+                    'text-warning': order.payment === 'Pending'
+                  }"
+                  class="font-weight-bold"
+                  >{{ order.payment }}</span
+                >
+              </span>
+            </td>
+            <td>
+              <span class="tabelcell align-middle">
+                $ {{ order.product_price }}
+              </span>
+            </td>
+            <td>
+              <span class="tabelcell align-middle">{{ order.phone }}</span>
+            </td>
+
+            <td>
+              <span
+                [ngClass]="{
+                  'text-light-warning': order.status === 'Processing',
+                  'text-light-danger': order.status === 'Canceled'
+                }"
+                class="tabelcell_status align-middle text-light-success"
+                >{{ order.status }}</span
+              >
+            </td>
+            <td>
+              <span class="tabelcell">
+                <div class="d-flex align-items-center">
+                  <a
+                    class="m-r-12"
+                    (click)="editOrder(order.id)"
+                    tooltip="Edit"
+                  >
+                    <span class="material-icons-outlined icon-gray">
+                      edit
+                    </span>
+                  </a>
+                  <a class="" (click)="deleteOrder(order.id)" tooltip="delete">
+                    <span class="material-icons-outlined icon text-danger">
+                      delete
+                    </span>
+                  </a>
+                </div>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="">
+      <app-tabel-filter-component-bottom></app-tabel-filter-component-bottom>
+    </div>
+  </div>
+</div>
+<!-- order detail or edit -->
+<p-dialog
+  header="Order Detail"
+  [(visible)]="orderDetail"
+  [modal]="true"
+  class="e-com-orderlist custom-card"
+>
+  <div class="k_optional_scroll">
+    <form action="" class="" (ngSubmit)="updateOrder()">
+      <div class="kprime_form_wrapper">
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <div class="form-group grid-bottom-12">
+              <label for="">Customer Name</label>
+              <input type="text" class="form-control" />
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="form-group grid-bottom-12">
+              <label for="">Customer Phone</label>
+              <input type="text" class="form-control" />
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="form-group grid-bottom-12">
+              <label for="">Product Price</label>
+              <input type="text" class="form-control" />
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="form-group grid-bottom-12">
+              <label for="">Product Name</label>
+              <input type="text" class="form-control" />
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="form-group grid-bottom-12">
+              <label for="">Order Date</label>
+              <input
+                type="text"
+                class="form-control"
+                bsDatepicker
+                [bsConfig]="{ isAnimated: true }"
+                placeholder=" Date"
+              />
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6">
+            <div class="form-group grid-bottom-12">
+              <label for="">Order Id</label>
+              <input type="text" class="form-control" />
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="form-group grid-bottom-12">
+              <label for="">Order Status</label>
+              <select name="" class="form-control" id="">
+                <option selected>Change Order Status</option>
+                <option value="">Deliverd</option>
+                <option value="">Processing</option>
+                <option value="">Canceled</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="form-group grid-bottom-12">
+              <label for="">Payment Status</label>
+              <select name="" class="form-control" id="">
+                <option selected>Change Payment Status</option>
+                <option value="">Recieved</option>
+                <option value="">Pending</option>
+                <option value="">Canceled</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="grid-bottom-12">
+              <h6 class="">Delivery Address</h6>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6">
+            <div class="form-group grid-bottom-12">
+              <label for="">Line 1</label>
+              <input type="text" class="form-control" />
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="form-group grid-bottom-12">
+              <label for="">Line 2</label>
+              <input type="text" class="form-control" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="d-flex justify-content-end kprime_footer align-items-center">
+    <button
+      (click)="closeModal()"
+      class="btn btn-outline-danger m-r-8 btn-square"
+    >
+      Cancel
+    </button>
+    <button type="submit" class="btn btn-primary btn-square">Submit</button>
+  </div>
+</p-dialog>

@@ -1,0 +1,211 @@
+//AanaLytic Page{
+.action_analytic {
+  display: none;
+}
+.ana_web_danger {
+  background-color: #f04d4d;
+  .ana_progress {
+    color: $white;
+    font-size: 9px;
+  }
+}
+
+.icon_wrap_ana {
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  .ana_progress {
+    color: $white;
+    font-size: 9px;
+  }
+}
+.percent_change {
+  font-size: 13px;
+  font-weight: 500;
+}
+.tag_name_ana {
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: $dark_badge;
+}
+
+.custom_tr {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid $border-color2;
+  &:last-child {
+    border-bottom: 0;
+  }
+  .custom_td1 {
+    font-size: 13px;
+    font-weight: 400;
+    width: 45%;
+    p {
+      color: $heading-color !important;
+    }
+  }
+  .custom_td2 {
+    font-size: 13px;
+    font-weight: 400;
+    width: 40%;
+    text-align: center;
+  }
+  .custom_td3 {
+    font-size: 13px;
+    font-weight: 400;
+    width: 15%;
+
+    text-align: right;
+  }
+}
+.data_chart_ana {
+  padding: 10px 20px;
+}
+.bg-light-cyan {
+  background-color: #5febc8;
+}
+.bg-light-orange {
+  background-color: #eb795f;
+}
+.bg_pink {
+  background-color: #ec4899;
+}
+.bg-green {
+  background-color: #6eed7b;
+}
+.bg_light_pink {
+  background-color: #eb59e3;
+}
+.gg {
+  color: #5feb6de7;
+  background-color: #e633ddd0;
+}
+//Anaytic page ends
+.tile-logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+
+  .icon {
+    color: $white;
+  }
+}
+.area_cc_wrap {
+  margin-bottom: 10px;
+  .area_cc_title {
+    color: $paraColor;
+
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+  .area_cc_stats {
+    color: $text-color;
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+//
+.dashboard_lft_sec {
+  .good_job_dash {
+    border-radius: 10px;
+    box-shadow: $cardShadow;
+    background-color: $primary;
+    padding: 10px 20px;
+  }
+
+  .good_j_img {
+    padding: 20px;
+    text-align: center;
+    padding-bottom: 0;
+  }
+
+  .good_j_img img {
+    height: 9.5rem;
+    width: 9.5rem;
+  }
+
+  .good_j_text h2 {
+    letter-spacing: -0.019em;
+    color: $white;
+    font-weight: 400;
+    font-size: 24px;
+  }
+
+  .good_j_text p {
+    opacity: 0.5;
+    color: $white;
+    font-weight: 400;
+    font-size: 13px;
+    margin-top: 0;
+  }
+
+  .good_j_text ul {
+    padding-left: 0;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  .good_j_text ul li {
+    font-size: 14px;
+    color: $white;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: -0.006em;
+    display: inherit;
+    margin-bottom: 10px;
+    padding-left: 24px;
+    position: relative;
+  }
+
+  .good_j_text ul li:after {
+    content: "\f058";
+    position: absolute;
+    left: 0;
+    font-family: FontAwesome;
+    font-size: 18px;
+    top: -2px;
+  }
+}
+// for Mobile Portrait Mode
+@include responsive-below(md) {
+  .dashboard_lft_sec {
+    .good_j_img {
+      padding: 20px;
+      text-align: center;
+    }
+  }
+}
+// For Mobile Landscape Mode
+@include responsive-between(sm, md) {
+  .dashboard_lft_sec {
+    .good_j_text {
+      padding-top: 16px;
+    }
+    .good_j_img {
+      padding: 20px;
+      padding-bottom: 0;
+      text-align: center;
+    }
+  }
+}
+// For tablet Portrait Mode
+@include responsive-between(md, lg) {
+}
+// For tablet Landscape Mode
+@include responsive-between(lg, xl) {
+}
+// For desktop Mode
+@include responsive-above(lg) {
+}

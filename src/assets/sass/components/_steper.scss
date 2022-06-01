@@ -1,0 +1,410 @@
+.step {
+  position: relative;
+
+  .step-circle {
+    z-index: 2 !important;
+    position: relative;
+    color: #b5b5b5;
+    background-color: $background-color;
+    height: 40px;
+    display: inline-block;
+    width: 40px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 36px;
+    border: 3px solid $primary;
+
+    .icon {
+      font-size: 20px;
+      position: relative;
+      left: 0px;
+      top: 5px;
+    }
+
+    &.active {
+      color: $primary;
+    }
+
+    &.success {
+      border: 0;
+      background-color: $success;
+      color: $text-color-inverse;
+
+      &.one {
+        &::after {
+          background-color: $success;
+        }
+      }
+
+      &.two {
+        &::after {
+          background-color: $success;
+        }
+      }
+
+      &.three {
+        &::after {
+          background-color: $success;
+        }
+      }
+    }
+
+    &.one {
+      &::after {
+        @include pseudo-lines(
+          "",
+          $left: 37px,
+          $top: 50%,
+          $width: 160px,
+          $height: 1px,
+          $bg-color: #b5b5b5
+        );
+      }
+    }
+
+    &.two {
+      &::after {
+        @include pseudo-lines(
+          "",
+          $left: 37px,
+          $top: 50%,
+          $width: 160px,
+          $height: 1px,
+          $bg-color: #b5b5b5
+        );
+      }
+    }
+  }
+}
+
+@include responsive-below(md) {
+  .stepper {
+    .step {
+      position: relative;
+
+      .step-circle {
+        z-index: 2 !important;
+        position: relative;
+        color: #b5b5b5;
+        background-color: $background-color;
+        height: 40px;
+        display: inline-block;
+        width: 40px;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 36px;
+        border: 3px solid $primary;
+
+        .icon {
+          font-size: 20px;
+          position: relative;
+          left: 0px;
+          top: 8px;
+        }
+
+        &.active {
+          color: $primary;
+        }
+
+        &.success {
+          border: 0;
+          background-color: $success;
+          color: $text-color-inverse;
+
+          &.one {
+            &::after {
+              background-color: $success;
+            }
+          }
+
+          &.two {
+            &::after {
+              background-color: $success;
+            }
+          }
+
+          &.three {
+            &::after {
+              background-color: $success;
+            }
+          }
+        }
+
+        &.one {
+          &::after {
+            @include pseudo-lines(
+              "",
+              $left: 33px,
+              $top: 50%,
+              $width: 80px,
+              $height: 1px,
+              $bg-color: #b5b5b5
+            );
+          }
+        }
+
+        &.two {
+          &::after {
+            @include pseudo-lines(
+              "",
+              $left: 33px,
+              $top: 50%,
+              $width: 80px,
+              $height: 1px,
+              $bg-color: #b5b5b5
+            );
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive-between(sm, md) {
+  .stepper {
+    .step {
+      position: relative;
+
+      .step-circle {
+        z-index: 2 !important;
+        position: relative;
+        color: #b5b5b5;
+        background-color: $background-color;
+        height: 40px;
+        display: inline-block;
+        width: 40px;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 36px;
+        border: 3px solid $primary;
+
+        .icon {
+          font-size: 20px;
+          position: relative;
+          left: 0px;
+          top: 8px;
+        }
+
+        &.active {
+          color: $primary;
+        }
+
+        &.success {
+          border: 0;
+          background-color: $success;
+          color: $text-color-inverse;
+
+          &.one {
+            &::after {
+              background-color: $success;
+            }
+          }
+
+          &.two {
+            &::after {
+              background-color: $success;
+            }
+          }
+
+          &.three {
+            &::after {
+              background-color: $success;
+            }
+          }
+        }
+
+        &.one {
+          &::after {
+            @include pseudo-lines(
+              "",
+              $left: 33px,
+              $top: 50%,
+              $width: 176px,
+              $height: 1px,
+              $bg-color: #b5b5b5
+            );
+          }
+        }
+
+        &.two {
+          &::after {
+            @include pseudo-lines(
+              "",
+              $left: 33px,
+              $top: 50%,
+              $width: 176px,
+              $height: 1px,
+              $bg-color: #b5b5b5
+            );
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive-between(md, lg) {
+  .stepper {
+    .step {
+      position: relative;
+
+      .step-circle {
+        z-index: 2 !important;
+        position: relative;
+        color: #b5b5b5;
+        background-color: $background-color;
+        height: 40px;
+        display: inline-block;
+        width: 40px;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 36px;
+        border: 3px solid $primary;
+
+        .icon {
+          font-size: 20px;
+          position: relative;
+          left: 0px;
+          top: 8px;
+        }
+
+        &.active {
+          color: $primary;
+        }
+
+        &.success {
+          border: 0;
+          background-color: $success;
+          color: $text-color-inverse;
+
+          &.one {
+            &::after {
+              background-color: $success;
+            }
+          }
+
+          &.two {
+            &::after {
+              background-color: $success;
+            }
+          }
+
+          &.three {
+            &::after {
+              background-color: $success;
+            }
+          }
+        }
+
+        &.one {
+          &::after {
+            @include pseudo-lines(
+              "",
+              $left: 33px,
+              $top: 50%,
+              $width: 212px,
+              $height: 1px,
+              $bg-color: #b5b5b5
+            );
+          }
+        }
+
+        &.two {
+          &::after {
+            @include pseudo-lines(
+              "",
+              $left: 33px,
+              $top: 50%,
+              $width: 212px,
+              $height: 1px,
+              $bg-color: #b5b5b5
+            );
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive-between(lg, xl) {
+  .stepper {
+    .step {
+      position: relative;
+
+      .step-circle {
+        z-index: 2 !important;
+        position: relative;
+        color: #b5b5b5;
+        background-color: $background-color;
+        height: 40px;
+        display: inline-block;
+        width: 40px;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 36px;
+        border: 3px solid $primary;
+
+        .icon {
+          font-size: 20px;
+          position: relative;
+          left: 0px;
+          top: 8px;
+        }
+
+        &.active {
+          color: $primary;
+        }
+
+        &.success {
+          border: 0;
+          background-color: $success;
+          color: $text-color-inverse;
+
+          &.one {
+            &::after {
+              background-color: $success;
+            }
+          }
+
+          &.two {
+            &::after {
+              background-color: $success;
+            }
+          }
+
+          &.three {
+            &::after {
+              background-color: $success;
+            }
+          }
+        }
+
+        &.one {
+          &::after {
+            @include pseudo-lines(
+              "",
+              $left: 33px,
+              $top: 50%,
+              $width: 126px,
+              $height: 1px,
+              $bg-color: #b5b5b5
+            );
+          }
+        }
+
+        &.two {
+          &::after {
+            @include pseudo-lines(
+              "",
+              $left: 33px,
+              $top: 50%,
+              $width: 126px,
+              $height: 1px,
+              $bg-color: #b5b5b5
+            );
+          }
+        }
+      }
+    }
+  }
+}

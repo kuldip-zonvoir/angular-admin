@@ -1,0 +1,198 @@
+.form-group {
+  label {
+    font-size: $form-label-font-size;
+    font-weight: $form-label-font-weight;
+    color: $formLabelColor;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+  }
+
+  .text-bg-color {
+    background-color: $inputBgColor;
+  }
+  .form-text {
+    font-size: $form-text-font-size;
+    font-weight: $form-text-font-weight;
+  }
+}
+
+.input-group-text {
+  border: 0;
+  border-radius: 0;
+}
+// ng select
+.ng-custom-select-input {
+  background-color: $inputBgColor;
+}
+// Form control
+.form-control {
+  &[readonly] {
+    background-color: $inputBgColor;
+  }
+  @extend .text-bg-color;
+  height: auto;
+  padding: $inputPadding;
+  font-size: $inputTextSize;
+  font-weight: $inputTextWeight;
+  border: 1px solid $inputBorder !important;
+  border-radius: 4px;
+  background-color: $inputBgColor;
+  color: lighten($color: $text-color, $amount: 5%);
+
+  &.no-outline {
+    border: 0 !important;
+    outline: none !important;
+    &:focus {
+      border: 0 !important;
+      outline: none !important;
+    }
+  }
+  &.pill-field {
+    border-radius: 0.625rem;
+  }
+
+  &.bg-field {
+    background-color: $body-bg;
+  }
+
+  &.gap-left {
+    padding-left: 2.5rem;
+  }
+
+  &.gap-left-lg {
+    padding-left: 64px;
+  }
+
+  &.gap-right {
+    padding-right: 2.5rem;
+  }
+
+  &:disabled {
+    background-color: darken($color: $background-color, $amount: 10%);
+  }
+
+  &:focus {
+    box-shadow: none !important;
+    border-color: $border-color;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    background-color: $background-color;
+    color: $text-color;
+    .search_bar {
+      &::before {
+        color: $primary;
+      }
+    }
+  }
+
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &.is-invalid {
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+.pill-input-field {
+  padding: 16px 32px;
+  border-right: 0;
+  font-size: 1.125rem;
+  border-radius: 30px !important;
+  outline: none !important;
+
+  &:focus {
+    box-shadow: none;
+    outline: none !important;
+    box-shadow: 0 6px 12px rgb(134 140 150 / 25%) !important;
+  }
+}
+
+.btn-half-pill-lg {
+  background-color: $primary;
+  text-align: center;
+  color: $white;
+  height: 3.75rem;
+  outline: none !important;
+  font-size: 1rem;
+  width: 7.75rem;
+  border-radius: 0 30px 30px 0 !important;
+
+  &:focus {
+    outline: none !important;
+    background-color: darken($primary, 5%) !important;
+    color: $text-color;
+  }
+}
+
+.p-inputmask {
+  background-color: $background-color !important;
+}
+
+.p-inputtext {
+  height: auto;
+  padding: 0.5rem;
+  font-size: $form-label-font-size;
+  font-weight: $form-label-font-weight;
+  color: $formLabelColor;
+  border-radius: 4px;
+  border: 1px solid $inputBorder;
+  border-color: $inputBorder;
+  &:enabled {
+    // border-color: lighten($color: $text-color, $amount: 75%);
+    border-color: $inputBorder !important;
+    border: 1px solid $inputBorder;
+
+    &:hover {
+      border: 1px solid $inputBorder;
+      border-color: $inputBorder !important;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+/*For small mobile devices*/
+@include responsive-below(sm) {
+  .btn-half-pill-lg {
+    height: 3rem;
+  }
+  .mod-search-bar-width {
+    .search_bar {
+      .form-control {
+        width: 100% !important;
+      }
+    }
+  }
+}
+/*For  mobile devices*/
+@include responsive-below(md) {
+  .pill-input-field {
+    padding: 10px 24px;
+    padding-left: 24px;
+    border-right: 0;
+    font-size: 1rem;
+    border-radius: 30px !important;
+  }
+  .mod-search-bar-width {
+    .search_bar {
+      .form-control {
+        width: 100% !important;
+      }
+    }
+  }
+}
+// for tablet view landscape
+@include responsive-between(md, lg) {
+  .pill-input-field {
+    padding: 12px 30px;
+    padding-left: 24px;
+    border-right: 0;
+    font-size: 1rem;
+    border-radius: 30px !important;
+  }
+}

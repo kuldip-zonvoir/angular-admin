@@ -1,0 +1,81 @@
+<div class="card custom-card">
+  <div class="card-header custom-card-header border-1">
+    <h5 class="m-b-0">Poll Result</h5>
+  </div>
+  <div class="card-body">
+    <p class="m-b-8">Here is latest result of the poll.</p>
+    <h5 class="m-b-8 fw-600">What is mobile app usage daily ?</h5>
+    <div class="p-b-12">
+      <div class="p-b-1 d-flex align-items-center">
+        <div class="">
+          <p class="m-b-0"><b>A</b> 30 Minnute</p>
+        </div>
+        <div class="ml-auto">
+          <p class="m-b-0"><b>25%</b></p>
+        </div>
+      </div>
+      <div class="">
+        <progressbar
+          [value]="40"
+          type="info"
+          max="100"
+          style="height: 5px"
+        ></progressbar>
+      </div>
+    </div>
+    <div class="p-b-12">
+      <div class="p-b-1 d-flex align-items-center">
+        <div class="">
+          <p class="m-b-0"><b>B</b> More than 30 Minnute</p>
+        </div>
+        <div class="ml-auto">
+          <p class="m-b-0"><b>20%</b></p>
+        </div>
+      </div>
+      <div class="">
+        <progressbar
+          [value]="20"
+          type="primary"
+          max="100"
+          style="height: 5px"
+        ></progressbar>
+      </div>
+    </div>
+    <div class="p-b-12">
+      <div class="p-b-1 d-flex align-items-center">
+        <div class="">
+          <p class="m-b-0"><b>C</b> 1 hour</p>
+        </div>
+        <div class="ml-auto">
+          <p class="m-b-0"><b>50%</b></p>
+        </div>
+      </div>
+      <div class="">
+        <progressbar
+          [value]="60"
+          type="success"
+          max="100"
+          style="height: 5px"
+        ></progressbar>
+      </div>
+    </div>
+    <div class="p-b-12">
+      <div class="p-b-1 d-flex align-items-center">
+        <div class="">
+          <p class="m-b-0"><b>D</b> More than 1 Hour</p>
+        </div>
+        <div class="ml-auto">
+          <p class="m-b-0"><b>5%</b></p>
+        </div>
+      </div>
+      <div class="">
+        <progressbar
+          [value]="5"
+          type="danger"
+          max="100"
+          style="height: 5px"
+        ></progressbar>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,263 @@
+.scrum-box-continer {
+  background-color: $scrumBox;
+  color: $text-color;
+  position: relative;
+}
+.tsk_add_btn {
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 4px !important;
+  border: 1px solid $light !important;
+  background-color: $light !important;
+}
+.scrumb-task-card {
+  .scrum-notice-box {
+    .icon-16 {
+      color: $white;
+    }
+    p {
+      color: $white;
+    }
+  }
+  .card-img-top {
+    width: 100%;
+    height: 9.75rem;
+  }
+
+  .bar {
+    border-radius: 6px;
+    height: 4px;
+    max-width: 32px;
+    flex: 1 1 0%;
+    box-sizing: border-box;
+    margin-right: 12px;
+  }
+}
+
+.scrum-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  .scrum-new-card {
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darken($color: $scrumBox, $amount: 5%);
+    color: $text-color;
+    &:hover {
+      background-color: darken($color: $scrumBox, $amount: 8%);
+    }
+  }
+}
+.buttons-labels {
+  display: flex !important;
+  flex-direction: row-reverse !important;
+  align-items: center !important;
+}
+.acttachment-card {
+  .small-card-img {
+    width: 100%;
+    height: calc(100% - 5rem);
+  }
+}
+
+.mr_scroll {
+  max-height: 19rem;
+  margin-right: 5px;
+  cursor: pointer;
+  overflow-y: auto;
+  overflow-x: hidden;
+  @include scrollbar($width: 0.5rem, $border-radius: 1rem);
+  &:hover {
+    @include scrollbar(
+      $width: 0.5rem,
+      $border-radius: 1rem,
+      $background-color: $scrollbarColor
+    );
+  }
+}
+.k_scrum_card_width {
+  width: 100%;
+}
+.vr_scroll {
+  max-height: 57vh;
+  cursor: pointer;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px 0 20px 10px;
+  @include scrollbar($width: 0.5rem, $border-radius: 1rem);
+  &:hover {
+    @include scrollbar(
+      $width: 0.5rem,
+      $border-radius: 1rem,
+      $background-color: $scrollbarColor
+    );
+  }
+}
+
+.hr_scroll {
+  width: 100%;
+  overflow-x: auto;
+  cursor: pointer;
+  padding: 0;
+  @include scrollbar(
+    $height: 0.5rem,
+    $border-radius: 1rem,
+    $background-color: #d4d6da8c
+  );
+}
+
+.scrum-lable-scroll-tags {
+  max-width: 30rem;
+  flex-wrap: wrap;
+}
+.scrum-members-scroll {
+  max-width: 20rem;
+  flex-wrap: wrap;
+}
+.member_tags_container {
+  display: flex;
+  justify-content: space-between;
+}
+// for Mobile Portrait Mode
+@include responsive-below(md) {
+  .scrum-footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+  }
+  .vr_scroll {
+    max-height: 47vh;
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px 12px 40px 12px;
+    @include scrollbar($width: 0.5rem, $border-radius: 1rem);
+    &:hover {
+      @include scrollbar(
+        $width: 0.5rem,
+        $border-radius: 1rem,
+        $background-color: $scrollbarColor
+      );
+    }
+  }
+  .member_tags_container {
+    display: flex;
+    // align-items: center;
+  }
+  .scrum-lable-scroll-tags {
+    max-width: 12rem;
+    flex-wrap: wrap;
+  }
+  .scrum-members-scroll {
+    max-width: 8rem;
+    flex-wrap: wrap;
+  }
+  .members_tags {
+    margin-bottom: 12px;
+    .logo-md-rounded {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+  .task_tags {
+    margin-bottom: 12px;
+    .btn-pill,
+    .btn-square {
+      padding: 4px 12px !important;
+      font-size: 0.75rem !important;
+    }
+  }
+  .scrum-box-continer {
+    background-color: #d4d6da8c;
+    color: $text-color;
+    position: relative;
+    z-index: 99;
+  }
+}
+// For Mobile Landscape Mode
+@include responsive-between(sm, md) {
+  .scrum-lable-scroll-tags {
+    max-width: 20rem;
+    flex-wrap: wrap;
+  }
+  .scrum-members-scroll {
+    max-width: 16rem;
+    flex-wrap: wrap;
+  }
+
+  .vr_scroll {
+    max-height: 81vh;
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px 12px 40px 12px;
+    @include scrollbar($width: 0.5rem, $border-radius: 1rem);
+    &:hover {
+      @include scrollbar(
+        $width: 0.5rem,
+        $border-radius: 1rem,
+        $background-color: $scrollbarColor
+      );
+    }
+  }
+  .scrum-box-continer {
+    background-color: $scrumContainer;
+    color: $text-color;
+    position: relative;
+    z-index: 99;
+  }
+}
+// For tablet Portrait Mode
+@include responsive-between(md, lg) {
+  .vr_scroll {
+    max-height: 68vh;
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px 12px 40px 12px;
+    @include scrollbar($width: 0.5rem, $border-radius: 1rem);
+    &:hover {
+      @include scrollbar(
+        $width: 0.5rem,
+        $border-radius: 1rem,
+        $background-color: $scrollbarColor
+      );
+    }
+  }
+  .scrum-lable-scroll-tags {
+    max-width: 20rem;
+    flex-wrap: wrap;
+  }
+  .scrum-members-scroll {
+    max-width: 15rem;
+    flex-wrap: wrap;
+  }
+}
+// For tablet Landscape Mode
+@include responsive-between(lg, xl) {
+  .scrum-footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+  }
+  .vr_scroll {
+    max-height: 58vh;
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px 12px 40px 12px;
+    @include scrollbar($width: 0.5rem, $border-radius: 1rem);
+    &:hover {
+      @include scrollbar(
+        $width: 0.5rem,
+        $border-radius: 1rem,
+        $background-color: $scrollbarColor
+      );
+    }
+  }
+}

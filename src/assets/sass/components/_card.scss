@@ -1,0 +1,152 @@
+.no-shadow {
+  box-shadow: none !important;
+}
+
+.no-radius {
+  border-radius: 10px !important;
+}
+.top_radius {
+  border-radius: 10px 10px 0 0;
+}
+.bottom_radius {
+  border-radius: 0 0 10px 10px !important;
+}
+.right_radius {
+  border-radius: 0 10px 10px 0;
+}
+.right_btn_radius {
+  border-radius: 0 4px 4px 0;
+}
+
+.shadow-sm {
+  box-shadow: -7.829px 11.607px 20px 0 #4c4cf10d;
+}
+.bg-card {
+  cursor: pointer;
+  &:hover {
+    .bg-transparent {
+      box-shadow: none;
+    }
+  }
+}
+
+.card-effect {
+  .card-hover {
+    width: 100%;
+    height: 100px;
+    transform: translatey(0px);
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover {
+    .card-hover {
+      transform: translatey(-10px);
+      width: 100%;
+      height: 100px;
+    }
+  }
+}
+
+.shadow1 {
+  box-shadow: $boxShadow-lg;
+}
+.custom-card-header {
+  background-color: $background-color;
+  border: 0;
+  border-radius: 10px 10px 0 0;
+
+  &:first-child {
+    border-radius: 10px 10px 0 0;
+  }
+}
+.custom-card {
+  background-color: $background-color;
+  color: $text-color;
+  border: 1px solid $cardBorder;
+  box-shadow: $cardShadow;
+  @extend .no-radius;
+}
+.custom-card-footer {
+  background-color: $background-color;
+  border: 0;
+}
+@each $name, $color in $theme-light-colors {
+  .colored_card_#{$name} {
+    background-color: $color;
+    .card-header {
+      color: map-get($theme-colors, $name);
+    }
+    .card-title {
+      color: map-get($theme-colors, $name);
+    }
+    .card-text {
+      color: map-get($theme-colors, $name);
+    }
+  }
+}
+
+.card-section {
+  background-color: $specialCard !important;
+  color: $text-color;
+  .card-text {
+    color: $muteColor;
+    margin-bottom: 8px;
+  }
+  .blockquote {
+    font-size: 1rem;
+  }
+}
+
+.card-block {
+  background-color: $background-color !important;
+  border: 0;
+  border-radius: 0;
+  color: $text-color;
+}
+.basic-card-image {
+  width: 100%;
+  height: 13rem;
+}
+.custom-accrodion {
+  color: $text-color;
+
+  // change btn-link
+  .btn.btn-link {
+    border-radius: 0;
+    color: $primary; //for dark mode
+    text-decoration: none;
+    font-size: 13px !important;
+  }
+  .panel-body {
+    background-color: $background-color;
+  }
+
+  .card-header {
+    background-color: $specialCard !important;
+    border: 0;
+    border-radius: 10px 10px 0 0;
+  }
+}
+.special-card {
+  background-color: $specialCard !important;
+}
+// for Mobile Portrait Mode
+@include responsive-below(md) {
+}
+// For Mobile Landscape Mode
+@include responsive-between(sm, md) {
+  .basic-card-image {
+    width: 100%;
+    height: 16rem;
+  }
+}
+// For tablet Landscape  Mode
+@include responsive-between(md, lg) {
+  .basic-card-image {
+    width: 100%;
+    height: 20rem;
+  }
+}
+// For tablet Portrait Mode
+@include responsive-between(lg, xl) {
+}

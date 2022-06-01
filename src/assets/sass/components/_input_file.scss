@@ -1,0 +1,50 @@
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+  .custom-file {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-bottom: 0;
+    .custom-file-selector {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      margin: 0;
+      opacity: 0;
+    }
+    .custom-file-label {
+      height: 37px;
+      padding: 0.5rem 0.75rem;
+      position: absolute;
+      top: 0;
+      font-size: 13px;
+      right: 0;
+      left: 0;
+      z-index: 1;
+      font-weight: 400;
+      color: $text-color;
+      background-color: $background-color;
+      &::after {
+        background-color: $primary;
+        border: 1px solid $primary;
+        color: $white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+        display: block;
+        line-height: 1.5;
+        height: 37px;
+        padding: 6px 10px;
+        border-radius: 0;
+      }
+    }
+  }
+}
