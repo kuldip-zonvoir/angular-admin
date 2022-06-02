@@ -1,16 +1,6 @@
 <!-- Header-For desktop -->
 <header class="header-section desktop-header">
   <div class="desktop-header d-flex align-items-center">
-    <!-- <div
-      [ngClass]="
-        isMobile
-          ? 'brand-header-mobile ' + getBrandClass(brandkey)
-          : '' + getBrandClass(brandkey)
-      "
-      class="brand-header"
-    >
-      <app-brand></app-brand>
-    </div> -->
     <div
       *ngIf="!headerSearch"
       [ngClass]="getHeaderClass(headerkey)"
@@ -19,13 +9,7 @@
       <div class="d-flex align-items-center kk_left_header">
         <ul class="nav">
           <li
-            class="
-              d-flex
-              nav-item
-              herader_menu_toggle
-              align-items-center
-              m-r-14
-            "
+            class="d-flex nav-item herader_menu_toggle align-items-center m-r-14"
           >
             <a
               class="d-flex toggle-icon link hoverable align-items-center"
@@ -218,12 +202,7 @@
               <ul
                 id="dropdown-basic"
                 *dropdownMenu
-                class="
-                  dropdown-menu
-                  dropdown-width-xl
-                  dropdown-height
-                  dropdown-menu-left
-                "
+                class="dropdown-menu dropdown-width-xl dropdown-height dropdown-menu-left"
                 role="menu"
                 aria-labelledby="button-basic"
                 placement="bottom right"
@@ -255,12 +234,7 @@
               <div
                 id="dropdown-basic"
                 *dropdownMenu
-                class="
-                  dropdown-menu
-                  dropdown-width-xl
-                  dropdown-height
-                  dropdown-menu-left
-                "
+                class="dropdown-menu dropdown-width-xl dropdown-height dropdown-menu-left"
                 role="menu"
                 aria-labelledby="button-basic"
               >
@@ -291,12 +265,7 @@
                 <ul
                   id="dropdown-basic"
                   *dropdownMenu
-                  class="
-                    dropdown-menu dropdown-width-xl dropdown-height
-                    p-t-0
-                    m-t-0
-                    dropdown-menu-left
-                  "
+                  class="dropdown-menu dropdown-width-xl dropdown-height p-t-0 m-t-0 dropdown-menu-left"
                   role="menu"
                   aria-labelledby="button-basic"
                 >
@@ -311,14 +280,7 @@
     <!-- full widh search field -->
     <div
       *ngIf="headerSearch"
-      class="
-        full-search-harder
-        navbar-header-content
-        px-3
-        d-flex
-        custom-header-searchbar
-        w-100
-      "
+      class="full-search-harder navbar-header-content px-3 d-flex custom-header-searchbar w-100"
     >
       <div class="full-searchbar d-flex align-items-center w-100">
         <input
@@ -346,12 +308,7 @@
             (click)="sidebarToggle('Mobile')"
           >
             <span
-              class="
-                material-icons-outlined
-                menu_icon_mob
-                cursor-pointer
-                icon-20
-              "
+              class="material-icons-outlined menu_icon_mob cursor-pointer icon-20"
             >
               menu
             </span>
@@ -487,15 +444,7 @@
   <!-- full widh search field -->
   <div
     *ngIf="isDropdownArr[0]"
-    class="
-      full-search-harder
-      custom-header-searchbar
-      dropdown-wrapper-mob
-      header-mobile-dropdown
-      px-3
-      d-flex
-      w-100
-    "
+    class="full-search-harder custom-header-searchbar dropdown-wrapper-mob header-mobile-dropdown px-3 d-flex w-100"
   >
     <div class="full-searchbar d-flex align-items-center w-100">
       <input
@@ -514,12 +463,7 @@
           <app-email-wigit></app-email-wigit>
           <div role="menuitem ">
             <div
-              class="
-                d-flex
-                align-items-center
-                justify-content-center
-                border-top-1
-              "
+              class="d-flex align-items-center justify-content-center border-top-1"
             >
               <a type="btn" class="m-b-0 btn text-primary">Clear All</a>
             </div>
@@ -533,12 +477,7 @@
           <app-engauge></app-engauge>
           <div role="menuitem ">
             <div
-              class="
-                d-flex
-                align-items-center
-                justify-content-center
-                border-top-1
-              "
+              class="d-flex align-items-center justify-content-center border-top-1"
             >
               <a type="btn" class="m-b-0 btn text-primary">Clear All</a>
             </div>
@@ -683,12 +622,7 @@
               <ul
                 id="dropdown-basic"
                 *dropdownMenu
-                class="
-                  dropdown-menu
-                  dropdown-width-xl
-                  dropdown-height
-                  dropdown-menu-left
-                "
+                class="dropdown-menu dropdown-width-xl dropdown-height dropdown-menu-left"
                 role="menu"
                 aria-labelledby="button-basic"
                 placement="bottom right"
@@ -701,6 +635,7 @@
                 </div>
               </ul>
             </div>
+
             <!--  notification -->
             <div class="btn-group herader_drop_box m-r-14" dropdown>
               <a
@@ -720,12 +655,7 @@
               <div
                 id="dropdown-basic"
                 *dropdownMenu
-                class="
-                  dropdown-menu
-                  dropdown-width-xl
-                  dropdown-height
-                  dropdown-menu-left
-                "
+                class="dropdown-menu dropdown-width-xl dropdown-height dropdown-menu-left"
                 role="menu"
                 aria-labelledby="button-basic"
               >
@@ -737,6 +667,7 @@
                 </div>
               </div>
             </div>
+
             <!-- profile -->
             <div class="btn-group" dropdown>
               <a
@@ -756,12 +687,7 @@
                 <ul
                   id="dropdown-basic"
                   *dropdownMenu
-                  class="
-                    dropdown-menu dropdown-width-xl dropdown-height
-                    p-t-0
-                    m-t-0
-                    dropdown-menu-left
-                  "
+                  class="dropdown-menu dropdown-width-xl dropdown-height p-t-0 m-t-0 dropdown-menu-left"
                   role="menu"
                   aria-labelledby="button-basic"
                 >
@@ -797,17 +723,7 @@
   <!-- full widh search field -->
   <div
     *ngIf="headerSearch"
-    class="
-      full-search-harder
-      custom-header-searchbar
-      dropdown-wrapper-mob
-      header-mobile-dropdown
-      px-3
-      d-flex
-      shadow1
-      d-flex
-      w-100
-    "
+    class="full-search-harder custom-header-searchbar dropdown-wrapper-mob header-mobile-dropdown px-3 d-flex shadow1 d-flex w-100"
   >
     <div class="full-searchbar d-flex align-items-center w-100">
       <input
@@ -826,13 +742,7 @@
           <app-email-wigit></app-email-wigit>
           <div role="menuitem  ">
             <div
-              class="
-                d-flex
-                align-items-center
-                custom-card
-                justify-content-center
-                border-top-1
-              "
+              class="d-flex align-items-center custom-card justify-content-center border-top-1"
             >
               <a type="btn" class="m-b-0 btn text-primary">Clear All</a>
             </div>
@@ -846,13 +756,7 @@
           <app-engauge></app-engauge>
           <div role="menuitem ">
             <div
-              class="
-                d-flex
-                align-items-center
-                custom-card
-                justify-content-center
-                border-top-1
-              "
+              class="d-flex align-items-center custom-card justify-content-center border-top-1"
             >
               <a type="btn" class="m-b-0 btn text-primary">Clear All</a>
             </div>

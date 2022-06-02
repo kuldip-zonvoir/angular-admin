@@ -78,6 +78,9 @@
   &.dropdown-menu-left {
     right: 0 !important;
     left: auto !important;
+    .material-icons-outlined {
+      font-size: 18px;
+    }
   }
 }
 

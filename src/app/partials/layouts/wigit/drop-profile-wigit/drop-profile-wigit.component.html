@@ -1,14 +1,7 @@
 <div class="card custom-card">
   <div role="menuitem">
     <div
-      class="
-        zp-8
-        custom-card-header
-        bg-primary
-        d-flex
-        align-items-center
-        justify-content-between
-      "
+      class="zp-8 custom-card-header bg-primary d-flex align-items-center justify-content-between"
     >
       <div class="d-flex align-items-center justify-content-start">
         <div class="logo m-r-12 d-flex zp-8 align-items-center profile_widgit">
@@ -23,8 +16,9 @@
     </div>
   </div>
   <div class="dropdown-scroll">
+    <!-- user Profile section -->
     <div role="menuitem">
-      <a class="dropdown-item kpdropdown">
+      <a (click)="goToProfile()" class="dropdown-item kpdropdown">
         <div class="d-flex align-items-center justify-content-between">
           <div class="d-flex align-items-center">
             <div class="logo m-r-12 d-flex align-items-center">
@@ -46,8 +40,9 @@
         </div>
       </a>
     </div>
+    <!-- user mail box -->
     <div role="menuitem">
-      <a class="dropdown-item kpdropdown">
+      <a (click)="goToMail()" class="dropdown-item kpdropdown">
         <div class="d-flex align-items-center justify-content-between">
           <div class="d-flex align-items-center">
             <div class="logo m-r-12 d-flex align-items-center">
@@ -70,7 +65,7 @@
       </a>
     </div>
     <div role="menuitem">
-      <a class="dropdown-item kpdropdown">
+      <a (click)="goToTasks()" class="dropdown-item kpdropdown">
         <div class="d-flex align-items-center justify-content-between">
           <div class="d-flex align-items-center">
             <div class="logo m-r-12 d-flex align-items-center">
@@ -93,7 +88,7 @@
       </a>
     </div>
     <div role="menuitem">
-      <a class="dropdown-item kpdropdown">
+      <a (click)="goToPlans()" class="dropdown-item kpdropdown">
         <div class="d-flex align-items-center justify-content-between">
           <div class="d-flex align-items-center">
             <div class="logo m-r-12 d-flex align-items-center">
