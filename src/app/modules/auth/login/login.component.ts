@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+// import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 
 @Component({
@@ -8,6 +9,7 @@ import { Router } from "@angular/router";
 })
 export class LoginComponent implements OnInit {
   currentTheme: string;
+  // form: FormGroup;
 
   constructor(private router: Router) {
     this.currentTheme = localStorage.getItem("activetheme");
@@ -16,6 +18,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   onLogin() {
-    // this.router.navigate(["/"]);
+    this.router.navigate(["/"]);
   }
 }

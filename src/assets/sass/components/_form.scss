@@ -190,6 +190,47 @@
     font-weight: 500;
     color: #889cb3;
   }
+}
 
-  //   outside vertical
+@include responsive-below(md) {
+  .wzrd_menu {
+    display: block;
+    .wzrd_list {
+      margin-bottom: 10px;
+      .wzrd_link {
+        margin-bottom: 10px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &.next_wzrd {
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .vertical_wzrd_wrap {
+    display: block;
+
+    // for vertical form stepper
+    .wzrd_navigation {
+      width: 100%;
+    }
+
+    // for vertical form
+    .wzrd_vr_form {
+      width: 100%;
+    }
+  }
+}
+// For Mobile landscrape mode Screen
+@include responsive-between(sm, md) {
+}
+// For laptop Landscape Mode
+@include responsive-between(lg, xl) {
+}
+// For tablet portrait Mode
+@include responsive-between(md, lg) {
 }

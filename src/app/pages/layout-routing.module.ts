@@ -8,7 +8,7 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       {
-        path: "index",
+        path: "dashboard",
         loadChildren: () =>
           import("../modules/dashboards/dashboards.module").then(
             (m) => m.DashboardsModule
@@ -171,7 +171,7 @@ const routes: Routes = [
       },
       {
         path: "",
-        redirectTo: "/index",
+        redirectTo: "/dashboard",
         pathMatch: "full",
       },
       {

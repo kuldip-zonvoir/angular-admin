@@ -8,7 +8,6 @@ import { SignupComponent } from "./signup/signup.component";
 import { Signup1Component } from "./signup1/signup1.component";
 import { ResetPasswordComponent } from "./reset-password/reset-password.component";
 import { CarouselModule } from "ngx-bootstrap/carousel";
-import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -19,11 +18,6 @@ import { ReactiveFormsModule } from "@angular/forms";
     Signup1Component,
     ResetPasswordComponent,
   ],
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    CarouselModule,
-    AuthRoutingModule,
-  ],
+  imports: [CommonModule, CarouselModule, AuthRoutingModule],
 })
 export class AuthModule {}

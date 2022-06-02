@@ -371,6 +371,14 @@
       right: 0;
     }
   }
+  //
+}
+
+// for mobile screen
+@include responsive-below(md) {
+  .action_dro {
+    display: none;
+  }
 }
 
 // For tablet portrait Mode
