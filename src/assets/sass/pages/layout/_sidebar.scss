@@ -175,19 +175,18 @@ $menufontWeight: 500;
 
         &:hover {
           color: $primary;
-          .icon-20 {
-            color: $primary;
+          .material-icons-outlined {
+            color: inherit;
           }
         }
 
         &.active {
           color: $primary;
           background-color: $primary;
-          // box-shadow: 0 2px 2px 0 lighten($color: $primary-light, $amount: 20%);
           color: $white;
           border-radius: 0 20px 20px 0;
-          .icon-20 {
-            color: $primary;
+          .material-icons-outlined {
+            color: inherit;
           }
         }
       }

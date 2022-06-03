@@ -167,7 +167,9 @@
 
                 &.active {
                   color: $primary !important;
-
+                  span {
+                    color: $primary !important;
+                  }
                   &::before {
                     @include pseudo-lines(
                       "",
