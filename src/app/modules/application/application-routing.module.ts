@@ -31,6 +31,11 @@ const routes: Routes = [
         component: EventScheduleComponent,
         data: { breadcrumb: "Full Calender" },
       },
+      {
+        path: "",
+        redirectTo: "/file-manager",
+        pathMatch: "full",
+      },
     ],
   },
 ];

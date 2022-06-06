@@ -37,6 +37,12 @@ const routes: Routes = [
           animation: "isLeft",
         },
       },
+      {
+        path: "",
+        redirectTo: "/inbox",
+        pathMatch: "full",
+      },
+      
     ],
   },
 ];

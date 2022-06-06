@@ -20,6 +20,11 @@ const routes: Routes = [
         component: WidgitDataComponent,
         data: { breadcrumb: "Widgit Data" },
       },
+      {
+        path: "",
+        redirectTo: "/widgit-app",
+        pathMatch: "full",
+      },
     ],
   },
 ];

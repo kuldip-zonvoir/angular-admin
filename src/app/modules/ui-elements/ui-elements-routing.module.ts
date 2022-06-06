@@ -134,6 +134,11 @@ const routes: Routes = [
         component: AccordionsComponent,
         data: { breadcrumb: "Accordions" },
       },
+      {
+        path: "",
+        redirectTo: "/accordions",
+        pathMatch: "full",
+      },
     ],
   },
 ];

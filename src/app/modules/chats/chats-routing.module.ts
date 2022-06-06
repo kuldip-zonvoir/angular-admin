@@ -25,6 +25,11 @@ const routes: Routes = [
         pathMatch: "full",
         redirectTo: "/private-chat/1",
       },
+      {
+        path: "",
+        redirectTo: "/private-chat",
+        pathMatch: "full",
+      },
     ],
   },
 ];

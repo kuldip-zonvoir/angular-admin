@@ -56,6 +56,11 @@ const routes: Routes = [
         component: AllFriendsComponent,
         data: { breadcrumb: "Friend List" },
       },
+      {
+        path: "",
+        redirectTo: "/timeline",
+        pathMatch: "full",
+      },
     ],
   },
 ];

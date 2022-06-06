@@ -20,6 +20,11 @@ const routes: Routes = [
         component: ContactsListComponent,
         data: { breadcrumb: "List Contacts" },
       },
+      {
+        path: "",
+        redirectTo: "/grid-contacts",
+        pathMatch: "full",
+      },
     ],
   },
 ];

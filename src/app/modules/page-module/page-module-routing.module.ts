@@ -19,6 +19,11 @@ const routes: Routes = [
         component: BlankComponent,
         data: { breadcrumb: "Black Page" },
       },
+      {
+        path: "",
+        redirectTo: "/price-plans",
+        pathMatch: "full",
+      },
     ],
   },
 ];

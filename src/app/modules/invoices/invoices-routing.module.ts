@@ -26,6 +26,11 @@ const routes: Routes = [
         component: InvoiceComponent,
         data: { breadcrumb: "Invoice" },
       },
+      {
+        path: "",
+        redirectTo: "/invoice-lists",
+        pathMatch: "full",
+      },
     ],
   },
 ];

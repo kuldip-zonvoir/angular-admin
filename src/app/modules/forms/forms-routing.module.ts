@@ -37,6 +37,11 @@ const routes: Routes = [
         component: AdvanceFormComponent,
         data: { breadcrumb: "Advance Forms" },
       },
+      {
+        path: "",
+        redirectTo: "/regular-forms",
+        pathMatch: "full",
+      },
     ],
   },
 ];

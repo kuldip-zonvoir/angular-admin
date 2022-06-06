@@ -16,6 +16,7 @@ import { BrandComponent } from "./layout/components/brand/brand.component";
 import { WigitModule } from "../partials/layouts/wigit/wigit.module";
 import { HoverClassDirective } from "../partials/core/directives/hover.directive";
 // import { BreadcrumbModule } from "angular-crumbs";
+import { BreadcrumbModule } from "xng-breadcrumb";
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { HoverClassDirective } from "../partials/core/directives/hover.directive
     SharedModule,
     SidebarModule,
     WigitModule,
+    BreadcrumbModule,
     // BreadcrumbModule,
     LayoutRoutingModule,
   ],

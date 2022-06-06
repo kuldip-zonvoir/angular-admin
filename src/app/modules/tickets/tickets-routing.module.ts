@@ -20,6 +20,11 @@ const routes: Routes = [
         component: TicketlistComponent,
         data: { breadcrumb: "Ticket List" },
       },
+      {
+        path: "",
+        redirectTo: "/ticket-list",
+        pathMatch: "full",
+      },
     ],
   },
 ];

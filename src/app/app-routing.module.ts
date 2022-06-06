@@ -6,6 +6,7 @@ const routes: Routes = [
     path: "",
     loadChildren: () =>
       import("./pages/layout.module").then((m) => m.LayoutModule),
+    data: { breadcrumb: 'Home' }
   },
   {
     path: "auth",
