@@ -117,16 +117,20 @@
   transition: all 0.2s ease-in-out;
 
   //main header
+  //main header
   .main_content {
     background-color: $body-bg;
-    min-height: 84.5vh;
-    padding: 12px 20px 12px 25px;
-    margin-top: 48px;
+    // min-height: 84.5vh;
+    // padding: 12px 20px 12px 25px;
+    padding-top: 75px !important;
+    min-height: 94vh;
+    padding: 15px 20px 15px 25px;
 
     display: flex;
     flex-direction: column;
 
     .main_wraper {
+      padding-bottom: 40px;
     }
   }
 
@@ -312,7 +316,10 @@
     background-color: $body-bg;
     min-height: 65vh;
     padding: 12px 20px 12px 20px !important;
-    margin-top: 60px;
+    padding-top: 65px !important;
+    .main_crum {
+      padding: 0;
+    }
   }
   .theme-sidebar {
     position: absolute;

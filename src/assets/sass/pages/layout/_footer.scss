@@ -1,4 +1,8 @@
 .main-footer {
   background-color: $background-color;
   color: $text-color;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
