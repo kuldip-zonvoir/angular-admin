@@ -197,9 +197,11 @@ export class LayoutComponent implements OnInit {
 
   // toggle Dark Mode to Light Mode
   changeMode(val) {
-    this.themeMode = val;
-    this.isChecked = !this.isChecked;
-    this.getCssClass(this.themeMode);
+    if (this.themeMode != val) {
+      this.themeMode = val;
+      this.isChecked = true;
+      this.getCssClass(this.themeMode);
+    }
   }
 
   // ty

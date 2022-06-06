@@ -23,6 +23,17 @@
     }
   }
 }
+
+.theme_custom_style {
+  .p-sidebar-content {
+    padding: 0;
+    overflow: hidden;
+    overflow-y: hidden;
+  }
+  .p-sidebar-header {
+    padding: 0;
+  }
+}
 //
 .kk_responsive {
   .responsive {
