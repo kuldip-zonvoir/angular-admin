@@ -175,6 +175,9 @@
   .p-sidebar-header {
     padding: 0;
   }
+  // .p-sidebar-content{
+  //   padding: 0;
+  // }
   .p-sidebar-active {
     z-index: 10 !important;
     padding: 10px 0;
@@ -201,6 +204,14 @@
 }
 // for Mobile portrait mode
 @include responsive-below(md) {
+  // custom dropdown in style
+  .custom_v12_drop{
+    .btn-group{
+      padding: 0;
+    }
+  }
+
+
   .scrunboard_filter_modal {
     .p-dialog-content {
       height: 100%;

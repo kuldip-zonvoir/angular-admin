@@ -326,9 +326,12 @@ mwl-calendar-week-view-hour-segment {
   }
 }
 // For Mobile Landscape Mode
-@include responsive-between(sm, md) {
+@include responsive-below(md) {
   .cal_event_padding {
     display: none;
+  }
+  .cal_agend_scroll {
+    height: 50vh !important;
   }
 }
 // For tablet Portrait Mode

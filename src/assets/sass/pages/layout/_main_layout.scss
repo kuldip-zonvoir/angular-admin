@@ -274,6 +274,14 @@
 
 // For Mobile portrait Screen
 @include responsive-below(md) {
+  // custom image size
+  .logoxxl_custom_size{
+    width: 5rem !important;
+    height: 5rem !important;
+  }
+  .action_dro {
+    display: none;
+  }
   .sction_btn_name {
     display: none;
   }
@@ -392,12 +400,6 @@
   //
 }
 
-// for mobile screen
-@include responsive-below(md) {
-  .action_dro {
-    display: none;
-  }
-}
 
 // For tablet portrait Mode
 @include responsive-between(md, lg) {
@@ -420,7 +422,7 @@
     margin-left: 0px;
 
     .main_content {
-      min-height: 89vh;
+      min-height: 97vh;
     }
 
     .main_header {
@@ -480,7 +482,7 @@
     margin-left: 0px;
 
     .main_content {
-      min-height: 83vh;
+      min-height: 97vh;
     }
   }
 }

@@ -411,14 +411,14 @@
 @include responsive-between(md, lg) {
   .K_brand_logo {
     position: relative;
-    top: 10rem;
+    top: 1rem;
     .klogo {
       width: 15rem;
     }
   }
   .K_brand_logo2 {
     position: relative;
-    top: 8rem;
+    top: 1rem;
     .klogo {
       width: 12rem;
     }
@@ -451,7 +451,7 @@
 @include responsive-between(lg, xl) {
   .K_brand_logo {
     position: relative;
-    top: 3rem;
+    top: 1rem;
     .klogo {
       width: 12rem;
     }
