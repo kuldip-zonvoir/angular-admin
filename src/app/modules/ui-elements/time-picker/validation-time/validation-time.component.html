@@ -32,6 +32,7 @@
       <div class="">
         <timepicker
           [(ngModel)]="myTime"
+          [ngModelOptions]="{standalone: true}"
           [showMeridian]="isMeridian"
           (isValid)="isValid($event)"
         ></timepicker>

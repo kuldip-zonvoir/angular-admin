@@ -33,7 +33,7 @@
         <div class="form-check p-l-0">
           <label class="container-checkbox"
             >Open only one at a time
-            <input type="checkbox" [(ngModel)]="oneAtATime" />
+            <input type="checkbox" [(ngModel)]="oneAtATime" [ngModelOptions]="{standalone: true}" />
             <span class="material-icons check-mark icon"> </span>
           </label>
         </div>

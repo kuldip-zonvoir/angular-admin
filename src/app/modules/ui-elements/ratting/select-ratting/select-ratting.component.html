@@ -32,13 +32,14 @@
       <div class="">
         <rating
           [(ngModel)]="rate"
+          [ngModelOptions]="{standalone: true}"
           [max]="max"
           [readonly]="isReadonly"
           (keyup)="confirmSelection($event)"
         ></rating>
         <div class="card custom-card">
           <pre
-            class="card-block custom-card-header card-header"
+            class="card-block ratting_style custom-card-header card-header"
             style="margin: 15px 0"
           >Rating: <b>{{rate}}</b>;  Readonly is: <i>{{isReadonly}}</i>;</pre>
         </div>

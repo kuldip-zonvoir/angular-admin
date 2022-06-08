@@ -30,11 +30,10 @@
   <div class="card-body">
     <div class="content zp-12">
       <div class="">
-        <rating [(ngModel)]="rate" [max]="max" [readonly]="isReadonly"></rating>
+        <rating [(ngModel)]="rate" [ngModelOptions]="{standalone: true}" [max]="max" [readonly]="isReadonly"></rating>
         <div class="card custom-card">
           <pre
-            class="card-block custom-card-header card-header"
-            style="margin: 15px 0"
+            class="card-block  ratting_style custom-card-header card-header"
           >Rate: <b>{{rate}}</b> </pre>
         </div>
       </div>

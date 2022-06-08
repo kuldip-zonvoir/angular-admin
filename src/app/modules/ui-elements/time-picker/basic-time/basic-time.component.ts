@@ -22,7 +22,7 @@ export class BasicTimeComponent implements OnInit {
   response: HighlightResult;
 
   htmlcode = `
-    <timepicker [(ngModel)]="mytime" [showMeridian]="isMeridian"></timepicker>
+    <timepicker [(ngModel)]="mytime" [ngModelOptions]="{standalone: true}" [showMeridian]="isMeridian"></timepicker>
     <pre class="alert alert-info">Time is: {{mytime}}</pre>
         `;
   tscode = `

@@ -32,6 +32,7 @@
       <div class="">
         <rating
           [(ngModel)]="rate"
+          [ngModelOptions]="{standalone: true}"
           [max]="max"
           [readonly]="isReadonly"
           (onHover)="hoveringOver($event)"
@@ -50,7 +51,7 @@
         >
         <div class="card custom-card">
           <pre
-            class="card-block custom-card-header card-header"
+            class="card-block ratting_style custom-card-header card-header"
             style="margin: 15px 0"
           >Rate: <b>{{rate}}</b>;  Readonly is: <i>{{isReadonly}}</i>;  Hovering over: <b>{{overStar || "none"}}</b></pre>
         </div>
@@ -90,7 +91,7 @@
       </div>
       <!-- code -->
       <ng-template [ngIf]="tabId === '0'">
-        <pre class="m-b-0">
+        <pre class="m-b-0 ">
             <code [highlight]="htmlcode" (highlighted)="onHighlight($event)" [lineNumbers]="true">
             </code>
           </pre>

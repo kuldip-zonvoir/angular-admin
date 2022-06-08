@@ -34,7 +34,7 @@ export class SelectRattingComponent implements OnInit {
   response: HighlightResult;
 
   htmlcode = `
-    <rating [(ngModel)]="rate" [max]="max" [readonly]="isReadonly"
+    <rating [(ngModel)]="rate" [ngModelOptions]="{standalone: true}" [max]="max" [readonly]="isReadonly"
     (keyup)="confirmSelection($event)"></rating>
   <div class="card">
   <pre class="card-block card-header" style="margin:15px 0;">Rating: <b>{{rate}}</b>;  Readonly is: <i>{{isReadonly}}</i>;</pre>

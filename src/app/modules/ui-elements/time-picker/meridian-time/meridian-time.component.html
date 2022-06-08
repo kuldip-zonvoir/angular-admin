@@ -30,7 +30,7 @@
   <div class="card-body">
     <div class="content zp-12">
       <div class="">
-        <timepicker [(ngModel)]="mytime"></timepicker>
+        <timepicker [(ngModel)]="mytime" [ngModelOptions]="{standalone: true}"></timepicker>
         <div class="m-y-8">
           <pre class="alert custom-time-picker alert-primary">
 Time is: {{ mytime }}</pre

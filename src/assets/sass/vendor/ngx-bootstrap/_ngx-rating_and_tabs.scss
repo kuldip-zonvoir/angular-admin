@@ -28,3 +28,12 @@
   background-color: $specialCard !important;
   color: $text-color !important;
 }
+
+// star size
+.bs-rating-star{
+  font-size: 20px;
+}
+.ratting_style{
+  font-size: $inputTextSize !important;
+  margin: 0 !important;
+}

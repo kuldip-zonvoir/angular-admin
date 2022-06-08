@@ -6,7 +6,7 @@
   </div>
 
       <div class="card-body pt-0">
-        <angular-editor [(ngModel)]="htmlContent" [config]="config"></angular-editor>
+        <angular-editor [(ngModel)]="htmlContent" [ngModelOptions]="{standalone: true}" [config]="config"></angular-editor>
         
     </div>
 </div>

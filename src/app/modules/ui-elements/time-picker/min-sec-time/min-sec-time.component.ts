@@ -24,7 +24,7 @@ export class MinSecTimeComponent implements OnInit {
   response: HighlightResult;
 
   htmlcode = `
-    <timepicker [(ngModel)]="mytime" [showMeridian]="isMeridian"></timepicker>
+    <timepicker [ngModelOptions]="{standalone: true}" [(ngModel)]="mytime" [showMeridian]="isMeridian"></timepicker>
     <pre class="alert alert-info">Time is: {{mytime}}</pre>
         `;
   tscode = `

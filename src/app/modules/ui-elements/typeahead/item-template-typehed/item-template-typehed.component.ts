@@ -51,6 +51,7 @@ export class ItemTemplateTypehedComponent implements OnInit {
   htmlcode = `
     <pre class="card card-block card-header mb-3">Model: {{selected | json}}</pre>
     <input [(ngModel)]="selected"
+    [ngModelOptions]="{standalone: true}"
            [typeahead]="states"
            [isAnimated]="true"
            class="form-control">
