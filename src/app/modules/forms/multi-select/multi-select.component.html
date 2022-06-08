@@ -8,6 +8,7 @@
         <p-dropdown
           [options]="cities"
           [(ngModel)]="selectedCity"
+          [ngModelOptions]="{standalone: true}"
           optionLabel="name"
         ></p-dropdown>
       </div>
@@ -32,6 +33,7 @@
         <p-multiSelect
           [options]="cities"
           [(ngModel)]="selectedCityCodes"
+          [ngModelOptions]="{standalone: true}"
           optionLabel="name"
           optionValue="code"
         ></p-multiSelect>

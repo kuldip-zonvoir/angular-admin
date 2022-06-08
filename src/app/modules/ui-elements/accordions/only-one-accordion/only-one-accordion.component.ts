@@ -25,7 +25,7 @@ export class OnlyOneAccordionComponent implements OnInit {
   htmlcode = `
     <div class="checkbox">
     <label>
-      <input type="checkbox" [(ngModel)]="oneAtATime">
+      <input type="checkbox" [ngModelOptions]="{standalone: true}" [(ngModel)]="oneAtATime">
       Open only one at a time
     </label>
   </div>

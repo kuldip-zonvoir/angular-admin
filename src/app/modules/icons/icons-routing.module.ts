@@ -38,6 +38,11 @@ const routes: Routes = [
         component: MaterialFilledComponent,
         data: { breadcrumb: "Material Icons" },
       },
+      {
+        path: "",
+        redirectTo: "/material-icons-outline",
+        pathMatch: "full",
+      },
     ],
   },
 ];

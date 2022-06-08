@@ -6,6 +6,7 @@
   [closeOnSelect]="false"
   bindValue="id"
   [(ngModel)]="selectedPeople"
+  [ngModelOptions]="{standalone: true}"
 >
   <ng-template
     ng-option-tmp
@@ -13,7 +14,7 @@
     let-item$="item$"
     let-index="index"
   >
-    <input id="item-{{ index }}" type="checkbox" [ngModel]="item$.selected" />
+    <input id="item-{{ index }}" type="checkbox" [ngModelOptions]="{standalone: true}" [ngModel]="item$.selected" />
     {{ item.name }}
   </ng-template>
 </ng-select>

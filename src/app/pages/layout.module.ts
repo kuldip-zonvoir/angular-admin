@@ -15,7 +15,8 @@ import { FullSearchbarComponent } from "./layout/components/basic/full-searchbar
 import { BrandComponent } from "./layout/components/brand/brand.component";
 import { WigitModule } from "../partials/layouts/wigit/wigit.module";
 import { HoverClassDirective } from "../partials/core/directives/hover.directive";
-import { BreadcrumbModule } from "angular-crumbs";
+// import { BreadcrumbModule } from "angular-crumbs";
+import { BreadcrumbModule } from "xng-breadcrumb";
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { BreadcrumbModule } from "angular-crumbs";
     SidebarModule,
     WigitModule,
     BreadcrumbModule,
+    // BreadcrumbModule,
     LayoutRoutingModule,
   ],
 })

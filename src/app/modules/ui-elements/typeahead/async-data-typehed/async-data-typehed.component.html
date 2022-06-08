@@ -35,6 +35,7 @@ Model: {{ asyncSelected | json }}</pre
         >
         <input
           [(ngModel)]="asyncSelected"
+          [ngModelOptions]="{standalone: true}"
           [typeahead]="dataSource"
           [typeaheadAsync]="true"
           typeaheadOptionField="name"

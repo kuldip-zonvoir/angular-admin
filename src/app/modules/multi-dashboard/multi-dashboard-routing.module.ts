@@ -31,6 +31,11 @@ const routes: Routes = [
         component: Dashbord4Component,
         data: { breadcrumb: "Dashboard 3" },
       },
+      {
+        path: "",
+        redirectTo: "/dashbord-1",
+        pathMatch: "full",
+      },
     ],
   },
 ];

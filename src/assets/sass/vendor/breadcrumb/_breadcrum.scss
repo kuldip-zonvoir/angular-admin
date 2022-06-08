@@ -40,3 +40,16 @@
     }
   }
 }
+
+// breadcrum updated
+.breadcrum_upgrade{
+  .xng-breadcrumb-item{
+    label{
+      margin-bottom: 0;
+      color: $muteColor;
+    }
+  }
+  ol{
+    margin-bottom: 0;
+  }
+}

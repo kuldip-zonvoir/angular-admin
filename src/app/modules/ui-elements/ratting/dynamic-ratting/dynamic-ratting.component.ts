@@ -36,7 +36,7 @@ export class DynamicRattingComponent implements OnInit {
   response: HighlightResult;
 
   htmlcode = `
-      <rating [(ngModel)]="rate" [max]="max" [readonly]="isReadonly"
+      <rating [(ngModel)]="rate" [ngModelOptions]="{standalone: true}" [max]="max" [readonly]="isReadonly"
       (onHover)="hoveringOver($event)" (onLeave)="resetStar()"
       [titles]="['one','two','three']"></rating>
     <span class="label"

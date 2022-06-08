@@ -9,12 +9,12 @@
         <form #form ="ngForm" (ngSubmit)='saveDetail(form)' class="form_section">
                 <div class="form-group d-flex align-items-center mb-3 ">
                     <div class="">
-                        <p-inputSwitch name = "checked1" [(ngModel)]="checked1"></p-inputSwitch>                 
+                        <p-inputSwitch name = "checked1" [ngModelOptions]="{standalone: true}" [(ngModel)]="checked1"></p-inputSwitch>                 
                     </div>
                 </div>
                 <div class="form-group d-flex align-items-center mb-3 ">
                     <div class="">
-                        <p-inputSwitch name = "checked2" [(ngModel)]="checked2"></p-inputSwitch>                 
+                        <p-inputSwitch name = "checked2" [ngModelOptions]="{standalone: true}" [(ngModel)]="checked2"></p-inputSwitch>                 
                     </div>
                 </div>
         </form>

@@ -69,6 +69,11 @@ const routes: Routes = [
         component: EComOrdersListComponent,
         data: { breadcrumb: "Orders" },
       },
+      {
+        path: "",
+        redirectTo: "/products",
+        pathMatch: "full",
+      },
     ],
   },
 ];

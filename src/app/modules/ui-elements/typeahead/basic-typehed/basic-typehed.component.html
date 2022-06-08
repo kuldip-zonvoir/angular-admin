@@ -35,6 +35,7 @@ Model: {{ selected | json }}</pre
         >
         <input
           [(ngModel)]="selected"
+          [ngModelOptions]="{standalone: true}"
           [typeahead]="states"
           [isAnimated]="true"
           class="form-control"

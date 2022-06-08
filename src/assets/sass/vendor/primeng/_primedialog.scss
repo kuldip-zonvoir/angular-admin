@@ -26,6 +26,11 @@
     padding: 15px !important;
     border-radius: 10px !important;
   }
+  .event_detail_wrap {
+    .material-icons-outlined {
+      font-size: 20px;
+    }
+  }
 }
 
 //
@@ -167,6 +172,12 @@
   }
 }
 .application_sidebar {
+  .p-sidebar-header {
+    padding: 0;
+  }
+  // .p-sidebar-content{
+  //   padding: 0;
+  // }
   .p-sidebar-active {
     z-index: 10 !important;
     padding: 10px 0;
@@ -188,11 +199,19 @@
     transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
     position: absolute;
     right: -32px;
-    top: -10px;
+    top: 0;
   }
 }
 // for Mobile portrait mode
 @include responsive-below(md) {
+  // custom dropdown in style
+  .custom_v12_drop{
+    .btn-group{
+      padding: 0;
+    }
+  }
+
+
   .scrunboard_filter_modal {
     .p-dialog-content {
       height: 100%;

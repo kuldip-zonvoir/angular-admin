@@ -50,7 +50,7 @@ export class PositionTypehedComponent implements OnInit {
 
   htmlcode = `
   <pre class="card card-block card-header mb-3">Model: {{selected | json}}</pre>
-  <input [(ngModel)]="selected"[typeahead]="states"[adaptivePosition]="true"class="form-control">
+  <input [ngModelOptions]="{standalone: true}" [(ngModel)]="selected"[typeahead]="states"[adaptivePosition]="true"class="form-control">
         `;
   tscode = `
   import { Component } from '@angular/core';

@@ -5,3 +5,18 @@
   background-color: $background-color;
   color: $text-color;
 }
+.hljs {
+  // width: calc(100% - 1vw);
+  cursor: pointer;
+  overflow-y: hidden;
+  overflow-x: auto;
+
+  @include scrollbar($height: 0.5rem, $border-radius: 1rem);
+  &:hover {
+    @include scrollbar(
+      $height: 0.5rem,
+      $border-radius: 1rem,
+      $background-color: $scrollbarColor
+    );
+  }
+}

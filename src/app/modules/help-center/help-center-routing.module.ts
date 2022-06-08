@@ -32,6 +32,11 @@ const routes: Routes = [
         component: SupportHelpComponent,
         data: { breadcrumb: "Support" },
       },
+      {
+        path: "",
+        redirectTo: "/getting-started",
+        pathMatch: "full",
+      },
     ],
   },
 ];

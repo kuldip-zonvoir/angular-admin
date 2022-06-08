@@ -32,6 +32,7 @@
       <div class="">
         <timepicker
           [(ngModel)]="mytime"
+          [ngModelOptions]="{standalone: true}"
           [showMinutes]="showMin"
           [showSeconds]="showSec"
         ></timepicker>

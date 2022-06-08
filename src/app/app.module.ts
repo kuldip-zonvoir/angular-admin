@@ -8,8 +8,7 @@ import { AppComponent } from "./app.component";
 import { SidebarModule } from "primeng/sidebar";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { SharemeService } from "./partials/core/shareme.service";
-import { FormsModule } from "@angular/forms";
-import { ReactiveFormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { HIGHLIGHT_OPTIONS } from "ngx-highlightjs";
 import { NgApexchartsModule } from "ng-apexcharts";

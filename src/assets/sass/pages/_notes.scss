@@ -34,7 +34,7 @@
   }
   .app_toggle {
     display: block;
-    margin-right: 20px;
+    margin-right: 14px;
   }
   .search_field {
     width: 60%;
@@ -45,6 +45,7 @@
 @include responsive-between(sm, md) {
   .app_toggle {
     display: block;
+    margin-right: 14px;
   }
   .search_field {
     width: 70%;

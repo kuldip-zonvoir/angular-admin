@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin pseudo-icon(
   $content,
   $left: null,
@@ -47,7 +49,7 @@
   height: $size;
 
   @if ($circle) {
-    border-radius: $size/2;
+    border-radius: math.div($size, 2);
     line-height: $size;
     @if ($background-color !=null) {
       background-color: $background-color;

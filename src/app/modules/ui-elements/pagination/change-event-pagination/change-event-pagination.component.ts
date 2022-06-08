@@ -23,7 +23,7 @@ export class ChangeEventPaginationComponent implements OnInit {
   response: HighlightResult;
 
   htmlcode = `
-    <pagination [totalItems]="88" [(ngModel)]="currentPage" (numPages)="smallnumPages = $event"></pagination>
+    <pagination [totalItems]="88" [ngModelOptions]="{standalone: true}" [(ngModel)]="currentPage" (numPages)="smallnumPages = $event"></pagination>
   
     <pre class="card custom-card card-block card-header mb-3">The selected page no: {{currentPage}}/{{smallnumPages}}</pre>
         `;

@@ -28,7 +28,7 @@ export class ValidationTimeComponent implements OnInit {
   response: HighlightResult;
 
   htmlcode = `
-  <timepicker [(ngModel)]="myTime" [showMeridian]="isMeridian" (isValid)="isValid($event)"></timepicker>
+  <timepicker [ngModelOptions]="{standalone: true}" [(ngModel)]="myTime" [showMeridian]="isMeridian" (isValid)="isValid($event)"></timepicker>
   <hr>
   <pre class="alert"
        [class.alert-danger]="!valid"

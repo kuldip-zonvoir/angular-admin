@@ -33,6 +33,7 @@
         <pagination
           [totalItems]="44"
           [(ngModel)]="currentPage"
+          [ngModelOptions]="{standalone: true}"
           (numPages)="smallnumPages = $event"
         ></pagination>
 

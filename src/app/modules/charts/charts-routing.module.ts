@@ -43,6 +43,11 @@ const routes: Routes = [
         component: ChartjscustomComponent,
         data: { breadcrumb: "ChartJs" },
       },
+      {
+        path: "",
+        redirectTo: "/apex-chart",
+        pathMatch: "full",
+      },
     ],
   },
 ];

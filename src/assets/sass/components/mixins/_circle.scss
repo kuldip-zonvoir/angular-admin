@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin circle(
   $size,
   $background-color: null,
@@ -12,7 +14,7 @@
   text-align: center;
 
   @if ($circle !=null) {
-    border-radius: $size/2;
+    border-radius: math.div($size, 2);
   }
 
   @if ($background-color !=null) {
@@ -32,7 +34,7 @@
   width: $size;
   height: $size;
   line-height: $size;
-  border-radius: $size/2;
+  border-radius: math.div($size, 2);
   display: flex;
   align-items: center;
   justify-content: center;

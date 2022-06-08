@@ -12,6 +12,7 @@
             mask="99/99/9999"
             name="date"
             [(ngModel)]="date"
+            [ngModelOptions]="{standalone: true}"
             placeholder="mm/dd/yyyy"
           ></p-inputMask>
         </div>
@@ -23,6 +24,7 @@
             mask="999-9999-999"
             name="mobile"
             [(ngModel)]="mobile"
+            [ngModelOptions]="{standalone: true}"
             placeholder="(+91) 990-12394-567"
           ></p-inputMask>
         </div>
@@ -34,6 +36,7 @@
             mask="9999-9999-9999-9999"
             name="card"
             [(ngModel)]="card"
+            [ngModelOptions]="{standalone: true}"
             placeholder="1234-1234-1234-1234"
           ></p-inputMask>
         </div>

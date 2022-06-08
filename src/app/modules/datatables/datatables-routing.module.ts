@@ -31,6 +31,11 @@ const routes: Routes = [
         path: "datatable-2",
         component: Datatable2Component,
       },
+      {
+        path: "",
+        redirectTo: "/basic-table",
+        pathMatch: "full",
+      },
     ],
   },
 ];

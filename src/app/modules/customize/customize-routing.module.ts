@@ -43,6 +43,11 @@ const routes: Routes = [
         component: TosterComponent,
         data: { breadcrumb: "Toast" },
       },
+      {
+        path: "",
+        redirectTo: "/weather-cards",
+        pathMatch: "full",
+      },
     ],
   },
 ];

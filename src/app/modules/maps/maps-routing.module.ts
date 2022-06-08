@@ -14,6 +14,11 @@ const routes: Routes = [
         component: MapComponent,
         data: { breadcrumb: "Google Map" },
       },
+      {
+        path: "",
+        redirectTo: "/googlemap",
+        pathMatch: "full",
+      },
     ],
   },
 ];
