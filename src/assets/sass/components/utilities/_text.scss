@@ -57,9 +57,11 @@
 
 @each $name, $colors in $custom-colors {
   .sidebar-#{$name} {
-    background-image: $colors;
+    // background-image: $colors;
+    background-color: $colors;
     .nav_link {
-      color: #d2d8e4 !important;
+      // color: #d2d8e4 !important;
+      color: #ffffff!important;
     }
     .nav_title {
       .heading {
@@ -67,7 +69,8 @@
       }
     }
     .subnav_nav_link {
-      color: #d2d8e4 !important;
+      // color: #d2d8e4 !important;
+      color: #ffffff !important;
     }
     ._close_btn_modal {
       color: #ffffff;
@@ -75,7 +78,8 @@
   }
 
   .brand-#{$name} {
-    background-image: $colors;
+    // background-image: $colors;
+    background-color: $colors;
 
     .brand-heading {
       color: $white !important;
@@ -90,7 +94,8 @@
   }
 
   .header-#{$name} {
-    background-image: $colors;
+    // background-image: $colors;
+    background-color: $colors;
     .herader_menu_toggle a span {
       color: #ffffff !important;
     }

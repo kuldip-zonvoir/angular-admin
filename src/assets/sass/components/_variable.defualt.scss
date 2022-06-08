@@ -22,12 +22,19 @@ $dark-25: $gray-400 !default;
 // Text muted
 $text-muted: $gray-500 !default;
 //custom-colors
-$color1: linear-gradient(to top, #39a6ff 0%, #3a19f0d9 100%) !default;
-$color2: linear-gradient(to top, #ca4932, #e72727) !default;
-$color3: linear-gradient(to top, #7209b7 0%, #4a017b 100%) !default;
-$color4: linear-gradient(to top, #008080, #068269) !default; //#7209b7
-$color5: linear-gradient(to top, #4300ff, #a60ccc) !default;
-$color6: linear-gradient(to top, #f50909, #f13344) !default;
+// $color1: linear-gradient(to top, #39a6ff 0%, #3a19f0d9 100%) !default;
+// $color2: linear-gradient(to top, #ca4932, #e72727) !default;
+// $color3: linear-gradient(to top, #7209b7 0%, #4a017b 100%) !default;
+// $color4: linear-gradient(to top, #008080, #068269) !default; //#7209b7
+// $color5: linear-gradient(to top, #4300ff, #a60ccc) !default;
+// $color6: linear-gradient(to top, #f50909, #f13344) !default;
+
+$color1: #00bdaa;  //green;
+$color2: #ef698b; // red
+$color3: #0c0c3c; //indigo
+$color4: #1ea8e7;; 
+$color5: #484c7f; //purple
+$color6: #8b44e0;
 $color7: #e9edf2 !default;
 $colorActive1: #6930c3 !default;
 $colorActiveLight1: #ceb1fc !default;
