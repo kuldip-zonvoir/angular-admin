@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
+import { Subscription } from 'rxjs';
 import { SharemeService } from 'src/app/partials/core/shareme.service';
 
 @Component({
@@ -7,9 +8,11 @@ import { SharemeService } from 'src/app/partials/core/shareme.service';
   templateUrl: './theme-sidebar.component.html',
   styleUrls: ['./theme-sidebar.component.scss']
 })
-export class ThemeSidebarComponent implements OnInit {
+export class ThemeSidebarComponent implements OnInit,OnDestroy {
   visibleSidebar2: boolean;
   zvalue = "1000";
+    subscription: Subscription;
+
   constructor(
     private shareData: SharemeService,
     private primengConfig: PrimeNGConfig
@@ -17,10 +20,13 @@ export class ThemeSidebarComponent implements OnInit {
 
   ngOnInit() {
     this.primengConfig.ripple = true;
-    this.shareData.sidebarToggle.subscribe(data => {
+    this.subscription = this.shareData.sidebarToggle.subscribe(data => {
       this.visibleSidebar2 = data;
-      console.log('initial stage' + this.visibleSidebar2);
     });
+  }
+
+    ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
 }

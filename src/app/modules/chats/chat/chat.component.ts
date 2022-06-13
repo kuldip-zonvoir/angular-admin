@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnDestroy, OnInit } from "@angular/core";
+import { Subscription } from "rxjs";
 import { SharemeService } from "src/app/partials/core/shareme.service";
 
 @Component({
@@ -6,15 +7,18 @@ import { SharemeService } from "src/app/partials/core/shareme.service";
   templateUrl: "./chat.component.html",
   styleUrls: ["./chat.component.scss"],
 })
-export class ChatComponent implements OnInit {
+export class ChatComponent implements OnInit,OnDestroy {
   dropdownFlip = false;
   isListVisble: boolean;
+  subscription: Subscription;
   constructor(private _shareMe: SharemeService) {}
 
   ngOnInit(): void {
-    this._shareMe.chatContent.subscribe((value) => {
+    this.subscription = this._shareMe.chatContent.subscribe((value) => {
       this.isListVisble = value;
-      console.log(this.isListVisble);
     });
+  }
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 }

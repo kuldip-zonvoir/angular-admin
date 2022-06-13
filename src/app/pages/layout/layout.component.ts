@@ -1,6 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnDestroy, OnInit } from "@angular/core";
 import { NavigationEnd, Router } from "@angular/router";
-import { Observable } from "rxjs";
+import { Observable, Subscription } from "rxjs";
 import { SharemeService } from "src/app/partials/core/shareme.service";
 import { ThemeService } from "src/app/partials/core/theme.service";
 
@@ -9,7 +9,7 @@ import { ThemeService } from "src/app/partials/core/theme.service";
   templateUrl: "./layout.component.html",
   styleUrls: ["./layout.component.scss"],
 })
-export class LayoutComponent implements OnInit {
+export class LayoutComponent implements OnInit,OnDestroy {
   isResponsive: boolean;
   radioModel = "light";
   isDisable = true;
@@ -62,6 +62,9 @@ export class LayoutComponent implements OnInit {
   themeIndex: number;
   mobileSidebarModal: boolean;
   menuBar: boolean;
+    subscription1: Subscription;
+    subscription2: Subscription;
+
   constructor(
     private shareData: SharemeService,
     private router: Router,
@@ -82,13 +85,13 @@ export class LayoutComponent implements OnInit {
     });
   }
   ngOnInit() {
-    this.shareData.sidebarToggle.subscribe((data) => {
+    this.subscription1 = this.shareData.sidebarToggle.subscribe((data) => {
       this.isResponsive = data;
     });
 
     this.menuBar = true;
     // for moibile Sidebar
-    this.shareData.mobileDialogSidebar.subscribe((data) => {
+   this.subscription2 =  this.shareData.mobileDialogSidebar.subscribe((data) => {
       this.mobileSidebarModal = data;
     });
 
@@ -213,5 +216,9 @@ export class LayoutComponent implements OnInit {
   }
   changeWidth(event) {
     this.isResponsive = event;
+  }
+    ngOnDestroy() {
+    this.subscription1.unsubscribe();
+    this.subscription2.unsubscribe();
   }
 }

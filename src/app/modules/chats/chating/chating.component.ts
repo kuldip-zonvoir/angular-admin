@@ -1,13 +1,16 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnDestroy, OnInit } from "@angular/core";
 import { PrimeNGConfig } from "primeng/api";
+import { Subscription } from "rxjs";
 import { SharemeService } from "src/app/partials/core/shareme.service";
 @Component({
   selector: "app-chating",
   templateUrl: "./chating.component.html",
   styleUrls: ["./chating.component.scss"],
 })
-export class ChatingComponent implements OnInit {
+export class ChatingComponent implements OnInit,OnDestroy {
   isListVisble: boolean;
+    subscription: Subscription;
+
   constructor(
     private primengConfig: PrimeNGConfig,
     private _shareMe: SharemeService
@@ -15,7 +18,7 @@ export class ChatingComponent implements OnInit {
 
   ngOnInit(): void {
     this.primengConfig.ripple = true;
-    this._shareMe.chatContent.subscribe((value) => {
+    this.subscription = this._shareMe.chatContent.subscribe((value) => {
       this.isListVisble = value;
     });
   }
@@ -25,5 +28,9 @@ export class ChatingComponent implements OnInit {
   backTOContactList() {
     this.isListVisble = false;
     this._shareMe.updateChatView(this.isListVisble);
+  }
+
+    ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 }

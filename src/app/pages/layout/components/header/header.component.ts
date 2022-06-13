@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
+import { Subscription } from "rxjs";
 import { SharemeService } from "src/app/partials/core/shareme.service";
 
 @Component({
@@ -27,6 +28,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
   emailId: boolean;
   dropDrown = "default";
   tabId = "";
+    subscription1: Subscription;
+    subscription2: Subscription;
+    subscription3: Subscription;
+
   constructor(private shareData: SharemeService) {}
   openDropdown(index) {
     this.isDropdownArr.forEach((ac, i) => {
@@ -38,19 +43,20 @@ export class HeaderComponent implements OnInit, OnDestroy {
     console.log(this.isDropdownOpen);
   }
   ngOnInit(): void {
-    this.shareData.sidebarToggle.subscribe((data) => {
+    this.subscription1 = this.shareData.sidebarToggle.subscribe((data) => {
       this.isMobile = data;
     });
-    this.shareData.headerToggle.subscribe((data) => {
+    this.subscription2 = this.shareData.headerToggle.subscribe((data) => {
       this.headerkey = data;
       this.getHeaderClass(this.headerkey);
     });
 
-    this.shareData.brandToggle.subscribe((data) => {
+    this.subscription3 = this.shareData.brandToggle.subscribe((data) => {
       this.brandkey = data;
       this.getBrandClass(this.brandkey);
     });
   }
+
   getBrandClass(value: string) {
     let customClass;
     if (value === "default") {
@@ -72,6 +78,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
     }
     return customClass;
   }
+
+
   getHeaderClass(value: string) {
     // console.log(value);
     let customClass;
@@ -94,6 +102,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
     }
     return customClass;
   }
+
+
   toggleMe() {
     this.sidebar = true;
     this.shareData.toggleSidebar(this.sidebar);
@@ -153,5 +163,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
     }
   }
 
-  ngOnDestroy() {}
+  ngOnDestroy() {
+    this.subscription1.unsubscribe();
+    this.subscription2.unsubscribe();
+    this.subscription3.unsubscribe();
+  }
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnDestroy, OnInit } from "@angular/core";
+import { Subscription } from "rxjs";
 import { EComCouponService } from "src/app/partials/core/services/e-com-coupon.service";
 
 @Component({
@@ -6,7 +7,7 @@ import { EComCouponService } from "src/app/partials/core/services/e-com-coupon.s
   templateUrl: "./coupons.component.html",
   styleUrls: ["./coupons.component.scss"],
 })
-export class CouponsComponent implements OnInit {
+export class CouponsComponent implements OnInit,OnDestroy {
   taskDialog: boolean;
   showBoundaryLinks = true;
   addTask: boolean;
@@ -14,11 +15,14 @@ export class CouponsComponent implements OnInit {
   popupId: string;
   confirmDialog: boolean;
   couponDetail: boolean;
+
+    subscription: Subscription;
+
   couponList = [];
   constructor(private _couponService: EComCouponService) {}
 
   ngOnInit(): void {
-    this._couponService.couponModalToggle.subscribe((item) => {
+   this.subscription = this._couponService.couponModalToggle.subscribe((item) => {
       this.couponDetail = item;
     });
     this.couponList = this._couponService.getCoupons();
@@ -48,7 +52,11 @@ export class CouponsComponent implements OnInit {
   editCoupon(id: string) {
     this.couponDetail = true;
   }
-  updateCoupon() {}
+  updateCoupon() { }
+  
+    ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
   termsPara = [
     {
       id: "0",

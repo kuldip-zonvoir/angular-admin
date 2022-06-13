@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnDestroy, OnInit } from "@angular/core";
+import { Subscription } from "rxjs";
 import { SharemeService } from "src/app/partials/core/shareme.service";
 
 @Component({
@@ -6,25 +7,7 @@ import { SharemeService } from "src/app/partials/core/shareme.service";
   templateUrl: "./chatlist.component.html",
   styleUrls: ["./chatlist.component.scss"],
 })
-export class ChatlistComponent implements OnInit {
-  tabId = "0";
-  isChatVisible: boolean;
-  constructor(private _shareMe: SharemeService) {}
-
-  ngOnInit(): void {
-    this._shareMe.chatContent.subscribe((value) => {
-      this.isChatVisible = value;
-    });
-  }
-  tabToggle(tab) {
-    if (tab != this.tabId) {
-      this.tabId = tab;
-    }
-  }
-  viewChat() {
-    this.isChatVisible = !this.isChatVisible;
-    this._shareMe.updateChatView(this.isChatVisible);
-  }
+export class ChatlistComponent implements OnInit,OnDestroy {
   users = [
     {
       post: "Front-End-Developer",
@@ -219,4 +202,28 @@ export class ChatlistComponent implements OnInit {
       date: "today",
     },
   ];
+  tabId = "0";
+  isChatVisible: boolean;
+    subscription: Subscription;
+
+  constructor(private _shareMe: SharemeService) {}
+
+  ngOnInit(): void {
+    this._shareMe.chatContent.subscribe((value) => {
+      this.isChatVisible = value;
+    });
+  }
+  tabToggle(tab) {
+    if (tab != this.tabId) {
+      this.tabId = tab;
+    }
+  }
+  viewChat() {
+    this.isChatVisible = !this.isChatVisible;
+    this._shareMe.updateChatView(this.isChatVisible);
+  }
+
+    ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
 }

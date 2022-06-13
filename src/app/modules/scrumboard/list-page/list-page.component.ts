@@ -1,6 +1,7 @@
 import {
   Component,
   HostListener,
+  OnDestroy,
   OnInit,
   ViewEncapsulation,
 } from "@angular/core";
@@ -11,13 +12,14 @@ import {
 } from "@angular/cdk/drag-drop";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { SharemeService } from "src/app/partials/core/shareme.service";
+import { Subscription } from "rxjs";
 @Component({
   selector: "app-list-page",
   templateUrl: "./list-page.component.html",
   styleUrls: ["./list-page.component.scss"],
   encapsulation: ViewEncapsulation.None,
 })
-export class ListPageComponent implements OnInit {
+export class ListPageComponent implements OnInit,OnDestroy {
   displaytaskDetail: boolean;
   displayfilter: boolean;
   myForm: FormGroup;
@@ -40,6 +42,9 @@ export class ListPageComponent implements OnInit {
   isUser2 = true;
   isUser3 = false;
   isUser4 = false;
+    subscription1: Subscription;
+    subscription2: Subscription;
+
   defaultPic = "assets/media/images/cards/6.jpg";
   defaultUserPic = "assets/media/images/users/300_5.jpg";
   task_title = "Rental Project";
@@ -50,10 +55,10 @@ export class ListPageComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.shared_service.modalToggle.subscribe((value) => {
+    this.subscription1 = this.shared_service.modalToggle.subscribe((value) => {
       this.modalState = value;
     });
-    this.shared_service.cardDragBackground.subscribe((theme) => {
+    this.subscription2 = this.shared_service.cardDragBackground.subscribe((theme) => {
       this.activeTheme = theme;
     }),
       (this.myForm = this.fb.group({
@@ -150,6 +155,11 @@ export class ListPageComponent implements OnInit {
   taskDetailDialog(data) {
     this.tasKCardkDetail = data;
     console.log(this.tasKCardkDetail);
+  }
+
+    ngOnDestroy() {
+    this.subscription1.unsubscribe();
+    this.subscription2.unsubscribe();
   }
   holds: any[] = [
     {

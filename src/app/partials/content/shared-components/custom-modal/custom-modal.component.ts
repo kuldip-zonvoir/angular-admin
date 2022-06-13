@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { SharemeService } from 'src/app/partials/core/shareme.service';
 
 @Component({
@@ -6,7 +7,7 @@ import { SharemeService } from 'src/app/partials/core/shareme.service';
   templateUrl: './custom-modal.component.html',
   styleUrls: ['./custom-modal.component.scss']
 })
-export class CustomModalComponent implements OnInit {
+export class CustomModalComponent implements OnInit,OnDestroy {
 @Input() modalTitle:string;
 @Input() modalWidth:string;
 @Input() customSelector:string;
@@ -17,17 +18,20 @@ export class CustomModalComponent implements OnInit {
   modalState2:boolean;
   modalState1:string;
   popupWidth:any ={};
-  popupHeight:any ={};
+  popupHeight: any = {};
+    subscription: Subscription;
+    subscription1: Subscription;
+
   constructor(
     private shared_Service:SharemeService
   ) { }
 
   ngOnInit(): void {
-    this.shared_Service.modalToggle.subscribe((value) =>{
+   this.subscription = this.shared_Service.modalToggle.subscribe((value) =>{
       this.modalState = value;
     });
 
-    this.shared_Service.modalToggle1.subscribe((value) =>{
+   this.subscription1 =  this.shared_Service.modalToggle1.subscribe((value) =>{
       this.modalState1 = value;
       this.modalState2 = (this.customSelector == this.modalState1) && this.modalState;
       console.log('customSelector sdf', this.customSelector, value, this.modalState2);
@@ -38,6 +42,11 @@ export class CustomModalComponent implements OnInit {
      Object.assign(this.popupWidth, {width: this.modalLength});
      
     
+  }
+
+    ngOnDestroy() {
+    this.subscription.unsubscribe();
+    this.subscription1.unsubscribe();
   }
 
 }

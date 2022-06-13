@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from "@angular/core";
+import { Subscription } from "rxjs";
 
 import { SharemeService } from "src/app/partials/core/shareme.service";
 @Component({
@@ -6,7 +7,7 @@ import { SharemeService } from "src/app/partials/core/shareme.service";
   templateUrl: "./scrubboard-task.component.html",
   styleUrls: ["./scrubboard-task.component.scss"],
 })
-export class ScrubboardTaskComponent implements OnInit {
+export class ScrubboardTaskComponent implements OnInit,OnDestroy {
   @Input() tasks: any = {};
   @Output() taskInfoModal: EventEmitter<boolean> = new EventEmitter<boolean>();
   fileAttachment: boolean;
@@ -14,11 +15,12 @@ export class ScrubboardTaskComponent implements OnInit {
   cardDetails: boolean;
   modalState: boolean;
   activeTheme: string;
+  subscription: Subscription;
 
   constructor(private shared_service: SharemeService) {}
 
   ngOnInit(): void {
-    this.shared_service.modalToggle.subscribe((value) => {
+   this.subscription =  this.shared_service.modalToggle.subscribe((value) => {
       this.modalState = value;
     });
   }
@@ -28,5 +30,9 @@ export class ScrubboardTaskComponent implements OnInit {
   cardModal() {
     this.cardDetails = true;
     this.taskInfoModal.emit(this.cardDetails);
+  }
+
+    ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 }

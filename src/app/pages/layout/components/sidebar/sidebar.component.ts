@@ -1,5 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { Component, OnInit, Output, EventEmitter, OnDestroy } from "@angular/core";
 import { ActivatedRoute, NavigationEnd, Router } from "@angular/router";
+import { Subscription } from "rxjs";
 import { SharemeService } from "src/app/partials/core/shareme.service";
 
 @Component({
@@ -7,7 +8,7 @@ import { SharemeService } from "src/app/partials/core/shareme.service";
   templateUrl: "./sidebar.component.html",
   styleUrls: ["./sidebar.component.scss"],
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent implements OnInit,OnDestroy {
   visibleSidebar: boolean;
   mobileSidebarModal: boolean;
   isSubMenuArr = new Array(22);
@@ -44,6 +45,12 @@ export class SidebarComponent implements OnInit {
   brandkey = "";
   currentUrl: any;
   currentUrlString: any;
+    subscription1: Subscription;
+    subscription2: Subscription;
+    subscription3: Subscription;
+    subscription4: Subscription;
+    subscription5: Subscription;
+
   constructor(
     private shareData: SharemeService,
     private activatedRoute: ActivatedRoute,
@@ -74,23 +81,23 @@ export class SidebarComponent implements OnInit {
         (key) => this.urlArr[key] === this.currentUrl[1]
       )
     );
-    this.shareData.sidebarToggle.subscribe((data) => {
+    this.subscription1 = this.shareData.sidebarToggle.subscribe((data) => {
       this.isMobile = data;
     });
-    this.shareData.sidebarToggler.subscribe((stringData) => {
+    this.subscription2 = this.shareData.sidebarToggler.subscribe((stringData) => {
       this.sidebarkey = stringData;
 
       this.getSidebarClass(this.sidebarkey);
     });
-    this.shareData.ActiveTextToggle.subscribe((stringData) => {
+    this.subscription3 = this.shareData.ActiveTextToggle.subscribe((stringData) => {
       this.textkey = stringData;
       this.getActiveMenuText(this.textkey);
     });
-    this.shareData.brandToggle.subscribe((data) => {
+    this.subscription4 = this.shareData.brandToggle.subscribe((data) => {
       this.brandkey = data;
       this.getBrandClass(this.brandkey);
     });
-    this.shareData.mobileDialogSidebar.subscribe((data) => {
+   this.subscription5 = this.shareData.mobileDialogSidebar.subscribe((data) => {
       this.mobileSidebarModal = data;
     });
   }
@@ -132,5 +139,12 @@ export class SidebarComponent implements OnInit {
   sidebarToggle() {
     this.isMobile = !this.isMobile;
     this.setWidth.emit(this.isMobile);
+  }
+    ngOnDestroy() {
+    this.subscription1.unsubscribe();
+    this.subscription2.unsubscribe();
+    this.subscription3.unsubscribe();
+    this.subscription4.unsubscribe();
+    this.subscription5.unsubscribe();
   }
 }

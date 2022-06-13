@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 @import "../node_modules/material-icons/iconfont/material-icons.css";
-@import "../node_modules/angular-calendar/css/angular-calendar.css";
+// @import "../node_modules/angular-calendar/css/angular-calendar.css";
 @import "../node_modules/primeng/resources/primeng.min.css";
 @import "../node_modules/primeng/resources/themes/saga-blue/theme.css";
 @import "../node_modules/primeicons/primeicons.css";
@@ -141,52 +141,56 @@ html {
       @import "./assets/sass/themes/light-colors/light_default";
     }
 
-    // .greenny-light-color {
-    //   @extend .theme_spaces;
-    //   @import "./assets/sass/themes/light-colors/light_green";
-    // }
+    .greenny-light-color {
+      @extend .theme_spaces;
+      // @import "./assets/sass/themes/light-colors/light_green";
+    }
 
-    // .pink-light-color {
-    //   @extend .theme_spaces;
-    //   @import "./assets/sass/themes/light-colors/light_pink";
-    // }
-    // .deeporange-light-color {
-    //   @extend .theme_spaces;
-    //   @import "./assets/sass/themes/light-colors/light_deep_orange";
-    // }
+    .pink-light-color {
+      @extend .theme_spaces;
+      // @import "./assets/sass/themes/light-colors/light_pink";
+    }
+    .deeporange-light-color {
+      @extend .theme_spaces;
+      $primary: #ff5722 !default; // Bootstrap variable
 
-    // .purple-light-color {
-    //   @extend .theme_spaces;
-    //   @import "./assets/sass/themes/light-colors/light_purple";
-    // }
-    // .amber-light-color {
-    //   @extend .theme_spaces;
-    //   @import "./assets/sass/themes/light-colors/light_amber";
-    // }
+      // @import "./assets/sass/themes/light-colors/light_deep_orange";
+    }
+
+    .purple-light-color {
+      @extend .theme_spaces;
+      // @import "./assets/sass/themes/light-colors/light_purple";
+    }
+    .amber-light-color {
+      @extend .theme_spaces;
+      // @import "./assets/sass/themes/light-colors/light_amber";
+    }
 
     // dark thmes
     .default-dark-color {
       @import "./assets/sass/themes/dark-colors/dark_default";
     }
 
-    // .pink-dark-color {
-    //   @import "./assets/sass/themes/dark-colors/dark_pink";
-    // }
+    .pink-dark-color {
+      // @import "./assets/sass/themes/dark-colors/dark_pink";
+    }
 
-    // .greenny-dark-color {
-    //   @import "./assets/sass/themes/dark-colors/dark_green";
-    // }
+    .greenny-dark-color {
+      // @import "./assets/sass/themes/dark-colors/dark_green";
+    }
 
-    // .deeporange-dark-color {
-    //   @import "./assets/sass/themes/dark-colors/dark_deep_orange";
-    // }
+    .deeporange-dark-color {
+      $primary: #ff5722 !default; // Bootstrap variable
 
-    // .purple-dark-color {
-    //   @import "./assets/sass/themes/dark-colors/dark_purple";
-    // }
-    // .amber-dark-color {
-    //   @import "./assets/sass/themes/dark-colors/dark_amber";
-    // }
+      // @import "./assets/sass/themes/dark-colors/dark_deep_orange";
+    }
+
+    .purple-dark-color {
+      // @import "./assets/sass/themes/dark-colors/dark_purple";
+    }
+    .amber-dark-color {
+      // @import "./assets/sass/themes/dark-colors/dark_amber";
+    }
   }
 }
 /*Mobile*/

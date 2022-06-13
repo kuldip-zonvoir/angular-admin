@@ -86,8 +86,9 @@ $menufontWeight: 500;
       display: none;
     }
     .brand-header {
-      width: 60px !important;
-      background-color: $background-color;
+      width: 100% !important;
+      // background-color: $background-color;
+      color: inherit;
     }
   }
   .k_hover_sidebar {
@@ -130,10 +131,21 @@ $menufontWeight: 500;
         }
       }
     }
-    .brand-header {
-      width: 260px !important;
-      background-color: $background-color;
+    @each $name, $colors in $custom-colors {
+
+      .brand-#{$name} {
+    // background-image: $colors;
+    background-color: $colors;
+
+    .brand-heading {
+      color: $white !important;
     }
+    }
+  }
+    // .brand-header {
+    //   width: 260px !important;
+    //   background-color: $background-color;
+    // }
   }
 }
 .sidebar {

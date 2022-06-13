@@ -7,10 +7,9 @@ import { FileManagerComponent } from "./file-manager/file-manager.component";
 import { ProgressbarModule } from "ngx-bootstrap/progressbar";
 import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
 import { PaginationModule } from "ngx-bootstrap/pagination";
-import { CalendarModule, DateAdapter } from "angular-calendar";
+// import { CalendarModule, DateAdapter } from "angular-calendar";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
-import { adapterFactory } from "angular-calendar/date-adapters/date-fns";
-import { FlatpickrModule } from "angularx-flatpickr";
+// import { adapterFactory } from "angular-calendar/date-adapters/date-fns";
 import { DataTabelModule } from "src/app/partials/layouts/datatables/datatabel.module";
 import { TaskControlComponent } from "./task-control/task-control.component";
 import { NotesComponent } from "./notes/notes.component";
@@ -55,11 +54,10 @@ FullCalendarModule.registerPlugins([
     NgbModule,
     FullCalendarModule,
     SharedModule,
-    FlatpickrModule.forRoot(),
-    CalendarModule.forRoot({
-      provide: DateAdapter,
-      useFactory: adapterFactory,
-    }),
+    // CalendarModule.forRoot({
+    //   provide: DateAdapter,
+    //   useFactory: adapterFactory,
+    // }),
     ApplicationRoutingModule,
   ],
 })
