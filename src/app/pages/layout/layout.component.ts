@@ -2,7 +2,6 @@ import { Component, OnDestroy, OnInit } from "@angular/core";
 import { NavigationEnd, Router } from "@angular/router";
 import { Observable, Subscription } from "rxjs";
 import { SharemeService } from "src/app/partials/core/shareme.service";
-import { ThemeService } from "src/app/partials/core/theme.service";
 
 @Component({
   selector: "app-layout",
@@ -58,6 +57,7 @@ export class LayoutComponent implements OnInit,OnDestroy {
   visibleSidebar2: boolean;
   isDarkTheme: Observable<boolean>;
   customClass = "default-light-color";
+  // customClass :string;
   currentTheme: string;
   themeIndex: number;
   mobileSidebarModal: boolean;
@@ -68,11 +68,10 @@ export class LayoutComponent implements OnInit,OnDestroy {
   constructor(
     private shareData: SharemeService,
     private router: Router,
-    private _activedThemeService: ThemeService
   ) {
-    localStorage.setItem("activetheme", this.customClass);
-    this.currentTheme = localStorage.getItem("activetheme");
-
+    // this.currentTheme = localStorage.getItem("activetheme");
+    this.currentTheme = this.customClass;
+    // this.customClass = this.currentTheme;
     this.router.events.subscribe((ev) => {
       if (ev instanceof NavigationEnd) {
         this.currentUrl = ev.url.split("/");
@@ -117,12 +116,7 @@ export class LayoutComponent implements OnInit,OnDestroy {
       this.customClass = this.darkThemes[this.themeIndex];
       localStorage.setItem("activetheme", this.customClass);
       this.currentTheme = localStorage.getItem("activetheme");
-      console.log(
-        "theme MOde " +
-          this.themeMode +
-          "localstorage  Activated Dark theme " +
-          this.currentTheme
-      );
+     
     }
   }
 
@@ -156,12 +150,15 @@ export class LayoutComponent implements OnInit,OnDestroy {
     //   this.menuBar = true;
     // }
   }
+
+
   closeSidebarOutside() {
     if (!this.mobileSidebarModal) {
       this.closeSidebarModal();
     }
   }
 
+  
   changeActiveText(value: string) {
     this.shareData.updateActiveText(value);
     if (this.tId != value) {

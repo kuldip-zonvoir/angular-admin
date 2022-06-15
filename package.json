@@ -36,6 +36,7 @@
     "@ng-select/ng-select": "^6.1.0",
     "@swimlane/ngx-charts": "^18.0.1",
     "apexcharts": "3.33.0",
+    "autoprefixer": "10.4.5",
     "bootstrap": "^4.6.1",
     "chart.js": "^2.9.4",
     "cryptocoins-icons": "^2.9.0",

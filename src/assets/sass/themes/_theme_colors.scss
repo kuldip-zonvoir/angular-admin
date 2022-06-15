@@ -7,14 +7,14 @@ $customize-theme-colors: (
   //puprle
   "3": #4caf50,
   //green
-  "4": #9c27b0,
-  //depp puprle
-  "5": #fd4da5,
+  "4": #fd4da5,
   //pink
-  "6": #ff5722,
+  "5": #ff5722,
   //depp orange
-) !default; // Custom variable
-@each $number, $color in $customize-theme-colors {
+  "6": #9c27b0,
+  //depp puprle
+  ) !default; // Custom variable
+  @each $number, $color in $customize-theme-colors {
   .theme-#{$number} {
     background-color: $color;
   }
