@@ -5,17 +5,14 @@ import { LayoutRoutingModule } from "./layout-routing.module";
 import { SidebarComponent } from "./layout/components/sidebar/sidebar.component";
 import { HeaderComponent } from "./layout/components/header/header.component";
 import { FooterComponent } from "./layout/components/footer/footer.component";
-import { SearchBarComponent } from "./layout/components/basic/search-bar/search-bar.component";
 import { SharedModule } from "../partials/content/shared-components/shared.module";
 import { CollapseModule } from "ngx-bootstrap/collapse";
 import { LayoutComponent } from "./layout/layout.component";
 import { BsDropdownModule } from "ngx-bootstrap/dropdown";
 import { SidebarModule } from "primeng/sidebar";
-import { FullSearchbarComponent } from "./layout/components/basic/full-searchbar/full-searchbar.component";
 import { BrandComponent } from "./layout/components/brand/brand.component";
 import { WigitModule } from "../partials/layouts/wigit/wigit.module";
 import { HoverClassDirective } from "../partials/core/directives/hover.directive";
-// import { BreadcrumbModule } from "angular-crumbs";
 import { BreadcrumbModule } from "xng-breadcrumb";
 
 @NgModule({
@@ -23,9 +20,7 @@ import { BreadcrumbModule } from "xng-breadcrumb";
     SidebarComponent,
     HeaderComponent,
     FooterComponent,
-    SearchBarComponent,
     LayoutComponent,
-    FullSearchbarComponent,
     HoverClassDirective,
     BrandComponent,
   ],
@@ -37,7 +32,6 @@ import { BreadcrumbModule } from "xng-breadcrumb";
     SidebarModule,
     WigitModule,
     BreadcrumbModule,
-    // BreadcrumbModule,
     LayoutRoutingModule,
   ],
 })

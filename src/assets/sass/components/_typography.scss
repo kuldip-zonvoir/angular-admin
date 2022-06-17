@@ -1,25 +1,25 @@
 // Headings
-.h1 {
+h1 {
   @include font-size($h1-font-size, true);
 }
 
-.h2 {
+h2 {
   @include font-size($h2-font-size, true);
 }
 
-.h3 {
+h3 {
   @include font-size($h3-font-size, true);
 }
 
-.h4 {
+h4 {
   @include font-size($h4-font-size, true);
 }
 
-.h5 {
+h5 {
   @include font-size($h5-font-size, true);
 }
 
-.h6 {
+h6 {
   @include font-size($h6-font-size, true);
 }
 //
@@ -57,7 +57,7 @@
 }
 
 .fw-600 {
-  font-weight: 600;
+  font-weight: 500; //change here
 }
 
 .fw-500 {

@@ -22,21 +22,15 @@ $dark-25: $gray-400 !default;
 // Text muted
 $text-muted: $gray-500 !default;
 //custom-colors
-// $color1: linear-gradient(to top, #39a6ff 0%, #3a19f0d9 100%) !default;
-// $color2: linear-gradient(to top, #ca4932, #e72727) !default;
-// $color3: linear-gradient(to top, #7209b7 0%, #4a017b 100%) !default;
-// $color4: linear-gradient(to top, #008080, #068269) !default; //#7209b7
-// $color5: linear-gradient(to top, #4300ff, #a60ccc) !default;
-// $color6: linear-gradient(to top, #f50909, #f13344) !default;
 
-$color1: #00bdaa;  //green;
+$color1: #00bdaa; //green;
 $color2: #ef698b; // red
 $color3: #0c0c3c; //indigo
-$color4: #1ea8e7;; 
+$color4: #1ea8e7;
 $color5: #484c7f; //purple
 $color6: #8b44e0;
 $color7: #e9edf2 !default;
-$colorActive1: #006E7F !default;
+$colorActive1: #006e7f !default;
 $colorActiveLight1: #98edfac5 !default;
 $colorActive2: #f72585 !default;
 $colorActiveLight2: #f3bcd5 !default;
@@ -46,9 +40,8 @@ $colorActive4: #ff392b !default;
 $colorActiveLight4: #fab8ab !default;
 $colorActive5: #f87321 !default;
 $colorActiveLight5: #f8d4a8 !default;
-// $colorActive6: #255f85 !default;
 $colorActive6: #93075c !default;
-$colorActiveLight6: #c98196!default;
+$colorActiveLight6: #c98196 !default;
 $colorActive7: #e9edf2 !default;
 $colorActiveLight7: #e9edf2 !default;
 $active-colors: (
@@ -102,9 +95,7 @@ $dark-light: $gray-500 !default; // Custom variable
 $dark-inverse: $white !default; // Custom variable
 
 // Primary colors
-// $primary: #6971ff !default; // Bootstrap variable
-// $primary-light: #dadbff !default; // Custom variable
-// $primary-hover: #5e65f5 !default; // Custom variable
+
 $primary-inverse: $white !default; // Custom variable
 
 // Secondary colors
@@ -307,8 +298,8 @@ $hover-bg: $gray-100 !default;
 $active-bg: darken($gray-100, 1%) !default;
 // buttons varaibles
 $btn-disabled-opacity: 0.6 !default;
-$btn-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
-  border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out !default;
+$btn-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+  box-shadow 0.3s ease-in-out !default;
 $btn-box-shadow: none !default;
 $btn-focus-box-shadow: none !default;
 $btn-active-box-shadow: none !default;
@@ -324,16 +315,16 @@ $link-hover-decoration: underline !default;
 
 // Forms
 $form-group-margin-bottom: 1.75rem !default;
-$form-label-font-size: 13px !default;
+$form-label-font-size: $paraSize !default;
 $form-label-font-weight: 500 !default;
-$form-text-font-size: 13px !default;
+$form-text-font-size: $paraSize !default;
 $form-text-font-weight: 400 !default;
 $form-validation-input-shadow: false;
 $input-readonly-bg: $white !default;
 
 $icon-font-family: "Material Icons Outlined" !default;
 
-$font-size-base: 0.9rem !default; // assume `14px`
+$font-size-base: 1rem !default; // assume `14px`
 $font-size-lg: $font-size-base * 1.08 !default;
 $font-size-sm: $font-size-base * 0.925 !default;
 $font-size-xs: $font-size-base * 0.8 !default;
@@ -343,7 +334,7 @@ $h2-font-size: $font-size-base * 1.5 !default;
 $h3-font-size: $font-size-base * 1.35 !default;
 $h4-font-size: $font-size-base * 1.25 !default;
 $h5-font-size: $font-size-base * 1 !default;
-$h6-font-size: $font-size-base * 0.937 !default;
+$h6-font-size: $font-size-base * 0.9 !default;
 $headings-font-family: null !default;
 $headings-font-weight: 500 !default;
 $headings-line-height: 1.2 !default;
@@ -391,7 +382,7 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px // custom breakpoint,,,,,,,,,,,,,,,,
+  xxl: 1400px // custom breakpoint,,,,,,,,,,,,,,,,,,,,
 ) !default;
 @include responsive-above(lg) {
   $font-size-lg: $font-size-base * 1.08 !default;

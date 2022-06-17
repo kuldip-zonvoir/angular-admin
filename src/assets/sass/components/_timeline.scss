@@ -72,7 +72,7 @@
   }
   .timeline-panel {
     border-radius: 0.5rem;
-    padding: 15px 20px;
+    padding: 5px 8px;
     position: relative;
     display: block;
     margin-left: 40px;
@@ -92,21 +92,23 @@
       transform: rotate(45deg);
       top: 15px;
     }
+    span {
+      font-size: 13px;
+    }
+    p {
+      font-size: 12px !important;
+    }
   }
 }
 .timeline-scroll {
-  height: 60vh;
+  height: 79vh;
   margin-right: 5px;
   cursor: pointer;
   overflow-y: auto;
   overflow-x: hidden;
-  @include scrollbar($width: 0.5rem, $border-radius: 1rem);
+  @include scrollbar($width: 0.3rem, $border-radius: 1rem);
   &:hover {
     $background-light: $scrollbarColor;
-    @include scrollbar(
-      $width: 0.5rem,
-      $border-radius: 1rem,
-      $background-color: $background-light
-    );
+    @include scrollbar($width: 0.3rem, $border-radius: 1rem, $background-color: $background-light);
   }
 }

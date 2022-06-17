@@ -13,13 +13,7 @@
       align-items: center;
       &.next_wzrd {
         &::before {
-          @include pseudo-icon(
-            "\e5cc",
-            $left: -25px,
-            $top: 6px,
-            $color: #889cb3,
-            $icon-size: 20px
-          );
+          @include pseudo-icon("\e5cc", $left: -25px, $top: 6px, $color: #889cb3, $icon-size: 20px);
         }
       }
     }
@@ -39,47 +33,27 @@
 .active_wzrd_step {
   .wzrd_step_name {
     margin-left: 8px;
-    font-size: 13px;
+    font-size: $paraSize;
     font-weight: 500;
     color: $primary;
   }
   .wzrd_icon {
-    @include rounded-squrare(
-      $white,
-      $primary,
-      35px,
-      5px,
-      13px,
-      $fontWeight: 600
-    );
+    @include rounded-squrare($white, $primary, 35px, 5px, 13px, $fontWeight: 600);
   }
   &.next_wzrd {
     &::before {
-      @include pseudo-icon(
-        "\e5cc",
-        $left: -25px,
-        $top: 6px,
-        $color: $primary !important,
-        $icon-size: 20px
-      );
+      @include pseudo-icon("\e5cc", $left: -25px, $top: 6px, $color: $primary !important, $icon-size: 20px);
     }
   }
 }
 .wzrd_step_name {
   margin-left: 8px;
-  font-size: 13px;
+  font-size: $paraSize;
   font-weight: 500;
   color: #889cb3;
 }
 .wzrd_icon {
-  @include rounded-squrare(
-    $primary,
-    $primary-light,
-    35px,
-    5px,
-    13px,
-    $fontWeight: 600
-  );
+  @include rounded-squrare($primary, $primary-light, 35px, 5px, 13px, $fontWeight: 600);
 }
 .vertical_wzrd_wrap {
   display: flex;
@@ -102,32 +76,18 @@
             display: inline-flex;
             align-items: center;
             .wzrd_vr_icon {
-              @include rounded-squrare(
-                $primary,
-                $primary-light,
-                35px,
-                5px,
-                13px,
-                $fontWeight: 600
-              );
+              @include rounded-squrare($primary, $primary-light, 35px, 5px, 13px, $fontWeight: 600);
             }
             &.active_vr_wzrd_step {
               .wzrd_vr_step_name {
                 margin-left: 8px;
-                font-size: 13px;
+                font-size: $paraSize;
                 font-weight: 500;
                 color: $primary;
               }
               .wzrd_vr_step_num {
                 .wzrd_vr_icon {
-                  @include rounded-squrare(
-                    $white,
-                    $primary,
-                    35px,
-                    5px,
-                    13px,
-                    $fontWeight: 600
-                  );
+                  @include rounded-squrare($white, $primary, 35px, 5px, 13px, $fontWeight: 600);
                 }
               }
             }
@@ -142,7 +102,7 @@
       .active_vr_wzrd_step {
         .wzrd_vr_step_name {
           margin-left: 8px;
-          font-size: 13px;
+          font-size: $paraSize;
           font-weight: 500;
           color: $primary;
         }
@@ -163,13 +123,7 @@
             display: inline-flex;
             align-items: center;
             .wzrd_vr_icon {
-              @include rounded-squrare(
-                $primary,
-                $primary-light,
-                35px,
-                5px,
-                16px
-              );
+              @include rounded-squrare($primary, $primary-light, 35px, 5px, 16px);
             }
           }
           &:last-child {
@@ -186,7 +140,7 @@
 
   .wzrd_vr_step_name {
     margin-left: 8px;
-    font-size: 13px;
+    font-size: $paraSize;
     font-weight: 500;
     color: #889cb3;
   }

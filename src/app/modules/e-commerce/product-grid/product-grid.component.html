@@ -1,7 +1,8 @@
 <div class="card custom-card">
-  <div class="product-wrapper">
+  <div class="product-wrapper" >
     <div class="product-image-wrapper">
       <img
+      (click)="productDetail(product.id)"
         [src]="product.product_image"
         class="img-responsive product-image-1"
         alt=""

@@ -76,7 +76,7 @@
       display: flex;
       align-items: center;
       .hme_rute {
-        font-size: 13px;
+        font-size: $paraSize;
         font-weight: 500;
       }
       .sls {
@@ -91,7 +91,7 @@
         background-color: transparent;
         margin: 0;
         li {
-          font-size: 13px;
+          font-size: $paraSize;
           font-weight: 500;
           color: $heading-color;
         }
@@ -248,7 +248,7 @@
   .th_title {
     cursor: pointer;
     text-transform: capitalize;
-    font-size: 13px;
+    font-size: $tdFontsize;
     font-weight: 500;
     color: inherit !important;
   }

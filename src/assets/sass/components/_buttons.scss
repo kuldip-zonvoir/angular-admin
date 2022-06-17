@@ -26,10 +26,10 @@
 }
 .btn-custom-light {
   text-decoration: none;
-  padding: 6px 6px;
+  padding: 6px 10px;
   border-radius: 4px !important;
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 500;
   white-space: nowrap;
   cursor: pointer;
   height: auto;
@@ -43,10 +43,10 @@
 }
 .custom_white_btn {
   text-decoration: none;
-  padding: 6px 6px;
+  padding: 6px 10px;
   border-radius: 4px;
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 500;
   white-space: nowrap;
   cursor: pointer;
   height: auto;
@@ -109,29 +109,15 @@
       }
 
       .cube-outline-#{$name}-#{$sizeName} {
-        @include circle(
-          $size,
-          $color: $color,
-          $custom-border: 1px solid $color
-        );
+        @include circle($size, $color: $color, $custom-border: 1px solid $color);
       }
 
       .circle-#{$name}-#{$sizeName} {
-        @include circle(
-          $size,
-          $background-color: $color,
-          $color: $white,
-          $circle: true
-        );
+        @include circle($size, $background-color: $color, $color: $white, $circle: true);
       }
 
       .circle-outline-#{$name}-#{$sizeName} {
-        @include circle(
-          $size,
-          $color: $color,
-          $custom-border: 1px solid $color,
-          $circle: true
-        );
+        @include circle($size, $color: $color, $custom-border: 1px solid $color, $circle: true);
       }
     }
   }
@@ -157,10 +143,10 @@
 }
 .btn-group {
   text-decoration: none;
-  padding: 6px 6px;
+  padding: 6px 10px;
   border-radius: 4px !important;
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 500;
   white-space: nowrap;
   cursor: pointer;
   height: auto;
@@ -170,10 +156,10 @@
   }
   button {
     text-decoration: none;
-    padding: 6px 6px;
+    padding: 6px 10px;
     border-radius: 4px !important;
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 500;
     white-space: nowrap;
     cursor: pointer;
     height: auto;
@@ -185,10 +171,10 @@
 }
 .btn {
   text-decoration: none;
-  padding: 6px 6px;
+  padding: 6px 10px;
   border-radius: 4px;
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 500;
   white-space: nowrap;
   cursor: pointer;
   height: auto;

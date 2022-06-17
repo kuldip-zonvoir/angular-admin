@@ -1,10 +1,9 @@
-@import "invoice/invoice", "chat/private-chat", "help-center/help_center_header",
-  "layout/header", "inventory", "scrumbboard", "file-maneger",
-  "widgit/widgit-1.scss", "print", "map", "chart", "notes",
-  "E-commerce/products", "Email/mail-message", "profile-account/profile",
-  "layout/theme_sidebar", "layout/brand", "layout/header", "layout/sidebar",
-  "layout/footer", "layout/main_layout";
+@import "chat/private-chat", "help-center/help_center_header", "layout/header", "inventory", "scrumbboard",
+  "file-maneger", "widgit/widgit-1.scss", "print", "map", "chart", "notes", "E-commerce/products", "Email/mail-message",
+  "profile-account/profile", "layout/theme_sidebar", "layout/brand", "layout/header", "layout/sidebar", "layout/footer",
+  "layout/main_layout";
 @import "price_plan";
 @import "login/login";
 @import "login/error";
 @import "dashboards";
+@import "modified";

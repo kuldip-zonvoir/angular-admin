@@ -209,7 +209,7 @@ export class ChatlistComponent implements OnInit,OnDestroy {
   constructor(private _shareMe: SharemeService) {}
 
   ngOnInit(): void {
-    this._shareMe.chatContent.subscribe((value) => {
+    this.subscription =this._shareMe.chatContent.subscribe((value) => {
       this.isChatVisible = value;
     });
   }

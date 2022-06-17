@@ -4,7 +4,6 @@
   padding: 0 25px;
   z-index: 99;
   width: 100%;
-  // background-color: $background-color;
   height: 60px;
   display: flex;
   border-bottom: 1px solid $border-color2;
@@ -19,23 +18,20 @@
         font-size: 24px;
       }
       .brand_heading_overlay {
-        // color: $text-color;
-        // color:$white;
         font-size: 24px;
         display: none;
       }
     }
   }
   @each $name, $colors in $custom-colors {
-
-  &.brand-#{$name}{
-    .brand_heading_overlay {
-        color:$white !important;
+    &.brand-#{$name} {
+      .brand_heading_overlay {
+        color: $white !important;
         font-size: 24px;
         display: none;
       }
+    }
   }
-}
 }
 
 .brand-header-mobile {

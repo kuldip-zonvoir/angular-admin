@@ -1,55 +1,18 @@
-//brudcumb
-.breadcrum-warpper {
-  display: flex;
-  align-items: center;
-  margin: 8px 0;
-  justify-content: space-between;
-  white-space: nowrap;
-}
-.custom-bread-crumb {
-  background-color: $background-color !important;
-  margin-bottom: 0;
-
-  a {
-    text-decoration: none !important;
-    color: $text-color !important;
-    font-size: 1rem;
-
-    &:hover {
-      text-decoration: none !important;
-      color: $text-color !important;
-    }
-  }
-}
-
-.customize-bread-crumb {
-  .custom-bread-crumb {
-    background-color: transparent !important;
-    padding: 0;
-    margin-bottom: 0;
-
-    a {
-      font-size: 1rem;
-      text-decoration: none !important;
-      color: $primary !important;
-
-      &:hover {
-        text-decoration: none !important;
-        color: $primary !important;
-      }
-    }
-  }
-}
-
 // breadcrum updated
-.breadcrum_upgrade{
-  .xng-breadcrumb-item{
-    label{
+.breadcrum_upgrade {
+  font-size: 13px;
+  .xng-breadcrumb-item {
+    .xng-breadcrumb-separator {
+      font-size: 13px !important;
+    }
+    label {
       margin-bottom: 0;
       color: $muteColor;
+      // font-size: 13px;
+      text-transform: capitalize;
     }
   }
-  ol{
+  ol {
     margin-bottom: 0;
   }
 }

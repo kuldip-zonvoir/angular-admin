@@ -28,6 +28,16 @@
     padding-left: 25px !important;
   }
 }
+.line_chart_new {
+  height: 382px;
+}
+.candle_chart_new {
+  div {
+    &:first-child {
+      min-height: 355px !important;
+    }
+  }
+}
 // for mobile portrait mode
 @include responsive-below(md) {
   .chartjs-container {

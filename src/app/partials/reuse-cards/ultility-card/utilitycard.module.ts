@@ -4,7 +4,6 @@ import { UtilCardBorderTop1Component } from "./util-card-border-top1/util-card-b
 import { UtilCardBorderTop2Component } from "./util-card-border-top2/util-card-border-top2.component";
 import { UtilCardBorderTop3Component } from "./util-card-border-top3/util-card-border-top3.component";
 import { UtilCardBorderTop4Component } from "./util-card-border-top4/util-card-border-top4.component";
-import { UtilCardBorderLeft1Component } from "./util-card-border-left1/util-card-border-left1.component";
 import { UtilCardBorderLeft2Component } from "./util-card-border-left2/util-card-border-left2.component";
 import { UtilCardBorderLeft3Component } from "./util-card-border-left3/util-card-border-left3.component";
 import { UtilCardBorderLeft4Component } from "./util-card-border-left4/util-card-border-left4.component";
@@ -29,7 +28,6 @@ import { CardSvgComponent } from "./card-svg/card-svg.component";
 
     UtilCardBorderTop4Component,
 
-    UtilCardBorderLeft1Component,
 
     UtilCardBorderLeft2Component,
 
@@ -64,8 +62,6 @@ import { CardSvgComponent } from "./card-svg/card-svg.component";
     UtilCardBorderTop3Component,
 
     UtilCardBorderTop4Component,
-
-    UtilCardBorderLeft1Component,
 
     UtilCardBorderLeft2Component,
 

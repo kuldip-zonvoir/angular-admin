@@ -14,6 +14,8 @@ $logo-sizes: (
 @each $name, $size in $logo-sizes {
   .outline-#{$name} {
     @include circle($size, $custom-border: 1px solid $gray-500);
+    border: 1px solid $border-color;
+    border-radius: 4px;
   }
 }
 @each $name, $size in $logo-sizes {

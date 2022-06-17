@@ -26,7 +26,6 @@ import { TabelFilterComponentComponent } from "../../layouts/datatables/tabel-fi
 import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
 import { FileDragNDropComponent } from "./file-drag-n-drop/file-drag-n-drop.component";
 import { TimelineModule } from "primeng/timeline";
-import { ClickOutsideDirective } from "../../core/directives/click-outside.directive";
 @NgModule({
   declarations: [
     BlankPageComponent,
@@ -42,7 +41,6 @@ import { ClickOutsideDirective } from "../../core/directives/click-outside.direc
     CustomSelectDropdownComponent,
     TabelFilterComponentComponent,
     FileDragNDropComponent,
-    ClickOutsideDirective,
   ],
   imports: [
     CommonModule,
@@ -86,7 +84,6 @@ import { ClickOutsideDirective } from "../../core/directives/click-outside.direc
     TabelFilterComponentComponent,
     CustomSelectDropdownComponent,
     FileDragNDropComponent,
-    ClickOutsideDirective,
   ],
 })
 export class SharedModule {}

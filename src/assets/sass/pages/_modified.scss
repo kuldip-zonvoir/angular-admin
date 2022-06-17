@@ -1,0 +1,49 @@
+// latest post style
+.s_media_post {
+    .s_post_content {
+        font-size: 14px;
+    }
+    .post_like {
+        color: $primary;
+    }
+    .post_comment {
+        color: $primary;
+    }
+    .post_action {
+        font-size: $paraSize;
+    }
+}
+.cart_product_desc {
+    font-size: 13px;
+}
+.cart_product_new {
+    .btn {
+        font-size: 13px;
+    }
+}
+
+.created_At_date {
+    font-size: 13px;
+}
+.note_share_new {
+    font-size: 13px;
+}
+.node_heading {
+    display: inline-block;
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+.weather_report_card {
+    td {
+        padding: 6px 6px;
+    }
+    .weather_param {
+        font-size: 14px;
+    }
+}
+.browser_image {
+    width: 30px;
+    height: 30px;
+}

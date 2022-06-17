@@ -16,7 +16,6 @@ export class AppComponent {
     } else {
       localStorage.setItem("activetheme", "default-light-color");
     }
-    console.log("on constructor", this.customClass);
   }
 
   ngOnInit(): void {

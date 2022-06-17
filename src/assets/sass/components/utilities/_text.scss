@@ -61,7 +61,7 @@
     background-color: $colors;
     .nav_link {
       // color: #d2d8e4 !important;
-      color: #ffffff!important;
+      color: #ffffff !important;
     }
     .nav_title {
       .heading {
@@ -233,10 +233,10 @@
   color: $muteColor !important;
 }
 p {
-  font-size: 13px;
+  font-size: $paraSize;
 }
 .span_text {
-  font-size: 13px;
+  font-size: $paraSize;
 }
 .cursor-pointer {
   cursor: pointer;

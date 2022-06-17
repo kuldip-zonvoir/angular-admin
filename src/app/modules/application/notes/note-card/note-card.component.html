@@ -2,7 +2,7 @@
   class="card custom-card raduis-none m-b-16"
   [ngClass]="getClass(customNote.note_share_count)"
 >
-  <div class="zp-14">
+  <div class="zp-10">
     <div class="d-flex align-items-center p-b-12">
       <div class="d-flex align-items-center">
         <img
@@ -20,8 +20,8 @@
       </div>
     </div>
     <div class="p-b-12">
-      <h5 class="">{{ customNote.note_title }}</h5>
-      <p class="text-muted">{{ customNote.note_description }}</p>
+      <h6 class="node_heading">{{ customNote.note_title }}</h6>
+      <p class="text-muted m-b-0">{{ customNote.note_description }}</p>
     </div>
     <div class="d-flex align-items-center">
       <div class="">
@@ -39,13 +39,13 @@
             [ngClass]="getIconColor(customNote.note_share_count)"
             aria-hidden="true"
           ></i
-          ><span class="m-r-4">{{ customNote.note_share_count }}</span> Share</a
+          ><span class="m-r-4 note_share_new">{{ customNote.note_share_count }}</span> Share</a
         >
       </div>
       <div class="m-l-auto p-l-10">
-        <p class="d-flex align-items-center m-b-0">
+        <p class="d-flex align-items-center m-b-0 created_At_date">
           <i
-            class="ti ti-calendar icon-20 m-r-8 cursor-pointer"
+            class="ti ti-calendar icon-16 m-r-8 cursor-pointer"
             [ngClass]="getIconColor(customNote.note_share_count)"
             aria-hidden="true"
           ></i

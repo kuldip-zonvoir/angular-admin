@@ -208,11 +208,7 @@
   @include scrollbar($height: 4px, $border-radius: 2px);
   &:hover {
     $background-light: #eaedf0;
-    @include scrollbar(
-      $height: 4px,
-      $border-radius: 2px,
-      $background-color: $background-light
-    );
+    @include scrollbar($height: 4px, $border-radius: 2px, $background-color: $background-light);
   }
 }
 
@@ -226,14 +222,33 @@
 
   @include scrollbar($width: 0.25rem, $border-radius: 0.5rem);
   &:hover {
-    @include scrollbar(
-      $width: 0.25rem,
-      $border-radius: 0.5rem,
-      $background-color: $scrollbarColor
-    );
+    @include scrollbar($width: 0.25rem, $border-radius: 0.5rem, $background-color: $scrollbarColor);
   }
 }
 
+// product specification
+.border-bottom-white {
+  border-bottom: 2px solid $border-color;
+}
+.special-th {
+  background-color: #35343422;
+  color: #475c66;
+  white-space: nowrap;
+  padding: 10px 8px;
+  width: 25%;
+}
+.special-td {
+  white-space: nowrap;
+  padding: 10px 8px;
+  width: 25%;
+}
+
+.table-full-heading {
+  background-color: $primary;
+  color: $white;
+  padding: 10px 8px;
+  font-weight: 500;
+}
 @include responsive-below(md) {
   .form-scroll {
     display: block;

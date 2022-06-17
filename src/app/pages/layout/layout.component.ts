@@ -120,6 +120,7 @@ export class LayoutComponent implements OnInit,OnDestroy {
     }
   }
 
+  // to get the active theme
   getCssClass(value: string) {
     if (value === "light") {
       let themeIdx = this.themeId ? this.themeId : "0";
@@ -142,23 +143,17 @@ export class LayoutComponent implements OnInit,OnDestroy {
     this.menuBar = false;
     this.shareData.sidebarMobileMenu(this.menuBar);
     this.menuBar = true;
-    // console.log(!this.mobileSidebarModal, this.menuBar);
-    // if (!this.mobileSidebarModal && this.menuBar) {
-    //   console.log("welcome outside clicked");
-    //   this.menuBar = false;
-    //   this.shareData.sidebarMobileMenu(this.menuBar);
-    //   this.menuBar = true;
-    // }
+
   }
 
-
+// close side bar on click out side
   closeSidebarOutside() {
     if (!this.mobileSidebarModal) {
       this.closeSidebarModal();
     }
   }
 
-  
+  // change  Active color in sidebar
   changeActiveText(value: string) {
     this.shareData.updateActiveText(value);
     if (this.tId != value) {
@@ -204,16 +199,22 @@ export class LayoutComponent implements OnInit,OnDestroy {
     }
   }
 
-  // ty
+  // change theme light  mode to dark mode
   toggleThemeMode() {
     this.isDark = !this.isDark;
   }
+
+
   changeSidebarMode() {
     this.isDarkSidebar = !this.isDarkSidebar;
   }
+
+
   changeWidth(event) {
     this.isResponsive = event;
   }
+
+  // destroy all the subscription object
     ngOnDestroy() {
     this.subscription1.unsubscribe();
     this.subscription2.unsubscribe();

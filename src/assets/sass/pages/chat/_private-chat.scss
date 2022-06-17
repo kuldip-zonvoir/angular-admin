@@ -100,7 +100,7 @@
   list-style: none;
 }
 .chat-user-name {
-  font-size: 13px;
+  font-size: $paraSize;
   display: block;
   padding-bottom: 8px;
   &.answer-username {
@@ -140,7 +140,7 @@ hr {
 }
 .owner-message-content {
   border-radius: 6px 0 6px 6px;
-  background-color: $chatboxReciever;
+  background-color: $primary;
   position: relative;
   p {
     color: $white;
@@ -149,8 +149,8 @@ hr {
     content: "";
     position: absolute;
     border: 5px solid transparent;
-    border-top-color: $chatboxReciever;
-    border-left-color: $chatboxReciever;
+    border-top-color: $primary;
+    border-left-color: $primary;
     left: auto;
     right: -10px;
     top: 0;
@@ -191,11 +191,7 @@ hr {
   @include scrollbar($width: 4px, $border-radius: 5px);
   &:hover {
     $background-light: $scrollbarColor;
-    @include scrollbar(
-      $width: 4px,
-      $border-radius: 5px,
-      $background-color: $background-light
-    );
+    @include scrollbar($width: 4px, $border-radius: 5px, $background-color: $background-light);
   }
 }
 .chat-scroll {
@@ -206,11 +202,7 @@ hr {
   @include scrollbar($width: 4px, $border-radius: 5px);
   &:hover {
     $background-light: $scrollbarColor;
-    @include scrollbar(
-      $width: 4px,
-      $border-radius: 5px,
-      $background-color: $background-light
-    );
+    @include scrollbar($width: 4px, $border-radius: 5px, $background-color: $background-light);
   }
 }
 
@@ -222,11 +214,7 @@ hr {
   @include scrollbar($width: 4px, $border-radius: 5px);
   &:hover {
     $background-light: $scrollbarColor;
-    @include scrollbar(
-      $width: 4px,
-      $border-radius: 5px,
-      $background-color: $background-light
-    );
+    @include scrollbar($width: 4px, $border-radius: 5px, $background-color: $background-light);
   }
 }
 
@@ -361,11 +349,7 @@ hr {
     @include scrollbar($width: 4px, $border-radius: 5px);
     &:hover {
       $background-light: $scrollbarColor;
-      @include scrollbar(
-        $width: 4px,
-        $border-radius: 5px,
-        $background-color: $background-light
-      );
+      @include scrollbar($width: 4px, $border-radius: 5px, $background-color: $background-light);
     }
   }
   .chat-list-scroll {
@@ -377,11 +361,7 @@ hr {
     @include scrollbar($width: 4px, $border-radius: 5px);
     &:hover {
       $background-light: $scrollbarColor;
-      @include scrollbar(
-        $width: 4px,
-        $border-radius: 5px,
-        $background-color: $background-light
-      );
+      @include scrollbar($width: 4px, $border-radius: 5px, $background-color: $background-light);
     }
   }
 }
@@ -448,11 +428,7 @@ hr {
     @include scrollbar($width: 4px, $border-radius: 5px);
     &:hover {
       $background-light: $scrollbarColor;
-      @include scrollbar(
-        $width: 4px,
-        $border-radius: 5px,
-        $background-color: $background-light
-      );
+      @include scrollbar($width: 4px, $border-radius: 5px, $background-color: $background-light);
     }
   }
   .chat-list-scroll {
@@ -463,11 +439,7 @@ hr {
     @include scrollbar($width: 4px, $border-radius: 5px);
     &:hover {
       $background-light: $scrollbarColor;
-      @include scrollbar(
-        $width: 4px,
-        $border-radius: 5px,
-        $background-color: $background-light
-      );
+      @include scrollbar($width: 4px, $border-radius: 5px, $background-color: $background-light);
     }
   }
 }
@@ -498,11 +470,7 @@ hr {
     @include scrollbar($width: 0.4rem, $border-radius: 0.5rem);
     &:hover {
       $background-light: $scrollbarColor;
-      @include scrollbar(
-        $width: 0.4rem,
-        $border-radius: 0.5rem,
-        $background-color: $background-light
-      );
+      @include scrollbar($width: 0.4rem, $border-radius: 0.5rem, $background-color: $background-light);
     }
   }
   .chat-list-scroll {
@@ -513,11 +481,7 @@ hr {
     @include scrollbar($width: 0.4rem, $border-radius: 0.5rem);
     &:hover {
       $background-light: $scrollbarColor;
-      @include scrollbar(
-        $width: 0.4rem,
-        $border-radius: 0.5rem,
-        $background-color: $background-light
-      );
+      @include scrollbar($width: 0.4rem, $border-radius: 0.5rem, $background-color: $background-light);
     }
   }
 }
@@ -534,11 +498,7 @@ hr {
     @include scrollbar($width: 0.4rem, $border-radius: 0.5rem);
     &:hover {
       $background-light: $scrollbarColor;
-      @include scrollbar(
-        $width: 0.4rem,
-        $border-radius: 0.5rem,
-        $background-color: $background-light
-      );
+      @include scrollbar($width: 0.4rem, $border-radius: 0.5rem, $background-color: $background-light);
     }
   }
   .chat-list-scroll {
@@ -549,11 +509,7 @@ hr {
     @include scrollbar($width: 0.4rem, $border-radius: 0.5rem);
     &:hover {
       $background-light: $scrollbarColor;
-      @include scrollbar(
-        $width: 0.4rem,
-        $border-radius: 0.5rem,
-        $background-color: $background-light
-      );
+      @include scrollbar($width: 0.4rem, $border-radius: 0.5rem, $background-color: $background-light);
     }
   }
 }

@@ -38,11 +38,11 @@
       td {
         vertical-align: middle;
         padding: 0;
-        font-size: 13px;
+        font-size: $tdFontsize;
         padding-bottom: 12px;
         .k_browser {
           padding: 4px 6px;
-          font-size: 12px;
+          font-size: $paraSize;
           border-radius: 4px;
         }
         &:nth-child(3) {

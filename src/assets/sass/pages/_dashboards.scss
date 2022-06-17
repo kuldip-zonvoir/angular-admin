@@ -23,7 +23,7 @@
   }
 }
 .percent_change {
-  font-size: 13px;
+  font-size: $paraSize;
   font-weight: 500;
 }
 .tag_name_ana {
@@ -45,7 +45,7 @@
     border-bottom: 0;
   }
   .custom_td1 {
-    font-size: 13px;
+    font-size: $tdFontsize;
     font-weight: 400;
     width: 45%;
     p {
@@ -53,13 +53,13 @@
     }
   }
   .custom_td2 {
-    font-size: 13px;
+    font-size: $tdFontsize;
     font-weight: 400;
     width: 40%;
     text-align: center;
   }
   .custom_td3 {
-    font-size: 13px;
+    font-size: $tdFontsize;
     font-weight: 400;
     width: 15%;
 
@@ -106,7 +106,7 @@
   .area_cc_title {
     color: $paraColor;
 
-    font-size: 13px;
+    font-size: $paraSize;
     font-weight: 500;
     margin-bottom: 0;
   }
@@ -147,7 +147,7 @@
     opacity: 0.5;
     color: $white;
     font-weight: 400;
-    font-size: 13px;
+    font-size: $paraSize;
     margin-top: 0;
   }
 
@@ -175,7 +175,7 @@
     left: 0;
     font-family: FontAwesome;
     font-size: 18px;
-    top: -2px;
+    top: 2px;
   }
 }
 // for Mobile Portrait Mode

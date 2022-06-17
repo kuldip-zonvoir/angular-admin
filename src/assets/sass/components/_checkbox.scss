@@ -41,10 +41,7 @@
     border: 1px solid $border-color;
 
     &.disable {
-      background-color: darken(
-        $color: $background-color,
-        $amount: 5%
-      ) !important;
+      background-color: darken($color: $background-color, $amount: 5%) !important;
       border: 0;
     }
 
@@ -72,7 +69,7 @@
   }
 }
 .kkkcheck_lable {
-  font-size: 13px !important;
+  font-size: $paraSize !important;
   font-weight: 400 !important;
   color: $formLabelColor !important;
 }

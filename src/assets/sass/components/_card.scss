@@ -115,7 +115,7 @@
     border-radius: 0;
     color: $primary; //for dark mode
     text-decoration: none;
-    font-size: 13px !important;
+    font-size: $paraSize !important;
   }
   .panel-body {
     background-color: $background-color;

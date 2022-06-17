@@ -16,12 +16,16 @@
 @import "./assets/sass/vendor/ngx-bootstrap/datepicker";
 @import "~@fullcalendar/daygrid/main.css";
 @import "~@fullcalendar/timegrid/main.css";
+
+:root {
+  --font-family: "Poppins", sans-serif;
+}
 html {
   margin: 0 !important;
   margin-bottom: 0 !important;
   body {
-    font-family: "Roboto", sans-serif;
-    font-size: 87.5% !important;
+    font-family: "Poppins", sans-serif;
+    // font-size: 9.5% !important;
     margin: 0 !important;
     overflow: scroll;
     overflow-y: auto;
@@ -138,69 +142,68 @@ html {
       @import "./assets/sass/themes/light-colors/light_default";
     }
 
-    .greenny-light-color {
-      @extend .theme_spaces;
-      // @import "./assets/sass/themes/light-colors/light_green";
-    }
+    // .greenny-light-color {
+    //   @extend .theme_spaces;
+    //   @import "./assets/sass/themes/light-colors/light_green";
+    // }
 
-    .pink-light-color {
-      @extend .theme_spaces;
-      // @import "./assets/sass/themes/light-colors/light_pink";
-    }
-    .deeporange-light-color {
-      @extend .theme_spaces;
-      $primary: #ff5722 !default; // Bootstrap variable
+    // .pink-light-color {
+    //   @extend .theme_spaces;
+    //   @import "./assets/sass/themes/light-colors/light_pink";
+    // }
+    // .deeporange-light-color {
+    //   @extend .theme_spaces;
+    //   $primary: #ff5722 !default; // Bootstrap variable
 
-      // @import "./assets/sass/themes/light-colors/light_deep_orange";
-    }
+    //   @import "./assets/sass/themes/light-colors/light_deep_orange";
+    // }
 
-    .purple-light-color {
-      @extend .theme_spaces;
-      // @import "./assets/sass/themes/light-colors/light_purple";
-    }
-    .amber-light-color {
-      @extend .theme_spaces;
-      // @import "./assets/sass/themes/light-colors/light_amber";
-    }
+    // .purple-light-color {
+    //   @extend .theme_spaces;
+    //   @import "./assets/sass/themes/light-colors/light_purple";
+    // }
+    // .amber-light-color {
+    //   @extend .theme_spaces;
+    //   @import "./assets/sass/themes/light-colors/light_amber";
+    // }
 
     // dark thmes
     .default-dark-color {
       @import "./assets/sass/themes/dark-colors/dark_default";
     }
 
-    .pink-dark-color {
-      // @import "./assets/sass/themes/dark-colors/dark_pink";
-    }
+    // .pink-dark-color {
+    //   @import "./assets/sass/themes/dark-colors/dark_pink";
+    // }
 
-    .greenny-dark-color {
-      // @import "./assets/sass/themes/dark-colors/dark_green";
-    }
+    // .greenny-dark-color {
+    //   @import "./assets/sass/themes/dark-colors/dark_green";
+    // }
 
-    .deeporange-dark-color {
-      $primary: #ff5722 !default; // Bootstrap variable
+    // .deeporange-dark-color {
+    //   $primary: #ff5722 !default;
+    //   @import "./assets/sass/themes/dark-colors/dark_deep_orange";
+    // }
 
-      // @import "./assets/sass/themes/dark-colors/dark_deep_orange";
-    }
-
-    .purple-dark-color {
-      // @import "./assets/sass/themes/dark-colors/dark_purple";
-    }
-    .amber-dark-color {
-      // @import "./assets/sass/themes/dark-colors/dark_amber";
-    }
+    // .purple-dark-color {
+    //   @import "./assets/sass/themes/dark-colors/dark_purple";
+    // }
+    // .amber-dark-color {
+    //   @import "./assets/sass/themes/dark-colors/dark_amber";
+    // }
   }
 }
 /*Mobile*/
 @media (max-width: 768px) {
   html body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 60.5% !important;
     margin: 0 !important;
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
   html body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 60.5% !important;
     margin: 0 !important;
   }
