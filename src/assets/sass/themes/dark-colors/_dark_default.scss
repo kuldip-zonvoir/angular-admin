@@ -56,5 +56,5 @@ $scrollbarColor: #171d29;
 $scrumBox: #3a424a;
 $font-family: "Roboto", sans-serif;
 @import "../../style.angular";
-// @import "../../pages/login/login";
-// @import "../../pages/login/error";
+@import "../../pages/login/login";
+@import "../../pages/login/error";

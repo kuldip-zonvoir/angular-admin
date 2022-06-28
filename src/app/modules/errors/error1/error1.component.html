@@ -1,28 +1,27 @@
 <div [ngClass]="currentTheme">
   <div class="">
-    <div class="err_message_conatiner">
-      <div class="err_msg_box">
-        <div class="row no-gutters">
-          <div class="col-md-12">
-            <div class="text-center details">
-              <div class="row no-gutters align-items-center">
-                <div class="col-lg-12">
-                  <h1 class="error_msg_code">500</h1>
-                </div>
-                <div class="col-lg-12">
-                  <h1 class="error_deccode_message">
-                    Oops.Something has gone wrong on the web site's server..
-                  </h1>
-                  <h6 class="error_message_description text-muted">
-                    There is load of request is exceeded beyond server limit, We
-                    will back shortly..
-                  </h6>
-                  <a
-                    [routerLink]="['/dashboard']"
-                    class="btn m-t-16 btn-primary text-center"
-                    >Back to Home</a
-                  >
-                </div>
+    <div class="err_message_conatiner"></div>
+    <div class="err_msg_box">
+      <div class="row no-gutters">
+        <div class="col-md-12">
+          <div class="text-center details">
+            <div class="row no-gutters align-items-center">
+              <div class="col-lg-12">
+                <h1 class="error_msg_code">500</h1>
+              </div>
+              <div class="col-lg-12">
+                <h3 class="error_deccode_message">
+                  Oops.Something has gone wrong on the web site's server..
+                </h3>
+                <h6 class="error_message_description">
+                  There is load of request is exceeded beyond server limit, We
+                  will back shortly..
+                </h6>
+                <a
+                  [routerLink]="['/dashboard']"
+                  class="btn m-t-16 btn-primary text-center"
+                  >Back to Home</a
+                >
               </div>
             </div>
           </div>

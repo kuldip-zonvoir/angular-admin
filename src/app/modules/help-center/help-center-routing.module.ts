@@ -23,9 +23,9 @@ const routes: Routes = [
         data: { breadcrumb: "Faq" },
       },
       {
-        path: "guide",
+        path: "guideline",
         component: GuidesComponent,
-        data: { breadcrumb: "Guide" },
+        data: { breadcrumb: "Guideline" },
       },
       {
         path: "support",

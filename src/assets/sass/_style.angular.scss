@@ -14,13 +14,26 @@
 @import "vendor/ng-select/ng-select";
 @import "vendor/Angular-calendar/event-calender";
 @import "vendor/fullcalender/full_calender";
-
 // 3: Components
-@import "./components/tabel", "pages/init", "./components/checkbox", "./components/buttons", "./components/typography",
-  "./components/alert", "./components/pulse", "./components/card", "./components/radio", "./components/steper",
-  "./components/search-bar", "./components/forms/base", "./components/list", "./components/bootstrap_navbar",
-  "./components/navbar_horizontal", "./components/range", "./components/select", "./components/utilities",
-  "./components/drag_n_drop";
+@import "./components/tabel";
+@import "pages/init";
+@import "./components/checkbox";
+@import "./components/buttons";
+@import "./components/typography";
+@import "./components/alert";
+@import "./components/pulse";
+@import "./components/card";
+@import "./components/radio";
+@import "./components/steper";
+@import "./components/search-bar";
+@import "./components/forms/base";
+@import "./components/list";
+@import "./components/bootstrap_navbar";
+@import "./components/navbar_horizontal";
+@import "./components/range";
+@import "./components/select";
+@import "./components/utilities";
+@import "./components/drag_n_drop";
 @import "./components/tabel_bootstrap";
 @import "./components/timeline";
 @import "./components/input_file";

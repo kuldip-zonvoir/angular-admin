@@ -143,7 +143,7 @@ const routes: Routes = [
           import("../modules/page-module/page-module.module").then(
             (m) => m.PageModuleModule
           ),
-        data: { breadcrumb: "Specials Pages" },
+        data: { breadcrumb: "Special Pages" },
       },
       {
         path: "chat",

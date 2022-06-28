@@ -95,6 +95,9 @@
           </ul>
         </div>
       </div>
+
+
+
       <!-- search bar  -->
       <div class="d-flex kk_search_bar_header align-items-center">
         <div class="header_search_kbar">
@@ -112,6 +115,8 @@
           </div>
         </div>
       </div>
+
+
       <!-- header_utilities -->
       <div class="d-flex kk_header_utilities align-items-center">
         <ul class="d-flex nav align-items-center">
@@ -123,6 +128,8 @@
                 </span>
               </a>
             </div>
+
+
             <!-- flags -->
             <div class="btn-group herader_drop_box m-r-14" dropdown>
               <a
@@ -183,6 +190,8 @@
                 </li>
               </ul>
             </div>
+
+
             <!-- email -->
             <div class="btn-group herader_drop_box m-r-14" dropdown>
               <a
@@ -215,6 +224,7 @@
                 </div>
               </ul>
             </div>
+
             <!--  notification -->
             <div class="btn-group herader_drop_box m-r-14" dropdown>
               <a
@@ -246,6 +256,7 @@
                 </div>
               </div>
             </div>
+
             <!-- profile -->
             <div class="btn-group" dropdown>
               <a
@@ -278,6 +289,7 @@
       </div>
     </div>
     <!-- full widh search field -->
+
     <div
       *ngIf="headerSearch"
       class="full-search-harder navbar-header-content px-3 d-flex custom-header-searchbar w-100"
@@ -293,8 +305,11 @@
     </div>
   </div>
 </header>
+
+
 <!-- Header-For desktop close -->
 <!-- header for Mobile -->
+
 <header
   class="header-mobile-section mobile-header"
   [ngClass]="getHeaderClass(headerkey)"
@@ -734,7 +749,11 @@
       <div class="close-icon" (click)="openSearchBar()"></div>
     </div>
   </div>
+
+
   <!-- dropdown link content -->
+
+  
   <div class="dropdown-triggers-content">
     <div class="email-content-wrap mobile-content-space">
       <ng-template [ngIf]="tabId === 'email'">

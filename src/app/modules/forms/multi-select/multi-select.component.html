@@ -7,8 +7,9 @@
       <div class="card-body">
         <p-dropdown
           [options]="cities"
+          class="basic_dpdown"
           [(ngModel)]="selectedCity"
-          [ngModelOptions]="{standalone: true}"
+          [ngModelOptions]="{ standalone: true }"
           optionLabel="name"
         ></p-dropdown>
       </div>
@@ -33,7 +34,7 @@
         <p-multiSelect
           [options]="cities"
           [(ngModel)]="selectedCityCodes"
-          [ngModelOptions]="{standalone: true}"
+          [ngModelOptions]="{ standalone: true }"
           optionLabel="name"
           optionValue="code"
         ></p-multiSelect>

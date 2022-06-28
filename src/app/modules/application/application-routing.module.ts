@@ -29,7 +29,7 @@ const routes: Routes = [
       {
         path: "event-calender",
         component: EventScheduleComponent,
-        data: { breadcrumb: "Full Calender" },
+        data: { breadcrumb: "Full Calendar" },
       },
       {
         path: "",

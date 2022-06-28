@@ -12,7 +12,7 @@ $sidebar-background-color: #ffffff; // #0b101d;
 $heading-color: #050d3e;
 $email_circle_color: #e3e3e3; //N
 $inputPadding: 0.5rem; //N
-$inputTextSize: 14px; //N
+$inputTextSize: 13px; //N
 $inputBorder: #dedede; //N
 $cardShadow: 0px 2px 1.72px 1.28px rgb(236 240 250 / 50%); //N
 $cardBorder: #eaeaff; //N
@@ -56,5 +56,5 @@ $boxShadow-lg: 0px 8px 14.72px 1.28px rgb(229 228 230 / 50%);
 $font-family: "Roboto", sans-serif;
 
 @import "../../style.angular";
-// @import "../../pages/login/login";
-// @import "../../pages/login/error";
+@import "../../pages/login/login";
+@import "../../pages/login/error";

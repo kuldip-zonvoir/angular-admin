@@ -2,13 +2,16 @@ import { Component, OnDestroy, OnInit } from "@angular/core";
 import { Subscription } from "rxjs";
 import { FakeApiService } from "src/app/partials/core/fake_api.service";
 import { EComCategoryService } from "src/app/partials/core/services/e-com-category.service";
-
+interface Category {
+  label: string;
+  value: string;
+}
 @Component({
   selector: "app-category",
   templateUrl: "./category.component.html",
   styleUrls: ["./category.component.scss"],
 })
-export class CategoryComponent implements OnInit,OnDestroy {
+export class CategoryComponent implements OnInit, OnDestroy {
   termsPara = [
     {
       id: "0",
@@ -26,15 +29,26 @@ export class CategoryComponent implements OnInit,OnDestroy {
   showBoundaryLinks = true;
   categoryDetail: boolean;
   categoryList = [];
-    subscription: Subscription;
+  subscription: Subscription;
+  categories = [];
+  selectedCategory: Category;
 
-  constructor(private _categoryService: EComCategoryService) {}
+  constructor(private _categoryService: EComCategoryService) {
+    this.categories = [
+      { label: "Electronics", value: "0" },
+      { label: "Faishion", value: "1" },
+      { label: "Footwear", value: "2" },
+      { label: "Grocery", value: "3" },
+    ];
+  }
 
   ngOnInit(): void {
     this.categoryList = this._categoryService.getCategories();
-    this.subscription = this._categoryService.categoryModalToggle.subscribe((item) => {
-      this.categoryDetail = item;
-    });
+    this.subscription = this._categoryService.categoryModalToggle.subscribe(
+      (item) => {
+        this.categoryDetail = item;
+      }
+    );
   }
 
   editCategory(id: string) {
@@ -43,14 +57,10 @@ export class CategoryComponent implements OnInit,OnDestroy {
   closeModal() {
     this.categoryDetail = false;
   }
-  deleteCategory(id: string) { }
-  
+  deleteCategory(id: string) {}
 
-  updateCategory() {
-    
-    
-  }
-    ngOnDestroy() {
+  updateCategory() {}
+  ngOnDestroy() {
     this.subscription.unsubscribe();
   }
 }

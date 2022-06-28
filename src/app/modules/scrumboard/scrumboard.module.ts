@@ -10,6 +10,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { SharedModule } from 'src/app/partials/content/shared-components/shared.module';
 import { ScrubboardTaskComponent } from './list-page/scrubboard-task/scrubboard-task.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import {MultiSelectModule} from 'primeng/multiselect';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     TooltipModule.forRoot(),
     BsDropdownModule.forRoot(),
     DialogModule,
+    MultiSelectModule,
     SharedModule,
     DragDropModule,
     BsDatepickerModule.forRoot(),

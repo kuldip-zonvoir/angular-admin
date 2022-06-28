@@ -16,7 +16,7 @@ const routes: Routes = [
         component: BasicTabeleComponent,
       },
       {
-        path: "colord-table",
+        path: "colored-table",
         component: ColoredTabelsComponent,
       },
       {

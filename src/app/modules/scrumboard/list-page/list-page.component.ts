@@ -1,8 +1,8 @@
 import {
   Component,
-  HostListener,
   OnDestroy,
   OnInit,
+  ViewChild,
   ViewEncapsulation,
 } from "@angular/core";
 import {
@@ -13,13 +13,23 @@ import {
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { SharemeService } from "src/app/partials/core/shareme.service";
 import { Subscription } from "rxjs";
+import { MultiSelect } from "primeng/multiselect";
+interface Tasklabels {
+  label: string;
+  value: string;
+}
+interface Members {
+  label: string;
+  file: string;
+}
 @Component({
   selector: "app-list-page",
   templateUrl: "./list-page.component.html",
   styleUrls: ["./list-page.component.scss"],
   encapsulation: ViewEncapsulation.None,
 })
-export class ListPageComponent implements OnInit,OnDestroy {
+export class ListPageComponent implements OnInit, OnDestroy {
+  @ViewChild("multiSelectref") multiSelectref: MultiSelect;
   displaytaskDetail: boolean;
   displayfilter: boolean;
   myForm: FormGroup;
@@ -42,30 +52,101 @@ export class ListPageComponent implements OnInit,OnDestroy {
   isUser2 = true;
   isUser3 = false;
   isUser4 = false;
-    subscription1: Subscription;
-    subscription2: Subscription;
+
+  members: Members[];
+  selectedMembers: Members[];
+  taskLabels: Tasklabels[];
+  selectedTaskLabels: Tasklabels[];
+  toggleMulSel: boolean = false;
+  subscription1: Subscription;
+  subscription2: Subscription;
 
   defaultPic = "assets/media/images/cards/6.jpg";
   defaultUserPic = "assets/media/images/users/300_5.jpg";
   task_title = "Rental Project";
   desc = ` Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam nihil, dolorem asperiores ad pariatur placeat vel fuga velit expedita adipisci?`;
-  constructor(
-    private fb: FormBuilder,
-    private shared_service: SharemeService
-  ) {}
+  constructor(private fb: FormBuilder, private shared_service: SharemeService) {
+    this.selectedMembers = [
+      {
+        label: "Indi",
+        file: "assets/media/images/users/100_7.jpg",
+      },
+      {
+        label: "John Doe ",
+        file: "assets/media/images/users/100_6.jpg",
+      },
+    ];
+    this.members = [
+      {
+        label: "Indi",
+        file: "assets/media/images/users/100_7.jpg",
+      },
+      {
+        label: "John Doe ",
+        file: "assets/media/images/users/100_6.jpg",
+      },
+      {
+        label: "David Willy",
+        file: "assets/media/images/users/100_5.jpg",
+      },
+      {
+        label: "Denial Sams",
+        file: "assets/media/images/users/100_8.jpg",
+      },
+      {
+        label: "Jonny Potts",
+        file: "assets/media/images/users/100_9.jpg",
+      },
+    ];
+    this.selectedTaskLabels = [
+      {
+        label: "High Priority",
+        value: "bg-warning",
+      },
+      {
+        label: "Blocked",
+        value: "bg-danger",
+      },
+    ];
+    this.taskLabels = [
+      {
+        label: "High Priority",
+        value: "bg-warning",
+      },
+      {
+        label: "Blocked",
+        value: "bg-danger",
+      },
+      {
+        label: "Approved",
+        value: "bg-success",
+      },
+      {
+        label: "Ready ",
+        value: "bg-info",
+      },
+      {
+        label: "Deployed",
+        value: "bg-primary",
+      },
+    ];
+  }
 
   ngOnInit(): void {
     this.subscription1 = this.shared_service.modalToggle.subscribe((value) => {
       this.modalState = value;
     });
-    this.subscription2 = this.shared_service.cardDragBackground.subscribe((theme) => {
-      this.activeTheme = theme;
-    }),
+    (this.subscription2 = this.shared_service.cardDragBackground.subscribe(
+      (theme) => {
+        this.activeTheme = theme;
+      }
+    )),
       (this.myForm = this.fb.group({
         title: [""],
         content: [""],
       }));
   }
+
   addTaskDialog() {
     this.displaytaskDetail = true;
   }
@@ -157,7 +238,7 @@ export class ListPageComponent implements OnInit,OnDestroy {
     console.log(this.tasKCardkDetail);
   }
 
-    ngOnDestroy() {
+  ngOnDestroy() {
     this.subscription1.unsubscribe();
     this.subscription2.unsubscribe();
   }

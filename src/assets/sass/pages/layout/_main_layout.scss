@@ -11,6 +11,10 @@
   margin-bottom: 16px;
 }
 
+.theme-icon-name {
+  font-size: $inputTextSize !important;
+}
+
 .dashboard123-wrap-container {
   background-color: $background-color;
   background-color: $body-bg;
@@ -117,11 +121,9 @@
   transition: all 0.2s ease-in-out;
 
   //main header
-  //main header
   .main_content {
     background-color: $body-bg;
-    // min-height: 84.5vh;
-    // padding: 12px 20px 12px 25px;
+
     padding-top: 75px !important;
     min-height: 94vh;
     padding: 15px 20px 15px 25px;
@@ -130,7 +132,7 @@
     flex-direction: column;
 
     .main_wraper {
-      padding-bottom: 40px;
+      padding-bottom: 20px;
     }
   }
 

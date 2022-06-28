@@ -10,6 +10,9 @@
     width: 50% !important;
     z-index: 9999;
   }
+  .p-dialog-content {
+    overflow-y: inherit;
+  }
 }
 %p-dialoglmini {
   .p-dialog {
@@ -102,8 +105,16 @@
   font-size: 0.875rem;
 }
 ////
-.k_optional_scroll {
-  //p-t-8// form-scroll
+.e-com-category {
+  .p-dialog-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    @include scrollbar($width: 0.25rem, $border-radius: 0.5rem);
+    &:hover {
+      @include scrollbar($width: 0.25rem, $border-radius: 0.5rem, $background-color: $scrollbarColor);
+    }
+  }
 }
 ///dark now
 .p-dialog {
@@ -139,11 +150,7 @@
 
     @include scrollbar($width: 0.25rem, $border-radius: 0.5rem);
     &:hover {
-      @include scrollbar(
-        $width: 0.25rem,
-        $border-radius: 0.5rem,
-        $background-color: $scrollbarColor
-      );
+      @include scrollbar($width: 0.25rem, $border-radius: 0.5rem, $background-color: $scrollbarColor);
     }
   }
   .p-dialog-content {
@@ -205,12 +212,11 @@
 // for Mobile portrait mode
 @include responsive-below(md) {
   // custom dropdown in style
-  .custom_v12_drop{
-    .btn-group{
+  .custom_v12_drop {
+    .btn-group {
       padding: 0;
     }
   }
-
 
   .scrunboard_filter_modal {
     .p-dialog-content {
@@ -220,11 +226,7 @@
       overflow-x: hidden;
       @include scrollbar($width: 0.5rem, $border-radius: 1rem);
       &:hover {
-        @include scrollbar(
-          $width: 0.5rem,
-          $border-radius: 1rem,
-          $background-color: $scrollbarColor
-        );
+        @include scrollbar($width: 0.5rem, $border-radius: 1rem, $background-color: $scrollbarColor);
       }
     }
   }
@@ -232,15 +234,11 @@
     .p-dialog-content {
       height: 100%;
       cursor: pointer;
-      overflow-y: auto;
+      overflow-y: inherit; //auto
       overflow-x: hidden;
       @include scrollbar($width: 0.5rem, $border-radius: 1rem);
       &:hover {
-        @include scrollbar(
-          $width: 0.5rem,
-          $border-radius: 1rem,
-          $background-color: $scrollbarColor
-        );
+        @include scrollbar($width: 0.5rem, $border-radius: 1rem, $background-color: $scrollbarColor);
       }
     }
   }
@@ -272,11 +270,7 @@
       overflow-x: hidden;
       @include scrollbar($width: 0.5rem, $border-radius: 1rem);
       &:hover {
-        @include scrollbar(
-          $width: 0.5rem,
-          $border-radius: 1rem,
-          $background-color: $scrollbarColor
-        );
+        @include scrollbar($width: 0.5rem, $border-radius: 1rem, $background-color: $scrollbarColor);
       }
     }
   }
@@ -288,11 +282,7 @@
       overflow-x: hidden;
       @include scrollbar($width: 0.5rem, $border-radius: 1rem);
       &:hover {
-        @include scrollbar(
-          $width: 0.5rem,
-          $border-radius: 1rem,
-          $background-color: $scrollbarColor
-        );
+        @include scrollbar($width: 0.5rem, $border-radius: 1rem, $background-color: $scrollbarColor);
       }
     }
   }
@@ -323,11 +313,7 @@
       overflow-x: hidden;
       @include scrollbar($width: 0.5rem, $border-radius: 1rem);
       &:hover {
-        @include scrollbar(
-          $width: 0.5rem,
-          $border-radius: 1rem,
-          $background-color: $scrollbarColor
-        );
+        @include scrollbar($width: 0.5rem, $border-radius: 1rem, $background-color: $scrollbarColor);
       }
     }
   }
@@ -335,15 +321,11 @@
     .p-dialog-content {
       height: 100%;
       cursor: pointer;
-      overflow-y: auto;
+      overflow-y: inherit; // auto
       overflow-x: hidden;
       @include scrollbar($width: 0.5rem, $border-radius: 1rem);
       &:hover {
-        @include scrollbar(
-          $width: 0.5rem,
-          $border-radius: 1rem,
-          $background-color: $scrollbarColor
-        );
+        @include scrollbar($width: 0.5rem, $border-radius: 1rem, $background-color: $scrollbarColor);
       }
     }
   }
@@ -386,11 +368,7 @@
       overflow-x: hidden;
       @include scrollbar($width: 0.5rem, $border-radius: 1rem);
       &:hover {
-        @include scrollbar(
-          $width: 0.5rem,
-          $border-radius: 1rem,
-          $background-color: $scrollbarColor
-        );
+        @include scrollbar($width: 0.5rem, $border-radius: 1rem, $background-color: $scrollbarColor);
       }
     }
   }
@@ -398,15 +376,11 @@
     .p-dialog-content {
       height: 100%;
       cursor: pointer;
-      overflow-y: auto;
+      overflow-y: inherit; //auto
       overflow-x: hidden;
       @include scrollbar($width: 0.5rem, $border-radius: 1rem);
       &:hover {
-        @include scrollbar(
-          $width: 0.5rem,
-          $border-radius: 1rem,
-          $background-color: $scrollbarColor
-        );
+        @include scrollbar($width: 0.5rem, $border-radius: 1rem, $background-color: $scrollbarColor);
       }
     }
   }

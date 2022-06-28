@@ -26,6 +26,9 @@ import { TabelFilterComponentComponent } from "../../layouts/datatables/tabel-fi
 import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
 import { FileDragNDropComponent } from "./file-drag-n-drop/file-drag-n-drop.component";
 import { TimelineModule } from "primeng/timeline";
+import { Dropdown, DropdownModule } from "primeng/dropdown";
+import { MultiSelectModule } from "primeng/multiselect";
+
 @NgModule({
   declarations: [
     BlankPageComponent,
@@ -51,6 +54,8 @@ import { TimelineModule } from "primeng/timeline";
     SidebarModule,
     BsDatepickerModule.forRoot(),
     ToastModule,
+    DropdownModule,
+    MultiSelectModule,
     TimelineModule,
     NgMultiSelectDropDownModule.forRoot(),
     BsDropdownModule.forRoot(),
@@ -66,6 +71,7 @@ import { TimelineModule } from "primeng/timeline";
     CustomMultiSelectComponent,
     CustomPaginationComponent,
     FormsModule,
+    Dropdown,
     TimelineModule,
     PaginationModule,
     BsDropdownModule,
@@ -73,6 +79,7 @@ import { TimelineModule } from "primeng/timeline";
     CollapseModule,
     DiscussChatComponent,
     DialogModule,
+    MultiSelectModule,
     SidebarModule,
     ToastModule,
     BsDatepickerModule,

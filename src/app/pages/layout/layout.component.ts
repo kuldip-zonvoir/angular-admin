@@ -8,7 +8,7 @@ import { SharemeService } from "src/app/partials/core/shareme.service";
   templateUrl: "./layout.component.html",
   styleUrls: ["./layout.component.scss"],
 })
-export class LayoutComponent implements OnInit,OnDestroy {
+export class LayoutComponent implements OnInit, OnDestroy {
   isResponsive: boolean;
   radioModel = "light";
   isDisable = true;
@@ -62,16 +62,13 @@ export class LayoutComponent implements OnInit,OnDestroy {
   themeIndex: number;
   mobileSidebarModal: boolean;
   menuBar: boolean;
-    subscription1: Subscription;
-    subscription2: Subscription;
+  subscription1: Subscription;
+  subscription2: Subscription;
 
-  constructor(
-    private shareData: SharemeService,
-    private router: Router,
-  ) {
-    // this.currentTheme = localStorage.getItem("activetheme");
+  constructor(private shareData: SharemeService, private router: Router) {
+    this.currentTheme = localStorage.getItem("activetheme");
     this.currentTheme = this.customClass;
-    // this.customClass = this.currentTheme;
+    this.customClass = this.currentTheme;
     this.router.events.subscribe((ev) => {
       if (ev instanceof NavigationEnd) {
         this.currentUrl = ev.url.split("/");
@@ -90,9 +87,11 @@ export class LayoutComponent implements OnInit,OnDestroy {
 
     this.menuBar = true;
     // for moibile Sidebar
-   this.subscription2 =  this.shareData.mobileDialogSidebar.subscribe((data) => {
-      this.mobileSidebarModal = data;
-    });
+    this.subscription2 = this.shareData.mobileDialogSidebar.subscribe(
+      (data) => {
+        this.mobileSidebarModal = data;
+      }
+    );
 
     if (this.currentTheme == "default-light-color") {
       this.isChecked = false;
@@ -116,7 +115,6 @@ export class LayoutComponent implements OnInit,OnDestroy {
       this.customClass = this.darkThemes[this.themeIndex];
       localStorage.setItem("activetheme", this.customClass);
       this.currentTheme = localStorage.getItem("activetheme");
-     
     }
   }
 
@@ -143,10 +141,9 @@ export class LayoutComponent implements OnInit,OnDestroy {
     this.menuBar = false;
     this.shareData.sidebarMobileMenu(this.menuBar);
     this.menuBar = true;
-
   }
 
-// close side bar on click out side
+  // close side bar on click out side
   closeSidebarOutside() {
     if (!this.mobileSidebarModal) {
       this.closeSidebarModal();
@@ -204,18 +201,16 @@ export class LayoutComponent implements OnInit,OnDestroy {
     this.isDark = !this.isDark;
   }
 
-
   changeSidebarMode() {
     this.isDarkSidebar = !this.isDarkSidebar;
   }
-
 
   changeWidth(event) {
     this.isResponsive = event;
   }
 
   // destroy all the subscription object
-    ngOnDestroy() {
+  ngOnDestroy() {
     this.subscription1.unsubscribe();
     this.subscription2.unsubscribe();
   }

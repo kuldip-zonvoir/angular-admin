@@ -130,6 +130,7 @@
     @include button-bg($name, $color);
   }
 }
+
 .btn-mini {
   text-decoration: none;
   padding: 6px 12px;
@@ -157,7 +158,7 @@
   button {
     text-decoration: none;
     padding: 6px 10px;
-    border-radius: 4px !important;
+    border-radius: 4px;
     font-size: 12px;
     font-weight: 500;
     white-space: nowrap;

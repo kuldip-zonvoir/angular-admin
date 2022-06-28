@@ -51,11 +51,101 @@
     }
   }
 }
+
+// .label_title {
+//   text-align: right;
+// }
 .buttons-labels {
   display: flex !important;
   flex-direction: row-reverse !important;
-  align-items: center !important;
 }
+.tag_btn_title_new {
+  padding: 0 10px;
+  font-weight: 500;
+  white-space: nowrap;
+  color: #fff;
+}
+.prime_content_new {
+  margin-left: 2.2rem;
+}
+.attach_icon {
+  width: 6%;
+}
+.attach_file_title {
+  width: 94%;
+}
+.tag_button_new {
+  line-height: 32px;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-right: 5px;
+  height: 32px;
+  margin-bottom: 4px;
+}
+
+.multiselect_custom_new {
+  .p-component {
+    padding: 0;
+  }
+  .pi-chevron-down:before {
+    content: "\e90d";
+  }
+  .p-multiselect-trigger {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    &:hover {
+      background-color: $email_circle_color;
+    }
+    .p-multiselect-trigger-icon {
+      color: $text-color;
+    }
+  }
+  .p-multiselect {
+    border: 0 !important;
+    &:hover {
+      box-shadow: none;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+    &:active {
+      box-shadow: none;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+  .p-multiselect-items {
+    margin: 0;
+  }
+  .p-multiselect-label-container {
+    display: none;
+  }
+  .option_item_prime {
+    display: inline-flex;
+    align-items: center;
+  }
+  .prime_option_title {
+    font-size: 13px;
+    color: $text-color;
+    padding: 0 4px;
+  }
+
+  .p-multiselect-items-wrapper {
+    max-height: 13rem;
+    margin-right: 2px;
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include scrollbar($width: 0.3rem, $border-radius: 1rem);
+    &:hover {
+      @include scrollbar($width: 0.3rem, $border-radius: 1rem, $background-color: $scrollbarColor);
+    }
+  }
+}
+
 .acttachment-card {
   .small-card-img {
     width: 100%;
@@ -71,11 +161,7 @@
   overflow-x: hidden;
   @include scrollbar($width: 0.5rem, $border-radius: 1rem);
   &:hover {
-    @include scrollbar(
-      $width: 0.5rem,
-      $border-radius: 1rem,
-      $background-color: $scrollbarColor
-    );
+    @include scrollbar($width: 0.5rem, $border-radius: 1rem, $background-color: $scrollbarColor);
   }
 }
 .k_scrum_card_width {
@@ -89,11 +175,7 @@
   padding: 20px 0 20px 10px;
   @include scrollbar($width: 0.5rem, $border-radius: 1rem);
   &:hover {
-    @include scrollbar(
-      $width: 0.5rem,
-      $border-radius: 1rem,
-      $background-color: $scrollbarColor
-    );
+    @include scrollbar($width: 0.5rem, $border-radius: 1rem, $background-color: $scrollbarColor);
   }
 }
 
@@ -102,11 +184,7 @@
   overflow-x: auto;
   cursor: pointer;
   padding: 0;
-  @include scrollbar(
-    $height: 0.5rem,
-    $border-radius: 1rem,
-    $background-color: #d4d6da8c
-  );
+  @include scrollbar($height: 0.5rem, $border-radius: 1rem, $background-color: #d4d6da8c);
 }
 
 .scrum-lable-scroll-tags {
@@ -120,9 +198,14 @@
 .member_tags_container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 // for Mobile Portrait Mode
 @include responsive-below(md) {
+  .label_title {
+    text-align: left;
+  }
+
   .scrum-footer {
     position: absolute;
     left: 0;
@@ -137,15 +220,12 @@
     padding: 20px 12px 40px 12px;
     @include scrollbar($width: 0.5rem, $border-radius: 1rem);
     &:hover {
-      @include scrollbar(
-        $width: 0.5rem,
-        $border-radius: 1rem,
-        $background-color: $scrollbarColor
-      );
+      @include scrollbar($width: 0.5rem, $border-radius: 1rem, $background-color: $scrollbarColor);
     }
   }
   .member_tags_container {
-    display: flex;
+    // display: flex;
+    display: block;
     // align-items: center;
   }
   .scrum-lable-scroll-tags {
@@ -197,11 +277,7 @@
     padding: 20px 12px 40px 12px;
     @include scrollbar($width: 0.5rem, $border-radius: 1rem);
     &:hover {
-      @include scrollbar(
-        $width: 0.5rem,
-        $border-radius: 1rem,
-        $background-color: $scrollbarColor
-      );
+      @include scrollbar($width: 0.5rem, $border-radius: 1rem, $background-color: $scrollbarColor);
     }
   }
   .scrum-box-continer {
@@ -221,11 +297,7 @@
     padding: 20px 12px 40px 12px;
     @include scrollbar($width: 0.5rem, $border-radius: 1rem);
     &:hover {
-      @include scrollbar(
-        $width: 0.5rem,
-        $border-radius: 1rem,
-        $background-color: $scrollbarColor
-      );
+      @include scrollbar($width: 0.5rem, $border-radius: 1rem, $background-color: $scrollbarColor);
     }
   }
   .scrum-lable-scroll-tags {
@@ -253,11 +325,7 @@
     padding: 20px 12px 40px 12px;
     @include scrollbar($width: 0.5rem, $border-radius: 1rem);
     &:hover {
-      @include scrollbar(
-        $width: 0.5rem,
-        $border-radius: 1rem,
-        $background-color: $scrollbarColor
-      );
+      @include scrollbar($width: 0.5rem, $border-radius: 1rem, $background-color: $scrollbarColor);
     }
   }
 }

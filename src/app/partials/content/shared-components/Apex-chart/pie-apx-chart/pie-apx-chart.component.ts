@@ -74,13 +74,7 @@ export class PieApxChartComponent implements OnInit {
         fontFamily: this.fontFamily,
         type: "pie",
       },
-      labels: [
-        "Prodduct A",
-        "Prodduct B",
-        "Prodduct C",
-        "Prodduct D",
-        "Prodduct E",
-      ],
+      labels: ["Product A", "Product B", "Product C", "Product D", "Product E"],
       responsive: [
         {
           breakpoint: 480,

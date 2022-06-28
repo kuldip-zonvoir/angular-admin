@@ -24,8 +24,10 @@
     </div>
 
     <!-- table starts here -->
-    <div class="table-responsive  grid-bottom-12">
-      <table class="table my_tabel table_hr_scroll table-hover table-borderless m-b-0">
+    <div class="table-responsive grid-bottom-12">
+      <table
+        class="table my_tabel table_hr_scroll table-hover table-borderless m-b-0"
+      >
         <thead class="thead">
           <tr class="thead-row" style="left: 0px">
             <th class="th">
@@ -83,7 +85,7 @@
                     (click)="editCategory(category.id)"
                     tooltip="Edit"
                   >
-                    <span class="material-icons-outlined icon-gray">
+                    <span class="material-icons-outlined icon-20 icon-gray">
                       edit
                     </span>
                   </a>
@@ -126,6 +128,17 @@
             placeholder="Enter Category Name"
           />
         </div>
+
+        <div class="form-group m-b-12">
+          <label for="title">Parent Category</label>
+          <p-dropdown
+            [options]="categories"
+            [(ngModel)]="selectedCategory"
+            [virtualScroll]="true"
+            [ngModelOptions]="{ standalone: true }"
+            optionLabel="label"
+          ></p-dropdown>
+        </div>
         <div class="form-group m-b-12">
           <label for="stock">Category Stock</label>
           <input
@@ -133,16 +146,6 @@
             class="form-control"
             placeholder="Enter Category Stock"
           />
-        </div>
-        <div class="form-group m-b-12">
-          <label for="title">Parent Category</label>
-          <select name="" class="form-control" id="">
-            <option selected>Change Category</option>
-            <option value="">Electronics</option>
-            <option value="">Faishion</option>
-            <option value="">Footwear</option>
-            <option value="">Grocery</option>
-          </select>
         </div>
       </div>
     </form>

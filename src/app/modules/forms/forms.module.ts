@@ -11,8 +11,6 @@ import { FormWigitsComponent } from "./regular/form-wigits/form-wigits.component
 import { FormLayoutComponent } from "./regular/form-layout/form-layout.component";
 import { FormWizardComponent } from "./regular/form-wizard/form-wizard.component";
 import { FormWizardValidationComponent } from "./regular/form-wizard-validation/form-wizard-validation.component";
-import { ReactiveFormsModule } from "@angular/forms";
-import { FormsModule } from "@angular/forms";
 import { AdvanceFormComponent } from "./advance-form/advance-form.component";
 import { AdvanceSelectComponent } from "./advance-form/advance-select/advance-select.component";
 import { SharedModule } from "src/app/partials/content/shared-components/shared.module";
@@ -31,8 +29,6 @@ import { RadioCheckboxComponent } from "./radio-checkbox/radio-checkbox.componen
 import { MultiSelectComponent } from "./multi-select/multi-select.component";
 import { FormWizard2Component } from "./regular/form-wizard2/form-wizard2.component";
 import { AutoCompleteComponent } from "./auto-complete/auto-complete.component";
-import { MultiSelectModule } from "primeng/multiselect";
-import { DropdownModule } from "primeng/dropdown";
 
 @NgModule({
   declarations: [
@@ -62,8 +58,6 @@ import { DropdownModule } from "primeng/dropdown";
   imports: [
     CommonModule,
     AngularEditorModule,
-    MultiSelectModule,
-    DropdownModule,
     InputMaskModule,
     InputSwitchModule,
     SharedModule,

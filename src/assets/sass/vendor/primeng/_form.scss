@@ -1,6 +1,3 @@
-// .pi {
-//   font-family: inherit;
-// }
 p-inputmask {
   input {
     height: auto;
@@ -40,6 +37,9 @@ p-inputmask {
 // multiselect
 .p-multiselect {
   @extend .input_css;
+  &.p-focus {
+    box-shadow: none;
+  }
   &:not(.p-disabled):hover {
     background-color: $inputBgColor;
   }
@@ -53,8 +53,8 @@ p-inputmask {
   border-radius: 4px;
   background-color: $inputBgColor;
   .p-multiselect-items {
+    margin-bottom: 0;
     .p-multiselect-item {
-      // border: 1px solid $inputBorder !important;
       border-radius: 4px;
       background-color: $inputBgColor;
       &:focus {
@@ -64,13 +64,14 @@ p-inputmask {
         outline: 0;
         box-shadow: none !important;
       }
+
       .p-highlight {
         color: $white;
         background: $primary;
         &:hover {
           border-color: $primary;
-          background: $primary;
-          color: $white;
+          background-color: $primary;
+          color: $text-color;
         }
       }
     }
@@ -98,6 +99,11 @@ p-inputmask {
 }
 
 // dropdown
+.basic_dpdown {
+  .p-focus {
+    box-shadow: none;
+  }
+}
 .p-dropdown {
   @extend .input_css;
   padding: 0 !important;
@@ -117,6 +123,7 @@ p-inputmask {
   border-radius: 4px;
   background-color: $inputBgColor;
   .p-dropdown-items {
+    margin-bottom: 0;
     .p-dropdown-item {
       // border: 1px solid $inputBorder !important;
       border-radius: 4px;

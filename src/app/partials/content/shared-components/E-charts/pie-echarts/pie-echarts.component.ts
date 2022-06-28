@@ -19,8 +19,13 @@ export class PieEchartsComponent implements OnInit {
   fontFamily: string;
   options = {
     legend: {
-      top: "bottom",
+      orient: "horizontal",
+      type: "scroll",
+      // right: 10,
+      // top: ,
+      bottom: 20,
     },
+
     series: [
       {
         name: "sports",
@@ -28,6 +33,9 @@ export class PieEchartsComponent implements OnInit {
         radius: [50, 250],
         center: ["50%", "50%"],
         roseType: "area",
+        label: {
+          show: false,
+        },
         itemStyle: {
           borderRadius: 8,
         },
@@ -49,6 +57,26 @@ export class PieEchartsComponent implements OnInit {
           "rgb(116, 90, 242)",
           "rgb(251, 79, 0)",
         ],
+      },
+    ],
+    // media query for e-chart
+    media: [
+      // each rule of media query is defined here
+      {
+        query: {
+          minWidth: 200,
+          maxHeight: 300,
+          minAspectRatio: 1.3,
+        },
+        option: {
+          // write options accordingly
+          legend: {
+            show: false,
+            orient: "horizontal",
+            type: "scroll",
+            bottom: 0,
+          },
+        },
       },
     ],
   };
@@ -79,9 +107,12 @@ export class PieEchartsComponent implements OnInit {
       {
         name: "sports",
         type: "pie",
-        radius: [50, 200],
+        radius: [30, 150],
         center: ["50%", "50%"],
         roseType: "area",
+        label: {
+          show: false,
+        },
         itemStyle: {
           borderRadius: 8,
         },
@@ -103,8 +134,29 @@ export class PieEchartsComponent implements OnInit {
           this.infoColor,
           this.dangerColor,
         ],
+        // media query for e-chart
+        media: [
+          // each rule of media query is defined here
+          {
+            query: {
+              minWidth: 200,
+              maxHeight: 300,
+              minAspectRatio: 1.3,
+            },
+            option: {
+              // write options accordingly
+              legend: {
+                show: false,
+                orient: "horizontal",
+                type: "scroll",
+                bottom: 0,
+              },
+            },
+          },
+        ],
       },
     ];
+
     this.setOptions("series", opts);
   }
 

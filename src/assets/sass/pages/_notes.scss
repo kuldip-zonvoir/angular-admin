@@ -9,7 +9,7 @@
 }
 
 .notes-container {
-  min-height: 35rem;
+  min-height: 31rem;
 }
 .notes_scroll {
   height: 70vh;
@@ -19,11 +19,7 @@
   @include scrollbar($width: 0.5rem, $border-radius: 1rem);
   &:hover {
     $background-light: $scrollbarColor;
-    @include scrollbar(
-      $width: 0.5rem,
-      $border-radius: 1rem,
-      $background-color: $background-light
-    );
+    @include scrollbar($width: 0.5rem, $border-radius: 1rem, $background-color: $background-light);
   }
 }
 // for Mobile Portrait Mode

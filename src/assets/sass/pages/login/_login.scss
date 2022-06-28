@@ -15,6 +15,12 @@
 .login-wrapper1 {
   background-color: #fbfbfbcf;
   position: relative;
+  .container-checkbox {
+    color: #6c757d;
+    .check-mark {
+      background-color: $primary;
+    }
+  }
 }
 .login-illus {
   background-color: #c9e9ffc4;
@@ -57,6 +63,9 @@
   }
 }
 
+.login_form_label {
+  color: #323232 !important;
+}
 .login-contianer {
   position: absolute;
   top: 50%;
@@ -65,6 +74,10 @@
   width: 50%;
   margin: 0 auto;
   background-color: $white;
+  &.custom-card {
+    border: 1px solid #ecf0fa80;
+    box-shadow: 0px 2px 1.72px 1.28px rgba(236, 240, 250, 0.502) !important;
+  }
 }
 //login-page-1
 .login_bg_img {
@@ -145,6 +158,7 @@
   display: block;
   position: relative;
   padding-left: 35px;
+  color: #6c757d !important;
   cursor: pointer;
   font-size: 14px;
   color: $muteColor;
@@ -225,16 +239,17 @@
   display: inline-block;
   text-align: center;
   position: relative;
-  top: -11px;
+  top: -14px;
   background-color: white;
   padding: 0px 14px;
   font-weight: 500;
-  font-size: 12px;
-  color: $muteColor;
+  font-size: 13px;
+  // color: $muteColor;
+  color: #6c757d;
 }
 
 .login_sub_btn {
-  padding: 12px 0;
+  padding: 6px 0;
   text-align: center;
 }
 .login-btn {
@@ -264,7 +279,7 @@
 
 .google_facebook a {
   color: $primary;
-  background-color: #3699ff57;
+  background-color: $primary-light;
   border-color: transparent;
   display: inline-block;
   padding: 13px;
@@ -276,6 +291,9 @@
 .dont_ac {
   text-align: center;
   margin-top: 20px;
+  span {
+    color: #6c757d !important;
+  }
 }
 
 .bg_photo_login {
@@ -295,6 +313,12 @@
   width: 100%;
 }
 
+.auth_page_title {
+  color: #050d3e !important;
+}
+.login_new_sub {
+  color: #6c757d !important;
+}
 .main_logo {
   text-align: center;
 }
@@ -375,11 +399,7 @@
     overflow-x: hidden;
     @include scrollbar($width: 0.5rem, $border-radius: 1rem);
     &:hover {
-      @include scrollbar(
-        $width: 0.5rem,
-        $border-radius: 1rem,
-        $background-color: $scrollbarColor
-      );
+      @include scrollbar($width: 0.5rem, $border-radius: 1rem, $background-color: $scrollbarColor);
     }
   }
   .login_container {
@@ -396,11 +416,7 @@
     overflow-x: hidden;
     @include scrollbar($width: 0.5rem, $border-radius: 1rem);
     &:hover {
-      @include scrollbar(
-        $width: 0.5rem,
-        $border-radius: 1rem,
-        $background-color: $scrollbarColor
-      );
+      @include scrollbar($width: 0.5rem, $border-radius: 1rem, $background-color: $scrollbarColor);
     }
     &:after {
       display: none;
