@@ -1,23 +1,18 @@
-<div class="row mb-3">
-  <div class="col-lg-12">
-    <app-header-profile [activeId]="'2'"></app-header-profile>
-  </div>
-</div>
 <div class="card custom-card">
   <div class="card-header custom-card-header border-1">
-    <h5 class="mb-0">Latest Photos</h5>
+    <h5 class="mb-0">All Photos</h5>
   </div>
   <div class="card-body">
-    <div class="row no-gutters">
+    <div class="row photo_gallary_new mb-5">
       <div
         *ngFor="let photo of photos"
-        class="col-md-3 col-lg-2 col-4 col-sm-3"
+        class="col-lg-3 col-md-6 col-4 col-sm-3"
       >
-        <div class="p-2">
+        <div class="">
           <img
             [src]="photo.user_pic"
             alt=""
-            class="img-square-gallery img-responsive"
+            class="img-square-gallery img-fluid"
           />
         </div>
       </div>

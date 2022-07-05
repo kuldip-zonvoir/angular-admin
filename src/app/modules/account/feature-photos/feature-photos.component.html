@@ -1,0 +1,21 @@
+<div class="card custom-card">
+  <div
+    class="card-header custom-card-header d-flex align-items-center border-1"
+  >
+    <h5 class="m-b-0 sugg_page_title">Feature Photos</h5>
+    <div class="d-flex m-l-auto align-items-center"></div>
+  </div>
+  <div class="card-body sm_feature_photos">
+    <div class="row no-gutters">
+      <div *ngFor="let photo of photos" class="col-3">
+        <div class="zp-2">
+          <img
+            [src]="photo.user_pic"
+            alt=""
+            class="img-square-gallery img-responsive"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

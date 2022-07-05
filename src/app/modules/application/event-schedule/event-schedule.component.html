@@ -53,25 +53,13 @@
       <div class="evt_info_action">
         <span
           (click)="updateEvent()"
-          class="
-            material-icons-outlined
-            icon-gray
-            custom-circle-sm2
-            cursor-pointer
-            evt_edit
-          "
+          class="material-icons-outlined icon-gray custom-circle-sm2 cursor-pointer evt_edit"
         >
           edit
         </span>
         <span
           (click)="deleteEvent()"
-          class="
-            material-icons-outlined
-            icon-gray
-            custom-circle-sm2
-            cursor-pointer
-            evt_delete
-          "
+          class="material-icons-outlined icon-gray custom-circle-sm2 cursor-pointer evt_delete"
         >
           delete_outline
         </span>
@@ -147,6 +135,13 @@
         </div>
         <div class="form-group m-b-12">
           <label for="" class="">Event Type</label>
+          <!-- <p-dropdown
+            [options]="eventTypes"
+            class="basic_dpdown"
+            [(ngModel)]="selectedEvent"
+            [ngModelOptions]="{ standalone: true }"
+            optionLabel="label"
+          ></p-dropdown> -->
           <select
             formControlName="eventType"
             name=""

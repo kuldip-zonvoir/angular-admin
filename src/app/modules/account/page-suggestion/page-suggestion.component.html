@@ -1,0 +1,40 @@
+<div class="card custom-card">
+  <div class="card-header custom-card-header border-1">
+    <div class="d-flex align-items-center justify-content-start">
+      <div class="m-b-0">
+        <h5 class="m-b-0 sugg_page_title">Page Suggestions</h5>
+      </div>
+    </div>
+  </div>
+  <div class="card-body zp-10">
+    <ul class="nav">
+      <ng-container *ngFor="let page of pages; let i = index">
+        <li class="nav_item w-100 10 px-1 border-1 cursor-pointer">
+          <div class="d-flex align-items-center">
+            <a class="decoration-none d-flex align-items-center">
+              <div class="d-flex align-items-center">
+                <img
+                  [src]="page.page_pic"
+                  class="img-responsive sm_page_logo img-list-circle"
+                  alt=""
+                />
+              </div>
+              <div class="m-l-8">
+                <h6 class="m-b-0 sugg_sub_title">{{ page.page_name }}</h6>
+                <p class="m-b-0 text-muted sugg_other">
+                  {{ page.mutual_counts }} people following
+                </p>
+              </div>
+            </a>
+
+            <!-- <div class="m-l-auto">
+              <span class="material-icons-outlined icon-20 text-primary">
+                person_add
+              </span>
+            </div> -->
+          </div>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+</div>

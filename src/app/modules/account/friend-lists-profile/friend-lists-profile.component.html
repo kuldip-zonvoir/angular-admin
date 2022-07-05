@@ -2,26 +2,26 @@
   <div class="card-header custom-card-header border-1">
     <div class="d-flex align-items-center justify-content-start">
       <div class="m-b-0">
-        <h5 class="m-b-0">Friend Suggestions</h5>
+        <h5 class="m-b-0 sugg_page_title">Friend Suggestions</h5>
       </div>
     </div>
   </div>
   <div class="card-body zp-10">
     <ul class="nav">
       <ng-container *ngFor="let friend of friends; let i = index">
-        <li class="nav_item w-100 p-y-6 px-1 border-1 cursor-pointer">
+        <li class="nav_item w-100 p-y-10 px-1 border-1 cursor-pointer">
           <div class="d-flex align-items-center">
             <a class="decoration-none d-flex align-items-center">
               <div class="d-flex align-items-center">
                 <img
                   [src]="friend.friend_pic"
-                  class="img-responsive logo-lg-circle img-list-circle"
+                  class="img-responsive logo-md-circle img-list-circle"
                   alt=""
                 />
               </div>
               <div class="m-l-8">
-                <h6 class="m-b-0">{{ friend.friend_name }}</h6>
-                <p class="m-b-0 text-muted">
+                <h6 class="m-b-0 sugg_sub_title">{{ friend.friend_name }}</h6>
+                <p class="m-b-0 text-muted sugg_other">
                   {{ friend.mutual_counts }} Mutual Friends
                 </p>
               </div>

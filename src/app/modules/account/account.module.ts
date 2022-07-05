@@ -20,6 +20,12 @@ import { AccountSettingComponent } from "./account-setting/account-setting.compo
 import { SharedModule } from "src/app/partials/content/shared-components/shared.module";
 import { AllFriendsComponent } from "./all-friends/all-friends.component";
 import { CreatePostComponent } from "./create-post/create-post.component";
+import { FeaturePhotosComponent } from "./feature-photos/feature-photos.component";
+import { ProfileBriefInfoComponent } from "./profile-brief-info/profile-brief-info.component";
+import { PageSuggestionComponent } from "./page-suggestion/page-suggestion.component";
+import { GroupSuggestionsComponent } from "./group-suggestions/group-suggestions.component";
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { ProfileOverviewWrapperComponent } from './profile-overview-wrapper/profile-overview-wrapper.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +45,12 @@ import { CreatePostComponent } from "./create-post/create-post.component";
     AccountSettingComponent,
     AllFriendsComponent,
     CreatePostComponent,
+    FeaturePhotosComponent,
+    ProfileBriefInfoComponent,
+    PageSuggestionComponent,
+    GroupSuggestionsComponent,
+    EditProfileComponent,
+    ProfileOverviewWrapperComponent,
   ],
   imports: [CommonModule, WigitModule, SharedModule, AccountRoutingModule],
 })

@@ -64,7 +64,12 @@
   padding: 5px;
   border-radius: 4px;
   margin-right: 5px;
-
+  .recent_user_msg {
+    display: inline-block;
+    width: 220px;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
   &:hover {
     background-color: $primary;
     color: $white;

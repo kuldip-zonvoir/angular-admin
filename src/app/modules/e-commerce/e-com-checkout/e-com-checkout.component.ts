@@ -8,7 +8,48 @@ import { Component, OnInit } from "@angular/core";
 export class EComCheckoutComponent implements OnInit {
   tabId = "DebitCard";
   isChecked: boolean;
-  constructor() {}
+  statesArr = [];
+  selectedState: String;
+  citiesArr = [];
+  selectedCity: String;
+  constructor() {
+    this.statesArr = [
+      {
+        value: "0",
+        label: "Uttar Pradesh",
+      },
+      {
+        value: "1",
+        label: "Punjab",
+      },
+      {
+        value: "2",
+        label: "Madya Prodesh",
+      },
+      {
+        value: "3",
+        label: "Rajasthan",
+      },
+      {
+        value: "4",
+        label: "Delhi",
+      },
+    ];
+    this.citiesArr = [
+      {
+        value: "0",
+        label: "Knapur",
+      },
+      {
+        value: "1",
+        label: "Lucknow",
+      },
+      {
+        value: "2",
+        label: "Sant Kabeer Nagar",
+      },
+    ];
+  }
 
   ngOnInit(): void {}
   changeTab(tab) {

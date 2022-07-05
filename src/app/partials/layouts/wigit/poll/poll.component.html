@@ -1,14 +1,16 @@
 <div class="card custom-card">
   <div class="card-header custom-card-header border-1">
-    <h5 class="m-b-0">Poll of the Today</h5>
+    <h5 class="m-b-0 sugg_page_title">Poll of the Today</h5>
   </div>
   <div class="card-body">
     <p class="m-b-0 text-muted p-b-8">Here is latest poll.</p>
-    <h5 class="fw-600 m-b-12">What is mobile app usage daily ?</h5>
+    <h5 class="fw-600 m-b-12 sugg_page_title">
+      What is mobile app usage daily ?
+    </h5>
     <div class="">
       <form action="" class="">
         <div class="form-check p-l-0">
-          <label class="container-radio">
+          <label class="container-radio sugg_other">
             <b class="m-r-8"> A</b> 30 Minutes
             <input
               type="radio"
@@ -20,7 +22,7 @@
           </label>
         </div>
         <div class="form-check p-l-0">
-          <label class="container-radio">
+          <label class="container-radio sugg_other">
             <b class="m-r-8"> B </b> More than 30 Minutes
             <input
               type="radio"
@@ -32,7 +34,7 @@
           </label>
         </div>
         <div class="form-check p-l-0">
-          <label class="container-radio">
+          <label class="container-radio sugg_other">
             <b class="m-r-8"> C </b> 1 Hour
             <input
               type="radio"
@@ -46,7 +48,7 @@
         <div class="form-check p-l-0">
           <label
             [ngClass]="isChecked ? 'text-primary' : null"
-            class="container-radio"
+            class="container-radio sugg_other"
           >
             <b class="m-r-8"> D </b> More than 1 Hour
             <input

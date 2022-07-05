@@ -11,6 +11,6 @@ export class PhotoGalleryProfileComponent implements OnInit {
   constructor(private _fakeApi: FakeApiService) {}
 
   ngOnInit(): void {
-    this.photos = this._fakeApi.getUsers();
+    this.photos = this._fakeApi.getPostGallary();
   }
 }

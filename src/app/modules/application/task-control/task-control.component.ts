@@ -17,6 +17,10 @@ export class TaskControlComponent implements OnInit {
   bsValue = new Date();
   task: Task;
   keyword: string;
+  statusArr = [];
+  selectedStatus: string;
+  employeesArr = [];
+  selectedEmp: string;
   taskName = "Create the landing page on the beta channel";
   taskDetails =
     " lorem qui ipsum deserunt duis exercitation lorem elit qui qui ipsum tempor nulla velit aliquip enim consequat incididunt pariatur duis excepteur elit irure nulla ipsum dolor dolore est.";
@@ -24,7 +28,40 @@ export class TaskControlComponent implements OnInit {
     private fb: FormBuilder,
     private _sharedService: SharemeService,
     private fake_api: FakeApiService
-  ) {}
+  ) {
+    this.statusArr = [
+      {
+        value: "1",
+        label: "In Progress",
+      },
+      {
+        value: "2",
+        label: "Canceled",
+      },
+      {
+        value: "3",
+        label: "Completed",
+      },
+    ];
+    this.employeesArr = [
+      {
+        value: "1",
+        label: "Morgon Stark",
+      },
+      {
+        value: "2",
+        label: "Peter Siddle",
+      },
+      {
+        value: "3",
+        label: "Ablert Finch",
+      },
+      {
+        value: "3",
+        label: "Harry J",
+      },
+    ];
+  }
 
   ngOnInit(): void {
     this.taskform = this.fb.group({

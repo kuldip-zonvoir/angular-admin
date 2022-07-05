@@ -4,7 +4,7 @@ import { Injectable } from "@angular/core";
 import { contacts, invoices, tasks } from "./CollectionData/tabeldata";
 import { notes } from "./CollectionData/tabeldata";
 import { orders, customers } from "./CollectionData/e-commerce-table";
-import { users } from "./CollectionData/usersTable";
+import { users, postsImages } from "./CollectionData/usersTable";
 @Injectable({
   providedIn: "root",
 })
@@ -22,6 +22,9 @@ export class FakeApiService {
   }
   getCustomers() {
     return customers;
+  }
+  getPostGallary() {
+    return postsImages;
   }
   getOrders() {
     return orders;

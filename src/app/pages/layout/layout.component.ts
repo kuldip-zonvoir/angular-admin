@@ -10,7 +10,6 @@ import { SharemeService } from "src/app/partials/core/shareme.service";
 })
 export class LayoutComponent implements OnInit, OnDestroy {
   isResponsive: boolean;
-  radioModel = "light";
   isDisable = true;
   isChecked: boolean;
   hId = "0";
@@ -23,21 +22,22 @@ export class LayoutComponent implements OnInit, OnDestroy {
   primaryColor = "purple";
 
   darkThemes = [
-    "default-dark-color",
-    "amber-dark-color",
-    "purple-dark-color",
-    "greenny-dark-color",
-    "pink-dark-color",
-    "deeporange-dark-color",
+    "dark-default-color",
+    "dark-amber-color",
+    "dark-purple-color",
+    "dark-greenny-color",
+    "dark-pink-color",
+    "dark-deeporange-color",
   ];
   lightThemes = [
-    "default-light-color",
-    "amber-light-color",
-    "purple-light-color",
-    "greenny-light-color",
-    "pink-light-color",
-    "deeporange-light-color",
+    "light-default-color",
+    "light-amber-color",
+    "light-purple-color",
+    "light-greenny-color",
+    "light-pink-color",
+    "light-deeporange-color",
   ];
+
   isDark: boolean;
   isDarkSidebar = false;
   isActive = false;
@@ -56,8 +56,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
   defaultDarkTheme: string;
   visibleSidebar2: boolean;
   isDarkTheme: Observable<boolean>;
-  customClass = "default-light-color";
-  // customClass :string;
+  customClass = "light-default-color";
   currentTheme: string;
   themeIndex: number;
   mobileSidebarModal: boolean;
@@ -93,7 +92,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
       }
     );
 
-    if (this.currentTheme == "default-light-color") {
+    if (this.currentTheme == "light-default-color") {
       this.isChecked = false;
     } else {
       this.isChecked = true;
@@ -123,13 +122,13 @@ export class LayoutComponent implements OnInit, OnDestroy {
     if (value === "light") {
       let themeIdx = this.themeId ? this.themeId : "0";
       this.activedTheme(themeIdx);
-      this.customClass = "default-light-color";
+      this.customClass = "light-default-color";
       localStorage.setItem("activetheme", this.customClass);
       this.currentTheme = localStorage.getItem("activetheme");
     } else {
       let themeIdx = this.themeId ? this.themeId : "0";
       this.activedTheme(themeIdx);
-      this.customClass = "default-dark-color";
+      this.customClass = "dark-default-color";
       localStorage.setItem("activetheme", this.customClass);
       this.currentTheme = localStorage.getItem("activetheme");
     }

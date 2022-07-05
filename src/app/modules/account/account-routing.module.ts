@@ -3,7 +3,7 @@ import { Routes, RouterModule } from "@angular/router";
 
 import { AccountComponent } from "./account.component";
 import { PhotoGalleryProfileComponent } from "./photo-gallery-profile/photo-gallery-profile.component";
-import { FriendListsProfileComponent } from "./friend-lists-profile/friend-lists-profile.component";
+// import { FriendListsProfileComponent } from "./friend-lists-profile/friend-lists-profile.component";
 import { PersonalDetailsEditComponent } from "./personal-details-edit/personal-details-edit.component";
 import { TimelineWrapperAccountComponent } from "./timeline-wrapper-account/timeline-wrapper-account.component";
 import { PersonalDetailsComponent } from "./personal-details/personal-details.component";
@@ -11,36 +11,69 @@ import { NotificationAccountComponent } from "./notification-account/notificatio
 import { SignInEditComponent } from "./sign-in-edit/sign-in-edit.component";
 import { AccountSettingComponent } from "./account-setting/account-setting.component";
 import { AllFriendsComponent } from "./all-friends/all-friends.component";
+import { EditProfileComponent } from "./edit-profile/edit-profile.component";
 const routes: Routes = [
   {
     path: "",
     component: AccountComponent,
     children: [
+      // {
+      //   path: "profile-information",
+      //   component: PersonalDetailsComponent,
+      //   data: { breadcrumb: "Profile Info" },
+      // },
+      // {
+      //   path: "email-setting",
+      //   component: NotificationAccountComponent,
+      //   data: { breadcrumb: "Email Setting" },
+      // },
       {
-        path: "profile-information",
-        component: PersonalDetailsComponent,
-        data: { breadcrumb: "Profile Info" },
+        path: "edit-profile",
+        component: EditProfileComponent,
+        data: { breadcrumb: "Edit Profile" },
+        children:[
+          {
+            path: "change-password",
+            component: SignInEditComponent,
+            data: { breadcrumb: "Change Password" },
+          },
+          {
+            path: "account-setting",
+            component: AccountSettingComponent,
+            data: { breadcrumb: "Account Setting" },
+          },
+          {
+            path: "edit-information",
+            component: PersonalDetailsEditComponent,
+            data: { breadcrumb: "Update Info" },
+          },
+          {
+            path: "profile-information",
+            component: PersonalDetailsComponent,
+            data: { breadcrumb: "Profile Info" },
+          },
+          {
+            path: "email-setting",
+            component: NotificationAccountComponent,
+            data: { breadcrumb: "Email Setting" },
+          },
+        ]
       },
-      {
-        path: "email-setting",
-        component: NotificationAccountComponent,
-        data: { breadcrumb: "Email Setting" },
-      },
-      {
-        path: "change-password",
-        component: SignInEditComponent,
-        data: { breadcrumb: "Change Password" },
-      },
-      {
-        path: "account-setting",
-        component: AccountSettingComponent,
-        data: { breadcrumb: "Account Setting" },
-      },
-      {
-        path: "account-information",
-        component: PersonalDetailsEditComponent,
-        data: { breadcrumb: "Account Info" },
-      },
+      // {
+      //   path: "change-password",
+      //   component: SignInEditComponent,
+      //   data: { breadcrumb: "Change Password" },
+      // },
+      // {
+      //   path: "account-setting",
+      //   component: AccountSettingComponent,
+      //   data: { breadcrumb: "Account Setting" },
+      // },
+      // {
+      //   path: "account-information",
+      //   component: PersonalDetailsEditComponent,
+      //   data: { breadcrumb: "Account Info" },
+      // },
       {
         path: "timeline",
         component: TimelineWrapperAccountComponent,

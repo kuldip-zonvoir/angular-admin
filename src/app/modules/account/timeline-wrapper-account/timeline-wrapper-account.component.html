@@ -1,28 +1,137 @@
-<div class="row m-b-20">
-  <div class="col-lg-12">
-    <app-header-profile [activeId]="'0'"></app-header-profile>
+
+<div class="row sm_post_time_line">
+  <div class="col-lg-3 col-md-3 col_order_2 ">
+    <div class="left_pro_sidebar">
+      <div class="grid-bottom ">
+        <app-page-suggestion class="smp_suggestions"></app-page-suggestion>
+      </div>
+      <div class="grid-bottom ">
+        <app-group-suggestions class="smp_suggestions"></app-group-suggestions>
+      </div>
+      <div class="grid-bottom ">
+        <app-poll class="smp_suggestions"></app-poll>
+      </div>
+      <div class="grid-bottom ">
+        <app-poll-result class="smp_suggestions"></app-poll-result>
+      </div>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-lg-8 col-md-7 m-b-20">
+  <div class="col-lg-6 col-md-6 col_order_1 col-md-7 m-b-20">
     <div class="row">
       <div class="col-lg-12 m-b-20 m-b-16">
         <app-create-post></app-create-post>
       </div>
       <div class="col-lg-12">
         <ng-container *ngFor="let item of posts">
-          <app-timeline-profile [post]="item"></app-timeline-profile>
+          <app-timeline-profile [post]="item">
+            <!-- post type youtube video -->
+            <div *ngIf="item.post_type == 'video'" class="">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/Uh9643c2P6k"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                class="embed_post_video"
+              ></iframe>
+            </div>
+            <!-- share other post link -->
+            <div
+              *ngIf="item.post_type == 'share_link'"
+              class="shared_other_post"
+            >
+              <div class="shared_post_pic">
+                <img
+                  src="assets/media/images/profile/job.jpg"
+                  class="sp_img"
+                  alt=""
+                />
+              </div>
+              <div class="shared_post_details">
+                <h6 class="sp_title">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing.
+                </h6>
+                <p class="sp_description text-muted">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Laboriosam non veritatis velit odit et sapiente tenetur sit
+                  nihil repellat. Impedit.
+                </p>
+                <div class="sp_link text-muted">
+                  <a href="">zonvoir.com</a>
+                </div>
+              </div>
+            </div>
+            <!-- for two pics -->
+            <div *ngIf="item.post_type == 'one_img'" class="sm_multi_post">
+              <img
+                class="profile-user-post"
+                src="assets/media/images/profile/post_10.jpg"
+                alt="Card image"
+              />
+            </div>
+            <!-- for two pics -->
+            <div *ngIf="item.post_type == 'two_img'" class="sm_multi_post">
+              <div class="sm_one_pic">
+                <img
+                  src="assets/media/images/profile/food.jpg"
+                  class="sm_multi_img"
+                  alt=""
+                />
+              </div>
+              <div class="sm_more_pics">
+                <div class="sm_multi_img_wrap">
+                  <img
+                    src="assets/media/images/profile/tower.jpg"
+                    class="sm_multi_img"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- for three pics -->
+            <div *ngIf="item.post_type == 'three_img'" class="sm_multi_post">
+              <div class="sm_one_pic">
+                <img
+                  src="assets/media/images/profile/street.jpg"
+                  class="sm_multi_img"
+                  alt=""
+                />
+              </div>
+              <div class="sm_more_pics">
+                <div class="sm_multi_img_wrap">
+                  <img
+                    src="assets/media/images/profile/italy.jpg"
+                    class="sm_multi_img"
+                    alt=""
+                  />
+                </div>
+                <div class="sm_multi_img_wrap">
+                  <img
+                    src="assets/media/images/profile/dreamlens.jpg"
+                    class="sm_multi_img"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </app-timeline-profile>
         </ng-container>
       </div>
     </div>
   </div>
-  <div class="col-lg-4 col-md-5 m-b-20">
+
+  <div class="col-lg-3 col-md-3 col_order_3 m-b-20">
     <div class="right_pro_sidebar">
-      <div class="m-b-20">
-        <app-friend-lists-profile></app-friend-lists-profile>
+      <div class="grid-bottom ">
+        <app-friend-lists-profile
+          class="smp_suggestions"
+        ></app-friend-lists-profile>
       </div>
-      <div class="m-b-20">
-        <app-about-profile></app-about-profile>
+      <div class="grid-bottom ">
+        <app-feature-photos class="smp_suggestions"></app-feature-photos>
       </div>
     </div>
   </div>

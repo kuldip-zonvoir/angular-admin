@@ -177,6 +177,7 @@ $menufontWeight: 500;
         color: $sidebar-text-color;
         padding: 8px 8px 8px 18px;
         font-weight: $menufontWeight;
+        margin: 5px 0;
         .nav_name {
           font-size: $sidebarMenuSize;
           font-weight: $menufontWeight;
@@ -197,6 +198,7 @@ $menufontWeight: 500;
           background-color: $primary;
           color: $white;
           border-radius: 0 20px 20px 0;
+          margin: 14px 0;
           .material-icons-outlined {
             color: inherit;
           }
@@ -218,6 +220,7 @@ $menufontWeight: 500;
     }
 
     .menu_submenu {
+      // padding-top: 14px;
       .menu_subnav {
         margin-bottom: 0;
         padding-left: 0;
@@ -236,7 +239,7 @@ $menufontWeight: 500;
             display: block;
             font-weight: $subMenufontWeight;
             color: $sidebar-text-color;
-            padding: 6px 0 6px 54px;
+            padding: 10px 0 10px 54px;
             transition: all ease-in-out 0.2s;
             &:hover {
               color: $primary;
@@ -254,7 +257,7 @@ $menufontWeight: 500;
                 width: 2px;
                 height: 2px;
                 border-radius: 50%;
-                top: 10px;
+                top: 15px;
                 left: 33px;
                 padding: 2px;
                 border: 2px solid $primary;
@@ -330,6 +333,7 @@ $menufontWeight: 500;
                 color: $sidebar-text-color;
                 padding: 8px 8px 8px 18px;
                 font-weight: $menufontWeight;
+                 margin: 5px 0;
                 .nav_name {
                   font-size: $sidebarMenuSize;
                   font-weight: $menufontWeight;
@@ -372,6 +376,7 @@ $menufontWeight: 500;
             }
 
             .menu_submenu {
+              // padding-top: 14px;
               .menu_subnav {
                 margin-bottom: 0;
                 padding-left: 0;
@@ -390,7 +395,7 @@ $menufontWeight: 500;
                     display: block;
                     font-weight: $subMenufontWeight;
                     color: $sidebar-text-color;
-                    padding: 6px 0 6px 54px;
+                    padding: 10px 0 10px 54px;
                     transition: all ease-in-out 0.2s;
                     &:hover {
                       color: $primary;

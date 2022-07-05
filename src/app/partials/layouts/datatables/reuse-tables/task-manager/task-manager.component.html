@@ -180,6 +180,16 @@
           ></textarea>
         </div>
         <div class="form-group m-b-12">
+          <label for="status">Status</label>
+          <p-dropdown
+            [options]="statusArr"
+            class="basic_dpdown"
+            [(ngModel)]="selectedStatus"
+            [ngModelOptions]="{ standalone: true }"
+            optionLabel="label"
+          ></p-dropdown>
+        </div>
+        <div class="form-group m-b-12">
           <label for="deadline">Deadline</label>
           <input
             type="text"
@@ -190,30 +200,16 @@
             placeholder=" Date"
           />
         </div>
-        <div class="form-group m-b-12">
-          <label for="status">Status</label>
-          <select
-            class="form-select form-control"
-            formControlName="status"
-            aria-label="Default select example"
-          >
-            <option value="Completed">Completed</option>
-            <option value="Canceled">Canceled</option>
-            <option value="Inprogress">Inprogress</option>
-          </select>
-        </div>
+
         <div class="form-group m-b-12">
           <label for="assign">Assign To</label>
-          <select
-            class="form-select form-control"
-            formControlName="assignto"
-            aria-label="Default select example"
-          >
-            <option value="David">David</option>
-            <option value="Morgon">Morgon</option>
-            <option value="Tom">Tom</option>
-            <option value="Kane">Kane</option>
-          </select>
+          <p-dropdown
+            [options]="employeesArr"
+            class="basic_dpdown"
+            [(ngModel)]="selectedEmp"
+            [ngModelOptions]="{ standalone: true }"
+            optionLabel="label"
+          ></p-dropdown>
         </div>
       </div>
     </form>

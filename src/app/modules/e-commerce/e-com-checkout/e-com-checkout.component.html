@@ -34,21 +34,25 @@
               <div class="col-lg-6 col-md-6">
                 <div class="form-group m-b-12">
                   <label for="" class="">State</label>
-                  <select name="" class="form-control" id="">
-                    <option value="">Uttar Pradesh</option>
-                    <option value="">Delhi</option>
-                    <option value="">Haryana</option>
-                    <option value="">Punjab</option>
-                  </select>
+                  <p-dropdown
+                    [options]="statesArr"
+                    class="basic_dpdown"
+                    [(ngModel)]="selectedState"
+                    [ngModelOptions]="{ standalone: true }"
+                    optionLabel="label"
+                  ></p-dropdown>
                 </div>
               </div>
               <div class="col-lg-6 col-md-6">
                 <div class="form-group m-b-12">
                   <label for="" class="">City</label>
-                  <select name="" class="form-control" id="">
-                    <option value="">Kanpur</option>
-                    <option value="">Lucknow</option>
-                  </select>
+                  <p-dropdown
+                    [options]="citiesArr"
+                    class="basic_dpdown"
+                    [(ngModel)]="selectedCity"
+                    [ngModelOptions]="{ standalone: true }"
+                    optionLabel="label"
+                  ></p-dropdown>
                 </div>
               </div>
               <div class="col-lg-6 col-md-6">

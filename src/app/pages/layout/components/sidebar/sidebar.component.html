@@ -53,7 +53,7 @@
             [isAnimated]="true"
             class="menu_submenu"
           >
-            <div class="menu_submenu">
+            <div class="">
               <ul class="menu_subnav">
                 <li class="subnav_nav_item">
                   <a
@@ -163,7 +163,7 @@
             [isAnimated]="true"
             class="menu_submenu"
           >
-            <div class="menu_submenu">
+            <div class="">
               <ul class="menu_subnav">
                 <li class="subnav_nav_item">
                   <a
@@ -174,6 +174,28 @@
                     routerLink="./account/timeline"
                   >
                     <span class="subnav_nav_name"> Profile Overview </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            id="collapseBasic"
+            [collapse]="!isSubMenuArr[1]"
+            [isAnimated]="true"
+            class="menu_submenu"
+          >
+            <div class="">
+              <ul class="menu_subnav">
+                <li class="subnav_nav_item">
+                  <a
+                    class="subnav_nav_link"
+                    [ngClass]="{
+                      active: currentUrlString == '/account/edit-profile/edit-information'
+                    }"
+                    routerLink="./account/edit-profile/edit-information"
+                  >
+                    <span class="subnav_nav_name">Edit  Profile  </span>
                   </a>
                 </li>
               </ul>
@@ -215,7 +237,7 @@
             [isAnimated]="true"
             class="menu_submenu"
           >
-            <div class="menu_submenu">
+            <div class="">
               <ul class="menu_subnav">
                 <li class="subnav_nav_item">
                   <a
@@ -296,7 +318,7 @@
             [isAnimated]="true"
             class="menu_submenu"
           >
-            <div class="menu_submenu">
+            <div class="">
               <ul class="menu_subnav">
                 <li class="subnav_nav_item">
                   <a
@@ -442,7 +464,7 @@
             [isAnimated]="true"
             class="menu_submenu"
           >
-            <div class="menu_submenu">
+            <div class="">
               <ul class="menu_subnav">
                 <li class="subnav_nav_item">
                   <a
@@ -511,7 +533,7 @@
             [isAnimated]="true"
             class="menu_submenu"
           >
-            <div class="menu_submenu">
+            <div class="">
               <ul class="menu_subnav">
                 <li class="subnav_nav_item">
                   <a
@@ -572,7 +594,7 @@
             [isAnimated]="true"
             class="menu_submenu"
           >
-            <div class="menu_submenu">
+            <div class="">
               <ul class="menu_subnav">
                 <li class="subnav_nav_item">
                   <a
@@ -728,7 +750,7 @@
             [isAnimated]="true"
             class="menu_submenu"
           >
-            <div class="menu_submenu">
+            <div class="">
               <ul class="menu_subnav">
                 <li class="subnav_nav_item">
                   <a
@@ -789,7 +811,7 @@
             [isAnimated]="true"
             class="menu_submenu"
           >
-            <div class="menu_submenu">
+            <div class="">
               <ul class="menu_subnav">
                 <li class="subnav_nav_item">
                   <a
@@ -1546,11 +1568,11 @@
                 <a
                   class="subnav_nav_link"
                   [ngClass]="{
-                    active: currentUrlString == '/auth/reset-password'
+                    active: currentUrlString == '/auth/forgot-password'
                   }"
-                  routerLink="./auth/reset-password"
+                  routerLink="./auth/forgot-password"
                 >
-                  <span class="subnav_nav_name"> Reset Password </span>
+                  <span class="subnav_nav_name"> Forgot Password </span>
                 </a>
               </li>
             </ul>

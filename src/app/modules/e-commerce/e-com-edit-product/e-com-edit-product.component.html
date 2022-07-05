@@ -98,20 +98,23 @@
           <div class="col-lg-6 col-md-6">
             <div class="form-group m-b-12">
               <label for="" class="">Category</label>
-              <select name="" class="form-control" id="">
-                <option value="">Electronics</option>
-                <option value="">Fashion</option>
-                <option value="">Grocery</option>
-              </select>
+              <p-dropdown
+                [options]="categories"
+                class="basic_dpdown"
+                [(ngModel)]="selectedCategory"
+                [ngModelOptions]="{ standalone: true }"
+                optionLabel="label"
+              ></p-dropdown>
             </div>
             <div class="form-group m-b-12">
               <label for="" class="">Sub Category</label>
-              <select name="" class="form-control" id="">
-                <option value="">Mobile</option>
-                <option value="">Clothes</option>
-                <option value="">Accessories</option>
-                <option value="">Footwear</option>
-              </select>
+              <p-dropdown
+                [options]="subCategories"
+                class="basic_dpdown"
+                [(ngModel)]="selectedSubCategory"
+                [ngModelOptions]="{ standalone: true }"
+                optionLabel="label"
+              ></p-dropdown>
             </div>
 
             <div class="form-group m-b-12">
@@ -214,10 +217,13 @@
         </div>
         <div class="form-group col-lg-6 m-b-12">
           <label for="" class="p-b-8">ISI Certified</label>
-          <select name="" class="form-control" id="">
-            <option value="">Yes</option>
-            <option value="">No</option>
-          </select>
+          <p-dropdown
+            [options]="ISIcertftArr"
+            class="basic_dpdown"
+            [(ngModel)]="selectedCert"
+            [ngModelOptions]="{ standalone: true }"
+            optionLabel="label"
+          ></p-dropdown>
         </div>
         <div class="form-group col-lg-6 m-b-12">
           <label for="" class="p-b-8"> Vendor Name</label>
@@ -245,12 +251,13 @@
         </div>
         <div class="form-group col-lg-6 m-b-12">
           <label for="" class="p-b-8">Delivery Status</label>
-          <select name="" class="form-control" id="">
-            <option value="">Delivered</option>
-            <option value="">Shiped</option>
-            <option value="">Out For Delivery</option>
-            <option value="">Canceled</option>
-          </select>
+          <p-dropdown
+            [options]="deliveryStatusArr"
+            class="basic_dpdown"
+            [(ngModel)]="selectedStatus"
+            [ngModelOptions]="{ standalone: true }"
+            optionLabel="label"
+          ></p-dropdown>
         </div>
       </div>
       <div class="d-flex justify-content-end">

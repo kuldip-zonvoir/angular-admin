@@ -1,0 +1,32 @@
+<div class="card custom-card">
+  <div class="card-header custom-card-header border-1">
+    <div class="d-flex align-items-center justify-content-start">
+      <div class="m-b-0">
+        <h5 class="m-b-0 sugg_page_title">Group Suggestions</h5>
+      </div>
+    </div>
+  </div>
+  <div class="card-body zp-10">
+    <ul class="nav">
+      <ng-container *ngFor="let group of groups; let i = index">
+        <li class="nav_item w-100 p-y-10 px-1 border-1 cursor-pointer">
+          <a class="decoration-none d-flex align-items-center">
+            <div class="">
+              <img
+                [src]="group.group_pic"
+                class="img-responsive sm_group_logo img-list-circle"
+                alt=""
+              />
+            </div>
+            <div class="m-l-8 sugg_wrap">
+              <h6 class="m-b-0 sugg_sub_title">{{ group.group_name }}</h6>
+              <p class="sugg_short_desc">
+                {{ group.group_desc }}
+              </p>
+            </div>
+          </a>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+</div>

@@ -1,13 +1,6 @@
 <div class="card custom-card s_media_post m-b-20">
   <div
-    class="
-      card-header
-      custom-card-header
-      d-flex
-      align-items-center
-      justify-content-between
-      border-1
-    "
+    class="card-header custom-card-header d-flex align-items-center justify-content-between border-1"
   >
     <div class="d-flex align-items-center justify-content-start">
       <div class="m-r-12 d-flex align-items-center">
@@ -75,30 +68,52 @@
         {{ post.post_content }}
       </p>
     </div>
-    <div class="p-b-12">
-      <img class="profile-user-post" [src]="post.post_file" alt="Card image" />
+    <div class="sm_post_pics">
+      <ng-content></ng-content>
     </div>
   </div>
   <div class="card-footer custom-card-footer border-top-1">
-    <div class="d-flex align-items-center justify-content-around">
+    <div class="d-flex align-items-center justify-content-between">
       <div class="d-flex align-items-center cursor-pointer">
-        <span class="material-icons  m-r-8 icon-20 post_like">
-          thumb_up
-        </span>
-        <span class="m-r-4">{{ post.post_likes }}</span>
-        <span class="post_action">Like</span>
+        <span class="material-icons m-r-8 icon-20 post_like"> favorite </span>
+        <span class="text-muted count_sm_reaction"> 1.2K </span>
+
+        <div class="reacted_on_post">
+          <img
+            src="assets/media/images/users/300_1.jpg"
+            class="reacted_people"
+            alt=""
+          />
+          <img
+            src="assets/media/images/users/300_2.jpg"
+            class="reacted_people"
+            alt=""
+          />
+          <img
+            src="assets/media/images/users/300_3.jpg"
+            class="reacted_people"
+            alt=""
+          />
+          <img
+            src="assets/media/images/users/300_4.jpg"
+            class="reacted_people"
+            alt=""
+          />
+        </div>
+        <span class="m-r-4 count_sm_reaction">+{{ post.post_likes }}</span>
+        <span class="count_sm_reaction">more</span>
       </div>
-      <div class="d-flex align-items-center cursor-pointer">
-        <span class="material-icons m-r-8 icon-20 post_comment ">
-          mode_comment
-        </span>
-        <span class="m-r-4">{{ post.post_comments }}</span>
-        <span class="post_action">Comment</span>
-      </div>
-      <div class="d-flex align-items-center cursor-pointer">
-        <span class="material-icons m-r-8 icon-20  "> share </span>
-        <span class="m-r-4">{{ post.post_share }}</span>
-        <span class="post_action">Share</span>
+      <div class="d-flex">
+        <div class="d-inline-flex align-items-center cursor-pointer">
+          <span class="material-icons m-r-6 icon-20 post_comment">
+            mode_comment
+          </span>
+          <span class="m-r-4 count_sm_reaction">{{ post.post_comments }}</span>
+        </div>
+        <div class="d-inline-flex align-items-center cursor-pointer">
+          <span class="material-icons m-r-6 icon-20"> share </span>
+          <span class="count_sm_reaction">{{ post.post_share }}K</span>
+        </div>
       </div>
     </div>
   </div>

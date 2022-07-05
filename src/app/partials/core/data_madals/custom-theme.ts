@@ -3,13 +3,13 @@ export const customizeTheme = {
     themes: {
       light: {
         default: "default-light-color",
-        green: "green-light-color",
-        pink: "pink-light-color",
+        green: "light-green-color",
+        pink: "light-pink-color",
       },
       dark: {
-        default: "default-dark-color",
-        green: "green-dark-color",
-        pink: "pink-dark-color",
+        default: "dark-default-color",
+        green: "dark-green-color",
+        pink: "dark-pink-color",
       },
     },
   },

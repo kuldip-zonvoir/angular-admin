@@ -12,7 +12,7 @@ export class DropProfileWigitComponent implements OnInit {
   ngOnInit(): void {}
 
   goToProfile() {
-    this.router.navigate(["account/profile-information"]);
+    this.router.navigate(["account/timeline"]);
   }
 
   goToMail() {

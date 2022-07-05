@@ -1,5 +1,15 @@
-.right_pro_sidebar {
-  position: sticky;
-  top: 0;
-  right: 0;
+.smp_suggestions {
+  ::ng-deep .sugg_page_title {
+    font-size: 15px !important;
+  }
+  ::ng-deep .sugg_sub_title {
+    font-size: 13px !important;
+    padding-bottom: 3px;
+  }
+  ::ng-deep .sugg_short_desc {
+    font-size: 13px;
+  }
+  ::ng-deep .sugg_other {
+    font-size: 13px;
+  }
 }

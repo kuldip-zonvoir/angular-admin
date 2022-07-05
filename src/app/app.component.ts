@@ -5,7 +5,7 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
-  customClass: "default-light-color";
+  customClass: "light-default-color";
   flashScreen: Boolean;
   loaderStatus: Boolean;
   constructor() {
@@ -17,10 +17,7 @@ export class AppComponent {
     if (this.customClass) {
       localStorage.setItem("activetheme", this.customClass);
     } else {
-      localStorage.setItem("activetheme", "default-light-color");
+      localStorage.setItem("activetheme", "light-default-color");
     }
-    // setTimeout(() => {
-    //   this.loaderStatus = false;
-    // }, 5000);
   }
 }

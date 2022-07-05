@@ -17,10 +17,47 @@ export class TaskManagerComponent implements OnInit {
   confirmDialog: boolean;
   tasks = [];
   bsValue = new Date();
+  statusArr = [];
+  selectedStatus: string;
+  employeesArr = [];
+  selectedEmp: string;
   taskName = "Create the landing page on the beta channel";
   taskDetails =
     " lorem qui ipsum deserunt duis exercitation lorem elit qui qui ipsum tempor nulla velit aliquip enim consequat incididunt pariatur duis excepteur elit irure nulla ipsum dolor dolore est.";
-  constructor(private fake_api: FakeApiService, private fb: FormBuilder) {}
+  constructor(private fake_api: FakeApiService, private fb: FormBuilder) {
+    this.statusArr = [
+      {
+        value: "1",
+        label: "In Progress",
+      },
+      {
+        value: "2",
+        label: "Canceled",
+      },
+      {
+        value: "3",
+        label: "Completed",
+      },
+    ];
+    this.employeesArr = [
+      {
+        value: "1",
+        label: "Morgon Stark",
+      },
+      {
+        value: "2",
+        label: "Peter Siddle",
+      },
+      {
+        value: "3",
+        label: "Ablert Finch",
+      },
+      {
+        value: "3",
+        label: "Harry J",
+      },
+    ];
+  }
 
   ngOnInit(): void {
     this.tasks = this.fake_api.getTasks();

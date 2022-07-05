@@ -131,6 +131,25 @@
   }
 }
 
+.get_btn_theme {
+  &.btn-primary {
+    background-color: #fed700 !important;
+    border-color: #fed700 !important;
+    &:hover {
+      background-color: #fed700 !important;
+      border-color: #fed700 !important;
+    }
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+
+    &:active {
+    }
+  }
+}
+
 .btn-mini {
   text-decoration: none;
   padding: 6px 12px;

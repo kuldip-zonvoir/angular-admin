@@ -1,16 +1,11 @@
-<div class="row mb-3">
-  <div class="col-lg-12">
-    <app-header-profile [activeId]="'1'"></app-header-profile>
-  </div>
-</div>
 <div class="row">
   <ng-container *ngFor="let contacts of friends">
     <div class="col-lg-3 col-sm-6 col-md-4 friend-contact">
       <div class="hover">
         <div class="card custom-card">
           <div class="card-body">
-            <div class="">
-              <div class="d-flex align-items-center justify-content-center">
+            <div class="m-b-8">
+              <div class="d-flex align-items-center justify-content-center ">
                 <img
                   [src]="contacts.image"
                   alt="profile-pic"
@@ -24,24 +19,13 @@
                 class="d-flex p-b-8 justify-content-center align-items-center"
               >
                 <button
-                  class="
-                    btn-mini
-                    d-flex
-                    align-items-center
-                    m-r-8
-                    btn-square btn-primary
-                  "
+                  class="btn-mini d-flex align-items-center m-r-8 btn-square btn-primary"
                 >
                   <i class="ti ti-plus icon-15 text-white m-r-8 fw-500"></i>
                   Follow
                 </button>
                 <button
-                  class="
-                    btn-mini
-                    d-flex
-                    align-items-center
-                    btn-square btn-secondary
-                  "
+                  class="btn-mini d-flex align-items-center btn-square btn-secondary"
                 >
                   <i class="ti ti-comment icon-15 text-white m-r-8 fw-500"></i>
                   chat
@@ -51,13 +35,7 @@
                 {{ contacts.bio }}
               </p>
               <p
-                class="
-                  m-b-4
-                  text-muted
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                "
+                class="m-b-4 text-muted d-flex align-items-center justify-content-center"
               >
                 <span class="material-icons-outlined icon-20 m-r-8">
                   domain
@@ -65,13 +43,7 @@
                 <span class="">{{ contacts.occupation }}</span>
               </p>
               <p
-                class="
-                  m-b-4
-                  text-muted
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                "
+                class="m-b-4 text-muted d-flex align-items-center justify-content-center"
               >
                 <span class="material-icons-outlined m-r-8 icon-20">
                   call
@@ -82,24 +54,12 @@
               </p>
               <div class="d-flex justify-content-center align-items-center">
                 <p
-                  class="
-                    m-b-4 m-r-8
-                    d-flex
-                    align-items-center
-                    justify-content-center
-                    m-r-8
-                  "
+                  class="m-b-4 m-r-8 d-flex align-items-center justify-content-center m-r-8"
                 >
                   User Ratting
                 </p>
                 <p
-                  class="
-                    m-b-4
-                    d-flex
-                    align-items-center
-                    justify-content-center
-                    m-r-8
-                  "
+                  class="m-b-4 d-flex align-items-center justify-content-center m-r-8"
                 >
                   <span class="material-icons-outlined text-warning">
                     grade

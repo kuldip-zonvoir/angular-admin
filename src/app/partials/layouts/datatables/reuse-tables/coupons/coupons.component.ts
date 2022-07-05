@@ -7,7 +7,7 @@ import { EComCouponService } from "src/app/partials/core/services/e-com-coupon.s
   templateUrl: "./coupons.component.html",
   styleUrls: ["./coupons.component.scss"],
 })
-export class CouponsComponent implements OnInit,OnDestroy {
+export class CouponsComponent implements OnInit, OnDestroy {
   taskDialog: boolean;
   showBoundaryLinks = true;
   addTask: boolean;
@@ -16,15 +16,29 @@ export class CouponsComponent implements OnInit,OnDestroy {
   confirmDialog: boolean;
   couponDetail: boolean;
 
-    subscription: Subscription;
-
+  subscription: Subscription;
+  statusArr = [];
+  selectedStatus: string;
   couponList = [];
-  constructor(private _couponService: EComCouponService) {}
+  constructor(private _couponService: EComCouponService) {
+    this.statusArr = [
+      {
+        value: "0",
+        label: "Active",
+      },
+      {
+        value: "1",
+        label: "In active",
+      },
+    ];
+  }
 
   ngOnInit(): void {
-   this.subscription = this._couponService.couponModalToggle.subscribe((item) => {
-      this.couponDetail = item;
-    });
+    this.subscription = this._couponService.couponModalToggle.subscribe(
+      (item) => {
+        this.couponDetail = item;
+      }
+    );
     this.couponList = this._couponService.getCoupons();
   }
   showTask() {
@@ -52,9 +66,9 @@ export class CouponsComponent implements OnInit,OnDestroy {
   editCoupon(id: string) {
     this.couponDetail = true;
   }
-  updateCoupon() { }
-  
-    ngOnDestroy() {
+  updateCoupon() {}
+
+  ngOnDestroy() {
     this.subscription.unsubscribe();
   }
   termsPara = [

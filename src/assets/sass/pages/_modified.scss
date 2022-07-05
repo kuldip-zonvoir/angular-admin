@@ -2,9 +2,14 @@
 .s_media_post {
     .s_post_content {
         font-size: 14px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     .post_like {
-        color: $primary;
+        color: $danger;
     }
     .post_comment {
         color: $primary;
@@ -13,6 +18,9 @@
         font-size: $paraSize;
     }
 }
+
+
+
 .cart_product_desc {
     font-size: 13px;
 }
