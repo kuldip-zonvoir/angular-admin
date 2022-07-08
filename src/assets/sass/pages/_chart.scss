@@ -8,6 +8,29 @@
   padding: 10px;
 }
 //
+.stat_title{
+  font-size: 15px !important;
+  margin-bottom: 0;
+  text-transform: capitalize;
+}
+.stat_number{
+  font-size: 22px !important;
+  color: $black;
+  margin-bottom: 4px;
+}
+.percent_sub_title{
+  color: $paraColor;
+  font-size: $paraSize;
+}
+.statics_wrap{
+  display: flex;
+  .information_tab{
+      width: 60%;
+  }
+  .statics_tab{
+      width: 40%;
+  }
+}
 .k_spark_line {
   padding: 1.25rem 12px;
 }

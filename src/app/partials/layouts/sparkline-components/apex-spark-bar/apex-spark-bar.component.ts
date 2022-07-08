@@ -37,7 +37,7 @@ declare global {
   }
 }
 
-const sparkLineData = [47, 45, 41, 43, 19, 46, 35, 48, 41, 43, 29, 50];
+const sparkLineData = [10, 15, 30, 20, 12, 25, 35, 48, 15, 20];
 @Component({
   selector: "app-apex-spark-bar",
   templateUrl: "./apex-spark-bar.component.html",
@@ -56,14 +56,14 @@ export class ApexSparkBarComponent implements OnInit {
   public commonBarSparklineOptions: Partial<ChartOptions> = {
     chart: {
       type: "bar",
-      height: 80,
+      height: "45%",
       sparkline: {
         enabled: true,
       },
     },
     plotOptions: {
       bar: {
-        columnWidth: "80%",
+        columnWidth: "10%",
       },
     },
     stroke: {
@@ -83,7 +83,7 @@ export class ApexSparkBarComponent implements OnInit {
         inverseColors: true,
         opacityFrom: 1,
         opacityTo: 1,
-        stops: [0, 100],
+        stops: [10, 60],
       },
     },
     tooltip: {
@@ -112,7 +112,7 @@ export class ApexSparkBarComponent implements OnInit {
       series: [
         {
           name: "chart-bar-sparkline",
-          data: this.randomizeArray(sparkLineData.slice(0, 10)),
+          data: this.randomizeArray(sparkLineData.slice(0, 5)),
         },
       ],
     };
@@ -121,7 +121,7 @@ export class ApexSparkBarComponent implements OnInit {
       series: [
         {
           name: "chart-bar-sparkline",
-          data: this.randomizeArray(sparkLineData.slice(0, 10)),
+          data: this.randomizeArray(sparkLineData.slice(0, 5)),
         },
       ],
     };
@@ -130,7 +130,7 @@ export class ApexSparkBarComponent implements OnInit {
       series: [
         {
           name: "chart-bar-sparkline",
-          data: this.randomizeArray(sparkLineData.slice(0, 10)),
+          data: this.randomizeArray(sparkLineData.slice(0, 5)),
         },
       ],
     };
@@ -139,7 +139,7 @@ export class ApexSparkBarComponent implements OnInit {
       series: [
         {
           name: "chart-bar-sparkline",
-          data: this.randomizeArray(sparkLineData.slice(0, 10)),
+          data: this.randomizeArray(sparkLineData.slice(0, 5)),
         },
       ],
     };
@@ -169,7 +169,6 @@ export class ApexSparkBarComponent implements OnInit {
     this.colorFillable = {
       colors: [this.mycolor],
     };
-
     this.setCustomCommonAreaSparlineOptions("colors", {
       colors: [this.mycolor],
     });

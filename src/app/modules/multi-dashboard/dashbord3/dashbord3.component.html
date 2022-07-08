@@ -1,34 +1,132 @@
 <div class="row">
-  <div class="col-lg-3 col-md-3 col-md-6 col-sm-6 m-b-20">
-    <app-linecardsm1></app-linecardsm1>
+  <div class="col-md-3 col-lg-3 col-sm-6 m-b-20">
+    <div class="card custom-card no-radius">
+      <div class="zp-20 pb-0">
+        <div class="d-flex area_cc_wrap">
+          <div class="">
+            <h6 class="area_cc_title">total revenue</h6>
+            <h5 class="area_cc_stats">$576K</h5>
+            <div class="d-flex align-items-center">
+              <div class="icon_wrap_ana bg-success m-r-4">
+                <i class="ti ti-arrow-up ana_progress"></i>
+              </div>
+              <span class="percent_change text-success">5%</span>
+              <span class="percent_sub_title m-l-4">Last Year</span>
+            </div>
+          </div>
+          <div class="ml-auto">
+            <h1 class="">
+              <i class="fw-700 ti ti-money text-success"></i>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <app-apex-sparkline-area
+          [ChartColor]="chartColor2"
+        ></app-apex-sparkline-area>
+      </div>
+    </div>
   </div>
-  <div class="col-lg-3 col-md-3 col-md-6 col-sm-6 m-b-20">
-    <app-linecardsm2></app-linecardsm2>
+  <div class="col-md-3 col-lg-3 col-sm-6 m-b-20">
+    <div class="card custom-card no-radius">
+      <div class="zp-20 pb-0">
+        <div class="d-flex area_cc_wrap">
+          <div class="">
+            <h6 class="area_cc_title">total Orders</h6>
+            <h5 class="area_cc_stats">783.59M</h5>
+            <div class="d-flex align-items-center">
+              <div class="icon_wrap_ana bg-success m-r-4">
+                <i class="ti ti-arrow-up ana_progress"></i>
+              </div>
+              <span class="percent_change text-success">20%</span>
+              <span class="percent_sub_title m-l-4">Last Year</span>
+            </div>
+          </div>
+          <div class="m-l-auto">
+            <h1 class="">
+              <i class="fw-700 ti ti-shopping-cart-full text-warning"></i>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <app-apex-sparkline-area
+          [ChartColor]="chartColor3"
+        ></app-apex-sparkline-area>
+      </div>
+    </div>
   </div>
-  <div class="col-lg-3 col-md-3 col-md-6 col-sm-6 m-b-20">
-    <app-linecardsm4></app-linecardsm4>
+  <div class="col-md-3 col-lg-3 col-sm-6 m-b-20">
+    <div class="card custom-card no-radius">
+      <div class="zp-20 pb-0">
+        <div class="d-flex area_cc_wrap">
+          <div class="">
+            <h6 class="area_cc_title">total sales</h6>
+            <h5 class="area_cc_stats">$185.5M</h5>
+            <div class="d-flex align-items-center">
+              <div class="icon_wrap_ana bg-danger m-r-4">
+                <i class="ti ti-arrow-up ana_progress"></i>
+              </div>
+              <span class="percent_change text-danger">8%</span>
+              <span class="percent_sub_title m-l-4">Last Year</span>
+            </div>
+          </div>
+          <div class="m-l-auto">
+            <h1 class="">
+              <i class="fw-700 ti ti-bar-chart text-info"></i>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <app-apex-sparkline-area
+          [ChartColor]="chartColor4"
+        ></app-apex-sparkline-area>
+      </div>
+    </div>
   </div>
-  <div class="col-lg-3 col-md-3 col-md-6 col-sm-6 m-b-20">
-    <app-linecardsm3></app-linecardsm3>
+  <div class="col-md-3 col-lg-3 col-sm-6 m-b-20">
+    <div class="card custom-card no-radius">
+      <div class="zp-20 pb-0">
+        <div class="d-flex area_cc_wrap">
+          <div class="">
+            <h6 class="area_cc_title">total Customers</h6>
+            <h5 class="area_cc_stats">255.25K</h5>
+            <div class="d-flex align-items-center">
+              <div class="icon_wrap_ana bg-success m-r-4">
+                <i class="ti ti-arrow-up ana_progress"></i>
+              </div>
+              <span class="percent_change text-success">40%</span>
+              <span class="percent_sub_title m-l-4">Last Year</span>
+            </div>
+          </div>
+          <div class="ml-auto">
+            <h1 class="">
+              <i class="fw-700 ti ti-user text-primary"></i>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <app-apex-sparkline-area
+          [ChartColor]="chartColor1"
+        ></app-apex-sparkline-area>
+      </div>
+    </div>
   </div>
 </div>
 <div class="row">
   <div class="col-lg-4 col-md-4">
     <div class="row">
-      <div class="col-lg-12 m-b-20">
-        <div class="card custom-card no-radius">
-          <app-util-card-progress-bar1></app-util-card-progress-bar1>
-        </div>
+      <div class="col-md-12 col-lg-12 m-b-20">
+        <app-barcardlg1 class="chart_stats_css"></app-barcardlg1>
       </div>
-      <div class="col-lg-12 m-b-20">
-        <div class="card custom-card no-radius">
-          <app-util-card-progress-bar3></app-util-card-progress-bar3>
-        </div>
+      <div class="col-md-12 col-lg-12 m-b-20">
+        <app-barcardlg2 class="chart_stats_css"></app-barcardlg2>
       </div>
-      <div class="col-lg-12 m-b-20">
-        <div class="card custom-card no-radius">
-          <app-util-card-progress-bar2></app-util-card-progress-bar2>
-        </div>
+      <div class="col-md-12 col-lg-12 m-b-20">
+        <app-barcardlg3 class="chart_stats_css"></app-barcardlg3>
       </div>
     </div>
   </div>
@@ -39,7 +137,205 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-md-12 col-lg-12 m-b-20">
+  <div class="col-lg-3 col-sm-6 grid-bottom">
+    <div class="card custom-card no-radius">
+      <div
+        class="card-header d-flex align-items-center custom-card-header border-1"
+      >
+        <h5 class="m-b-0">Orders Stats</h5>
+        <div class="ml-auto">
+          <div class="tag_light_ana">
+            <span class="tag_name_ana text-mute">Last Month</span>
+          </div>
+        </div>
+      </div>
+      <div *ngFor="let chart of donutcharts" class="data_chart_ana">
+        <app-apex-sparkline-donut
+          [chartParams]="chart"
+        ></app-apex-sparkline-donut>
+      </div>
+      <div class="data_chart_ana">
+        <div class="custom_tr">
+          <div class="custom_td1">
+            <div class="d-flex align-items-center">
+              <span class="marker bg-light-cyan m-r-12"></span>
+              <p class="m-b-0 text-muted">New</p>
+            </div>
+          </div>
+          <div class="custom_td2">
+            <p class="m-b-0 sub_heading">67,290</p>
+          </div>
+          <div class="custom_td3">
+            <p class="m-b-0 text-muted">30%</p>
+          </div>
+        </div>
+        <div class="custom_tr">
+          <div class="custom_td1">
+            <div class="d-flex align-items-center">
+              <span class="marker bg-light-orange m-r-12"></span>
+              <p class="m-b-0 text-muted">Repeat</p>
+            </div>
+          </div>
+          <div class="custom_td2">
+            <p class="m-b-0 sub_heading">40,270</p>
+          </div>
+          <div class="custom_td3">
+            <p class="m-b-0 text-muted">70%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-sm-6 grid-bottom">
+    <div class="card custom-card no-radius">
+      <div
+        class="card-header d-flex align-items-center custom-card-header border-1"
+      >
+        <h5 class="m-b-0">User by Age</h5>
+        <div class="ml-auto">
+          <div class="tag_light_ana">
+            <span class="tag_name_ana text-mute">Last Month</span>
+          </div>
+        </div>
+      </div>
+      <div *ngFor="let chart of donutcharts1" class="data_chart_ana">
+        <app-apex-sparkline-donut
+          [chartParams]="chart"
+        ></app-apex-sparkline-donut>
+      </div>
+      <div class="data_chart_ana">
+        <div class="custom_tr">
+          <div class="custom_td1">
+            <div class="d-flex align-items-center">
+              <span class="marker bg-primary m-r-12"></span>
+              <p class="m-b-0 text-muted">Under 30</p>
+            </div>
+          </div>
+          <div class="custom_td2">
+            <p class="m-b-0 sub_heading">60,331</p>
+          </div>
+          <div class="custom_td3">
+            <p class="m-b-0 text-muted">75%</p>
+          </div>
+        </div>
+        <div class="custom_tr">
+          <div class="custom_td1">
+            <div class="d-flex align-items-center">
+              <span class="marker bg_pink m-r-12"></span>
+              <p class="m-b-0 text-muted">Over 30</p>
+            </div>
+          </div>
+          <div class="custom_td2">
+            <p class="m-b-0 sub_heading">15,270</p>
+          </div>
+          <div class="custom_td3">
+            <p class="m-b-0 text-muted">25%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-sm-6 grid-bottom">
+    <div class="card custom-card no-radius">
+      <div
+        class="card-header d-flex align-items-center custom-card-header border-1"
+      >
+        <h5 class="m-b-0">User's Gender</h5>
+        <div class="ml-auto">
+          <div class="tag_light_ana">
+            <span class="tag_name_ana text-mute">Last Month</span>
+          </div>
+        </div>
+      </div>
+      <div *ngFor="let chart of donutcharts2" class="data_chart_ana">
+        <app-apex-sparkline-donut
+          [chartParams]="chart"
+        ></app-apex-sparkline-donut>
+      </div>
+      <div class="data_chart_ana">
+        <div class="custom_tr">
+          <div class="custom_td1">
+            <div class="d-flex align-items-center">
+              <span class="marker bg-green m-r-12"></span>
+              <p class="m-b-0 text-muted">Male</p>
+            </div>
+          </div>
+          <div class="custom_td2">
+            <p class="m-b-0 sub_heading">23,012</p>
+          </div>
+          <div class="custom_td3">
+            <p class="m-b-0 text-muted">40%</p>
+          </div>
+        </div>
+        <div class="custom_tr">
+          <div class="custom_td1">
+            <div class="d-flex align-items-center">
+              <span class="marker bg_light_pink m-r-12"></span>
+              <p class="m-b-0 text-muted">Female</p>
+            </div>
+          </div>
+          <div class="custom_td2">
+            <p class="m-b-0 sub_heading">35,270</p>
+          </div>
+          <div class="custom_td3">
+            <p class="m-b-0 text-muted">60%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-sm-6 grid-bottom">
+    <div class="card custom-card no-radius">
+      <div
+        class="card-header d-flex align-items-center custom-card-header border-1"
+      >
+        <h5 class="m-b-0">Device Stats</h5>
+        <div class="ml-auto">
+          <div class="tag_light_ana">
+            <span class="tag_name_ana text-mute">Last Month</span>
+          </div>
+        </div>
+      </div>
+      <div *ngFor="let chart of donutcharts3" class="data_chart_ana">
+        <app-apex-sparkline-donut
+          [chartParams]="chart"
+        ></app-apex-sparkline-donut>
+      </div>
+      <div class="data_chart_ana">
+        <div class="custom_tr">
+          <div class="custom_td1">
+            <div class="d-flex align-items-center">
+              <span class="marker bg-success m-r-12"></span>
+              <p class="m-b-0 text-muted">Desktop</p>
+            </div>
+          </div>
+          <div class="custom_td2">
+            <p class="m-b-0 sub_heading">50,191</p>
+          </div>
+          <div class="custom_td3">
+            <p class="m-b-0 text-muted">80%</p>
+          </div>
+        </div>
+        <div class="custom_tr">
+          <div class="custom_td1">
+            <div class="d-flex align-items-center">
+              <span class="marker bg-primary m-r-12"></span>
+              <p class="m-b-0 text-muted">App</p>
+            </div>
+          </div>
+          <div class="custom_td2">
+            <p class="m-b-0 sub_heading">18,270</p>
+          </div>
+          <div class="custom_td3">
+            <p class="m-b-0 text-muted">20%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8 col-lg-8 m-b-20">
     <div class="card custom-card no-radius">
       <div class="card-header custom-card-header border-1">
         <h5 class="card-title m-b-0">Products Market Share</h5>
@@ -49,19 +345,22 @@
       </div>
     </div>
   </div>
+  <div class="col-lg-4 col-md-4 grid-bottom">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="m-b-0">Events timeline</h5>
+      </div>
+      <div class="card-body time_line_ecom">
+        <app-custom-timeline-dash></app-custom-timeline-dash>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="row">
   <div class="col-lg-8 m-b-20">
     <div class="card custom-card no-radius">
       <div
-        class="
-          card-header
-          custom-card-header
-          d-flex
-          align-items-center
-          justify-content-between
-          border-1
-        "
+        class="card-header custom-card-header d-flex align-items-center justify-content-between border-1"
       >
         <h5 class="card-label m-b-0">Net Profit and Revenue</h5>
 
@@ -77,65 +376,8 @@
     </div>
   </div>
   <div class="col-lg-4 m-b-20">
-    <div class="row">
-      <div class="col-md-12 col-lg-12 m-b-20">
-        <div class="card custom-card no-radius">
-          <div class="card-body zp-12">
-            <div class="">
-              <div
-                class="d-flex justify-content-between p-b-8 align-items-center"
-              >
-                <h1 class="m-b-0">350.5K</h1>
-                <div class="tile-logo bg-warning">
-                  <span class="material-icons-outlined icon"> people_alt </span>
-                </div>
-              </div>
-              <div class="d-flex align-items-center">
-                <h6 class="m-b-0 text-muted">Total Users</h6>
-                <p class="m-b-0 m-l-8 text-success d-flex align-items-center">
-                  3.5%
-                  <span class="material-icons-outlined icon ml-1">
-                    arrow_upward
-                  </span>
-                  <span [hidden]="!decr" class="icon material-icons-outlined">
-                    arrow_downward
-                  </span>
-                </p>
-              </div>
-            </div>
-            <div
-              class="
-                d-flex
-                justify-content-between
-                align-items-center
-                pt-2
-                border-1
-                p-b-8
-              "
-            >
-              <p class="m-b-0">Recent Users Last Week</p>
-              <h4 class="m-b-0">350</h4>
-            </div>
-            <div class="">
-              <progressbar
-                [value]="22"
-                type="warning"
-                [striped]="true"
-              ></progressbar>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-12 col-lg-12 m-b-20">
-        <div class="no-radius">
-          <app-util-card-border-left3></app-util-card-border-left3>
-        </div>
-      </div>
-      <div class="col-md-12 col-lg-12 m-b-20">
-        <div class="no-radius">
-          <app-util-card-border-left2></app-util-card-border-left2>
-        </div>
-      </div>
+    <div class="">
+      <app-browser-stats></app-browser-stats>
     </div>
   </div>
 </div>
@@ -143,13 +385,7 @@
   <div class="col-md-12 col-lg-12 m-b-20">
     <div class="card custom-card no-radius">
       <div
-        class="
-          card-header
-          custom-card-header
-          border-1
-          d-flex
-          align-items-center
-        "
+        class="card-header custom-card-header border-1 d-flex align-items-center"
       >
         <div class="card-title m-b-0">
           <h5 class="card-title m-b-0">Trending Offers</h5>

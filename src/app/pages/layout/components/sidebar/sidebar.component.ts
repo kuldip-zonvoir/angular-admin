@@ -38,8 +38,8 @@ export class SidebarComponent implements OnInit,OnDestroy {
     "analystic",
   ];
   zvalue = "10";
-  isMobile = true;
-
+  isMobile :boolean;
+  
   sidebarkey = "";
   textkey = "";
   brandkey = "";
@@ -56,6 +56,8 @@ export class SidebarComponent implements OnInit,OnDestroy {
     private activatedRoute: ActivatedRoute,
     private router: Router
   ) {
+
+    this.isMobile=true;
     //to fill the array all element with false as a valueconsole
 
     this.isSubMenuArr.fill(false);

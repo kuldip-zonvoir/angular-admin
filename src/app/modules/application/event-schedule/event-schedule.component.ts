@@ -3,6 +3,12 @@ import { FormGroup } from "@angular/forms";
 import { Component, OnInit } from "@angular/core";
 import { CalendarOptions } from "@fullcalendar/angular";
 import { DatePipe } from "@angular/common";
+interface AllEvevnt{
+  id:string;
+  eventColor:string;
+  type:string;
+  
+}
 @Component({
   selector: "app-event-schedule",
   templateUrl: "./event-schedule.component.html",
@@ -29,34 +35,36 @@ export class EventScheduleComponent implements OnInit {
   eventIdColor = "";
   eventStartDate = "";
   customEvent: any;
-  eventTypes = [
-    {
-      id: "1",
-      eventColor: "#6971ff",
-      type: "Casual",
-    },
-    {
-      id: "2",
-      eventColor: "#ff2694",
-      type: "Personal",
-    },
-    {
-      id: "3",
-      eventColor: "#06d79c",
-      type: "Work",
-    },
-    {
-      id: "4",
-      eventColor: "#fa555d",
-      type: "Appointments",
-    },
-  ];
+  eventTypes:AllEvevnt[]
+
   Events = [];
   eventForm: FormGroup;
   schedularSidebarModal: boolean;
   public calendarOptions: Partial<CalendarOptions>;
 
   constructor(private fb: FormBuilder, public datepipe: DatePipe) {
+    this.eventTypes = [
+      {
+        id: "1",
+        eventColor: "#6971ff",
+        type: "Casual",
+      },
+      {
+        id: "2",
+        eventColor: "#ff2694",
+        type: "Personal",
+      },
+      {
+        id: "3",
+        eventColor: "#06d79c",
+        type: "Work",
+      },
+      {
+        id: "4",
+        eventColor: "#fa555d",
+        type: "Appointments",
+      },
+    ];
     this.todayDate =
       this.today.getFullYear() +
       "-" +

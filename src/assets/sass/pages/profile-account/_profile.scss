@@ -235,7 +235,7 @@
   margin-left: -20px;
   margin-right: -20px;
   & [class*="col-"] {
-    // padding-bottom: 0.5rem !important;
+    
     padding-left: 0.7rem !important;
     padding-right: 0.7rem !important;
   }
@@ -244,7 +244,6 @@
   margin-left: -20px;
   margin-right: -20px;
   & [class*="col-"] {
-    // padding-bottom: 0.5rem !important;
     padding-left: 0.5rem !important;
     padding-right: 0.5rem !important;
   }
@@ -315,6 +314,15 @@
   .profile_activity{
     display: none;
   }
+    .sm_feature_photos {
+    .img-square-gallery {
+        height:auto;
+        width: 100%;
+        object-fit: contain;
+    
+    }
+
+  }
   .sm_new_navigation {
     width: 100%;
   }
@@ -366,10 +374,13 @@
     width: 100%;
     height: 14rem;
   }
-  .img-square-gallery {
-    object-fit: contain;
-    width: 6rem;
-    height: auto;
+  .photo_gallary_new{
+
+    .img-square-gallery {
+      object-fit: contain;
+      width: 100%;
+      height: auto;
+    }
   }
 
   .profile-dp {
@@ -393,38 +404,41 @@
 .sm_spec_counts{
   padding-top: 21px;
 }
-  .sm_feature_photos {
-    .img-square-gallery {
-        height: 3rem;
-        width: 100%;
-        object-fit: contain;
-        cursor: pointer;
-        &:hover {
-            transition: 0.3s ease;
-            transform: scale(1.2);
-        }
-    }
-    .card-body {
-        padding: 1rem;
-    }
-  }
+
 }
 
 @include responsive-between(md, lg) {
-  .right_pro_sidebar{
-    position: inherit;
-    top: auto;
-    right: auto;
+  .sm_feature_photos {
+    .img-square-gallery {
+        height: auto;
+        width: 100%;
+        object-fit: contain;
+        cursor: pointer
+    }
   }
-  .left_pro_sidebar{
-    position: inherit;
-    top: auto;
-    left: auto;
+
+
+  .col_order_2 {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
   }
-  .img-square-gallery {
-    object-fit: contain;
-    width: 10rem;
-    height: 9rem;
+  .col_order_1 {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 1;
+  }
+  .col_order_3 {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 3;
+    order: 3;
+  }
+  .photo_gallary_new{
+    .img-square-gallery {
+      object-fit: contain;
+      width: 100%;
+      height: auto;
+    }
   }
   .profile-user-post {
     width: 100%;
@@ -438,11 +452,15 @@
 }
 
 @include responsive-between(lg, xl) {
-  .img-square-gallery {
-    object-fit: contain;
-    width: 8rem;
-    height: 8rem;
+  .photo_gallary_new{
+    .img-square-gallery {
+      height: auto;
+      width: 100%;
+      object-fit: contain;
+      cursor: pointer
   }
+  }
+
 
   .user-profile {
     position: absolute;

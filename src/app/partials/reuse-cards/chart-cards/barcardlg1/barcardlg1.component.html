@@ -1,11 +1,18 @@
 <div class="card custom-card no-radius">
   <div class="card-body">
-    <div class="">
-      <h5 class="text-dark fw-700 m-b-0">$684209</h5>
-      <h6 class="m-b-8">Sales</h6>
+    <div class="statics_wrap">
+      <div class="information_tab">
+        <h5 class="stat_number">$45K</h5>
+        <h6 class="stat_title">Cash Balance</h6>
+        <div class="icon_wrap_ana bg-success m-r-4">
+          <i class="ti ti-arrow-up ana_progress"></i>
+        </div>
+        <span class="percent_change text-success">25%</span>
+        <span class="percent_sub_title m-l-4">Last Month</span>
+        </div>
+      <div class="statics_tab">
+        <app-apex-spark-bar [ChartColor]="chartColor"></app-apex-spark-bar>
+      </div>
     </div>
-  </div>
-  <div class="">
-    <app-apex-spark-bar [ChartColor]="chartColor"></app-apex-spark-bar>
   </div>
 </div>

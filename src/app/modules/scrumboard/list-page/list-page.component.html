@@ -309,15 +309,29 @@
               <div class="form-group m-b-12">
                 <label for="" class="">Select Project </label>
                 <div class="">
-                  <app-custom-multi-select></app-custom-multi-select>
+                  <p-multiSelect
+                  placeholder="Select Project"
+          [options]="projects"
+          [(ngModel)]="selectedProjects"
+          [ngModelOptions]="{ standalone: true }"
+          optionLabel="label"
+          optionValue="value"
+        ></p-multiSelect>
                 </div>
               </div>
             </div>
             <div class="col-lg-12">
               <div class="form-group m-b-12">
-                <label for="" class="">Select Clinet</label>
+                <label for="" class="">Select Client</label>
                 <div class="">
-                  <app-custom-multi-select></app-custom-multi-select>
+                  <p-multiSelect
+                  placeholder="Select Client"
+          [options]="clients"
+          [(ngModel)]="selectedClients"
+          [ngModelOptions]="{ standalone: true }"
+          optionLabel="label"
+          optionValue="value"
+        ></p-multiSelect>
                 </div>
               </div>
             </div>
@@ -325,7 +339,14 @@
               <div class="form-group m-b-12">
                 <label for="" class="">Assigned To</label>
                 <div class="">
-                  <app-custom-multi-select></app-custom-multi-select>
+                  <p-multiSelect
+                  placeholder="Select People"
+          [options]="assignTo"
+          [(ngModel)]="selectedAssignTo"
+          [ngModelOptions]="{ standalone: true }"
+          optionLabel="label"
+          optionValue="value"
+        ></p-multiSelect>
                 </div>
               </div>
             </div>
@@ -333,7 +354,14 @@
               <div class="form-group m-b-12">
                 <label for="" class="">Asssingn By</label>
                 <div class="">
-                  <app-custom-single-select></app-custom-single-select>
+                  <p-multiSelect
+                  placeholder="Select People"
+          [options]="assignBy"
+          [(ngModel)]="selectedAssignBy"
+          [ngModelOptions]="{ standalone: true }"
+          optionLabel="label"
+          optionValue="value"
+        ></p-multiSelect>
                 </div>
               </div>
             </div>

@@ -22,12 +22,32 @@ interface Members {
   label: string;
   file: string;
 }
+
+interface Projects {
+  label: string;
+  value: string;
+}
+interface Clients {
+  label: string;
+  value: string;
+}
+interface AssignTo {
+  label: string;
+  value: string;
+}
+interface AssignBy {
+  label: string;
+  value: string;
+}
+
 @Component({
   selector: "app-list-page",
   templateUrl: "./list-page.component.html",
   styleUrls: ["./list-page.component.scss"],
   encapsulation: ViewEncapsulation.None,
 })
+
+
 export class ListPageComponent implements OnInit, OnDestroy {
   @ViewChild("multiSelectref") multiSelectref: MultiSelect;
   displaytaskDetail: boolean;
@@ -39,7 +59,7 @@ export class ListPageComponent implements OnInit, OnDestroy {
   activeTheme: string;
   modalState1: boolean;
   fileAttachment: boolean;
-  Dialog;
+  // Dialog;
 
   tasKCardkDetail: boolean;
   cardDetails: boolean;
@@ -53,6 +73,14 @@ export class ListPageComponent implements OnInit, OnDestroy {
   isUser3 = false;
   isUser4 = false;
 
+  assignTo: AssignTo[];
+  selectedAssignTo: AssignTo[];
+  assignBy: AssignBy[];
+  selectedAssignBy: AssignBy[];
+  projects: Projects[];
+  selectedProjects: Projects[];
+  clients: Clients[];
+  selectedClients: Clients[];
   members: Members[];
   selectedMembers: Members[];
   taskLabels: Tasklabels[];
@@ -76,6 +104,7 @@ export class ListPageComponent implements OnInit, OnDestroy {
         file: "assets/media/images/users/100_6.jpg",
       },
     ];
+    // members
     this.members = [
       {
         label: "Indi",
@@ -108,6 +137,94 @@ export class ListPageComponent implements OnInit, OnDestroy {
         value: "bg-danger",
       },
     ];
+    //  project
+    this.projects = [
+      {
+        label: "Car Rental",
+        value: "1",
+      },
+      {
+        label: "Job Management",
+        value: "2",
+      },
+      {
+        label: "More Than Digital",
+        value: "3",
+      },
+      {
+        label: "MoretoLike",
+        value: "4",
+      },
+    ];
+
+    //  Clients
+    this.clients = [
+      {
+        label: "David ",
+        value: "1",
+      },
+      {
+        label: "Kane",
+        value: "2",
+      },
+      {
+        label: "Kyle",
+        value: "3",
+      },
+      {
+        label: "John Doe",
+        value: "4",
+      },
+      {
+        label: "Anna",
+        value: "5",
+      },
+    ];
+    //  Assign To
+    this.assignTo = [
+      {
+        label: "Suzen",
+        value: "1",
+      },
+      {
+        label: "Maria",
+        value: "2",
+      },
+      {
+        label: "Albert",
+        value: "3",
+      },
+      {
+        label: "Will",
+        value: "4",
+      },
+     
+    ];
+    //  Assign By
+    this.assignBy = [
+      {
+        label: "Crish",
+        value: "1",
+      },
+      {
+        label: "Brayn",
+        value: "2",
+      },
+      {
+        label: "Tom Hidleson",
+        value: "3",
+      },
+      {
+        label: "John Doe",
+        value: "4",
+      },
+      {
+        label: "Anna",
+        value: "5",
+      },
+    ];
+
+
     this.taskLabels = [
       {
         label: "High Priority",

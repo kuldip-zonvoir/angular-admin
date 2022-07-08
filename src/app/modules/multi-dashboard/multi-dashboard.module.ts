@@ -29,9 +29,9 @@ import { SharedModule } from "src/app/partials/content/shared-components/shared.
   ],
   imports: [
     CommonModule,
-    SparkLineModule,
     EChartsModule,
     ApexchartSharedModule,
+    SparkLineModule,
     ChartJsSharedModule,
     WigitModule,
     ReUseCardsModule,

@@ -1,5 +1,5 @@
 <div
-  class="card custom-card raduis-none m-b-16"
+  class="card custom-card new_card_style raduis-none m-b-16"
   [ngClass]="getClass(customNote.note_share_count)"
 >
   <div class="zp-10">
@@ -35,11 +35,11 @@
             m-b-0
           "
           ><i
-            class="ti ti-share icon-20 m-r-8 cursor-pointer"
+            class="ti ti-share icon-16 m-r-8 cursor-pointer"
             [ngClass]="getIconColor(customNote.note_share_count)"
             aria-hidden="true"
           ></i
-          ><span class="m-r-4 note_share_new">{{ customNote.note_share_count }}</span> Share</a
+          ><span class="note_share_new">{{ customNote.note_share_count }} Share</span> </a
         >
       </div>
       <div class="m-l-auto p-l-10">
@@ -49,7 +49,8 @@
             [ngClass]="getIconColor(customNote.note_share_count)"
             aria-hidden="true"
           ></i
-          >{{ customNote.note_createdAt | date: "mediumDate" }}
+          >
+          <span class="note_share_new">{{ customNote.note_createdAt | date: "mediumDate" }}</span>
         </p>
       </div>
     </div>

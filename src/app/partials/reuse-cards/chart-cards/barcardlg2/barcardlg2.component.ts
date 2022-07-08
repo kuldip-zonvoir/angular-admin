@@ -7,11 +7,11 @@ import { ConfigService } from "src/app/partials/core/config.service";
   styleUrls: ["./barcardlg2.component.scss"],
 })
 export class Barcardlg2Component implements OnInit {
-  chartColor = "#fb8c00";
+  chartColor:String;
 
   constructor(private _config: ConfigService) {
     this.chartColor = this._config.getProp(
-      "customSetting.colors.theme.light.warning"
+      "customSetting.colors.theme.light.purple"
     );
   }
 

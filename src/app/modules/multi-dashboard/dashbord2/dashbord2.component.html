@@ -13,8 +13,25 @@
   <div class="col-lg-4 col-md-12">
     <div class="row">
       <div class="col-lg-12 col-md-12 m-b-20">
-        <div class="">
-          <app-linecardlg1></app-linecardlg1>
+        <div class="card custom-card no-radius">
+          <div class="card-body">
+            <div class="d-flex area_cc_wrap">
+              <div>
+                <div class="crpto_icon_wrap">
+                  <i class="fw-700 cc BTC-alt icon_coin"></i>
+                </div>
+              </div>
+              <div class="ml-auto text-right">
+                <h6 class="area_cc_title">Bitcoin BTC</h6>
+                <p class="text-muted m-b-0">0.00000112 BTC $0.05</p>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <app-apex-sparkline-area
+              [ChartColor]="chartColor"
+            ></app-apex-sparkline-area>
+          </div>
         </div>
       </div>
       <div class="col-lg-12 col-md-12 m-b-20">
@@ -32,17 +49,10 @@
   <div class="col-lg-8 col-md-12 m-b-20">
     <div class="card custom-card no-radius">
       <div
-        class="
-          card-header
-          custom-card-header
-          d-flex
-          align-items-center
-          justify-content-between
-          border-1
-        "
+        class="card-header custom-card-header d-flex align-items-center justify-content-between border-1"
       >
         <div class="card-title m-b-0">
-          <h5 class="card-label m-b-0">Coin Price</h5>
+          <h5 class="card-label m-b-0">Bitcoin Exchange ETH/BTC</h5>
         </div>
         <div class="card-toolbar d-flex align-items-center">
           <span class="material-icons icon icon-gray"> grid_view </span>
@@ -64,72 +74,55 @@
     <div class="row">
       <div class="col-lg-6 m-b-12 col-md-6">
         <div class="card custom-card no-radius">
-          <app-util-card-border-top1></app-util-card-border-top1>
-        </div>
-      </div>
-      <div class="col-lg-6 m-b-12 col-md-6">
-        <div class="card custom-card no-radius">
-          <app-util-card-border-top2></app-util-card-border-top2>
-        </div>
-      </div>
-      <div class="col-lg-6 m-b-12 col-md-6">
-        <div class="card custom-card no-radius">
-          <app-util-card-border-top3></app-util-card-border-top3>
-        </div>
-      </div>
-      <div class="col-lg-6 m-b-12 col-md-6">
-        <div class="card custom-card no-radius">
-          <app-util-card-border-top4></app-util-card-border-top4>
-        </div>
-      </div>
-      <div class="col-lg-12 m-b-20 col-md-12">
-        <div class="no-radius">
-          <div class="card-group">
-            <div class="card custom-card">
-              <div class="bg-success border-right-secondary">
-                <div class="card-body">
-                  <div class="">
-                    <div
-                      class="d-flex align-items-center justify-content-center"
-                    >
-                      <h3 class="m-b-0 p-y-11 display-6 text-white">
-                        27° <span class="text-white display-6">C</span>
-                      </h3>
-                    </div>
-                    <div
-                      class="d-flex align-items-center justify-content-center"
-                    >
-                      <h6 class="m-b-0 p-b-12 text-white">Lester, London</h6>
-                    </div>
-                  </div>
-                </div>
+          <div class="card_back back_c3">
+            <div class="card_img">
+              <img
+                class="crpt_card_img"
+                src="assets/media/images/crypto/c3.png"
+              />
+            </div>
+          </div>
+          <div class="card-detail">
+            <div class="cpr_info">
+              <div class="p-left">
+                <span class="text-muted fs-12">CryptoKitties</span>
+                <h6 class="crt_title">Dyya</h6>
+              </div>
+              <div class="p-right">
+                <span class="text-muted fs-12">Price</span>
+                <h6 class="crt_title">$19.56</h6>
               </div>
             </div>
-            <div class="card custom-card">
-              <div class="bg-success">
-                <div class="card-body">
-                  <div class="">
-                    <div
-                      class="
-                        display-6
-                        p-t-12 p-b-16
-                        d-flex
-                        align-items-center
-                        justify-content-center
-                        text-white
-                      "
-                    >
-                      <i class="wi wi-hail"></i>
-                    </div>
-                    <div
-                      class="d-flex align-items-center justify-content-center"
-                    >
-                      <h6 class="m-b-0 p-b-12 text-white">
-                        20° <span class="text-white">C</span>
-                      </h6>
-                    </div>
-                  </div>
+            <div class="pb-detail">
+              <p class="mb-0">Offer For <b>$215</b></p>
+              <span><i class="ti ti-heart icon-16"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 m-b-12 col-md-6">
+        <div class="card custom-card no-radius">
+          <div class="card_back back_c3">
+            <div class="card_img_2">
+              <img
+                class="crpt_card_img"
+                src="assets/media/images/crypto/c2.png"
+              />
+            </div>
+            <div class="card-detail">
+              <div class="cpr_info">
+                <div class="p-left">
+                  <span class="text-muted fs-12">CryptoKitties</span>
+                  <h6 class="crt_title">Anna</h6>
                 </div>
+                <div class="p-right">
+                  <span class="text-muted fs-12">Price</span>
+                  <h6 class="crt_title">$13.56</h6>
+                </div>
+              </div>
+              <div class="pb-detail">
+                <p class="mb-0">Offer For <b>$318</b></p>
+                <span><i class="ti ti-heart icon-16"></i></span>
               </div>
             </div>
           </div>
@@ -139,22 +132,386 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-md-12 col-lg-12">
-    <div class="card custom-card no-radius">
-      <div
-        class="
-          card-header
-          custom-card-header
-          border-1
-          d-flex
-          align-items-center
-        "
-      >
-        <div class="card-title m-b-0">
-          <h5 class="card-title m-b-0">Recent Users</h5>
+  <div class="col-md-4 col-lg-4">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <div class="d-flex align-items-center justify-content-start">
+          <div class="m-b-0">
+            <h5 class="m-b-0 sugg_page_title">Top Collections</h5>
+          </div>
         </div>
       </div>
-      <app-customers></app-customers>
+      <div class="card-body zp-10">
+        <ul class="nav">
+          <ng-container *ngFor="let group of groups; let i = index">
+            <li class="nav_item w-100 p-y-10 px-1 border-1 cursor-pointer">
+              <a class="decoration-none d-flex align-items-center">
+                <div class="">
+                  <img
+                    [src]="group.group_pic"
+                    class="img-responsive sm_group_logo img-list-circle"
+                    alt=""
+                  />
+                </div>
+                <div class="m-l-8 sugg_wrap">
+                  <h6 class="m-b-0 sugg_sub_title">{{ group.group_name }}</h6>
+                  <p class="sugg_short_desc">
+                    {{ group.group_desc }}
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ng-container>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-lg-4"></div>
+  <div class="col-lg-4 col-lg-4">
+    <div class="card custom-card shadow1 no-radius">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="m-b-0">Top Plateforms</h5>
+      </div>
+      <div class="zp-10">
+        <table class="table browser_table table-borderless">
+          <tbody>
+            <tr>
+              <td>
+                <div class="browser_logo">
+                  <img
+                    src="assets/media/images/crypto/rgb.png"
+                    alt="logo"
+                    class="browser_image"
+                  />
+                </div>
+              </td>
+              <td>My Myth</td>
+              <td>
+                <img
+                  src="assets/media/images/crypto/growth.png"
+                  alt="logo"
+                  class="browser_image"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="assets/media/images/crypto/radiation.png"
+                  alt="logo"
+                  class="browser_image"
+                />
+              </td>
+              <td>Open Sea</td>
+              <td>
+                <img
+                  src="assets/media/images/crypto/growth.png"
+                  alt="logo"
+                  class="browser_image"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="browser_logo">
+                  <img
+                    src="assets/media/images/crypto/multiple.png"
+                    alt="logo"
+                    class="browser_image"
+                  />
+                </div>
+              </td>
+              <td>Rarible</td>
+              <td>
+                <img
+                  src="assets/media/images/crypto/growth.png"
+                  alt="logo"
+                  class="browser_image"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="browser_logo">
+                  <img
+                    src="assets/media/images/crypto/lens-cap.png"
+                    alt="logo"
+                    class="browser_image"
+                  />
+                </div>
+              </td>
+              <td>Known Origin</td>
+              <td>
+                <img
+                  src="assets/media/images/crypto/loss.png"
+                  alt="logo"
+                  class="browser_image"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="browser_logo">
+                  <img
+                    src="assets/media/images/crypto/3d.png"
+                    alt="logo"
+                    class="browser_image"
+                  />
+                </div>
+              </td>
+              <td>Super Rare</td>
+              <td>
+                <img
+                  src="assets/media/images/crypto/loss.png"
+                  alt="logo"
+                  class="browser_image"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="browser_logo">
+                  <img
+                    src="assets/media/images/crypto/cat.png"
+                    alt="logo"
+                    class="browser_image"
+                  />
+                </div>
+              </td>
+              <td>Joise</td>
+              <td>
+                <img
+                  src="assets/media/images/crypto/growth.png"
+                  alt="logo"
+                  class="browser_image"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="browser_logo">
+                  <img
+                    src="assets/media/images/crypto/cat_1.png"
+                    alt="logo"
+                    class="browser_image"
+                  />
+                </div>
+              </td>
+              <td>Pixel Cats</td>
+              <td>
+                <img
+                  src="assets/media/images/crypto/growth.png"
+                  alt="logo"
+                  class="browser_image"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12 col-md-12 grid-bottom">
+    <div class="card custom-card no-radius">
+      <div
+        class="card-header custom-card-header border-1 d-flex align-items-center"
+      >
+        <div class="card-title m-b-0">
+          <h5 class="card-title m-b-0">Top NFTs</h5>
+        </div>
+      </div>
+      <div class="table-responsive m-b-12">
+        <table class="table my_tabel table-hover table-borderless mb-0">
+          <thead class="thead">
+            <tr class="thead-row">
+              <th class="th"><span class="t_title">SN</span></th>
+              <th class="th"><span class="t_title">CATEGORY</span></th>
+              <th class="th"><span class="t_title">24H CHANGE</span></th>
+              <th class="th"><span class="t_title">10d CHANGE</span></th>
+              <th class="th"><span class="t_title">TOTAL VOLUME</span></th>
+              <th class="th"><span class="t_title">AVG PRICE</span></th>
+              <th class="th"><span class="t_title">OWNERS</span></th>
+              <th class="th"><span class="t_title">ASSETS</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="crpto_th">1</th>
+              <td>
+                <span
+                  ><img
+                    class="img-responsive logo-sm2-rounded m-r-10"
+                    src="assets/media/images/crypto/cryp.png" /></span
+                ><span class="tabelcell">MLB Champions</span>
+              </td>
+              <td>
+                <span class="tabelcell">$</span
+                ><span class="tabelcell"> 0.133</span>
+              </td>
+              <td><span class="tabelcell"> 0.720%</span></td>
+              <td>
+                <span class="tabelcell">$</span
+                ><span class="tabelcell"> 634.86</span>
+              </td>
+              <td>
+                <span class="tabelcell">$</span
+                ><span class="tabelcell"> 55.07</span>
+              </td>
+              <td><span class="tabelcell"> 33</span></td>
+              <td><span class="tabelcell"> 240</span></td>
+            </tr>
+            <tr>
+              <th class="crpto_th">2</th>
+              <td>
+                <span
+                  ><img
+                    class="img-responsive logo-sm2-rounded m-r-10"
+                    src="assets/media/images/crypto/cross.png" /></span
+                ><span class="tabelcell">FlemmingStr</span>
+              </td>
+              <td>
+                <span class="tabelcell" class="tabelcell">$</span
+                ><span class="tabelcell" class="tabelcell"> 0.25</span>
+              </td>
+              <td><span class="tabelcell" class="tabelcell"> 0.290%</span></td>
+              <td>
+                <span class="tabelcell" class="tabelcell">$</span
+                ><span class="tabelcell" class="tabelcell"> 677.33</span>
+              </td>
+              <td>
+                <span class="tabelcell" class="tabelcell">$</span
+                ><span class="tabelcell" class="tabelcell"> 95.07</span>
+              </td>
+              <td><span class="tabelcell" class="tabelcell"> 24</span></td>
+              <td><span class="tabelcell" class="tabelcell"> 240</span></td>
+            </tr>
+            <tr>
+              <th class="crpto_th">3</th>
+              <td>
+                <span
+                  ><img
+                    class="img-responsive logo-sm2-rounded m-r-10"
+                    src="assets/media/images/crypto/cry3.png" /></span
+                ><span class="tabelcell">Blocklete Golf</span>
+              </td>
+              <td><span>$</span><span class="tabelcell"> 0.15</span></td>
+              <td><span class="tabelcell"> 0.920%</span></td>
+              <td>
+                <span class="tabelcell">$</span
+                ><span class="tabelcell"> 233.65</span>
+              </td>
+              <td>
+                <span class="tabelcell">$</span
+                ><span class="tabelcell"> 92.07</span>
+              </td>
+              <td><span class="tabelcell"> 23</span></td>
+              <td><span class="tabelcell"> 240</span></td>
+            </tr>
+            <tr>
+              <th class="crpto_th">4</th>
+              <td>
+                <span
+                  ><img
+                    class="img-responsive logo-sm2-rounded m-r-10"
+                    src="assets/media/images/crypto/cryp.png" /></span
+                ><span class="tabelcell">Player Tokens</span>
+              </td>
+              <td>
+                <span class="tabelcell">$</span
+                ><span class="tabelcell"> 0.45</span>
+              </td>
+              <td><span class="tabelcell"> 0.320%</span></td>
+              <td>
+                <span class="tabelcell">$</span
+                ><span class="tabelcell"> 437.86</span>
+              </td>
+              <td>
+                <span class="tabelcell">$</span
+                ><span class="tabelcell"> 78.07</span>
+              </td>
+              <td><span class="tabelcell"> 54</span></td>
+              <td><span class="tabelcell"> 200</span></td>
+            </tr>
+            <tr>
+              <th class="crpto_th">5</th>
+              <td>
+                <span
+                  ><img
+                    class="img-responsive logo-sm2-rounded m-r-10"
+                    src="assets/media/images/crypto/zt.png" /></span
+                ><span class="tabelcell">Crypto Saga</span>
+              </td>
+              <td>
+                <span class="tabelcell">$</span
+                ><span class="tabelcell"> 0.15</span>
+              </td>
+              <td><span class="tabelcell"> 0.230%</span></td>
+              <td>
+                <span class="tabelcell">$</span
+                ><span class="tabelcell"> 287.86</span>
+              </td>
+              <td>
+                <span class="tabelcell">$</span
+                ><span class="tabelcell"> 95.07</span>
+              </td>
+              <td><span class="tabelcell"> 24</span></td>
+              <td><span class="tabelcell"> 200</span></td>
+            </tr>
+            <tr>
+              <th class="crpto_th">6</th>
+              <td>
+                <span
+                  ><img
+                    class="img-responsive logo-sm2-rounded m-r-10"
+                    src="assets/media/images/crypto/crypt.png" /></span
+                ><span class="tabelcell">Crypto Punks</span>
+              </td>
+              <td>
+                <span class="tabelcell">$</span
+                ><span class="tabelcell"> 0.15</span>
+              </td>
+              <td><span class="tabelcell"> 0.40%</span></td>
+              <td>
+                <span class="tabelcell">$</span
+                ><span class="tabelcell"> 787.86</span>
+              </td>
+              <td>
+                <span class="tabelcell">$</span
+                ><span class="tabelcell"> 95.07</span>
+              </td>
+              <td><span class="tabelcell"> 24</span></td>
+              <td><span class="tabelcell"> 200</span></td>
+            </tr>
+            <tr>
+              <th class="crpto_th">6</th>
+              <td>
+                <span
+                  ><img
+                    class="img-responsive logo-sm2-rounded m-r-10"
+                    src="assets/media/images/crypto/all.png" /></span
+                ><span class="tabelcell">Wraped Crypopunks</span>
+              </td>
+              <td>
+                <span class="tabelcell">$</span
+                ><span class="tabelcell"> 0.15</span>
+              </td>
+              <td><span class="tabelcell"> 0.00%</span></td>
+              <td>
+                <span class="tabelcell">$</span
+                ><span class="tabelcell"> 347.86</span>
+              </td>
+              <td>
+                <span class="tabelcell">$</span
+                ><span class="tabelcell"> 95.07</span>
+              </td>
+              <td><span class="tabelcell"> 24</span></td>
+              <td><span class="tabelcell"> 270</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>

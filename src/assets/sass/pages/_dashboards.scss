@@ -104,8 +104,8 @@
 .area_cc_wrap {
   margin-bottom: 10px;
   .area_cc_title {
-    color: $paraColor;
-
+    // color: $paraColor;
+    text-transform: capitalize;
     font-size: $paraSize;
     font-weight: 500;
     margin-bottom: 0;
@@ -140,7 +140,7 @@
     letter-spacing: -0.019em;
     color: $white;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 24px !important;
   }
 
   .good_j_text p {
@@ -205,6 +205,67 @@
 }
 // For tablet Landscape Mode
 @include responsive-between(lg, xl) {
+  .dashboard_lft_sec {
+    .good_job_dash {
+      border-radius: 10px;
+      box-shadow: $cardShadow;
+      background-color: $primary;
+      padding: 10px 20px;
+    }
+  
+    .good_j_img {
+      padding: 20px;
+      text-align: center;
+      padding-bottom: 0;
+    }
+  
+    .good_j_img img {
+      height: 9.5rem;
+      width: 9.5rem;
+    }
+  
+    .good_j_text h2 {
+      letter-spacing: -0.019em;
+      color: $white;
+      font-weight: 400;
+      font-size: 20px !important;
+    }
+  
+    .good_j_text p {
+      opacity: 0.5;
+      color: $white;
+      font-weight: 400;
+      font-size: $paraSize;
+      margin-top: 0;
+    }
+  
+    .good_j_text ul {
+      padding-left: 0;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+  
+    .good_j_text ul li {
+      font-size: 13px;
+      color: $white;
+      font-weight: 500;
+      cursor: pointer;
+      letter-spacing: -0.006em;
+      display: inherit;
+      margin-bottom: 10px;
+      padding-left: 24px;
+      position: relative;
+    }
+  
+    .good_j_text ul li:after {
+      content: "\f058";
+      position: absolute;
+      left: 0;
+      font-family: FontAwesome;
+      font-size: 18px;
+      top: 2px;
+    }
+  }
 }
 // For desktop Mode
 @include responsive-above(lg) {

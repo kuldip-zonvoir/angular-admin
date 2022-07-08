@@ -1,6 +1,16 @@
 .grid-bottom {
   margin-bottom: 20px;
 }
+.apexcharts-canvas{
+  width: 100% !important;
+}
+.chart_new_id{
+  display:grid; 
+  grid-template-columns: 100%;
+}
+#apexchartsk887em3v{
+  width: 100% !important;
+}
 .space-breadcrum {
   margin: 16px 0;
 }
@@ -41,7 +51,7 @@
 //
 .kk_responsive {
   .responsive {
-    $left: 3rem;
+    $left: 3.7rem;
     margin-left: $left !important;
   }
   .main_header {
@@ -477,6 +487,9 @@
       @include scrollbar($width: 0.5rem, $border-radius: 1rem, $background-color: $scrollbarColor);
     }
   }
+  .main_header{
+    padding-left: 200px;
+  }
   .theme-sidebar {
     position: absolute;
     left: 0;
@@ -491,10 +504,11 @@
     box-shadow: $boxShadow-lg;
   }
   .main_container {
-    margin-left: 0px;
+    margin-left: 200px;
 
     .main_content {
       min-height: 97vh;
     }
   }
+
 }

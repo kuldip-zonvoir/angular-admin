@@ -86,10 +86,14 @@ export class StackedAreaApxComponent implements OnInit {
         stacked: true,
         fontFamily: this.fontFamily,
         events: {
-          selection: function (chart, e) {
-            console.log(new Date(e.xaxis.min));
-          },
+          // selection: function (chart, e) {
+          //   console.log(new Date(e.xaxis.min));
+          // },
+          mounted: (chart) => {
+            chart.windowResizeHandler();
+          }
         },
+      
         toolbar: {
           show: false,
           tools: {

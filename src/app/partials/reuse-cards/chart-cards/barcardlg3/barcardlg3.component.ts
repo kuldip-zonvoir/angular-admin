@@ -7,7 +7,7 @@ import { ConfigService } from "src/app/partials/core/config.service";
   styleUrls: ["./barcardlg3.component.scss"],
 })
 export class Barcardlg3Component implements OnInit {
-  chartColor = "";
+  chartColor = "#000";
 
   constructor(private _config: ConfigService) {
     this.chartColor = this._config.getProp(
