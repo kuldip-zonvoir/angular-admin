@@ -17,6 +17,7 @@ import { UtilCardProgressBar3Component } from "./util-card-progress-bar3/util-ca
 import { UtilCardProgressBar4Component } from "./util-card-progress-bar4/util-card-progress-bar4.component";
 import { ProgressbarModule } from "ngx-bootstrap/progressbar";
 import { CardSvgComponent } from "./card-svg/card-svg.component";
+import { ProjectCardComponent } from './project-card/project-card.component';
 
 @NgModule({
   declarations: [
@@ -52,11 +53,13 @@ import { CardSvgComponent } from "./card-svg/card-svg.component";
     UtilCardProgressBar4Component,
 
     CardSvgComponent,
+     ProjectCardComponent,
   ],
   imports: [CommonModule, ProgressbarModule.forRoot()],
   exports: [
     UtilCardBorderTop1Component,
     CardSvgComponent,
+    ProjectCardComponent,
     UtilCardBorderTop2Component,
 
     UtilCardBorderTop3Component,

@@ -1,3 +1,134 @@
+
+// crypto Dahboard start
+.crpto_th{
+  color: #342e49;
+  font-size: 13px;
+}
+.card_back{
+  .card_img{
+      background-color: #aff7dc;
+      border-radius: 4px 4px 0;
+  }
+  .card_img_2{
+      background-color: #bdaff7;
+      border-radius: 4px 4px 0;
+  }
+  .crpt_card_img{
+      width: 100%;
+  }
+}
+.card-detail{
+  padding: 0 8px 8px;
+  .cpr_info{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eae5e5;
+  }
+  .pb-detail{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 5px;
+  }
+}
+.crpto_icon_wrap{
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color:$primary;
+  position: relative;
+  box-shadow: 2px 1px 3px #9f9b9b;
+}
+.icon_coin{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  color: $white;
+}
+
+// 
+.crt_crd_title{
+margin-bottom: 0 !important;
+}
+.crt_crd_body{
+  // padding: 10px;
+  .crt_crd_list_wrap{
+      padding-left: 0;
+      margin-bottom: 0;
+      li{
+          list-style: none;
+          display:flex;
+          align-items: center;
+          justify-content: space-between;
+          border-bottom: 1px solid $border-color2;
+          padding: 15px;
+          &:last-child{
+              border-bottom:0;
+          }
+          &:hover{
+              cursor: pointer;
+          }
+          .crt_crd_details{
+              display: flex;
+              align-items: center;
+              .crt_li_one{
+                  margin-right: 8px;
+                  border: 1px solid  $border-color2;
+                  width: 3rem;
+                  height: 3rem;
+                  border-radius: 50%;
+                  img{
+                      border-radius: 50%;
+                      width: 100%;
+                      object-fit: contain;
+                      padding: 5px;
+                  }
+              }
+              .crt_li_two{
+                  h6{
+                      margin-bottom: 3px;
+                      text-transform: capitalize;
+                  }
+                  .crt_coin_details{
+                      display: flex;
+                      align-items: center;
+                      .crt_coin_amt{
+                          font-size: 14px;
+                          color: #8a939b;
+                      }
+                      .crt_icon{
+                          font-size: 16px;
+                      }
+                      .crt_rate{
+
+                          margin-bottom: 3px;
+                          font-size: 14px;
+                      }
+                  }
+              }
+          }
+          .crt_li_three{
+              .crt_price_chages{
+                  margin-bottom: 3px;
+                  font-size: 14px;
+              }
+              .crt_coin_amt{
+                  font-size: 14px;
+                  color: #8a939b;
+              }
+              .crt_icon{
+                  font-size: 16px;
+              }
+          }
+      }
+  }
+}
+// crypto dashboard ends
 //AanaLytic Page{
 .action_analytic {
   display: none;
@@ -187,6 +318,7 @@
     }
   }
 }
+
 // For Mobile Landscape Mode
 @include responsive-between(sm, md) {
   .dashboard_lft_sec {

@@ -1,0 +1,185 @@
+.project_title_wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #efefef;
+    position: relative;
+    h5{
+        margin-bottom: 0;
+        &:before{
+            content: '';
+            position: absolute;
+            left: -12px;
+            padding: 2px;
+            height: 30px;
+            background-color: #6971ff;
+            top: 9px;
+        }
+    }
+    .prj_img_wpap{
+        width: 3rem;
+        height:3rem;
+        line-height: 3rem;
+        position: relative;
+        display: inline-block;
+        border-radius: 5px;
+        img{
+            width: 100%;
+            object-fit: contain;
+            border-radius: 5px;
+            padding: 5px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+.pro_content_wrap{
+    h6{
+        display: inline-block;
+        width: 210px;
+        white-space: nowrap;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+    }
+    p{
+      display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+.project_stat_wrap{
+    .project_stat{
+    padding: 6px 8px;
+    text-align: center;
+    font-size: 13px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    }
+}
+
+.pro_activity_body{
+    position: relative;
+    ul{
+        padding-left: 0;
+        margin-bottom: 0;
+        li{
+            list-style: none;
+            position: relative;
+            .prt_details{
+                margin-left: 20px;
+                padding: 10px;
+            }
+            a{
+                text-decoration: none;
+            }
+            .pro_act_title{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                h6{
+                    margin-bottom: 4px;
+                }
+
+            }
+            .pro_activity_sub{
+                font-size: 13px;
+                color: #8a939b;
+            }
+            &:hover{
+                .pro_act_title{
+                    h6{
+                        color: #6971ff;
+                    }
+                }
+            }
+           
+            &.primary{
+                &::before{
+                    background-color: #6971ff !important;
+                    border: 4px solid #ebecfc !important;
+                }
+            }
+            &.success{
+                &::before{
+                    background-color: #06d79c  !important;
+                    border: 4px solid #ddf9f1 !important;
+                }
+            }
+            &.danger{
+                &::before{
+                    background-color: #e05d6f !important;
+                    border: 4px solid #ffe8eb !important;
+                }
+            }
+            &.info{
+                &::before{
+                    background-color: #00a6fb !important;
+                    border: 4px solid #e8f6fd !important;
+                }
+            }
+            &::before{
+                content: " ";
+                background-color: #f7284a;
+                border: 4px solid #fdedef;
+                display: inline-block;
+                position: absolute;
+                border-radius: 50%;
+                left: 6px;
+                top: 9px;
+                width: 20px;
+                height: 20px;
+                z-index: 1;
+                margin: 2px;
+            }
+        }
+        &::before{
+            content: " ";
+            background: #e9ebfa;
+            display: inline-block;
+            position: absolute;
+           
+            left: 18px;
+            width: 1px;
+            height: 93%;
+            z-index: 0;
+            top: 12px;
+        
+        }
+    }
+}
+.pro_reminders_body{
+    ul{
+        margin-bottom: 0;
+        li{
+            list-style: none;
+            border-bottom: 1px solid #efefef;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .remds_details{
+                .pro_rem_title{
+                    h6{
+
+                        margin-bottom: 0;
+                    }
+                    
+                }
+                .pro_rem_date{
+                    .rem_date{
+                        
+                    }
+                    .rem_month_name{
+                    }
+                }
+                .pro_activity_sub{
+                    font-size: 13px;
+                    color: #8a939b;
+                }
+            }
+        }
+    }
+}

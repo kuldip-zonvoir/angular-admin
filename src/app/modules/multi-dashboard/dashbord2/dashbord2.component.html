@@ -132,42 +132,261 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-md-4 col-lg-4">
+  <div class="col-md-4 col-lg-4 grid-bottom">
     <div class="card custom-card">
       <div class="card-header custom-card-header border-1">
-        <div class="d-flex align-items-center justify-content-start">
-          <div class="m-b-0">
-            <h5 class="m-b-0 sugg_page_title">Top Collections</h5>
-          </div>
-        </div>
+        <h5 class="crt_crd_title">Top Collections</h5>
       </div>
-      <div class="card-body zp-10">
-        <ul class="nav">
-          <ng-container *ngFor="let group of groups; let i = index">
-            <li class="nav_item w-100 p-y-10 px-1 border-1 cursor-pointer">
-              <a class="decoration-none d-flex align-items-center">
-                <div class="">
-                  <img
-                    [src]="group.group_pic"
-                    class="img-responsive sm_group_logo img-list-circle"
-                    alt=""
-                  />
+      <div class="crt_crd_body">
+        <ul class="crt_crd_list_wrap">
+          <li>
+            <div class="crt_crd_details">
+              <div class="crt_li_one">
+                <img
+                  src="assets/media/images/crypto/rgb.png"
+                  class="crt_pr_logo"
+                  alt=""
+                />
+              </div>
+              <div class="crt_li_two">
+                <h6 class="">Bored Ape Yacht Club</h6>
+                <div class="crt_coin_details">
+                  <p class="crt_rate m-r-4">Flore price:</p>
+                  <span class="m-r-4"
+                    ><i title="ETH" class="cc ETH crt_icon"></i
+                  ></span>
+                  <span class="crt_coin_amt">0.36</span>
                 </div>
-                <div class="m-l-8 sugg_wrap">
-                  <h6 class="m-b-0 sugg_sub_title">{{ group.group_name }}</h6>
-                  <p class="sugg_short_desc">
-                    {{ group.group_desc }}
-                  </p>
+              </div>
+            </div>
+            <div class="crt_li_three">
+              <p class="crt_price_chages text-danger">-10.46 %</p>
+              <div class="d-flex align-items-center justify-content-end">
+                <span class="m-r-4"
+                  ><i title="ETH" class="cc ETH crt_icon"></i
+                ></span>
+                <span class="crt_coin_amt">7589</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="crt_crd_details">
+              <div class="crt_li_one">
+                <img
+                  src="assets/media/images/crypto/cry3.png"
+                  class="crt_pr_logo"
+                  alt=""
+                />
+              </div>
+              <div class="crt_li_two">
+                <h6 class="">Kill Bears</h6>
+                <div class="crt_coin_details">
+                  <p class="crt_rate m-r-4">Flore price:</p>
+                  <span class="m-r-4"
+                    ><i title="ETH" class="cc ETH crt_icon"></i
+                  ></span>
+                  <span class="crt_coin_amt">0.73</span>
                 </div>
-              </a>
-            </li>
-          </ng-container>
+              </div>
+            </div>
+            <div class="crt_li_three">
+              <p class="crt_price_chages text-success">+34.67%</p>
+              <div class="d-flex align-items-center justify-content-end">
+                <span class="m-r-4"
+                  ><i title="ETH" class="cc ETH crt_icon"></i
+                ></span>
+                <span class="crt_coin_amt">896</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="crt_crd_details">
+              <div class="crt_li_one">
+                <img
+                  src="assets/media/images/crypto/all.png"
+                  class="crt_pr_logo"
+                  alt=""
+                />
+              </div>
+              <div class="crt_li_two">
+                <h6 class="">Mongo Dogs</h6>
+                <div class="crt_coin_details">
+                  <p class="crt_rate m-r-4">Flore price:</p>
+                  <span class="m-r-4"
+                    ><i title="ETH" class="cc ETH crt_icon"></i
+                  ></span>
+                  <span class="crt_coin_amt">32</span>
+                </div>
+              </div>
+            </div>
+            <div class="crt_li_three">
+              <p class="crt_price_chages text-success">+87.23 %</p>
+              <div class="d-flex align-items-center justify-content-end">
+                <span class="m-r-4"
+                  ><i title="ETH" class="cc ETH crt_icon"></i
+                ></span>
+                <span class="crt_coin_amt">8749</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="crt_crd_details">
+              <div class="crt_li_one">
+                <img
+                  src="assets/media/images/crypto/cryp.png"
+                  class="crt_pr_logo"
+                  alt=""
+                />
+              </div>
+              <div class="crt_li_two">
+                <h6 class="">Yacht Jams</h6>
+                <div class="crt_coin_details">
+                  <p class="crt_rate m-r-4">Flore price:</p>
+                  <span class="m-r-4"
+                    ><i title="ETH" class="cc ETH crt_icon"></i
+                  ></span>
+                  <span class="crt_coin_amt">3.83</span>
+                </div>
+              </div>
+            </div>
+            <div class="crt_li_three">
+              <p class="crt_price_chages text-danger">-43.44 %</p>
+              <div class="d-flex align-items-center justify-content-end">
+                <span class="m-r-4"
+                  ><i title="ETH" class="cc ETH crt_icon"></i
+                ></span>
+                <span class="crt_coin_amt">0.06</span>
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="col-md-4 col-lg-4"></div>
-  <div class="col-lg-4 col-lg-4">
+  <div class="col-md-4 col-lg-4 grid-bottom">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="crt_crd_title">Top Creators</h5>
+      </div>
+      <div class="crt_crd_body">
+        <ul class="crt_crd_list_wrap">
+          <li>
+            <div class="crt_crd_details">
+              <div class="crt_li_one">
+                <img
+                  src="assets/media/images/crypto/crpt1.png"
+                  class="crt_pr_logo"
+                  alt=""
+                />
+              </div>
+              <div class="crt_li_two">
+                <h6 class="">Dodales</h6>
+                <div class="crt_coin_details">
+                  <p class="crt_rate m-r-4">Volume:</p>
+                  <span class="m-r-4"><b>$</b></span>
+                  <span class="crt_coin_amt">110.36</span>
+                </div>
+              </div>
+            </div>
+            <div class="crt_li_three">
+              <p class="crt_price_chages text-success">+0.46 %</p>
+              <div class="d-flex align-items-center justify-content-end">
+                <span class="m-r-4"
+                  ><i title="ETH" class="cc ETH crt_icon"></i
+                ></span>
+                <span class="crt_coin_amt">4589</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="crt_crd_details">
+              <div class="crt_li_one">
+                <img
+                  src="assets/media/images/crypto/cross.png"
+                  class="crt_pr_logo"
+                  alt=""
+                />
+              </div>
+              <div class="crt_li_two">
+                <h6 class="">Primates</h6>
+                <div class="crt_coin_details">
+                  <p class="crt_rate m-r-4">Volume:</p>
+                  <span class="m-r-4"><b>$</b></span>
+                  <span class="crt_coin_amt">66.23</span>
+                </div>
+              </div>
+            </div>
+            <div class="crt_li_three">
+              <p class="crt_price_chages text-danger">-12.89%</p>
+              <div class="d-flex align-items-center justify-content-end">
+                <span class="m-r-4"
+                  ><i title="ETH" class="cc BTC-alt crt_icon"></i
+                ></span>
+                <span class="crt_coin_amt">5345</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="crt_crd_details">
+              <div class="crt_li_one">
+                <img
+                  src="assets/media/images/crypto/crpt5.png"
+                  class="crt_pr_logo"
+                  alt=""
+                />
+              </div>
+              <div class="crt_li_two">
+                <h6 class="">nouns</h6>
+                <div class="crt_coin_details">
+                  <p class="crt_rate m-r-4">Volume:</p>
+                  <span class="m-r-4"><b>$</b></span>
+                  <span class="crt_coin_amt">74.23</span>
+                </div>
+              </div>
+            </div>
+            <div class="crt_li_three">
+              <p class="crt_price_chages text-success">+47.33 %</p>
+              <div class="d-flex align-items-center justify-content-end">
+                <span class="m-r-4"
+                  ><i title="ETH" class="cc BNB crt_icon"></i
+                ></span>
+                <span class="crt_coin_amt">8909</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="crt_crd_details">
+              <div class="crt_li_one">
+                <img
+                  src="assets/media/images/crypto/crpt4.jpg"
+                  class="crt_pr_logo"
+                  alt=""
+                />
+              </div>
+              <div class="crt_li_two">
+                <h6 class="">Azuki</h6>
+                <div class="crt_coin_details">
+                  <p class="crt_rate m-r-4">Volume:</p>
+                  <span class="m-r-4"><b>$</b></span>
+                  <span class="crt_coin_amt">323.83</span>
+                </div>
+              </div>
+            </div>
+            <div class="crt_li_three">
+              <p class="crt_price_chages text-success">+78.30 %</p>
+              <div class="d-flex align-items-center justify-content-end">
+                <span class="m-r-4"
+                  ><i title="ETH" class="cc KORE-alt crt_icon"></i
+                ></span>
+                <span class="crt_coin_amt">6527</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-lg-4 grid-bottom">
     <div class="card custom-card shadow1 no-radius">
       <div class="card-header custom-card-header border-1">
         <h5 class="m-b-0">Top Plateforms</h5>
