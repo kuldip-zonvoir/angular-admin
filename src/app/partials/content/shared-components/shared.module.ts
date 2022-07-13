@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
+import { CommonModule,DatePipe } from "@angular/common";
 import { BlankPageComponent } from "./blank-page/blank-page.component";
 import { BsDropdownModule } from "ngx-bootstrap/dropdown";
 import { CustomDropdownComponent } from "./custom-dropdown/custom-dropdown.component";
@@ -28,7 +28,17 @@ import { FileDragNDropComponent } from "./file-drag-n-drop/file-drag-n-drop.comp
 import { TimelineModule } from "primeng/timeline";
 import { Dropdown, DropdownModule } from "primeng/dropdown";
 import { MultiSelectModule } from "primeng/multiselect";
-
+import { FullCalenderComponent } from "./full-calender/full-calender.component";
+import { FullCalendarModule } from "@fullcalendar/angular";
+import dayGridPlugin from "@fullcalendar/daygrid";
+import timeGridPlugin from "@fullcalendar/timegrid";
+import interactionPlugin from "@fullcalendar/interaction";
+import { VectorMap1Component } from './vector-map1/vector-map1.component';
+FullCalendarModule.registerPlugins([
+  dayGridPlugin,
+  timeGridPlugin,
+  interactionPlugin,
+]);
 @NgModule({
   declarations: [
     BlankPageComponent,
@@ -44,7 +54,10 @@ import { MultiSelectModule } from "primeng/multiselect";
     CustomSelectDropdownComponent,
     TabelFilterComponentComponent,
     FileDragNDropComponent,
+    FullCalenderComponent,
+    VectorMap1Component
   ],
+  providers: [DatePipe],
   imports: [
     CommonModule,
     NgSelectModule,
@@ -56,6 +69,7 @@ import { MultiSelectModule } from "primeng/multiselect";
     ToastModule,
     DropdownModule,
     MultiSelectModule,
+    FullCalendarModule,
     TimelineModule,
     NgMultiSelectDropDownModule.forRoot(),
     BsDropdownModule.forRoot(),
@@ -65,6 +79,7 @@ import { MultiSelectModule } from "primeng/multiselect";
   ],
   exports: [
     BlankPageComponent,
+    FullCalenderComponent,
     CustomDropdownComponent,
     CustomModalComponent,
     CustomSingleSelectComponent,

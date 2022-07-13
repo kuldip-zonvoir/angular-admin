@@ -1,22 +1,142 @@
 <div class="row">
   <div class="col-lg-3 col-md-6 col-sm-6 m-b-20">
-    <div class="">
-      <app-areacardsm1></app-areacardsm1>
+    <div class="card custom-card project_tile_wrap crm_dash_wrap">
+      <h5 class="project_title">Total Project</h5>
+      <div class="data_main_wrap">
+        <div class="data_left_val">
+          <h3>987K</h3>
+          <div class="f-flex align-items-center">
+            <i
+              class="fa fa-arrow-up text-success fs-11 m-r-5"
+              aria-hidden="true"
+            ></i>
+            <small
+              ><b class="badge rounded-pill bg-success text-white fs-11">30%</b
+              ><span class="px-1">This Year</span></small
+            >
+          </div>
+        </div>
+        <div class="icons_pro_wrap bg-light-primary text-primary">
+          <i class="fa fa-suitcase project_tile_icon" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="">
+        <div class="crm_progress_wrap">
+          <h5 class="">80%</h5>
+          <p class="">Completed</p>
+        </div>
+        <progressbar
+          [value]="80"
+          type="primary"
+          max="100"
+          style="height: 5px"
+        ></progressbar>
+      </div>
     </div>
   </div>
   <div class="col-lg-3 col-md-6 col-sm-6 m-b-20">
-    <div class="">
-      <app-areacardsm2></app-areacardsm2>
+    <div class="card custom-card project_tile_wrap crm_dash_wrap">
+      <h5 class="project_title">Total Task</h5>
+      <div class="data_main_wrap">
+        <div class="data_left_val">
+          <h3>278K</h3>
+          <div class="f-flex align-items-center">
+            <i
+              class="fa fa-arrow-up text-success fs-11 m-r-5"
+              aria-hidden="true"
+            ></i>
+            <small
+              ><b class="badge rounded-pill bg-success text-white fs-11">28%</b
+              ><span class="px-1">This week</span></small
+            >
+          </div>
+        </div>
+        <div class="icons_pro_wrap bg-light-warning text-warning">
+          <i class="fa fa-tasks project_tile_icon" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="">
+        <div class="crm_progress_wrap">
+          <h5 class="">72%</h5>
+          <p class="">Completed</p>
+        </div>
+        <progressbar
+          [value]="72"
+          type="warning"
+          max="100"
+          style="height: 5px"
+        ></progressbar>
+      </div>
     </div>
   </div>
   <div class="col-lg-3 col-md-6 col-sm-6 m-b-20">
-    <div class="">
-      <app-areacardsm3></app-areacardsm3>
+    <div class="card custom-card project_tile_wrap crm_dash_wrap">
+      <h5 class="project_title">Total Lead</h5>
+      <div class="data_main_wrap">
+        <div class="data_left_val">
+          <h3>930K</h3>
+          <div class="f-flex align-items-center">
+            <i
+              class="fa fa-arrow-up text-success fs-11 m-r-5"
+              aria-hidden="true"
+            ></i>
+            <small
+              ><b class="badge rounded-pill bg-success text-white fs-11">53%</b
+              ><span class="px-1"> This Month</span></small
+            >
+          </div>
+        </div>
+        <div class="icons_pro_wrap bg-light-info text-info">
+          <i class="fa fa-users project_tile_icon" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="">
+        <div class="crm_progress_wrap">
+          <h5 class="">48%</h5>
+          <p class="">New Leads</p>
+        </div>
+        <progressbar
+          [value]="48"
+          type="info"
+          max="100"
+          style="height: 5px"
+        ></progressbar>
+      </div>
     </div>
   </div>
   <div class="col-lg-3 col-md-6 col-sm-6 m-b-20">
-    <div class="">
-      <app-areacardsm4></app-areacardsm4>
+    <div class="card custom-card project_tile_wrap crm_dash_wrap">
+      <h5 class="project_title">Total Invoice</h5>
+      <div class="data_main_wrap">
+        <div class="data_left_val">
+          <h3>290</h3>
+          <div class="f-flex align-items-center">
+            <i
+              class="fa fa-arrow-down text-danger fs-11 m-r-5"
+              aria-hidden="true"
+            ></i>
+            <small
+              ><b class="badge rounded-pill bg-danger text-white fs-11">10%</b
+              ><span class="px-1">Last Quater</span></small
+            >
+          </div>
+        </div>
+        <div class="icons_pro_wrap bg-light-success text-success">
+          <i class="fas fa-receipt project_tile_icon" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="">
+        <div class="crm_progress_wrap">
+          <h5 class="">65%</h5>
+          <p class="">Completed</p>
+        </div>
+        <progressbar
+          [value]="65"
+          type="success"
+          max="100"
+          style="height: 5px"
+        ></progressbar>
+      </div>
     </div>
   </div>
 </div>
@@ -24,17 +144,10 @@
   <div class="col-lg-6 col-md-12 m-b-20">
     <div class="card custom-card shadow1 no-radius">
       <div
-        class="
-          card-header
-          custom-card-header
-          d-flex
-          align-items-center
-          justify-content-between
-          border-1
-        "
+        class="card-header custom-card-header d-flex align-items-center justify-content-between border-1"
       >
         <div class="card-title m-b-0">
-          <h5 class="card-label m-b-0">Population of world</h5>
+          <h5 class="card-label m-b-0">Leads by Country</h5>
         </div>
         <div class="card-toolbar d-flex align-items-center">
           <span class="material-icons icon-20 icon-gray"> grid_view </span>
@@ -50,14 +163,7 @@
   <div class="col-lg-6 col-md-12 m-b-20">
     <div class="card custom-card shadow1 no-radius">
       <div
-        class="
-          card-header
-          custom-card-header
-          d-flex
-          justify-content-between
-          align-items-center
-          border-1
-        "
+        class="card-header custom-card-header d-flex justify-content-between align-items-center border-1"
       >
         <h5 class="card-label m-b-0">Budget</h5>
         <span class="material-icons icon icon-gray"> grid_view </span>
@@ -69,115 +175,631 @@
       </div>
     </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-lg-6 col-md-12 m-b-20">
-    <div class="">
-      <app-bar-chart></app-bar-chart>
+  <div class="col-lg-3 col-md-3 grid-bottom">
+    <div class="card custom-card no-radius">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="card-title m-b-0">Invoice Overview</h5>
+      </div>
+      <div class="zp-16">
+        <div class="progress_project_value">
+          <div class="d-flex aligin-items-center justify-content-between">
+            <p class="m-b-0 p-b-8 text-info">412 Draft</p>
+            <p class="m-b-0 p-b-8 text-info d-flex align-items-center">
+              12%
+              <i
+                class="fa fa-arrow-up text-success m-l-5 fs-12"
+                aria-hidden="true"
+              ></i>
+            </p>
+          </div>
+          <div class="">
+            <progressbar
+              [value]="12"
+              type="info"
+              max="100"
+              style="height: 8px"
+              [striped]="true"
+            ></progressbar>
+          </div>
+        </div>
+        <div class="progress_project_value">
+          <div class="d-flex aligin-items-center justify-content-between">
+            <p class="m-b-0 p-b-8 text-purple">12 NOT SENT</p>
+            <p class="m-b-0 p-b-8 text-purple d-flex align-items-center">
+              20%
+              <i
+                class="fa fa-arrow-down text-danger m-l-5 fs-12"
+                aria-hidden="true"
+              ></i>
+            </p>
+          </div>
+          <div class="">
+            <progressbar
+              [value]="12"
+              type="purple"
+              max="100"
+              style="height: 8px"
+              [striped]="true"
+            ></progressbar>
+          </div>
+        </div>
+        <div class="progress_project_value">
+          <div class="d-flex aligin-items-center justify-content-between">
+            <p class="m-b-0 p-b-8 text-success">412 UNPAID</p>
+            <p class="m-b-0 p-b-8 text-success d-flex align-items-center">
+              32%
+              <i
+                class="fa fa-arrow-up text-success m-l-5 fs-12"
+                aria-hidden="true"
+              ></i>
+            </p>
+          </div>
+          <div class="">
+            <progressbar
+              [value]="32"
+              type="success"
+              max="100"
+              style="height: 8px"
+              [striped]="true"
+            ></progressbar>
+          </div>
+        </div>
+        <div class="progress_project_value">
+          <div class="d-flex aligin-items-center justify-content-between">
+            <p class="m-b-0 p-b-8 text-warning">62 PARTIALLY PAID</p>
+            <p class="m-b-0 p-b-8 text-warning d-flex align-items-center">
+              20%
+              <i
+                class="fa fa-arrow-down text-danger m-l-5 fs-12"
+                aria-hidden="true"
+              ></i>
+            </p>
+          </div>
+          <div class="">
+            <progressbar
+              [value]="12"
+              type="warning"
+              max="100"
+              style="height: 8px"
+              [striped]="true"
+            ></progressbar>
+          </div>
+        </div>
+        <div class="progress_project_value">
+          <div class="d-flex aligin-items-center justify-content-between">
+            <p class="m-b-0 p-b-8 text-danger">53 OVERDUE</p>
+            <p class="m-b-0 p-b-8 text-danger d-flex align-items-center">
+              82%
+              <i
+                class="fa fa-arrow-up text-success m-l-5 fs-12"
+                aria-hidden="true"
+              ></i>
+            </p>
+          </div>
+          <div class="">
+            <progressbar
+              [value]="82"
+              type="danger"
+              max="100"
+              style="height: 8px"
+              [striped]="true"
+            ></progressbar>
+          </div>
+        </div>
+        <div class="progress_project_value">
+          <div class="d-flex aligin-items-center justify-content-between">
+            <p class="m-b-0 p-b-8 text-secondary">62 PAID</p>
+            <p class="m-b-0 p-b-8 text-secondary d-flex align-items-center">
+              20%
+              <i
+                class="fa fa-arrow-up text-success m-l-5 fs-12"
+                aria-hidden="true"
+              ></i>
+            </p>
+          </div>
+          <div class="">
+            <progressbar
+              [value]="12"
+              type="secondary"
+              max="100"
+              style="height: 8px"
+              [striped]="true"
+            ></progressbar>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="col-lg-6 col-md-12">
-    <div class="row">
-      <div class="col-lg-12 m-b-20">
-        <div class="card custom-card">
-          <div class="bg-success">
-            <div class="card-body">
-              <div class="d-flex align-items-center">
-                <div class="d-flex align-items-center">
-                  <div class="display-6 m-r-8 text-white">
-                    <i class="ti ti-wallet"></i>
-                  </div>
-                  <div class="">
-                    <h4 class="m-b-0 text-white">Total Income</h4>
-                    <h6 class="m-b-0 text-white">Income</h6>
-                  </div>
-                </div>
-                <div class="ml-auto">
-                  <h3 class="m-b-0 fw-500 text-white"><span>$</span> 2500</h3>
-                </div>
-              </div>
-            </div>
+  <div class="col-lg-3 col-md-3 grid-bottom">
+    <div class="card custom-card no-radius">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="card-title m-b-0">Estimate Overview</h5>
+      </div>
+      <div class="zp-16">
+        <div class="progress_project_value">
+          <div class="d-flex aligin-items-center justify-content-between">
+            <p class="m-b-0 p-b-8 text-info">10 Draft</p>
+            <p class="m-b-0 p-b-8 text-info d-flex align-items-center">
+              18%
+              <i
+                class="fa fa-arrow-down text-danger m-l-5 fs-12"
+                aria-hidden="true"
+              ></i>
+            </p>
+          </div>
+          <div class="">
+            <progressbar
+              [value]="18"
+              type="info"
+              max="100"
+              style="height: 8px"
+              [striped]="true"
+            ></progressbar>
+          </div>
+        </div>
+        <div class="progress_project_value">
+          <div class="d-flex aligin-items-center justify-content-between">
+            <p class="m-b-0 p-b-8 text-purple">8 NOT SENT</p>
+            <p class="m-b-0 p-b-8 text-purple d-flex align-items-center">
+              30%
+              <i
+                class="fa fa-arrow-up text-success m-l-5 fs-12"
+                aria-hidden="true"
+              ></i>
+            </p>
+          </div>
+          <div class="">
+            <progressbar
+              [value]="30"
+              type="purple"
+              max="100"
+              style="height: 8px"
+              [striped]="true"
+            ></progressbar>
+          </div>
+        </div>
+        <div class="progress_project_value">
+          <div class="d-flex aligin-items-center justify-content-between">
+            <p class="m-b-0 p-b-8 text-success">21 SENT</p>
+            <p class="m-b-0 p-b-8 text-success d-flex align-items-center">
+              52%
+              <i
+                class="fa fa-arrow-up text-success m-l-5 fs-12"
+                aria-hidden="true"
+              ></i>
+            </p>
+          </div>
+          <div class="">
+            <progressbar
+              [value]="52"
+              type="success"
+              max="100"
+              style="height: 8px"
+              [striped]="true"
+            ></progressbar>
+          </div>
+        </div>
+        <div class="progress_project_value">
+          <div class="d-flex aligin-items-center justify-content-between">
+            <p class="m-b-0 p-b-8 text-warning">42 EXPIRED</p>
+            <p class="m-b-0 p-b-8 text-warning d-flex align-items-center">
+              30%
+              <i
+                class="fa fa-arrow-down text-danger m-l-5 fs-12"
+                aria-hidden="true"
+              ></i>
+            </p>
+          </div>
+          <div class="">
+            <progressbar
+              [value]="30"
+              type="warning"
+              max="100"
+              style="height: 8px"
+              [striped]="true"
+            ></progressbar>
+          </div>
+        </div>
+        <div class="progress_project_value">
+          <div class="d-flex aligin-items-center justify-content-between">
+            <p class="m-b-0 p-b-8 text-danger">13 DECLINE</p>
+            <p class="m-b-0 p-b-8 text-danger d-flex align-items-center">
+              82%
+              <i
+                class="fa fa-arrow-up text-success m-l-5 fs-12"
+                aria-hidden="true"
+              ></i>
+            </p>
+          </div>
+          <div class="">
+            <progressbar
+              [value]="82"
+              type="danger"
+              max="100"
+              style="height: 8px"
+              [striped]="true"
+            ></progressbar>
+          </div>
+        </div>
+        <div class="progress_project_value">
+          <div class="d-flex aligin-items-center justify-content-between">
+            <p class="m-b-0 p-b-8 text-secondary">22 ACCEPTED</p>
+            <p class="m-b-0 p-b-8 text-secondary d-flex align-items-center">
+              54%
+              <i
+                class="fa fa-arrow-up text-success m-l-5 fs-12"
+                aria-hidden="true"
+              ></i>
+            </p>
+          </div>
+          <div class="">
+            <progressbar
+              [value]="54"
+              type="secondary"
+              max="100"
+              style="height: 8px"
+              [striped]="true"
+            ></progressbar>
           </div>
         </div>
       </div>
-      <div class="col-lg-12 m-b-20">
-        <div class="card custom-card">
-          <div class="bg-orange">
-            <div class="card-body">
-              <div class="d-flex align-items-center">
-                <div class="d-flex align-items-center">
-                  <div class="display-6 m-r-8 text-white">
-                    <i class="ti ti-settings"></i>
-                  </div>
-                  <div class="">
-                    <h4 class="m-b-0 text-white">Total Tasks</h4>
-                    <h6 class="m-b-0 text-white">Pending</h6>
-                  </div>
-                </div>
-                <div class="ml-auto">
-                  <h3 class="m-b-0 fw-500 text-white">4390</h3>
-                </div>
-              </div>
-            </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-3 grid-bottom">
+    <div class="card custom-card no-radius">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="card-title m-b-0">Proposal Overview</h5>
+      </div>
+      <div class="zp-16">
+        <div class="progress_project_value">
+          <div class="d-flex aligin-items-center justify-content-between">
+            <p class="m-b-0 p-b-8 text-info">29 Draft</p>
+            <p class="m-b-0 p-b-8 text-info d-flex align-items-center">
+              23%
+              <i
+                class="fa fa-arrow-up text-success m-l-5 fs-12"
+                aria-hidden="true"
+              ></i>
+            </p>
+          </div>
+          <div class="">
+            <progressbar
+              [value]="23"
+              type="info"
+              max="100"
+              style="height: 8px"
+              [striped]="true"
+            ></progressbar>
+          </div>
+        </div>
+        <div class="progress_project_value">
+          <div class="d-flex aligin-items-center justify-content-between">
+            <p class="m-b-0 p-b-8 text-purple">24 SENT</p>
+            <p class="m-b-0 p-b-8 text-purple d-flex align-items-center">
+              29%
+              <i
+                class="fa fa-arrow-up text-success m-l-5 fs-12"
+                aria-hidden="true"
+              ></i>
+            </p>
+          </div>
+          <div class="">
+            <progressbar
+              [value]="29"
+              type="purple"
+              max="100"
+              style="height: 8px"
+              [striped]="true"
+            ></progressbar>
+          </div>
+        </div>
+        <div class="progress_project_value">
+          <div class="d-flex aligin-items-center justify-content-between">
+            <p class="m-b-0 p-b-8 text-success">24 OPEN</p>
+            <p class="m-b-0 p-b-8 text-success d-flex align-items-center">
+              32%
+              <i
+                class="fa fa-arrow-down text-danger m-l-5 fs-12"
+                aria-hidden="true"
+              ></i>
+            </p>
+          </div>
+          <div class="">
+            <progressbar
+              [value]="32"
+              type="success"
+              max="100"
+              style="height: 8px"
+              [striped]="true"
+            ></progressbar>
+          </div>
+        </div>
+        <div class="progress_project_value">
+          <div class="d-flex aligin-items-center justify-content-between">
+            <p class="m-b-0 p-b-8 text-warning">42 REVISED</p>
+            <p class="m-b-0 p-b-8 text-warning d-flex align-items-center">
+              28%
+              <i
+                class="fa fa-arrow-up text-success m-l-5 fs-12"
+                aria-hidden="true"
+              ></i>
+            </p>
+          </div>
+          <div class="">
+            <progressbar
+              [value]="28"
+              type="warning"
+              max="100"
+              style="height: 8px"
+              [striped]="true"
+            ></progressbar>
+          </div>
+        </div>
+        <div class="progress_project_value">
+          <div class="d-flex aligin-items-center justify-content-between">
+            <p class="m-b-0 p-b-8 text-danger">35 DECLINE</p>
+            <p class="m-b-0 p-b-8 text-danger d-flex align-items-center">
+              18%
+              <i
+                class="fa fa-arrow-up text-success m-l-5 fs-12"
+                aria-hidden="true"
+              ></i>
+            </p>
+          </div>
+          <div class="">
+            <progressbar
+              [value]="18"
+              type="danger"
+              max="100"
+              style="height: 8px"
+              [striped]="true"
+            ></progressbar>
+          </div>
+        </div>
+        <div class="progress_project_value">
+          <div class="d-flex aligin-items-center justify-content-between">
+            <p class="m-b-0 p-b-8 text-secondary">42 ACCEPTED</p>
+            <p class="m-b-0 p-b-8 text-secondary d-flex align-items-center">
+              31%
+              <i
+                class="fa fa-arrow-down text-danger m-l-5 fs-12"
+                aria-hidden="true"
+              ></i>
+            </p>
+          </div>
+          <div class="">
+            <progressbar
+              [value]="31"
+              type="secondary"
+              max="100"
+              style="height: 8px"
+              [striped]="true"
+            ></progressbar>
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-6 m-b-20">
-        <div class="card custom-card shadow1 no-radius">
-          <div class="bg-info">
-            <div class="card-body">
-              <div class="d-flex align-items-center justify-content-center">
-                <div class="display-6 m-r-8 text-white">
-                  <i class="wi wi-sandstorm"></i>
-                </div>
-                <div class="">
-                  <span class="display-6 text-white"
-                    >20° <span class="text-white">C</span></span
-                  >
-                  <span class="text-white">/</span
-                  ><span class="text-white"
-                    >7° <span class="text-white">C</span></span
-                  >
-                </div>
-              </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-sm-6 grid-bottom">
+    <div class="card custom-card no-radius">
+      <div
+        class="card-header d-flex align-items-center custom-card-header border-1"
+      >
+        <h5 class="m-b-0">Project Status</h5>
+      </div>
+      <div *ngFor="let chart of donutcharts" class="data_chart_ana">
+        <app-apex-sparkline-donut
+          [chartParams]="chart"
+        ></app-apex-sparkline-donut>
+      </div>
+      <div class="data_chart_ana">
+        <div class="custom_tr">
+          <div class="custom_td1">
+            <div class="d-flex align-items-center">
+              <p class="m-b-0 text-muted">New</p>
             </div>
           </div>
-          <div class="d-flex align-items-center justify-content-center zp-12">
-            <p class="m-b-0 text-info">5 May 2020</p>
+          <div class="custom_td2">
+            <p class="m-b-0 sub_heading">290</p>
+          </div>
+          <div class="custom_td3">
+            <p class="m-b-0 text-muted d-flex align-items-center">
+              20%
+              <i
+                aria-hidden="true"
+                class="fa fa-arrow-up text-success m-l-5 fs-12"
+              ></i>
+            </p>
+          </div>
+        </div>
+        <div class="custom_tr">
+          <div class="custom_td1">
+            <div class="d-flex align-items-center">
+              <p class="m-b-0 text-muted">Running</p>
+            </div>
+          </div>
+          <div class="custom_td2">
+            <p class="m-b-0 sub_heading">270</p>
+          </div>
+          <div class="custom_td3">
+            <p class="m-b-0 text-muted d-flex align-items-center">
+              70%
+              <i
+                aria-hidden="true"
+                class="fa fa-arrow-up text-success m-l-5 fs-12"
+              ></i>
+            </p>
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-6 m-b-20">
-        <div class="card custom-card shadow1 no-radius">
-          <div class="bg-purple">
-            <div class="card-body">
-              <div class="d-flex align-items-center justify-content-center">
-                <div class="mr-2">
-                  <span class="display-6 text-white"
-                    >10° <span class="text-white">C</span></span
-                  >
-                  <span class="text-white">/</span
-                  ><span class="text-white"
-                    >7° <span class="text-white">C</span></span
-                  >
-                </div>
-                <div class="display-6 text-white">
-                  <i class="wi wi-sandstorm"></i>
-                </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-4 col-md-12 m-b-20 grid-bottom">
+    <div class="card custom-card">
+      <div class="card-header custom-card-header border-1">
+        <h5 class="crt_crd_title">Activities</h5>
+      </div>
+      <div class="pro_activity_body">
+        <ul class="">
+          <li class="">
+            <div class="prt_details">
+              <a href="JavaScript:Void(0);" class="pro_act_title">
+                <span class="text-muted fs-12"> 2 days ago</span>
+                <span class="pro_activity_sub">Just now</span>
+              </a>
+              <div class="emp_user_info">
+                <h6 class="">@Anna</h6>
+                <p class="h6 p-l-4"><span>-</span> New Task Created</p>
               </div>
+              <p class="pro_activity_sub m-b-0">
+                Versions updates and issues Fixed
+                <small class="m-l-5"
+                  ><b class="badge rounded-pill bg-success text-white fs-11"
+                    >Tested</b
+                  ></small
+                >
+              </p>
             </div>
-          </div>
-          <div class="d-flex align-items-center zp-12">
-            <div class="">
-              <h6 class="m-b-0">
-                <i class="wi wi-day-storm-showers m-r-4"></i> 15Kmph
-              </h6>
+          </li>
+          <li class="">
+            <div class="prt_details">
+              <a href="JavaScript:Void(0);" class="pro_act_title">
+                <span class="text-muted fs-12"> today</span>
+                <span class="pro_activity_sub">Just now</span>
+              </a>
+              <div class="emp_user_info">
+                <h6 class="">@Rose</h6>
+                <p class="h6 p-l-4"><span>-</span> Started new task</p>
+              </div>
+              <p class="pro_activity_sub m-b-0">
+                Data upload to server is started
+                <small class="m-l-5"
+                  ><b class="badge rounded-pill bg-success text-white fs-11"
+                    >started</b
+                  ></small
+                >
+              </p>
             </div>
-            <div class="ml-auto">
-              <h6 class="m-b-0">40%</h6>
+          </li>
+          <li class="">
+            <div class="prt_details">
+              <a href="JavaScript:Void(0);" class="pro_act_title">
+                <span class="text-muted fs-12"> 10 July 2020</span>
+                <span class="pro_activity_sub">Just now</span>
+              </a>
+              <div class="emp_user_info">
+                <h6 class="">@Martin</h6>
+                <p class="h6 p-l-4"><span>-</span>Database Chaged to new one</p>
+              </div>
+              <p class="pro_activity_sub m-b-0">
+                All Backup is created
+                <small class="m-l-5"
+                  ><b class="badge rounded-pill bg-info text-white fs-11"
+                    >started</b
+                  ></small
+                >
+              </p>
             </div>
-          </div>
+          </li>
+          <li class="">
+            <div class="prt_details">
+              <a href="JavaScript:Void(0);" class="pro_act_title">
+                <span class="text-muted fs-12"> Yesterday</span>
+                <span class="pro_activity_sub">Just now</span>
+              </a>
+              <div class="emp_user_info">
+                <h6 class="">@Mobius</h6>
+                <p class="h6 p-l-4"><span>-</span>Code Uploading</p>
+              </div>
+              <p class="pro_activity_sub m-b-0">
+                Project is uploaded to client server
+                <small class="m-l-5"
+                  ><b class="badge rounded-pill bg-danger text-white fs-11"
+                    >deployed</b
+                  ></small
+                >
+              </p>
+            </div>
+          </li>
+          <li class="">
+            <div class="prt_details">
+              <a href="JavaScript:Void(0);" class="pro_act_title">
+                <span class="text-muted fs-12"> 5 Hr ago</span>
+                <span class="pro_activity_sub">Just now</span>
+              </a>
+              <div class="emp_user_info">
+                <h6 class="">@Joe</h6>
+                <p class="h6 p-l-4"><span>-</span>Data filter task completed</p>
+              </div>
+              <p class="pro_activity_sub m-b-0">
+                Now all the data is filter as per dropdowm
+                <small class="m-l-5"
+                  ><b class="badge rounded-pill bg-warning text-white fs-11"
+                    >solved</b
+                  ></small
+                >
+              </p>
+            </div>
+          </li>
+          <li class="">
+            <div class="prt_details">
+              <a href="JavaScript:Void(0);" class="pro_act_title">
+                <span class="text-muted fs-12"> 1 Jun 2020</span>
+                <span class="pro_activity_sub">Just now</span>
+              </a>
+              <div class="emp_user_info">
+                <h6 class="">@Leena</h6>
+                <p class="h6 p-l-4"><span>-</span>Issue Fixed</p>
+              </div>
+              <p class="pro_activity_sub m-b-0">
+                Project build issue is fixed
+                <small class="m-l-5"
+                  ><b class="badge rounded-pill bg-purple text-white fs-11"
+                    >deployed</b
+                  ></small
+                >
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-8 col-md-12 grid-bottom">
+    <app-full-calender></app-full-calender>
+  </div>
+  <div class="col-lg-6 col-md-12 grid-bottom">
+    <div class="card custom-card no-radius">
+      <div
+        class="card-header custom-card-header d-flex align-items-center justify-content-between border-1"
+      >
+        <h5 class="card-label m-b-0">Net Profit and Revenue</h5>
+
+        <div class="card-toolbar d-flex align-items-center">
+          <span class="material-icons icon icon-gray"> grid_view </span>
         </div>
+      </div>
+      <div class="card-body">
+        <app-apex-coloum-chart></app-apex-coloum-chart>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-12 grid-bottom">
+    <div class="card custom-card no-radius">
+      <div
+        class="card-header custom-card-header d-flex align-items-center justify-content-between border-1"
+      >
+        <div class="">
+          <h5 class="m-b-0">Total Sales</h5>
+        </div>
+        <div class="card-toolbar d-flex align-items-center">
+          <span class="material-icons icon-20 icon-gray"> grid_view </span>
+        </div>
+      </div>
+      <div class="chart_body">
+        <app-line-chart></app-line-chart>
       </div>
     </div>
   </div>
@@ -186,13 +808,7 @@
   <div class="col-md-12 col-lg-12 m-b-20">
     <div class="card custom-card">
       <div
-        class="
-          card-header
-          custom-card-header
-          border-1
-          d-flex
-          align-items-center
-        "
+        class="card-header custom-card-header border-1 d-flex align-items-center"
       >
         <div class="card-title m-b-0">
           <h5 class="card-title m-b-0">Recent Orders</h5>

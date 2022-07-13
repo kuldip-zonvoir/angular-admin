@@ -1,5 +1,45 @@
-.set-area-sm {
-  ::ng-deep.apexcharts-svg {
-    width: 80px !important;
+// .set-area-sm {
+//   ::ng-deep.apexcharts-svg {
+//     width: 80px !important;
+//   }
+// }
+// .emp_user_info{
+//   display: inline-flex;
+//   h6{
+
+//   }
+//   p{
+//     margin-bottom: 0;
+//     width: 150px;
+//     color: #050d3e;
+//   }
+// }
+.crm_dash_wrap{
+  .icons_pro_wrap{
+    font-size: 24px;
+    width: 54px;
+    height: 54px;
+    line-height: 54px;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
   }
+  .crm_progress_wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    h5{
+      margin-bottom: 8px;
+      color: #000;
+    }
+    p{
+      margin-bottom: 8px;
+
+    }
+
+  }
+}
+.crm_tile_chages{
+  font-size: 12px;
 }

@@ -36,13 +36,13 @@
               class="d-flex justify-content-between w-100 align-items-center nav_name"
             >
               <div class="">Dashboard</div>
-                <span class="material-icons-outlined icon-karr">
-                  {{
-                    isSubMenuArr[0]
-                      ? " keyboard_arrow_up"
-                      : " keyboard_arrow_down"
-                  }}
-                </span>
+              <span class="material-icons-outlined icon-karr">
+                {{
+                  isSubMenuArr[0]
+                    ? " keyboard_arrow_up"
+                    : " keyboard_arrow_down"
+                }}
+              </span>
             </div>
           </a>
           <div
@@ -56,21 +56,21 @@
                 <li class="subnav_nav_item">
                   <a
                     [ngClass]="{
-                      active: currentUrlString == '/dashboards/dashbord-1'
+                      active: currentUrlString == '/dashboards/crm'
                     }"
                     class="subnav_nav_link"
-                    routerLink="./dashboards/dashbord-1"
+                    routerLink="./dashboards/crm"
                   >
-                    <span class="subnav_nav_name"> Dashboard 1 </span>
+                    <span class="subnav_nav_name"> CRM </span>
                   </a>
                 </li>
                 <li class="subnav_nav_item">
                   <a
                     [ngClass]="{
-                      active: currentUrlString == '/dashboards/dashbord-2'
+                      active: currentUrlString == '/dashboards/crypto'
                     }"
                     class="subnav_nav_link"
-                    routerLink="./dashboards/dashbord-2"
+                    routerLink="./dashboards/crypto"
                   >
                     <span class="subnav_nav_name"> Crypto </span>
                   </a>
@@ -78,23 +78,23 @@
                 <li class="subnav_nav_item">
                   <a
                     [ngClass]="{
-                      active: currentUrlString == '/dashboards/dashbord-3'
+                      active: currentUrlString == '/dashboards/e-commerce'
                     }"
                     class="subnav_nav_link"
-                    routerLink="./dashboards/dashbord-3"
+                    routerLink="./dashboards/e-commerce"
                   >
-                    <span class="subnav_nav_name"> Ecommerce  </span>
+                    <span class="subnav_nav_name"> Ecommerce </span>
                   </a>
                 </li>
                 <li class="subnav_nav_item">
                   <a
                     [ngClass]="{
-                      active: currentUrlString == '/dashboards/dashbord-4'
+                      active: currentUrlString == '/dashboards/project'
                     }"
                     class="subnav_nav_link"
-                    routerLink="./dashboards/dashbord-4"
+                    routerLink="./dashboards/project"
                   >
-                    <span class="subnav_nav_name"> Dashboard 4 </span>
+                    <span class="subnav_nav_name"> Projects </span>
                   </a>
                 </li>
               </ul>
@@ -144,13 +144,13 @@
               class="d-flex justify-content-between w-100 align-items-center nav_name"
             >
               <div class="">Profile</div>
-                <span class="material-icons-outlined icon-karr">
-                  {{
-                    isSubMenuArr[1]
-                      ? " keyboard_arrow_up"
-                      : " keyboard_arrow_down"
-                  }}
-                </span>
+              <span class="material-icons-outlined icon-karr">
+                {{
+                  isSubMenuArr[1]
+                    ? " keyboard_arrow_up"
+                    : " keyboard_arrow_down"
+                }}
+              </span>
             </div>
           </a>
           <div
@@ -187,11 +187,13 @@
                   <a
                     class="subnav_nav_link"
                     [ngClass]="{
-                      active: currentUrlString == '/account/edit-profile/edit-information'
+                      active:
+                        currentUrlString ==
+                        '/account/edit-profile/edit-information'
                     }"
                     routerLink="./account/edit-profile/edit-information"
                   >
-                    <span class="subnav_nav_name">Edit  Profile  </span>
+                    <span class="subnav_nav_name">Edit Profile </span>
                   </a>
                 </li>
               </ul>
@@ -216,13 +218,13 @@
               class="d-flex justify-content-between w-100 align-items-center nav_name"
             >
               <div class="">Application</div>
-                <span class="material-icons-outlined icon-karr">
-                  {{
-                    isSubMenuArr[2]
-                      ? " keyboard_arrow_up"
-                      : " keyboard_arrow_down"
-                  }}
-                </span>
+              <span class="material-icons-outlined icon-karr">
+                {{
+                  isSubMenuArr[2]
+                    ? " keyboard_arrow_up"
+                    : " keyboard_arrow_down"
+                }}
+              </span>
             </div>
           </a>
           <div
@@ -295,13 +297,13 @@
               class="d-flex justify-content-between w-100 align-items-center nav_name"
             >
               <div class="">E-Commerce</div>
-                <span class="material-icons-outlined icon-karr">
-                  {{
-                    isSubMenuArr[3]
-                      ? " keyboard_arrow_up"
-                      : " keyboard_arrow_down"
-                  }}
-                </span>
+              <span class="material-icons-outlined icon-karr">
+                {{
+                  isSubMenuArr[3]
+                    ? " keyboard_arrow_up"
+                    : " keyboard_arrow_down"
+                }}
+              </span>
             </div>
           </a>
           <div
@@ -442,10 +444,10 @@
               class="d-flex justify-content-between w-100 align-items-center nav_name"
             >
               <div class="">Email</div>
-                <span
-                  class="m-b-0 text-white bg-danger notifiaction-small-circle imp"
-                  >4</span
-                >
+              <span
+                class="m-b-0 text-white bg-danger notifiaction-small-circle imp"
+                >4</span
+              >
             </div>
           </a>
           <div
@@ -509,10 +511,10 @@
               class="d-flex justify-content-between w-100 align-items-center nav_name"
             >
               <div class="">Chat</div>
-                <span
-                  class="m-b-0 text-white bg-success notifiaction-small-circle imp"
-                  >8</span
-                >
+              <span
+                class="m-b-0 text-white bg-success notifiaction-small-circle imp"
+                >8</span
+              >
             </div>
           </a>
           <div
@@ -565,13 +567,13 @@
               class="d-flex justify-content-between w-100 align-items-center nav_name"
             >
               <div class="">Contacts</div>
-                <span class="material-icons-outlined icon-karr">
-                  {{
-                    isSubMenuArr[6]
-                      ? " keyboard_arrow_up"
-                      : " keyboard_arrow_down"
-                  }}
-                </span>
+              <span class="material-icons-outlined icon-karr">
+                {{
+                  isSubMenuArr[6]
+                    ? " keyboard_arrow_up"
+                    : " keyboard_arrow_down"
+                }}
+              </span>
             </div>
           </a>
           <div
@@ -625,13 +627,13 @@
               class="d-flex justify-content-between w-100 align-items-center nav_name"
             >
               <div class="">Invoices</div>
-                <span class="material-icons-outlined icon-karr">
-                  {{
-                    isSubMenuArr[7]
-                      ? " keyboard_arrow_up"
-                      : " keyboard_arrow_down"
-                  }}
-                </span>
+              <span class="material-icons-outlined icon-karr">
+                {{
+                  isSubMenuArr[7]
+                    ? " keyboard_arrow_up"
+                    : " keyboard_arrow_down"
+                }}
+              </span>
             </div>
           </a>
           <div
@@ -717,13 +719,13 @@
               class="d-flex justify-content-between w-100 align-items-center nav_name"
             >
               <div class="">Tickets</div>
-                <span class="material-icons-outlined icon-karr">
-                  {{
-                    isSubMenuArr[9]
-                      ? " keyboard_arrow_up"
-                      : " keyboard_arrow_down"
-                  }}
-                </span>
+              <span class="material-icons-outlined icon-karr">
+                {{
+                  isSubMenuArr[9]
+                    ? " keyboard_arrow_up"
+                    : " keyboard_arrow_down"
+                }}
+              </span>
             </div>
           </a>
           <div
@@ -776,13 +778,13 @@
               class="d-flex justify-content-between w-100 align-items-center nav_name"
             >
               <div class="">Help Center</div>
-                <span class="material-icons-outlined icon-karr">
-                  {{
-                    isSubMenuArr[10]
-                      ? " keyboard_arrow_up"
-                      : " keyboard_arrow_down"
-                  }}
-                </span>
+              <span class="material-icons-outlined icon-karr">
+                {{
+                  isSubMenuArr[10]
+                    ? " keyboard_arrow_up"
+                    : " keyboard_arrow_down"
+                }}
+              </span>
             </div>
           </a>
           <div
@@ -861,13 +863,13 @@
               class="d-flex justify-content-between w-100 align-items-center nav_name"
             >
               <div class="">Bootstrap</div>
-                <span class="material-icons-outlined icon-karr">
-                  {{
-                    isSubMenuArr[11]
-                      ? " keyboard_arrow_up"
-                      : " keyboard_arrow_down"
-                  }}
-                </span>
+              <span class="material-icons-outlined icon-karr">
+                {{
+                  isSubMenuArr[11]
+                    ? " keyboard_arrow_up"
+                    : " keyboard_arrow_down"
+                }}
+              </span>
             </div>
           </a>
           <div
@@ -1126,13 +1128,13 @@
               class="d-flex justify-content-between w-100 align-items-center nav_name"
             >
               <div class="">Extra Pages</div>
-                <span class="material-icons-outlined icon-karr">
-                  {{
-                    isSubMenuArr[12]
-                      ? " keyboard_arrow_up"
-                      : " keyboard_arrow_down"
-                  }}
-                </span>
+              <span class="material-icons-outlined icon-karr">
+                {{
+                  isSubMenuArr[12]
+                    ? " keyboard_arrow_up"
+                    : " keyboard_arrow_down"
+                }}
+              </span>
             </div>
           </a>
           <div
@@ -1227,13 +1229,13 @@
               class="d-flex justify-content-between w-100 align-items-center nav_name"
             >
               <div class="">Widgits</div>
-                <span class="material-icons-outlined icon-karr">
-                  {{
-                    isSubMenuArr[13]
-                      ? " keyboard_arrow_up"
-                      : " keyboard_arrow_down"
-                  }}
-                </span>
+              <span class="material-icons-outlined icon-karr">
+                {{
+                  isSubMenuArr[13]
+                    ? " keyboard_arrow_up"
+                    : " keyboard_arrow_down"
+                }}
+              </span>
             </div>
           </a>
           <div
@@ -1287,13 +1289,13 @@
               class="d-flex justify-content-between w-100 align-items-center nav_name"
             >
               <div class="">Forms</div>
-                <span class="material-icons-outlined icon-karr">
-                  {{
-                    isSubMenuArr[14]
-                      ? " keyboard_arrow_up"
-                      : " keyboard_arrow_down"
-                  }}
-                </span>
+              <span class="material-icons-outlined icon-karr">
+                {{
+                  isSubMenuArr[14]
+                    ? " keyboard_arrow_up"
+                    : " keyboard_arrow_down"
+                }}
+              </span>
             </div>
           </a>
           <div
@@ -1380,13 +1382,13 @@
               class="d-flex justify-content-between w-100 align-items-center nav_name"
             >
               <div class="">Icons</div>
-                <span class="material-icons-outlined icon-karr">
-                  {{
-                    isSubMenuArr[15]
-                      ? " keyboard_arrow_up"
-                      : " keyboard_arrow_down"
-                  }}
-                </span>
+              <span class="material-icons-outlined icon-karr">
+                {{
+                  isSubMenuArr[15]
+                    ? " keyboard_arrow_up"
+                    : " keyboard_arrow_down"
+                }}
+              </span>
             </div>
           </a>
           <div
@@ -1472,13 +1474,13 @@
               class="d-flex justify-content-between w-100 align-items-center nav_name"
             >
               <div class="">Authentication</div>
-                <span class="material-icons-outlined icon-karr">
-                  {{
-                    isSubMenuArr[16]
-                      ? " keyboard_arrow_up"
-                      : " keyboard_arrow_down"
-                  }}
-                </span>
+              <span class="material-icons-outlined icon-karr">
+                {{
+                  isSubMenuArr[16]
+                    ? " keyboard_arrow_up"
+                    : " keyboard_arrow_down"
+                }}
+              </span>
             </div>
           </a>
           <div
@@ -1561,13 +1563,13 @@
               class="d-flex justify-content-between w-100 align-items-center nav_name"
             >
               <div class="">Error</div>
-                <span class="material-icons-outlined icon-karr">
-                  {{
-                    isSubMenuArr[17]
-                      ? " keyboard_arrow_up"
-                      : " keyboard_arrow_down"
-                  }}
-                </span>
+              <span class="material-icons-outlined icon-karr">
+                {{
+                  isSubMenuArr[17]
+                    ? " keyboard_arrow_up"
+                    : " keyboard_arrow_down"
+                }}
+              </span>
             </div>
           </a>
           <div
@@ -1627,13 +1629,13 @@
               class="d-flex justify-content-between w-100 align-items-center nav_name"
             >
               <div class="">Special Pages</div>
-                <span class="material-icons-outlined icon-karr">
-                  {{
-                    isSubMenuArr[18]
-                      ? " keyboard_arrow_up"
-                      : " keyboard_arrow_down"
-                  }}
-                </span>
+              <span class="material-icons-outlined icon-karr">
+                {{
+                  isSubMenuArr[18]
+                    ? " keyboard_arrow_up"
+                    : " keyboard_arrow_down"
+                }}
+              </span>
             </div>
           </a>
           <div
@@ -1689,15 +1691,14 @@
               class="d-flex justify-content-between w-100 align-items-center nav_name"
             >
               <div class="">Tables</div>
-              
-                <span class="material-icons-outlined icon-karr">
-                  {{
-                    isSubMenuArr[19]
-                      ? " keyboard_arrow_up"
-                      : " keyboard_arrow_down"
-                  }}
-                </span>
-              
+
+              <span class="material-icons-outlined icon-karr">
+                {{
+                  isSubMenuArr[19]
+                    ? " keyboard_arrow_up"
+                    : " keyboard_arrow_down"
+                }}
+              </span>
             </div>
           </a>
           <div
@@ -1781,15 +1782,14 @@
               class="d-flex justify-content-between w-100 align-items-center nav_name"
             >
               <div class="">Charts</div>
-              
-                <span class="material-icons-outlined icon-karr">
-                  {{
-                    isSubMenuArr[20]
-                      ? " keyboard_arrow_up"
-                      : " keyboard_arrow_down"
-                  }}
-                </span>
-              
+
+              <span class="material-icons-outlined icon-karr">
+                {{
+                  isSubMenuArr[20]
+                    ? " keyboard_arrow_up"
+                    : " keyboard_arrow_down"
+                }}
+              </span>
             </div>
           </a>
           <div
@@ -1882,15 +1882,14 @@
               class="d-flex justify-content-between w-100 align-items-center nav_name"
             >
               <div class="">Maps</div>
-              
-                <span class="material-icons-outlined icon-karr">
-                  {{
-                    isSubMenuArr[21]
-                      ? " keyboard_arrow_up"
-                      : " keyboard_arrow_down"
-                  }}
-                </span>
-              
+
+              <span class="material-icons-outlined icon-karr">
+                {{
+                  isSubMenuArr[21]
+                    ? " keyboard_arrow_up"
+                    : " keyboard_arrow_down"
+                }}
+              </span>
             </div>
           </a>
           <div

@@ -6,33 +6,39 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashbord1.component.scss']
 })
 export class Dashbord1Component implements OnInit {
-  chartHeight = 100;
-  chartWidth = 400;
-  chartColor = '#008ffb';
+
   constructor() { }
 
   ngOnInit(): void {
   }
-  areaTiles = [
+  donutcharts = [
     {
-      title: 'Total Likes',
-      value: '33572',
-      color: '#008ffb'
+      series: [30, 25, 15, 20, 10],
+      chart: {
+        type: "donut",
+        height: 200,
+        sparkline: {
+          enabled: true,
+        },
+      },
+      fill: {
+        colors: ["#4aebc8", "#eb795f","#6971ff", "#e8035f","#9fbbc8"],
+      },
+
+      labels: ["Not started", "Started","Completed", "Pending", "On Hold"],
+      // responsive: [
+      //   {
+      //     breakpoint: 480,
+      //     options: {
+      //       chart: {
+      //         width: 200,
+      //       },
+      //       legend: {
+      //         position: "bottom",
+      //       },
+      //     },
+      //   },
+      // ],
     },
-    {
-      title: 'Total Views',
-      value: '65412',
-      color: '#003ff8'
-    },
-    {
-      title: 'Total Comments',
-      value: '88200',
-      color: '#0ccffb'
-    },
-    {
-      title: 'Total Share',
-      value: '56672',
-      color: '#00811b'
-    },
-  ]
+  ];
 }

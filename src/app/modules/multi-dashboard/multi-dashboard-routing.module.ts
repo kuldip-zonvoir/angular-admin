@@ -12,28 +12,28 @@ const routes: Routes = [
     component: MultiDashboardComponent,
     children: [
       {
-        path: "dashbord-1",
+        path: "crm",
         component: Dashbord1Component,
-        data: { breadcrumb: "Dashboard 1" },
+        data: { breadcrumb: "CRM" },
       },
       {
-        path: "dashbord-2",
+        path: "crypto",
         component: Dashbord2Component,
-        data: { breadcrumb: "Dashboard 2" },
+        data: { breadcrumb: "Crypto" },
       },
       {
-        path: "dashbord-3",
+        path: "e-commerce",
         component: Dashbord3Component,
-        data: { breadcrumb: "Dashboard 3" },
+        data: { breadcrumb: "E-Commerce" },
       },
       {
-        path: "dashbord-4",
+        path: "project",
         component: Dashbord4Component,
-        data: { breadcrumb: "Dashboard 3" },
+        data: { breadcrumb: "Project" },
       },
       {
         path: "",
-        redirectTo: "/dashbord-1",
+        redirectTo: "/crm",
         pathMatch: "full",
       },
     ],
