@@ -8,13 +8,14 @@ import { SharedModule } from "src/app/partials/content/shared-components/shared.
 import { SparkLineModule } from "src/app/partials/layouts/sparkline-components/sparkline.module";
 import { ChartJsSharedModule } from "src/app/partials/content/shared-components/ChartJs/chartJs.module";
 import { WigitModule } from "src/app/partials/layouts/wigit/wigit.module";
-
+import { ProgressbarModule } from "ngx-bootstrap/progressbar";
 @NgModule({
   declarations: [AnalyticsComponent],
   imports: [
     CommonModule,
     ApexchartSharedModule,
     SharedModule,
+    ProgressbarModule.forRoot(),
     ChartJsSharedModule,
     SparkLineModule,
     AnalysisRoutingModule,

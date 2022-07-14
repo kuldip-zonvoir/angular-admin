@@ -21,7 +21,7 @@ export class AnalyticsComponent implements OnInit {
       "customSetting.colors.theme.light.primary"
     );
     this.chartColor2 = this._config.getProp(
-      "customSetting.colors.theme.light.danger"
+      "customSetting.colors.theme.light.secondary"
     );
     this.chartColor3 = this._config.getProp(
       "customSetting.colors.theme.light.warning"

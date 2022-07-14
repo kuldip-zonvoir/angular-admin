@@ -8,6 +8,7 @@ import { ApexSparklineComponent } from "./apex-sparkline/apex-sparkline.componen
 import { ApexSparklinePieComponent } from "./apex-sparkline-pie/apex-sparkline-pie.component";
 import { ApexSparklineRadialComponent } from "./apex-sparkline-radial/apex-sparkline-radial.component";
 import { ApexSparklineDonutComponent } from "./apex-sparkline-donut/apex-sparkline-donut.component";
+import { ApexSparklineArea2Component } from "./apex-sparkline-area2/apex-sparkline-area2.component";
 @NgModule({
   declarations: [
     ApexSparklineAreaComponent,
@@ -16,9 +17,11 @@ import { ApexSparklineDonutComponent } from "./apex-sparkline-donut/apex-sparkli
     ApexSparklinePieComponent,
     ApexSparklineRadialComponent,
     ApexSparklineDonutComponent,
+    ApexSparklineArea2Component,
   ],
   imports: [CommonModule, NgApexchartsModule],
   exports: [
+    ApexSparklineArea2Component,
     ApexSparklineAreaComponent,
     ApexSparklineComponent,
     ApexSparkBarComponent,

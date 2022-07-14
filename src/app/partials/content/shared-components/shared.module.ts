@@ -78,6 +78,7 @@ FullCalendarModule.registerPlugins([
     CollapseModule.forRoot(),
   ],
   exports: [
+    VectorMap1Component,
     BlankPageComponent,
     FullCalenderComponent,
     CustomDropdownComponent,

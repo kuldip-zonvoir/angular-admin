@@ -1,15 +1,139 @@
 <div class="row">
+  <div class="col-lg-3 col-sm-6 grid-bottom">
+    <div class="card custom-card no-radius">
+      <div class="zp-20 pb-2">
+        <div class="d-flex area_cc_wrap">
+          <div class="">
+            <p class="area_cc_title m-b-4">Conversions</p>
+            <div class="d-inline-flex align-items-center">
+              <h4 class="area_cc_stats m-b-0">829M</h4>
+              <div class="icon_wrap_ana bg-success mx-1">
+                <i class="ti ti-arrow-up ana_progress"></i>
+              </div>
+              <span class="percent_change text-success">25%</span>
+            </div>
+          </div>
+          <div class="ml-auto">
+            <div class="icon_skelton2 bg-light-success text-success">
+              <!-- <i class="fw-700 ti ti-money"></i> -->
+              <i class="fal fa-sync"></i>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-between">
+          <p class="m-b-0 text-mute">Conversion Rate</p>
+          <h6 class="m-b-0">24%</h6>
+        </div>
+      </div>
+      <div class="">
+        <app-apex-sparkline-area
+          [ChartColor]="chartColor"
+        ></app-apex-sparkline-area>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-sm-6 grid-bottom">
+    <div class="card custom-card no-radius">
+      <div class="zp-20 pb-2">
+        <div class="d-flex area_cc_wrap">
+          <div class="">
+            <p class="area_cc_title m-b-4">Impressions</p>
+            <div class="d-inline-flex align-items-center">
+              <h4 class="area_cc_stats m-b-0">276M</h4>
+              <div class="icon_wrap_ana bg-danger mx-1">
+                <i class="ti ti-arrow-down ana_progress"></i>
+              </div>
+              <span class="percent_change text-danger">5%</span>
+            </div>
+          </div>
+          <div class="ml-auto">
+            <div class="icon_skelton2 bg-light-info text-info">
+              <i class="fw-700 ti ti-money"></i>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-between">
+          <p class="m-b-0 text-mute">Impression Rate</p>
+          <h6 class="m-b-0">30%</h6>
+        </div>
+      </div>
+      <div class="">
+        <app-apex-sparkline-area
+          [ChartColor]="chartColor1"
+        ></app-apex-sparkline-area>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-sm-6 grid-bottom">
+    <div class="card custom-card no-radius">
+      <div class="zp-20 pb-2">
+        <div class="d-flex area_cc_wrap">
+          <div class="">
+            <p class="area_cc_title m-b-4">Visits</p>
+            <div class="d-inline-flex align-items-center">
+              <h4 class="area_cc_stats m-b-0">276M</h4>
+              <div class="icon_wrap_ana bg-success mx-1">
+                <i class="ti ti-arrow-up ana_progress"></i>
+              </div>
+              <span class="percent_change text-success">85%</span>
+            </div>
+          </div>
+          <div class="ml-auto">
+            <div class="icon_skelton2 bg-light-danger text-danger">
+              <i class="fw-700 ti ti-money"></i>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-between">
+          <p class="m-b-0 text-mute">Visiting Rate</p>
+          <h6 class="m-b-0">65%</h6>
+        </div>
+      </div>
+      <div class="">
+        <app-apex-sparkline-area
+          [ChartColor]="chartColor2"
+        ></app-apex-sparkline-area>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-sm-6 grid-bottom">
+    <div class="card custom-card no-radius">
+      <div class="zp-20 pb-2">
+        <div class="d-flex area_cc_wrap">
+          <div class="">
+            <p class="area_cc_title m-b-4">Clicks</p>
+            <div class="d-inline-flex align-items-center">
+              <h4 class="area_cc_stats m-b-0">276M</h4>
+              <div class="icon_wrap_ana bg-success mx-1">
+                <i class="ti ti-arrow-up ana_progress"></i>
+              </div>
+              <span class="percent_change text-success">79%</span>
+            </div>
+          </div>
+          <div class="ml-auto">
+            <div class="icon_skelton2 bg-light-warning text-warning">
+              <i class="fw-700 ti ti-money"></i>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-between">
+          <p class="m-b-0 text-mute">Click Rate</p>
+          <h6 class="m-b-0">42%</h6>
+        </div>
+      </div>
+      <div class="">
+        <app-apex-sparkline-area
+          [ChartColor]="chartColor3"
+        ></app-apex-sparkline-area>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
   <div class="col-lg-12 grid-bottom">
     <div class="card custom-card shadow1 no-radius">
       <div
-        class="
-          card-header
-          custom-card-header
-          d-flex
-          align-items-center
-          justify-content-between
-          border-1
-        "
+        class="card-header custom-card-header d-flex align-items-center justify-content-between border-1"
       >
         <div class="card-title m-b-0">
           <h5 class="card-label m-b-0">Visitors Overview</h5>
@@ -80,7 +204,7 @@
           <label
             class="btn btn-outline-primary"
             [(ngModel)]="radioModel"
-            [ngModelOptions]="{standalone: true}"
+            [ngModelOptions]="{ standalone: true }"
             ngDefaultControl
             tabindex="0"
             btnRadio="week"
@@ -90,7 +214,7 @@
           <label
             class="btn btn-outline-primary"
             [(ngModel)]="radioModel"
-            [ngModelOptions]="{standalone: true}"
+            [ngModelOptions]="{ standalone: true }"
             ngDefaultControl
             btnRadio="month"
             tabindex="0"
@@ -100,7 +224,7 @@
           <label
             class="btn btn-primary"
             [(ngModel)]="radioModel"
-            [ngModelOptions]="{standalone: true}"
+            [ngModelOptions]="{ standalone: true }"
             ngDefaultControl
             btnRadio="year"
             tabindex="0"
@@ -116,122 +240,196 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-lg-3 col-sm-6 grid-bottom">
+  <div class="col-lg-12 grid-bottom">
     <div class="card custom-card no-radius">
-      <div class="card-body">
-        <div class="d-flex area_cc_wrap">
-          <div class="">
-            <h6 class="area_cc_title">Conversions</h6>
-            <h5 class="area_cc_stats">105576</h5>
-            <div class="icon_wrap_ana bg-success m-r-4">
-              <i class="ti ti-arrow-up ana_progress"></i>
+      <div
+        class="card-header custom-card-header d-flex align-items-center justify-content-between border-1"
+      >
+        <div class="">
+          <h5 class="m-b-0">Sessions by country</h5>
+        </div>
+        <div class="card-toolbar d-flex align-items-center">
+          <span class="material-icons icon-20 icon-gray"> grid_view </span>
+        </div>
+      </div>
+      <div class="">
+        <div class="row zp-20">
+          <div class="col-lg-8">
+            <div class="">
+              <app-vector-map1></app-vector-map1>
             </div>
-            <span class="percent_change text-success">25%</span>
           </div>
-          <div class="ml-auto">
-            <div class="tag_light_ana">
-              <span class="tag_name_ana text-mute">30 Days</span>
+          <div class="col-lg-4 brl">
+            <div class="m-b-4 zp-8">
+              <div class="d-flex justify-content-between p-b-8">
+                <h6 class="m-b-0">United State</h6>
+                <div class="tag_light_ana">
+                  <span class="tag_name_ana text-mute">Monthly</span>
+                </div>
+              </div>
+              <p class="m-b-0">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Eveniet sint eius.
+              </p>
+            </div>
+            <div class="pro_reminders_body">
+              <ul class="">
+                <li class="zp-8">
+                  <div class="remds_details p-0 m-b-10">
+                    <div class="d-flex align-items-center">
+                      <div class="m-r-12">
+                        <img
+                          src="assets/flags/us_flag.jpg"
+                          alt="img"
+                          class="country_flag"
+                        />
+                      </div>
+                      <div class="pro_rem_title">
+                        <h6 class="">USA</h6>
+                      </div>
+                    </div>
+                    <div class="">
+                      <h6 class="m-b-0">36%</h6>
+                    </div>
+                  </div>
+                  <div class="progress_project_value">
+                    <div class="">
+                      <progressbar
+                        [value]="36"
+                        type="info"
+                        max="100"
+                        style="height: 6px"
+                      ></progressbar>
+                    </div>
+                  </div>
+                </li>
+                <li class="zp-8">
+                  <div class="remds_details p-0 m-b-10">
+                    <div class="d-flex align-items-center">
+                      <div class="m-r-12">
+                        <img
+                          src="assets/flags/french_flag.jpg"
+                          alt="img"
+                          class="country_flag"
+                        />
+                      </div>
+                      <div class="pro_rem_title">
+                        <h6 class="">France</h6>
+                      </div>
+                    </div>
+                    <div class="">
+                      <h6 class="m-b-0">20%</h6>
+                    </div>
+                  </div>
+                  <div class="progress_project_value">
+                    <div class="">
+                      <progressbar
+                        [value]="20"
+                        type="warning"
+                        max="100"
+                        style="height: 6px"
+                      ></progressbar>
+                    </div>
+                  </div>
+                </li>
+                <li class="zp-8">
+                  <div class="remds_details p-0 m-b-10">
+                    <div class="d-flex align-items-center">
+                      <div class="m-r-12">
+                        <img
+                          src="assets/flags/italy_flag.jpg"
+                          alt="img"
+                          class="country_flag"
+                        />
+                      </div>
+                      <div class="pro_rem_title">
+                        <h6 class="">Itly</h6>
+                      </div>
+                    </div>
+                    <div class="">
+                      <h6 class="m-b-0">16%</h6>
+                    </div>
+                  </div>
+                  <div class="progress_project_value">
+                    <div class="">
+                      <progressbar
+                        [value]="16"
+                        type="success"
+                        max="100"
+                        style="height: 6px"
+                      ></progressbar>
+                    </div>
+                  </div>
+                </li>
+                <li class="zp-8">
+                  <div class="remds_details p-0 m-b-10">
+                    <div class="d-flex align-items-center">
+                      <div class="m-r-12">
+                        <img
+                          src="assets/flags/india.png"
+                          alt="img"
+                          class="country_flag"
+                        />
+                      </div>
+                      <div class="pro_rem_title">
+                        <h6 class="">India</h6>
+                      </div>
+                    </div>
+                    <div class="">
+                      <h6 class="m-b-0">25%</h6>
+                    </div>
+                  </div>
+                  <div class="progress_project_value">
+                    <div class="">
+                      <progressbar
+                        [value]="25"
+                        type="success"
+                        max="100"
+                        style="height: 6px"
+                      ></progressbar>
+                    </div>
+                  </div>
+                </li>
+                <li class="zp-8">
+                  <div class="remds_details p-0 m-b-10">
+                    <div class="d-flex align-items-center">
+                      <div class="m-r-12">
+                        <img
+                          src="assets/flags/us_flag.jpg"
+                          alt="img"
+                          class="country_flag"
+                        />
+                      </div>
+                      <div class="pro_rem_title">
+                        <h6 class="">Others</h6>
+                      </div>
+                    </div>
+                    <div class="">
+                      <h6 class="m-b-0">3%</h6>
+                    </div>
+                  </div>
+                  <div class="progress_project_value">
+                    <div class="">
+                      <progressbar
+                        [value]="3"
+                        type="secodary"
+                        max="100"
+                        style="height: 6px"
+                      ></progressbar>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-      <div class="">
-        <app-apex-sparkline-area
-          [ChartColor]="chartColor"
-        ></app-apex-sparkline-area>
-      </div>
     </div>
   </div>
-  <div class="col-lg-3 col-sm-6 grid-bottom">
-    <div class="card custom-card no-radius">
-      <div class="card-body">
-        <div class="d-flex area_cc_wrap">
-          <div class="">
-            <h6 class="area_cc_title">Impressions</h6>
-            <h5 class="area_cc_stats">2276</h5>
-            <div class="icon_wrap_ana bg-danger m-r-4">
-              <i class="ti ti-arrow-down ana_progress"></i>
-            </div>
-            <span class="percent_change text-danger">5%</span>
-          </div>
-          <div class="ml-auto">
-            <div class="tag_light_ana">
-              <span class="tag_name_ana text-mute">30 Days</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="">
-        <app-apex-sparkline-area
-          [ChartColor]="chartColor1"
-        ></app-apex-sparkline-area>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-3 col-sm-6 grid-bottom">
-    <div class="card custom-card no-radius">
-      <div class="card-body">
-        <div class="d-flex area_cc_wrap">
-          <div class="">
-            <h6 class="area_cc_title">Visits</h6>
-            <h5 class="area_cc_stats">5776</h5>
-            <div class="icon_wrap_ana bg-success m-r-4">
-              <i class="ti ti-arrow-up ana_progress"></i>
-            </div>
-            <span class="percent_change text-success">15%</span>
-          </div>
-          <div class="ml-auto">
-            <div class="tag_light_ana">
-              <span class="tag_name_ana text-mute">30 Days</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="">
-        <app-apex-sparkline-area
-          [ChartColor]="chartColor2"
-        ></app-apex-sparkline-area>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-3 col-sm-6 grid-bottom">
-    <div class="card custom-card no-radius">
-      <div class="card-body">
-        <div class="d-flex area_cc_wrap">
-          <div class="">
-            <h6 class="area_cc_title">Clicks</h6>
-            <h5 class="area_cc_stats m-b-0">8566</h5>
-            <div class="icon_wrap_ana bg-danger m-r-4">
-              <i class="ti ti-arrow-down ana_progress"></i>
-            </div>
-            <span class="percent_change text-danger">35%</span>
-          </div>
-          <div class="ml-auto">
-            <div class="tag_light_ana">
-              <span class="tag_name_ana text-mute">30 Days</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="">
-        <app-apex-sparkline-area
-          [ChartColor]="chartColor3"
-        ></app-apex-sparkline-area>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row">
   <div class="col-lg-3 col-sm-6 grid-bottom">
     <div class="card custom-card no-radius">
       <div
-        class="
-          card-header
-          d-flex
-          align-items-center
-          custom-card-header
-          border-1
-        "
+        class="card-header d-flex align-items-center custom-card-header border-1"
       >
         <h5 class="m-b-0">Visitors Stats</h5>
         <div class="ml-auto">
@@ -280,13 +478,7 @@
   <div class="col-lg-3 col-sm-6 grid-bottom">
     <div class="card custom-card no-radius">
       <div
-        class="
-          card-header
-          d-flex
-          align-items-center
-          custom-card-header
-          border-1
-        "
+        class="card-header d-flex align-items-center custom-card-header border-1"
       >
         <h5 class="m-b-0">Age Stats</h5>
         <div class="ml-auto">
@@ -335,13 +527,7 @@
   <div class="col-lg-3 col-sm-6 grid-bottom">
     <div class="card custom-card no-radius">
       <div
-        class="
-          card-header
-          d-flex
-          align-items-center
-          custom-card-header
-          border-1
-        "
+        class="card-header d-flex align-items-center custom-card-header border-1"
       >
         <h5 class="m-b-0">Gender Stats</h5>
         <div class="ml-auto">
@@ -390,13 +576,7 @@
   <div class="col-lg-3 col-sm-6 grid-bottom">
     <div class="card custom-card no-radius">
       <div
-        class="
-          card-header
-          d-flex
-          align-items-center
-          custom-card-header
-          border-1
-        "
+        class="card-header d-flex align-items-center custom-card-header border-1"
       >
         <h5 class="m-b-0">Language Stats</h5>
         <div class="ml-auto">
@@ -447,14 +627,7 @@
   <div class="col-lg-8 grid-bottom">
     <div class="card custom-card no-radius">
       <div
-        class="
-          card-header
-          custom-card-header
-          d-flex
-          justify-content-between
-          align-items-center
-          border-1
-        "
+        class="card-header custom-card-header d-flex justify-content-between align-items-center border-1"
       >
         <h5 class="card-label m-b-0">Traffic and Active Users</h5>
         <span class="material-icons icon-20 icon-gray"> grid_view </span>
