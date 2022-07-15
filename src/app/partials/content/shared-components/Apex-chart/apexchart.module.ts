@@ -16,7 +16,6 @@ import { PpexCandelStickComponent } from "./ppex-candel-stick/ppex-candel-stick.
 import { ApexColoumChartComponent } from "./apex-coloum-chart/apex-coloum-chart.component";
 import { StackedAreaApxComponent } from "./stacked-area-apx/stacked-area-apx.component";
 import { ApexDatetimeXAxisComponent } from "./apex-datetime-x-axis/apex-datetime-x-axis.component";
-import { ApxLineBarComponent } from './apx-line-bar/apx-line-bar.component';
 
 @NgModule({
   declarations: [
@@ -35,12 +34,10 @@ import { ApxLineBarComponent } from './apx-line-bar/apx-line-bar.component';
     ApexColoumChartComponent,
     StackedAreaApxComponent,
     ApexDatetimeXAxisComponent,
-    ApxLineBarComponent,
   ],
   imports: [CommonModule, NgApexchartsModule, BsDropdownModule.forRoot()],
   exports: [
     BarChartComponent,
-    ApxLineBarComponent,
     LineChartComponent,
     BubbleApxChartComponent,
     AreaApxChartComponent,

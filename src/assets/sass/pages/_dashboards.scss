@@ -4,6 +4,36 @@
   color: #342e49;
   font-size: 13px;
 }
+
+.crm_dash_wrap{
+  .icons_pro_wrap{
+    font-size: 24px;
+    width: 54px;
+    height: 54px;
+    line-height: 54px;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+  }
+  .crm_progress_wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    h5{
+      margin-bottom: 8px;
+      color: $dark;
+    }
+    p{
+      margin-bottom: 8px;
+
+    }
+
+  }
+}
+.crm_tile_chages{
+  font-size: 12px;
+}
 .card_back{
   .card_img{
       background-color: #aff7dc;
@@ -40,7 +70,7 @@
   border-radius: 50%;
   background-color:$primary;
   position: relative;
-  box-shadow: 2px 1px 3px #9f9b9b;
+  box-shadow: 2px 1px 3px #404040;
 }
 .icon_coin{
   position: absolute;

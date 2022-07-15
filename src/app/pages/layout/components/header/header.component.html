@@ -15,7 +15,9 @@
               class="d-flex toggle-icon link hoverable align-items-center"
               (click)="sidebarToggle('Desktop')"
             >
-              <span class="material-icons-outlined menu_icons"> menu </span>
+              <span class="material-icons-outlined hdr_icon_box menu_icons">
+                menu
+              </span>
             </a>
           </li>
         </ul>
@@ -96,8 +98,6 @@
         </div>
       </div>
 
-
-
       <!-- search bar  -->
       <div class="d-flex kk_search_bar_header align-items-center">
         <div class="header_search_kbar">
@@ -116,7 +116,6 @@
         </div>
       </div>
 
-
       <!-- header_utilities -->
       <div class="d-flex kk_header_utilities align-items-center">
         <ul class="d-flex nav align-items-center">
@@ -128,7 +127,6 @@
                 </span>
               </a>
             </div>
-
 
             <!-- flags -->
             <div class="btn-group herader_drop_box m-r-14" dropdown>
@@ -190,7 +188,6 @@
                 </li>
               </ul>
             </div>
-
 
             <!-- email -->
             <div class="btn-group herader_drop_box m-r-14" dropdown>
@@ -266,10 +263,10 @@
                 type="button"
                 aria-controls="dropdown-basic"
               >
-                <span class="">
+                <span class="_profile_header_container">
                   <img
-                    src="assets/media/images/users/user5.jpg"
-                    class="img-responsive logo-sm2-circle"
+                    src="assets/media/images/users/300_20.jpg"
+                    class="img-responsive _profile_header_logo"
                     alt="profile-pic"
                   />
                 </span>
@@ -306,7 +303,6 @@
   </div>
 </header>
 
-
 <!-- Header-For desktop close -->
 <!-- header for Mobile -->
 
@@ -323,7 +319,7 @@
             (click)="sidebarToggle('Mobile')"
           >
             <span
-              class="material-icons-outlined menu_icon_mob cursor-pointer icon-20"
+              class="material-icons-outlined menu_icon_mob hdr_icon_box cursor-pointer icon-20"
             >
               menu
             </span>
@@ -401,7 +397,7 @@
             </div>
             <div class="btn-group search_for_dd_other m-r-4" dropdown>
               <a class="link" type="button" (click)="openDropdown(0)">
-                <i class="ti ti-search mob_search_icon"> </i>
+                <i class="ti ti-search mob_search_icon hdr_icon_box"> </i>
               </a>
             </div>
 
@@ -441,10 +437,10 @@
 
             <div class="btn-group" (click)="openDropdown(3)">
               <a id="button-basic" class="dropdown dropdown-inline link">
-                <span class="">
+                <span class="_profile_header_container">
                   <img
-                    src="assets/media/images/users/user5.jpg"
-                    class="img-responsive logo-sm2-circle"
+                    src="assets/media/images/users/300_20.jpg"
+                    class="img-responsive _profile_header_logo"
                     alt="profile-pic"
                   />
                 </span>
@@ -523,7 +519,7 @@
           (click)="sidebarToggle('Mobile')"
         >
           <span
-            class="material-icons-outlined menu_icon_mob cursor-pointer icon-20"
+            class="material-icons-outlined hdr_icon_box menu_icon_mob cursor-pointer icon-20"
           >
             menu
           </span>
@@ -692,10 +688,10 @@
                 type="button"
                 aria-controls="dropdown-basic"
               >
-                <span class="">
+                <span class="_profile_header_container">
                   <img
-                    src="assets/media/images/users/user5.jpg"
-                    class="img-responsive logo-sm2-circle"
+                    src="assets/media/images/users/300_20.jpg"
+                    class="img-responsive _profile_header_logo"
                     alt="profile-pic"
                   />
                 </span>
@@ -750,10 +746,8 @@
     </div>
   </div>
 
-
   <!-- dropdown link content -->
 
-  
   <div class="dropdown-triggers-content">
     <div class="email-content-wrap mobile-content-space">
       <ng-template [ngIf]="tabId === 'email'">

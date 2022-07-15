@@ -1,4 +1,10 @@
-import { Component, OnInit, Output, EventEmitter, OnDestroy } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  Output,
+  EventEmitter,
+  OnDestroy,
+} from "@angular/core";
 import { ActivatedRoute, NavigationEnd, Router } from "@angular/router";
 import { Subscription } from "rxjs";
 import { SharemeService } from "src/app/partials/core/shareme.service";
@@ -8,7 +14,8 @@ import { SharemeService } from "src/app/partials/core/shareme.service";
   templateUrl: "./sidebar.component.html",
   styleUrls: ["./sidebar.component.scss"],
 })
-export class SidebarComponent implements OnInit,OnDestroy {
+export class SidebarComponent implements OnInit, OnDestroy {
+  @Output("parentFun") parentFun: EventEmitter<any> = new EventEmitter();
   visibleSidebar: boolean;
   mobileSidebarModal: boolean;
   isSubMenuArr = new Array(22);
@@ -38,26 +45,25 @@ export class SidebarComponent implements OnInit,OnDestroy {
     "analystic",
   ];
   zvalue = "10";
-  isMobile :boolean;
-  
+  isMobile: boolean;
+
   sidebarkey = "";
   textkey = "";
   brandkey = "";
   currentUrl: any;
   currentUrlString: any;
-    subscription1: Subscription;
-    subscription2: Subscription;
-    subscription3: Subscription;
-    subscription4: Subscription;
-    subscription5: Subscription;
+  subscription1: Subscription;
+  subscription2: Subscription;
+  subscription3: Subscription;
+  subscription4: Subscription;
+  subscription5: Subscription;
 
   constructor(
     private shareData: SharemeService,
     private activatedRoute: ActivatedRoute,
     private router: Router
   ) {
-
-    this.isMobile=true;
+    this.isMobile = true;
     //to fill the array all element with false as a valueconsole
 
     this.isSubMenuArr.fill(false);
@@ -77,6 +83,7 @@ export class SidebarComponent implements OnInit,OnDestroy {
     });
     this.isSubMenuArr[index] = !this.isSubMenuArr[index];
   }
+
   ngOnInit(): void {
     this.openMenu(
       Object.keys(this.urlArr).find(
@@ -86,23 +93,30 @@ export class SidebarComponent implements OnInit,OnDestroy {
     this.subscription1 = this.shareData.sidebarToggle.subscribe((data) => {
       this.isMobile = data;
     });
-    this.subscription2 = this.shareData.sidebarToggler.subscribe((stringData) => {
-      this.sidebarkey = stringData;
+    this.subscription2 = this.shareData.sidebarToggler.subscribe(
+      (stringData) => {
+        this.sidebarkey = stringData;
 
-      this.getSidebarClass(this.sidebarkey);
-    });
-    this.subscription3 = this.shareData.ActiveTextToggle.subscribe((stringData) => {
-      this.textkey = stringData;
-      this.getActiveMenuText(this.textkey);
-    });
+        this.getSidebarClass(this.sidebarkey);
+      }
+    );
+    this.subscription3 = this.shareData.ActiveTextToggle.subscribe(
+      (stringData) => {
+        this.textkey = stringData;
+        this.getActiveMenuText(this.textkey);
+      }
+    );
     this.subscription4 = this.shareData.brandToggle.subscribe((data) => {
       this.brandkey = data;
       this.getBrandClass(this.brandkey);
     });
-   this.subscription5 = this.shareData.mobileDialogSidebar.subscribe((data) => {
-      this.mobileSidebarModal = data;
-    });
+    this.subscription5 = this.shareData.mobileDialogSidebar.subscribe(
+      (data) => {
+        this.mobileSidebarModal = data;
+      }
+    );
   }
+
   getSidebarClass(value: string) {
     return {
       default: "default-sidebar",
@@ -115,6 +129,7 @@ export class SidebarComponent implements OnInit,OnDestroy {
       "7": "sidebar-7",
     }[value];
   }
+
   getActiveMenuText(value: string) {
     return {
       default: "default-active-text",
@@ -126,6 +141,7 @@ export class SidebarComponent implements OnInit,OnDestroy {
       "6": "active-text-6",
     }[value];
   }
+
   getBrandClass(value: string) {
     return {
       default: "default-brand",
@@ -138,11 +154,17 @@ export class SidebarComponent implements OnInit,OnDestroy {
       "7": "brand-7",
     }[value];
   }
+
   sidebarToggle() {
     this.isMobile = !this.isMobile;
     this.setWidth.emit(this.isMobile);
   }
-    ngOnDestroy() {
+
+  sidebarMenuSelected() {
+    this.parentFun.emit();
+  }
+
+  ngOnDestroy() {
     this.subscription1.unsubscribe();
     this.subscription2.unsubscribe();
     this.subscription3.unsubscribe();

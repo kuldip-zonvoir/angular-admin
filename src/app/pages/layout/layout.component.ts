@@ -80,7 +80,6 @@ export class LayoutComponent implements OnInit, OnDestroy {
     });
   }
   ngOnInit() {
-    console.log('get screen size',window.screen.height,window.screen.width)
     this.subscription1 = this.shareData.sidebarToggle.subscribe((data) => {
       this.isResponsive = data;
     });
@@ -136,7 +135,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
     this.shareData.updateDragCardBG(this.customClass);
   }
 
-  // close sidebar modal
+  // close sidebar modal on mobile
   closeSidebarModal() {
     this.menuBar = false;
     this.shareData.sidebarMobileMenu(this.menuBar);

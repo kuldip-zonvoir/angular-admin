@@ -37,7 +37,7 @@ declare global {
   }
 }
 
-const sparkLineData = [50, 30, 54, 50, 80];
+const sparkLineData = [10, 50, 15, 65, 5, 74, 28, 82, 15, 90];
 
 @Component({
   selector: "app-apex-sparkline-area2",

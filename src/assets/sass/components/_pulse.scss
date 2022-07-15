@@ -22,8 +22,8 @@
 
 .email_box {
   position: absolute;
-  top: 2px;
-  right: 1px;
+  top: 1px;
+  right: 4px;
 
   .email_pulse {
     background: $danger;
@@ -41,29 +41,30 @@
 }
 // for mobile portrait
 @include responsive-below(md) {
+
   .wave {
     position: absolute;
     top: 2px;
-    right: 52px;
+    right: 5px;
   }
 
   .email_box {
     position: absolute;
     top: 2px;
-    left: 88px;
+    left: 45px;
   }
 }
 // for mobile landscape
 @include responsive-between(sm, md) {
   .wave {
     position: absolute;
-    top: 4px;
-    right: 52px;
+    top: 1px;
+    right: 5px;
   }
 
   .email_box {
     position: absolute;
     top: 2px;
-    left: 88px;
+    left: 46px;
   }
 }

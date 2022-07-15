@@ -1,32 +1,77 @@
-<div class="card custom-card m-b-12">
-  <div class="card-header custom-card-header d-flex align-items-center">
-    <h5 class="m-b-0">Statistics</h5>
-    <div class="m-l-auto">
-      <p class="m-b-0">Updated 1 month before</p>
+<div class="row">
+  <div class="col-lg-3 col-md-3 col-md-6 col-sm-6 m-b-20">
+    <div class="card custom-card project_tile_wrap">
+      <div class="data_main_wrap p-b-8">
+        <div class="data_left_val">
+          <h5 class="project_title">All Task</h5>
+          <h3>102</h3>
+        </div>
+        <div class="icons_pro_wrap bg-light-primary text-primary">
+          <i class="fa fa-suitcase project_tile_icon" aria-hidden="true"></i>
+        </div>
+      </div>
+      <small
+        ><span class="px-1"
+          >Task assigned to me: <b class="m-l-4">15</b></span
+        ></small
+      >
     </div>
   </div>
-  <div class="card-body">
-    <div class="row no-gutters">
-      <ng-container *ngFor="let task of All_tasks">
-        <div class="col-lg-4 col-md-4 col-sm-4 col-6 m-b-12">
-          <div class="task_naming">
-            <div class="avt_space">
-              <span
-                [ngClass]="getClass(task.task_title)"
-                class="material-icons-outlined"
-              >
-                {{ task.icon }}
-              </span>
-            </div>
-            <div class="boardtask_details">
-              <h6 class="tttss_title">
-                {{ task.total_task }}
-              </h6>
-              <p class="m-b-0 kk_task_name">{{ task.task_title }}</p>
-            </div>
-          </div>
+  <div class="col-lg-3 col-md-3 col-md-6 col-sm-6 m-b-20">
+    <div class="card custom-card project_tile_wrap">
+      <div class="data_main_wrap p-b-8">
+        <div class="data_left_val">
+          <h5 class="project_title">Completed Task</h5>
+          <h3>50</h3>
         </div>
-      </ng-container>
+        <div class="icons_pro_wrap bg-light-success text-success">
+          <i class="fa fa-check project_tile_icon" aria-hidden="true"></i>
+        </div>
+      </div>
+      <small
+        ><span class="px-1"
+          >Task assigned to me: <b class="m-l-4">25</b></span
+        ></small
+      >
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-3 col-md-6 col-sm-6 m-b-20">
+    <div class="card custom-card project_tile_wrap">
+      <div class="data_main_wrap p-b-8">
+        <div class="data_left_val">
+          <h5 class="project_title">Inprogress Task</h5>
+          <h3>80</h3>
+        </div>
+        <div class="icons_pro_wrap bg-light-info text-info">
+          <i class="fa fa-tasks project_tile_icon" aria-hidden="true"></i>
+        </div>
+      </div>
+      <small
+        ><span class="px-1"
+          >Task assigned to me: <b class="m-l-4">35</b></span
+        ></small
+      >
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-3 col-md-6 col-sm-6 m-b-20">
+    <div class="card custom-card project_tile_wrap">
+      <div class="data_main_wrap p-b-8">
+        <div class="data_left_val">
+          <h5 class="project_title">Pending Task</h5>
+          <h3>18</h3>
+        </div>
+        <div class="icons_pro_wrap bg-light-warning text-warning">
+          <i
+            class="fa fa-hourglass-start project_tile_icon"
+            aria-hidden="true"
+          ></i>
+        </div>
+      </div>
+      <small
+        ><span class="px-1"
+          >Task assigned to me: <b class="m-l-4">15</b></span
+        ></small
+      >
     </div>
   </div>
 </div>

@@ -1,38 +1,187 @@
 <div class="row">
   <div class="col-lg-4 col-md-4 col-sm-6 m-b-20">
-    <app-card-lg1></app-card-lg1>
+    <div class="card custom-card no-radius">
+      <div class="card-body">
+        <div class="d-flex area_cc_wrap">
+          <div>
+            <div class="crpto_icon_wrap">
+              <i class="fw-700 cc BTC-alt icon_coin"></i>
+            </div>
+          </div>
+          <div class="ml-auto text-right">
+            <h4 class="area_cc_title m-b-4">Bitcoin BTC</h4>
+            <p class="text-muted m-b-4">0.00000112 BTC $0.05</p>
+            <h6 class="m-b-0">Realestate</h6>
+          </div>
+        </div>
+        <div class="row tex-center">
+          <div class="col-4 text-center">
+            <p class="m-b-0">% 1h</p>
+            <p
+              class="fw-500 m-b-0 justify-content-center d-flex align-items-center text-success"
+            >
+              <span class="material-icons-outlined icon-20 m-r-4">
+                arrow_upward
+              </span>
+              5.25
+            </p>
+          </div>
+          <div class="col-4 text-center">
+            <p class="m-b-0">% 24h</p>
+            <p
+              class="fw-500 m-b-0 justify-content-center d-flex align-items-center text-danger"
+            >
+              <span class="material-icons-outlined icon-20 m-r-4">
+                arrow_downward
+              </span>
+              <span>-</span>
+              0.34
+            </p>
+          </div>
+          <div class="col-4 text-center">
+            <p class="m-b-0">% 7d</p>
+            <p
+              class="fw-500 m-b-0 justify-content-center d-flex align-items-center text-success"
+            >
+              <span class="material-icons-outlined icon-20 m-r-4">
+                arrow_upward
+              </span>
+              0.45
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <app-apex-sparkline-area2
+          [ChartColor]="chartColor"
+        ></app-apex-sparkline-area2>
+      </div>
+    </div>
   </div>
   <div class="col-lg-4 col-md-4 col-sm-6 m-b-20">
-    <app-card-lg2></app-card-lg2>
+    <div class="card custom-card no-radius">
+      <div class="card-body">
+        <div class="d-flex area_cc_wrap">
+          <div>
+            <div class="crpto_icon_wrap">
+              <i class="fw-700 cc ETH-alt icon_coin"></i>
+            </div>
+          </div>
+          <div class="ml-auto text-right">
+            <h4 class="area_cc_title m-b-4">Ethereum ETH</h4>
+            <p class="text-muted m-b-4">0.00000234 ETH $0.15</p>
+            <h6 class="m-b-0">Exchange</h6>
+          </div>
+        </div>
+        <div class="row tex-center">
+          <div class="col-4 text-center">
+            <p class="m-b-0">% 1h</p>
+            <p
+              class="fw-500 m-b-0 justify-content-center d-flex align-items-center text-danger"
+            >
+              <span class="material-icons-outlined icon-20 m-r-4">
+                arrow_downward
+              </span>
+              0.25
+            </p>
+          </div>
+          <div class="col-4 text-center">
+            <p class="m-b-0">% 24h</p>
+            <p
+              class="fw-500 m-b-0 justify-content-center d-flex align-items-center text-danger"
+            >
+              <span class="material-icons-outlined icon-20 m-r-4">
+                arrow_downward
+              </span>
+              <span>-</span>
+              2.34
+            </p>
+          </div>
+          <div class="col-4 text-center">
+            <p class="m-b-0">% 7d</p>
+            <p
+              class="fw-500 m-b-0 justify-content-center d-flex align-items-center text-success"
+            >
+              <span class="material-icons-outlined icon-20 m-r-4">
+                arrow_upward
+              </span>
+              2.93
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <app-apex-sparkline-area2
+          [ChartColor]="chartColor"
+        ></app-apex-sparkline-area2>
+      </div>
+    </div>
   </div>
   <div class="col-lg-4 col-md-4 col-sm-6 m-b-20">
-    <app-card-lg3></app-card-lg3>
+    <div class="card custom-card no-radius">
+      <div class="card-body">
+        <div class="d-flex area_cc_wrap">
+          <div>
+            <div class="crpto_icon_wrap">
+              <i class="fw-700 cc LTC-alt icon_coin"></i>
+            </div>
+          </div>
+          <div class="ml-auto text-right">
+            <h4 class="area_cc_title m-b-4">Litecoin LTC</h4>
+            <p class="text-muted m-b-4">0.00000234 LTC $2.067</p>
+            <h6 class="m-b-0">IT</h6>
+          </div>
+        </div>
+        <div class="row tex-center">
+          <div class="col-4 text-center">
+            <p class="m-b-0">% 1h</p>
+            <p
+              class="fw-500 m-b-0 justify-content-center d-flex align-items-center text-success"
+            >
+              <span class="material-icons-outlined icon-20 m-r-4">
+                arrow_upward
+              </span>
+              3.89
+            </p>
+          </div>
+          <div class="col-4 text-center">
+            <p class="m-b-0">% 24h</p>
+            <p
+              class="fw-500 m-b-0 justify-content-center d-flex align-items-center text-success"
+            >
+              <span class="material-icons-outlined icon-20 m-r-4">
+                arrow_upward
+              </span>
+              <span>+</span>
+              4.14
+            </p>
+          </div>
+          <div class="col-4 text-center">
+            <p class="m-b-0">% 7d</p>
+            <p
+              class="fw-500 m-b-0 justify-content-center d-flex align-items-center text-success"
+            >
+              <span class="material-icons-outlined icon-20 m-r-4">
+                arrow_upward
+              </span>
+              5.89
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <app-apex-sparkline-area2
+          [ChartColor]="chartColor"
+        ></app-apex-sparkline-area2>
+      </div>
+    </div>
   </div>
 </div>
 <div class="row">
   <div class="col-lg-4 col-md-12">
     <div class="row">
       <div class="col-lg-12 col-md-12 m-b-20">
-        <div class="card custom-card no-radius">
-          <div class="card-body">
-            <div class="d-flex area_cc_wrap">
-              <div>
-                <div class="crpto_icon_wrap">
-                  <i class="fw-700 cc BTC-alt icon_coin"></i>
-                </div>
-              </div>
-              <div class="ml-auto text-right">
-                <h6 class="area_cc_title">Bitcoin BTC</h6>
-                <p class="text-muted m-b-0">0.00000112 BTC $0.05</p>
-              </div>
-            </div>
-          </div>
-          <div class="">
-            <app-apex-sparkline-area
-              [ChartColor]="chartColor"
-            ></app-apex-sparkline-area>
-          </div>
-        </div>
+        <app-card-lg1></app-card-lg1>
       </div>
       <div class="col-lg-12 col-md-12 m-b-20">
         <div class="">

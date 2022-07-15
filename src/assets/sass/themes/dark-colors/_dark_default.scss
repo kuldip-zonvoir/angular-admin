@@ -1,6 +1,6 @@
 // @mixin themeCostomize($main_color, $main_color_light) {
 $primary: #6971ff !default; // Bootstrap variable
-$primary-light: #dadbff !default; // Custom variable
+$primary-light: #181e24  !default; // #dadbff Custom variable
 $heading-color: #ffffff;
 $email_circle_color: #171d29; //N
 $inputPadding: 0.5rem; //N
@@ -31,6 +31,7 @@ $body-bg: #171d29;
 $background-color: #090e13;
 $sidebar-background-color: #0b101d;
 $sidebar-text-color: #a2a9b3;
+$header-icon-color: #8094ae;
 $hoverColor: #07080c;
 $icon-color: hsl(0deg 1% 71% / 99%);
 $paraColor: hsla(0, 0%, 100%, 0.7);

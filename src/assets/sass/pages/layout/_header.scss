@@ -4,6 +4,45 @@
 .kk_left_header {
   padding: 0 12px;
 }
+// 
+.hdr_icon_box{
+  color: $text-color !important;
+  background-color: $background-color;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 0px 1px 3px 1px $border-color !important;
+}
+._profile_header_container{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  ._profile_header_logo{
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+}
+
+.menu_icons{
+      color: $text-color !important;
+      background-color: $background-color;
+      font-size: 24px;
+      width: 38px;
+      height: 38px;
+      line-height: 38px;
+      border-radius: 5px;
+      text-align: center;
+      display: inline-block;
+      box-shadow: 0px 1px 3px 1px $border-color !important;
+}
 .header_search_kbar {
   width: 100%;
   .custom_input_group {
@@ -44,14 +83,14 @@
   height: 20px;
 }
 .kk_left_header {
-  width: 15%;
+  width: 18%;
 }
 .kk_search_bar_header {
   width: 40%;
 }
 .kk_header_utilities {
   justify-content: flex-end;
-  width: 45%;
+  width: 40%;
   .search_for_dd_other {
     display: none;
   }
@@ -66,22 +105,28 @@
 .herader_menu_toggle {
   a {
     span {
-      color: $primary !important;
+      color: $primary ;
     }
   }
 }
 .herader_drop_box {
   a {
     .header_icons {
-      color: $primary !important;
-      background-color: $primary-light;
-      font-size: 20px;
-      width: 34px;
-      height: 34px;
-      line-height: 34px;
+      color: $text-color !important;
+      background-color: $background-color;
+      font-size: 24px;
+      width: 38px;
+      height: 38px;
+      line-height: 38px;
       border-radius: 5px;
       text-align: center;
       display: inline-block;
+      box-shadow: 0px 1px 3px 1px $border-color !important;
+    }
+    .country_icon{
+      &:first-child{
+        @extend .header_icons;
+      }
     }
   }
 }
@@ -238,6 +283,23 @@ a {
 }
 
 @include responsive-below(md) {
+  .hdr_icon_box{
+    box-shadow: 0px 0px 0px 1px $border-color !important;
+  }
+  .mob_flags {
+    display: none;
+  }
+  .search_for_dd_other {
+    .hdr_icon_box{
+      box-shadow: 0px 0px 0px 1px $border-color !important;
+    }
+  }
+  .herader_drop_box {
+    a {
+      .header_icons{
+        box-shadow: 0px 0px 0px 1px $border-color !important;
+      }
+    }}
   .kk_header_utilities {
     justify-content: flex-end;
     width: 45%;
@@ -249,6 +311,7 @@ a {
       display: block;
     }
   }
+
   .brand-wrapper {
     display: none;
   }
@@ -265,6 +328,17 @@ a {
   }
 }
 @include responsive-between(sm, md) {
+  .hdr_icon_box{
+    box-shadow: 0px 0px 0px 1px $border-color !important;
+  }
+  .search_for_dd_other {
+    .hdr_icon_box{
+      box-shadow: 0px 0px 0px 1px $border-color !important;
+    }
+  }
+  .mob_flags {
+    display: none;
+  }
   .brand-wrapper {
     display: block;
   }
@@ -298,6 +372,24 @@ a {
   }
 }
 @include responsive-between(md, lg) {
+  .hdr_icon_box{
+    box-shadow: 0px 0px 0px 1px $border-color !important;
+  }
+  .country_icon{
+
+    box-shadow: 0px 0px 0px 1px $border-color !important;
+  }
+  .search_for_dd_other {
+    .hdr_icon_box{
+      box-shadow: 0px 0px 0px 1px $border-color !important;
+    }
+  }
+  .herader_drop_box {
+    a {
+      .header_icons{
+        box-shadow: 0px 0px 0px 1px $border-color !important;
+      }
+    }}
   .desktop-header {
     display: none !important;
   }

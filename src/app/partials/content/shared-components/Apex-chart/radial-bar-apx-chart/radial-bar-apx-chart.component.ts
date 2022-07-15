@@ -98,7 +98,7 @@ export class RadialBarApxChartComponent implements OnInit {
           },
         },
       },
-      labels: ["Apples", "Oranges", "Bananas", "Berries"],
+      labels: ["BTC", "ETH", "LTC", "EOS"],
     };
   }
   ngOnInit(): void {}

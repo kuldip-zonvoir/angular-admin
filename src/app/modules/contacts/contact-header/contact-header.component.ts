@@ -28,7 +28,6 @@ export class ContactHeaderComponent implements OnInit {
     this.route.events.subscribe((ev) => {
       if (ev instanceof NavigationEnd) {
         this.activeUrlString = ev.url;
-        console.log(this.activeUrlString);
       }
     });
     this.form = this.fb.group({
