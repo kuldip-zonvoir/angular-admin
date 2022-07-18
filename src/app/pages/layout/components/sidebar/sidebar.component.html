@@ -25,7 +25,7 @@
           <a
             (click)="openMenu(0)"
             [ngClass]="{
-              active: currentUrl[1] == 'dashboards'
+              active: currentUrl[1] == 'dashboard'
             }"
             class="nav_link d-flex align-items-center"
           >
@@ -57,10 +57,22 @@
                   <a
                     (click)="sidebarMenuSelected()"
                     [ngClass]="{
-                      active: currentUrlString == '/dashboards/crm'
+                      active: currentUrlString == '/dashboard'
                     }"
                     class="subnav_nav_link"
-                    routerLink="./dashboards/crm"
+                    routerLink="./dashboard"
+                  >
+                    <span class="subnav_nav_name"> Default </span>
+                  </a>
+                </li>
+                <li class="subnav_nav_item">
+                  <a
+                    (click)="sidebarMenuSelected()"
+                    [ngClass]="{
+                      active: currentUrlString == '/dashboard/crm'
+                    }"
+                    class="subnav_nav_link"
+                    routerLink="./dashboard/crm"
                   >
                     <span class="subnav_nav_name"> CRM </span>
                   </a>
@@ -69,10 +81,10 @@
                   <a
                     (click)="sidebarMenuSelected()"
                     [ngClass]="{
-                      active: currentUrlString == '/dashboards/crypto'
+                      active: currentUrlString == '/dashboard/crypto'
                     }"
                     class="subnav_nav_link"
-                    routerLink="./dashboards/crypto"
+                    routerLink="./dashboard/crypto"
                   >
                     <span class="subnav_nav_name"> Crypto </span>
                   </a>
@@ -81,10 +93,10 @@
                   <a
                     (click)="sidebarMenuSelected()"
                     [ngClass]="{
-                      active: currentUrlString == '/dashboards/e-commerce'
+                      active: currentUrlString == '/dashboard/e-commerce'
                     }"
                     class="subnav_nav_link"
-                    routerLink="./dashboards/e-commerce"
+                    routerLink="./dashboard/e-commerce"
                   >
                     <span class="subnav_nav_name"> Ecommerce </span>
                   </a>
@@ -93,10 +105,10 @@
                   <a
                     (click)="sidebarMenuSelected()"
                     [ngClass]="{
-                      active: currentUrlString == '/dashboards/project'
+                      active: currentUrlString == '/dashboard/project'
                     }"
                     class="subnav_nav_link"
-                    routerLink="./dashboards/project"
+                    routerLink="./dashboard/project"
                   >
                     <span class="subnav_nav_name"> Projects </span>
                   </a>
@@ -254,6 +266,7 @@
                     <span class="subnav_nav_name"> Calendar </span>
                   </a>
                   <a
+                    (click)="sidebarMenuSelected()"
                     [ngClass]="{
                       active: currentUrlString == '/application/file-manager'
                     }"
@@ -673,6 +686,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/invoices/add-invoice'
                   }"
@@ -684,6 +698,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/invoices/invoice'
                   }"
@@ -695,6 +710,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/invoices/invoice-lists'
                   }"
@@ -916,6 +932,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/bootstrap/accordions'
                   }"
@@ -927,6 +944,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/bootstrap/alert'
                   }"
@@ -938,6 +956,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/bootstrap/badges'
                   }"
@@ -949,6 +968,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/bootstrap/buttons'
                   }"
@@ -960,6 +980,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/bootstrap/cards'
                   }"
@@ -971,6 +992,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/bootstrap/carousel'
                   }"
@@ -982,6 +1004,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/bootstrap/collapse'
                   }"
@@ -993,6 +1016,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/bootstrap/datepicker'
                   }"
@@ -1004,6 +1028,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/bootstrap/dropdown'
                   }"
@@ -1015,6 +1040,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/bootstrap/list-group'
                   }"
@@ -1027,6 +1053,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/bootstrap/modals'
                   }"
@@ -1038,6 +1065,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/bootstrap/navbar'
                   }"
@@ -1049,6 +1077,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/bootstrap/tabs'
                   }"
@@ -1060,6 +1089,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/bootstrap/timepicker'
                   }"
@@ -1071,6 +1101,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/bootstrap/tooltip'
                   }"
@@ -1082,6 +1113,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/bootstrap/pagination'
                   }"
@@ -1093,6 +1125,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/bootstrap/popover'
                   }"
@@ -1104,6 +1137,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/bootstrap/progressbar'
                   }"
@@ -1115,6 +1149,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/bootstrap/rating'
                   }"
@@ -1126,6 +1161,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/bootstrap/spinners'
                   }"
@@ -1137,6 +1173,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/bootstrap/typehead'
                   }"
@@ -1181,6 +1218,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/extra/dialogs'
                   }"
@@ -1192,6 +1230,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/extra/toast'
                   }"
@@ -1203,6 +1242,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/extra/timeline'
                   }"
@@ -1214,6 +1254,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/extra/drag-n-drop'
                   }"
@@ -1225,6 +1266,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/extra/text-editor'
                   }"
@@ -1236,6 +1278,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/extra/weather-cards'
                   }"
@@ -1282,6 +1325,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/wigits/widgit-app'
                   }"
@@ -1293,6 +1337,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/wigits/widgit-data'
                   }"
@@ -1342,6 +1387,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/forms/regular-forms'
                   }"
@@ -1353,6 +1399,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/forms/advance-forms'
                   }"
@@ -1364,6 +1411,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/forms/radio-checkbox'
                   }"
@@ -1375,6 +1423,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/forms/form-elements'
                   }"
@@ -1386,6 +1435,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/forms/form-wizard'
                   }"
@@ -1435,6 +1485,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/icons/material-icons-outline'
                   }"
@@ -1446,6 +1497,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/icons/material-icons'
                   }"
@@ -1457,6 +1509,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/icons/themify-icons'
                   }"
@@ -1468,6 +1521,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/icons/crypto-icons'
                   }"
@@ -1479,6 +1533,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/icons/weather-icons'
                   }"
@@ -1527,6 +1582,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/auth/login-1'
                   }"
@@ -1538,6 +1594,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/auth/login-2'
                   }"
@@ -1549,6 +1606,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/auth/signup-1'
                   }"
@@ -1560,6 +1618,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/auth/signup-2'
                   }"
@@ -1571,6 +1630,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/auth/forgot-password'
                   }"
@@ -1616,6 +1676,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/errors/error-1'
                   }"
@@ -1627,6 +1688,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/errors/error-2'
                   }"
@@ -1638,6 +1700,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/errors/maintinance'
                   }"
@@ -1682,6 +1745,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/special-pages/price-plans'
                   }"
@@ -1693,6 +1757,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/special-pages/blank-page'
                   }"
@@ -1745,6 +1810,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/datatables/basic-table'
                   }"
@@ -1756,6 +1822,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/datatables/colored-table'
                   }"
@@ -1767,6 +1834,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/datatables/advance-table'
                   }"
@@ -1778,6 +1846,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/datatables/datatable-1'
                   }"
@@ -1789,6 +1858,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/datatables/datatable-2'
                   }"
@@ -1836,6 +1906,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/charts/apex-chart'
                   }"
@@ -1847,6 +1918,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/charts/chartjs'
                   }"
@@ -1858,6 +1930,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/charts/sparkline-charts'
                   }"
@@ -1869,6 +1942,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/charts/ngx-chart'
                   }"
@@ -1880,6 +1954,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/charts/google-chart'
                   }"
@@ -1891,6 +1966,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/charts/e-chart'
                   }"
@@ -1936,6 +2012,7 @@
               <li class="subnav_nav_item">
                 <a
                   class="subnav_nav_link"
+                  (click)="sidebarMenuSelected()"
                   [ngClass]="{
                     active: currentUrlString == '/maps/googlemap'
                   }"

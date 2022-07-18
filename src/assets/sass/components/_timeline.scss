@@ -130,3 +130,52 @@
     }
   }
 }
+
+// For Mobile portrait Screen
+@include responsive-below(md) {
+  .main_time_line{
+    .timeline-scroll {
+      height: 43vh;
+    }
+  }
+}
+
+// For Mobile landscrape mode Screen
+@include responsive-between(sm, md) {
+
+  .time_line_ecom{
+    .timeline-scroll {
+      height: 102vh;
+    }
+  }
+}
+
+// For laptop Landscape Mode
+@include responsive-between(lg, xl) {
+  .main_time_line{
+    .timeline-scroll {
+      height: 62vh;
+    }
+  }
+
+  .time_line_ecom{
+    .timeline-scroll {
+      height: 47vh;
+    }
+  }
+}
+
+// For tablet portrait Mode
+@include responsive-between(md, lg) {
+  .time_line_ecom{
+    .timeline-scroll {
+      height: 33vh;
+    }
+  }
+
+  .main_time_line{
+    .timeline-scroll {
+      height: 42vh;
+    }
+  }
+}

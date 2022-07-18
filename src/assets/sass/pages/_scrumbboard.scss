@@ -2,6 +2,7 @@
   background-color: $scrumBox;
   color: $text-color;
   position: relative;
+  z-index: 9;
 }
 .tsk_add_btn {
   width: 30px !important;
@@ -254,7 +255,7 @@
     background-color: #d4d6da8c;
     color: $text-color;
     position: relative;
-    z-index: 99;
+    z-index: 9;
   }
 }
 // For Mobile Landscape Mode
@@ -269,7 +270,7 @@
   }
 
   .vr_scroll {
-    max-height: 81vh;
+    max-height: 91vh;
     cursor: pointer;
     overflow-y: auto;
     overflow-x: hidden;
@@ -279,12 +280,7 @@
       @include scrollbar($width: 0.5rem, $border-radius: 1rem, $background-color: $scrollbarColor);
     }
   }
-  .scrum-box-continer {
-    background-color: $scrumContainer;
-    color: $text-color;
-    position: relative;
-    z-index: 99;
-  }
+
 }
 // For tablet Portrait Mode
 @include responsive-between(md, lg) {

@@ -1,6 +1,11 @@
 .mobile-chat {
   display: none !important;
 }
+.new_table{
+  th{
+      font-size: 13px;
+  }
+}
 .mailer_inbox {
   padding: 0 10px;
 }
@@ -50,6 +55,17 @@
   left: 3px;
 }
 // ====================chatting==============
+.chat_new_list{
+  a{
+      font-size: 13px;
+  }
+}
+.chat_kn{
+  P{
+
+    font-size: 12px;
+  }
+}
 .kchat_header {
   display: flex;
   align-items: center;
@@ -64,9 +80,12 @@
   padding: 5px;
   border-radius: 4px;
   margin-right: 5px;
+  
   .recent_user_msg {
-    display: inline-block;
-    width: 220px;
+    font-size: 12px;
+    display: block;
+    width: 178px;
+    white-space: nowrap;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
   }
@@ -346,7 +365,7 @@ hr {
     display: block !important;
   }
   .chat-scroll {
-    height: 55vh;
+    height: 48vh;
 
     cursor: pointer;
     overflow-y: auto;
@@ -357,8 +376,11 @@ hr {
       @include scrollbar($width: 4px, $border-radius: 5px, $background-color: $background-light);
     }
   }
+  .chat_reciever{
+    padding: 0;
+  }
   .chat-list-scroll {
-    height: 51vh;
+    height: 46vh;
 
     cursor: pointer;
     overflow-y: auto;
@@ -426,7 +448,7 @@ hr {
     border-radius: 5px;
   }
   .chat-scroll {
-    height: 36vh;
+    height: 14vh;
     cursor: pointer;
     overflow-y: auto;
     overflow-x: hidden;

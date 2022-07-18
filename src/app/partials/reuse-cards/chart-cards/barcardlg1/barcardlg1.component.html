@@ -4,12 +4,14 @@
       <div class="information_tab">
         <h5 class="stat_number">$45K</h5>
         <h6 class="stat_title">Cash Balance</h6>
-        <div class="icon_wrap_ana bg-success m-r-4">
-          <i class="ti ti-arrow-up ana_progress"></i>
+        <div class="d-flex align-items-center">
+          <div class="icon_wrap_ana bg-success m-r-4">
+            <i class="ti ti-arrow-up ana_progress"></i>
+          </div>
+          <span class="percent_change text-success">25%</span>
+          <span class="percent_sub_title m-l-4">Last Month</span>
         </div>
-        <span class="percent_change text-success">25%</span>
-        <span class="percent_sub_title m-l-4">Last Month</span>
-        </div>
+      </div>
       <div class="statics_tab">
         <app-apex-spark-bar [ChartColor]="chartColor"></app-apex-spark-bar>
       </div>

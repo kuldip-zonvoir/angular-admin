@@ -22,11 +22,13 @@
     <div class="d-flex align-items-center p-b-16">
       <div class="d-flex flex-column">
         <h5 class="m-b-0 p-b-8">Order Status :</h5>
-        <select name="" class="form-control" id="">
-          <option value="">Delivered</option>
-          <option value="">Shipped</option>
-          <option value="">Pending</option>
-        </select>
+        <p-dropdown
+          [options]="inviceStatus"
+          class="basic_dpdown"
+          [(ngModel)]="selectedStatus"
+          [ngModelOptions]="{ standalone: true }"
+          optionLabel="label"
+        ></p-dropdown>
       </div>
       <div class="ml-auto d-flex flex-column">
         <h5 class="m-b-0 p-b-8 text-right">Order Date</h5>
@@ -74,7 +76,7 @@
           </div>
         </div>
         <div class="p-b-12">
-          <table class="table custom-table table-bordered p-b-8">
+          <table class="table custom-table new_table table-bordered p-b-8">
             <thead class="tabel-head">
               <tr>
                 <th style="border-top: 0" scope="col" class="t_title">#</th>

@@ -33,6 +33,22 @@
   margin: 0 !important;
   li {
     margin: 0 5px !important;
+   
+  }
+  &.pagination {
+    padding-left: revert ;
+  }
+  &.new_pagination{
+
+    padding-left: auto ;
+    li{
+      &:nth-child(2){
+        display: none;
+      }
+      &:nth-last-child(2){
+        display: none;
+      }
+    }
   }
 }
 ///dark mode

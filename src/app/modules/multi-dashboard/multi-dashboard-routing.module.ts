@@ -6,11 +6,17 @@ import { Dashbord1Component } from "./dashbord1/dashbord1.component";
 import { Dashbord2Component } from "./dashbord2/dashbord2.component";
 import { Dashbord3Component } from "./dashbord3/dashbord3.component";
 import { Dashbord4Component } from "./dashbord4/dashbord4.component";
+import { DefaultDashboardComponent } from "./default-dashboard/default-dashboard.component";
 const routes: Routes = [
   {
     path: "",
     component: MultiDashboardComponent,
     children: [
+      {
+        path: "",
+        component: DefaultDashboardComponent,
+        data: { breadcrumb: "Default" },
+      },
       {
         path: "crm",
         component: Dashbord1Component,

@@ -71,6 +71,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
       if (ev instanceof NavigationEnd) {
         this.currentUrl = ev.url.split("/");
         this.currentUrlString = ev.url;
+        console.log(this.currentUrlString);
       }
     });
   }
@@ -90,9 +91,11 @@ export class SidebarComponent implements OnInit, OnDestroy {
         (key) => this.urlArr[key] === this.currentUrl[1]
       )
     );
+
     this.subscription1 = this.shareData.sidebarToggle.subscribe((data) => {
       this.isMobile = data;
     });
+
     this.subscription2 = this.shareData.sidebarToggler.subscribe(
       (stringData) => {
         this.sidebarkey = stringData;
@@ -100,16 +103,19 @@ export class SidebarComponent implements OnInit, OnDestroy {
         this.getSidebarClass(this.sidebarkey);
       }
     );
+
     this.subscription3 = this.shareData.ActiveTextToggle.subscribe(
       (stringData) => {
         this.textkey = stringData;
         this.getActiveMenuText(this.textkey);
       }
     );
+
     this.subscription4 = this.shareData.brandToggle.subscribe((data) => {
       this.brandkey = data;
       this.getBrandClass(this.brandkey);
     });
+
     this.subscription5 = this.shareData.mobileDialogSidebar.subscribe(
       (data) => {
         this.mobileSidebarModal = data;

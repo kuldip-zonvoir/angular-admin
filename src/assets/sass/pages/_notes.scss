@@ -44,6 +44,8 @@
 
 // For Mobile Landscape Mode
 @include responsive-between(sm, md) {
+  .notes_scroll {
+    height: 113vh;}
   .app_toggle {
     display: block;
     margin-right: 14px;

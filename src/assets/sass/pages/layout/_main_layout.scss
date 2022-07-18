@@ -7,6 +7,9 @@
 .chart_new_id{
   display:grid; 
   grid-template-columns: 100%;
+  svg{
+    border-radius: 0 0 8px 8px;
+  }
 }
 #apexchartsk887em3v{
   width: 100% !important;
@@ -159,7 +162,7 @@
   width: 64px;
   background: $background-color;
   box-shadow: $boxShadow-lg;
-  z-index: 9;
+  z-index: 99;
   border-radius: 0 0 0 4px;
   transition: all 0.2s ease-in-out;
 }
@@ -313,6 +316,7 @@
 
 // For Mobile portrait Screen
 @include responsive-below(md) {
+
   // custom image size
   .logoxxl_custom_size {
     width: 5rem !important;
@@ -380,6 +384,10 @@
 }
 // For Mobile landscrape mode Screen
 @include responsive-between(sm, md) {
+ 
+  .news_title {
+    min-height: 60px;
+  }
   .sction_btn_name {
     display: block;
   }
@@ -427,6 +435,9 @@
       left: 0;
       right: 0;
     }
+  }
+  .main_crum{
+    margin-top: 63px;
   }
   //
 }

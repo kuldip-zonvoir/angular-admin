@@ -4,6 +4,10 @@
   color: #342e49;
   font-size: 13px;
 }
+.only_md_screen{display: none;}
+.brl{
+  border-left: 1px solid $border-color2;
+}
 
 .crm_dash_wrap{
   .icons_pro_wrap{
@@ -208,7 +212,7 @@ margin-bottom: 0 !important;
   .custom_td1 {
     font-size: $tdFontsize;
     font-weight: 400;
-    width: 45%;
+    width: 50%;
     p {
       color: $heading-color !important;
     }
@@ -216,13 +220,13 @@ margin-bottom: 0 !important;
   .custom_td2 {
     font-size: $tdFontsize;
     font-weight: 400;
-    width: 40%;
+    width: 30%;
     text-align: center;
   }
   .custom_td3 {
     font-size: $tdFontsize;
     font-weight: 400;
-    width: 15%;
+    width: 20%;
 
     text-align: right;
   }
@@ -343,10 +347,45 @@ margin-bottom: 0 !important;
 @include responsive-below(md) {
   .dashboard_lft_sec {
     .good_j_img {
-      padding: 20px;
+      padding: 10px;
       text-align: center;
+      img {
+        height: 8.5rem;
+        width: 8.5rem;
+      }
+    }
+    .good_j_text {
+      padding-top: 8px;
+      h2{
+        font-size: 22px !important;
+      }
+      ul{
+        margin-top: 14px;
+      }
     }
   }
+  .visit_filters{
+    display: none;
+  }
+  .vector_map_chart {
+    height: 160px;
+  }
+  .pro_activity_body{
+    overflow-y: auto;
+    height: 45vh;
+    cursor: pointer;
+    overflow-x: hidden;
+    @include scrollbar($width: 0.3rem, $border-radius: 1rem);
+    &:hover {
+      $background-light: $scrollbarColor;
+      @include scrollbar($width: 0.3rem, $border-radius: 1rem, $background-color: $background-light);
+    }
+  }
+  .crpt_card_img {
+    width: 100%;
+    height: 15rem;
+    object-fit: contain;
+}
 }
 
 // For Mobile Landscape Mode
@@ -361,12 +400,123 @@ margin-bottom: 0 !important;
       text-align: center;
     }
   }
+  .vector_map_chart {
+    height: 200px;
+  }
+  .visit_filters{
+    display: block;
+  }
+  .crpt_card_img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
+.pro_reminders_body{
+  .pro_activity_sub{
+    width: auto !important;
+  }
+}
+
+.pro_activity_body{
+  height: auto ;
+}
+.only_md_screen{display: block;}
+
+.statics_wrap{
+  display: flex;
+  .information_tab{
+      width: 80%;
+  }
+  .statics_tab{
+      width: 20%;
+  }
+}
+.brl{
+  border: 0;
+}
+}
+
+
 // For tablet Portrait Mode
 @include responsive-between(md, lg) {
+.crm_activity{
+  .pro_activity_body{
+    overflow-y: auto;
+    height: 29vh;
+    cursor: pointer;
+    overflow-x: hidden;
+    @include scrollbar($width: 0.3rem, $border-radius: 1rem);
+    &:hover {
+      $background-light: $scrollbarColor;
+      @include scrollbar($width: 0.3rem, $border-radius: 1rem, $background-color: $background-light);
+    }
+  }
+}
+  .statics_wrap{
+    display: flex;
+    .information_tab{
+        width: 70%;
+    }
+    .statics_tab{
+        width: 30%;
+    }
+  }
+  .only_md_screen{display: block;}
+
+  .brl{
+    border: 0;
+  }
+  .icon_skelton {
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
+
+  }
+  .pro_reminders_body{
+    .pro_activity_sub{
+      width: 120px;
+    }
+  }
+  .milestones_body{
+    .pro_activity_sub{
+      width: 100%;
+    }
+  }
+  .prjt{
+    &.pro_activity_body{
+      height: 33vh;
+      cursor: pointer;
+      overflow-y: auto;
+      overflow-x: hidden;
+      @include scrollbar($width: 0.3rem, $border-radius: 1rem);
+      &:hover {
+        $background-light: $scrollbarColor;
+        @include scrollbar($width: 0.3rem, $border-radius: 1rem, $background-color: $background-light);
+      }
+    }
+  }
 }
 // For tablet Landscape Mode
 @include responsive-between(lg, xl) {
+  .prjt{
+    &.pro_activity_body{
+      height: 30vh;}
+    }
+  .pro_reminders_body{
+    .pro_activity_sub{
+      width: 100% !important;
+    }
+  }
+
+  .brl{
+    border: 0;
+  }
+  .icon_skelton {
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
+    
+  }
   .dashboard_lft_sec {
     .good_job_dash {
       border-radius: 10px;

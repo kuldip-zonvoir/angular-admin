@@ -53,6 +53,16 @@
 }
 // For Mobile Landscape Mode
 @include responsive-between(sm, md) {
+  .day {
+    &:nth-child(3){
+      border-right: none;
+    }
+  }
+  .border-right-1{
+    &:nth-child(3){
+      border-right: none;
+    }
+  }
   .news_title {
     min-height: 60px;
   }

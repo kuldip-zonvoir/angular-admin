@@ -10,8 +10,25 @@ export class TaskTicketsComponent implements OnInit {
   ticketLists = [];
   ticketDialog: boolean;
   confirmDialog: boolean;
+  assignedPerson = [];
+  selectedPerson: string;
   popupId: string;
-  constructor(private _ticketService: TicketsService) {}
+  constructor(private _ticketService: TicketsService) {
+    this.assignedPerson = [
+      {
+        value: "0",
+        lable: "David",
+      },
+      {
+        value: "1",
+        lable: "Arya",
+      },
+      {
+        value: "2",
+        lable: "Kate",
+      },
+    ];
+  }
 
   ngOnInit(): void {
     this.ticketLists = this._ticketService.getTickets();

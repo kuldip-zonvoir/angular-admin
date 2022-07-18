@@ -50,6 +50,7 @@
 .percent_sub_title{
   color: $paraColor;
   font-size: $paraSize;
+  white-space: nowrap;
 }
 .statics_wrap{
   display: flex;
@@ -128,10 +129,18 @@
     }
   }
 }
+.task_tile_icon{
+  font-size: 20px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+}
 .pro_content_wrap {
   h6 {
-    display: inline-block;
-    width: 210px;
+    display: block;
     white-space: nowrap;
     overflow: hidden !important;
     text-overflow: ellipsis;
@@ -156,6 +165,7 @@
 
 .pro_activity_body {
   position: relative;
+  padding: 14px 0;
   ul {
     padding-left: 0;
     margin-bottom: 0;
@@ -285,7 +295,7 @@
             font-size: 13px;
             color: #8a939b;
             white-space: nowrap;
-            width: 150px;
+            // width: 150px;
             display: inline-block;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -302,7 +312,6 @@
             top: 7px;
               .rem_date {
                 margin-bottom: 0px;
-    
                 font-size: 14px;
                 line-height: 18px;
                 text-transform: capitalize;
@@ -328,6 +337,14 @@
       }
     }
   }
+}
+
+.reminders_containers{
+  .pro_activity_sub{
+  }
+}
+.milestones_containers{
+
 }
 
 // progress project
@@ -373,7 +390,7 @@
         font-size: 13px;
         color: #8a939b;
         white-space: nowrap;
-        width: 200px !important;
+        // width: 200px;
         display: inline-block;
         overflow: hidden;
         text-overflow: ellipsis;

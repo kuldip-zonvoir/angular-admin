@@ -142,12 +142,13 @@
         </div>
         <div class="form-group m-b-12">
           <label for="" class="">Assign To</label>
-          <select name="" class="form-control" id="">
-            <option selected>David</option>
-            <option value="1">Morgon</option>
-            <option value="2">Tom</option>
-            <option value="3">Kane</option>
-          </select>
+          <p-dropdown
+            [options]="assignedPerson"
+            class="basic_dpdown"
+            [(ngModel)]="selectedPerson"
+            [ngModelOptions]="{ standalone: true }"
+            optionLabel="lable"
+          ></p-dropdown>
         </div>
       </div>
     </form>

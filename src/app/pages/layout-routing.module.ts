@@ -10,17 +10,10 @@ const routes: Routes = [
       {
         path: "dashboard",
         loadChildren: () =>
-          import("../modules/dashboards/dashboards.module").then(
-            (m) => m.DashboardsModule
-          ),
-      },
-      {
-        path: "dashboards",
-        loadChildren: () =>
           import("../modules/multi-dashboard/multi-dashboard.module").then(
             (m) => m.MultiDashboardModule
           ),
-        data: { breadcrumb: "Dashboards" },
+        data: { breadcrumb: "Dashboard" },
       },
 
       {

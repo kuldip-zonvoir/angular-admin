@@ -1,11 +1,11 @@
 import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: "app-dashboard1",
-  templateUrl: "./dashboard1.component.html",
-  styleUrls: ["./dashboard1.component.scss"],
+  selector: "app-default-dashboard",
+  templateUrl: "./default-dashboard.component.html",
+  styleUrls: ["./default-dashboard.component.scss"],
 })
-export class Dashboard1Component implements OnInit {
+export class DefaultDashboardComponent implements OnInit {
   inc = false;
   decr = false;
   isResponsive: boolean;

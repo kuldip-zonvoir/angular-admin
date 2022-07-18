@@ -1,5 +1,5 @@
 <div class="">
-  <div class="nav_bar w-100 m-b-12">
+  <div class="nav_bar chat_new_list w-100 m-b-12">
     <ul class="w-100 d-flex">
       <li style="width: 33.33%">
         <a
@@ -56,7 +56,7 @@
           class="m-b-12 d-flex align-items-center k_chat_list"
         >
           <div
-            class="m-r-12 cckchat_status"
+            class="m-r-8 cckchat_status"
             [ngClass]="{
               online: user.status === 'online',
               offline: user.status === 'offline'
@@ -65,7 +65,7 @@
             <img
               [src]="user.pic_url"
               alt=""
-              class="img-responsive logo-md-circle"
+              class="img-responsive logo-medium-circle"
             />
             <div *ngIf="user.status === 'online'" class="">
               <span class="user_visibility"></span>
@@ -73,7 +73,7 @@
             </div>
           </div>
           <div class="w-100">
-            <div class="d-flex justify-content-between">
+            <div class="d-flex chat_kn justify-content-between">
               <h6 class="m-b-0">{{ user.user_name }}</h6>
               <p class="m-b-0">{{ user.time }}</p>
             </div>
@@ -94,7 +94,7 @@
       <ng-container *ngFor="let user of users">
         <div class="m-b-12 d-flex align-items-center k_chat_list">
           <div
-            class="m-r-12"
+            class="m-r-8"
             [ngClass]="{
               online: user.status === 'online',
               offline: user.status === 'offline'
@@ -103,7 +103,7 @@
             <img
               [src]="user.pic_url"
               alt=""
-              class="img-responsive logo-md-circle"
+              class="img-responsive logo-medium-circle"
             />
           </div>
           <div class="w-100">
@@ -166,7 +166,7 @@
       <ng-container *ngFor="let user of users">
         <div class="m-b-12 d-flex align-items-center border-1 k_chat_list">
           <div
-            class="m-r-12"
+            class="m-r-8"
             [ngClass]="{
               online: user.status === 'online',
               offline: user.status === 'offline'
@@ -175,7 +175,7 @@
             <img
               [src]="user.pic_url"
               alt=""
-              class="img-responsive logo-md-circle"
+              class="img-responsive logo-medium-circle"
             />
           </div>
           <div class="w-100">
