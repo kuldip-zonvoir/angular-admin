@@ -69,6 +69,37 @@
 }
 // For tablet Portrait Mode
 @include responsive-between(md, lg) {
+  .widget_card_row{
+    margin-left: -10px;
+    margin-right: -10px;
+    & [class*="col-"] {
+      
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+    }
+  }
+  .widget_card_wrap{
+    &.m-r-12{
+        margin-right: 0;
+    }
+    .card-body{
+        padding: 10px;
+        .icon-16{
+            font-size: 14px;
+      
+        }
+    .card_date{
+        font-size: 11px;
+    }
+    }
+    .card_deck_new{
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
   .news_title {
     min-height: 60px;
   }
@@ -80,6 +111,42 @@
 }
 // For tablet Landscape Mode
 @include responsive-between(lg, xl) {
+  ._progress_widget{
+    .card-body{
+        padding: 14px;
+    }
+}
+  .widget_card_row{
+    margin-left: -10px;
+    margin-right: -10px;
+    & [class*="col-"] {
+      
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+    }
+  }
+  .widget_card_wrap{
+    &.m-r-12{
+        margin-right: 0;
+    }
+    .card-body{
+        padding: 10px;
+        .icon-16{
+            font-size: 14px;
+      
+        }
+    .card_date{
+        font-size: 12px;
+    }
+    }
+    .card_deck_new{
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
   .news_title {
     min-height: 60px;
   }

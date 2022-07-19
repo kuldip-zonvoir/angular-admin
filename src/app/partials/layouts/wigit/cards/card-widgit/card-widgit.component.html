@@ -1,4 +1,4 @@
-<div class="card custom-card m-r-12 m-b-8">
+<div class="card custom-card widget_card_wrap m-r-12">
   <img
     class="card-img-top basic-card-image img-responsive"
     [src]="tile.card_image"
@@ -6,19 +6,19 @@
   />
   <div class="card-body">
     <div class="d-flex justify-content-between align-items-center m-b-8">
-      <p class="m-b-0 d-flex text-muted align-items-center">
+      <p class="m-b-0 d-flex text-muted card_date align-items-center">
         <span class="material-icons-outlined icon-16 m-r-8">
           calendar_today
         </span>
         {{ tile.date }}
       </p>
-      <p class="m-b-0 hoverd text-muted d-flex align-items-center">
+      <p class="m-b-0 hoverd text-muted card_date d-flex align-items-center">
         <i class="ti ti-comments icon-16 m-r-8"></i>
         {{ tile.comments }} Comments
       </p>
     </div>
-    <h5 class="">{{ tile.title }}</h5>
-    <p class="">
+    <h6 class="">{{ tile.title }}</h6>
+    <p class="card_deck_new">
       {{ tile.content }}
     </p>
     <div class="">

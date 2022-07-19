@@ -149,8 +149,14 @@
 @include responsive-below(md) {
   .wzrd_menu {
     display: block;
-    .wzrd_list {
-      margin-bottom: 10px;
+    li{
+      margin-bottom: 12px;
+      margin-right: 0;
+      width: 100%;
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+
       .wzrd_link {
         margin-bottom: 10px;
         &:last-child {
@@ -164,6 +170,15 @@
       }
     }
   }
+  .wzrd_vr_menu{
+ 
+    li{
+      &:last-child {
+        margin-bottom: 12px !important;
+      }
+    }
+  }
+
 
   .vertical_wzrd_wrap {
     display: block;
@@ -181,6 +196,27 @@
 }
 // For Mobile landscrape mode Screen
 @include responsive-between(sm, md) {
+  .wzrd_menu {
+    display: flex;
+    li{
+      margin-right: 0 !important;
+      width: 100%;
+      &:last-child {
+        margin-bottom: 12px !important;
+      }
+    }
+  }
+  .wzrd_vr_menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $border-color2;
+    li{
+      &:last-child {
+        margin-bottom: 12px !important;
+      }
+    }
+  }
 }
 // For laptop Landscape Mode
 @include responsive-between(lg, xl) {

@@ -509,6 +509,9 @@ $menufontWeight: 500;
 
 //tablet devices portrait
 @include responsive-between(md, lg) {
+  .scrollbar {
+    height: 94vh;
+  }
   .close_sidebar_modal {
     display: block;
   }
@@ -542,6 +545,9 @@ $menufontWeight: 500;
 
 //mobile  devices landscape
 @include responsive-between(sm, md) {
+  .scrollbar {
+    height: 80vh;
+  }
   .close_sidebar_modal {
     display: block;
   }

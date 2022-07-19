@@ -225,7 +225,7 @@ export class WidgitDataComponent implements OnInit {
       news_date: "5 March 2021",
       news_title: "Apple growth rate increased by 3.8%",
       news_btn_color: "white",
-      bg_color: "dark",
+      bg_color: "danger",
     },
     {
       icon_name: "ti-skype",

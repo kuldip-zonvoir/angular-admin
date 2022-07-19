@@ -23,11 +23,6 @@ const routes: Routes = [
         data: { breadcrumb: "Radio Checkbox" },
       },
       {
-        path: "form-elements",
-        component: MultiSelectComponent,
-        data: { breadcrumb: "Forms Element" },
-      },
-      {
         path: "form-wizard",
         component: FormWizard2Component,
         data: { breadcrumb: "Form Wizard" },
