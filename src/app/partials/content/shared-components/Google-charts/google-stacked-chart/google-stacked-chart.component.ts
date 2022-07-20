@@ -63,7 +63,7 @@ export class GoogleStackedChartComponent implements OnInit {
         ],
         options: {
           height: 300,
-          width: 450,
+          width: "100%",
           colors: [
             this.primaryColor,
             this.secondaryColor,
@@ -71,8 +71,8 @@ export class GoogleStackedChartComponent implements OnInit {
             this.warningColor,
             this.purpleColor,
           ],
-          legend: { position: "top", maxLines: 3 },
-          bar: { groupWidth: "75%" },
+          legend: "none",
+          bar: { groupWidth: "30%" },
           isStacked: true,
         },
       },

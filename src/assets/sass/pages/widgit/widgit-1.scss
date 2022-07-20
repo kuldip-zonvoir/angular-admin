@@ -69,6 +69,12 @@
 }
 // For tablet Portrait Mode
 @include responsive-between(md, lg) {
+  .email_new_tab{
+    margin-bottom: 0px;
+   .dropdown-scroll{
+        max-height: 18rem;
+    }
+}
   .widget_card_row{
     margin-left: -10px;
     margin-right: -10px;

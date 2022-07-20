@@ -57,8 +57,9 @@ export class GoogleScatterChartComponent implements OnInit {
         ],
         options: {
           height: 300,
-          width: 450,
+          width: "100%",
           colors: [this.primaryColor],
+          legend: "none",
           hAxis: { title: "Age", minValue: 0, maxValue: 15 },
           vAxis: { title: "Weight", minValue: 0, maxValue: 15 },
         },

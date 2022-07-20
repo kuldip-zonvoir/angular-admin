@@ -55,7 +55,8 @@ export class GoogleBarChartsComponent implements OnInit {
       barChart: {
         chartType: "Bar",
         dataTable: [
-          ["Year", "Sales", "Expenses", "Profit"],
+          ["", "", "", ""],
+
           ["2014", 1000, 400, 200],
           ["2015", 1170, 460, 250],
           ["2016", 660, 1120, 300],
@@ -63,8 +64,10 @@ export class GoogleBarChartsComponent implements OnInit {
         ],
         options: {
           height: 300,
-          width: 450,
+          width: "100%",
+
           colors: [this.primaryColor, this.secondaryColor, this.successColor],
+          legend: "none",
         },
       },
     };

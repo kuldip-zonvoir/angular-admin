@@ -56,7 +56,7 @@ export class GooglePieChartsComponent implements OnInit {
         ],
         options: {
           height: 300,
-          width: 450,
+          width: "100%",
           colors: [
             this.primaryColor,
             this.secondaryColor,
@@ -64,7 +64,7 @@ export class GooglePieChartsComponent implements OnInit {
             this.warningColor,
             this.purpleColor,
           ],
-          legend: { position: "top" },
+          legend: "none",
         },
       },
     };

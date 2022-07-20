@@ -8,8 +8,6 @@ import { SharedModule } from "src/app/partials/content/shared-components/shared.
 import { ChartjscustomComponent } from "./chartjscustom/chartjscustom.component";
 import { ApexchartSharedModule } from "src/app/partials/content/shared-components/Apex-chart/apexchart.module";
 import { ChartJsSharedModule } from "src/app/partials/content/shared-components/ChartJs/chartJs.module";
-import { NGXChartsComponent } from "./ngx-charts/ngx-charts.component";
-import { NgxChartModule } from "src/app/partials/content/shared-components/Ngx-charts/ngx-chart.module";
 import { GoogleChartsComponent } from "./google-charts/google-charts.component";
 import { GoogleChartsModule } from "src/app/partials/content/shared-components/Google-charts/google.module";
 import { EChartsComponent } from "./e-charts/e-charts.component";
@@ -23,7 +21,6 @@ import { SparkLineModule } from "src/app/partials/layouts/sparkline-components/s
     ChartsComponent,
     ApexChartComponent,
     ChartjscustomComponent,
-    NGXChartsComponent,
     GoogleChartsComponent,
     EChartsComponent,
     SparklineTypeApexChartsComponent,
@@ -36,7 +33,6 @@ import { SparkLineModule } from "src/app/partials/layouts/sparkline-components/s
     EChartsModule,
     ChartCardsModule,
     SparkLineModule,
-    NgxChartModule,
     GoogleChartsModule,
     ChartsRoutingModule,
   ],

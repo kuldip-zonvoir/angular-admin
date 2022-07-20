@@ -471,7 +471,7 @@
     <div class="email-content-wrap mobile-content-space">
       <ng-template [ngIf]="isDropdownArr[1]">
         <div class="">
-          <app-email-wigit></app-email-wigit>
+          <app-email-wigit (parentDropdown)="openDropdown()"></app-email-wigit>
           <div role="menuitem ">
             <div
               class="d-flex align-items-center justify-content-center border-top-1"
@@ -485,7 +485,7 @@
     <div class="notification-content-wrap mobile-content-space">
       <ng-template [ngIf]="isDropdownArr[2]">
         <div class="">
-          <app-engauge></app-engauge>
+          <app-engauge (funNotificationDropdown)="openDropdown()"></app-engauge>
           <div role="menuitem ">
             <div
               class="d-flex align-items-center justify-content-center border-top-1"
@@ -499,7 +499,9 @@
     <div class="profile-content-wrap mobile-content-space">
       <ng-template [ngIf]="isDropdownArr[3]">
         <div class="">
-          <app-drop-profile-wigit></app-drop-profile-wigit>
+          <app-drop-profile-wigit
+            (parentDropdown)="openDropdown()"
+          ></app-drop-profile-wigit>
         </div>
       </ng-template>
     </div>

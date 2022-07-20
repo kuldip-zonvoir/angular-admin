@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, EventEmitter, OnInit, Output } from "@angular/core";
 import { Router } from "@angular/router";
 
 @Component({
@@ -7,21 +7,29 @@ import { Router } from "@angular/router";
   styleUrls: ["./drop-profile-wigit.component.scss"],
 })
 export class DropProfileWigitComponent implements OnInit {
+  @Output("parentDropdown") parentDropdown: EventEmitter<any> =
+    new EventEmitter();
+
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
   goToProfile() {
+    this.parentDropdown.emit();
+    console.log("data isemmited");
     this.router.navigate(["account/timeline"]);
   }
 
   goToMail() {
+    this.parentDropdown.emit();
     this.router.navigate(["email/inbox"]);
   }
   goToPlans() {
+    this.parentDropdown.emit();
     this.router.navigate(["special-pages/price-plans"]);
   }
   goToTasks() {
+    this.parentDropdown.emit();
     this.router.navigate(["application/task-manager"]);
   }
 }

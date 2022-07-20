@@ -28,9 +28,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
   emailId: boolean;
   dropDrown = "default";
   tabId = "";
-    subscription1: Subscription;
-    subscription2: Subscription;
-    subscription3: Subscription;
+  subscription1: Subscription;
+  subscription2: Subscription;
+  subscription3: Subscription;
 
   constructor(private shareData: SharemeService) {}
   openDropdown(index) {
@@ -40,7 +40,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       }
     });
     this.isDropdownArr[index] = !this.isDropdownArr[index];
-    console.log(this.isDropdownOpen);
+    console.log("dropdown is clicked");
   }
   ngOnInit(): void {
     this.subscription1 = this.shareData.sidebarToggle.subscribe((data) => {
@@ -79,7 +79,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
     return customClass;
   }
 
-
   getHeaderClass(value: string) {
     // console.log(value);
     let customClass;
@@ -102,7 +101,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
     }
     return customClass;
   }
-
 
   toggleMe() {
     this.sidebar = true;
