@@ -108,13 +108,14 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   sidebarToggle(value) {
+    console.log("my value", value);
     if (value === "Desktop") {
       this.isMobile = !this.isMobile;
       this.shareData.toggleSidebar(this.isMobile);
       console.log("desktop");
     } else {
-      console.log("mobile");
       this.mobileMenubar = true;
+      console.log("mobile", this.mobileMenubar);
       this.shareData.sidebarMobileMenu(this.mobileMenubar);
     }
   }

@@ -118,6 +118,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
 
     this.subscription5 = this.shareData.mobileDialogSidebar.subscribe(
       (data) => {
+        console.log("updated data", data);
         this.mobileSidebarModal = data;
       }
     );

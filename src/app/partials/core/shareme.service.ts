@@ -50,11 +50,11 @@ export class SharemeService {
   // custom modal
   updateModalState(status: boolean, which = null) {
     this.customModal.next(status);
-    console.log("demo ser", which);
     this.customModalWhich.next(which);
   }
   // sidebar FOR mobile and Desktop
   sidebarMobileMenu(isMobile: boolean) {
+    console.log("data on shareme service", isMobile);
     this.mobileMenuDialog.next(isMobile);
   }
   updateActiveText(activetext: string) {

@@ -366,11 +366,7 @@ a {
   }
 }
 
-@include responsive-between(lg, xl) {
-  .add_me_header {
-    display: none;
-  }
-}
+
 @include responsive-between(md, lg) {
   .hdr_icon_box{
     box-shadow: 0px 0px 0px 1px $border-color !important;
@@ -395,6 +391,27 @@ a {
   }
   .mobile-header {
     display: none !important;
+  }
+  .tablet-header {
+    display: block;
+    background-color: $background-color;
+  }
+}
+
+@include responsive-between(lg, xl) {
+  .add_me_header {
+    display: block;
+  }
+  .kk_search_bar_header{
+    width: 50%;
+    margin-left: 7rem;
+  }
+    .brand-wrapper {
+    display: block;
+  }
+  .desktop-header {
+    display: none;
+    background-color: $background-color;
   }
   .tablet-header {
     display: block;

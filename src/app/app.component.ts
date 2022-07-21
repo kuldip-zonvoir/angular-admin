@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { Subscription } from "rxjs";
+import { SharemeService } from "./partials/core/shareme.service";
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -8,7 +10,9 @@ export class AppComponent {
   customClass: "light-default-color";
   flashScreen: Boolean;
   loaderStatus: Boolean;
-  constructor() {
+  subscription2: Subscription;
+  overlayVisibility: Boolean;
+  constructor(private shareData: SharemeService) {
     this.flashScreen = true;
     this.loaderStatus = true;
   }
@@ -19,5 +23,16 @@ export class AppComponent {
     } else {
       localStorage.setItem("activetheme", "light-default-color");
     }
+
+    // for moibile Sidebar
+    this.subscription2 = this.shareData.mobileDialogSidebar.subscribe(
+      (data) => {
+        this.overlayVisibility = data;
+      }
+    );
+  }
+  hideOverlaySidebar() {
+    console.log("hide");
+    this.shareData.sidebarMobileMenu(false);
   }
 }

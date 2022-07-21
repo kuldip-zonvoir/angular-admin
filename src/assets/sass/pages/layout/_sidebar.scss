@@ -29,7 +29,7 @@ $menufontWeight: 500;
   transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
   position: absolute;
   right: 5px;
-  top: 3px;
+  top: 14px;
 }
 .offcanvas_sidebar_overlay {
   &::before {
@@ -87,7 +87,6 @@ $menufontWeight: 500;
     }
     .brand-header {
       width: 100% !important;
-      // background-color: $background-color;
       color: inherit;
     }
   }
@@ -144,6 +143,7 @@ $menufontWeight: 500;
   }
   }
 }
+
 .sidebar {
   transition: width 0.1s ease, margin 0.1s ease-out;
   z-index: 999;
@@ -450,22 +450,24 @@ $menufontWeight: 500;
   }
   // 4 today
   .menu-sidebar {
-    width: 260px;
+    width: 200px;
   }
-  .sidebar {
-    display: none;
+   // sidebar base with animations 
+   .sidebar {
     height: 100%;
     position: fixed;
     left: 0;
     top: 0;
     z-index: 9999;
-    transition: width 0.1s ease, margin 0.1s ease-out;
-    width: -260px;
+    transition: 0.3s ease-in-out;
+    width: 200px;
+    left: -200px;
     &.mobile_model_active {
-      transition: width 0.1s ease, margin 0.1s ease-out;
+      transition: 0.3s ease-in-out;
       box-shadow: 0 0.1rem 1rem 0.25rem rgb(0 0 0 / 5%);
       z-index: 9999;
-      width: 260px;
+      width: 200px;
+      left: 0;
       display: block !important;
     }
   }
@@ -493,22 +495,32 @@ $menufontWeight: 500;
   .kk_responsive{
     .k_hover_sidebar {
       .sidebar {
-        width: 200px !important;
+        width: 0px !important;
         position: fixed !important;
         left: 0;
       }
     }
-  }
-  .sidebar {
-    width: 200px;
-  }
-  .menu-sidebar {
-    width: auto;
-  }
-}
 
-//tablet devices portrait
-@include responsive-between(md, lg) {
+  }
+  // sidebar base with animations
+  .sidebar {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    transition: 0.3s ease-in-out;
+    width: 260px;
+    left: -260px;
+    &.mobile_model_active {
+      transition: 0.3s ease-in-out;
+      box-shadow: 0 0.1rem 1rem 0.25rem rgb(0 0 0 / 5%);
+      z-index: 9999;
+      width: 260px;
+      left: 0;
+      display: block !important;
+    }
+  }
   .scrollbar {
     height: 94vh;
   }
@@ -518,20 +530,55 @@ $menufontWeight: 500;
   .menu-sidebar {
     width: 260px;
   }
-  .sidebar {
-    display: none;
+  .sidebar_header_mobile {
+    padding: 0.875rem 0rem;
+    position: relative;
+    z-index: 10;
+  }
+
+}
+
+//tablet devices portrait
+@include responsive-between(md, lg) {
+  .mobile_sidebar_dialog {
+    position: relative;
+    &::before{
+      position: fixed;
+      content: '';
+    background-color: #15161633;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    }
+  }
+  .scrollbar {
+    height: 94vh;
+  }
+  .close_sidebar_modal {
+    display: block;
+  }
+  .menu-sidebar {
+    width: 260px;
+    transition: width 0.1s ease, margin 0.1s ease-out;
+  }
+   // sidebar base with animations
+   .sidebar {
     height: 100%;
     position: fixed;
     left: 0;
     top: 0;
     z-index: 9999;
-    transition: width 0.1s ease, margin 0.1s ease-out;
-    width: -260px;
+    transition: 0.3s ease-in-out;
+    width: 260px;
+    left: -260px;
     &.mobile_model_active {
-      transition: width 0.1s ease, margin 0.1s ease-out;
+      transition: 0.3s ease-in-out;
       box-shadow: 0 0.1rem 1rem 0.25rem rgb(0 0 0 / 5%);
       z-index: 9999;
       width: 260px;
+      left: 0;
       display: block !important;
     }
   }
@@ -546,7 +593,7 @@ $menufontWeight: 500;
 //mobile  devices landscape
 @include responsive-between(sm, md) {
   .scrollbar {
-    height: 80vh;
+    height: 84vh;
   }
   .close_sidebar_modal {
     display: block;
@@ -554,20 +601,22 @@ $menufontWeight: 500;
   .menu-sidebar {
     width: 260px;
   }
-  .sidebar {
-    display: none;
+   // sidebar base with animations
+   .sidebar {
     height: 100%;
     position: fixed;
     left: 0;
     top: 0;
     z-index: 9999;
-    transition: width 0.1s ease, margin 0.1s ease-out;
-    width: -260px;
+    transition: 0.3s ease-in-out;
+    width: 260px;
+    left: -260px;
     &.mobile_model_active {
-      transition: width 0.1s ease, margin 0.1s ease-out;
+      transition: 0.3s ease-in-out;
       box-shadow: 0 0.1rem 1rem 0.25rem rgb(0 0 0 / 5%);
       z-index: 9999;
       width: 260px;
+      left: 0;
       display: block !important;
     }
   }

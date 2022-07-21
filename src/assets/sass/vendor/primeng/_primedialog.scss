@@ -134,10 +134,11 @@
     .p-dialog-header-icon {
       color: $heading-color !important;
       font-size: 20px;
-
       &:enabled {
         &:hover {
           color: $heading-color !important;
+          background-color: $hoverColor;
+          box-shadow: none;
         }
       }
     }
@@ -182,9 +183,6 @@
   .p-sidebar-header {
     padding: 0;
   }
-  // .p-sidebar-content{
-  //   padding: 0;
-  // }
   .p-sidebar-active {
     z-index: 10 !important;
     padding: 10px 0;

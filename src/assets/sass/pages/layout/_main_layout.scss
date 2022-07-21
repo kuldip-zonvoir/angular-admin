@@ -157,7 +157,7 @@
 
 .theme_setting {
   position: fixed;
-  right: -2px;
+  right: -20px;
   bottom: 80px;
   width: 64px;
   background: $background-color;
@@ -185,7 +185,7 @@
 .theme-sidebar {
   position: absolute;
   left: 0;
-  top: 0;
+  top: -3rem;
   right: -6px;
   width: 64px;
   padding: 12px 12px 6px 12px;
@@ -515,8 +515,10 @@
     box-shadow: $boxShadow-lg;
   }
   .main_container {
-    margin-left: 200px;
-
+    margin-left: 0px;
+    .main_header{
+      padding-left: 0;
+    }
     .main_content {
       min-height: 97vh;
     }

@@ -1,7 +1,7 @@
 .brand-header {
   justify-content: space-between;
   align-items: center;
-  padding: 0 25px;
+  padding: 0 18px;
   z-index: 99;
   width: 100%;
   height: 60px;
@@ -11,9 +11,7 @@
     .link {
       text-decoration: none;
       color: $text-color;
-
       .brand-heading {
-        // color: $text-color;
         color: inherit;
         font-size: 24px;
       }
@@ -37,7 +35,7 @@
 .brand-header-mobile {
   justify-content: space-between;
   align-items: center;
-  padding: 0 25px;
+  padding: 0 10px;
   z-index: 99;
   background-color: $background-color;
   color: $text-color;
@@ -45,6 +43,7 @@
   display: flex;
   width: 56px;
 }
+
 // Tablet Landscape mode
 @include responsive-between(lg, xl) {
 }
