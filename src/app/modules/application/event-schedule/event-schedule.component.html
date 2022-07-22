@@ -45,7 +45,7 @@
         <span class="material-icons-outlined icon-gray"> info </span>
       </div>
       <div class="evt_info_detail">
-        <h3 class="">{{ eventTitle }}</h3>
+        <h5 class="">{{ eventTitle }}</h5>
         <p class="m-b-0 evt_ext_detl">
           {{ eventStartDate | date: "fullDate" }}
         </p>
@@ -135,13 +135,6 @@
         </div>
         <div class="form-group m-b-12">
           <label for="" class="">Event Type</label>
-          <!-- <p-dropdown
-            [options]="eventTypes"
-            class="basic_dpdown"
-            [(ngModel)]="selectedEvent"
-            [ngModelOptions]="{ standalone: true }"
-            optionLabel="label"
-          ></p-dropdown> -->
           <select
             formControlName="eventType"
             name=""

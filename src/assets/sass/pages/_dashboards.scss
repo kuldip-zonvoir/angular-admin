@@ -187,7 +187,7 @@ margin-bottom: 0 !important;
   }
 }
 .percent_change {
-  font-size: $paraSize;
+  font-size: $paraSize3;
   font-weight: 500;
 }
 .tag_name_ana {
@@ -211,24 +211,33 @@ margin-bottom: 0 !important;
   }
   .custom_td1 {
     font-size: $tdFontsize;
-    font-weight: 400;
     width: 50%;
-    p {
-      color: $heading-color !important;
-    }
+    font-weight: 500;                 
+    p{
+     font-weight: 500;                 
+
+   }
   }
   .custom_td2 {
     font-size: $tdFontsize;
-    font-weight: 400;
     width: 30%;
     text-align: center;
+    font-weight: 500;
+    p{
+      font-weight: 500;
+
+    }
   }
   .custom_td3 {
     font-size: $tdFontsize;
-    font-weight: 400;
+    font-weight: 500;
     width: 20%;
-
     text-align: right;
+    p{
+      font-weight: 500;
+      color: $tableTdColor !important;
+    }
+   
   }
 }
 .data_chart_ana {
@@ -273,13 +282,23 @@ margin-bottom: 0 !important;
     font-size: $paraSize;
     font-weight: 500;
     margin-bottom: 0;
+    padding-bottom: 4px;
   }
   .area_cc_stats {
     color: $text-color;
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 600;
   }
 }
+
+.crypto_card{
+  .cryp_card_title{
+    font-size: 12px;
+    font-weight: 400;
+    color: $muteColor;
+  }
+}
+
 //
 .dashboard_lft_sec {
   .good_job_dash {
@@ -304,7 +323,7 @@ margin-bottom: 0 !important;
     letter-spacing: -0.019em;
     color: $white;
     font-weight: 400;
-    font-size: 24px !important;
+    font-size: 20px !important;
   }
 
   .good_j_text p {

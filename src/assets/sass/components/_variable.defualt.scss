@@ -325,16 +325,13 @@ $input-readonly-bg: $white !default;
 $icon-font-family: "Material Icons Outlined" !default;
 
 $font-size-base: 1rem !default; // assume `14px`
-$font-size-lg: $font-size-base * 1.08 !default;
-$font-size-sm: $font-size-base * 0.925 !default;
-$font-size-xs: $font-size-base * 0.8 !default;
 
-$h1-font-size: $font-size-base * 2 !default;
-$h2-font-size: $font-size-base * 1.5 !default;
-$h3-font-size: $font-size-base * 1.35 !default;
+$h1-font-size: $font-size-base * 1.25 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
 $h4-font-size: $font-size-base * 1.25 !default;
-$h5-font-size: $font-size-base * 1 !default;
-$h6-font-size: $font-size-base * 0.88 !default;
+$h5-font-size: $font-size-base * 0.91 !default;
+$h6-font-size: $font-size-base * 0.84 !default;
 $headings-font-family: null !default;
 $headings-font-weight: 500 !default;
 $headings-line-height: 1.2 !default;
@@ -345,6 +342,9 @@ $display3-size: 3.5rem !default;
 $display4-size: 2.5rem !default;
 $display5-size: 2.25rem !default;
 
+$font-size-lg: $font-size-base * 1.08 !default;
+$font-size-sm: $font-size-base * 2 !default;
+$font-size-xs: $font-size-base * 0.8 !default;
 // Font Sizes
 $font-sizes: (
   font-size-h1: $h1-font-size,

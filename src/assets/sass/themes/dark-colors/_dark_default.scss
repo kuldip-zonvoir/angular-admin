@@ -1,7 +1,7 @@
 // @mixin themeCostomize($main_color, $main_color_light) {
 $primary: #6971ff !default; // Bootstrap variable
 $primary-light: #181e24  !default; // #dadbff Custom variable
-$heading-color: #ffffff;
+$heading-color: #cccbcf;
 $email_circle_color: #171d29; //N
 $inputPadding: 0.5rem; //N
 $inputTextSize: 13px; //N
@@ -14,18 +14,19 @@ $thFontsize: 0.875rem; //N //N
 $tdFontsize: 13px; //N
 $tableThColor: $heading-color; //N
 $tableTdColor: #f0f0f0; //N
+$tdfontWeight:500;
 $tableThBGColor: #0d0d0d; //N
 $dropfileOutline: #0a0000f6; //N
 $dropfilebg: #080a13; // N
 $dark_badge: #282828; //N
-$fc_calender: #121212; //N
+$fc_calender: #0d1016; //N
 
 $backdrop: rgba(0, 0, 0, 0.4); //N
 $background-dark: #0b101d; // #020508;
 $text-color: #b2b9bf;
 $gray-500: #b2b9bf;
-$black: #ffffff !default;
-$background-color-inverse: #ffffff;
+$black: #cccbcf !default;
+$background-color-inverse: #cccbcf;
 $text-color-inverse: #000000;
 $body-bg: #171d29;
 $background-color: #090e13;
@@ -35,6 +36,8 @@ $header-icon-color: #8094ae;
 $hoverColor: #07080c;
 $icon-color: hsl(0deg 1% 71% / 99%);
 $paraColor: hsla(0, 0%, 100%, 0.7);
+$paraSize3:12px;
+
 $paraSize: 13px; //N
 $scrumContainer: #d4d6da8c; //N
 $paraSize2: 12px; //N

@@ -3,13 +3,7 @@
     <h5 class="m-b-0">Horizontal Stepper Form With Validation</h5>
   </div>
   <div
-    class="
-      stepper
-      d-flex
-      align-items-center
-      justify-content-around
-      m-t-12 m-b-12
-    "
+    class="stepper d-flex align-items-center justify-content-around m-t-12 m-b-12"
   >
     <div class="step text-center">
       <span
@@ -17,7 +11,7 @@
           active: stepId === '1',
           success: stepId === '2' || stepId === '3' || stepId === '4'
         }"
-        class="text-center icon step-circle one"
+        class="text-center step-circle one"
       >
         <span
           [ngStyle]="{
@@ -50,7 +44,7 @@
           active: stepId === '2',
           success: stepId === '3' || stepId === '4'
         }"
-        class="text-center icon step-circle two"
+        class="text-center step-circle two"
       >
         <span
           [ngStyle]="{
@@ -73,7 +67,7 @@
     <div class="step text-center">
       <span
         [ngClass]="{ active: stepId === '3', success: stepId === '4' }"
-        class="text-center icon step-circle three"
+        class="text-center step-circle three"
       >
         <span [ngStyle]="{ display: stepId === '4' ? 'none' : 'inline-block' }">
           3

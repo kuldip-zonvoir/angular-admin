@@ -74,7 +74,7 @@
         .t_title {
           font-size: $thFontsize;
           color: $tableThColor;
-          font-weight: 500;
+          font-weight: 600;
         }
       }
     }
@@ -92,10 +92,10 @@
           color: $tableTdColor;
           font-size: $tdFontsize;
           vertical-align: middle;
+          font-weight: $tdfontWeight;
         }
         .tabelcell_status {
           @extend .tabelcell;
-          font-size: 12px;
           box-shadow: $boxShadow-lg;
           font-weight: 500;
           display: inline-block;

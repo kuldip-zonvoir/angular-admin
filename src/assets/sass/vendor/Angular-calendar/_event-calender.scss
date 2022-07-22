@@ -48,10 +48,10 @@
   .evt_info_detail {
     width: 70%;
     .evt_ext_detl {
-      font-size: 14px;
+      font-size: 13px;
       text-transform: capitalize;
       font-weight: 500;
-      color: #626366;
+      color: $muteColor;
     }
   }
   .evt_info_action {

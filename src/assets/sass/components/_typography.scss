@@ -17,10 +17,12 @@ h4 {
 
 h5 {
   @include font-size($h5-font-size, true);
+  font-weight: 600;
 }
 
 h6 {
   @include font-size($h6-font-size, true);
+  font-weight: 600;
 }
 //
 .sub_heading {

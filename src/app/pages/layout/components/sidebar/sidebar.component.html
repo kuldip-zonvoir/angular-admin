@@ -21,6 +21,9 @@
   >
     <div class="mega-sidebar scrollbar" [ngClass]="getActiveMenuText(textkey)">
       <ul class="nav">
+        <li class="nav_title">
+          <h6 class="heading">Main</h6>
+        </li>
         <li class="nav_item">
           <a
             (click)="openMenu(0)"
@@ -660,10 +663,9 @@
             }"
             class="nav_link d-flex align-items-center"
           >
-            <!-- <span class="material-icons-outlined m-r-12 icon-20">
-              assignment_turned_in
-            </span> -->
-            <i class="fas fa-receipt m-r-12 icon-20"></i>
+            <span class="material-icons-outlined m-r-12 icon-20">
+              receipt_long
+            </span>
             <div
               class="d-flex justify-content-between w-100 align-items-center nav_name"
             >
@@ -907,9 +909,7 @@
             }"
             class="nav_link d-flex align-items-center"
           >
-            <span class="material-icons-outlined m-r-12 icon-20">
-              article
-            </span>
+            <span class="material-icons-outlined m-r-12 icon-20"> stream </span>
             <div
               class="d-flex justify-content-between w-100 align-items-center nav_name"
             >
@@ -1300,13 +1300,11 @@
             }"
             class="nav_link d-flex align-items-center"
           >
-            <span class="material-icons-outlined m-r-12 icon-20">
-              description
-            </span>
+            <span class="material-icons-outlined m-r-12 icon-20"> style </span>
             <div
               class="d-flex justify-content-between w-100 align-items-center nav_name"
             >
-              <div class="">Widgits</div>
+              <div class="">Widgets</div>
               <span class="material-icons-outlined icon-karr">
                 {{
                   isSubMenuArr[13]
@@ -1450,7 +1448,7 @@
             class="nav_link d-flex align-items-center"
           >
             <span class="material-icons-outlined m-r-12 icon-20">
-              article
+              filter_vintage
             </span>
             <div
               class="d-flex justify-content-between w-100 align-items-center nav_name"
@@ -1870,7 +1868,7 @@
             class="nav_link d-flex align-items-center"
           >
             <span class="material-icons-outlined m-r-12 icon-20">
-              insights
+              pie_chart_outlined
             </span>
             <div
               class="d-flex justify-content-between w-100 align-items-center nav_name"

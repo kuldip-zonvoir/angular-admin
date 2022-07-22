@@ -183,6 +183,10 @@ $menufontWeight: 500;
         }
 
         &:hover {
+          .nav_name {
+            font-size: $sidebarMenuSize;
+            font-weight: 600;
+          }
           color: $primary;
           .material-icons-outlined {
             color: inherit;
@@ -195,6 +199,10 @@ $menufontWeight: 500;
           color: $white;
           border-radius: 0 20px 20px 0;
           margin: 14px 0;
+          .nav_name {
+            font-size: $sidebarMenuSize;
+            font-weight: 600;
+          }
           .material-icons-outlined {
             color: inherit;
           }
@@ -207,10 +215,10 @@ $menufontWeight: 500;
 
     .nav_title {
       .heading {
-        font-size: $sidebarHeadingSize;
+        font-size: $sidebarHeadingSize !important;
         text-transform: uppercase;
         font-weight: 600;
-        padding-left: 26px;
+        padding-left: 20px;
         margin-top: 0.75rem;
       }
     }
@@ -366,7 +374,7 @@ $menufontWeight: 500;
                 font-size: $sidebarHeadingSize;
                 text-transform: uppercase;
                 font-weight: 600;
-                padding-left: 26px;
+                padding-left: 20px;
                 margin-top: 0.75rem;
               }
             }

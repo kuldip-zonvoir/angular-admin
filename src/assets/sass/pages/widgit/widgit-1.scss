@@ -8,6 +8,26 @@
   background-color: $background-color;
 }
 
+._weather_report{
+  .col{
+   .weather_time{
+    font-size: 14px;
+    padding-left: 4px;
+   }
+   .text-muted{
+    padding-bottom: 4px;
+   }
+  }
+}
+
+.wid_user_info{
+  h6{
+    padding-bottom: 4px;
+  }
+  p{
+
+  }
+}
 .comment-scrollable {
   height: 400px;
   overflow-y: auto;

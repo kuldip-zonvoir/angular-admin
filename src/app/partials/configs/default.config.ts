@@ -50,7 +50,7 @@ export const DefaultConfig = {
       font_size: "13px",
       font_weight: "500",
       color: "#475c66",
-      font_family: "Roboto",
+      font_family: "Inter",
     },
   },
 };

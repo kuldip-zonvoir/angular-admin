@@ -4,7 +4,7 @@
   .step-circle {
     z-index: 2 !important;
     position: relative;
-    color: #b5b5b5;
+    color: $paraColor;
     background-color: $background-color;
     height: 40px;
     display: inline-block;
@@ -12,7 +12,7 @@
     border-radius: 100%;
     text-align: center;
     line-height: 36px;
-    border: 3px solid $primary;
+    border: 2px solid $primary;
 
     .icon {
       font-size: 20px;
