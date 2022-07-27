@@ -9,13 +9,15 @@
       </div>
       <div class="col-lg-3 col-sm-6 col-md-6 grid-bottom-12">
         <div class="form-group m-b-0">
-          <input
-            type="text"
-            placeholder="Daterangepicker"
-            class="form-control k_datepicker"
-            bsDaterangepicker
-            [bsConfig]="{ isAnimated: true }"
-          />
+          <p-calendar
+            class="prime_datepicker"
+            [(ngModel)]="today"
+            [disabledDays]="[0, 6]"
+            [readonlyInput]="true"
+            selectionMode="range"
+            inputId="range"
+            placeholder="Date Picker"
+          ></p-calendar>
         </div>
       </div>
       <div class="col-lg-3 col-sm-6 col-md-6 grid-bottom-12">

@@ -99,6 +99,10 @@ p-inputmask {
 }
 
 // dropdown
+.p-dropdown:not(.p-disabled).p-focus
+{
+  box-shadow: none;
+}
 .basic_dpdown {
   .p-focus {
     box-shadow: none;

@@ -138,6 +138,7 @@ import { BasicListComponent } from "./list/basic-list/basic-list.component";
 import { ActiveItemListComponent } from "./list/active-item-list/active-item-list.component";
 import { DisableItemListComponent } from "./list/disable-item-list/disable-item-list.component";
 import { LinkButtonListComponent } from "./list/link-button-list/link-button-list.component";
+import { SharedModule } from "src/app/partials/content/shared-components/shared.module";
 
 @NgModule({
   declarations: [
@@ -275,6 +276,7 @@ import { LinkButtonListComponent } from "./list/link-button-list/link-button-lis
     ProgressbarModule.forRoot(),
     TypeaheadModule.forRoot(),
     FormsModule,
+    SharedModule,
     HighlightModule,
     ReactiveFormsModule,
     UiElementsRoutingModule,

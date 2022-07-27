@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { CommonModule,DatePipe } from "@angular/common";
+import { CommonModule, DatePipe } from "@angular/common";
 import { BlankPageComponent } from "./blank-page/blank-page.component";
 import { BsDropdownModule } from "ngx-bootstrap/dropdown";
 import { CustomDropdownComponent } from "./custom-dropdown/custom-dropdown.component";
@@ -12,6 +12,7 @@ import { CustomSingleSelectComponent } from "./custom-single-select/custom-singl
 import { CustomMultiSelectComponent } from "./custom-multi-select/custom-multi-select.component";
 import { DialogModule } from "primeng/dialog";
 import { SidebarModule } from "primeng/sidebar";
+import { CalendarModule } from "primeng/calendar";
 
 import { CollapseModule } from "ngx-bootstrap/collapse";
 import { CustomPaginationComponent } from "./custom-pagination/custom-pagination.component";
@@ -33,7 +34,7 @@ import { FullCalendarModule } from "@fullcalendar/angular";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
-import { VectorMap1Component } from './vector-map1/vector-map1.component';
+import { VectorMap1Component } from "./vector-map1/vector-map1.component";
 FullCalendarModule.registerPlugins([
   dayGridPlugin,
   timeGridPlugin,
@@ -55,7 +56,7 @@ FullCalendarModule.registerPlugins([
     TabelFilterComponentComponent,
     FileDragNDropComponent,
     FullCalenderComponent,
-    VectorMap1Component
+    VectorMap1Component,
   ],
   providers: [DatePipe],
   imports: [
@@ -65,6 +66,7 @@ FullCalendarModule.registerPlugins([
     FormsModule,
     DialogModule,
     SidebarModule,
+    CalendarModule,
     BsDatepickerModule.forRoot(),
     ToastModule,
     DropdownModule,
@@ -98,6 +100,7 @@ FullCalendarModule.registerPlugins([
     MultiSelectModule,
     SidebarModule,
     ToastModule,
+    CalendarModule,
     BsDatepickerModule,
     NgSelectModule,
     ReactiveFormsModule,

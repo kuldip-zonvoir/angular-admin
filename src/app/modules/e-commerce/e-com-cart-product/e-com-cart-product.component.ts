@@ -39,6 +39,6 @@ export class EComCartProductComponent implements OnInit {
     this.isWhished = !this.isWhished;
   }
   placeOrder() {
-    this.router.navigate(["e-commmerce/checkout"]);
+    this.router.navigate(["e-commerce/checkout"]);
   }
 }

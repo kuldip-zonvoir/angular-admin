@@ -3,11 +3,10 @@ import { FormGroup } from "@angular/forms";
 import { Component, OnInit } from "@angular/core";
 import { CalendarOptions } from "@fullcalendar/angular";
 import { DatePipe } from "@angular/common";
-interface AllEvevnt{
-  id:string;
-  eventColor:string;
-  type:string;
-  
+interface AllEvevnt {
+  id: string;
+  eventColor: string;
+  type: string;
 }
 @Component({
   selector: "app-event-schedule",
@@ -35,7 +34,8 @@ export class EventScheduleComponent implements OnInit {
   eventIdColor = "";
   eventStartDate = "";
   customEvent: any;
-  eventTypes:AllEvevnt[]
+  eventTypes: AllEvevnt[];
+  selectedEvent: AllEvevnt;
 
   Events = [];
   eventForm: FormGroup;
@@ -171,7 +171,7 @@ export class EventScheduleComponent implements OnInit {
   ngOnInit(): void {
     this.calendarOptions = {
       initialView: this.radioModel,
-      dateClick: this.handleDateClick.bind(this), 
+      dateClick: this.handleDateClick.bind(this),
       eventClick: this.handleEventActions.bind(this),
 
       headerToolbar: {

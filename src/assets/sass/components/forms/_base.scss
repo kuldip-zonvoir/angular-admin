@@ -19,6 +19,8 @@
 .input-group-text {
   border: 0;
   border-radius: 0;
+  background-color: $inputBgColor;
+  border: 1px solid $inputBorder !important;
 }
 // ng select
 .ng-custom-select-input {

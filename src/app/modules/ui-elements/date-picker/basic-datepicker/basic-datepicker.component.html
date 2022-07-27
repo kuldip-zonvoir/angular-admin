@@ -24,13 +24,13 @@
     <div class="content zp-12">
       <div class="">
         <div class="">
-          <input
-            type="text"
-            placeholder="Datepicker"
-            class="form-control"
-            bsDatepicker
-            [bsConfig]="{ isAnimated: true }"
-          />
+          <p-calendar
+            class="prime_datepicker"
+            [(ngModel)]="today"
+            [readonlyInput]="true"
+            inputId="basic"
+            placeholder="Date Picker"
+          ></p-calendar>
         </div>
       </div>
     </div>

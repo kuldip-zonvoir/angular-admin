@@ -111,6 +111,71 @@
     }
   }
 }
+.analytic_table{
+  thead{
+tr{
+  th{
+    text-align: center;
+    &:first-child{
+      width: 50%;
+    }
+  }
+}
+  }
+  tbody{
+    tr{
+      td{
+        text-align: center;
+        &:first-child{
+          text-align: left;
+          width: 50%;
+        }
+      }
+      &:last-child{
+
+        td{
+          
+          border-bottom: 0;
+        }
+      }
+  }
+}
+}
+.insights_table{
+  tbody{
+    tr{
+      td{
+        text-align: right;
+        padding: 0.5rem;
+        .tabelcell {
+          font-size: 12px;
+        }
+        &:first-child{
+          text-align: left;
+          width: 50%;
+        }
+      }
+      &:hover{
+        background-color: transparent;
+        cursor: auto;
+      }
+      &:first-child{
+        td{
+          .tabelcell {
+            font-size: 12px;
+            font-weight: 500;
+          }
+        }
+      }
+      &:last-child{
+        td{
+          
+          border-bottom: 0;
+        }
+      }
+  }
+}
+}
 
 // for Mobile Prtrait Mode Mode
 @include responsive-below(md) {

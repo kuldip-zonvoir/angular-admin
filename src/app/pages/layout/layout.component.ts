@@ -11,7 +11,7 @@ import { SharemeService } from "src/app/partials/core/shareme.service";
 export class LayoutComponent implements OnInit, OnDestroy {
   isResponsive: boolean;
   isDisable = true;
-  isChecked: boolean;
+  isChecked: boolean = true;
   hId = "0";
   bId = "0";
   sId = "0";
@@ -68,6 +68,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
     this.currentTheme = localStorage.getItem("activetheme");
     this.currentTheme = this.customClass;
     this.customClass = this.currentTheme;
+    // this.isChecked = false;
     this.router.events.subscribe((ev) => {
       if (ev instanceof NavigationEnd) {
         this.currentUrl = ev.url.split("/");
@@ -91,12 +92,6 @@ export class LayoutComponent implements OnInit, OnDestroy {
         this.mobileSidebarModal = data;
       }
     );
-
-    if (this.currentTheme == "light-default-color") {
-      this.isChecked = false;
-    } else {
-      this.isChecked = true;
-    }
   }
 
   // get the active theme

@@ -3,7 +3,7 @@
     class="card-header d-flex justify-content-between align-items-center custom-card-header border-1"
   >
     <div class="card-title m-b-0">
-      <h5 class="card-label m-b-0">Format date</h5>
+      <h5 class="card-label m-b-0">Disable days</h5>
     </div>
     <div class="code">
       <button
@@ -25,13 +25,14 @@
       <form [formGroup]="form">
         <div class="">
           <div class="">
-            <input
-              class="form-control"
-              #datepickerYMD="bsDatepicker"
-              bsDatepicker
-              formControlName="dateYMD"
-              [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }"
-            />
+            <p-calendar
+              class="prime_datepicker"
+              [(ngModel)]="today"
+              [disabledDays]="[0, 6]"
+              [readonlyInput]="true"
+              inputId="disabledays"
+              placeholder="Date Picker"
+            ></p-calendar>
           </div>
         </div>
       </form>

@@ -1,30 +1,29 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
-import { HighlightResult } from 'ngx-highlightjs';
+import { Component, OnInit } from "@angular/core";
+import { FormControl, FormGroup } from "@angular/forms";
+import { HighlightResult } from "ngx-highlightjs";
 
 @Component({
-  selector: 'app-dateformat-datepicker',
-  templateUrl: './dateformat-datepicker.component.html',
-  styleUrls: ['./dateformat-datepicker.component.scss']
+  selector: "app-dateformat-datepicker",
+  templateUrl: "./dateformat-datepicker.component.html",
+  styleUrls: ["./dateformat-datepicker.component.scss"],
 })
 export class DateformatDatepickerComponent implements OnInit {
   tabId = "0";
   showCode = false;
   currentDate = new Date();
-
+  today: Date;
   form = new FormGroup({
     dateYMD: new FormControl(new Date()),
     dateFull: new FormControl(new Date()),
     dateMDY: new FormControl(new Date()),
     dateRange: new FormControl([
       new Date(),
-      new Date(this.currentDate.setDate(this.currentDate.getDate() + 7))
-    ])
+      new Date(this.currentDate.setDate(this.currentDate.getDate() + 7)),
+    ]),
   });
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   tabToggle(tab) {
     if (tab != this.tabId) {
       this.tabId = tab;
@@ -35,12 +34,14 @@ export class DateformatDatepickerComponent implements OnInit {
   htmlcode = `
     <div class="row">
     <div class="col-xs-12 col-12 col-md-4 form-group">
-    <input
-    class="form-control"
-    #datepickerYMD="bsDatepicker"
-    bsDatepicker
-    formControlName="dateYMD"
-    [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD' }">
+    <p-calendar
+              class="prime_datepicker"
+              [(ngModel)]="today"
+              [disabledDays]="[0, 6]"
+              [readonlyInput]="true"
+              inputId="disabledays"
+              placeholder="Date Picker"
+            ></p-calendar>
     </div>
    </div>
         `;
@@ -71,9 +72,9 @@ export class DateformatDatepickerComponent implements OnInit {
     this.response = {
       language: e.language,
       relevance: e.relevance,
-      second_best: '{...}',
-      top: '{...}',
-      value: '{...}'
-    }
+      second_best: "{...}",
+      top: "{...}",
+      value: "{...}",
+    };
   }
 }

@@ -15,12 +15,13 @@ export class CouponsComponent implements OnInit, OnDestroy {
   popupId: string;
   confirmDialog: boolean;
   couponDetail: boolean;
-
+  today: Date;
   subscription: Subscription;
   statusArr = [];
   selectedStatus: string;
   couponList = [];
   constructor(private _couponService: EComCouponService) {
+    this.today = new Date();
     this.statusArr = [
       {
         value: "0",

@@ -57,7 +57,7 @@ const routes: Routes = [
         data: { breadcrumb: "Application" },
       },
       {
-        path: "e-commmerce",
+        path: "e-commerce",
         loadChildren: () =>
           import("../modules/e-commerce/e-commerce.module").then(
             (m) => m.ECommerceModule

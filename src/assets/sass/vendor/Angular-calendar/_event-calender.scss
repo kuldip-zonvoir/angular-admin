@@ -14,6 +14,211 @@
     );
   }
 }
+
+.p-calendar {
+  width: 100%;
+  .p-datepicker {
+    min-width: 50%;
+  }
+  .p-yearpicker-year {
+    min-width: 50%;
+  }
+}
+.prime_datepicker {
+  display: block;
+  .p-datepicker .p-datepicker-today span {
+    background-color: $primary;
+    color: $white;
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  input {
+    height: auto;
+    padding: 0.6rem;
+    font-size: $form-text-font-size;
+    font-weight: $form-text-font-weight;
+    border: 1px solid $border-color2 !important;
+    border-radius: 4px;
+    background-color: $inputBgColor;
+    color: lighten($color: $text-color, $amount: 5%);
+  }
+  
+  .p-datepicker {
+    background-color: $background-color;
+    color: $muteColor;
+    &:not(.p-disabled) {
+      .p-yearpicker {
+        .p-yearpicker-year{
+          &:not(.p-disabled){
+            &:not(.p-highlight){
+              &:hover {
+                background-color: $primary-light;
+                color: $primary;
+              }
+            }
+          }
+          &.p-highlight {
+            background-color: $primary-light;
+            color: $primary;
+          }
+          &:focus {
+            box-shadow: none;
+          }
+          &:hover {
+            background-color: $primary-light;
+            color: $primary;
+          }
+        }
+        
+      }
+      .p-monthpicker-month {
+        &:not(.p-disabled) {
+          &:not(.p-highlight) {
+            &:hover {
+              background-color: $primary-light;
+              color: $primary;
+            }
+          }
+        }
+        &.p-highlight {
+          background-color: $primary-light;
+          color: $primary;
+        }
+        &:focus {
+          box-shadow: none;
+        }
+        &:hover {
+          background-color: $primary-light;
+          color: $primary;
+        }
+      }
+      table td span:not(.p-highlight):not(.p-disabled):hover {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+    .p-datepicker-header {
+      padding: 0;
+      background-color: $background-color;
+      .p-link{
+        font-size: 15px;
+        color: $text-color;
+        &:enabled{
+          &:focus{
+            box-shadow: none;
+          }
+        }
+        &:focus {
+          box-shadow: none;
+          border: 0;
+          outline: inherit;
+        }
+        &:active {
+          box-shadow: none;
+          border: 0;
+          outline: inherit;
+        }
+      }
+      .p-datepicker-prev {
+        font-size: 16px;
+        color: $text-color;
+        &:enabled{
+          &:focus{
+            box-shadow: none;
+          }
+        }
+        &:focus {
+          box-shadow: none;
+          border: 0;
+          outline: inherit;
+        }
+        &:active {
+          box-shadow: none;
+          border: 0;
+          outline: inherit;
+        }
+      }
+      .p-datepicker-next {
+        font-size: 16px;
+        color: $text-color;
+        &:enabled{
+          &:focus{
+            box-shadow: none;
+          }
+        }
+        &:focus {
+          box-shadow: none;
+          border: 0;
+          outline: inherit;
+        }
+        &:active {
+          box-shadow: none;
+          border: 0;
+          outline: inherit;
+        }
+      }
+      .p-datepicker-year {
+        padding: 0.2rem;
+        &:hover {
+          color: $primary;
+        }
+      }
+      .p-datepicker-month {
+        color: #495057;
+        transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+        font-weight: 600;
+        padding: 0.2rem;
+        &:hover {
+          color: $primary !important;
+        }
+      }
+    }
+    table {
+      th {
+        padding: 0.2rem;
+        text-align: center;
+        span {
+          width: 1.5rem;
+          height: 1.5rem;
+          font-size: 13px;
+          &:focus {
+            box-shadow: none;
+            background-color: $primary-light;
+            color: $primary;
+          }
+        }
+      }
+      td {
+        padding: 0.2rem;
+        span {
+          width: 1.75rem;
+          height: 1.75rem;
+          border-radius: 50%;
+          transition: box-shadow 0.2s;
+          border: 1px solid transparent;
+          font-size: 14px;
+          font-weight: 500;
+
+          &.p-highlight {
+            color: $primary;
+            background: $primary-light;
+          }
+          &:focus {
+            outline: 0 none;
+            outline-offset: 0;
+            box-shadow: none;
+            background-color: $primary-light;
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
 .main_heading_cal {
   margin-bottom: 20px;
 }

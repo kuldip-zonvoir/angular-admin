@@ -11,7 +11,10 @@ export class CustomersComponent implements OnInit {
   taskDialog: boolean;
   customerDetail: boolean;
   customerList = [];
-  constructor(private _fakeApi: FakeApiService) {}
+  today: Date;
+  constructor(private _fakeApi: FakeApiService) {
+    this.today = new Date();
+  }
 
   ngOnInit(): void {
     this.customerList = this._fakeApi.getCustomers();

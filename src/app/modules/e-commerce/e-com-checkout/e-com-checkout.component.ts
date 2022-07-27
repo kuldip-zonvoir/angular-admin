@@ -8,6 +8,7 @@ import { Component, OnInit } from "@angular/core";
 export class EComCheckoutComponent implements OnInit {
   tabId = "DebitCard";
   isChecked: boolean;
+  today: Date;
   statesArr = [];
   selectedState: String;
   citiesArr = [];

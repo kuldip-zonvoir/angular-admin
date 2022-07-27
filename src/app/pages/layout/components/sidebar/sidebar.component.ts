@@ -23,7 +23,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
     "dashboards",
     "account",
     "application",
-    "e-commmerce",
+    "e-commerce",
     "email",
     "chat",
     "contacts",

@@ -1,1 +1,28 @@
-
+.insights_wrap{
+    a{
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    opacity: 0.4;
+    &:first-child{
+        opacity: 1;
+    }
+    &:hover{
+        opacity: 1;
+    }
+    }
+}
+.header_info_wrap{
+    margin-bottom: 8px;
+}
+.insight_table_wrap{
+    margin: 8px 0;
+}
+.insight_wrap{
+    .icon-wrap{
+        color: #6971ff;
+        font-size: 16px;
+        margin-right: 4px;
+    }
+}

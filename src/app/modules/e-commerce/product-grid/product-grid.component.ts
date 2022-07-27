@@ -13,10 +13,10 @@ export class ProductGridComponent implements OnInit {
 
   ngOnInit(): void {}
   addToCart(id: string) {
-    this._rouetr.navigate(["/e-commmerce/cart"]);
+    this._rouetr.navigate(["/e-commerce/cart"]);
   }
   productDetail(id: string) {
-    this._rouetr.navigate(["/e-commmerce/product-detail"]);
+    this._rouetr.navigate(["/e-commerce/product-detail"]);
   }
   addToWishlist(id: string) {
     this.isWishlist = true;

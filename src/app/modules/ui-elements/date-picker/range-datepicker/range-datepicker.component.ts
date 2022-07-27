@@ -1,19 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { HighlightResult } from 'ngx-highlightjs';
+import { Component, OnInit } from "@angular/core";
+import { HighlightResult } from "ngx-highlightjs";
 
 @Component({
-  selector: 'app-range-datepicker',
-  templateUrl: './range-datepicker.component.html',
-  styleUrls: ['./range-datepicker.component.scss']
+  selector: "app-range-datepicker",
+  templateUrl: "./range-datepicker.component.html",
+  styleUrls: ["./range-datepicker.component.scss"],
 })
 export class RangeDatepickerComponent implements OnInit {
   tabId = "0";
   showCode = false;
+  today: Date;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   tabToggle(tab) {
     if (tab != this.tabId) {
       this.tabId = tab;
@@ -24,11 +23,15 @@ export class RangeDatepickerComponent implements OnInit {
   htmlcode = `
     <div class="row">
     <div class="col-xs-12 col-12 col-md-4 form-group">
-      <input type="text"
-            placeholder="Daterangepicker"
-            class="form-control"
-            bsDaterangepicker
-            [bsConfig]="{ isAnimated: true }">
+    <p-calendar
+    class="prime_datepicker"
+    [(ngModel)]="today"
+    [disabledDays]="[0, 6]"
+    [readonlyInput]="true"
+    selectionMode="range"
+    inputId="range"
+    placeholder="Date Picker"
+  ></p-calendar>
     </div>
     </div>
         `;
@@ -46,9 +49,9 @@ export class RangeDatepickerComponent implements OnInit {
     this.response = {
       language: e.language,
       relevance: e.relevance,
-      second_best: '{...}',
-      top: '{...}',
-      value: '{...}'
-    }
+      second_best: "{...}",
+      top: "{...}",
+      value: "{...}",
+    };
   }
 }

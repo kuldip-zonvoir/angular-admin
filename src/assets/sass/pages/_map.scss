@@ -27,7 +27,7 @@
 @include responsive-between(md, lg) {
   .map-height {
     .map-container {
-      width: 721px !important;
+      width: 100% !important;
       height: 400px !important;
     }
   }
@@ -36,7 +36,7 @@
 @include responsive-between(lg, xl) {
   .map-height {
     .map-container {
-      width: 450px !important;
+      width: 100% !important;
       height: 400px !important;
     }
   }

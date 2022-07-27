@@ -73,7 +73,7 @@ export class InventoryComponent implements OnInit {
     this.saveFiles(files);
   }
   editProduct(id: string) {
-    this._router.navigate(["/e-commmerce/edit-product"]);
+    this._router.navigate(["/e-commerce/edit-product"]);
   }
   deleteProduct(id: string) {
     this.confirmDialog = true;

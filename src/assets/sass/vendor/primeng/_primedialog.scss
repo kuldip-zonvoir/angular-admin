@@ -20,6 +20,12 @@
     z-index: 9999;
   }
 }
+// dropdown
+.cdk-virtual-scroll-viewport{
+  height: 150px !important
+
+}
+// dropdown ends
 // event Calender
 .fc_cal_evt_custom {
   @extend %p-dialoglmini;
@@ -102,14 +108,20 @@
 }
 
 .p-component {
-  font-size: 0.875rem;
+  font-size: 0.84rem;
+  font-family: "Inter", "Helvetica", "sans-serif" !important;
 }
+.p-dialog-content {
+  overflow-y: inherit !important;
+  overflow-x: inherit !important;
+}
+
 ////
+/// 
 .e-com-category {
   .p-dialog-content {
-    overflow-y: auto;
-    overflow-x: hidden;
-
+      overflow-y: inherit !important;
+      overflow-x: inherit !important;
     @include scrollbar($width: 0.25rem, $border-radius: 0.5rem);
     &:hover {
       @include scrollbar($width: 0.25rem, $border-radius: 0.5rem, $background-color: $scrollbarColor);

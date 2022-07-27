@@ -14,6 +14,7 @@ export class TaskManagerComponent implements OnInit {
   isCompleted: boolean;
   taskForm: FormGroup;
   popupId: boolean;
+  today: Date;
   confirmDialog: boolean;
   tasks = [];
   bsValue = new Date();
@@ -25,6 +26,7 @@ export class TaskManagerComponent implements OnInit {
   taskDetails =
     " lorem qui ipsum deserunt duis exercitation lorem elit qui qui ipsum tempor nulla velit aliquip enim consequat incididunt pariatur duis excepteur elit irure nulla ipsum dolor dolore est.";
   constructor(private fake_api: FakeApiService, private fb: FormBuilder) {
+    this.today = new Date();
     this.statusArr = [
       {
         value: "1",

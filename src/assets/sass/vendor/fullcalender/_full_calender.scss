@@ -12,6 +12,23 @@
   display: flex;
 }
 
+.fc_custom{
+  .fc-scroller{
+    overflow-y: auto;
+    cursor: pointer;
+  overflow-y: auto;
+  overflow-x: hidden;
+  @include scrollbar($width: 0.4rem, $border-radius: 0.5rem);
+  &:hover {
+    @include scrollbar(
+      $width: 0.4rem,
+      $border-radius: 0.5rem,
+      $background-color: $scrollbarColor
+    );
+  }
+  }
+}
+
 .fc {
   font-size: 14px;
   background-color: rgba(185, 89, 89, 0);
@@ -54,14 +71,29 @@
           box-shadow: inherit;
           color: $white;
           border: 1px solid $primary;
+          &:active{
+            &:focus{
+              box-shadow: none;
+            }
+          }
         }
+        
         &.fc-button-active {
           background-color: darken($color: $primary, $amount: 5%);
           box-shadow: inherit;
           color: $white;
           border: 1px solid $primary;
+          &:hover{
+            background-color: $primary;
+            color: #fff;
+            border: 1px solid $primary;
+          }
+          &:focus{
+            box-shadow: none;
+          }
         }
       }
+     
     }
   }
 

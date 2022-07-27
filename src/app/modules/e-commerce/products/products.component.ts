@@ -20,6 +20,6 @@ export class ProductsComponent implements OnInit {
   }
 
   addProduct() {
-    this._router.navigate(["/e-commmerce/edit-product"]);
+    this._router.navigate(["/e-commerce/edit-product"]);
   }
 }

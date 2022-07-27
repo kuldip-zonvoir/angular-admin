@@ -10,7 +10,10 @@ export class OrdersComponent implements OnInit {
   showBoundaryLinks = true;
   orders = [];
   orderDetail: boolean;
-  constructor(private _fakeApi: FakeApiService) {}
+  today: Date;
+  constructor(private _fakeApi: FakeApiService) {
+    this.today = new Date();
+  }
 
   ngOnInit(): void {
     this.orders = this._fakeApi.getOrders();

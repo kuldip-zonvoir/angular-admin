@@ -11,6 +11,6 @@ export class EComInventoryListComponent implements OnInit {
 
   ngOnInit(): void {}
   addProduct() {
-    this._router.navigate(["/e-commmerce/edit-product"]);
+    this._router.navigate(["/e-commerce/edit-product"]);
   }
 }
