@@ -94,6 +94,19 @@
     .herader_menu_toggle a span {
       color: #ffffff !important;
     }
+    .hdr_icon_box{
+      color: #ffffff !important;
+      background-color: transparent !important;
+    }
+    .herader_drop_box a{
+      .header_icons{
+        color: #ffffff !important;
+        background-color: transparent !important;
+      }
+    }
+    .menu_icons{
+      background-color: transparent;
+    }
   }
   .mobile-header,
   .tablet-header {
@@ -235,6 +248,9 @@ p {
 }
 .span_text {
   font-size: $paraSize;
+}
+.text_wishlist{
+  color: #ff2f48;
 }
 .cursor-pointer {
   cursor: pointer;

@@ -197,7 +197,7 @@ $menufontWeight: 500;
           color: $primary;
           background-color: $primary;
           color: $white;
-          border-radius: 0 20px 20px 0;
+          border-radius: 0 4px 4px 0;
           margin: 14px 0;
           .nav_name {
             font-size: $sidebarMenuSize;
@@ -380,7 +380,6 @@ $menufontWeight: 500;
             }
 
             .menu_submenu {
-              // padding-top: 14px;
               .menu_subnav {
                 margin-bottom: 0;
                 padding-left: 0;
@@ -468,8 +467,8 @@ $menufontWeight: 500;
     top: 0;
     z-index: 9999;
     transition: 0.3s ease-in-out;
-    width: 200px;
-    left: -200px;
+    width: 210px;
+    left: -210px;
     &.mobile_model_active {
       transition: 0.3s ease-in-out;
       box-shadow: 0 0.1rem 1rem 0.25rem rgb(0 0 0 / 5%);

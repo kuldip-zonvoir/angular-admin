@@ -93,7 +93,7 @@
               <td>
                 <span class="tabelcell align-middle">
                   <div
-                    class="d-flex align-items-center justify-content-between"
+                    class="d-flex align-items-center justify-content-between m-b-2"
                   >
                     <p class="mb-0 m-r-12">Progress</p>
                     <span class="">{{ task.completion }}%</span>
@@ -193,14 +193,14 @@
         </div>
         <div class="form-group m-b-12">
           <label for="deadline">Deadline</label>
-          <input
-            type="text"
-            formControlName="deadline"
-            class="form-control"
-            bsDatepicker
-            [bsConfig]="{ isAnimated: true }"
-            placeholder=" Date"
-          />
+          <p-calendar
+            class="prime_datepicker"
+            [(ngModel)]="today"
+            [disabledDays]="[0, 6]"
+            [readonlyInput]="true"
+            inputId="basic"
+            placeholder="Date Picker"
+          ></p-calendar>
         </div>
 
         <div class="form-group m-b-12">

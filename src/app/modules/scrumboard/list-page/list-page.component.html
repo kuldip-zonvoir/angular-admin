@@ -17,7 +17,7 @@
       <div class="text-right">
         <button
           (click)="showFilterDialog()"
-          class="btn btn-outline-dark btn-square d-flex align-items-center"
+          class="btn btn-outline-primary btn-square d-flex align-items-center"
         >
           <span class="material-icons-outlined icon-20 m-r-8"> tune </span>
           Filter Result
@@ -279,29 +279,33 @@
           <div class="row m-b-12">
             <div class="col-lg-6">
               <div class="form-group m-b-12">
-                <label for="" class="">Date From </label>
+                <label for="" class="">From </label>
                 <div class="">
-                  <input
-                    type="text"
-                    placeholder="Date"
-                    class="form-control inp_field"
-                    bsDatepicker
-                    [bsConfig]="{ isAnimated: true }"
-                  />
+                  <p-calendar
+                    class="prime_datepicker"
+                    [(ngModel)]="fromDate"
+                    [disabledDays]="[0, 6]"
+                    [readonlyInput]="true"
+                    [ngModelOptions]="{ standalone: true }"
+                    inputId="basic"
+                    placeholder="Date Picker"
+                  ></p-calendar>
                 </div>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="form-group m-b-12">
-                <label for="" class="">Date To </label>
+                <label for="" class="">To </label>
                 <div class="">
-                  <input
-                    type="text"
-                    placeholder="Date"
-                    class="form-control inp_field"
-                    bsDatepicker
-                    [bsConfig]="{ isAnimated: true }"
-                  />
+                  <p-calendar
+                    class="prime_datepicker"
+                    [(ngModel)]="toDate"
+                    [ngModelOptions]="{ standalone: true }"
+                    [disabledDays]="[0, 6]"
+                    [readonlyInput]="true"
+                    inputId="basic"
+                    placeholder="Date Picker"
+                  ></p-calendar>
                 </div>
               </div>
             </div>
@@ -310,13 +314,13 @@
                 <label for="" class="">Select Project </label>
                 <div class="">
                   <p-multiSelect
-                  placeholder="Select Project"
-          [options]="projects"
-          [(ngModel)]="selectedProjects"
-          [ngModelOptions]="{ standalone: true }"
-          optionLabel="label"
-          optionValue="value"
-        ></p-multiSelect>
+                    placeholder="Select Project"
+                    [options]="projects"
+                    [(ngModel)]="selectedProjects"
+                    [ngModelOptions]="{ standalone: true }"
+                    optionLabel="label"
+                    optionValue="value"
+                  ></p-multiSelect>
                 </div>
               </div>
             </div>
@@ -325,13 +329,13 @@
                 <label for="" class="">Select Client</label>
                 <div class="">
                   <p-multiSelect
-                  placeholder="Select Client"
-          [options]="clients"
-          [(ngModel)]="selectedClients"
-          [ngModelOptions]="{ standalone: true }"
-          optionLabel="label"
-          optionValue="value"
-        ></p-multiSelect>
+                    placeholder="Select Client"
+                    [options]="clients"
+                    [(ngModel)]="selectedClients"
+                    [ngModelOptions]="{ standalone: true }"
+                    optionLabel="label"
+                    optionValue="value"
+                  ></p-multiSelect>
                 </div>
               </div>
             </div>
@@ -340,13 +344,13 @@
                 <label for="" class="">Assigned To</label>
                 <div class="">
                   <p-multiSelect
-                  placeholder="Select People"
-          [options]="assignTo"
-          [(ngModel)]="selectedAssignTo"
-          [ngModelOptions]="{ standalone: true }"
-          optionLabel="label"
-          optionValue="value"
-        ></p-multiSelect>
+                    placeholder="Select People"
+                    [options]="assignTo"
+                    [(ngModel)]="selectedAssignTo"
+                    [ngModelOptions]="{ standalone: true }"
+                    optionLabel="label"
+                    optionValue="value"
+                  ></p-multiSelect>
                 </div>
               </div>
             </div>
@@ -355,13 +359,13 @@
                 <label for="" class="">Asssingn By</label>
                 <div class="">
                   <p-multiSelect
-                  placeholder="Select People"
-          [options]="assignBy"
-          [(ngModel)]="selectedAssignBy"
-          [ngModelOptions]="{ standalone: true }"
-          optionLabel="label"
-          optionValue="value"
-        ></p-multiSelect>
+                    placeholder="Select People"
+                    [options]="assignBy"
+                    [(ngModel)]="selectedAssignBy"
+                    [ngModelOptions]="{ standalone: true }"
+                    optionLabel="label"
+                    optionValue="value"
+                  ></p-multiSelect>
                 </div>
               </div>
             </div>

@@ -175,13 +175,14 @@
         </div>
         <div class="form-group m-b-12">
           <label for="stock">Coupon Deadline</label>
-          <input
-            type="text"
-            class="form-control"
-            bsDatepicker
-            [bsConfig]="{ isAnimated: true }"
-            placeholder=" Date"
-          />
+          <p-calendar
+            class="prime_datepicker"
+            [(ngModel)]="today"
+            [disabledDays]="[0, 6]"
+            [readonlyInput]="true"
+            inputId="basic"
+            placeholder="Date Picker"
+          ></p-calendar>
         </div>
         <div class="form-group m-b-12">
           <label for="title">Status</label>

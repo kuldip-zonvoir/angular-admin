@@ -548,7 +548,8 @@ margin-bottom: 0 !important;
 @include responsive-between(lg, xl) {
   .prjt{
     &.pro_activity_body{
-      height: 30vh;}
+      height: 43vh;
+    }
     }
   .pro_reminders_body{
     .pro_activity_sub{

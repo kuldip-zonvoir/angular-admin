@@ -91,3 +91,14 @@ border-bottom: 3px solid transparent;
 }
 
 // navbar for profile
+
+.inline-list{
+  .inline-list-item{
+    a{
+      font-size: 14px;
+      &:hover{
+        font-size: 14px;
+      }
+    }
+  }
+}

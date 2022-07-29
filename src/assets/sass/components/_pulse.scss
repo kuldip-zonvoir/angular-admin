@@ -45,26 +45,26 @@
   .wave {
     position: absolute;
     top: 2px;
-    right: 5px;
+    right: 1px;
   }
 
   .email_box {
     position: absolute;
     top: 2px;
-    left: 45px;
+    left: 38px;
   }
 }
 // for mobile landscape
 @include responsive-between(sm, md) {
   .wave {
     position: absolute;
-    top: 1px;
-    right: 5px;
+    top: 2px;
+    right: 1px;
   }
 
   .email_box {
     position: absolute;
     top: 2px;
-    left: 46px;
+    left: 37px;
   }
 }

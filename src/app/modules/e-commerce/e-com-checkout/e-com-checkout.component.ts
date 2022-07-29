@@ -14,6 +14,7 @@ export class EComCheckoutComponent implements OnInit {
   citiesArr = [];
   selectedCity: String;
   constructor() {
+    this.today = new Date();
     this.statesArr = [
       {
         value: "0",

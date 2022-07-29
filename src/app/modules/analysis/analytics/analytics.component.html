@@ -200,37 +200,14 @@
             </ul>
           </div>
         </div>
-        <div class="btn-group visit_filters">
-          <label
-            class="btn btn-outline-primary"
-            [(ngModel)]="radioModel"
-            [ngModelOptions]="{ standalone: true }"
-            ngDefaultControl
-            tabindex="0"
-            btnRadio="week"
-            role="button"
-            >Weekly</label
-          >
-          <label
-            class="btn btn-outline-primary"
-            [(ngModel)]="radioModel"
-            [ngModelOptions]="{ standalone: true }"
-            ngDefaultControl
-            btnRadio="month"
-            tabindex="0"
-            role="button"
-            >Monthly</label
-          >
-          <label
-            class="btn btn-primary"
-            [(ngModel)]="radioModel"
-            [ngModelOptions]="{ standalone: true }"
-            ngDefaultControl
-            btnRadio="year"
-            tabindex="0"
-            role="button"
-            >Yearly</label
-          >
+        <div
+          class="btn-group visit_filters"
+          role="group"
+          aria-label="Basic example"
+        >
+          <button type="button" class="btn btn-outline-primary">Weekly</button>
+          <button type="button" class="btn btn-outline-primary">Monthly</button>
+          <button type="button" class="btn btn-outline-primary">Yearly</button>
         </div>
       </div>
       <div class="">

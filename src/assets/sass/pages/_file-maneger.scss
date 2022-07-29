@@ -32,7 +32,7 @@
   text-decoration: none;
   color: $heading-color;
   cursor: pointer;
-  border-radius: 0 20px 20px 0;
+  border-radius: 0 4px 4px 0;
   &:hover {
     text-decoration: none;
     color: $primary;
@@ -75,11 +75,11 @@
   cursor: pointer;
   overflow-y: auto;
   overflow-x: hidden;
-  @include scrollbar($width: 4px, $border-radius: 2px);
+  @include scrollbar($width: 3px, $border-radius: 3px);
   &:hover {
     @include scrollbar(
-      $width: 8px,
-      $border-radius: 2px,
+      $width: 4px,
+      $border-radius: 4px,
       $background-color: $scrollbarColor
     );
   }

@@ -1,4 +1,26 @@
 // full calender
+.smp_suggestions {
+  .nav_item {
+    &:last-child{
+      &.border-1{
+        border-bottom: 0;
+      }
+    }
+  }
+   .sugg_page_title {
+    font-size: 15px !important;
+  }
+   .sugg_sub_title {
+    font-size: 13px !important;
+    padding-bottom: 3px;
+  }
+   .sugg_short_desc {
+    font-size: 13px;
+  }
+   .sugg_other {
+    font-size: 13px;
+  }
+}
 .cal_agend_scroll {
   height: 56vh;
 
@@ -104,6 +126,14 @@
       padding: 0;
       background-color: $background-color;
       .p-link{
+        &.p-datepicker-month{
+          font-size: 15px;
+          color: $text-color;
+        }
+        &.p-datepicker-year {
+          font-size: 15px;
+          color: $text-color;
+        }
         font-size: 15px;
         color: $text-color;
         &:enabled{

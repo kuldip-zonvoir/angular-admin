@@ -189,7 +189,12 @@
       <div class="col-lg-8 col-md-8 m-b-12">
         <form action="" class="">
           <div class="row">
-            <div class="form-group col-lg-12 m-b-12">
+            <div class="form-group col-lg-6 m-b-12">
+              <label for="" class=""> Name Of Card Holder</label>
+              <input type="text" class="form-control" />
+            </div>
+            <div class="form-group col-lg-6 m-b-12">
+              <label for="" class=""> Card Number</label>
               <div class="input-group m-b-12">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
@@ -204,7 +209,7 @@
               </div>
             </div>
             <div class="form-group col-lg-6 m-b-12">
-              <label for="" class="pb-2"> Expiry Date</label>
+              <label for="" class=""> Expiry Date</label>
               <p-calendar
                 class="prime_datepicker"
                 [(ngModel)]="today"
@@ -215,11 +220,7 @@
               ></p-calendar>
             </div>
             <div class="form-group col-lg-6 m-b-12">
-              <label for="" class="pb-2"> CVV Number</label>
-              <input type="text" class="form-control" />
-            </div>
-            <div class="form-group col-lg-12 m-b-12">
-              <label for="" class="pb-2"> Name Of Card Holder</label>
+              <label for="" class=""> CVV Number</label>
               <input type="text" class="form-control" />
             </div>
             <div class="col-lg-12">

@@ -14,6 +14,7 @@
     }
   }
 }
+
 .herader_drop_box {
   .header_icon {
     color: $primary !important;
@@ -46,7 +47,7 @@
   }
   .dropdown-item {
     padding: 0.625rem 0.75rem;
-    padding-bottom: 5px;
+    // padding-bottom: 5px;
     color: $text-color;
     font-size: $headingSize2;
 
@@ -90,13 +91,22 @@
 }
 
 .dropdown-scroll {
+
   max-height: 14rem;
   cursor: pointer;
   overflow-y: auto;
   overflow-x: hidden;
-  @include scrollbar($width: 0.4rem, $border-radius: 0.5rem);
+  @include scrollbar($width: 0.2rem, $border-radius: 0.4rem);
   &:hover {
     $background-light: $scrollbarColor;
-    @include scrollbar($width: 0.4rem, $border-radius: 0.5rem, $background-color: $background-light);
+    @include scrollbar($width: 0.2rem, $border-radius: 0.4rem, $background-color: $background-light);
+  }
+
+  .menuitem{
+    &:last-child{
+      .border-1{
+        border-bottom: 0;
+      }
+    }
   }
 }

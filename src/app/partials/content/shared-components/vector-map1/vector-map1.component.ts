@@ -77,29 +77,33 @@ export class VectorMap1Component implements AfterViewInit, OnDestroy {
       });
 
       pointSeries.data.setAll([
+        // usa
         {
-          long: -73.778137,
-          lat: 40.641312,
+          long: -80.508137,
+          lat: 39.641312,
+        },
+        // india
+        {
+          long: 77.947998,
+          lat: 23.473324,
+        },
+        // france
+        {
+          long: 2.349014,
+          lat: 48.864716,
+        },
+        // itly
+        {
+          long: 12.496366,
+          lat: 41.902782,
         },
         {
-          long: -0.454296,
-          lat: 51.47002,
+          long: 56.0,
+          lat: 54.733334,
         },
         {
-          long: 116.597504,
-          lat: 40.072498,
-        },
-        {
-          long: -56.778137,
-          lat: 10.641312,
-        },
-        {
-          long: -0.1204296,
-          lat: 77.47002,
-        },
-        {
-          long: 120.597504,
-          lat: 88.072498,
+          long: 140.35984,
+          lat: 37.40032,
         },
       ]);
       this.root = root;

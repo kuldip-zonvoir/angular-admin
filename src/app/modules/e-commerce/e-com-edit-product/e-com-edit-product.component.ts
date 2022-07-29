@@ -53,7 +53,7 @@ export class EComEditProductComponent implements OnInit {
     this.deliveryStatusArr = [
       {
         value: "0",
-        label: "Devlieverd",
+        label: "Devlivered",
       },
       {
         value: "1",

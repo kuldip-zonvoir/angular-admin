@@ -82,7 +82,7 @@
   }
 }
 .product-badge {
-  @include circle(3rem, $circle: true, $background-color: $primary);
+  @include circle(2.5rem, $circle: true, $background-color: $primary);
   color: $white !important;
 }
 .custom-square {

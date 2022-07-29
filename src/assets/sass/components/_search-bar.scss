@@ -36,9 +36,9 @@
     @include pseudo-icon(
       $code,
       $right: 0,
-      $top: -4px,
+      $top: -3px,
       $color: $heading-color,
-      $icon-size: 1.5rem,
+      $icon-size: 20px,
       $transition: $transition-val
     );
   }

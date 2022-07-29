@@ -5,6 +5,13 @@
 .no-radius {
   border-radius: 10px !important;
 }
+.clr_notif_wrap{
+  background-color: $background-color;
+  a{
+    font-size: 14px ;
+    font-weight: 500;
+  }
+}
 .radius_none {
   border-radius: 0 !important;
 }

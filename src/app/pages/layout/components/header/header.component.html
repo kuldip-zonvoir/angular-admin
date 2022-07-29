@@ -213,7 +213,7 @@
                 aria-labelledby="button-basic"
                 placement="bottom right"
               >
-                <app-email-wigit></app-email-wigit>
+                <app-email-wigit class="_dropdown_wiz"></app-email-wigit>
                 <div role="menuitem">
                   <div class="d-flex align-items-center justify-content-center">
                     <a type="btn" class="m-b-0 btn text-primary">Clear All</a>
@@ -245,7 +245,7 @@
                 role="menu"
                 aria-labelledby="button-basic"
               >
-                <app-engauge></app-engauge>
+                <app-engauge class="_dropdown_wiz"></app-engauge>
                 <div role="menuitem">
                   <div class="d-flex align-items-center justify-content-center">
                     <a type="btn" class="m-b-0 btn text-primary">Clear All</a>
@@ -277,7 +277,9 @@
                   role="menu"
                   aria-labelledby="button-basic"
                 >
-                  <app-drop-profile-wigit></app-drop-profile-wigit>
+                  <app-drop-profile-wigit
+                    class="_dropdown_wiz"
+                  ></app-drop-profile-wigit>
                 </ul>
               </a>
             </div>
@@ -327,7 +329,7 @@
         </div>
         <div class="brand-wrapper m-l-20">
           <a class="link-none">
-            <h2 class="brand_mob_menu">Zonvoir</h2>
+            <h3 class="brand_mob_menu">Zonvoir</h3>
           </a>
         </div>
       </div>
@@ -471,10 +473,13 @@
     <div class="email-content-wrap mobile-content-space">
       <ng-template [ngIf]="isDropdownArr[1]">
         <div class="">
-          <app-email-wigit (parentDropdown)="openDropdown()"></app-email-wigit>
+          <app-email-wigit
+            class="_dropdown_wiz"
+            (parentDropdown)="openDropdown()"
+          ></app-email-wigit>
           <div role="menuitem ">
             <div
-              class="d-flex align-items-center justify-content-center border-top-1"
+              class="d-flex align-items-center clr_notif_wrap justify-content-center border-top-1"
             >
               <a type="btn" class="m-b-0 btn text-primary">Clear All</a>
             </div>
@@ -485,10 +490,13 @@
     <div class="notification-content-wrap mobile-content-space">
       <ng-template [ngIf]="isDropdownArr[2]">
         <div class="">
-          <app-engauge (funNotificationDropdown)="openDropdown()"></app-engauge>
+          <app-engauge
+            class="_dropdown_wiz"
+            (funNotificationDropdown)="openDropdown()"
+          ></app-engauge>
           <div role="menuitem ">
             <div
-              class="d-flex align-items-center justify-content-center border-top-1"
+              class="d-flex align-items-center clr_notif_wrap justify-content-center border-top-1"
             >
               <a type="btn" class="m-b-0 btn text-primary">Clear All</a>
             </div>
@@ -500,6 +508,7 @@
       <ng-template [ngIf]="isDropdownArr[3]">
         <div class="">
           <app-drop-profile-wigit
+            class="_dropdown_wiz"
             (parentDropdown)="openDropdown()"
           ></app-drop-profile-wigit>
         </div>
@@ -640,7 +649,7 @@
                 aria-labelledby="button-basic"
                 placement="bottom right"
               >
-                <app-email-wigit></app-email-wigit>
+                <app-email-wigit class="_dropdown_wiz"></app-email-wigit>
                 <div role="menuitem">
                   <div class="d-flex align-items-center justify-content-center">
                     <a type="btn" class="m-b-0 btn text-primary">Clear All</a>
@@ -672,7 +681,7 @@
                 role="menu"
                 aria-labelledby="button-basic"
               >
-                <app-engauge></app-engauge>
+                <app-engauge class="_dropdown_wiz"></app-engauge>
                 <div role="menuitem bottom_radius">
                   <div class="d-flex align-items-center justify-content-center">
                     <a type="btn" class="m-b-0 btn text-primary">Clear All</a>
@@ -704,7 +713,9 @@
                   role="menu"
                   aria-labelledby="button-basic"
                 >
-                  <app-drop-profile-wigit></app-drop-profile-wigit>
+                  <app-drop-profile-wigit
+                    class="_dropdown_wiz"
+                  ></app-drop-profile-wigit>
                 </ul>
               </a>
             </div>

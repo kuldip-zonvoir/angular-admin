@@ -46,8 +46,6 @@ interface AssignBy {
   styleUrls: ["./list-page.component.scss"],
   encapsulation: ViewEncapsulation.None,
 })
-
-
 export class ListPageComponent implements OnInit, OnDestroy {
   @ViewChild("multiSelectref") multiSelectref: MultiSelect;
   displaytaskDetail: boolean;
@@ -59,6 +57,8 @@ export class ListPageComponent implements OnInit, OnDestroy {
   activeTheme: string;
   modalState1: boolean;
   fileAttachment: boolean;
+  toDate: Date = new Date();
+  fromDate: Date = new Date();
   // Dialog;
 
   tasKCardkDetail: boolean;
@@ -198,7 +198,6 @@ export class ListPageComponent implements OnInit, OnDestroy {
         label: "Will",
         value: "4",
       },
-     
     ];
     //  Assign By
     this.assignBy = [
@@ -223,7 +222,6 @@ export class ListPageComponent implements OnInit, OnDestroy {
         value: "5",
       },
     ];
-
 
     this.taskLabels = [
       {

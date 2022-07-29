@@ -100,6 +100,22 @@
     }
   }
 }
+
+.time_activity_wrap{
+  .timeline-scroll {
+    height: 50vh;
+    margin-right: 5px;
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include scrollbar($width: 0.3rem, $border-radius: 1rem);
+    &:hover {
+      $background-light: $scrollbarColor;
+      @include scrollbar($width: 0.3rem, $border-radius: 1rem, $background-color: $background-light);
+    }
+  }
+}
+
 .main_time_line{
 
   .timeline-scroll {

@@ -1,8 +1,8 @@
 <div class="card custom-card">
-  <div class="product-wrapper" >
+  <div class="product-wrapper">
     <div class="product-image-wrapper">
       <img
-      (click)="productDetail(product.id)"
+        (click)="productDetail(product.id)"
         [src]="product.product_image"
         class="img-responsive product-image-1"
         alt=""
@@ -62,12 +62,7 @@
         <div class="d-flex align-items-center">
           <button
             (click)="addToCart(product.id)"
-            class="
-              btn btn-pill btn-block btn-primary
-              justify-content-center
-              d-flex
-              align-items-center
-            "
+            class="btn btn-square btn-block btn-primary justify-content-center d-flex align-items-center"
           >
             <span class="material-icons-outlined m-r-4 icon-20">
               shopping_cart

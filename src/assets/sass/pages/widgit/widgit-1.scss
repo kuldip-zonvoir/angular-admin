@@ -4,8 +4,36 @@
   padding-left: 15px;
 }
 
+
+.clr_notif_wrap{
+  background-color: $background-color;
+  a{
+    font-size: 14px ;
+    font-weight: 500;
+  }
+}
+
 .clr_drp_dwn{
   background-color: $background-color;
+}
+._dropdown_wiz{
+  .custom-card{
+    border-radius: 0!important;
+  }
+  .custom-card-header{
+    border-radius: 0 !important;
+  }
+}
+
+.weather_body {
+  padding: 10px;
+}
+
+.weather_param_data{
+  font-weight: 500;
+  text-align: right;
+  color: $text-color;
+  font-size: 14px;
 }
 
 ._weather_report{
