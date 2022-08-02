@@ -12,6 +12,9 @@
     }
   }
 }
+.email_componenet{
+  padding-left: 16px;
+}
 .k_mail_service {
   z-index: 10 !important;
   background-color: $background-color;
@@ -20,17 +23,15 @@
   z-index: 9;
 }
 .mmicon_circle {
-  width: 3rem;
-  height: 3rem;
-  line-height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
   display: inline-block;
   text-align: center;
   background-color: $email_circle_color;
-  border-radius: 1.5rem;
+  border-radius: 50%;
 }
-.eemail_message {
-  padding-left: 20px;
-}
+
 .marker {
   @include circle(10px, $circle: true);
 }
@@ -78,8 +79,8 @@
 }
 // for moibile device
 @include responsive-below(md) {
-  .eemail_message {
-    padding: 0;
+  .email_componenet{
+    padding-left: 0;
   }
   .k_mail_service {
     display: none;
@@ -110,6 +111,7 @@
 }
 
 @include responsive-above(lg) {
+
   .kmail_header {
     display: none;
   }
@@ -120,8 +122,8 @@
 }
 // for moibile landscape mode device
 @include responsive-between(sm, md) {
-  .eemail_message {
-    padding: 0;
+    .email_componenet{
+    padding-left: 0;
   }
   .k_mail_service {
     display: none;
@@ -138,9 +140,7 @@
 }
 // For tablet Portrait Mode
 @include responsive-between(md, lg) {
-  .eemail_message {
-    padding: 0;
-  }
+  
   .kmail_header {
     display: none;
   }
@@ -165,9 +165,7 @@
 }
 // For tablet Landscape Mode
 @include responsive-between(lg, xl) {
-  .eemail_message {
-    padding: 0;
-  }
+  
   .kmail_header {
     display: none;
   }

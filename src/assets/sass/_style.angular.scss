@@ -1,6 +1,6 @@
 // 1: Initialize
 
-// // 2: Bootstrap framework includes
+// 2: Bootstrap framework includes
 @import "init";
 @import "~bootstrap/scss/bootstrap";
 
@@ -9,8 +9,7 @@
 @import "vendor/angular-editor/editor";
 @import "vendor/ngx-bootstrap/init";
 @import "vendor/breadcrumb/breadcrum";
-// @import "vendor/ngx-datatabel/ngx-datatabel";
-// @import "vendor/Ag-grid-table/ag-grid-table";
+
 @import "vendor/ng-select/ng-select";
 @import "vendor/Angular-calendar/event-calender";
 @import "vendor/fullcalender/full_calender";
@@ -38,14 +37,8 @@
 @import "./components/timeline";
 @import "./components/input_file";
 @import "./components/form";
-@import "./themes/theme_colors";
 @import "./pages/login/login";
 @import "./pages/login/error";
 // 4: Plugins
 
 // 5: Layout
-
-
-@media (min-width:980px) and (max-width:1199px) {
-   
-}

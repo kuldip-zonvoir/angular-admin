@@ -18,9 +18,7 @@
 .cdk-drag-preview.purple-light-color .card {
   background: $background-color;
 }
-// .cdk-drag-preview.purple-light-color.card {
-//   background: #090e13;
-// }
+
 .cdk-drag-preview {
   box-sizing: border-box;
   border-radius: 4px;
@@ -47,7 +45,7 @@
     padding: 0;
     padding-bottom: 12px;
     width: 100%;
-    // border-bottom: 1px solid #ebebf0;
+    
   }
   .icon-20 {
     color: #008ffb;
@@ -136,9 +134,6 @@
   }
 }
 
-// .label_title {
-//   text-align: right;
-// }
 .buttons-labels {
   display: flex !important;
   flex-direction: row-reverse !important;
@@ -255,11 +250,11 @@
   width: 100%;
 }
 .vr_scroll {
-  max-height: 46vh;
+  max-height: 60vh;
   cursor: pointer;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 20px 0 20px 10px;
+  padding: 16px 0 16px 8px;
   @include scrollbar($width: 0.4rem, $border-radius: 1rem);
   &:hover {
     @include scrollbar($width: 0.4rem, $border-radius: 1rem, $background-color: $scrollbarColor);
@@ -301,7 +296,7 @@
     bottom: -1px;
   }
   .vr_scroll {
-    max-height: 47vh;
+    max-height: 62vh;
     cursor: pointer;
     overflow-y: auto;
     overflow-x: hidden;
@@ -312,9 +307,7 @@
     }
   }
   .member_tags_container {
-    // display: flex;
     display: block;
-    // align-items: center;
   }
   .scrum-lable-scroll-tags {
     max-width: 12rem;

@@ -5,6 +5,11 @@
   padding: 0 12px;
 }
 // 
+.profile_dropo_menu_wrap{
+  .dropdown-height{
+      top: 48px !important;
+  }
+}
 .hdr_icon_box{
   color: $text-color !important;
   background-color: $background-color;
@@ -139,6 +144,7 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+
   height: 60px;
   padding: 0 12px;
   box-shadow: $boxShadow-lg;
@@ -311,7 +317,20 @@ a {
 }
 
 @include responsive-below(md) {
-
+  .dropdown-menu{
+    .dropdown-menu-left {
+      right: -8px !important;
+      left: auto !important;
+    }
+  }
+  .profile_dropo_menu_wrap{
+    .dropdown-height{
+        top: 46px !important;
+    }
+  }
+  .desktop-header-content {
+    padding: 0 16px 0 22px;
+  }
   ._profile_header_container{
     width: 32px;
     height: 32px;
@@ -371,16 +390,68 @@ a {
     display: block !important;
     background-color: $background-color;
   }
+  // changes stat here
   .desktop-header {
-    display: none !important;
+    display: block !important;
     background-color: $background-color;
+  }
+  .kk_left_header{
+    padding: 0;
+  }
+  .flag_dropdown{
+    display: none;
+  }
+  .kk_search_bar_header{
+    display: none !important;
+  }
+  .add_me_header{
+    display: none;
+  }
+  .full-searchbar {
+    margin: 8px 0;
+  }
+  .herader_drop_box {
+    margin-right: 4px !important;
+  }
+  .search_for_dd_other{
+    margin-right: 4px !important;
+    a{
+      .icon{
+      color: $text-color !important;
+      background-color: transparent;
+      font-size: 22px !important;
+      width: 34px;
+      height: 34px;
+      line-height: 34px;
+      border-radius: 5px;
+      text-align: center;
+      display: inline-block;
+      box-shadow: 0px 0px 1px 1px $border-color !important;
+      }
+    }
   }
   .tablet-header {
     display: none;
   }
 }
 @include responsive-between(sm, md) {
-
+  .dropdown-menu{
+    .dropdown-menu-left {
+      right: -8px !important;
+      left: auto !important;
+    }
+  }
+  .profile_dropo_menu_wrap{
+    .dropdown-height{
+        top: 46px !important;
+    }
+  }
+  .herader_drop_box {
+    margin-right: 14px !important;
+  }
+  .search_for_dd_other{
+    margin-right: 14px !important;
+  }
   .dropdown-triggers-content{
     width: 50%;
     position: absolute;
@@ -407,19 +478,7 @@ a {
     background-color: $background-color;
   }
   .desktop-header {
-    display: none !important;
-  }
-  .tablet-header {
-    display: none;
-  }
-}
-@include responsive-above(lg) {
-  .mobile-header {
-    display: none;
-  }
-  .desktop-header {
-    display: block;
-    background-color: $background-color;
+    display: block !important;
   }
   .tablet-header {
     display: none;
@@ -432,7 +491,7 @@ a {
     box-shadow: 0px 0px 0px 1px $border-color !important;
   }
   .country_icon{
-
+    
     box-shadow: 0px 0px 0px 1px $border-color !important;
   }
   .search_for_dd_other {
@@ -446,15 +505,29 @@ a {
         box-shadow: 0px 0px 0px 1px $border-color !important;
       }
     }}
-  .desktop-header {
-    display: none !important;
+    .desktop-header {
+    display: block !important;
   }
-  .mobile-header {
-    display: none !important;
+  .desktop-header-content {
+    align-items: center;
   }
+
   .tablet-header {
     display: block;
     background-color: $background-color;
+  }
+  .flag_dropdown{
+    display: block;
+  }
+  .kk_search_bar_header{
+    display: block !important;
+  }
+  .add_me_header{
+    display: none;
+  }
+
+  .herader_drop_box {
+    margin-right: 4px !important;
   }
 }
 
@@ -466,7 +539,7 @@ a {
     box-shadow: 0px 0px 0px 1px $border-color !important;
   }
   .country_icon{
-
+    
     box-shadow: 0px 0px 0px 1px $border-color !important;
   }
   .search_for_dd_other {
@@ -480,23 +553,35 @@ a {
         box-shadow: 0px 0px 0px 1px $border-color !important;
       }
     }}
-
-  .add_me_header {
-    display: block;
-  }
-  .kk_search_bar_header{
-    width: 50%;
-    margin-left: 7rem;
-  }
+    
+    .add_me_header {
+      display: block;
+    }
+    .kk_search_bar_header{
+      width: 50%;
+      margin-left: 7rem;
+    }
     .brand-wrapper {
-    display: block;
-  }
-  .desktop-header {
-    display: none;
-    background-color: $background-color;
-  }
+      display: block;
+    }
+    .desktop-header {
+      display: none;
+      background-color: $background-color;
+    }
   .tablet-header {
     display: block;
     background-color: $background-color;
+  }
+}
+@include responsive-above(lg) {
+  .mobile-header {
+    display: none;
+  }
+  .desktop-header {
+    display: block;
+    background-color: $background-color;
+  }
+  .tablet-header {
+    display: none;
   }
 }

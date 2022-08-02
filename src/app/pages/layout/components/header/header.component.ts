@@ -80,7 +80,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   getHeaderClass(value: string) {
-    // console.log(value);
     let customClass;
     if (value === "default") {
       customClass = "default-header";
@@ -107,15 +106,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.shareData.toggleSidebar(this.sidebar);
   }
 
-  sidebarToggle(value) {
-    console.log("my value", value);
-    if (value === "Desktop") {
+  sidebarToggle() {
+    var mediaQuery = window.matchMedia("(min-width: 1181px)");
+    if (mediaQuery.matches) {
       this.isMobile = !this.isMobile;
       this.shareData.toggleSidebar(this.isMobile);
-      console.log("desktop");
     } else {
       this.mobileMenubar = true;
-      console.log("mobile", this.mobileMenubar);
       this.shareData.sidebarMobileMenu(this.mobileMenubar);
     }
   }

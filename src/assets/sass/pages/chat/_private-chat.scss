@@ -1,14 +1,16 @@
 .mobile-chat {
   display: none !important;
 }
+.profile_drop_header{
+  padding: 0.625rem 0.9rem !important;
+
+}
 .new_table{
   th{
       font-size: 13px;
   }
 }
-.mailer_inbox {
-  padding: 0 10px;
-}
+
 .kleft {
   padding-right: 4px;
   border-right: 1px solid $border-color !important;
@@ -105,9 +107,7 @@
   }
 }
 
-.chat_reciever {
-  padding: 0 8px;
-}
+
 .created-date {
   padding-top: 5px;
   display: block;
@@ -292,9 +292,7 @@ hr {
 }
 // for mobile portrait mode
 @include responsive-below(md) {
-  .mailer_inbox {
-    padding: 0;
-  }
+
   .padding_chatlist {
     padding-right: 15px !important;
   }
@@ -376,9 +374,6 @@ hr {
       @include scrollbar($width: 4px, $border-radius: 5px, $background-color: $background-light);
     }
   }
-  .chat_reciever{
-    padding: 0;
-  }
   .chat-list-scroll {
     height: 46vh;
 
@@ -394,9 +389,7 @@ hr {
 }
 // For Mobile Landscape Mode
 @include responsive-between(sm, md) {
-  .mailer_inbox {
-    padding: 0;
-  }
+
   .padding_chatlist {
     padding-right: 15px !important;
   }

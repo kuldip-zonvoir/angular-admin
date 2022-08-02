@@ -68,8 +68,8 @@
     @include pseudo-icon(
       $code,
       $right: 1.5rem,
-      $top: 0.875rem,
-      $icon-size: 1.5rem
+      $top: 20px,
+      $icon-size: 20px,
     );
   }
 }
@@ -190,23 +190,11 @@ $mat-icons: (
   .search-lg {
     width: 75% !important;
   }
-  .custom-header-searchbar {
-    .close-icon {
-      &::before {
-        top: 1rem !important;
-      }
-    }
-  }
+
 }
 // for mobile landscape
 @include responsive-between(sm, md) {
-  .custom-header-searchbar {
-    .close-icon {
-      &::before {
-        top: 1rem !important;
-      }
-    }
-  }
+
 }
 // for mobile laptop
 // for tablet view landscape
@@ -223,11 +211,5 @@ $mat-icons: (
   .search-lg {
     width: 75% !important;
   }
-  .custom-header-searchbar {
-    .close-icon {
-      &::before {
-        top: 1.5rem !important;
-      }
-    }
-  }
+ 
 }

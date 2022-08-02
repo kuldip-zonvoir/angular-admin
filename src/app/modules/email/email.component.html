@@ -5,7 +5,7 @@
         (click)="openAppSidebar()"
         class="toggle-icon link-none hoverable align-items-center"
         ><span class="material-icons icon-gray cursor-pointer icon-20">
-          menu
+          menu_open
         </span></a
       >
     </div>
@@ -40,7 +40,7 @@
           <app-mail-service></app-mail-service>
         </div>
       </div>
-      <div class="col-lg-9 col-md-9 pl-2">
+      <div class="col-lg-9 col-md-9">
         <div class="email_componenet">
           <div class="" [@routeAnimations]="prepareRoute(outlet)">
             <router-outlet #outlet="outlet"></router-outlet>

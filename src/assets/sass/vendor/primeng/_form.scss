@@ -79,12 +79,16 @@ p-inputmask {
 }
 
 .p-checkbox {
+  .p-checkbox-icon{
+    // color: #000;
+  }
   &:hover {
     border-color: $primary;
   }
   &:not(.p-checkbox-disabled) {
     .p-checkbox-box {
       border-color: $primary;
+      background-color: $background-color;
       .p-highlight {
         border-color: $primary;
         background: $primary;
