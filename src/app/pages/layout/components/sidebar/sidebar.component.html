@@ -116,12 +116,31 @@
                     <span class="subnav_nav_name"> Projects </span>
                   </a>
                 </li>
+                <li class="subnav_nav_item">
+                  <a
+                    (click)="sidebarMenuSelected()"
+                    [ngClass]="{
+                      active: currentUrlString == '/dashboard/analytics'
+                    }"
+                    class="subnav_nav_link"
+                    routerLink="./dashboard/analytics"
+                  >
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <span class="subnav_nav_name"> Analytics </span>
+                      <p class="m-b-0 p-x-4 text-white badge-tag bg-success">
+                        New
+                      </p>
+                    </div>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
         </li>
         <!-- Anlytics -->
-        <li class="nav_item" (click)="openMenu(22)">
+        <!-- <li class="nav_item" (click)="openMenu(22)">
           <a
             (click)="sidebarMenuSelected()"
             [ngClass]="{
@@ -142,7 +161,7 @@
               </div>
             </div>
           </a>
-        </li>
+        </li> -->
         <!-- Anlytics Close -->
 
         <!-- user account -->

@@ -86,14 +86,7 @@ const routes: Routes = [
           import("../modules/wigits/wigits.module").then((m) => m.WigitsModule),
         data: { breadcrumb: "Widgits" },
       },
-      {
-        path: "analytics",
-        loadChildren: () =>
-          import("../modules/analysis/analysis.module").then(
-            (m) => m.AnalysisModule
-          ),
-        data: { breadcrumb: "Analytic" },
-      },
+
       {
         path: "scrumboard",
         loadChildren: () =>

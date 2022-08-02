@@ -22,6 +22,11 @@ export class SharemeService {
   // header background change
   private headerSwitch = new BehaviorSubject("default");
   headerToggle = this.headerSwitch.asObservable();
+
+  // get Active theme color
+  private themeActiveColor = new BehaviorSubject("light_theme");
+  themeActiveBgColor = this.themeActiveColor.asObservable();
+
   // ondrag card style
   private cardDrag = new BehaviorSubject("purple-light-color");
   cardDragBackground = this.cardDrag.asObservable();
@@ -52,9 +57,12 @@ export class SharemeService {
     this.customModal.next(status);
     this.customModalWhich.next(which);
   }
+  // set Active theme color
+  setActiveThemeColor(themeColor: string) {
+    this.themeActiveColor.next(themeColor);
+  }
   // sidebar FOR mobile and Desktop
   sidebarMobileMenu(isMobile: boolean) {
-    console.log("data on shareme service", isMobile);
     this.mobileMenuDialog.next(isMobile);
   }
   updateActiveText(activetext: string) {

@@ -19,6 +19,7 @@ import { ApexchartSharedModule } from "src/app/partials/content/shared-component
 import { ProgressbarModule } from "ngx-bootstrap/progressbar";
 import { SharedModule } from "src/app/partials/content/shared-components/shared.module";
 import { DefaultDashboardComponent } from "./default-dashboard/default-dashboard.component";
+import { AnalyticsDashboardComponent } from './analytics-dashboard/analytics-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { DefaultDashboardComponent } from "./default-dashboard/default-dashboard
     Dashbord3Component,
     Dashbord4Component,
     DefaultDashboardComponent,
+    AnalyticsDashboardComponent,
   ],
   imports: [
     CommonModule,

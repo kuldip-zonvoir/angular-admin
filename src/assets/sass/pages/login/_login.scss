@@ -2,6 +2,9 @@
 .login1_panel_data {
   padding: 20px;
 }
+.have_an_account{
+  color: #6c757d !important;
+}
 .login_container {
   max-width: 1140px;
   padding-left: 15px;
@@ -28,7 +31,7 @@
 }
 .login-illus-signup1 {
   background-color: #c9e9ffc4;
-  padding: 10.5rem 0;
+  padding: 12.5rem 0;
 }
 .login_bg_img2 {
   background: url(../../../../assets/media/images/login/login-bg.png);
@@ -279,7 +282,7 @@
 
 .google_facebook a {
   color: $primary;
-  background-color: $primary-light;
+  background-color: #efefff;
   border-color: transparent;
   display: inline-block;
   padding: 13px;
@@ -323,8 +326,18 @@
   text-align: center;
 }
 .main_logo img {
-  width: 150px;
+  width: auto;
   margin-bottom: 13px;
+}
+.K_brand_logo {
+    img {
+      margin: 14px 0;
+  }
+}
+.K_brand_logo2 {
+  img {
+    margin: 14px 0;
+}
 }
 // for Mobile Portrait Mode
 @include responsive-below(md) {

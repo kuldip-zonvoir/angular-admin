@@ -118,12 +118,14 @@ export class LayoutComponent implements OnInit, OnDestroy {
       let themeIdx = this.themeId ? this.themeId : "0";
       this.activedTheme(themeIdx);
       this.customClass = "light-default-color";
+      this.shareData.setActiveThemeColor("light_theme");
       localStorage.setItem("activetheme", this.customClass);
       this.currentTheme = localStorage.getItem("activetheme");
     } else {
       let themeIdx = this.themeId ? this.themeId : "0";
       this.activedTheme(themeIdx);
       this.customClass = "dark-default-color";
+      this.shareData.setActiveThemeColor("dark_theme");
       localStorage.setItem("activetheme", this.customClass);
       this.currentTheme = localStorage.getItem("activetheme");
     }

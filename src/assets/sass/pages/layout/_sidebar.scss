@@ -297,6 +297,13 @@ $menufontWeight: 500;
   .close_sidebar_modal {
     display: block;
   }
+  .brand-header{
+    padding: 0;
+    justify-content: center;
+  }
+  .brand_logo_pic{
+    width: 180px;
+  }
   // modal
   .mobile-sidebar-menu {
     .p-sidebar {
@@ -599,6 +606,12 @@ $menufontWeight: 500;
 
 //mobile  devices landscape
 @include responsive-between(sm, md) {
+  .brand-header{
+    // padding: 0 18px;
+  }
+  .brand_logo_pic{
+    width: 100%;
+  }
   .scrollbar {
     height: 84vh;
   }

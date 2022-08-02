@@ -192,13 +192,21 @@
           <div class="col-lg-6 col-md-6">
             <div class="form-group m-b-12">
               <label for="Join Date">Join Date</label>
-              <input
+              <p-calendar
+                class="prime_datepicker"
+                [(ngModel)]="today"
+                [disabledDays]="[0, 6]"
+                [readonlyInput]="true"
+                inputId="basic"
+                placeholder="Date Picker"
+              ></p-calendar>
+              <!-- <input
                 type="text"
                 class="form-control"
                 bsDatepicker
                 [bsConfig]="{ isAnimated: true }"
                 placeholder=" Date"
-              />
+              /> -->
             </div>
           </div>
           <div class="col-lg-6 col-md-6">

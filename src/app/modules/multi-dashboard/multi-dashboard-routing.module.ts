@@ -7,6 +7,7 @@ import { Dashbord2Component } from "./dashbord2/dashbord2.component";
 import { Dashbord3Component } from "./dashbord3/dashbord3.component";
 import { Dashbord4Component } from "./dashbord4/dashbord4.component";
 import { DefaultDashboardComponent } from "./default-dashboard/default-dashboard.component";
+import { AnalyticsDashboardComponent } from "./analytics-dashboard/analytics-dashboard.component";
 const routes: Routes = [
   {
     path: "",
@@ -36,6 +37,11 @@ const routes: Routes = [
         path: "project",
         component: Dashbord4Component,
         data: { breadcrumb: "Project" },
+      },
+      {
+        path: "analytics",
+        component: AnalyticsDashboardComponent,
+        data: { breadcrumb: "Analytics" },
       },
       {
         path: "",

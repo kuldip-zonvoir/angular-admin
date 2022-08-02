@@ -10,9 +10,29 @@ export class OrdersComponent implements OnInit {
   showBoundaryLinks = true;
   orders = [];
   orderDetail: boolean;
+  orderStatusArr = [];
+  selectedStatus: string;
   today: Date;
   constructor(private _fakeApi: FakeApiService) {
     this.today = new Date();
+    this.orderStatusArr = [
+      {
+        value: "0",
+        label: "Devlivered",
+      },
+      {
+        value: "1",
+        label: "Shipped",
+      },
+      {
+        value: "2",
+        label: "Out For Delivery",
+      },
+      {
+        value: "3",
+        label: "Cancelled",
+      },
+    ];
   }
 
   ngOnInit(): void {
