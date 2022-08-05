@@ -68,7 +68,6 @@ export class LayoutComponent implements OnInit, OnDestroy {
     this.currentTheme = localStorage.getItem("activetheme");
     this.currentTheme = this.customClass;
     this.customClass = this.currentTheme;
-    // this.isChecked = false;
     this.router.events.subscribe((ev) => {
       if (ev instanceof NavigationEnd) {
         this.currentUrl = ev.url.split("/");

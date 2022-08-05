@@ -20,28 +20,26 @@ export class FormWizard2Component implements OnInit {
   }
   nextStep(step) {
     this.stepId = step + 1;
-    console.log(this.stepId);
   }
   prevStep(step) {
     this.stepId = step - 1;
-    console.log(this.stepId);
   }
   nextOutStep(step) {
     this.stepOutId = step + 1;
-    console.log(this.stepOutId);
+   
   }
   prevOutStep(step) {
     this.stepOutId = step - 1;
-    console.log(this.stepOutId);
+   
   }
   // vertical stepper form wizard
   nextVrStep(step) {
     this.step_vrId = step + 1;
-    console.log(this.step_vrId);
+    
   }
   prevVrStep(step) {
     this.step_vrId = step - 1;
-    console.log(this.step_vrId);
+    
   }
   nextVroStep(step) {
     this.step_vroId = step + 1;

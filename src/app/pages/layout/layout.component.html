@@ -28,15 +28,6 @@
         "
       >
         <div class="outside_click">
-          <!-- <button
-            type="button"
-            class="close_sidebar_modal"
-            (click)="closeSidebarModal()"
-          >
-            <span class="material-icons-outlined _close_btn_modal">
-              close
-            </span>
-          </button> -->
           <app-sidebar (parentFun)="closeSidebarModal()"></app-sidebar>
         </div>
       </div>
@@ -162,7 +153,6 @@
                 [checked]="isChecked && themeMode === 'light'"
                 checked
               />
-              <!-- checked -->
               <span class="check-circle"></span>
             </label>
           </div>

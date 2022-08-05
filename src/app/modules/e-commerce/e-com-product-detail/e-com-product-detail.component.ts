@@ -63,7 +63,6 @@ export class EComProductDetailComponent implements OnInit {
 
   // buy product
   buyProduct() {
-    console.log("buy this product");
     this.route.navigate(["e-commerce/cart"]);
   }
 }

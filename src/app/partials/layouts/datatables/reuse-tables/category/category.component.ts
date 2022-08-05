@@ -32,6 +32,7 @@ export class CategoryComponent implements OnInit, OnDestroy {
   subscription: Subscription;
   categories = [];
   selectedCategory: Category;
+  selectedPara: string;
 
   constructor(private _categoryService: EComCategoryService) {
     this.categories = [

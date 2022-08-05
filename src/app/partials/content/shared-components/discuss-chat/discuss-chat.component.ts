@@ -12,7 +12,7 @@ export class DiscussChatComponent implements OnInit {
   discuss = [
     {
       id: "1",
-      user_profile: "assets/media/images/users/100_5.jpg",
+      user_profile: "assets/media/images/users/5.png",
       user_name: "David Smith",
       user_message:
         " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam nihil, dolorem asperiores ad pariatur placeat vel fuga velit expedita adipisci? Lorem, ipsum dolor sit amet consectetur",
@@ -20,7 +20,7 @@ export class DiscussChatComponent implements OnInit {
     },
     {
       id: "2",
-      user_profile: "assets/media/images/users/100_6.jpg",
+      user_profile: "assets/media/images/users/6.png",
       user_name: "Peter Edward",
       user_message:
         " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam nihil, dolorem asperiores ad pariatur placeat vel fuga velit expedita adipisci? Lorem, ipsum dolor sit amet consectetur",
@@ -28,7 +28,7 @@ export class DiscussChatComponent implements OnInit {
     },
     {
       id: "3",
-      user_profile: "assets/media/images/users/100_7.jpg",
+      user_profile: "assets/media/images/users/7.png",
       user_name: "Sam Wilson",
       user_message:
         " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam nihil, dolorem asperiores ad pariatur placeat vel fuga velit expedita adipisci? Lorem, ipsum dolor sit amet consectetur",

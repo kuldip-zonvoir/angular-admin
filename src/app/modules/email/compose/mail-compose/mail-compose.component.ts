@@ -12,7 +12,6 @@ export class MailComposeComponent implements OnInit {
   ngOnInit(): void {
   }
   selectFile(event) {
-    console.log(event);
   }
 
 }

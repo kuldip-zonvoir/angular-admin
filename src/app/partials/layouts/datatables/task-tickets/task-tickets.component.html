@@ -11,10 +11,13 @@
         class="col-lg-2 col-md-3 col-sm-4 offset-lg-7 offset-md-5 offset-sm-4 grid-bottom-12"
       >
         <div class="">
-          <app-custom-select-dropdown
-            [terms]="termsPara"
-            class="customers-dropdown"
-          ></app-custom-select-dropdown>
+          <p-dropdown
+            [options]="termsPara"
+            class="basic_dpdown"
+            [(ngModel)]="selectedPara"
+            [ngModelOptions]="{ standalone: true }"
+            optionLabel="para_name"
+          ></p-dropdown>
         </div>
       </div>
     </div>
@@ -123,13 +126,15 @@
         </div>
         <div class="form-group m-b-12">
           <label for="" class=""> Date </label>
-          <input
-            type="text"
-            class="form-control"
-            bsDatepicker
-            [bsConfig]="{ isAnimated: true }"
-            placeholder=" Date"
-          />
+          <p-calendar
+            class="prime_datepicker"
+            [(ngModel)]="today"
+            [ngModelOptions]="{ standalone: true }"
+            [disabledDays]="[0, 6]"
+            [readonlyInput]="true"
+            inputId="basic"
+            placeholder="Date Picker"
+          ></p-calendar>
         </div>
         <div class="form-group m-b-12">
           <label for="" class=""> Description </label>

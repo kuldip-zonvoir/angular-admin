@@ -19,6 +19,9 @@ export class CouponsComponent implements OnInit, OnDestroy {
   subscription: Subscription;
   statusArr = [];
   selectedStatus: string;
+  selectedPara: string;
+  selectedPara3: string;
+
   couponList = [];
   constructor(private _couponService: EComCouponService) {
     this.today = new Date();

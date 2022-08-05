@@ -7,7 +7,6 @@ import { ProgressbarModule } from "ngx-bootstrap/progressbar";
 import { TooltipModule } from "ngx-bootstrap/tooltip";
 import { PaginationModule } from "ngx-bootstrap/pagination";
 import { BsDropdownModule } from "ngx-bootstrap/dropdown";
-import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
 import { DialogModule } from "primeng/dialog";
 import { DataTabelModule } from "src/app/partials/layouts/datatables/datatabel.module";
 import { EComOrdersListComponent } from "./e-com-orders-list/e-com-orders-list.component";
@@ -53,7 +52,6 @@ import { ProductFaqComponent } from "./e-com-product-detail/product-faq/product-
     TooltipModule.forRoot(),
     PaginationModule.forRoot(),
     BsDropdownModule.forRoot(),
-    BsDatepickerModule.forRoot(),
     DialogModule,
     ECommerceRoutingModule,
   ],

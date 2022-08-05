@@ -15,7 +15,6 @@ export class CustomDropdownComponent implements OnInit {
   }
 
   onMenuClickHandller(type) {
-    console.log(type)
     this.parentFun.emit(type);
   }
 

@@ -22,6 +22,9 @@ export class TaskManagerComponent implements OnInit {
   selectedStatus: string;
   employeesArr = [];
   selectedEmp: string;
+  selectedPara: string;
+  selectedPara2: string;
+
   taskName = "Create the landing page on the beta channel";
   taskDetails =
     " lorem qui ipsum deserunt duis exercitation lorem elit qui qui ipsum tempor nulla velit aliquip enim consequat incididunt pariatur duis excepteur elit irure nulla ipsum dolor dolore est.";

@@ -16,7 +16,6 @@ export class InputSwitchComponent implements OnInit {
   ngOnInit(): void {
   }
   saveDetail(value) {
-    console.log(value.value);
 
   }
 }

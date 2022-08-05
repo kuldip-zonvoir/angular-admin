@@ -3,17 +3,13 @@
 @import "../node_modules/primeng/resources/themes/saga-blue/theme.css";
 @import "../node_modules/primeicons/primeicons.css";
 @import "../node_modules/font-awesome/css/font-awesome.css";
-@import "../node_modules/ngx-bootstrap/datepicker/bs-datepicker.scss";
 @import "../node_modules/highlight.js/styles/github.css";
 @import "./assets/plugins/themify-icons/themify-icons.css";
 @import "./assets/plugins/cryptocoins-icons/webfont/cryptocoins.css";
 @import "./assets/plugins/weathericons/css/weather-icons.css";
-@import "../node_modules/ng-multiselect-dropdown/themes/ng-multiselect-dropdown.theme.scss";
-@import "~@ng-select/ng-select/themes/default.theme.css";
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
 @import "~@fortawesome/fontawesome-free/scss/brands";
 @import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
-@import "./assets/sass/vendor/ngx-bootstrap/datepicker";
 @import "~@fullcalendar/daygrid/main.css";
 @import "~@fullcalendar/timegrid/main.css";
 
@@ -44,12 +40,6 @@ html {
       border-radius: 3px;
     }
 
-    .cdk-drag-preview.light-default-color .card {
-      background-color: #ffffff;
-    }
-    .cdk-drag-preview.dark-default-color.card {
-      background-color: #090e13;
-    }
     .theme_spaces {
       .col-xxl,
       .col-xxl-auto,

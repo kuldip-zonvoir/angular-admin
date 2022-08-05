@@ -14,7 +14,6 @@ export class AccountComponent implements OnInit,DoCheck  {
   ngOnInit(): void {}
 
   ngDoCheck() {
-    console.log('get data',this.route.url.split('/'));
     this.tempArr=this.route.url.split('/');
     if (this.tempArr.length>2&&this.tempArr[2]=='edit-profile') {
       this.editProfilePage = false;

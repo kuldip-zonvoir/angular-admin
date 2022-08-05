@@ -32,7 +32,9 @@ export class AppComponent {
     );
   }
   hideOverlaySidebar() {
-    console.log("hide");
     this.shareData.sidebarMobileMenu(false);
+  }
+  ngOnDestroy(): void {
+    this.subscription2.unsubscribe();
   }
 }

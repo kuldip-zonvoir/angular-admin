@@ -24,7 +24,6 @@ export class GroupChatComponent implements OnInit,OnDestroy {
   ngOnInit(): void {
     this.subscription = this._shareMe.chatContent.subscribe((value) => {
       this.isListVisble = value;
-      console.log(this.isListVisble);
     });
   }
 

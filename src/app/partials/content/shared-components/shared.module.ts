@@ -4,12 +4,8 @@ import { BlankPageComponent } from "./blank-page/blank-page.component";
 import { BsDropdownModule } from "ngx-bootstrap/dropdown";
 import { CustomDropdownComponent } from "./custom-dropdown/custom-dropdown.component";
 import { TooltipModule } from "ngx-bootstrap/tooltip";
-import { CustomModalComponent } from "./custom-modal/custom-modal.component";
-import { NgMultiSelectDropDownModule } from "ng-multiselect-dropdown";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { NgSelectModule } from "@ng-select/ng-select";
-import { CustomSingleSelectComponent } from "./custom-single-select/custom-single-select.component";
-import { CustomMultiSelectComponent } from "./custom-multi-select/custom-multi-select.component";
+
 import { DialogModule } from "primeng/dialog";
 import { SidebarModule } from "primeng/sidebar";
 import { CalendarModule } from "primeng/calendar";
@@ -22,9 +18,7 @@ import { PopupDailogPositionComponent } from "./popup-dailog-position/popup-dail
 import { ToastAlertsComponent } from "./toast-alerts/toast-alerts.component";
 import { ToastModule } from "primeng/toast";
 import { FileInputComponent } from "./file-input/file-input.component";
-import { CustomSelectDropdownComponent } from "./custom-select-dropdown/custom-select-dropdown.component";
 import { TabelFilterComponentComponent } from "../../layouts/datatables/tabel-filter-component/tabel-filter-component.component";
-import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
 import { FileDragNDropComponent } from "./file-drag-n-drop/file-drag-n-drop.component";
 import { TimelineModule } from "primeng/timeline";
 import { Dropdown, DropdownModule } from "primeng/dropdown";
@@ -44,15 +38,11 @@ FullCalendarModule.registerPlugins([
   declarations: [
     BlankPageComponent,
     CustomDropdownComponent,
-    CustomModalComponent,
-    CustomSingleSelectComponent,
-    CustomMultiSelectComponent,
     CustomPaginationComponent,
     DiscussChatComponent,
     PopupDailogPositionComponent,
     ToastAlertsComponent,
     FileInputComponent,
-    CustomSelectDropdownComponent,
     TabelFilterComponentComponent,
     FileDragNDropComponent,
     FullCalenderComponent,
@@ -61,19 +51,16 @@ FullCalendarModule.registerPlugins([
   providers: [DatePipe],
   imports: [
     CommonModule,
-    NgSelectModule,
     ReactiveFormsModule,
     FormsModule,
     DialogModule,
     SidebarModule,
     CalendarModule,
-    BsDatepickerModule.forRoot(),
     ToastModule,
     DropdownModule,
     MultiSelectModule,
     FullCalendarModule,
     TimelineModule,
-    NgMultiSelectDropDownModule.forRoot(),
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     PaginationModule.forRoot(),
@@ -84,9 +71,6 @@ FullCalendarModule.registerPlugins([
     BlankPageComponent,
     FullCalenderComponent,
     CustomDropdownComponent,
-    CustomModalComponent,
-    CustomSingleSelectComponent,
-    CustomMultiSelectComponent,
     CustomPaginationComponent,
     FormsModule,
     Dropdown,
@@ -101,14 +85,11 @@ FullCalendarModule.registerPlugins([
     SidebarModule,
     ToastModule,
     CalendarModule,
-    BsDatepickerModule,
-    NgSelectModule,
     ReactiveFormsModule,
     PopupDailogPositionComponent,
     ToastAlertsComponent,
     FileInputComponent,
     TabelFilterComponentComponent,
-    CustomSelectDropdownComponent,
     FileDragNDropComponent,
   ],
 })

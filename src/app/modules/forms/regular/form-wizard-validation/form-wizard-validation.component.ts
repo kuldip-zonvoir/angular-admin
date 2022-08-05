@@ -27,7 +27,6 @@ export class FormWizardValidationComponent implements OnInit {
     })
   }
   saveDetail() {
-    console.log(this.form.value);
 
   }
   changeStep(step) {

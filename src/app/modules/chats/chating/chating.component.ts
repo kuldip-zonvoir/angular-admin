@@ -23,7 +23,6 @@ export class ChatingComponent implements OnInit,OnDestroy {
     });
   }
   selectFile(event) {
-    console.log(event);
   }
   backTOContactList() {
     this.isListVisble = false;

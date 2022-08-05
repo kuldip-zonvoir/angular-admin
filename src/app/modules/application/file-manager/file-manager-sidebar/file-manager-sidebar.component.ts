@@ -24,6 +24,5 @@ export class FileManagerSidebarComponent implements OnInit {
     }
   }
   selectFile(event) {
-    console.log(event);
   }
 }

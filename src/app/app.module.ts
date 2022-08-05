@@ -6,13 +6,11 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { SidebarModule } from "primeng/sidebar";
-import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { SharemeService } from "./partials/core/shareme.service";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { HIGHLIGHT_OPTIONS } from "ngx-highlightjs";
 import { NgApexchartsModule } from "ng-apexcharts";
-import { ThemeService } from "./partials/core/theme.service";
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,13 +23,10 @@ import { ThemeService } from "./partials/core/theme.service";
     SidebarModule,
     AppRoutingModule,
     FormsModule,
-    NgbModule,
   ],
 
   providers: [
     SharemeService,
-    ThemeService,
-
     {
       provide: HIGHLIGHT_OPTIONS,
       useValue: {

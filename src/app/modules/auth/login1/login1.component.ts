@@ -16,6 +16,5 @@ export class Login1Component implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.currentTheme);
   }
 }

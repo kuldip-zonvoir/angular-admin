@@ -6,6 +6,8 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./tabel-filter-component-bottom.component.scss"],
 })
 export class TabelFilterComponentBottomComponent implements OnInit {
+  selectedPara: string;
+
   constructor() {}
   pages: [10];
   ngOnInit(): void {}

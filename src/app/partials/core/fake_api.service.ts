@@ -34,7 +34,6 @@ export class FakeApiService {
   }
   addNote(value) {
     notes.push(value);
-    console.log(value);
   }
   getNote() {
     return notes;
@@ -51,7 +50,6 @@ export class FakeApiService {
   }
   findTasks(item: any) {
     tasks.filter((taskItem) => {
-      console.log(taskItem === item);
     });
   }
   addTask(value) {

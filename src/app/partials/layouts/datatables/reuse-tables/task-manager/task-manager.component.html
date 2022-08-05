@@ -12,6 +12,7 @@
           <p-calendar
             class="prime_datepicker"
             [(ngModel)]="today"
+            [ngModelOptions]="{ standalone: true }"
             [disabledDays]="[0, 6]"
             [readonlyInput]="true"
             selectionMode="range"
@@ -22,18 +23,24 @@
       </div>
       <div class="col-lg-3 col-sm-6 col-md-6 grid-bottom-12">
         <div class="">
-          <app-custom-select-dropdown
-            [terms]="termsPara2"
-            class="customers-dropdown"
-          ></app-custom-select-dropdown>
+          <p-dropdown
+            [options]="termsPara2"
+            class="basic_dpdown"
+            [(ngModel)]="selectedPara2"
+            [ngModelOptions]="{ standalone: true }"
+            optionLabel="para_name"
+          ></p-dropdown>
         </div>
       </div>
       <div class="col-lg-3 col-sm-6 col-md-6 grid-bottom-12">
         <div class="">
-          <app-custom-select-dropdown
-            [terms]="termsPara"
-            class="customers-dropdown"
-          ></app-custom-select-dropdown>
+          <p-dropdown
+            [options]="termsPara"
+            class="basic_dpdown"
+            [(ngModel)]="selectedPara"
+            [ngModelOptions]="{ standalone: true }"
+            optionLabel="para_name"
+          ></p-dropdown>
         </div>
       </div>
     </div>
@@ -196,6 +203,7 @@
           <p-calendar
             class="prime_datepicker"
             [(ngModel)]="today"
+            [ngModelOptions]="{ standalone: true }"
             [disabledDays]="[0, 6]"
             [readonlyInput]="true"
             inputId="basic"

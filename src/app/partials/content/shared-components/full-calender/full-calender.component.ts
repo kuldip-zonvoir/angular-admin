@@ -194,12 +194,7 @@ export class FullCalenderComponent implements OnInit {
   handleDateClick(arg) {
     this.openEvent = true;
     this.eventName = "Casual Event";
-    let d1 = new Date(arg.dateStr);
-    // console.log(this.datepipe.transform(d1, "MM/dd/yyyy"));
-    // this.eventForm.patchValue({
-    //   startDate: this.datepipe.transform(d1, "MM/dd/yyyy"),
-    //   endDate: this.datepipe.transform(d1, "MM/dd/yyyy"),
-    // });
+
   }
 
 }

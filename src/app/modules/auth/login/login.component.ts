@@ -1,7 +1,10 @@
 import { Component, OnInit } from "@angular/core";
-// import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
-
+interface User {
+  username: string;
+  password: string;
+}
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
@@ -9,15 +12,22 @@ import { Router } from "@angular/router";
 })
 export class LoginComponent implements OnInit {
   currentTheme: string;
-  // form: FormGroup;
-
-  constructor(private router: Router) {
+  userData: FormGroup;
+  constructor(private router: Router, private formBuilder: FormBuilder) {
     this.currentTheme = localStorage.getItem("activetheme");
   }
 
-  ngOnInit(): void {}
-
-  onLogin() {
-    this.router.navigate(["/"]);
+  ngOnInit(): void {
+    this.userData = this.formBuilder.group({
+      username: ["strifedemo.com", Validators.required],
+      password: ["strifedemo.com", Validators.required],
+    });
+  }
+  onSubmit() {
+    if (!this.userData.invalid) {
+      let data = JSON.stringify(this.userData.value);
+      localStorage.setItem("fgsdshdkfjh", data);
+      this.router.navigate(["/"]);
+    }
   }
 }

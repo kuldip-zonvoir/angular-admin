@@ -13,9 +13,9 @@ export class NotesSidebarComponent implements OnInit {
   allNotes = true;
   noteDialog: boolean;
   noteForm: FormGroup;
-  note_author = "assets/media/images/users/user3.jpg";
+  note_author = "assets/media/images/users/14.png";
   note_share_count = 5;
-  note_author_name: "Caron";
+  note_author_name: "Benjamin Aramayo";
   constructor(private fb: FormBuilder, private fake_Api: FakeApiService) {}
 
   ngOnInit(): void {

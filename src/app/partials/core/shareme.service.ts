@@ -47,7 +47,6 @@ export class SharemeService {
   // Update Chat
   updateChatView(chat: boolean) {
     this.chatContent.next(chat);
-    console.log("view Updated" + chat);
   }
   updateDragCardBG(dragBg: string) {
     this.cardDrag.next(dragBg);

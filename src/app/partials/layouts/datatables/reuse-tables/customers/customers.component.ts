@@ -12,6 +12,9 @@ export class CustomersComponent implements OnInit {
   customerDetail: boolean;
   customerList = [];
   today: Date;
+  selectedPara: string;
+  selectedPara2: string;
+
   constructor(private _fakeApi: FakeApiService) {
     this.today = new Date();
   }

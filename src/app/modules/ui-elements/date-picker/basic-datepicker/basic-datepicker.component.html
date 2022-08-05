@@ -27,6 +27,7 @@
           <p-calendar
             class="prime_datepicker"
             [(ngModel)]="today"
+            [ngModelOptions]="{ standalone: true }"
             [readonlyInput]="true"
             inputId="basic"
             placeholder="Date Picker"

@@ -7,12 +7,12 @@ import { SharemeService } from "src/app/partials/core/shareme.service";
   templateUrl: "./chatlist.component.html",
   styleUrls: ["./chatlist.component.scss"],
 })
-export class ChatlistComponent implements OnInit,OnDestroy {
+export class ChatlistComponent implements OnInit, OnDestroy {
   users = [
     {
       post: "Front-End-Developer",
-      pic_url: "assets/media/images/users/300_9.jpg",
-      user_name: "Jozef Alzari",
+      pic_url: "assets/media/images/users/9.png",
+      user_name: "Markella Mawle",
       time: "12:30 PM",
       recent_message: "I've done it! See your task soon..",
       notification: "5",
@@ -25,8 +25,8 @@ export class ChatlistComponent implements OnInit,OnDestroy {
       post: "Front-End-Developer",
       notification: "2",
       status: "online",
-      pic_url: "assets/media/images/users/300_10.jpg",
-      user_name: "Peter adverd",
+      pic_url: "assets/media/images/users/10.png",
+      user_name: "Sheva adverd",
       time: "10:35 AM",
       recent_message: "See you soon..",
       call_response: "missed",
@@ -37,7 +37,7 @@ export class ChatlistComponent implements OnInit,OnDestroy {
       post: "Back-End-Developer",
       notification: "4",
       status: "offline",
-      pic_url: "assets/media/images/users/300_11.jpg",
+      pic_url: "assets/media/images/users/20.png",
       user_name: "Jozef Alzari",
       time: "12:30 PM",
       recent_message: "I've done it! See your task soon..",
@@ -49,7 +49,7 @@ export class ChatlistComponent implements OnInit,OnDestroy {
       post: "Web Designer",
       notification: "1",
       status: "online",
-      pic_url: "assets/media/images/users/100_11.jpg",
+      pic_url: "assets/media/images/users/20.png",
       user_name: "Sean Abott",
       time: "7:30 AM",
       recent_message: "Welcome to Group",
@@ -61,8 +61,8 @@ export class ChatlistComponent implements OnInit,OnDestroy {
       post: "Php Developer",
       notification: "",
       status: "online",
-      pic_url: "assets/media/images/users/300_12.jpg",
-      user_name: "Happy Singh",
+      pic_url: "assets/media/images/users/12.png",
+      user_name: "Nyrie Singh",
       time: "1:30 PM",
       recent_message: "Hi how are u",
       call_response: "dial",
@@ -73,8 +73,8 @@ export class ChatlistComponent implements OnInit,OnDestroy {
       post: "Front-End-Developer",
       notification: "",
       status: "offline",
-      pic_url: "assets/media/images/users/100_13.jpg",
-      user_name: "Morney Abott",
+      pic_url: "assets/media/images/users/13.png",
+      user_name: "Sheva Abott",
       time: "7:30 AM",
       recent_message: "Welcome to Group",
       call_response: "recieved",
@@ -85,7 +85,7 @@ export class ChatlistComponent implements OnInit,OnDestroy {
       post: "Android Developer",
       notification: "",
       status: "offline",
-      pic_url: "assets/media/images/users/100_11.jpg",
+      pic_url: "assets/media/images/users/20.png",
       user_name: "Sean Abott",
       time: "7:30 AM",
       recent_message: "Welcome to Group",
@@ -97,8 +97,8 @@ export class ChatlistComponent implements OnInit,OnDestroy {
       post: "Front-End-Developer",
       notification: "",
       status: "offline",
-      pic_url: "assets/media/images/users/300_9.jpg",
-      user_name: "Jozef Alzari",
+      pic_url: "assets/media/images/users/9.png",
+      user_name: "Markella Mawle",
       time: "12:30 PM",
       recent_message: "I've done it! See your task soon..",
       call_response: "recieved",
@@ -107,8 +107,8 @@ export class ChatlistComponent implements OnInit,OnDestroy {
     },
     {
       post: "Front-End-Developer",
-      pic_url: "assets/media/images/users/300_9.jpg",
-      user_name: "Jozef Alzari",
+      pic_url: "assets/media/images/users/9.png",
+      user_name: "Markella Mawle",
       time: "12:30 PM",
       recent_message: "I've done it! See your task soon..",
       notification: "5",
@@ -121,8 +121,8 @@ export class ChatlistComponent implements OnInit,OnDestroy {
       post: "Front-End-Developer",
       notification: "2",
       status: "online",
-      pic_url: "assets/media/images/users/300_10.jpg",
-      user_name: "Peter adverd",
+      pic_url: "assets/media/images/users/10.png",
+      user_name: "Sheva adverd",
       time: "10:35 AM",
       recent_message: "See you soon..",
       call_response: "missed",
@@ -133,7 +133,7 @@ export class ChatlistComponent implements OnInit,OnDestroy {
       post: "Back-End-Developer",
       notification: "4",
       status: "offline",
-      pic_url: "assets/media/images/users/300_11.jpg",
+      pic_url: "assets/media/images/users/20.png",
       user_name: "Jozef Alzari",
       time: "12:30 PM",
       recent_message: "I've done it! See your task soon..",
@@ -145,7 +145,7 @@ export class ChatlistComponent implements OnInit,OnDestroy {
       post: "Web Designer",
       notification: "1",
       status: "online",
-      pic_url: "assets/media/images/users/100_11.jpg",
+      pic_url: "assets/media/images/users/20.png",
       user_name: "Sean Abott",
       time: "7:30 AM",
       recent_message: "Welcome to Group",
@@ -157,8 +157,8 @@ export class ChatlistComponent implements OnInit,OnDestroy {
       post: "Php Developer",
       notification: "",
       status: "online",
-      pic_url: "assets/media/images/users/300_12.jpg",
-      user_name: "Happy Singh",
+      pic_url: "assets/media/images/users/12.png",
+      user_name: "Nyrie Singh",
       time: "1:30 PM",
       recent_message: "Hi how are u",
       call_response: "dial",
@@ -169,8 +169,8 @@ export class ChatlistComponent implements OnInit,OnDestroy {
       post: "Front-End-Developer",
       notification: "",
       status: "offline",
-      pic_url: "assets/media/images/users/100_13.jpg",
-      user_name: "Morney Abott",
+      pic_url: "assets/media/images/users/13.png",
+      user_name: "Sheva Abott",
       time: "7:30 AM",
       recent_message: "Welcome to Group",
       call_response: "recieved",
@@ -181,7 +181,7 @@ export class ChatlistComponent implements OnInit,OnDestroy {
       post: "Android Developer",
       notification: "",
       status: "offline",
-      pic_url: "assets/media/images/users/100_11.jpg",
+      pic_url: "assets/media/images/users/20.png",
       user_name: "Sean Abott",
       time: "7:30 AM",
       recent_message: "Welcome to Group",
@@ -193,8 +193,8 @@ export class ChatlistComponent implements OnInit,OnDestroy {
       post: "Front-End-Developer",
       notification: "",
       status: "offline",
-      pic_url: "assets/media/images/users/300_9.jpg",
-      user_name: "Jozef Alzari",
+      pic_url: "assets/media/images/users/9.png",
+      user_name: "Markella Mawle",
       time: "12:30 PM",
       recent_message: "I've done it! See your task soon..",
       call_response: "recieved",
@@ -204,12 +204,12 @@ export class ChatlistComponent implements OnInit,OnDestroy {
   ];
   tabId = "0";
   isChatVisible: boolean;
-    subscription: Subscription;
+  subscription: Subscription;
 
   constructor(private _shareMe: SharemeService) {}
 
   ngOnInit(): void {
-    this.subscription =this._shareMe.chatContent.subscribe((value) => {
+    this.subscription = this._shareMe.chatContent.subscribe((value) => {
       this.isChatVisible = value;
     });
   }
@@ -223,7 +223,7 @@ export class ChatlistComponent implements OnInit,OnDestroy {
     this._shareMe.updateChatView(this.isChatVisible);
   }
 
-    ngOnDestroy() {
+  ngOnDestroy() {
     this.subscription.unsubscribe();
   }
 }

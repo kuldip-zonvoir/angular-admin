@@ -23,9 +23,7 @@ export class GroupChatingComponent implements OnInit,OnDestroy {
       this.isListVisble = value;
     });
   }
-  selectFile(event) {
-    console.log(event);
-  }
+ 
   backTOContactList() {
     this.isListVisble = false;
     this._shareMe.updateChatView(this.isListVisble);

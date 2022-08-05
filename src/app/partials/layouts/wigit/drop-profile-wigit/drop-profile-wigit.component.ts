@@ -16,7 +16,6 @@ export class DropProfileWigitComponent implements OnInit {
 
   goToProfile() {
     this.parentDropdown.emit();
-    console.log("data isemmited");
     this.router.navigate(["account/timeline"]);
   }
 
@@ -31,5 +30,9 @@ export class DropProfileWigitComponent implements OnInit {
   goToTasks() {
     this.parentDropdown.emit();
     this.router.navigate(["application/task-manager"]);
+  }
+  onLogout() {
+    localStorage.removeItem("fgsdshdkfjh");
+    this.router.navigate(["/auth/login-1"]);
   }
 }

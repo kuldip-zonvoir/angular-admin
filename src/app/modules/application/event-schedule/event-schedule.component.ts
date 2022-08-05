@@ -162,7 +162,6 @@ export class EventScheduleComponent implements OnInit {
     this.openEvent = true;
     this.eventName = "Casual Event";
     let d1 = new Date(arg.dateStr);
-    console.log(this.datepipe.transform(d1, "MM/dd/yyyy"));
     this.eventForm.patchValue({
       startDate: this.datepipe.transform(d1, "MM/dd/yyyy"),
       endDate: this.datepipe.transform(d1, "MM/dd/yyyy"),
@@ -231,7 +230,6 @@ export class EventScheduleComponent implements OnInit {
     };
     this.Events.push(this.customEvent);
     this.calendarOptions["events"] = [...this.Events];
-    console.log(event_type["type"]);
     this.eventForm.reset();
     this.openEvent = true;
   }

@@ -137,11 +137,8 @@ export class FileManagerComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-  selectFile(event) {
-    console.log(event);
-  }
+
   openAppSidebar() {
     this.filesSidebarModal = !this.filesSidebarModal;
-    console.log("sidebar" + this.filesSidebarModal);
   }
 }

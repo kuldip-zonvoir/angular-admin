@@ -2,77 +2,77 @@ export var users = [
   {
     id: "1",
     user_name: "",
-    user_pic: "assets/media/images/users/300_1.jpg",
+    user_pic: "assets/media/images/users/1.png",
   },
   {
     id: "2",
     user_name: "",
-    user_pic: "assets/media/images/users/300_2.jpg",
+    user_pic: "assets/media/images/users/2.png",
   },
   {
     id: "3",
     user_name: "",
-    user_pic: "assets/media/images/users/300_3.jpg",
+    user_pic: "assets/media/images/users/3.png",
   },
   {
     id: "4",
     user_name: "",
-    user_pic: "assets/media/images/users/300_4.jpg",
+    user_pic: "assets/media/images/users/4.png",
   },
   {
     id: "5",
     user_name: "",
-    user_pic: "assets/media/images/users/300_5.jpg",
+    user_pic: "assets/media/images/users/5.png",
   },
   {
     id: "6",
     user_name: "",
-    user_pic: "assets/media/images/users/300_6.jpg",
+    user_pic: "assets/media/images/users/6.png",
   },
   {
     id: "7",
     user_name: "",
-    user_pic: "assets/media/images/users/300_7.jpg",
+    user_pic: "assets/media/images/users/7.png",
   },
   {
     id: "8",
     user_name: "",
-    user_pic: "assets/media/images/users/300_8.jpg",
+    user_pic: "assets/media/images/users/8.png",
   },
   {
     id: "9",
     user_name: "",
-    user_pic: "assets/media/images/users/300_9.jpg",
+    user_pic: "assets/media/images/users/9.png",
   },
   {
     id: "10",
     user_name: "",
-    user_pic: "assets/media/images/users/300_10.jpg",
+    user_pic: "assets/media/images/users/10.png",
   },
   {
     id: "11",
     user_name: "",
-    user_pic: "assets/media/images/users/300_11.jpg",
+    user_pic: "assets/media/images/users/20.png",
   },
   {
     id: "12",
     user_name: "",
-    user_pic: "assets/media/images/users/300_12.jpg",
+    user_pic: "assets/media/images/users/12.png",
   },
   {
     id: "13",
     user_name: "",
-    user_pic: "assets/media/images/users/300_13.jpg",
+    user_pic: "assets/media/images/users/13.png",
   },
   {
     id: "14",
     user_name: "",
-    user_pic: "assets/media/images/users/300_14.jpg",
+    user_pic: "assets/media/images/users/14.png",
   },
   {
     id: "15",
     user_name: "",
-    user_pic: "assets/media/images/users/300_15.jpg",
+    user_pic: "assets/media/images/users/15.png",
   },
 ];
 export var postsImages = [

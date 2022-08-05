@@ -15,7 +15,6 @@ const routes: Routes = [
           ),
         data: { breadcrumb: "Dashboard" },
       },
-
       {
         path: "ticket",
         loadChildren: () =>

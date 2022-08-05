@@ -57,6 +57,5 @@ export class NoteCardComponent implements OnInit {
   ]
 
   parentFun(type){
-    console.log('parent component function.', type);
   }
 }

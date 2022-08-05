@@ -15,7 +15,7 @@ export class ContactHeaderComponent implements OnInit {
   filetype: string;
   filesize: number;
   activeUrlString: string;
-  profilePic = "assets/media/images/users/user1.jpg";
+  profilePic = "assets/media/images/users/16.png";
   displayDialog: boolean;
   constructor(private route: Router, private fb: FormBuilder) {}
   addContactDialog() {

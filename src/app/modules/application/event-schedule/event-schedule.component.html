@@ -119,7 +119,7 @@
               [(ngModel)]="today"
               [disabledDays]="[0, 6]"
               [readonlyInput]="true"
-              formControlName="startDate"
+              [ngModelOptions]="{ standalone: true }"
               inputId="disabledays"
             ></p-calendar>
           </div>
@@ -128,10 +128,9 @@
             <p-calendar
               class="prime_datepicker"
               [(ngModel)]="today"
-              formControlName="eventType"
               [disabledDays]="[0, 6]"
               [readonlyInput]="true"
-              formControlName="endDate"
+              [ngModelOptions]="{ standalone: true }"
               inputId="disabledays"
             ></p-calendar>
           </div>

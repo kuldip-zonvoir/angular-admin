@@ -15,7 +15,6 @@ export class MailServiceComponent implements OnInit {
   toggleTab(tab) {
     if (tab != this.tabId) {
       this.tabId = tab;
-      console.log(this.tabId);
     }
   }
   openInbox() {

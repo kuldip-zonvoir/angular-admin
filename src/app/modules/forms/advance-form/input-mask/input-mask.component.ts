@@ -23,7 +23,5 @@ export class InputMaskComponent implements OnInit {
     })
   }
   saveDetail(value) {
-    console.log(value.value);
-
   }
 }

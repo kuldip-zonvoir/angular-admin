@@ -90,41 +90,41 @@ export class ListPageComponent implements OnInit, OnDestroy {
   subscription2: Subscription;
 
   defaultPic = "assets/media/images/cards/6.jpg";
-  defaultUserPic = "assets/media/images/users/300_5.jpg";
+  defaultUserPic = "assets/media/images/users/5.png";
   task_title = "Rental Project";
   desc = ` Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam nihil, dolorem asperiores ad pariatur placeat vel fuga velit expedita adipisci?`;
   constructor(private fb: FormBuilder, private shared_service: SharemeService) {
     this.selectedMembers = [
       {
-        label: "Indi",
-        file: "assets/media/images/users/100_7.jpg",
+        label: "Netly Mullan",
+        file: "assets/media/images/users/7.png",
       },
       {
         label: "John Doe ",
-        file: "assets/media/images/users/100_6.jpg",
+        file: "assets/media/images/users/6.png",
       },
     ];
     // members
     this.members = [
       {
-        label: "Indi",
-        file: "assets/media/images/users/100_7.jpg",
+        label: "Netly Mullan",
+        file: "assets/media/images/users/7.png",
       },
       {
         label: "John Doe ",
-        file: "assets/media/images/users/100_6.jpg",
+        file: "assets/media/images/users/6.png",
       },
       {
         label: "David Willy",
-        file: "assets/media/images/users/100_5.jpg",
+        file: "assets/media/images/users/5.png",
       },
       {
         label: "Denial Sams",
-        file: "assets/media/images/users/100_8.jpg",
+        file: "assets/media/images/users/8.png",
       },
       {
-        label: "Jonny Potts",
-        file: "assets/media/images/users/100_9.jpg",
+        label: "Markella Mawle",
+        file: "assets/media/images/users/9.png",
       },
     ];
     this.selectedTaskLabels = [
@@ -277,7 +277,6 @@ export class ListPageComponent implements OnInit, OnDestroy {
   }
   showBasicDialog(which) {
     this.modalState = !this.modalState;
-    console.log("de s", this.modalState, which);
     this.shared_service.updateModalState(this.modalState, which);
   }
   showFilterDialog() {
@@ -350,7 +349,6 @@ export class ListPageComponent implements OnInit, OnDestroy {
   }
   taskDetailDialog(data) {
     this.tasKCardkDetail = data;
-    console.log(this.tasKCardkDetail);
   }
 
   ngOnDestroy() {
@@ -362,7 +360,7 @@ export class ListPageComponent implements OnInit, OnDestroy {
       title: "Fix issue #43",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
       imgHeader: "assets/media/images/cards/7.jpg",
-      user_img: "assets/media/images/users/300_1.jpg",
+      user_img: "assets/media/images/users/1.png",
 
       message: "02",
       file: "03",
@@ -370,7 +368,7 @@ export class ListPageComponent implements OnInit, OnDestroy {
     {
       title: "Project DeadLine",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
-      user_img: "assets/media/images/users/300_2.jpg",
+      user_img: "assets/media/images/users/2.png",
       message: "04",
       file: "01",
     },
@@ -378,7 +376,7 @@ export class ListPageComponent implements OnInit, OnDestroy {
       title: "Add this to dashboard",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
       imgHeader: "assets/media/images/cards/4.jpg",
-      user_img: "assets/media/images/users/300_3.jpg",
+      user_img: "assets/media/images/users/3.png",
 
       message: "02",
       file: "03",
@@ -387,14 +385,14 @@ export class ListPageComponent implements OnInit, OnDestroy {
       title: "InitelSap Project",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
       imgHeader: "assets/media/images/cards/6.jpg",
-      user_img: "assets/media/images/users/300_4.jpg",
+      user_img: "assets/media/images/users/4.png",
       message: "04",
       file: "08",
     },
     {
       title: "Exam Project",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
-      user_img: "assets/media/images/users/300_9.jpg",
+      user_img: "assets/media/images/users/9.png",
       message: "04",
       file: "03",
     },
@@ -402,7 +400,7 @@ export class ListPageComponent implements OnInit, OnDestroy {
       title: "Fix issue #45",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
       imgHeader: "assets/media/images/cards/7.jpg",
-      user_img: "assets/media/images/users/300_1.jpg",
+      user_img: "assets/media/images/users/1.png",
 
       message: "02",
       file: "03",
@@ -410,7 +408,7 @@ export class ListPageComponent implements OnInit, OnDestroy {
     {
       title: "Fix Layout issue #15",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
-      user_img: "assets/media/images/users/300_2.jpg",
+      user_img: "assets/media/images/users/2.png",
       message: "04",
       file: "01",
     },
@@ -418,7 +416,7 @@ export class ListPageComponent implements OnInit, OnDestroy {
       title: "Fix Header issue #35",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
       imgHeader: "assets/media/images/cards/7.jpg",
-      user_img: "assets/media/images/users/300_3.jpg",
+      user_img: "assets/media/images/users/3.png",
 
       message: "02",
       file: "03",
@@ -427,14 +425,14 @@ export class ListPageComponent implements OnInit, OnDestroy {
       title: "DB Crashed issue #40",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
       imgHeader: "assets/media/images/cards/4.jpg",
-      user_img: "assets/media/images/users/300_4.jpg",
+      user_img: "assets/media/images/users/4.png",
       message: "04",
       file: "08",
     },
     {
       title: "Api Issue #67",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
-      user_img: "assets/media/images/users/300_9.jpg",
+      user_img: "assets/media/images/users/9.png",
       message: "04",
       file: "03",
     },
@@ -444,14 +442,14 @@ export class ListPageComponent implements OnInit, OnDestroy {
       title: "Zydus Delivery Project ",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
       imgHeader: "assets/media/images/cards/1.jpg",
-      user_img: "assets/media/images/users/300_5.jpg",
+      user_img: "assets/media/images/users/5.png",
       notification: "May, 03",
       message: "02",
       file: "03",
     },
     {
       title: "Project in Working",
-      user_img: "assets/media/images/users/300_5.jpg",
+      user_img: "assets/media/images/users/5.png",
       message: "02",
       file: "03",
     },
@@ -459,14 +457,14 @@ export class ListPageComponent implements OnInit, OnDestroy {
       title: "InitelSap Project",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
       imgHeader: "assets/media/images/cards/6.jpg",
-      user_img: "assets/media/images/users/300_4.jpg",
+      user_img: "assets/media/images/users/4.png",
       message: "04",
       file: "08",
     },
     {
       title: "Exam Project",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
-      user_img: "assets/media/images/users/300_9.jpg",
+      user_img: "assets/media/images/users/9.png",
       message: "04",
       file: "03",
     },
@@ -474,7 +472,7 @@ export class ListPageComponent implements OnInit, OnDestroy {
       title: "Fix issue #45",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
       imgHeader: "assets/media/images/cards/7.jpg",
-      user_img: "assets/media/images/users/300_1.jpg",
+      user_img: "assets/media/images/users/1.png",
 
       message: "02",
       file: "03",
@@ -482,7 +480,7 @@ export class ListPageComponent implements OnInit, OnDestroy {
     {
       title: "Fix Layout issue #15",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
-      user_img: "assets/media/images/users/300_2.jpg",
+      user_img: "assets/media/images/users/2.png",
       message: "04",
       file: "01",
     },
@@ -490,7 +488,7 @@ export class ListPageComponent implements OnInit, OnDestroy {
     {
       title: "Api Issue #67",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
-      user_img: "assets/media/images/users/300_9.jpg",
+      user_img: "assets/media/images/users/9.png",
       message: "04",
       file: "03",
     },
@@ -499,7 +497,7 @@ export class ListPageComponent implements OnInit, OnDestroy {
     {
       title: "Exam Project",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
-      user_img: "assets/media/images/users/300_9.jpg",
+      user_img: "assets/media/images/users/9.png",
       message: "04",
       file: "03",
     },
@@ -507,7 +505,7 @@ export class ListPageComponent implements OnInit, OnDestroy {
       title: "Fix issue #45",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
       imgHeader: "assets/media/images/cards/7.jpg",
-      user_img: "assets/media/images/users/300_1.jpg",
+      user_img: "assets/media/images/users/1.png",
 
       message: "02",
       file: "03",
@@ -515,7 +513,7 @@ export class ListPageComponent implements OnInit, OnDestroy {
     {
       title: "Fix Layout issue #15",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
-      user_img: "assets/media/images/users/300_2.jpg",
+      user_img: "assets/media/images/users/2.png",
       message: "04",
       file: "01",
     },
@@ -523,7 +521,7 @@ export class ListPageComponent implements OnInit, OnDestroy {
       title: "Fix Header issue #35",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
       imgHeader: "assets/media/images/cards/7.jpg",
-      user_img: "assets/media/images/users/300_3.jpg",
+      user_img: "assets/media/images/users/3.png",
 
       message: "02",
       file: "03",
@@ -532,16 +530,16 @@ export class ListPageComponent implements OnInit, OnDestroy {
       title: "DB Crashed issue #40",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
       imgHeader: "assets/media/images/cards/4.jpg",
-      user_img: "assets/media/images/users/300_4.jpg",
+      user_img: "assets/media/images/users/4.png",
       message: "04",
       file: "08",
     },
     {
-      title: "More to Like",
+      title: "Foody App",
       imgHeader: "assets/media/images/cards/1.jpg",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
-      user_img: "assets/media/images/users/300_7.jpg",
-      user_img2: "assets/media/images/users/300_5.jpg",
+      user_img: "assets/media/images/users/7.png",
+      user_img2: "assets/media/images/users/5.png",
       notification: "May, 03",
       message: "02",
       file: "03",
@@ -549,7 +547,7 @@ export class ListPageComponent implements OnInit, OnDestroy {
     {
       title: "Api Issue #67",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
-      user_img: "assets/media/images/users/300_9.jpg",
+      user_img: "assets/media/images/users/9.png",
       message: "04",
       file: "03",
     },
@@ -559,7 +557,7 @@ export class ListPageComponent implements OnInit, OnDestroy {
       title: "Rental",
       imgHeader: "assets/media/images/cards/1.jpg",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
-      user_img: "assets/media/images/users/300_5.jpg",
+      user_img: "assets/media/images/users/5.png",
       notification: "May, 03",
       message: "02",
       file: "03",
@@ -568,7 +566,7 @@ export class ListPageComponent implements OnInit, OnDestroy {
       title: "Fix issue #45",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
       imgHeader: "assets/media/images/cards/7.jpg",
-      user_img: "assets/media/images/users/300_1.jpg",
+      user_img: "assets/media/images/users/1.png",
       message: "02",
       file: "03",
     },
@@ -576,14 +574,14 @@ export class ListPageComponent implements OnInit, OnDestroy {
       title: "DB Crashed issue #40",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
       imgHeader: "assets/media/images/cards/4.jpg",
-      user_img: "assets/media/images/users/300_4.jpg",
+      user_img: "assets/media/images/users/4.png",
       message: "04",
       file: "08",
     },
     {
       title: "Api Issue #67",
       content: "Phasellus ac augue vitae ligula sollicitudin feugiat",
-      user_img: "assets/media/images/users/300_9.jpg",
+      user_img: "assets/media/images/users/9.png",
       message: "04",
       file: "03",
     },

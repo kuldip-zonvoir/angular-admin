@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
-import { FakeApiService } from "src/app/partials/core/fake_api.service";
 import { EComProductsService } from "src/app/partials/core/services/e-com-products.service";
 
 @Component({

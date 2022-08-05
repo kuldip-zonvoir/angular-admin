@@ -1,19 +1,19 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ConfigService } from 'src/app/partials/core/config.service';
+import { Component, OnInit, ViewEncapsulation } from "@angular/core";
+import { ConfigService } from "src/app/partials/core/config.service";
 
 @Component({
-  selector: 'app-dashbord3',
-  templateUrl: './dashbord3.component.html',
-  styleUrls: ['./dashbord3.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  selector: "app-dashbord3",
+  templateUrl: "./dashbord3.component.html",
+  styleUrls: ["./dashbord3.component.scss"],
+  encapsulation: ViewEncapsulation.None,
 })
 export class Dashbord3Component implements OnInit {
   inc = false;
   decr = false;
-  chartColor1:String;
-  chartColor2:String;
-  chartColor3:String;
-  chartColor4:String;
+  chartColor1: String;
+  chartColor2: String;
+  chartColor3: String;
+  chartColor4: String;
   constructor(private _config: ConfigService) {
     this.chartColor1 = this._config.getProp(
       "customSetting.colors.theme.light.purple"
@@ -29,8 +29,7 @@ export class Dashbord3Component implements OnInit {
     );
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   donutcharts = [
     {

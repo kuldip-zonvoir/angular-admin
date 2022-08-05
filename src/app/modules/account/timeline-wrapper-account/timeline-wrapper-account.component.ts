@@ -12,7 +12,7 @@ export class TimelineWrapperAccountComponent implements OnInit {
   posts = [
     {
       id: "1",
-      user_pic: "assets/media/images/users/100_5.jpg",
+      user_pic: "assets/media/images/users/5.png",
       user_name: "David Smith",
       post_date: "just now",
       post_content:
@@ -24,8 +24,8 @@ export class TimelineWrapperAccountComponent implements OnInit {
     },
     {
       id: "2",
-      user_pic: "assets/media/images/users/100_6.jpg",
-      user_name: "David Smith",
+      user_pic: "assets/media/images/users/6.png",
+      user_name: "David Willy",
       post_date: "5 min ago",
       post_type: "three_img",
       post_content:
@@ -37,7 +37,7 @@ export class TimelineWrapperAccountComponent implements OnInit {
     },
     {
       id: "3",
-      user_pic: "assets/media/images/users/100_5.jpg",
+      user_pic: "assets/media/images/users/5.png",
       user_name: "David Smith",
       post_date: "20 min ago",
       post_type: "one_img",
@@ -50,7 +50,7 @@ export class TimelineWrapperAccountComponent implements OnInit {
     },
     {
       id: "4",
-      user_pic: "assets/media/images/users/100_5.jpg",
+      user_pic: "assets/media/images/users/5.png",
       user_name: "David Smith",
       post_date: "just now",
       post_type: "two_img",
@@ -64,8 +64,8 @@ export class TimelineWrapperAccountComponent implements OnInit {
     {
       id: "2",
 
-      user_pic: "assets/media/images/users/100_6.jpg",
-      user_name: "David Smith",
+      user_pic: "assets/media/images/users/6.png",
+      user_name: "David willy",
       post_date: "5 min ago",
       post_type: "share_link",
 
@@ -78,7 +78,7 @@ export class TimelineWrapperAccountComponent implements OnInit {
     },
     {
       id: "3",
-      user_pic: "assets/media/images/users/100_5.jpg",
+      user_pic: "assets/media/images/users/5.png",
       user_name: "David Smith",
       post_date: "20 min ago",
       post_type: "video",

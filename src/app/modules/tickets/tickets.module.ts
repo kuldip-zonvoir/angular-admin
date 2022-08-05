@@ -15,7 +15,6 @@ import { TicketTileComponent } from "./ticketlist/ticket-tile/ticket-tile.compon
 import { PaginationModule } from "ngx-bootstrap/pagination";
 import { DialogModule } from "primeng/dialog";
 import { TooltipModule } from "ngx-bootstrap/tooltip";
-import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
 import { DataTabelModule } from "src/app/partials/layouts/datatables/datatabel.module";
 import { SharedModule } from "src/app/partials/content/shared-components/shared.module";
 
@@ -39,7 +38,6 @@ import { SharedModule } from "src/app/partials/content/shared-components/shared.
     DataTabelModule,
     TooltipModule.forRoot(),
     PaginationModule.forRoot(),
-    BsDatepickerModule.forRoot(),
     ApexchartSharedModule,
     TicketsRoutingModule,
   ],

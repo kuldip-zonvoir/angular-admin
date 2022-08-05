@@ -71,7 +71,6 @@ export class SidebarComponent implements OnInit, OnDestroy {
       if (ev instanceof NavigationEnd) {
         this.currentUrl = ev.url.split("/");
         this.currentUrlString = ev.url;
-        console.log(this.currentUrlString);
       }
     });
   }
@@ -118,7 +117,6 @@ export class SidebarComponent implements OnInit, OnDestroy {
 
     this.subscription5 = this.shareData.mobileDialogSidebar.subscribe(
       (data) => {
-        console.log("updated data", data);
         this.mobileSidebarModal = data;
       }
     );

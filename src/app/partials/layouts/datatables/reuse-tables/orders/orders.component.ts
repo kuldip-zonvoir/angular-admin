@@ -13,6 +13,10 @@ export class OrdersComponent implements OnInit {
   orderStatusArr = [];
   selectedStatus: string;
   today: Date;
+  selectedPara: string;
+  selectedPara2: string;
+  selectedPara3: string;
+
   constructor(private _fakeApi: FakeApiService) {
     this.today = new Date();
     this.orderStatusArr = [

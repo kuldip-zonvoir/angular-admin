@@ -12,7 +12,6 @@ import { BorderlessBootstrapTabelComponent } from "./borderless-bootstrap-tabel/
 import { ColorVarientBootstrapTabelComponent } from "./color-varient-bootstrap-tabel/color-varient-bootstrap-tabel.component";
 import { TabelComponent } from "./reuse-tables/tabel/tabel.component";
 import { PaginationModule } from "ngx-bootstrap/pagination";
-import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
 import { DialogModule } from "primeng/dialog";
 import { CouponsComponent } from "./reuse-tables/coupons/coupons.component";
 import { CategoryComponent } from "./reuse-tables/category/category.component";
@@ -53,8 +52,6 @@ import { TaskTicketsComponent } from "./task-tickets/task-tickets.component";
     TooltipModule.forRoot(),
     SharedModule,
     PaginationModule.forRoot(),
-    BsDropdownModule.forRoot(),
-    BsDatepickerModule.forRoot(),
     DialogModule,
   ],
   exports: [

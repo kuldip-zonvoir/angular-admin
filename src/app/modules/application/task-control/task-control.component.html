@@ -126,6 +126,7 @@
           <p-calendar
             class="prime_datepicker"
             [(ngModel)]="bsValue"
+            [ngModelOptions]="{ standalone: true }"
             [disabledDays]="[0, 6]"
             [readonlyInput]="true"
             inputId="basic"

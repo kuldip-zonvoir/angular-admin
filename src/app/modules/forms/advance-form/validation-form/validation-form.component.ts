@@ -37,7 +37,6 @@ export class ValidationFormComponent implements OnInit {
     })
   }
   saveDetail() {
-    console.log(this.form.value);
 
   }
 

@@ -1,6 +1,5 @@
 import { Component, HostListener, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
-import { FakeApiService } from "src/app/partials/core/fake_api.service";
 import { EComProductsService } from "src/app/partials/core/services/e-com-products.service";
 
 @Component({
@@ -22,6 +21,8 @@ export class InventoryComponent implements OnInit {
   error: string;
   inventoryList = [];
   dragAreaClass: string;
+  selectedPara: string;
+
   taskName = "Create the landing page on the beta channel";
   taskDetails =
     " lorem qui ipsum deserunt duis exercitation lorem elit qui qui ipsum tempor nulla velit aliquip enim consequat incididunt pariatur duis excepteur elit irure nulla ipsum dolor dolore est.";
@@ -67,11 +68,6 @@ export class InventoryComponent implements OnInit {
         (this.filetype = files[0].type);
     }
   }
-  selectFile(event) {
-    console.log(event);
-    let files: FileList = event.target.files;
-    this.saveFiles(files);
-  }
   editProduct(id: string) {
     this._router.navigate(["/e-commerce/edit-product"]);
   }
@@ -80,7 +76,6 @@ export class InventoryComponent implements OnInit {
     this.popupId = id;
   }
   confirmDelete(id) {
-    console.log(id);
     this.confirmDialog = false;
     this._productService.deleteProduct(id);
   }

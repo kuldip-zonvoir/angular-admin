@@ -15,9 +15,9 @@ export class NotesComponent implements OnInit {
   notesSidebarModal = false;
   noteDialog = false;
   noteForm: FormGroup;
-  note_author = "assets/media/images/users/user3.jpg";
+  note_author = "assets/media/images/users/14.png";
   note_share_count = 5;
-  note_author_name: "Caron";
+  note_author_name: "Benjamin Aramayo";
   activeNote =
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt velit quos amet, eligendi nobis odio minima? Odit voluptatibus non amet?";
   constructor(private fake_Api: FakeApiService, private fb: FormBuilder) {}
@@ -51,7 +51,6 @@ export class NotesComponent implements OnInit {
   // open nodesSidebar sidebar
   openAppSidebar() {
     this.notesSidebarModal = !this.notesSidebarModal;
-    console.log("sidebar" + this.notesSidebarModal);
   }
   //opent Note Modal
   openNoteModal(value) {

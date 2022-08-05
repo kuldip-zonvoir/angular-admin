@@ -40,7 +40,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
       }
     });
     this.isDropdownArr[index] = !this.isDropdownArr[index];
-    console.log("dropdown is clicked");
   }
   ngOnInit(): void {
     this.subscription1 = this.shareData.sidebarToggle.subscribe((data) => {
@@ -147,7 +146,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
       this.profileId = !this.profileId;
       this.notificationId = false;
       this.emailId = false;
-      console.log("profile" + this.profileId);
     } else if (value === "notifications") {
       this.notificationId = !this.notificationId;
       this.notificationId = false;

@@ -1,7 +1,6 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { TooltipModule } from "ngx-bootstrap/tooltip";
-import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
 import { RatingModule } from "ngx-bootstrap/rating";
 import { PopoverModule } from "ngx-bootstrap/popover";
 import { ProgressbarModule } from "ngx-bootstrap/progressbar";
@@ -266,7 +265,6 @@ import { SharedModule } from "src/app/partials/content/shared-components/shared.
     TabsModule.forRoot(),
     AccordionModule.forRoot(),
     BsDropdownModule.forRoot(),
-    BsDatepickerModule.forRoot(),
     PaginationModule.forRoot(),
     TimepickerModule.forRoot(),
     TooltipModule.forRoot(),

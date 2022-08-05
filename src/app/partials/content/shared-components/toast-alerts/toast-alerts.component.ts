@@ -15,8 +15,6 @@ export class ToastAlertsComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    console.log(this.customAlert);
-
     this.primengConfig.ripple = true;
   }
   showToast(data: any) {

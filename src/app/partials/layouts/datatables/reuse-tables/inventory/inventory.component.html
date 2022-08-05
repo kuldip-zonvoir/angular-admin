@@ -15,10 +15,13 @@
         >
           <div class="">
             <div class="control-ng-select-width">
-              <app-custom-select-dropdown
-                [terms]="termsPara"
-                class="category-dropdown ng-custom-select-input"
-              ></app-custom-select-dropdown>
+              <p-dropdown
+                [options]="termsPara"
+                class="basic_dpdown"
+                [(ngModel)]="selectedPara"
+                [ngModelOptions]="{ standalone: true }"
+                optionLabel="para_name"
+              ></p-dropdown>
             </div>
           </div>
         </div>

@@ -10,7 +10,7 @@ import { FakeApiService } from "src/app/partials/core/fake_api.service";
 export class InvoiceTabelComponent implements OnInit {
   Invoices = [];
   constructor(private route: Router, private _fakeApi: FakeApiService) {}
-
+  selectedPara: string;
   ngOnInit(): void {
     this.Invoices = this._fakeApi.getInvoice();
   }

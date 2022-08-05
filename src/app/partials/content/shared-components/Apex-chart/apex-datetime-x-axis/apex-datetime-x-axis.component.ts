@@ -11,7 +11,6 @@ import {
   ApexLegend,
   ApexGrid,
   ApexTooltip,
-  ApexAnnotations,
   ApexMarkers,
   ApexFill,
 } from "ng-apexcharts";

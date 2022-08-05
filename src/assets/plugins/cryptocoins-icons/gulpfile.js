@@ -47,7 +47,6 @@ const paths = {
 \* ------------------------------------ */
 
 gulp.task('optimize', function (cb) {
-  console.log('-- Optimizing SVG files');
   pump([
     gulp.src(paths.input),
     svgmin(),
@@ -57,7 +56,6 @@ gulp.task('optimize', function (cb) {
 
 
 gulp.task('webfont', function (cb) {
-  console.log('-- Generating webfont');
   pump([
     gulp.src(paths.input),
     iconfontCss({

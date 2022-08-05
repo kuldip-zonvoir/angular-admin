@@ -13,6 +13,5 @@ export class EngaugeComponent implements OnInit {
   ngOnInit(): void {}
   openNotification() {
     this.funNotificationDropdown.emit();
-    console.log("this is not clicked");
   }
 }

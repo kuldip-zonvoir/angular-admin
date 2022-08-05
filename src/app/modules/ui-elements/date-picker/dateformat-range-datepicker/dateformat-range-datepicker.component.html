@@ -26,6 +26,7 @@
         <div class="">
           <p-calendar
             class="prime_datepicker"
+            [ngModelOptions]="{ standalone: true }"
             [(ngModel)]="today"
             [disabledDays]="[0, 6]"
             selectionMode="multiple"

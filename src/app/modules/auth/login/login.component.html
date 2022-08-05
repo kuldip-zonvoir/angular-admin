@@ -18,12 +18,13 @@
           </div>
 
           <div class="login_form_panel">
-            <form>
+            <form [formGroup]="userData" (ngSubmit)="onSubmit()">
               <div class="form-group login-email">
                 <input
                   type="email"
                   class="form-control login-inp-field"
                   placeholder="Email"
+                  formControlName="username"
                 />
               </div>
 
@@ -32,6 +33,7 @@
                   type="password"
                   class="form-control login-inp-field"
                   placeholder="password"
+                  formControlName="password"
                 />
               </div>
 
@@ -53,7 +55,7 @@
 
               <div class="login_sub_btn">
                 <button
-                  type="button"
+                  type="submit"
                   class="btn login-btn btn-block btn-primary"
                 >
                   Sign In

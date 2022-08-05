@@ -13,6 +13,8 @@ export class TaskTicketsComponent implements OnInit {
   assignedPerson = [];
   selectedPerson: string;
   popupId: string;
+  selectedPara: string;
+  today: Date;
   constructor(private _ticketService: TicketsService) {
     this.assignedPerson = [
       {

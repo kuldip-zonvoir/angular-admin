@@ -5,9 +5,7 @@ import { ApplicationRoutingModule } from "./application-routing.module";
 import { ApplicationComponent } from "./application.component";
 import { FileManagerComponent } from "./file-manager/file-manager.component";
 import { ProgressbarModule } from "ngx-bootstrap/progressbar";
-import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
 import { PaginationModule } from "ngx-bootstrap/pagination";
-import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { DataTabelModule } from "src/app/partials/layouts/datatables/datatabel.module";
 import { TaskControlComponent } from "./task-control/task-control.component";
 import { NotesComponent } from "./notes/notes.component";
@@ -48,8 +46,6 @@ FullCalendarModule.registerPlugins([
     DataTabelModule,
     ProgressbarModule.forRoot(),
     PaginationModule.forRoot(),
-    BsDatepickerModule.forRoot(),
-    NgbModule,
     FullCalendarModule,
     SharedModule,
     ApplicationRoutingModule,

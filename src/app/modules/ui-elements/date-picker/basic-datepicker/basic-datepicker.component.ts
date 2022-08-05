@@ -28,6 +28,7 @@ export class BasicDatepickerComponent implements OnInit {
     <p-calendar
     class="prime_datepicker"
     [(ngModel)]="today"
+    [ngModelOptions]="{ standalone: true }"
     [disabledDays]="[0, 6]"
     [readonlyInput]="true"
     inputId="basic"
