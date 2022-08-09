@@ -4,6 +4,25 @@
     height: 300px !important;
   }
 }
+.list-group{
+  .list-group-item{
+    font-size: 14px;
+  }
+}
+.coursel_size{
+  img{
+      height:16rem;
+  }
+  .carousel-caption{
+    h3{
+
+      color: $white !important;
+    }
+    p{
+      color: $white !important;
+    }
+  }
+}
 
 // For Mobile Portrait Mode
 @include responsive-below(md) {
@@ -11,6 +30,11 @@
     .map-container {
       width: 100% !important;
       height: 300px !important;
+    }
+  }
+  .coursel_size{
+    img{
+        height:auto;
     }
   }
 }

@@ -23,11 +23,11 @@ $dark-25: $gray-400 !default;
 $text-muted: $gray-500 !default;
 //custom-colors
 
-$color1: #00bdaa; //green;
-$color2: #ef698b; // red
-$color3: #0c0c3c; //indigo
+$color1: #00bdaa; 
+$color2: #ef698b; 
+$color3: #0c0c3c;
 $color4: #1ea8e7;
-$color5: #484c7f; //purple
+$color5: #484c7f; 
 $color6: #8b44e0;
 $color7: #e9edf2 !default;
 $colorActive1: #006e7f !default;
@@ -89,17 +89,17 @@ $dark-light: $gray-400 !default;
 $dark-inverse: $white !default;
 $dark: $black;
 $body-color: $dark !default;
-$dark: $dark !default; // Bootstrap variable
-$dark-hover: darken($dark, 3%) !default; // Custom variable
-$dark-light: $gray-500 !default; // Custom variable
-$dark-inverse: $white !default; // Custom variable
+$dark: $dark !default; 
+$dark-hover: darken($dark, 3%) !default; 
+$dark-light: $gray-500 !default; 
+$dark-inverse: $white !default; 
 
 // Primary colors
 
 $primary-inverse: $white !default; // Custom variable
 
 // Secondary colors
-$secondary: #f87321 !default; // Bootstrap variable
+$secondary: #f87321 !default; 
 $secondary-hover: #fc6100 !default; // Custom variable
 $secondary-light: #ffe4d1 !default; // Custom variable
 $secondary-inverse: $white !default; // Custom variable

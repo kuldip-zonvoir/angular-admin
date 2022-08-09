@@ -79,7 +79,7 @@ p-inputmask {
 }
 
 .p-checkbox {
-  .p-checkbox-icon{
+  .p-checkbox-icon {
     // color: #000;
   }
   &:hover {
@@ -103,8 +103,7 @@ p-inputmask {
 }
 
 // dropdown
-.p-dropdown:not(.p-disabled).p-focus
-{
+.p-dropdown:not(.p-disabled).p-focus {
   box-shadow: none;
 }
 .basic_dpdown {
@@ -126,6 +125,7 @@ p-inputmask {
     }
   }
 }
+
 .p-dropdown-panel {
   border: 1px solid $inputBorder !important;
   border-radius: 4px;
@@ -133,9 +133,18 @@ p-inputmask {
   .p-dropdown-items {
     margin-bottom: 0;
     .p-dropdown-item {
-      // border: 1px solid $inputBorder !important;
       border-radius: 4px;
       background-color: $inputBgColor;
+      font-weight: 500;
+      font-size: 13px;
+      &:not(.p-highlight) {
+        &:not(.p-disabled) {
+          &:hover {
+            background-color: $primary-light !important;
+            color: $primary !important;
+          }
+        }
+      }
       &:focus {
         border-radius: 4px;
         background-color: $inputBgColor;
@@ -143,9 +152,9 @@ p-inputmask {
         outline: 0;
         box-shadow: none !important;
       }
-      .p-highlight {
-        color: $white;
-        background: $primary;
+      &.p-highlight {
+        color: $white !important;
+        background: $primary !important;
         &:hover {
           border-color: $primary;
           background: $primary;

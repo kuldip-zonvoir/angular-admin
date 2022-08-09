@@ -19,21 +19,21 @@ export class GroupSuggestionsComponent implements OnInit {
   groups = [
     {
       id: "1",
-      group_pic: "assets/media/images/profile/mongo.png",
-      group_name: "MongoDB Folks",
-      group_desc: "MongoDb group",
+      group_pic: "assets/media/images/profile/ember.png",
+      group_name: "Ember Folks",
+      group_desc: "Ember group",
       isConnected: true,
     },
     {
       id: "2",
-      group_pic: "assets/media/images/profile/Java.png",
-      group_name: "Java Community",
-      group_desc: "Java developers group",
+      group_pic: "assets/media/images/profile/laravel.png",
+      group_name: "Laravel Community",
+      group_desc: "Laravel developers group",
       isConnected: true,
     },
     {
       id: "3",
-      group_pic: "assets/media/images/profile/python.jpg",
+      group_pic: "assets/media/images/profile/python.png",
       group_name: "Python Devlopers",
       group_desc: "Python developers group",
       isConnected: false,

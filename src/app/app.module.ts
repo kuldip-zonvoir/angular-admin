@@ -11,12 +11,13 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { HIGHLIGHT_OPTIONS } from "ngx-highlightjs";
 import { NgApexchartsModule } from "ng-apexcharts";
-
+import { GoogleMapsModule } from "@angular/google-maps";
 @NgModule({
   declarations: [AppComponent],
   imports: [
     ReactiveFormsModule,
     BrowserModule,
+    GoogleMapsModule,
     BrowserAnimationsModule,
     HttpClientModule,
     NgApexchartsModule,

@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { HighlightResult } from 'ngx-highlightjs';
+import { Component, OnInit } from "@angular/core";
+import { HighlightResult } from "ngx-highlightjs";
 
 @Component({
-  selector: 'app-dynamic-carousel',
-  templateUrl: './dynamic-carousel.component.html',
-  styleUrls: ['./dynamic-carousel.component.scss']
+  selector: "app-dynamic-carousel",
+  templateUrl: "./dynamic-carousel.component.html",
+  styleUrls: ["./dynamic-carousel.component.scss"],
 })
 export class DynamicCarouselComponent implements OnInit {
   tabId = "0";
@@ -19,7 +19,7 @@ export class DynamicCarouselComponent implements OnInit {
 
   addSlide(): void {
     this.slides.push({
-      image: `assets/media/images/slide/${this.slides.length % 8 + 1}.jpg`
+      image: `assets/media/images/cards/${(this.slides.length % 8) + 1}.jpg`,
     });
   }
 
@@ -27,8 +27,7 @@ export class DynamicCarouselComponent implements OnInit {
     const toRemove = index ? index : this.activeSlideIndex;
     this.slides.splice(toRemove, 1);
   }
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   tabToggle(tab) {
     if (tab != this.tabId) {
       this.tabId = tab;
@@ -79,7 +78,7 @@ export class DynamicCarouselComponent implements OnInit {
    
     addSlide(): void {
       this.slides.push({
-        image: assets/images/nature/"${this.slides.length % 8 + 1}".jpg
+        image: assets/images/nature/"${(this.slides.length % 8) + 1}".jpg
       });
     }
    
@@ -94,9 +93,9 @@ export class DynamicCarouselComponent implements OnInit {
     this.response = {
       language: e.language,
       relevance: e.relevance,
-      second_best: '{...}',
-      top: '{...}',
-      value: '{...}'
-    }
+      second_best: "{...}",
+      top: "{...}",
+      value: "{...}",
+    };
   }
 }

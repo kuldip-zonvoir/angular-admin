@@ -5,6 +5,7 @@
 /integration/bazel/bazel-*
 *.log
 *.zip
+*.env
 node_modules
 .angular
 # CircleCI temporary file for cache key computation.

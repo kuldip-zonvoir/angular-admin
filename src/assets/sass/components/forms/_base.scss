@@ -144,7 +144,6 @@
   border: 1px solid $inputBorder;
   border-color: $inputBorder;
   &:enabled {
-    // border-color: lighten($color: $text-color, $amount: 75%);
     border-color: $inputBorder !important;
     border: 1px solid $inputBorder;
 

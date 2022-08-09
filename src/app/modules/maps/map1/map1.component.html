@@ -1,0 +1,78 @@
+<div *ngIf="apiLoaded | async">
+  <div class="row">
+    <div class="col-lg-6 col-12 m-b-20">
+      <div class="card custom-card">
+        <div class="card-header custom-card-header border-1">
+          <h5 class="m-b-0">Traffic Map</h5>
+        </div>
+        <div class="card-body zp-0">
+          <google-map
+            #myGoogleMap
+            height="500px"
+            width="100%"
+            [zoom]="zoom"
+            [center]="center"
+            [options]="options"
+            (mapClick)="eventHandler($event, 'mapClick')"
+            (mapDblclick)="eventHandler($event, 'mapDblclick')"
+            (mapDrag)="eventHandler($event, 'mapDrag')"
+            (mapDragend)="eventHandler($event, 'mapDragend')"
+            (mapRightclick)="eventHandler($event, 'mapRightclick')"
+            (positionChanged)="eventHandler($event, 'marker_positionChanged')"
+            (zoomChanged)="eventHandler($event, 'zoomChanged')"
+          >
+            <map-traffic-layer [autoRefresh]="false"></map-traffic-layer>
+            <map-marker
+              #markerElem="mapMarker"
+              *ngFor="let marker of markers"
+              [position]="marker.position"
+              [label]="marker.label"
+              [title]="marker.title"
+              [options]="marker.options"
+            >
+            </map-marker>
+
+            <map-info-window>{{ infoContent }}</map-info-window>
+          </google-map>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-12 m-b-20">
+      <div class="card custom-card">
+        <div class="card-header custom-card-header border-1">
+          <h5 class="m-b-0">Marker Map</h5>
+        </div>
+        <div class="card-body zp-0">
+          <google-map
+            #myGoogleMap
+            height="500px"
+            width="100%"
+            [zoom]="zoom"
+            [center]="center"
+            [options]="options"
+            (mapClick)="eventHandler($event, 'mapClick')"
+            (mapDblclick)="eventHandler($event, 'mapDblclick')"
+            (mapDrag)="eventHandler($event, 'mapDrag')"
+            (mapDragend)="eventHandler($event, 'mapDragend')"
+            (mapRightclick)="eventHandler($event, 'mapRightclick')"
+            (positionChanged)="eventHandler($event, 'marker_positionChanged')"
+            (zoomChanged)="eventHandler($event, 'zoomChanged')"
+          >
+            <map-marker
+              #markerElem="mapMarker"
+              *ngFor="let marker of markers"
+              [position]="marker.position"
+              [label]="marker.label"
+              [title]="marker.title"
+              [options]="marker.options"
+              (mapClick)="openInfo(markerElem, marker.info)"
+            >
+            </map-marker>
+
+            <map-info-window>{{ infoContent }}</map-info-window>
+          </google-map>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

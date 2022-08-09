@@ -4,11 +4,11 @@
 
 export const environment = {
   production: false,
-  USERDATA_KEY: 'authf649fc9a5f55',
+  USERDATA_KEY: "authf649fc9a5f55",
   isMockEnabled: true,
-  apiUrl: 'api'
+  apiUrl: "api",
+  API_KEY: "AIzaSyACPO-on7F65L6S6q6HYYtuz7j_T5S1nU0",
 };
-
 
 /*
  * For easier debugging in development mode, you can import the following file

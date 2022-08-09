@@ -1,46 +1,177 @@
-
 // crypto Dahboard start
-.crpto_th{
+.crpto_th {
   color: #342e49;
   font-size: 13px;
 }
-.only_md_screen{display: none;}
-.brl{
+.crypto_widgets {
+  .card-body {
+    padding: 1rem !important;
+  }
+}
+.only_md_screen {
+  display: none;
+}
+.brl {
   border-left: 1px solid $border-color2;
 }
 
-// analytics
-.insights_wrap{
-  a{
-  display: block;
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 15px;
-  opacity: 0.4;
-  &:first-child{
-      opacity: 1;
-  }
-  &:hover{
-      opacity: 1;
-  }
+.crt_pr_logo {
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &.crypto_icon_name {
+    font-size: 22px;
   }
 }
-.header_info_wrap{
-  margin-bottom: 8px;
+.nft_name_wrap {
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  margin-right: 10px;
+  font-weight: 600;
+  font-size: 13px;
 }
-.insight_table_wrap{
-  margin: 8px 0;
+.crypto_icon_wrap {
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  margin-right: 10px;
+  font-weight: 600;
+  font-size: 20px;
 }
-.insight_wrap{
-  .icon-wrap{
-      color: $primary;
-      font-size: 16px;
-      margin-right: 4px;
+
+.crpto_table {
+  tr {
+    th {
+      text-align: center;
+      border-bottom: 1px solid $border-color2;
+      .crpt_th {
+        color: $text-color;
+        font-size: 13px;
+        font-weight: 600;
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        text-align: center;
+        border-bottom: 1px solid $border-color2;
+        .crpt_td {
+          font-size: 13px;
+          font-weight: 500;
+          i {
+            color: #f7931a;
+            font-size: 18px;
+          }
+        }
+      }
+      &:hover {
+        background-color: #efeffa;
+        cursor: pointer;
+        color: $text-color;
+      }
+      &:last-child {
+        td {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+}
+.crpto_buy_table {
+  tbody {
+    tr {
+      td {
+        padding: 0 0 16px 0;
+        vertical-align: middle;
+        .crpt_td {
+          font-size: 13px;
+          font-weight: 500;
+        }
+        .crpt_input {
+          width: 80%;
+          margin: 0 auto;
+          margin-right: 0;
+          border-radius: 4px 0 0 4px;
+          padding: 5px;
+        }
+        .crpt_change {
+          background-color: $border-color2;
+          border-radius: 0 4px 4px 0;
+          white-space: nowrap;
+          padding: 8px;
+          text-align: center;
+          font-size: 13px;
+          font-weight: 500;
+          height: 38px;
+          position: relative;
+          top: -1px;
+        }
+        &:first-child {
+          width: 25%;
+        }
+        &:nth-child(2) {
+          width: 65%;
+          text-align: center;
+        }
+        &:last-child {
+          width: 10%;
+          text-align: center;
+        }
+      }
+      &:hover {
+        background-color: transparent;
+      }
+      &:last-child {
+        td {
+          border-bottom: 0;
+        }
+      }
+    }
   }
 }
 
-.crm_dash_wrap{
-  .icons_pro_wrap{
+// analytics
+.insights_wrap {
+  a {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    opacity: 0.4;
+    &:first-child {
+      opacity: 1;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+.header_info_wrap {
+  margin-bottom: 8px;
+}
+.insight_table_wrap {
+  margin: 8px 0;
+}
+.insight_wrap {
+  .icon-wrap {
+    color: $primary;
+    font-size: 16px;
+    margin-right: 4px;
+  }
+}
+
+.crm_dash_wrap {
+  .icons_pro_wrap {
     font-size: 24px;
     width: 54px;
     height: 54px;
@@ -49,64 +180,62 @@
     text-align: center;
     display: inline-block;
   }
-  .crm_progress_wrap{
+  .crm_progress_wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 10px;
-    h5{
+    h5 {
       margin-bottom: 8px;
       color: $dark;
     }
-    p{
+    p {
       margin-bottom: 8px;
-
     }
-
   }
 }
-.crm_tile_chages{
+.crm_tile_chages {
   font-size: 12px;
 }
-.card_back{
-  .card_img{
-      background-color: #aff7dc;
-      border-radius: 4px 4px 0;
+.card_back {
+  .card_img {
+    background-color: #aff7dc;
+    border-radius: 4px 4px 0;
   }
-  .card_img_2{
-      background-color: #bdaff7;
-      border-radius: 4px 4px 0;
+  .card_img_2 {
+    background-color: #bdaff7;
+    border-radius: 4px 4px 0;
   }
-  .crpt_card_img{
-      width: 100%;
+  .crpt_card_img {
+    width: 100%;
   }
 }
-.card-detail{
+.card-detail {
   padding: 0 8px 8px;
-  .cpr_info{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #eae5e5;
+  .cpr_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eae5e5;
   }
-  .pb-detail{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 5px;
+  .pb-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
   }
 }
-.crpto_icon_wrap{
+.crpto_icon_wrap {
   width: 46px;
   height: 46px;
   line-height: 46px;
   display: inline-block;
   border-radius: 50%;
-  background-color:$primary;
+  background-color: $primary;
   position: relative;
   box-shadow: 2px 1px 3px #404040;
 }
-.icon_coin{
+.icon_coin {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -115,80 +244,79 @@
   color: $white;
 }
 
-// 
-.crt_crd_title{
-margin-bottom: 0 !important;
+//
+.crt_crd_title {
+  margin-bottom: 0 !important;
 }
-.crt_crd_body{
-  .crt_crd_list_wrap{
-      padding-left: 0;
-      margin-bottom: 0;
-      li{
-          list-style: none;
-          display:flex;
-          align-items: center;
-          justify-content: space-between;
-          border-bottom: 1px solid $border-color2;
-          padding: 15px;
-          &:last-child{
-              border-bottom:0;
-          }
-          &:hover{
-              cursor: pointer;
-          }
-          .crt_crd_details{
-              display: flex;
-              align-items: center;
-              .crt_li_one{
-                  margin-right: 8px;
-                  border: 1px solid  $border-color2;
-                  width: 3rem;
-                  height: 3rem;
-                  border-radius: 50%;
-                  img{
-                      border-radius: 50%;
-                      width: 100%;
-                      object-fit: contain;
-                      padding: 5px;
-                  }
-              }
-              .crt_li_two{
-                  h6{
-                      margin-bottom: 3px;
-                      text-transform: capitalize;
-                  }
-                  .crt_coin_details{
-                      display: flex;
-                      align-items: center;
-                      .crt_coin_amt{
-                          font-size: 14px;
-                          color: #8a939b;
-                      }
-                      .crt_icon{
-                          font-size: 16px;
-                      }
-                      .crt_rate{
-
-                          margin-bottom: 3px;
-                          font-size: 14px;
-                      }
-                  }
-              }
-          }
-          .crt_li_three{
-              .crt_price_chages{
-                  margin-bottom: 3px;
-                  font-size: 14px;
-              }
-              .crt_coin_amt{
-                  font-size: 14px;
-                  color: #8a939b;
-              }
-              .crt_icon{
-                  font-size: 16px;
-              }
-          }
+.crt_crd_body {
+  .crt_crd_list_wrap {
+    padding-left: 0;
+    margin-bottom: 0;
+    li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid $border-color2;
+      padding: 15px;
+      &:last-child {
+        border-bottom: 0;
       }
+      &:hover {
+        cursor: pointer;
+      }
+      .crt_crd_details {
+        display: flex;
+        align-items: center;
+        .crt_li_one {
+          margin-right: 8px;
+          width: 3rem;
+          height: 3rem;
+          border-radius: 50%;
+          position: relative;
+          img {
+            border-radius: 50%;
+            width: 100%;
+            object-fit: contain;
+            padding: 5px;
+          }
+        }
+        .crt_li_two {
+          h6 {
+            margin-bottom: 3px;
+            text-transform: capitalize;
+          }
+          .crt_coin_details {
+            display: flex;
+            align-items: center;
+            .crt_coin_amt {
+              font-size: 14px;
+              color: #8a939b;
+            }
+            .crt_icon {
+              font-size: 16px;
+            }
+            .crt_rate {
+              margin-bottom: 3px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .crt_li_three {
+        .crt_price_chages {
+          margin-bottom: 3px;
+          font-size: 14px;
+        }
+        .crt_coin_amt {
+          font-size: 14px;
+          color: #8a939b;
+        }
+        .crt_icon {
+          font-size: 16px;
+        }
+      }
+    }
   }
 }
 // crypto dashboard ends
@@ -242,20 +370,18 @@ margin-bottom: 0 !important;
   .custom_td1 {
     font-size: $tdFontsize;
     width: 50%;
-    font-weight: 500;                 
-    p{
-     font-weight: 500;                 
-
-   }
+    font-weight: 500;
+    p {
+      font-weight: 500;
+    }
   }
   .custom_td2 {
     font-size: $tdFontsize;
     width: 30%;
     text-align: center;
     font-weight: 500;
-    p{
+    p {
       font-weight: 500;
-
     }
   }
   .custom_td3 {
@@ -263,11 +389,10 @@ margin-bottom: 0 !important;
     font-weight: 500;
     width: 20%;
     text-align: right;
-    p{
+    p {
       font-weight: 500;
       color: $tableTdColor !important;
     }
-   
   }
 }
 .data_chart_ana {
@@ -321,8 +446,8 @@ margin-bottom: 0 !important;
   }
 }
 
-.crypto_card{
-  .cryp_card_title{
+.crypto_card {
+  .cryp_card_title {
     font-size: 12px;
     font-weight: 400;
     color: $muteColor;
@@ -404,21 +529,21 @@ margin-bottom: 0 !important;
     }
     .good_j_text {
       padding-top: 8px;
-      h2{
+      h2 {
         font-size: 22px !important;
       }
-      ul{
+      ul {
         margin-top: 14px;
       }
     }
   }
-  .visit_filters{
+  .visit_filters {
     display: none;
   }
   .vector_map_chart {
     height: 160px;
   }
-  .pro_activity_body{
+  .pro_activity_body {
     overflow-y: auto;
     height: 45vh;
     cursor: pointer;
@@ -426,14 +551,18 @@ margin-bottom: 0 !important;
     @include scrollbar($width: 0.3rem, $border-radius: 1rem);
     &:hover {
       $background-light: $scrollbarColor;
-      @include scrollbar($width: 0.3rem, $border-radius: 1rem, $background-color: $background-light);
+      @include scrollbar(
+        $width: 0.3rem,
+        $border-radius: 1rem,
+        $background-color: $background-light
+      );
     }
   }
   .crpt_card_img {
     width: 100%;
     height: 15rem;
     object-fit: contain;
-}
+  }
 }
 
 // For Mobile Landscape Mode
@@ -451,87 +580,93 @@ margin-bottom: 0 !important;
   .vector_map_chart {
     height: 200px;
   }
-  .visit_filters{
+  .visit_filters {
     display: block;
   }
   .crpt_card_img {
     width: 100%;
     height: auto;
     object-fit: contain;
-}
-.pro_reminders_body{
-  .pro_activity_sub{
-    width: auto !important;
   }
-}
+  .pro_reminders_body {
+    .pro_activity_sub {
+      width: auto !important;
+    }
+  }
 
-.pro_activity_body{
-  height: auto ;
-}
-.only_md_screen{display: block;}
+  .pro_activity_body {
+    height: auto;
+  }
+  .only_md_screen {
+    display: block;
+  }
 
-.statics_wrap{
-  display: flex;
-  .information_tab{
+  .statics_wrap {
+    display: flex;
+    .information_tab {
       width: 80%;
-  }
-  .statics_tab{
+    }
+    .statics_tab {
       width: 20%;
+    }
+  }
+  .brl {
+    border: 0;
   }
 }
-.brl{
-  border: 0;
-}
-}
-
 
 // For tablet Portrait Mode
 @include responsive-between(md, lg) {
-.crm_activity{
-  .pro_activity_body{
-    overflow-y: auto;
-    height: 29vh;
-    cursor: pointer;
-    overflow-x: hidden;
-    @include scrollbar($width: 0.3rem, $border-radius: 1rem);
-    &:hover {
-      $background-light: $scrollbarColor;
-      @include scrollbar($width: 0.3rem, $border-radius: 1rem, $background-color: $background-light);
+  .crm_activity {
+    .pro_activity_body {
+      overflow-y: auto;
+      height: 29vh;
+      cursor: pointer;
+      overflow-x: hidden;
+      @include scrollbar($width: 0.3rem, $border-radius: 1rem);
+      &:hover {
+        $background-light: $scrollbarColor;
+        @include scrollbar(
+          $width: 0.3rem,
+          $border-radius: 1rem,
+          $background-color: $background-light
+        );
+      }
     }
   }
-}
-  .statics_wrap{
+  .statics_wrap {
     display: flex;
-    .information_tab{
-        width: 70%;
+    .information_tab {
+      width: 70%;
     }
-    .statics_tab{
-        width: 30%;
+    .statics_tab {
+      width: 30%;
     }
   }
-  .only_md_screen{display: block;}
+  .only_md_screen {
+    display: block;
+  }
 
-  .brl{
+  .brl {
     border: 0;
   }
   .icon_skelton {
     width: 46px;
     height: 46px;
     line-height: 46px;
-
   }
-  .pro_reminders_body{
-    .pro_activity_sub{
+  .pro_reminders_body {
+    .pro_activity_sub {
       width: 120px;
     }
   }
-  .milestones_body{
-    .pro_activity_sub{
+  .milestones_body {
+    .pro_activity_sub {
       width: 100%;
     }
   }
-  .prjt{
-    &.pro_activity_body{
+  .prjt {
+    &.pro_activity_body {
       height: 33vh;
       cursor: pointer;
       overflow-y: auto;
@@ -539,32 +674,35 @@ margin-bottom: 0 !important;
       @include scrollbar($width: 0.3rem, $border-radius: 1rem);
       &:hover {
         $background-light: $scrollbarColor;
-        @include scrollbar($width: 0.3rem, $border-radius: 1rem, $background-color: $background-light);
+        @include scrollbar(
+          $width: 0.3rem,
+          $border-radius: 1rem,
+          $background-color: $background-light
+        );
       }
     }
   }
 }
 // For tablet Landscape Mode
 @include responsive-between(lg, xl) {
-  .prjt{
-    &.pro_activity_body{
+  .prjt {
+    &.pro_activity_body {
       height: 43vh;
     }
-    }
-  .pro_reminders_body{
-    .pro_activity_sub{
+  }
+  .pro_reminders_body {
+    .pro_activity_sub {
       width: 100% !important;
     }
   }
 
-  .brl{
+  .brl {
     border: 0;
   }
   .icon_skelton {
     width: 46px;
     height: 46px;
     line-height: 46px;
-    
   }
   .dashboard_lft_sec {
     .good_job_dash {
@@ -573,25 +711,25 @@ margin-bottom: 0 !important;
       background-color: $primary;
       padding: 10px 20px;
     }
-  
+
     .good_j_img {
       padding: 20px;
       text-align: center;
       padding-bottom: 0;
     }
-  
+
     .good_j_img img {
       height: 9.5rem;
       width: 9.5rem;
     }
-  
+
     .good_j_text h2 {
       letter-spacing: -0.019em;
       color: $white;
       font-weight: 400;
       font-size: 20px !important;
     }
-  
+
     .good_j_text p {
       opacity: 0.5;
       color: $white;
@@ -599,13 +737,13 @@ margin-bottom: 0 !important;
       font-size: $paraSize;
       margin-top: 0;
     }
-  
+
     .good_j_text ul {
       padding-left: 0;
       margin-top: 10px;
       margin-bottom: 0;
     }
-  
+
     .good_j_text ul li {
       font-size: 13px;
       color: $white;
@@ -617,7 +755,7 @@ margin-bottom: 0 !important;
       padding-left: 24px;
       position: relative;
     }
-  
+
     .good_j_text ul li:after {
       content: "\f058";
       position: absolute;
