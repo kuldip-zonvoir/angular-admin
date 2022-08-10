@@ -20,7 +20,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
   mobileSidebarModal: boolean;
   isSubMenuArr = new Array(22);
   urlArr = [
-    "dashboards",
+    "dashboard",
     "account",
     "application",
     "e-commerce",
@@ -42,7 +42,6 @@ export class SidebarComponent implements OnInit, OnDestroy {
     "datatables",
     "charts",
     "maps",
-    "analystic",
   ];
   zvalue = "10";
   isMobile: boolean;
@@ -58,11 +57,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
   subscription4: Subscription;
   subscription5: Subscription;
 
-  constructor(
-    private shareData: SharemeService,
-    private activatedRoute: ActivatedRoute,
-    private router: Router
-  ) {
+  constructor(private shareData: SharemeService, private router: Router) {
     this.isMobile = true;
     //to fill the array all element with false as a valueconsole
 
@@ -98,7 +93,6 @@ export class SidebarComponent implements OnInit, OnDestroy {
     this.subscription2 = this.shareData.sidebarToggler.subscribe(
       (stringData) => {
         this.sidebarkey = stringData;
-
         this.getSidebarClass(this.sidebarkey);
       }
     );
@@ -122,6 +116,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
     );
   }
 
+  // change sidebar background color
   getSidebarClass(value: string) {
     return {
       default: "default-sidebar",
@@ -131,10 +126,10 @@ export class SidebarComponent implements OnInit, OnDestroy {
       "4": "sidebar-4",
       "5": "sidebar-5",
       "6": "sidebar-6",
-      "7": "sidebar-7",
     }[value];
   }
 
+  // change active color of sidebar links
   getActiveMenuText(value: string) {
     return {
       default: "default-active-text",
@@ -147,6 +142,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
     }[value];
   }
 
+  // Change brand background color
   getBrandClass(value: string) {
     return {
       default: "default-brand",
@@ -156,7 +152,6 @@ export class SidebarComponent implements OnInit, OnDestroy {
       "4": "brand-4",
       "5": "brand-5",
       "6": "brand-6",
-      "7": "brand-7",
     }[value];
   }
 

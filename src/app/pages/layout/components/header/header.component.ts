@@ -8,39 +8,20 @@ import { SharemeService } from "src/app/partials/core/shareme.service";
   styleUrls: ["./header.component.scss"],
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-  subs;
-  isCollapsed: boolean;
-  sidebar: boolean;
+  isSidebarOpen: boolean;
   isMobile: boolean;
   mobileMenubar: boolean;
   isToggle = false;
   headerSearch: boolean;
-  dropdownProfile = false;
-  dropdownEmail = false;
-  dropdownNotification = false;
-  visibleSidebar = false;
   headerkey = "";
   brandkey = "";
-  isDropdownOpen: boolean;
-  isDropdownArr = [false, false, false, false];
-  profileId: boolean;
-  notificationId: boolean;
-  emailId: boolean;
-  dropDrown = "default";
   tabId = "";
   subscription1: Subscription;
   subscription2: Subscription;
   subscription3: Subscription;
 
   constructor(private shareData: SharemeService) {}
-  openDropdown(index) {
-    this.isDropdownArr.forEach((ac, i) => {
-      if (index != i) {
-        this.isDropdownArr[i] = false;
-      }
-    });
-    this.isDropdownArr[index] = !this.isDropdownArr[index];
-  }
+
   ngOnInit(): void {
     this.subscription1 = this.shareData.sidebarToggle.subscribe((data) => {
       this.isMobile = data;
@@ -100,14 +81,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
     return customClass;
   }
 
-  toggleMe() {
-    this.sidebar = true;
-    this.shareData.toggleSidebar(this.sidebar);
-  }
-
+  // toggle sidebar
   sidebarToggle() {
     var mediaQuery = window.matchMedia("(min-width: 1181px)");
     if (mediaQuery.matches) {
+      this.isSidebarOpen = !this.isSidebarOpen;
       this.isMobile = !this.isMobile;
       this.shareData.toggleSidebar(this.isMobile);
     } else {
@@ -115,47 +93,39 @@ export class HeaderComponent implements OnInit, OnDestroy {
       this.shareData.sidebarMobileMenu(this.mobileMenubar);
     }
   }
+
+  // open searchbar for mobile devices
   openSearchBar() {
     this.headerSearch = !this.headerSearch;
     this.tabToggle("");
   }
 
-  collapsibleDropdown() {
-    this.isCollapsed = !this.isCollapsed;
-    this.notificationId = false;
-    this.profileId = false;
-    this.emailId = false;
-    this.headerSearch = false;
-    this.isDropdownArr[1] = false;
-    this.isDropdownArr[2] = false;
-    this.isDropdownArr[3] = false;
-  }
   // toggle dropdown-icon-triggers
   tabToggle(tab) {
     if (tab != this.tabId) {
       this.tabId = tab;
     }
   }
-  dropDown(value) {
-    if (this.dropDrown == value) {
-      this.notificationId = false;
-      this.profileId = false;
-      this.emailId = false;
-      this.headerSearch = false;
-    } else if (value === "profile") {
-      this.profileId = !this.profileId;
-      this.notificationId = false;
-      this.emailId = false;
-    } else if (value === "notifications") {
-      this.notificationId = !this.notificationId;
-      this.notificationId = false;
-      this.profileId = false;
-    } else if (value === "email") {
-      this.emailId = !this.emailId;
-      this.notificationId = false;
-      this.profileId = false;
-    }
-  }
+  // dropDown(value) {
+  //   if (this.dropDrown == value) {
+  //     this.notificationId = false;
+  //     this.profileId = false;
+  //     this.emailId = false;
+  //     this.headerSearch = false;
+  //   } else if (value === "profile") {
+  //     this.profileId = !this.profileId;
+  //     this.notificationId = false;
+  //     this.emailId = false;
+  //   } else if (value === "notifications") {
+  //     this.notificationId = !this.notificationId;
+  //     this.notificationId = false;
+  //     this.profileId = false;
+  //   } else if (value === "email") {
+  //     this.emailId = !this.emailId;
+  //     this.notificationId = false;
+  //     this.profileId = false;
+  //   }
+  // }
 
   ngOnDestroy() {
     this.subscription1.unsubscribe();

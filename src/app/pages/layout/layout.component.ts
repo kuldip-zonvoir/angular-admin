@@ -10,52 +10,24 @@ import { SharemeService } from "src/app/partials/core/shareme.service";
 })
 export class LayoutComponent implements OnInit, OnDestroy {
   isResponsive: boolean;
-  isDisable = true;
   isChecked: boolean = true;
   hId = "0";
   bId = "0";
   sId = "0";
   tId = "0";
   themeId: string;
-  key = "default";
   themeMode = "light";
-  primaryColor = "purple";
-
-  darkThemes = [
-    "dark-default-color",
-    "dark-amber-color",
-    "dark-purple-color",
-    "dark-greenny-color",
-    "dark-pink-color",
-    "dark-deeporange-color",
-  ];
-  lightThemes = [
-    "light-default-color",
-    "light-amber-color",
-    "light-purple-color",
-    "light-greenny-color",
-    "light-pink-color",
-    "light-deeporange-color",
-  ];
+  darkThemes = ["dark-default-color"];
+  lightThemes = ["light-default-color"];
 
   isDark: boolean;
-  isDarkSidebar = false;
   isActive = false;
-  getActiveClass: string;
   activeTheme: "activeTheme";
-  dropdown: boolean;
-  themeSet: boolean;
   zvalue = "1000";
   currentUrl: any;
   component: string;
-  greenLightTheme: string;
-  pinkLightTheme: string;
-  defaultLightTheme: string;
-  greenDarkTheme: string;
-  pinkDarkTheme: string;
-  defaultDarkTheme: string;
+
   visibleSidebar2: boolean;
-  isDarkTheme: Observable<boolean>;
   customClass = "light-default-color";
   currentTheme: string;
   themeIndex: number;
@@ -152,6 +124,10 @@ export class LayoutComponent implements OnInit, OnDestroy {
       this.tId = value;
     }
   }
+  // close sidebar on select menu
+  changeWidth(event) {
+    this.isResponsive = event;
+  }
 
   // change Header Color
   changeHeader(value: string) {
@@ -194,14 +170,6 @@ export class LayoutComponent implements OnInit, OnDestroy {
   // change theme light  mode to dark mode
   toggleThemeMode() {
     this.isDark = !this.isDark;
-  }
-
-  changeSidebarMode() {
-    this.isDarkSidebar = !this.isDarkSidebar;
-  }
-
-  changeWidth(event) {
-    this.isResponsive = event;
   }
 
   // destroy all the subscription object

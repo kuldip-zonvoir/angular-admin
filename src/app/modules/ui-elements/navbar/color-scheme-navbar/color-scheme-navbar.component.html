@@ -1,13 +1,6 @@
 <div class="card custom-card card-stretch">
   <div
-    class="
-      card-header
-      d-flex
-      justify-content-between
-      align-items-center
-      custom-card-header
-      border-1
-    "
+    class="card-header d-flex justify-content-between align-items-center custom-card-header border-1"
   >
     <div class="card-title m-b-0">
       <h5 class="card-label m-b-0">Color Scheme</h5>
@@ -30,15 +23,277 @@
   <div class="card-body">
     <div class="">
       <nav
-        class="
-          navbar
-          w-100
-          no-shadow
-          navbar-expand-lg
-          m-b-12
-          navbar-dark
-          bg-dark
-        "
+        class="navbar w-100 no-shadow navbar-expand-lg m-b-12 navbar-dark bg-dark"
+      >
+        <!-- Navbar content -->
+        <a class="navbar-brand">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          (click)="toggle1 = !toggle1"
+          [attr.aria-expanded]="toggle2"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse"
+          [collapse]="!toggle1"
+          [isAnimated]="true"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline m-y-8 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success m-y-8 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
+      <nav
+        class="navbar w-100 no-shadow navbar-expand-lg m-b-12 navbar-dark bg-info"
+      >
+        <!-- Navbar content -->
+        <a class="navbar-brand">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          (click)="toggle1 = !toggle1"
+          [attr.aria-expanded]="toggle2"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse"
+          [collapse]="!toggle1"
+          [isAnimated]="true"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline m-y-8 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success m-y-8 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
+      <nav
+        class="navbar w-100 no-shadow navbar-expand-lg m-b-12 navbar-dark bg-secondary"
+      >
+        <!-- Navbar content -->
+        <a class="navbar-brand">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          (click)="toggle1 = !toggle1"
+          [attr.aria-expanded]="toggle2"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse"
+          [collapse]="!toggle1"
+          [isAnimated]="true"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline m-y-8 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success m-y-8 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
+      <nav
+        class="navbar w-100 no-shadow navbar-expand-lg m-b-12 navbar-dark bg-warning"
+      >
+        <!-- Navbar content -->
+        <a class="navbar-brand">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          (click)="toggle1 = !toggle1"
+          [attr.aria-expanded]="toggle2"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse"
+          [collapse]="!toggle1"
+          [isAnimated]="true"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline m-y-8 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success m-y-8 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
+      <nav
+        class="navbar w-100 no-shadow navbar-expand-lg m-b-12 navbar-dark bg-success"
+      >
+        <!-- Navbar content -->
+        <a class="navbar-brand">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          (click)="toggle1 = !toggle1"
+          [attr.aria-expanded]="toggle2"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse"
+          [collapse]="!toggle1"
+          [isAnimated]="true"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline m-y-8 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success m-y-8 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
+      <nav
+        class="navbar w-100 no-shadow navbar-expand-lg m-b-12 navbar-dark bg-danger"
       >
         <!-- Navbar content -->
         <a class="navbar-brand">Navbar</a>
@@ -93,14 +348,7 @@
       </nav>
 
       <nav
-        class="
-          navbar
-          w-100
-          no-shadow
-          navbar-expand-lg navbar-dark
-          m-b-12
-          bg-primary
-        "
+        class="navbar w-100 no-shadow navbar-expand-lg navbar-dark m-b-12 bg-primary"
       >
         <!-- Navbar content -->
         <a class="navbar-brand">Navbar</a>

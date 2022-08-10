@@ -14,7 +14,6 @@
       </div>
       <div class="ml-auto">
         <app-custom-dropdown
-          (parentFun)="parentFun($event)"
           [custom-Dropdown]="custom_dropdown"
         ></app-custom-dropdown>
       </div>
@@ -26,21 +25,16 @@
     <div class="d-flex align-items-center">
       <div class="">
         <a
-          class="
-            decoration-none
-            text-muted
-            no-link
-            d-flex
-            align-items-center
-            m-b-0
-          "
+          class="decoration-none text-muted no-link d-flex align-items-center m-b-0"
           ><i
             class="ti ti-share icon-16 m-r-8 cursor-pointer"
             [ngClass]="getIconColor(customNote.note_share_count)"
             aria-hidden="true"
           ></i
-          ><span class="note_share_new">{{ customNote.note_share_count }} Share</span> </a
-        >
+          ><span class="note_share_new"
+            >{{ customNote.note_share_count }} Share</span
+          >
+        </a>
       </div>
       <div class="m-l-auto p-l-10">
         <p class="d-flex align-items-center m-b-0 created_At_date">
@@ -48,9 +42,10 @@
             class="ti ti-calendar icon-16 m-r-8 cursor-pointer"
             [ngClass]="getIconColor(customNote.note_share_count)"
             aria-hidden="true"
-          ></i
-          >
-          <span class="note_share_new">{{ customNote.note_createdAt | date: "mediumDate" }}</span>
+          ></i>
+          <span class="note_share_new">{{
+            customNote.note_createdAt | date: "mediumDate"
+          }}</span>
         </p>
       </div>
     </div>

@@ -12,7 +12,8 @@ export const DefaultConfig = {
       theme: {
         light: {
           white: "#ffffff",
-          primary: "rgb(35, 130, 247)",
+          // primary: "rgb(35, 130, 247)",
+          primary: "rgb(105, 113, 255)",
           secondary: "rgb(255, 90, 95)",
           success: "rgb(6, 215, 156)",
           info: "rgb(0, 166, 251)",

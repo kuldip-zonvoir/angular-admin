@@ -1,4 +1,11 @@
+<div *ngIf="!loading; else notLoading" class=""></div>
 <router-outlet></router-outlet>
+<ng-template #notLoading>
+  <div id="cssLoader17" class="main-wrap main-wrap--white loader">
+    <div class="cssLoader17"></div>
+  </div>
+</ng-template>
+
 <div
   (click)="hideOverlaySidebar()"
   [ngClass]="{ main_page_overlay: overlayVisibility }"

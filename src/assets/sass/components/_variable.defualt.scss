@@ -23,11 +23,11 @@ $dark-25: $gray-400 !default;
 $text-muted: $gray-500 !default;
 //custom-colors
 
-$color1: #00bdaa; 
-$color2: #ef698b; 
+$color1: #00bdaa;
+$color2: #ef698b;
 $color3: #0c0c3c;
 $color4: #1ea8e7;
-$color5: #484c7f; 
+$color5: #484c7f;
 $color6: #8b44e0;
 $color7: #e9edf2 !default;
 $colorActive1: #006e7f !default;
@@ -89,17 +89,17 @@ $dark-light: $gray-400 !default;
 $dark-inverse: $white !default;
 $dark: $black;
 $body-color: $dark !default;
-$dark: $dark !default; 
-$dark-hover: darken($dark, 3%) !default; 
-$dark-light: $gray-500 !default; 
-$dark-inverse: $white !default; 
+$dark: $dark !default;
+$dark-hover: darken($dark, 3%) !default;
+$dark-light: $gray-500 !default;
+$dark-inverse: $white !default;
 
 // Primary colors
 
 $primary-inverse: $white !default; // Custom variable
 
 // Secondary colors
-$secondary: #f87321 !default; 
+$secondary: #f87321 !default;
 $secondary-hover: #fc6100 !default; // Custom variable
 $secondary-light: #ffe4d1 !default; // Custom variable
 $secondary-inverse: $white !default; // Custom variable
@@ -298,8 +298,8 @@ $hover-bg: $gray-100 !default;
 $active-bg: darken($gray-100, 1%) !default;
 // buttons varaibles
 $btn-disabled-opacity: 0.6 !default;
-$btn-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out,
-  box-shadow 0.3s ease-in-out !default;
+$btn-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+  border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out !default;
 $btn-box-shadow: none !default;
 $btn-focus-box-shadow: none !default;
 $btn-active-box-shadow: none !default;
@@ -381,8 +381,8 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1199px, 
-  xxl: 1400px // custom breakpoint,,,,,,,,,,,,,,,,,,,,,,
+  xl: 1199px,
+  xxl: 1400px // custom breakpoint,,,,,,,,,,,,,,,,,,,,,,,
 ) !default;
 @include responsive-above(lg) {
   $font-size-lg: $font-size-base * 1.08 !default;

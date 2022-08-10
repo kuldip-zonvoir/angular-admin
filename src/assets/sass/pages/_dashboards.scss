@@ -519,6 +519,9 @@
 // for Mobile Portrait Mode
 @include responsive-below(md) {
   .dashboard_lft_sec {
+    .card_lft_sec {
+      display: none;
+    }
     .good_j_img {
       padding: 10px;
       text-align: center;
@@ -568,6 +571,9 @@
 // For Mobile Landscape Mode
 @include responsive-between(sm, md) {
   .dashboard_lft_sec {
+    .card_lft_sec {
+      display: block !important;
+    }
     .good_j_text {
       padding-top: 16px;
     }

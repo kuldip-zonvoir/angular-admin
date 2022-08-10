@@ -1,6 +1,6 @@
 $primary: #6971ff !default; // Bootstrap variable
 $primary-light: #dddeff78 !default; // Custom variable
-$body-bg: #ecf0fa; //#4c4cf10d;
+$body-bg: #ecf0fa;
 $background-dark: #020508;
 $background-color: #ffffff;
 $text-color: #000000;
@@ -29,10 +29,10 @@ $thFontsize: 0.85rem; //N
 $dropfileOutline: #3132384f; //N
 $dropfilebg: #f6f8ff; //N
 $tdFontsize: 13px; //N
-$tdfontWeight:500;
+$tdfontWeight: 500;
 $tableThColor: $heading-color; //N
 $tableThBGColor: #f7f7f8; //N
-$tableTdColor:#424754; //#0d0d0d; //N
+$tableTdColor: #424754; //#0d0d0d; //N
 $dropdownBG: #fcfcfc; //N
 $gray-500: #475c66; //$heading-color
 $icon-color: #8699b2;
@@ -42,7 +42,7 @@ $hoverColor: hsl(240deg 54% 96%);
 $sidebar-text-color: #8094ae; //
 $header-icon-color: #8094ae;
 $paraColor: #57585e;
-$paraSize3:12px;
+$paraSize3: 12px;
 $paraSize: 13px; //N
 $paraSize2: 13px; //N
 $muteColor: #797883;
@@ -59,5 +59,3 @@ $boxShadow-lg: 0px 8px 14.72px 1.28px rgb(229 228 230 / 50%);
 $font-family: "Roboto", sans-serif;
 
 @import "../../style.angular";
-// @import "../../pages/login/login";
-// @import "../../pages/login/error";

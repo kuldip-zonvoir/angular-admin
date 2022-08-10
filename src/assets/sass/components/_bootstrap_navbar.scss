@@ -1,5 +1,14 @@
 .navbar {
   z-index: 0;
+  &.navbar-expand-lg {
+    .nav-link {
+      font-size: $paraSize;
+      // color: lighten($color: $text-color, $amount: 40%) !important;
+    }
+    .navbar-brand {
+      font-size: $h5-font-size;
+    }
+  }
 }
 
 .custom-nav-bar {
@@ -10,7 +19,7 @@
 
   .navbar-brand {
     color: $text-color-inverse;
-
+    font-size: $h5-font-size;
     &:hover {
       color: $text-color-inverse;
     }
