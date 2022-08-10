@@ -6,13 +6,12 @@ import { Router } from "@angular/router";
 })
 export class UserauthService {
   userData: any;
-  constructor(private router: Router) {
+  constructor(private router: Router) {}
+
+  checkUserData() {
     if (localStorage.getItem("fgsdshdkfjh")) {
       this.userData = JSON.parse(localStorage.getItem("fgsdshdkfjh"));
     }
-  }
-
-  checkUserData() {
     if (
       this.userData &&
       (Object.keys(this.userData).length ||

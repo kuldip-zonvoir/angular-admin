@@ -5,8 +5,8 @@ import { AuthGuard } from "./partials/core/auth.guard";
 const routes: Routes = [
   {
     path: "",
-    // pathMatch: "full",
     canActivate: [AuthGuard],
+    // canLoad: [AuthGuard],
     loadChildren: () =>
       import("./pages/layout.module").then((m) => m.LayoutModule),
   },
