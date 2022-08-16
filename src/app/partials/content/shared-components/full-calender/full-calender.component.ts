@@ -38,7 +38,6 @@ export class FullCalenderComponent implements OnInit {
   eventTypes:AllEvevnt[]
   
   Events = [];
-  // eventForm: FormGroup;
   schedularSidebarModal: boolean;
   public calendarOptions: Partial<CalendarOptions>;
   constructor(public datepipe: DatePipe) {

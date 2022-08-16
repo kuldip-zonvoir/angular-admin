@@ -72,6 +72,7 @@ export class GoogleStackedChartComponent implements OnInit {
             this.purpleColor,
           ],
           legend: "none",
+          backgroundColor: "transparent",
           bar: { groupWidth: "30%" },
           isStacked: true,
         },

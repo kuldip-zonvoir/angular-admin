@@ -139,47 +139,43 @@ html {
       @import "./assets/sass/themes/light-colors/light_default";
     }
 
-
     // dark thmes
     .dark-default-color {
       @import "./assets/sass/themes/dark-colors/dark_default";
     }
-
   }
 }
 .main_page_overlay {
   position: relative;
-  &::before{
+  &::before {
     position: fixed;
-  content: '';
-  background-color: rgba(0, 0, 0, 0.4);
-      transition-duration: 0.2s;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 999;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.4);
+    transition-duration: 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
   }
 }
 /*Mobile*/
 @media (max-width: 768px) {
   html body {
-   font-family: "Inter", "Helvetica", "sans-serif";
+    font-family: "Inter", "Helvetica", "sans-serif";
     margin: 0 !important;
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
   html body {
-   font-family: "Inter", "Helvetica", "sans-serif";
+    font-family: "Inter", "Helvetica", "sans-serif";
     margin: 0 !important;
   }
 }
 // tablet landscape mode
-@media (min-width: 992px) and (max-width: 1198px){
-
+@media (min-width: 992px) and (max-width: 1198px) {
 }
 
 // tablet portrate mode
-@media (min-width: 768px) and (max-width: 991px){
-
+@media (min-width: 768px) and (max-width: 991px) {
 }

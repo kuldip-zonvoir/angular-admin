@@ -4,7 +4,12 @@
     height: 100%;
   }
 }
-.icon_skelton{
+.google_chart {
+  rect {
+    fill: transparent;
+  }
+}
+.icon_skelton {
   font-size: 24px;
   width: 54px;
   height: 54px;
@@ -13,7 +18,7 @@
   text-align: center;
   display: inline-block;
 }
-.icon_skelton2{
+.icon_skelton2 {
   font-size: 22px;
   width: 46px;
   height: 46px;
@@ -22,14 +27,14 @@
   text-align: center;
   display: inline-block;
 }
-.vector_map_log{
-  canvas{
-    &:last-child{
+.vector_map_log {
+  canvas {
+    &:last-child {
       display: none !important;
     }
   }
 }
-.vector_map_chart{
+.vector_map_chart {
   width: 100%;
   height: 400px;
 }
@@ -37,30 +42,30 @@
   padding: 10px;
 }
 //
-.stat_title{
+.stat_title {
   font-size: 14px !important;
   margin-bottom: 0;
   text-transform: capitalize;
   padding: 4px 0;
 }
-.stat_number{
+.stat_number {
   font-size: 22px !important;
   color: $black;
   margin-bottom: 4px;
 }
-.percent_sub_title{
+.percent_sub_title {
   color: $paraColor;
   font-size: $paraSize3;
   font-weight: 500;
   white-space: nowrap;
 }
-.statics_wrap{
+.statics_wrap {
   display: flex;
-  .information_tab{
-      width: 60%;
+  .information_tab {
+    width: 60%;
   }
-  .statics_tab{
-      width: 40%;
+  .statics_tab {
+    width: 40%;
   }
 }
 .k_spark_line {
@@ -131,7 +136,7 @@
     }
   }
 }
-.task_tile_icon{
+.task_tile_icon {
   font-size: 20px;
   width: 35px;
   height: 35px;
@@ -193,22 +198,21 @@
         font-size: 13px;
         color: #8a939b;
       }
-      .emp_user_info{
+      .emp_user_info {
         display: inline-flex;
         align-items: center;
         white-space: nowrap;
-        h6{
+        h6 {
           margin-bottom: 0;
         }
-        p{
+        p {
           margin-bottom: 0;
           color: $text-color;
-          font-size: .88rem;
-
+          font-size: 0.88rem;
         }
-        &:hover{
+        &:hover {
           cursor: pointer;
-          h6{
+          h6 {
             color: $primary;
           }
         }
@@ -294,13 +298,13 @@
           }
         }
         .pro_activity_sub {
-            font-size: 13px;
-            color: #8a939b;
-            white-space: nowrap;
-            display: inline-block;
-            overflow: hidden;
-            text-overflow: ellipsis;
-          }
+          font-size: 13px;
+          color: #8a939b;
+          white-space: nowrap;
+          display: inline-block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
         .pro_rem__left_wrap {
           width: 46px;
           height: 46px;
@@ -308,23 +312,23 @@
           border-radius: 5px;
           text-align: center;
           margin-right: 10px;
-          .rem_date_value{
+          .rem_date_value {
             position: relative;
             top: 7px;
-              .rem_date {
-                margin-bottom: 0px;
-                font-size: 14px;
-                line-height: 18px;
-                text-transform: capitalize;
-                font-weight: 600;
+            .rem_date {
+              margin-bottom: 0px;
+              font-size: 14px;
+              line-height: 18px;
+              text-transform: capitalize;
+              font-weight: 600;
             }
             .rem_month_name {
-                  line-height: 16px;
-                font-size: 13px;
-                text-transform: capitalize;
-                font-weight: 500;
-                margin-bottom: 0;
-              }
+              line-height: 16px;
+              font-size: 13px;
+              text-transform: capitalize;
+              font-weight: 500;
+              margin-bottom: 0;
+            }
           }
         }
         .pro_activity_sub {
@@ -332,41 +336,39 @@
           color: #8a939b;
         }
       }
-      &:last-child{
+      &:last-child {
         border-bottom: 0;
-      
       }
     }
   }
 }
 
-.reminders_containers{
-  .pro_activity_sub{
+.reminders_containers {
+  .pro_activity_sub {
   }
 }
-.milestones_containers{
-
+.milestones_containers {
 }
 
 // progress project
-.progress_project_value{
-    margin-bottom: 12px;
+.progress_project_value {
+  margin-bottom: 12px;
 }
 
-.project_tile_wrap{
-    padding: 20px;
-    .project_title{
-        h3{
-            color: $dark;
-            font-weight: 700;
-        }
+.project_tile_wrap {
+  padding: 20px;
+  .project_title {
+    h3 {
+      color: $dark;
+      font-weight: 700;
     }
-    .data_main_wrap{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .icons_pro_wrap{
+  }
+  .data_main_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .icons_pro_wrap {
     font-size: 30px;
     width: 54px;
     height: 54px;
@@ -374,27 +376,26 @@
     border-radius: 5px;
     text-align: center;
     display: inline-block;
-    }
+  }
 }
-.pro_reminders_body{
-
-    .pro_rem__left_wrap{
-        font-size: 20px;
-        width: 46px;
-        height: 46px;
-        line-height: 46px;
-        border-radius: 5px;
-        text-align: center;
-        display: inline-block;
-    }
-    .pro_activity_sub {
-        font-size: 13px;
-        color: #8a939b;
-        white-space: nowrap;
-        display: inline-block;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
+.pro_reminders_body {
+  .pro_rem__left_wrap {
+    font-size: 20px;
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+  }
+  .pro_activity_sub {
+    font-size: 13px;
+    color: #8a939b;
+    white-space: nowrap;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 // projects Chart end
 // for mobile portrait mode

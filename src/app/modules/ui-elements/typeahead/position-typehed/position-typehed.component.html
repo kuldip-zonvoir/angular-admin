@@ -1,13 +1,6 @@
 <div class="card custom-card card-stretch">
   <div
-    class="
-      card-header
-      d-flex
-      justify-content-between
-      align-items-center
-      custom-card-header
-      border-1
-    "
+    class="card-header d-flex justify-content-between align-items-center custom-card-header border-1"
   >
     <div class="card-title m-b-0">
       <h5 class="card-label m-b-0">Adaptive Position</h5>
@@ -27,15 +20,13 @@
       </button>
     </div>
   </div>
-  <div class="card-body">
-    <div class="content zp-12">
+  <div class="">
+    <div class="content zp-16">
       <div class="">
-        <pre class="card card-block card-header mb-3">
-Model: {{ selected | json }}</pre
-        >
+        <pre class="card card-block mb-3">Model: {{ selected | json }}</pre>
         <input
           [(ngModel)]="selected"
-          [ngModelOptions]="{standalone: true}"
+          [ngModelOptions]="{ standalone: true }"
           [typeahead]="states"
           [adaptivePosition]="true"
           class="form-control"

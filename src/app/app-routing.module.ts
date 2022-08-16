@@ -6,7 +6,6 @@ const routes: Routes = [
   {
     path: "",
     canActivate: [AuthGuard],
-    // canLoad: [AuthGuard],
     loadChildren: () =>
       import("./pages/layout.module").then((m) => m.LayoutModule),
   },

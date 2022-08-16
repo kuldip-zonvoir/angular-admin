@@ -19,6 +19,7 @@ const routes: Routes = [
       },
       {
         path: "ticket",
+        canLoad: [AuthGuard],
         loadChildren: () =>
           import("../modules/tickets/tickets.module").then(
             (m) => m.TicketsModule
@@ -27,6 +28,7 @@ const routes: Routes = [
       },
       {
         path: "invoices",
+        canLoad: [AuthGuard],
         loadChildren: () =>
           import("../modules/invoices/invoices.module").then(
             (m) => m.InvoicesModule
@@ -35,6 +37,7 @@ const routes: Routes = [
       },
       {
         path: "extra",
+        canLoad: [AuthGuard],
         loadChildren: () =>
           import("../modules/customize/customize.module").then(
             (m) => m.CustomizeModule
@@ -43,6 +46,7 @@ const routes: Routes = [
       },
       {
         path: "help-center",
+        canLoad: [AuthGuard],
         loadChildren: () =>
           import("../modules/help-center/help-center.module").then(
             (m) => m.HelpCenterModule
@@ -51,6 +55,7 @@ const routes: Routes = [
       },
       {
         path: "application",
+        canLoad: [AuthGuard],
         loadChildren: () =>
           import("../modules/application/application.module").then(
             (m) => m.ApplicationModule
@@ -59,6 +64,7 @@ const routes: Routes = [
       },
       {
         path: "e-commerce",
+        canLoad: [AuthGuard],
         loadChildren: () =>
           import("../modules/e-commerce/e-commerce.module").then(
             (m) => m.ECommerceModule
@@ -67,6 +73,7 @@ const routes: Routes = [
       },
       {
         path: "account",
+        canLoad: [AuthGuard],
         loadChildren: () =>
           import("../modules/account/account.module").then(
             (m) => m.AccountModule
@@ -75,6 +82,7 @@ const routes: Routes = [
       },
       {
         path: "contacts",
+        canLoad: [AuthGuard],
         loadChildren: () =>
           import("../modules/contacts/contacts.module").then(
             (m) => m.ContactsModule
@@ -83,6 +91,7 @@ const routes: Routes = [
       },
       {
         path: "wigits",
+        canLoad: [AuthGuard],
         loadChildren: () =>
           import("../modules/wigits/wigits.module").then((m) => m.WigitsModule),
         data: { breadcrumb: "Widgits" },
@@ -90,6 +99,7 @@ const routes: Routes = [
 
       {
         path: "scrumboard",
+        canLoad: [AuthGuard],
         loadChildren: () =>
           import("../modules/scrumboard/scrumboard.module").then(
             (m) => m.ScrumboardModule
@@ -98,6 +108,7 @@ const routes: Routes = [
       },
       {
         path: "datatables",
+        canLoad: [AuthGuard],
         loadChildren: () =>
           import("../modules/datatables/datatables.module").then(
             (m) => m.DatatablesModule
@@ -106,6 +117,7 @@ const routes: Routes = [
       },
       {
         path: "bootstrap",
+        canLoad: [AuthGuard],
         loadChildren: () =>
           import("../modules/ui-elements/ui-elements.module").then(
             (m) => m.UiElementsModule
@@ -114,18 +126,21 @@ const routes: Routes = [
       },
       {
         path: "icons",
+        canLoad: [AuthGuard],
         loadChildren: () =>
           import("../modules/icons/icons.module").then((m) => m.IconsModule),
         data: { breadcrumb: "Icons" },
       },
       {
         path: "forms",
+        canLoad: [AuthGuard],
         loadChildren: () =>
           import("../modules/forms/forms.module").then((m) => m.FormModule),
         data: { breadcrumb: "Forms" },
       },
       {
         path: "special-pages",
+        canLoad: [AuthGuard],
         loadChildren: () =>
           import("../modules/page-module/page-module.module").then(
             (m) => m.PageModuleModule
@@ -134,24 +149,28 @@ const routes: Routes = [
       },
       {
         path: "chat",
+        canLoad: [AuthGuard],
         loadChildren: () =>
           import("../modules/chats/chats.module").then((m) => m.ChatsModule),
         data: { breadcrumb: "Chat" },
       },
       {
         path: "email",
+        canLoad: [AuthGuard],
         loadChildren: () =>
           import("../modules/email/email.module").then((m) => m.EmailModule),
         data: { breadcrumb: "Email" },
       },
       {
         path: "charts",
+        canLoad: [AuthGuard],
         loadChildren: () =>
           import("../modules/charts/charts.module").then((m) => m.ChartsModule),
         data: { breadcrumb: "Charts" },
       },
       {
         path: "maps",
+        canLoad: [AuthGuard],
         loadChildren: () =>
           import("../modules/maps/maps.module").then((m) => m.MapsModule),
         data: { breadcrumb: "Maps" },

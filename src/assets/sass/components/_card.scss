@@ -5,10 +5,10 @@
 .no-radius {
   border-radius: 10px !important;
 }
-.clr_notif_wrap{
+.clr_notif_wrap {
   background-color: $background-color;
-  a{
-    font-size: 14px ;
+  a {
+    font-size: 14px;
     font-weight: 500;
   }
 }
@@ -112,6 +112,7 @@
   border: 0;
   border-radius: 0;
   color: $text-color;
+  font-size: $paraSize;
 }
 .basic-card-image {
   width: 100%;

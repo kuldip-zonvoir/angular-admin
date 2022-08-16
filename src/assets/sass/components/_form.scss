@@ -13,7 +13,13 @@
       align-items: center;
       &.next_wzrd {
         &::before {
-          @include pseudo-icon("\e5cc", $left: -25px, $top: 6px, $color: #889cb3, $icon-size: 20px);
+          @include pseudo-icon(
+            "\e5cc",
+            $left: -25px,
+            $top: 6px,
+            $color: #889cb3,
+            $icon-size: 20px
+          );
         }
       }
     }
@@ -38,11 +44,24 @@
     color: $primary;
   }
   .wzrd_icon {
-    @include rounded-squrare($white, $primary, 35px, 5px, 13px, $fontWeight: 600);
+    @include rounded-squrare(
+      $white,
+      $primary,
+      35px,
+      5px,
+      13px,
+      $fontWeight: 600
+    );
   }
   &.next_wzrd {
     &::before {
-      @include pseudo-icon("\e5cc", $left: -25px, $top: 6px, $color: $primary !important, $icon-size: 20px);
+      @include pseudo-icon(
+        "\e5cc",
+        $left: -25px,
+        $top: 6px,
+        $color: $primary !important,
+        $icon-size: 20px
+      );
     }
   }
 }
@@ -53,7 +72,14 @@
   color: #889cb3;
 }
 .wzrd_icon {
-  @include rounded-squrare($primary, $primary-light, 35px, 5px, 13px, $fontWeight: 600);
+  @include rounded-squrare(
+    $primary,
+    $primary-light,
+    35px,
+    5px,
+    13px,
+    $fontWeight: 600
+  );
 }
 .vertical_wzrd_wrap {
   display: flex;
@@ -76,7 +102,14 @@
             display: inline-flex;
             align-items: center;
             .wzrd_vr_icon {
-              @include rounded-squrare($primary, $primary-light, 35px, 5px, 13px, $fontWeight: 600);
+              @include rounded-squrare(
+                $primary,
+                $primary-light,
+                35px,
+                5px,
+                13px,
+                $fontWeight: 600
+              );
             }
             &.active_vr_wzrd_step {
               .wzrd_vr_step_name {
@@ -87,7 +120,14 @@
               }
               .wzrd_vr_step_num {
                 .wzrd_vr_icon {
-                  @include rounded-squrare($white, $primary, 35px, 5px, 13px, $fontWeight: 600);
+                  @include rounded-squrare(
+                    $white,
+                    $primary,
+                    35px,
+                    5px,
+                    13px,
+                    $fontWeight: 600
+                  );
                 }
               }
             }
@@ -123,7 +163,13 @@
             display: inline-flex;
             align-items: center;
             .wzrd_vr_icon {
-              @include rounded-squrare($primary, $primary-light, 35px, 5px, 16px);
+              @include rounded-squrare(
+                $primary,
+                $primary-light,
+                35px,
+                5px,
+                16px
+              );
             }
           }
           &:last-child {
@@ -149,7 +195,7 @@
 @include responsive-below(md) {
   .wzrd_menu {
     display: block;
-    li{
+    li {
       margin-bottom: 12px;
       margin-right: 0;
       width: 100%;
@@ -170,15 +216,13 @@
       }
     }
   }
-  .wzrd_vr_menu{
- 
-    li{
+  .wzrd_vr_menu {
+    li {
       &:last-child {
         margin-bottom: 12px !important;
       }
     }
   }
-
 
   .vertical_wzrd_wrap {
     display: block;
@@ -198,7 +242,7 @@
 @include responsive-between(sm, md) {
   .wzrd_menu {
     display: flex;
-    li{
+    li {
       margin-right: 0 !important;
       width: 100%;
       &:last-child {
@@ -206,21 +250,29 @@
       }
     }
   }
-  .wzrd_vr_menu{
+  .wzrd_vr_menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid $border-color2;
-    li{
+    li {
       &:last-child {
         margin-bottom: 12px !important;
       }
     }
   }
 }
-// For laptop Landscape Mode
-@include responsive-between(lg, xl) {
-}
 // For tablet portrait Mode
 @include responsive-between(md, lg) {
+  .vertical_wzrd_wrap {
+    .wzrd_vr_form {
+      width: 75%;
+    }
+    .wzrd_navigation {
+      width: 25%;
+    }
+  }
+}
+// For laptop Landscape Mode
+@include responsive-between(lg, xl) {
 }

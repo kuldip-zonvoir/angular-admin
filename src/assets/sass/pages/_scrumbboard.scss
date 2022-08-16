@@ -1,12 +1,9 @@
-
-
 // drag and drop strat
-.drag-list{
+.drag-list {
   color: $muteColor;
   background-color: $background-color;
   border-bottom: 1px solid $border-color;
   padding: 16px 20px;
-
 }
 .interchange-drag-drop-title {
   color: $text-color;
@@ -36,7 +33,7 @@
   border-bottom: 1px solid $border-color;
   background-clip: border-box;
   width: 100%;
-  padding: 12px 8px ;
+  padding: 12px 8px;
 
   .basic-drag-drop {
     display: flex;
@@ -45,7 +42,6 @@
     padding: 0;
     padding-bottom: 12px;
     width: 100%;
-    
   }
   .icon-20 {
     color: #008ffb;
@@ -57,13 +53,13 @@
     color: $text-color !important ;
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 0.977rem !important; 
+    font-size: 0.977rem !important;
     font-weight: 500;
     line-height: 1.2;
-    padding: 12px 8px ;
+    padding: 12px 8px;
   }
 }
-.cdk-drag-preview{
+.cdk-drag-preview {
   color: $muteColor;
   background-color: $background-color;
   border-bottom: 1px solid $border-color;
@@ -183,7 +179,7 @@
   }
   .p-multiselect {
     border: 0 !important;
-    .p-multiselect-label{
+    .p-multiselect-label {
       padding: 0.3rem 0.4rem;
     }
     &:hover {
@@ -223,7 +219,11 @@
     overflow-x: hidden;
     @include scrollbar($width: 0.3rem, $border-radius: 1rem);
     &:hover {
-      @include scrollbar($width: 0.3rem, $border-radius: 1rem, $background-color: $scrollbarColor);
+      @include scrollbar(
+        $width: 0.3rem,
+        $border-radius: 1rem,
+        $background-color: $scrollbarColor
+      );
     }
   }
 }
@@ -243,7 +243,11 @@
   overflow-x: hidden;
   @include scrollbar($width: 0.4rem, $border-radius: 1rem);
   &:hover {
-    @include scrollbar($width: 0.4rem, $border-radius: 1rem, $background-color: $scrollbarColor);
+    @include scrollbar(
+      $width: 0.4rem,
+      $border-radius: 1rem,
+      $background-color: $scrollbarColor
+    );
   }
 }
 .k_scrum_card_width {
@@ -257,7 +261,11 @@
   padding: 16px 0 16px 8px;
   @include scrollbar($width: 0.4rem, $border-radius: 1rem);
   &:hover {
-    @include scrollbar($width: 0.4rem, $border-radius: 1rem, $background-color: $scrollbarColor);
+    @include scrollbar(
+      $width: 0.4rem,
+      $border-radius: 1rem,
+      $background-color: $scrollbarColor
+    );
   }
 }
 
@@ -266,8 +274,11 @@
   overflow-x: auto;
   cursor: pointer;
   padding: 0;
-  @include scrollbar($height: 0.5rem, $border-radius: 1rem, $background-color: #d4d6da8c);
-  
+  @include scrollbar(
+    $height: 0.5rem,
+    $border-radius: 1rem,
+    $background-color: #d4d6da8c
+  );
 }
 
 .scrum-lable-scroll-tags {
@@ -303,7 +314,11 @@
     padding: 20px 12px 40px 12px;
     @include scrollbar($width: 0.4rem, $border-radius: 1rem);
     &:hover {
-      @include scrollbar($width: 0.4rem, $border-radius: 1rem, $background-color: $scrollbarColor);
+      @include scrollbar(
+        $width: 0.4rem,
+        $border-radius: 1rem,
+        $background-color: $scrollbarColor
+      );
     }
   }
   .member_tags_container {
@@ -358,22 +373,29 @@
     padding: 20px 12px 40px 12px;
     @include scrollbar($width: 0.4rem, $border-radius: 1rem);
     &:hover {
-      @include scrollbar($width: 0.4rem, $border-radius: 1rem, $background-color: $scrollbarColor);
+      @include scrollbar(
+        $width: 0.4rem,
+        $border-radius: 1rem,
+        $background-color: $scrollbarColor
+      );
     }
   }
-
 }
 // For tablet Portrait Mode
 @include responsive-between(md, lg) {
   .vr_scroll {
-    max-height: 67vh;
+    max-height: 75vh;
     cursor: pointer;
     overflow-y: auto;
     overflow-x: hidden;
     padding: 20px 12px 40px 12px;
     @include scrollbar($width: 0.4rem, $border-radius: 1rem);
     &:hover {
-      @include scrollbar($width: 0.4rem, $border-radius: 1rem, $background-color: $scrollbarColor);
+      @include scrollbar(
+        $width: 0.4rem,
+        $border-radius: 1rem,
+        $background-color: $scrollbarColor
+      );
     }
   }
   .scrum-lable-scroll-tags {
@@ -394,14 +416,18 @@
     bottom: -1px;
   }
   .vr_scroll {
-    max-height: 55vh;
+    max-height: 67vh;
     cursor: pointer;
     overflow-y: auto;
     overflow-x: hidden;
     padding: 20px 12px 40px 12px;
     @include scrollbar($width: 0.4rem, $border-radius: 1rem);
     &:hover {
-      @include scrollbar($width: 0.4rem, $border-radius: 1rem, $background-color: $scrollbarColor);
+      @include scrollbar(
+        $width: 0.4rem,
+        $border-radius: 1rem,
+        $background-color: $scrollbarColor
+      );
     }
   }
 }
