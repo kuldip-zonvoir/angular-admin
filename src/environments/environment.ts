@@ -7,7 +7,7 @@ export const environment = {
   USERDATA_KEY: "authf649fc9a5f55",
   isMockEnabled: true,
   apiUrl: "api",
-  API_KEY: "AIzaSyACPO-on7F65L6S6q6HYYtuz7j_T5S1nU0",
+  API_KEY: "",
 };
 
 /*
